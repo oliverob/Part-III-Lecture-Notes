@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{bm}
 \usepackage{amssymb}
-
+\usepackage{braket}
 \title{Quantum Information Theory}
 \author{oliverobrien111 }
 \date{July 2021}
@@ -12,7 +12,7 @@
 \maketitle
 
 \section{Shannon entropy}
-Alternative definition is using the surprisal $\gamma(x) = -\log p(x)$ which measures how likely an event is. The Shannon entropy is the expected value of the surprisal.\\\\
+Alternative definition is using the surprisal $\gamma(x) = -\log p(x)$ which measures how likely an event is. The Shannon entropy is the expected value of the surprisal. A good way of thinking about it is the information gained on average when you learn the value of $X$.\\\\
 For a string chosen from the binary alphabet the number of distinct strings of length $n$ is the binomial coefficient ${n \choose np}$ which is approximated by Strilings approximation $\log n! = n\log n - n$ to give
 $$
 \log {n \choose np} \approx nH(p)
@@ -25,6 +25,16 @@ Therefore, the strings can be specified by a block code of $2^{nH(p)}$ letters. 
 \begin{equation}
     H(X) = \sum_x -p(x)\log p(x)
 \end{equation}
+\subsection{Properties of H}
+$$
+H(X) = H(\{p(x)\}) = H(p_x)
+$$
+Permutation invariant. If you have a $\pi$ permutation of $X$ then:
+$$
+H(p_X \cdot \pi) = H(p_X)
+= -\sum_{x\in J} p(\pi(x))\log p(\pi(x)) = -\sum_{x\in J} p(x) \log p(x)
+$$
+$H(X) \geq 0$
 \subsection{Formal Proof}
 A typical sequence $\bm u$ is defined as one which for which the probability of occurrence satisfies:
 \begin{equation}
@@ -52,11 +62,14 @@ Intuitively it doesn't work as the number of sequences we missed grows exponenti
 \begin{equation}
     H(X,Y) = - \sum_{\bm x, \bm y} p(x,y) \log p(x,y)
 \end{equation}
+$$
+H(X,Y)=H(X) + H(Y)
+$$
 \textbf{Conditional Entropy} (imagine X are the bits received over a noisy channel so this is the entropy of the source Y given the data received):
 \begin{equation}
     H(Y|X) = \sum_{\bm x} p(x)H(Y|X=x) = \sum_{\bm x \bm y} p(x)p(y|x)\log p(y|x)
 \end{equation}
-After every letter is received a new optimal code can be found that will specify the remaining string with $H(Y|X)$ bits per letter. Therefore,
+After every letter is received a new optimal code can be found that will specify the remaining string with $H(Y|X)$ bits per letter. Therefore, \textbf{chain rule}
 \begin{equation}
     H(X,Y) = H(Y|X)+H(X)
 \end{equation}
@@ -64,10 +77,31 @@ After every letter is received a new optimal code can be found that will specify
 \begin{equation}
     D(p||q) = \sum_{\bm x} p(x) \frac{p(x)}{q(x)}
 \end{equation}
-only 0 for $p = q$. The above is only well-defined if $p << q$ (meaning that $q(x) =0 \Rightarrow p(x) = 0$). \\ \textbf{Mutual information}:
+only 0 for $p = q$. The above is only well-defined if $p << q$ (meaning that $q(x) =0 \Rightarrow p(x) = 0$).\\\\
+\textbf{Proof of Gibbs inequality}
+$$
+A  = \{ x \in J, p(x) > 0 \}
+$$
+$$
+D(p||q) = \sum_{x \in A} p(x) \log \frac{p(x)}{q(x)} = -\sum_{x \in A} p(x) \log \frac{q(x)}{p(x)}
+$$
+Define a random variable to take values $\log \frac{p(x)}{q(x)}$ with probablity $p(x)$ then.
+$$
+-D(p||q) = \mathbb{E}_p(\log \frac{q(X)}{p(X)})
+$$
+using jensens inequality
+$$
+-D(p||q) \leq \log \mathbb{E}_p( \frac{q(X)}{p(X)}) = \log \sum_{A} p(x) \frac{q(X)}{p(X)} = \log \sum_A q(x) \leq \log \sum_{J} q(x) = 0
+$$
+so
+$$
+D(p||q) \geq 0
+$$
+\\ \textbf{Mutual information}:
 \begin{equation}
     I(X;Y) = H(X) + H(Y) - H(X,Y)
 \end{equation}
+If you were to fill out a venn diagram with overlapping circles $H(X)$ and $H(Y)$ the union would be $H(X,Y)$, the intersection would be $I(X,Y)$ and the remainder of the circle $H(X)$ would be $H(X|Y)$ as once you are given one of the values there is no longer any entropy coming from its circle.\\\\
 Neat result. As $D(p||q) \geq 0$ and given $q(x) = \frac{1}{|J|}$ for alphabet $J$,
 $$
 D(p||q) = \sum p(x) \log \frac{p(x)}{\frac{1}{|J|}} = - H(X) + \sum p(x) \log |J|
@@ -79,14 +113,100 @@ $$
 \begin{equation}
     \mathbb{E}(f(X)) \leq f(\mathbb{E}(X))
 \end{equation}
+Need to learn what concavity really means as used lots in quantum part of course. Important to know that $H(X)$ is concave.\\
+\textbf{Subadditivity}
+Prove this with $D(p||q) \geq 0$ and jensens inequality. Do it on example sheet 1.
 \begin{equation}
     H(X,Y) \geq H(X) + H(Y)
 \end{equation}
-5.28 of chapter 5 of Caltech I don't understand
+5.28 of chapter 5 of Caltech I don't understand\\\\
+Can use relative entropy as a parent quantity to get all the types of entropy from above. But only if we lift the restriction of the distributions having total probablity 1. For example if we take $q(x) = 1 \forall x$ then $D(P||Q) = - H(X)$. Also, $I(X:Y) = D(p(x,y)||p(x)p(y))$ and $H(Y|X) = D(p(x,y)||p(x))$. Prove and check these on example sheet.
 \subsection{Shannon's Noisy Channel Theorem}
-For certain codewords, their images after applying the channel map will represent disjoint subsets in the asymptotic limit. The typical number of sequences that will be received is $|T_n| \approx 2^{nH(Y|X)}$, whereas the size of the range is  $2^{nH(Y)}$, so the maximum achievable rate (number of bits communicated per use of channel) is $\frac{2^{nH(Y)}}{2^{nH(Y|X)}} = 2^{nI(Y;X)}$.\\
-
-
-
+For certain codewords, their images after applying the channel map will represent disjoint subsets in the asymptotic limit. The typical number of sequences that will be received is $|T_n| \approx 2^{nH(Y|X)}$, whereas the size of the range is  $2^{nH(Y)}$, so the maximum achievable rate (number of bits communicated per use of channel) is $\frac{2^{nH(Y)}}{2^{nH(Y|X)}} = 2^{nI(Y;X)}$.\\\\
+If a message of length $n$ is sent along a channel with an error rate of $p$. Then roughly $np$ bits will flip, leading to $2^{nH(p)}$ typical output strings (it would be $2^{np}$ strings but we have to account for the encoding reducing the number of strings). In order for this input to be accurately distinguished from any other this "sphere" of possibilities must be distinct from the rest. Therefore, there must be at least $2^{nR}2^{nH(p)}$ possible output strings. Therefore, $R \leq 1 - H(p) = C$.\\\\
+Can be shown that even picking random codewords gives the optimal rate in the asymptotic limit. If we adopt the decoding method of drawing a "Hamming sphere" of radius $2^{n(H(p)+\delta}$ around the received string and looking for a codeword within this radius. We would typically expect their to be at least one or our assumption about the error in the channel is wrong/we need a bigger delta. The chance of there being two can be calculated as the fraction of space occupied by the s"sphere" is:
+$$
+\frac{2^{n(H(p)+\delta)}}{2^n} = 2^{-n(C-\delta)}
+$$
+so the chance of one of the $2{nR}$ codewords lieing there is:
+$$
+2^{-n(C-R-\delta)}
+$$
+As $\delta$ can be as small as we like, we can pick $R$ as close as we want to $C$ and this will still vanish asymptotically. APPARENTLY THE AVERAGE IS TAKEN HERE BUT I DON'T SEE WHERE.\\\\
+\subsection{Shannon's Noisy Channel Coding Theorem - lectures}
+\subsubsection{Discrete Memoryless Channel (DMC)}
+Action of each successive uses of $\mathfrak{N}$ is identical and independent to the previous use/the noise affecting each successive inputs in uncorrelated. 
+$$
+p(u^{(n)}|x^{(n)}) = \sum_{i=1}^n p(u_i|x_i)
+$$
+Might as well restrict to only considering a single use of the channel. Can write channel matrix as $p_{ij} =p(y_i|x_i)$. The channel matrix is symmetric if the rows are permutations of each other.
+\subsubsection{Example - Memoryless Binary Symmetric Channel  (m.b.s.c)}
+$$J_x = \{0,1\} = J_y$$
+Flips the bit with probability $p$. So we need an error-correcting code, e.g. the repetition code using three bits at once.\\\\
+\textbf{Rate}: The encoding decoding pair is said to have a rate R if $|M|$ (number of possible messages) = $2^{nR}$ for a given number of channel uses $n$.\\\\
+Maximum probability of error corresponding to $C_n$:
+$$
+p^{(n)}_{err}(C_n) = P(\mathfrak{D}_n(Y^{(n)}) \neq m | X^{(n)} = \epsilon_n(m))
+$$
+\textbf{Achievable rate}: A $R \in \mathbb{R}$ is said to be an achievable rate if there exists a sequence of codes ($(C_n)_n$) of rate $R$ s.t. $p^{(n)}_{err} \rightarrow 0$ as $n\rightarrow \infty$.\\
+\textbf{Channel Capacity}: Maximum rate of reliable transmission of information $C(\mathfrak{N}) = \sup \{R: \textrm{R is an achievable rate}\}$\\\\
+Shannon's Theorem says that $C(\mathfrak{N}) = max_{\{p(x)\}} I(X:Y)$. Not going to do this proof as it is not very connected to the quantum proof.\\\\
+For m.b.s.c
+$$
+I(X:Y) = H(Y) - H(Y|X) = H(Y) - (-(1-p)\log(1-p) - p\log p) = H(Y) - h(p) \leq \log |J_Y| - h(p) = 1 - h(p)
+$$
+Does there exist some distribution $\{p(x)\}$ for which $H(Y) = 1$ because if there is then this bound is saturated.
+$$
+H(Y) = - \sum p(y) \log p(y)
+$$
+$$
+p(y) = \sum_x p(x,y) = \sum_x p(x)p(y|x)
+$$
+So look for $p(x)$ that makes $p(y)$ equiprobable. Try $p(x) = \frac{1}{2}$, and this indeed gives $H(Y) = 1$. Therefore $C(\mathfrak{N}) = 1-h(p)$. (I am confused about this as the H(Y) only reaches its maximum for $p=1/2$ when $h(p)$ is also 1 so surely this doesn't work? ask in office hours).\\
+\section{Quantum}
+Can associate many ensembles with the same state. You can use any $\{p_i, \ket{\psi_i}\}$ as long as $p_i \geq 0$, $\sum p_i = 1$ and $\bra{\psi_i}\ket{\psi_i} = 1$. You can find an infinite number of these ensembles that give the same spectral decomposition (are identical) as the $\ket{\psi_i}$ need not even by orthogonal and can basically be anything as long as they have norm 1. e.g. $\rho = \frac{I}{d} = \sum_j \frac{1}{d} \ket{e_j}\bra{e_j} = \sum_k \frac{1}{d} \ket{\psi_k}\bra{\psi_k}$ so ensembles $\{\frac{1}{d}, \ket{e_j}\}$ and $\{\frac{1}{d}, \ket{\psi_k}\}$ are both equally valid.\\\\
+Expectation of observable A in state $\rho$: $<A> = <A>_{\rho} = Tr(A\rho)$ which is a positive linear functional.\\\\
+System of interest to us in the course is often a subsystem S of a composite system SE. The density matrix formalism provides a description of states of subsystems. Consider a comp. system AB then the underlying hilbert space is $\mathcal{H}_A \otimes \mathcal{H}_B$. If AB is in the state $\rho_{AB} \in \mathfrak{D}(\mathcal{H}_A \otimes \mathcal{H}_B$)$ then state A is given by the reduces state: $\rho_A = Tr_B \rho_{AB}. Consider orthonomal basis $\{ \ket{i_A} \}$ in $\mathcal{H}_A$ and $\{ \ket{\alpha_B} \}$ in $\mathcal{H}_B$ then we have $\{ \ket{i_A} \otimes \ket{\alpha_B} \}$ in $\mathcal{H}_A \otimes \mathcal{H}_B$. Can always write $A = \sum a_{ij} \ket{i}\bra{j}$ with $a_{ij} = \bra{i}A\ket{j}$.
+$$
+\rho_{AB} =\sum_{i,j =1}^{d_A} \sum_{\alpha,\beta=1}^{d_B} r_{i\alpha, j\beta}\ket{i_A}\ket{\alpha_B}\bra{j_A}\bra{\beta_B}
+$$
+$$
+\rho_A = Tr_B \rho_AB = Tr_B (\sum_{i,j =1}^{d_A} \sum_{\alpha,\beta=1}^{d_B} r_{i\alpha, j\beta}\ket{i_A}\bra{j_A}\otimes\ket{\alpha_B}\bra{\beta_B}) = \sum_{i,j=1}^{d_A} \sum_{\alpha=1}^{d_B} r_{i\alpha, j\alpha \ket{i_A}\bra{j_A}
+$$
+Consider an observable $M_{AB} = M_A \otimes I_B$ then we claim that:
+$$
+<M_{AB}>_{\rho_{AB}} = Tr(M_{AB} \rho_{AB})
+$$
+Proof:
+$$
+<M_{AB} = Tr(M_{AB} \sum_{i,j =1}^{d_A} \sum_{\alpha,\beta=1}^{d_B} r_{i\alpha, j\beta}\ket{i_A}\bra{j_A}\otimes\ket{\alpha_B}\bra{\beta_B}) =\sum_{i,j =1}^{d_A} \sum_{\alpha=1}^{d_B}r_{i\alpha, j\alpha} Tr(M_A\ket{i}\bra{j} = Tr(M_A\rho_A)
+$$
+\textbf{Example}: Consider state of 2 qubits $\rho_{AB} = \ket{phi^+_{AB}}\bra{\phi^+_{AB}}$ with $\ket{phi^+_{AB}} = \frac{1}{\sqrt{2}}(\ket{00} + \ket{11})$. Therefore, $\rho_A = Tr_B\rho_{AB} = \frac{I}{2}$ which is an example of when we know everything about the system but still have no information about A or B.\\\\
+A pure state is known as a product state if it can be written: $\psi_{AB} = \ket{\psi_A} \otimes \ket{\psi_B}$ and if it cannot be written like this then it is called entangled.\\\\
+A mixed state is a seperable state if it can be written as an ensemble with pure states: $\rho_{AB} = \sum_i p_i \omega_{A}^i \otimes \tau_B^i. Otherwise it is called an entangled state.\\\\
+The four pure states in $\mathbb{C}^2 \otimes \mathbb{C}^2$ are called Bell states and EPR states.
+\subsection{Schmidt decomposition}
+Any state in space $\mathbm{H}_A \otimes \mathbm{H}_B $ can be described using coefficients of basis states of the form $\ket{i_A} \otimes \ket{i_B}$ where $\ket{i_A}$ for some set of basis eigenstates $\ket{i_A}$, $\ket{i_B}$. The schmidt rank is the number of positive Schmidt coefficents.\\\\
+There always exists a set of orthonormal vectors $\{\ket{i_A}\}$ and $\{\ket{i_B}\} such that:
+$$
+\ket{\psi_{AB}} = \sum_{i=1}^{\kappa=min(d_a,d_b)} \lambda_i \ket{i_A}\ket{i_B}
+$$
+Proof:
+$$
+\psi_{AB} = \sum_{r,\alpha} a_{r\alpha} \ket{\gamma_A}\ket{\alpha_B}
+$$
+\textbf{Singular Value Decompisition (SVD)}: Need to know\\
+There exists unitaries U $d_A\times d_A$ and V $d_B \times d_B$ s.t $A = UDV$ with D a diagonal matrix $d_A \times d_B$ . Therefore,
+$$
+\alpha_{r,\alpha} = \sum_{i=1}^{d_A} \sum_{\beta=1}^{d_B} u_{\gamma i} d_{i \beta} u_{\beta \alpha}
+$$
+$$
+\ket{\psi_{AB}} = \sum \sum d_{i\beta} (\sum u_{r i} \ket{r_A}) (\sum v_{\beta \alpha} \ket{\alpha_B})
+$$
+\subsection{Purification}
+It is possible to convert a mixed state into a pure state by adding a purifying reference system $\mathbm{R}$ with Hilbert space $\mathbm{H}_R$, and defining a pure state $\ket{\psi_{AR}} \in \mathbm{H}_A \otimes \mathbm{H}_B$ such that:
+$$
+\rho_A = Tr_R \ket{\psi_{AR}}\bra{\psi_{AR}} = \sum_{i=1}\lambda_i^2 \ket{i_A}\bra{i_A}
+$$
 \end{document}
 

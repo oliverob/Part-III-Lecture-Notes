@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{amssymb}
+
+\title{Quantum Information Theory}
+\author{oliverobrien111 }
+\date{July 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Shannon entropy}
+Alternative definition is using the surprisal $\gamma(x) = -\log p(x)$ which measures how likely an event is. The Shannon entropy is the expected value of the surprisal.\\\\
+For a string chosen from the binary alphabet the number of distinct strings of length $n$ is the binomial coefficient ${n \choose np}$ which is approximated by Strilings approximation $\log n! = n\log n - n$ to give
+$$
+\log {n \choose np} \approx nH(p)
+$$
+for the entropy function:
+\begin{equation}
+    H(p) = -p\log p - (1-p) \log (1-p)
+\end{equation}
+Therefore, the strings can be specified by a block code of $2^{nH(p)}$ letters. As $H(p) \leq 1$, the block code is shorter than the message. This reflects the fact that for large $n$ the chance of an unlikely string like 1111111111... becomes very small, so can be left out of the block code. This generalises to $n$ letters to give Shannon entropy:
+\begin{equation}
+    H(X) = \sum_x -p(x)\log p(x)
+\end{equation}
+\subsection{Formal Proof}
+A typical sequence $\bm u$ is defined as one which for which the probability of occurrence satisfies:
+\begin{equation}
+2^{-n(H(X)+\epsilon}\leq p(\bm u) \leq2^{-n(H(X)-\epsilon}
+\label{typicalsequence}
+\end{equation}
+Typical sequence theorem states that the probability of getting any typical sequence can be made arbitrarily close to 1 for large enough $n$. Let $T_{\epsilon}^{(n)}$ be the set of typical sequences, then the probability of getting any typical sequence is bounded by:
+$$ 2^{-n(H(X)+\epsilon}|T_{\epsilon}^{(n)}| \leq
+\sum_{\bm u \in T_{\epsilon}^{(n)}} p(\bm u) \leq 1
+$$
+using the left hand inequality of \ref{typicalsequence}. Therefore, $|T_{\epsilon}^{(n)}| \rightarrow 2^{n H(X)}$ as $\epsilon \rightarrow 0$.\\\\
+Pick $\epsilon$ such that $R> H(X) + \epsilon$. Break set of possible sequences into typical set and its complement $A^{n}_{\epsilon}$. Encode any value in $A^{n}_{\epsilon}$ to flag bit $0$ and assign a codeword of length $n R$ to elements in $T_{\epsilon}^{(n)}$ (which is possible as  $|T_{\epsilon}^{(n)}| \leq 2^{n(H(X)+\epsilon} < 2^{n R}$). Probability of failure is:
+\begin{equation}
+    \sum_{\bm u \in A^{n}_{\epsilon}}p(\bm u)
+\end{equation}
+which by typical sequence theorem can be made arbitrarily small (as the probability of being in  $T_{\epsilon}^{(n)}$ tends to 1).
+\subsubsection{Converse}
+Pick a subset of the typical set $S^n$ with $|S^n| = 2^{n R}$ with $R< H$. The probability of a sequence being in $S^n$ is:
+$$
+P(S^n) = \sum_{\bm u} p(\bm u) = 2^{n R}2^{-n H(X)}
+$$
+($p(\bm u) = 2^{-n H(X)}$ in limit as $n \rightarrow \infty$). As $H(X) - R  > 0$, this tends to $0$ as $n$ tends to infinity.\\\\
+Intuitively it doesn't work as the number of sequences we missed grows exponentially as $n$ heads to infinity.\\\\
+\textbf{Joint Entropy}:
+\begin{equation}
+    H(X,Y) = - \sum_{\bm x, \bm y} p(x,y) \log p(x,y)
+\end{equation}
+\textbf{Conditional Entropy} (imagine X are the bits received over a noisy channel so this is the entropy of the source Y given the data received):
+\begin{equation}
+    H(Y|X) = \sum_{\bm x} p(x)H(Y|X=x) = \sum_{\bm x \bm y} p(x)p(y|x)\log p(y|x)
+\end{equation}
+After every letter is received a new optimal code can be found that will specify the remaining string with $H(Y|X)$ bits per letter. Therefore,
+\begin{equation}
+    H(X,Y) = H(Y|X)+H(X)
+\end{equation}
+\textbf{Relative Entropy} (defines a sort of distance between two probability distributions but is not a metric as not symmetric and does not satisfy triangle inequality):
+\begin{equation}
+    D(p||q) = \sum_{\bm x} p(x) \frac{p(x)}{q(x)}
+\end{equation}
+only 0 for $p = q$. The above is only well-defined if $p << q$ (meaning that $q(x) =0 \Rightarrow p(x) = 0$). \\ \textbf{Mutual information}:
+\begin{equation}
+    I(X;Y) = H(X) + H(Y) - H(X,Y)
+\end{equation}
+Neat result. As $D(p||q) \geq 0$ and given $q(x) = \frac{1}{|J|}$ for alphabet $J$,
+$$
+D(p||q) = \sum p(x) \log \frac{p(x)}{\frac{1}{|J|}} = - H(X) + \sum p(x) \log |J|
+$$
+$$
+H(X) \leq \log |J|
+$$
+\textbf{Jensen's Inequality:} (for concave functions)
+\begin{equation}
+    \mathbb{E}(f(X)) \leq f(\mathbb{E}(X))
+\end{equation}
+\begin{equation}
+    H(X,Y) \geq H(X) + H(Y)
+\end{equation}
+\end{document}
+

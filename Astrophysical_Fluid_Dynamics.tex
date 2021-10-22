@@ -1,0 +1,276 @@
+\documentclass{article}
+\usepackage{bm}
+\begin{document}
+In kinetic theory they would say there is a distribution function of velocities at every point and time, but in fluids we characterise every point with just one number describing the velocities.\\
+If given $L$ (size of the system) and $\lambda$ (mean path of particles), then the fluid approach is valid when $\lambda << L$. Usual formula for $\lambda$ is $\lambda = \frac{1}{n\sigma}$ with $n$ number density and $\delta$ cross-section.\\
+\textbf{Neutrals}:
+$\delta = 10^{-15} cm^2$ way you figure it out is by roughly taking the cross-sectional area of a hydrogen atom.\\
+\textbf{Ionized species}: $\delta = 10^{-4} \left( \frac{k}{T} \right) cm^2$. Interaction is so strong between positive and negative charges they are scattering through 90 degrees. So the higher the temperature the faster the particles move and the small the distance between the particles has to be before they get deflected as much.\\
+Consider in the case of the bow and termination shocks of the sun. The gas that has been flowing towards the sum has $n \approx 1 cm^{-3}$ and $T \approx 10^4K$, and the bow shock occurs about about $100-150 AU$. For neutrals this gives $\lambda = 10^{15} cm = 70 AU$ which is quite close to the size of the shock, so therefore the neutrals are weakly collisional so the fluid approach is not going to be very good at describing their behaviour. For ionized particles, this gives $\sigma = 10^{-12} cm$, so $\lambda = 10^{12}cm = 0.1AU$. Therefore, for ionized species $\lambda << L$ so the fluid approach is good.\\
+\subsection{Definitions}
+Characterise fluid by $\bm u$ (sometimes written $\bm v$), $p$(pressure) and $\rho$ (density) at point $\hat X (\hat r)$ and time $t$\\
+\textbf{Eulerian Derivative}: Characterises the derivative at a given point in space\\ $$\frac{\partial}{\partial t}|_{\hat X}$$
+\textbf{Lagrangian time Derivative}: Taken while moving with the fluid. $Df = f(x_0 + u\delta t,t+\delta t) - f(x_0, t) =  (\frac{\partial f}{\partial t}  + (\bm u \cdot \nabla) f) \Delta t$\\
+$$
+\frac{Df}{Dt} = \frac{\partial f}{\partial t}  + (\bm u \cdot \nabla) f 
+$$
+\subsection{Evolution of a line Element}
+$$
+\delta x(t+\Delta t) = \delta x(t) + \Delta t (\delta x(t) \cdot \nabla) \bm u 
+$$
+$$
+\frac{D \delta x}{Dt} = (\delta x \cdot \nabla) \bm u 
+$$
+\subsection{Continuity Equation}
+Adopt Eulerian approach. Fixed $\hat x$, fixed volume element, and mass.
+$
+M = \int_V \rho dV
+$ - varies with time with:
+$$
+\frac{\partial M}{\parital t} = \frac{\partial}{\partial t} \int_V \rho dV = \int_V \frac{\partial \rho}{\parital t} dV
+$$
+$$
+\frac{\partial M}{\parital t} = - \int_{\partial V} \rho \bm u \cdot d\bm S = - \int_V \nabla \cdot (\rho \bm u) dV
+$$
+$$
+\int_V \frac{\partial \rho}{\partial t} dV = - \int_V \nabla \cdot (\rho \bm u) dV
+$$
+$$
+\int_V \left( \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho u)\right) dV = 0
+$$
+\begin{equation}
+        \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \bm u) = 0
+\end{equation}
+\subsection{Momentum Equation}
+Stick to Lagrangian approach. Follow mass element M as it moves and apply newtons law to this element. $M \frac{d\bm u}{dt} = \frac{D\bm u}{D t} = F$. Possible forces: Pressure, gravity, body forces\\
+\textbf{Pressure} - always acts on the surface so : $p = - \int_{\partial V} p d \bm S = -\int_V \nabla p dV$\\
+\textbf{Gravity} - given by gravitational potential ($\phi$) $(-\nabla \phi}M = - \nabla \phi \int_V \rho dV = - \int_V \rho \nabla \phi dV$\\
+\textbf{Bodily forces} - $f_e = \frac{F_e}{M}$\\
+$$
+M\frac{D\bm u}{Dt} = \int_V \frac{D \bm u}{dt} \rho dV =- \int_V \nabla p dV - \int_V \rho \nabla \phi dV + \int_V f_e \rho dV$
+$$
+\begin{equation}
+        \rho \frac{D u}{Dt} = - \nabla p - \rho \nabla \phi + \rho f_e
+\end{equation}
+\begin{equation}
+        \frac{\partial u}{\partial t} + (\bm u \cdot \nabla ) \bm u = - \frac{\nabla P}{\rho} - \nabla \phi + f_e
+\end{equation}
+If we know $\phi(x)$ (Cowling Approximation) and $P=P(\rho)$ (barotopic approximation) then these equations are sufficient to describe the system. 
+\subsection{Examples of barotopic fluids}
+\textbf{Isothermal fluid}: $P= c_s^2\rho$, $c_s$ is sound speed and $c_(x)=$ constant\\
+\textbf{Adiabatic fluid}: has constant entropy everywhere, $S(x) =$ constant\\\\
+As $S(P,\rho) = constant$ there must be a unique $P(\rho)$ relation.\\\\
+For an ideal gas, $S = c_{\sigma} \ln \frac{P}{\gamma \rho}$ where $c_{\sigma}$ is the specific heat at a constant volume and $\gamma$ is the adiabatic index. $\gamma$ is given by 
+$$
+\gamma = \frac{c_p}{c_s} = \frac{T\frac{\partial S}{\partial T}_p}{T \frac{\partial S}{\partial T}_v} = \frac{\frac{\partial S}{\partial T}_P}{\frac{\partial S}{\partial T}_{\rho}}
+$$
+As S is constant $P = k \rho^\gamma$ for $k = e^{\frac{S}{c_v}$ (the adiabatic equation of state). The value of $\gamma$ depends on the type of gas and often depends on the polytropic index $n$ by $\gamma = 1+\frac{1}{n}$.\\\\
+\textbf{Monoatomic gas}: $n= \frac{3}{2}$ and $\gamma = \frac{5}{3}$\\
+\textbf{Diatomic gas}: $n = \frac{5}{2}$ and $\gamma = \frac{7}{5}$\\\\\\
+What if $\phi(x)$ depends on the density distribution. You need to use the Poisson equation:
+\begin{equation}
+        \nabla^2 \phi = 4\pi G \rho
+\end{equation}
+$$
+\phi(x) = -G \int_V \frac{\rho(\bm x',t)}{|\bm x - \bm x'|} d\bm x' - G \int_{V_{ex}}\frac{\rho(\bm x', t)}{|\bm x - \bm x'|} d\bm x'
+$$
+\subsection{Drop barotropic assumption}
+Still assume ideal fluid so no dissapative effects - no heat transport/radiation transport/conductivity. Then entropy will still be conserved for each fluid element
+\\\\
+Entropy is a material property so it belongs to a particular particle or element, so entropy being conserved means that its material derivative is 0: $\frac{DS}{Dt} = 0$. No longer have $S(P,\rho) = constant$ but still have one to one relationshi$p$ and $\rho$.
+$$
+\frac{Dp}{Dt} = \frac{\partial p}{\partial \rho}_S \frac{D\rho}{Dt} = \frac{P}{\rho}\frac{\frac{1}{p}\partial p}{\frac{1}{\rho}\partial \rho} \frac{D\rho}{Dt} = \frac{p}{\rho} (\frac{\partial \ln p}{\partial \ln \rho})_s \frac{D\rho}{Dt} = \frac{p}{\rho} \Gamma_1 \frac{D\rho}{Dt}
+$$
+$$
+\Gamma_1 = (\frac{\partial \ln p}{\partial \ln \rho})_s 
+$$
+where $\Gamma_1$ is the first adiabatic exponent. For an ideal gas $\gamma = (\frac{\partial \ln p}{\partial \ln \rho})_s \implies$
+$$
+\frac{Dp}{Dt} = \gamma \frac{p}{\rho} \frac{D\rho}{Dt}
+$$
+From continuity: $\frac{\partial \rho}{\partial t} + (\bm u \cdot \nabla) \rho + \rho \nabla \cdot \bm u = 0$. So:
+\begin{equation}
+        \frac{D\rho}{Dt} = - \rho \nabla \cdot \bm u
+\end{equation}
+So
+$$
+\frac{Dp}{Dt} = - \gamma p \nabla \cdot \bm u
+$$
+Can rewrite as energy equation:
+\begin{equation}
+        \frac{\partial \rho}{\partial t} + (\bm u \cdot \nabla) p  + \gamma p \nabla \cdot \bm u = 0
+\end{equation}
+An ideal fluid is described by equations (1), (3), (4) and (6).
+\subsection{Departures from $p=\frac{n}{\mu}kT$}
+We used the above assumption to get the equation for $\gamma$ for an ideal gas of ($\gamma = (\frac{\partial \ln p}{\partial \ln \rho})_s $). In general $\Gamma_1 = (\frac{\partial \ln p}{\partial \ln \rho})_T \gamma$, and for an ideal gas $(\frac{\partial \ln p}{\partial \ln \rho})_T =1$.\\\\
+Whenever T is very high, $p = \frac{\rho}{\mu} k_B T + a T^4$ where $a = \frac{4}{3} \frac{\sigma_{sb}}{c}$.\\\\
+Radiation pressure is important in: Early Universe, Centres of stars, Inner parts of acretion disks around neutron stars and black holes\\\\
+\section{MHD}
+Maxwell's equations
+\begin{equation}
+        \frac{1}{c} \frac{\partial \bm B}{\partial t} = - \nabla \times \bm E
+\end{equation}
+\begin{equation}
+        \nabla \cdot \bm B = 0
+\end{equation}
+\begin{equation}
+        \nabla \times \bm B = \frac{4 \pi}{c} \bm J + \frac{1}{c}\frac{\partial \bm E}{\partial t}
+\end{equation}
+\begin{equation}
+        \nabla \cdot \bm E = 4 \pi \rho_{g} = 4\pi \Sigma_i q_i
+\end{equation}
+Ideal MHD assumes that conductivity of the fluid is infinite, $\sigma \rightarrow \infty$.\\\\
+Lets switch to a co-moving with a fluid frame (that is moving with velcoity $u$). In this frame $\bm J'$, $\bm E'$ are related by Ohm's Law: $\bm J' = \sigma \bm E'$. If $\sigma \rightarrow 0$ then $\bm E' = 0$ in the co-moving frame.\\
+\textbf{Lorentz transformation}
+$\bm E' = \frac{\bm E + \frac{\bm u \times \bm B}{c}}{\sqrt{1-\frac{u^2}{c^2}}}$ but we will be considering non-relativistic limit with $\frac{u}{c} <<1$. So 
+$$
+\bm E' = \bm E + \frac{\bm u \times \bm B}{c} + O(\frac{u^2}{c^2})
+$$
+As $E'=0$:
+\begin{equation}
+        \bm E = -\frac{\bm u \times \bm B}{c}
+\end{equation}
+Say L and T are typical length and time scales of the problem $L \sim u T$:
+$$
+\nabla \times B \sim \frac{B}{L}
+$$
+$$
+\frac{1}{c}\frac{\partial E}{\partial t} \sim \frac{E}{cT} \sim \frac{B}{cT}\frac{u}{c}
+$$
+So $\frac{\frac{1}{c}\frac{\partial \bm E}{\partial t}}{\nabla \times \bm B} \sim \frac{u^2}{c^2} << 1$, so:
+\begin{equation}
+        \nabla \times \bm B = \frac{4 \pi}{c} \bm J 
+\end{equation}
+Can use 7 and 11 to derive the induction equation:
+$$
+\frac{1}{c} \frac{\partial \bm B}{\partial t} = - \nabla \times \frac{\bm u \times \bm B}{c}
+$$
+\begin{equation}
+        \frac{\partial \bm B}{\partial t} = \nabla \times (\bm u \times \bm B)
+\end{equation}
+If $\bm u$ is known then we can solve this equation for $\bm B$. The equation is linear if $\bm u$ is specified. Kinematic limit when the B-field doesn't affect $\bm u$ much.\\\\
+Take divergence of induction equation gives: $\frac{\partial}{\partial t}(\nabla \cdot \bm B) = 0$ so if a system starts solenoidal then it stays that way.
+\subsubsection{Magnetic force}
+per unit volume
+$$
+\bm F = \frac{1}{c} \sum_{i} f_i \bm u_i \times \bm B = \frac{\bm J \times \bm B}{c} = \frac{c}{4 \pi} \frac{(\nabla \times \bm B) \times \bm B}{c} = \frac{(\nabla \times \bm B) \times \bm B}{4 \pi}
+$$
+as:
+$$
+ \frac{\partial u}{\partial t} + (\bm u \cdot \nabla ) \bm u = - \frac{\nabla P}{\rho} - \nabla \phi + f_e =  - \frac{\nabla P}{\rho} - \nabla \phi +\frac{(\nabla \times \bm B) \times \bm B}{4 \pi}
+$$
+\begin{equation}
+         \frac{\partial u}{\partial t} + (\bm u \cdot \nabla ) \bm u = - \frac{\nabla P}{\rho} - \nabla \phi +\frac{(\nabla \times \bm B) \times \bm B}{4 \pi}
+
+\end{equation}
+This has no electrostatic term ($\rho_g E$) as in the non-relativistic limit it is negillibe compared to the magentic term.
+$$
+F_{m,i} = \frac{1}{4\pi} \epsilion_{ijk} \epsilion_{jlm} \frac{\partial B_m}{\partial X_l}B_k = -\frac{1}{4\pi}  \epsilion_{ikj} \epsilion_{jlm}  \frac{\partial B_m}{\partial X_l}B_k = -\frac{1}{4\pi} (\delta_{il}\delta_{km}- \delta_{im}\delta_{kl})  \frac{\partial B_m}{\partial X_l}B_k
+$$
+$$
+F_{m,i} = \frac{1}{4\pi}( \frac{\partial B_i}{\partial X_k} B_k  - \frac{\partial B_k}{\partial X_i} B_k) = \frac{1}{4\pi}( (\bm B \cdot \nabla) \bm B - \frac{1}{2} \nabla \cdot \bm B^2)_i 
+$$
+gives the \textbf{isotropic magnetic pressure}:
+\begin{equation}
+        \bm F = \frac{(\bm B \cdot \nabla) \bm B}{4\pi} -  \nabla \cdot \frac{\bm B^2)}{8\pi}
+\end{equation}
+$$
+(\bm B \cdot \nabla) \bm B} =  B \frac{\partial \bm B}{\partial s} = B \frac{\partial B \bm s}{\partial s} =    B  \bm S \frac{\partial B}{\partial s} + B^2  \frac{\partial \bm s}{\partial s}  
+$$
+Did not understand end of lecture 4 about finding the magnetic force in terms of the perpendicular and parallel gradients.\\\\
+As
+$$
+\nabla \times( \bm u \times \bm B)  = \bm u (\nabla \cdot \bm B) + (\bm B \cdot \nabla) \bm u - (\bm u \cdot \nabla) \bm B - \bm B (\nabla \cdot \bm u) 
+$$
+We have $\nabla \cdot \bm B = 0$ and $\nabla \times( \bm u \times \bm B) = \frac{\partial \bm B}{\partial t} so 
+$$
+\frac{D\bm B}{Dt} =  (\bm B \cdot \nabla) \bm u - \bm B (\nabla  \cdot u) 
+$$
+From the continuity equation: $\nabla \cdot \bm u = -\frac{1}{\rho}\frac{D\rho}{Dt}$
+$$
+\frac{D\bm B}{Dt} - \frac{\bm B}{\rho} \frac{D\rho}{Dt} = (\bm B \cdot \nabla) \bm u
+$$
+This gives the motion of the field lines.
+\begin{equation}
+\frac{D}{Dt}(\frac{\bm B}{\rho} = (\frac{\bm B}{\rho} \cdot \nabla} \bm u
+\end{equation}
+This is equivalent to the motion of laine eleemnet from the start of the course so $\frac{\bm B}{\rho} \sim \delta \bm x$ scale proportionally. \\\\
+Consider a cyclinder of length $\delta x$ and cross section $\delta S$ with magnetic field $\bm B$ so $\delta m = \rho \delta S \delta x = \bm B \delta S$. Therefore, as the mass is fixed so must the magentic flux element must stay constant. This also holds more generally, consider magnetic flux throguh a surface $S$
+$$
+\phi = \int_S \bm B \cdot d \bm S
+$$
+In a Lagrangian frame, contour gets advected with the fluid. Look at the change of the flux as the contour gets advected.
+$$
+\frac{D\phi}{Dt} = \int_S \frac{\partial \bm B}{\partial t} \cdot d \bm S + \int_C \bm B \cdot (\bm u \times d\bm l)G
+$$
+with first term is changing magnetic flux and the second is the changing surface (considered seperately).
+$$
+\frac{D \phi}{D t} = \int_s \nabla \times (\bm u \times B) \cdot d\bm S + \int_C \bm B \cdot (\bm u \times d\bm l)
+$$
+$$
+\frac{D \phi}{D t} = \int_C (\bm u \times B) \cdot d\bm l + \int_C \bm B \cdot (\bm u \times d\bm l) = 0
+$$
+This illustrates flux-freezing. In MHD the magnetic flux is conserved as the fluid moves. \\
+\textbf{Example: Star formation}\\
+Should be able to calculate the magnetic flux in the star from knowing the magnetic flux of the initial cloud. This would lead to an estimate of $10^8 G$ but the actual flux is $10^2 G$ and this is because the MHD assumption is not accurate.\\
+\textbf{Critical flux}\\
+$$
+E_m \sim \frac{\phi^2}{6R_c}
+$$
+$$
+E_{grav} \sim \frac{GM^2}{R_c}
+$$
+If
+$$
+\frac{E_m}{E_{grav}} = \frac{\phi}{M_c}^2\frac{1}{G} < 1
+$$
+then collapse occurs so need $\phi < \phi_{crit} = M_cG^{\frac{1}{2}}$ in order for it collapse. For our sun the flux is too large for the collapse to have occured. The solution to this is the solar formation occured at very cold temperatures so the ionization is very low so the conductivity is not infinite so has other effects to consider such as the hall effect and resisitivity and mainly antipolar diffusion. Antipolar diffusion is when B field couples to charges and charges then couple to neutrals by collisions so the magnetic field does not affect the neturals and so the magnetic field just slips through the cloud of gas. So therefore magentic flux is not conserved and we expexpect to lose a lot of magnetic flux.
+\\\\
+\textbf{Example: Formation of neutron stars}
+A neutron star is only 10 km radius whereas the core of the star that collapses is about $10^{11}$ cm.
+$$
+\phi \sim B_*R_*^2 \sim B_{NS}R_{NS} \>\> \implies B_{NS} \sim B_*\frac{R_*}{R_{NS}} = 10^{12}G
+$$
+This is actually very accurate so the model works well for the transition from a star to a neutron star.\\\\
+\subsection{Rotating, axisymmetric systems: induction equation}
+Use cyclindrical coordinates
+$$
+\bm u = u_{\psi} \bm e_{\psi} = R \Omega(R,z) \bm e_{\psi}
+$$
+$$
+\bm B = \bm B_p + B_{\psi}\bm e_{\psi}
+$$
+$$
+\bm B_p = B_R \bm e_R + B_z \bm e_z
+$$
+$$
+\frac{\partial \bm B}{\partial t} = \nabla \times (\bm u \times \bm B) = (\bm B \cdot \nabla ) \bm u - (\bm u \cdot \nabla) \bm B - \bm B (\nabla \cdot \bm u)
+$$
+Last term can be dropped as incompressible behaviour
+$$
+\nabla = (\frac{\partial}{\partial R}, \frac{\partial}{\partial z}, \frac{1}{R}\frac{\partial}{\parital \psi}
+$$$$
+\frac{\partial \bm e_R}{\partial \psi} = \bm e_{\psi}, \frac{\partial \bm e_{\psi}}{\partial \psi} = - \bm e_R
+$$
+$$
+(\bm B \cdot \nabla) \bm u = B_r\frac{\partial(u_{\psi} \bm e_{\psi}}{\partial R} + B_z \frac{\partial(u_{\psi} \bm e_{\psi}}{\partial z} + \frac{B_{\psi}}{R} \frac{\partial(u_{\psi} \bm e_{\psi}}{\partial \psi} = B_r \frac{\partial (R\Omega)}{\partial R} \bm e_{\psi}+ B_z \frac{\partial (R\Omega)}{\partial z} \bm e_{\psi} + B_{\psi} \Omega(-\bm e_R) 
+$$
+$$
+(\bm u \cdot \nabla) \bm B = \frac{u_{\psi}}{R} \left( \frac{\partial }{\partial \psi} B_R \bm e_R + \frac{\partial}{\partial \psi}B_z \bm e_z + \frac{\partial }{\partial \psi} (B_{\psi} \bm e_{\psi}\right)
+$$
+$$
+\frac{\partial \bm B}{\partial t} = \bm e_{\psi} R (\bm B_p \cdot \nabla) \Omega` 
+$$
+$$
+\frac{\partial \bm B_p}{\partial t} = 0, \frac{\partial B_{\psi}}{\partial t} = R(\bm B_p \cdot \nabla) \Omega
+$$
+In steady state have $ \frac{\partial B_{\psi}}{\partial t}  = 0 \implies (\bm B_p \cdot \nabla) \Omega = 0$ so the gradient of $\Omega$ is always orthogonal to $\bm B_p$ which means $\Omega$ is constant on magnetic surfaces. This is called the \textbf{Ferronos' isozotation law}
+\subsection{Magnetic Forces - force balance}
+$$
+\frac{D \partial}{Dt} = - \frac{\nabla P}{\rho} - \nabla \phi + \frac{\nabla \times \bm B) \times \bm B}{4 \pi \rho}
+$$
+L, T are the length and time scales. LHS and first term comparison $\frac{u \rho L}{\rho c_s^2 T} = \frac{v}{c}^2$ if $u<<c_s$ can neglect ineterial LHS compared to 1st term on RHS.\\
+Now compare LHS and 3rd term. $\frac{4\pi uL\rho}{TB^2} \sim \frac{u^2}{\frac{B^2}{4\pi \rho}}$.  \frac{B}{\sqrt{4\pi \rho}} is the Alfeven velocity $u_A$. so is $\frac{u}{u_A}^2$. So if $u << u_A$ can neglect inertial term compared ot magnetic force.
+\end{document}
+
+

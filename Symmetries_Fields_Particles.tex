@@ -1,0 +1,472 @@
+\documentclass{article}
+\usepackage{tikz-feynman}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\begin{document}
+\section{Lecture 1}
+A symmetry is a transformation $g_i$ that leaves some physical properties (e.g. energy, scattering probabilities etc.) unchanged.\\
+They can be composed $g_1g_2$ means act first with $g_2$, then with $g_1$\\
+Doing nothing ($e$, the identity) is a symmetry\\
+A symmetry transformation $g$ can be reversed $g^{-1}$ which is itself a symmetry.\\
+The set of all symmetries forms a group. 
+\subsection{Groups recap}
+\subsubsection{Axioms}
+A group is a set of elements $\{e,g_1,g_2,..\}$ with:\\
+i) A composition rule: a binary operator * such that $g_i * g_j \in G$. We shall often write $g_i * g_j$ as $g_ig_j$\\
+ii) There exists a unique identity element $e\in G$ s.t. $eg_i=g_i=g_ie \forall g_i \in G$\\
+iii) Associativity: $(g_ig_j)g_k  = g_i(g_jg_k)$\\
+iv) Unique inverse: There exists a unique inverse $g_i^{-1} \forall g_i \in G$ such that $g_ig_i^{-1} = g_i^{-1}g_i = e$ (no sum)
+\subsection{Examples}
+i) $\mathbb{Z}_n$ defined by integers 0, 1, ..., $n-1$ where $n \in \mathbb{N}$ and * is addition mod $n$\\
+ii) $C_n$, the cyclic group is defined by $\mathbb{C}$ numbers $e^{\frac{2\pir}{n}$ for $r=$ 0, 1, ..., $n-1$, with * as multiplication operator\\
+$\mathbb{Z}$ and $C_n$ are isompheric as there is a 1-1 map between elements consitent with the group composition rules\\
+These are examples of abelian groups which is defined as groups for which: $g_ig_j = g_jg_i$.\\
+iii) $D_3$ symmetries of 2D regular 3 sided polygon. Have reflections (let $r$ be relection along axis through vertix prependicular to the opposite edge) and rotations (let $a$ be a rotation of $\frac{2\pi}{3}$) that can be be composed to give all 6 elements ($e$, $a$, $a^2$, $r$, $ra$, $ra^2$).
+\subsection{Lie Groups}
+Lie Groups are a generalisation of this to continous symmetries. Instead of a trianglets consider the symmetries of a cicle. You can rotate around the centre by some real angle $\theta$. This forms a group (SO(2)) with an infinte number of elements. Lie Groups are essential for the description of particles.\\
+\subsubsection{Internal symmetries}
+Internal symmetries are properties of the particles or fields themselves e.g. the colour rotation of quarks. Quarks come in three nearly otherwise identical copies (we name them colors which we will call red, green and blue). Rotating the colors into one another in a continous way is a symmetry. e.g. can take a red quark and rotate it to a blue quark plus an imaginary bit of green and the sca t t ering amplitudes don't care. Can do both local and global symmetries. The colour rotation could be di ffernt at di fferent poi nts ($x^{\mu}$). \\
+When you add a local symmetry you need to add a sp in one vector boson or a gauge boson in or der to make the theory invariant (this is called te gluon fo rthe colour c ase. This gluon carries a colour and an anti-colour). Gluon can i nteract with q, $\overline{q}$ in the following Feyman diagram.\\ \\
+\feynmandiagram [horizontal=a to b] {
+  i1 [particle=\(e^{-}\)] -- [fermion] a -- [fermion] i2 [particle=\(e^{+}\)],
+  a -- [photon, edge label=\(\gamma\), momentum'=\(k\)] b,
+  f1 [particle=\(\mu^{+}\)] -- [fermion] b -- [fermion] f2 [particle=\(\mu^{-}\)],
+};\\
+The Group structure tells you th at the colour is conserved. If the symmetry doesn't depend on $x^{\mu}$, ther is no gauge boson and it is called a global symmetry.
+\subsubsection{External symmetries}
+Act directoin on $x^{\mu}$ e.g. rotate axis, Lorentz transformation\/ boson translations in $x$. \\
+Group theory has also been used in cases where symmetries are only approximate, e.g. to ex plain the spectrum of a calss of particles called hadrons
+\subsection{Fundamental Particles}
+\begin{tabular}{c|c|c|c}
+        Name & Spin & Mass & Force \\ \hline
+        $g$, gluon & 1 & 0 & Strong \\
+        $\gamma$, photon & 1 & 0 & Electromagentic\\
+        $W^{\pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} & Electroweak\\
+        $G$, graviton & 2 & 0 & Gravity 
+\end{tabular}\\\\
+Each of these come form local symmetries. Massive ones come from sponteaously broken local symmetry (Higgs mechanism). All fit in to the standa r d model of particle physics, except for the graviton. The standa r d model is QFT with a Lie Group structure.
+
+\section{Lecture 2}
+\subsection{Reminder of Equivlence Relations}
+i) Reflexivity: $s \tilda s \forall s \in S$\\
+ii) Symmetry: $s\tilda s' \implies s' \tilda s \forall s,s' \in S$\\
+iii) Transivity $s\tilda s'$ and $s'\tilda s'' \imples s \tilda s'' \forall s, s', s'' \in S$\\
+Equivalence class of $s\inS$: $[s] = {s'\in S; s' \tilda s}$\\
+Two equivalence classes are either disjoint or equal, since for $s, \tilda s \in S$ either $s \union \tilda s = \empty$ or take $s' \in [s]\union [\tilda s]$ then for $s'' \in [s]$\\
+$s' \tilda s'' \implies s'' \tilda s'' \implies s''\in [\tilda s]$ and vise verse so $[s] = [\tilda s ]$ so equivalence classes partition sets:\\
+e.g. take $S = \{\mathbb{Z}\}$ and $s \tilda s'$ if $s mod 2 = s' mod 2$. You get two equivalence classes $[0] = \{even \mathbb{Z}\}$ and $[1] = \{odd \mathbb{Z} \}$.\\\\
+\textbf{Subgroup}: A subgroup of G is a subset of G which is also a group. Write $H < G$. We can define:
+$$
+g_i \tilda g_j \iff g_i = g_jh \textrm{ for some } h \in H
+$$
+Each equivalence class is called a coset and has the same order as H. So the order of G is written $|G|$
+The cosets form a coset space $G/H$ which may or may not be a group.\\
+A normal/invariant subgroup $H < G$ is s.t.:
+$$
+gHg^{-1} = H \forall g \in G
+$$
+(above means some element of H on the left and some on the right but could be different element). In this case $G/H$ is a group since for $g'_i = g_ih_i$, $g'_j = g_jh_j$ with $h_i, h_j \in H \implies g_i' g_j = g_ig_j g$. follows a two line proof.\\
+A group is simple if the only invariant subgroups are $G$ and the trival subgroup with only the identity. \\
+
+The centre of the group $\mathfrak{Z}(G)$ is the set of all elements which commute with all $g \in G$. It is an abelian normal subgroup.\\
+Between two groups $G_1, G_2$ we form a firect product group $G_1 \times G_2$ formed by pairs of elements $\{(g_1,g_2)\}, g_1 \in G_1, g_2 \in G_2$.
+$$
+(g_1, g_2)(g'_1, g'_2) = (g_1g'_1,g_2g'_2)
+$$
+$$
+(g_1,g_2)^{-1} = (g_1^{-1}, g_2^{-1})
+$$
+$$
+(e) = (e_1, e_2)
+$$
+Can now do first exercise on ES1.\\
+If you take two elements of a group the communator is defined to be:
+$$
+[g,h] = g^{-1}h^{-1}gh
+$$
+If $[g,h] = e$ then say that $g,h$ commute. If $G$ is abealian then $[g,h] = e \forall g,h \in G$.\\
+\subsection{Examples with finite groups}
+\textbf{Cyclic group}: $\mathbb{Z}_n$ for prime $n$ this is simple\\
+\textbf{Dihedral group}: $D_n$ is the symmetry of an n-sided regular polygon formed by rotation through $\frac{2\pi r}{n}$ together with reflection $r$\\
+$$
+D_n = \{a^m, a^mr, m = 0, 1,.., n-1, a^0 =a^n = e, ar = ra^{n-1}\}
+$$
+$|D_n| = 2n$ and note $(a^m r)^2 = e$. For $n>2$, $ar \neq ra \implies$ the group is non-abelian.\\
+\textbf{Permutation Group}: $S_n$ is the number of orderings of $n$ elements: $|S_n| = n!$\\
+$S_3 = D_3$
+\textbf{Automorphism}: A map of a group to itself. $g_i \rightarrow \phi(g_i)$ s.t. the product rule is preserved. $\phi(g_i)\phi(g_j) = \phi(g_ig_j)$ and $\phi(e) = e$ and $\phi(g^{-1}) = \phi(g)^{-1}$\\
+Either inner or outer automorphism:\\
+\textbf{Inner automorphism}: For some fixed member $g \in G$:
+$$
+\phi_g(g_i) = gg_ig^{-1}
+$$
+If it doesn't have this form then it is an outer automorphism.\\ The set of all automophorisms forms a group called AutG which includes $G/\mathfrak{Z}(G)$ as a normal subgroup.\\
+consider $G = {e, a, a^2}$, can take $\phi(\mathbb{Z_3}) = \{e,a^2,a\}$ if you apply this twice you get $e$. so Aut($\mathbb{Z}_3$) = $\mathbb{Z}_2$.\\
+\textbf{Semi-Direct Product}: Take $H \sub AutG$ s.t. for any $h\in H$ and any $g \in G$.\\
+$g \rightarrow \phi_h(g)$ with 
+$$
+\phi_h(g_1)\phi_h(g_2) = \phi_h(g_1g_2)
+$$
+$$
+\phi_{h_1}(\phi_{h_2}(g)) = \phi_{h_{1}h_{2}}(g)
+$$
+$$
+\phi_h(e) = e
+$$
+$$
+\phi_e(g) = g
+$$
+$$
+\phi_{h^{-1}}(g) = \phi_{h}^{-1}(g)
+$$
+The following is the semi-direct product of H with G: $H \ltimes G = G \ltimes H$.\\
+Again, have pairs of elements $(h,g) \in (H,G)$:
+$$
+(h,g)(h',g') = (hh', g\phi_h(g'))
+$$
+$$
+(h,g)^{-1} = (h^{-1}, \phi_{h^{-1}}(g))
+$$
+$$
+(h,e)(e,g)(h,e)^{-1} = (e, \phi_h(g))
+$$
+Note that:
+$$
+(h,g)(e,g')(h,e)^{-1} = (e,g\phi_h(g')g^{-1})
+$$
+So G is an normal subgroup of $H\ltimes G$ so $H = (H\ltimes G)/G$. It is convenient to write the elements of $H|\times G$ as:
+$$
+(h,g) \rightarrow hg = \phi_g(g)h
+$$
+e.g. $D_n = \mathbb{Z}_2 |\times \mathbb{Z}_n$ and we define for any $g= a^m \in \mathbb{Z}_n$
+$$
+\phi_r(g) = g^{-1} =rgr^{-1}
+$$
+Poincare group is a semi-direct product of the lorentz group and the transaltion symmetry
+\section{Lecture 3}
+\subsection{Lie Groups}
+\subsubsection{Basics of Lie Groups}
+They have an infinite number of elements. Elements depend continously on a number of parameters, $\dim G$ being the dimension of the group. Group operations depend smoothly on parameters.\\
+A Lie Group G is a smooth manifold whihc is also a group with smooth group operators\\
+dim $G$ is the dimension of the underlying manifold. An n-dimensional manifold is everywhere locally $\mathbb{R}^n$ (it might not globally look like this but if you zoom in locally enough it will do.
+\subsubsubsection{Examples}
+$ (\mathbb{R}^n, +) \bm x'' = \bm x + \bm x'$ is a smooth $f^n$ of $\bm x$, $\bm x'$ - the inverse $\bm x^{-1} = - \bm x$ is a smooth $f^n$ of $\bm x$, $\bm x'$\\\\
+$S^1 = \{\theta, 0 \leq \theta \leq 2\pi\}$ with $\theta = 0$ and $\theta = 2\pi$ is identified. THe gorup operation is addition, $\theta + 2\pi \sim \theta$.\\\\
+Subgroups of G can be discrete, but these are not Lie subgroups. A Lie subgroup $H < G$ is a continous smooth subgroup.
+\subsubsection{Matrix Groups}
+Lie groups of square matrices $M$ are important.\\\\
+* is amatric multiplication, the existence of inverse requires $\det M \neq 0$, $e$ is $I$, the identity matrix\\\\
+The \textbf{General Linear Group} $GL(n, F) = \{ n \times n \text{invertible matrices over a field F}\}$. Here $F \in \{\mathbb{R}, \mathbb{C}\}$.
+$
+dim GL(n, \mathbb{R}) = n^2
+$, 
+$
+dim GL(n, \mathbb{X}) = 2n^2 
+$ ("real dimension") whereas $n^2$ in "complex dimension")\\
+Have in mind that $M$ act on n-dimensional vector $\bm v$
+$$
+\bm v \rightarrow \bm v' = M\bm v
+$$
+\subsubsection{Important subgroups of $GL(n, \mathbb{R})$}
+Special Linear group $SL(n, \mathbb{R})$ = {M : \det M = 1}$ gives $dim SL(n, \mathbb{R}) = n^2 -1$ and $dim SL(n, \mathbb{C}) = 2n^2 -2$ (real dimension). \\\\
+Orthogonal Group $O(n) = \{M : M^TM = I\}$ gives $dim O(n) = \frac{n(n-1)}{2}$. We note that this preserve the scalar product between 2 vectors:
+$$
+\bm v_1^T \bm v_2 \rightarrow^{O(n)} \bm v_1'^T \bm v_2' = \bm v_1^TM^T M\bm v_2 = \bm v_1^T \bm v_2  
+$$
+also note that $\det M = \pm 1$.\\\\
+Special orthogonal group $SO(n) = \{\mathbb{R} \in O(n): det \mathbb{R} = +1\}$ gives $dim SO(n) = dim O(n)$\\\\
+Sympletic group $S_p(2n, \mathbb{R}) = \{ M \in GL(2n, \mathbb{R}): M^T J M = J \}$ where for J look in notes as how to write\}$ gives $dim S_p(2n, \mathbb{R}) = n(2n+1)$. Antisymmetric form $\bm v_1^T J \bm v_2 = -  \bm v_2^T J \bm v_1$ is invariant.
+\subsubsection{Important subgroups of $GL(n, \mathbb{C})$}
+Unitary group $U(n) = \{U \in GL(n, \mathbb{C}) : U^{\dagger}U = \}$. This preserves $\bm v_1^{\dagger} \bm v_2$ which is important in quantum theories, and $\det U = \pm 1$, $dim U(n) = n^2$.\\\\
+Special Unitary group $SU(n) = \{ U \in U(n): det U = +1\}$ gives $dim SU(n) = n^2 -1$\\\\
+Simplectic group $S_p(2n, \mathbb{C}) = \{ M \in GL(2n, \mathbb{C}): M^T J M = J \}$
+\subsubsection{Psedo-orthogonal/unitary groups}
+SO(n), SU(n) are expamples of ocmpact groups. The parameters vary over a finite range and the manifold has a finite volume. Defining a metric $\eta = $write in later. The pseduo-orthogonal group $O(n,m)$ is defined s.t. $M^T\eta M = \eta$. Invariant form is $\bm v_1^T \eta \bm v_2$ dim O(n,m) = dim O(n+m). Pseduo unitary gorups are simlarily defined as $U^{\dagger}\eta U = \eta$ with dim U(n,m) = dim U(n+m). Pseudo groups are non-compact.
+\subsubsection{Examples of Lie groups}
+SO(2) = $\{R(\theta = ...$
+        End of lecture 3 start of lecture 4 need to get down examples
+\section{Lecture 4}
+\subsection{Parameterisation}
+Choose some coordinates $x \in \mathbb{R}^n$ on the manifold $G$. A lie group element is then $g(x) \in G$ $x,y,z$ can all be thought of as different points.\\
+\texbf{Closure}: $g(z)=g(x)g(y)$  where $z^r$ is some smooth $f^n$ of $x$ and $y$. $z^r = \phi^r(x,y)$. Choose origin to be the idenity $g(o) = e \implies \phi^r(x,o) = x^r$ and $\phi^r(0,y) = y^r$.\\\\
+Exercise to show that there is a taylor expansion s.t. 
+$$
+\phi^r(x,y) = x^r + y^r + c^r_{st}x^s y^t + O(x^2y, y^2 x)
+$$
+define $g(\bar x) = g(x)^{-1} \imples \phi^r(\bar x, x) = \phi^r(x, \bar x)  = 0 \implies \bar x^r = - x^r + c^r_{st}x^sx^t + O(x^3)$\\
+\textbf{Associativity}: $\phi^r(x,\phi(y,z) = \phi^r(\phi(x,y),z)$
+If you specify a group then you specify these $c^r_{st}$ and only ones that statisfy associativity are possible so must have $f^r_{st} = c^r_{st}c^r_{ts}$ which limits possible Lie groups.\\
+\subsubsection{Lie Algebra}
+The Lie algebra $L(G)$ is a group $G$ is a tangent space to G at the identity e.\\ The tangent space to G at the point p, $T_p(G)$ is the dim G dimensional vector space spanned by the differential operators $\{\frac{\partial}{\partial x^j}\} j \in \{1,..., dim G\}$.\\\\
+Suppose $f: G \rightarrow \mathbb{R}$ in a $f^n$ on G and let $V = V^i\frac{\partial}{\partial x^i} \in T_p(G)$. THe aciton of V on f is defined to be:
+$$
+V(f) = V^i \frac{\partial f}{\partial x^i}|_{x=p}
+$$
+Consider a smoth curve on G, $C: \mathbb{R} \rightarrow G$ going thoguh p at $t=0$ with $x^i(0) = p$. We associate a tangent vector $V_c$ at p: 
+$$
+V_c = \frac{d x^i}{dt} |_{t=0} \frac{\partial}{\partial x^i}
+$$
+NB $V_c(f) =\frac{d x^i}{dt} |_{t=0} \frac{\partial f}{\partial x^i}|_{x=p} = \frac{df}{dt}|_{t=0}
+\subsubsection{Examples}
+Lie algebra of SO(2):\\
+...Need to go though and type out these matrices.\\
+Lie algebra of SO(n):\\
+Consider a curve $M(t) \in SO(n)$ with $M(0) \in I$
+$$
+\frac{d}{dt}(M^T(t)M(t)) = \frac{d}{dt}(I) = 0 = M^T\dot M + \dot M^T M 
+$$
+$$
+\dot M(0) = - \dot M(0)^T
+$$
+so $L(SO(n)) = \{X: X^T + X=0\}$. dim $L(SO(n)) = \frac{1}{2}(n^2-n)$ where 1/2 is from the antisymmetry and the $-n$ is from the diagonal being 0.\\
+Note theat $L(O(n)) = L(SO(n))$ because near $e$ O(n) matrix has $\det M = +1$.\\
+Lie algebra of $L(SU(n)$\\
+Let $M(t)$ be a curve in $SU(n)$, $M(0) = I$ with $M(t) = I + tZ + O(t^2)$. $M^TM= I$ to 1st order in t whihc implies Z is anti-hermitian. To first order only the dialoginal will contribute terms to the detminant:
+$$
+\det M = (1+ tZ_{11})(1+ tZ_{22})...(1+ tZ_{nn}) + O(t^2) =  1+ t tr Z + O(t^2)
+$$
+so $\det M = 1 \forall t \implies tr Z = 0$. so L(SU(n)) is the set of $n\times n$ traceless anti-hermiation matricies.\\\\
+ Lie algebra is a vector space over a field F equiped with a Lie bracket $$[,] : L(g) \times L(g) \rightarrow L(g)$$ s.t.\\
+i) $[X,Y] = -[Y,X]\\
+ii) $[\alpha X + \beta Y, Z] = \alpha[X,Z] + \beta [Y,Z]$\\
+iii) $[X, [Y,Z] + [Y, [Z,X]] + [Z,[X,Y]] =0$ (the jacobi identity)\\
+where e.g. $X = X^a$ where $T_a \in T_e(G)$ with $X^a$ now being parameters.\\
+Must have $X^aY^b[T_a,T_b] = Z^c T_c$ but what is $Z^x$ we will find that next lecture. \\\\ Consider a group element clsoe to $e$ $g(\theta )$ with $\theta $ is infintesimal.$g(z + dz) = g(z)g(\theta) \implies z^r + dz^r = \phi^r(z, \theta)$. Expand around $\theta^a = 0 \implies dz^r = \theta^a\frac{\partial \phi^r}{\partial \theta^a}|_{\theta=0} =  \theta^a\mu_a^r(z)$
+\section{Lecture 5}
+Consider $g(z) = g(x)g(y)$ with fixed $x$ and infinitesimally changed $y$.
+$$
+g(z+dz) = g(x)g(y+dy) = g(z)g(\theta)= g(x)g(y)g(\theta)
+$$
+$$
+dy^r = \theta^a\mu_a^r(z)$
+$$
+$$
+\theta^a = dy^s \lambda_s^a(y)
+$$
+where $\lambda(y)$ is the matrix inverse of $\mu(y)$. i.e $ \lambda^a_r(y)\mu_b^r = \delta_a^b$. Substitute $\theta^a$ in:
+$$
+dz^r = \theta \mu^r_a(z) = dy^s\lambda_s^a(y) \mu_a^r(z)
+$$
+\begin{equation}
+\frac{dz^r}{dy^r} = \lambda^d_s(y) \mu_d^r(z)
+\end{equation}
+$$
+T_a(y) = \mu_a^s \frac{\partial}{\partial y^s} = \mu_a^s(y) \frac{\partial z^r}{\partial y^s} \frac{\partial}{\partial z^r} = \mu_a^s(y) \lambda_s^d(y) \mu_d^a(z)  \frac{\partial}{\partial z^r} = T_a(z)
+$$
+$T_a$s are a basis of left-invariant vector fields. The vector space spanned by $L(G) = \{\theta^aT_a\}$ is closed under taking the Lie bracket - so defines the Lie algebra.
+$$
+\mathrm{M}_a^s(y) \mu_b^t(y) \frac{\partial^2 z^r}{\partial y^s \partial y^t} = \mu_a^s(y) \mu_b^t (y) \frac{\partial}{\partiall y^t} \frac{\partial z^r}{\partial y^s} = \mu_a^s(y)T_b(y) [\lambda_s^c(y) \mu_c^r(z)]
+$$
+$$
+\mathrm{M}_a^s(y) \mu_b^t(y) \frac{\partial^2 z^r}{\partial y^s \partial y^t} = \mu_a^s(y)[T_b(y)\lambda_s^c(y)]\mu_c^r(z) + T_b(z)\mu_a^r(z)
+$$
+For any matrix $X$, $\delta X^{-1} = -X^{-1}\delta X X^{-1}$ so
+$$
+T_b(y) \lambda_s^c(y) = -\lambda_s^d(y)[T_b(y)\mu^u_d(y)]\lambda^c_n(y)
+$$
+therefore:
+$$
+        \mathrm{M}_a^s(y) \mu_b^t(y) \frac{\partial^2 z^r}{\partial y^s \partial y^t} = -[T_b(y)\mu_a^u]\lambda_u^d\mu_d^r(z) + T_b(z)\mu_a^r(z)
+$$
+multiply by $\lambda^c_r$ and use the fact that the LHS is symmetric under $a$ to $b$. THis means:
+$$
+T_b(y) \mu_a^r(y) \lambda^c_r(y) + T_a(y) \mu_b^r(y)\lambda^c_r(y) = T_b(z) \mu_a^r(z) \lambda^c_rz) + T_a(z) \mu_b^r(z)\lambda^c_r(z)
+$$
+Using seperation of variables each side must be equal to a constant called structure constanst of the Lie algebra:
+$$
+f^c_{ab} = (T_a(y) \mu_b^r(y) - T_b(y)\mu_a^r(y))\lambda^c_r(y)
+$$
+This is clearly anti-symmetric $f^c_{ab} = - f^c_{ba}$. As we can pick any $g(x)$ these must be constant all over the group manifold G.
+$$
+f^c_{ab} \mu_c^r(z) = T_a(z) \mu_b^r - T_b(z)\mu_a^r(z)
+$$
+Multiply by $\frac{\partial}{\partial z^r}$ to get the Lie algebra of the group:
+\begin{equation}
+        [T_a, T_b] = f^c_{ab}T_c
+\end{equation}
+If multiply by $X^aY^b$ then we find $Z^c = f^c_{ab}X^aY^b$.//
+The jacobi idenity:
+$$
+[T_a,[T_b,T_c]] + [T_c,[T_a,T_b]] + [T_b,[T_c,T_a]] = 0
+$$
+gives
+$$
+f^e_{ad}f^d_{bc} + f^e_{bd}f^d_{ca} + f^e_{cd}f^d_{ab} = 0
+$$
+\textbf{Example}: L(SU(2)) = { 2x2 traceless anti-hermitian matrices} of which the Pauli matrices $\sigma_a$ can be used to give a basis as $T_i = -i\frac{\sigma_a}{2}$
+\\
+Pauli matrices satisfy the following:
+$$
+\sigma_a\sigma_b = \delta I + i \epsilon_{abc}\sigma_c
+$$
+therefore
+$$
+[T_a, T_b] = \frac{-1}{4}[\sigma_a, \sigma_b] = - \frac{i}{2} \epsilon_{abc} \sigma_c = \epsilon_{abc} T_c
+$$
+so
+$$
+f^c_{abc} - \epsilon_{abc}
+$$
+\textbf{Example}: L(SO(3)) = { 3x3 antisymmetric real matrices } and pick three basis elements s.t. $(T_a)_{bc} = -\epsilon_{abc}$ so
+$$
+[T_a,T_b] = \epsilon_{abc}T_c
+$$
+which is the same as in the L(SU(2)) so the Lie Algebras are isomorphic ($L(SU(2) \approx L(SO(3))$).\\
+\textbf{Isomorphic}: If there exists a 1:1 map s.t. $f[X,Y] = [f(X), f(Y)]$\\
+We have used maths conventions but we need to see the physics conventions.
+$$
+T_a \in L(G) \rightarrow it_a
+$$
+$$
+[T_a,T_b] = f^c_{ab}T_c \rightarrow [t_a,t_b] = i f^c_{ab}t_c
+$$
+$$
+\exp(\theta^a T_a) \in G \rightarrow \exp(i\theta t_a)
+$$
+$$
+T_a^{\dagger} = -T_a \rightarrow t_a= t_a^{\dagger}
+$$
+\subsection{Lie Algebra - Lie Group relationship}
+Within this section $\theta^a$ does not mean an infintesimal parameters so need to change $\theta^a \rightarrow X^a$. Have $\theta^a = X^a ds$.\\\\
+Take some element $\theta^a T_a \in L(G)$ there exists a one-parameter subgroup of G corresponding to a path whose tangent at $e$ is $\theta^aT_a$. This path has coordinates $x^r(s)$.
+$$
+\frac{dx^r}{ds} = \theta^a \mu_a^r(x(s)), x^r(0) = 0
+$$
+$$
+\frac{d}{ds}g(x(s)) = \frac{dx^r}{ds} \frac{\partial g(x)}{\partial x^r(s)} = \theta^a \mu_a^r(x(s)) \frac{\partial}{\partial x^r} g(x(s)) = \theta^a T_a g
+$$
+Consider $g(z) = g(x(t))g(x(s))$ so $z^r = \phi^r(x(t),x(s))$:
+$$
+\frac{\partial z^r}{\partial s} = \frac{dx^u(s)}{ds}\frac{\partial z^r}{\partial x^u(s)} = \theta^a \mu_a^u(x(s))\lambda_u^c(x(s)) \mu_b^r(z) = \theta^a \mu_a^r(z)
+$$
+as $z^r|_{s=0} = x^r(t)$ we get $z^r = x^r(s+t)$.
+$$
+g(x(t)g(x(s) = g(x(s+t))
+$$
+so subgroup closes, is abelian and $g(x(s))^{-1} = g(-s)$. This expression is solved by
+\begin{equation}
+        g(x(s)) = \exp(s \theta^a T_a)
+\end{equation}
+so we can go from any element of the L(G) to an element of G.
+\section{Lecture 6}
+In general the image of the expoenential isn't the whole group but rather the part connected to the identity. e.g. O(3) it is a disconnected group with disconnected pieces.It has the stuff that can be reached from $e$ which all have $\det M = +1$ but also have the set of $\det M = -1$ (improper rotations). Improper rotations can't be expressed as $e^X$ with real anti-symmetric matrix X. If $X^aT_a$ are matrices $M$ then we have $\exp(sM) = \sum_{n=0}^{\infty} \frac{s^n M^n}{n!}$. Apparently need to prove:
+$$
+e^{sM+tM} = e^{tM}e^{sM}
+$$
+$$
+e^{sM+tM} = \sum_{n=0}^{\infty} \frac{(s+t)^n M^n}{n!} = \sum_{n=0}^{\infty} \sum_{k=0}^n (n,k) s^{n-k} \frac{t^k M^n}{n!} = \sum_{n=0}^{\infty} \sum_{k=0}^n s^{n-k} \frac{M^{n-k}}{(n-k)!} \frac{M^k t^k}{k!}
+$$
+$$
+= (\sum_{n'=n-k=0}^{\infty} \frac{s^{n'}M^{n'}}{n'!})(\sum^{\infty}_{n=0}\frac{M^k t^k}{k!} = e^{sM}e^{tM}
+$$
+\subsubsection{Baker-Campbell-Hausdorff (BCH) Formula}
+If we can express group elements as $e^X$ where $X \in L(G)$, what about prodcuts? The BCH formula states:
+$$
+e^{tX}e^{tY} = \exp(t(X+Y) + \frac{t^2}{2}[X,Y] + O(t^3)\times \text{nested brackets})
+$$
+We know that all nested brackets will be in the Lie algebra. See example sheet 1.7.
+\subsection{Orbits}
+One-parameter subgroups are examples of orbits, these are defined for feneral groups which act on some space. $X = \{x\}$. The orbit of $x$, $O_x$ is the set of points obtained by the action of group $G$ on the point $x$:
+$$
+O_x = \{ x': x' = gx \forall g \in G\}
+$$
+The orbit-stabiliser theorem states that $O_x = G/G_x$ where $G_x$ is the stabiliser group/little group. It is made up of the element sin G which leave $x$ invariant.
+$$
+G_x = \{h: h \in G, hx = x\}
+$$
+For $x' \in O_x$, $G_{x'} \approx G_x$ since $hx = x$ and $x' = gx \implies $h'x' = x'$ for $h' = ghg^{-1}$.
+\subsection{Representations}
+A representation of a group G is a set of $n\times n$ non-singular square matrices $\{D(g) \in GL(n, F), g \in G\}$ such that by matrix multiplication they represent the group composition:
+$$
+D(g_1)D(g_2) = D(g_1g_2) \forall g_1,g_2 \in G
+$$
+A representation of the Lie Algebra is a set of $n\times n$ matrices over F $\{d(X), X \in L(G)\}$ such that:\\
+a) $[d(X_1),d(X_2)] = d([X_1,X_2]) \forall X_1, X_2 \in L(G)$\\
+b) $d(\alpha X_1 + \beta X_2) = \alpha d(X_1) + \beta d(X_2) \forall \alpha, \beta \in F$ and $X_1, X_2 \in L(G)$ (Linearity)\\\\
+$D(g)$ and $d(g)$ act on a vector space $V$ called the n-dimensional representation space. The dimension of the representation is the dimension of the representation space $n$. \\\\
+#Note that there exists a direct relation between representations of G and represetnations of $L(G)$. If $D$ is a representation of G ( in general, $n = dim D \neq dim G$) for each $X \in L(G)$ we construct a curve:
+$$
+C: t \rightarrow g(t) \text{ with } g(0) = I, \dot g(0) = X
+$$
+and define $d(X) = \frac{d}{dt}D(g(t))|_{t=0}$ giving an $n\times n$ matrix over the field F. Can prove that $d(X)$ is a representation of $L(G)$.\\
+Let $X_1, X_2 \in L(G)$ and construct curves $i \in \{1,2\}$
+$$
+C_i: t \rightarrow g_i(t), g_i(0) = I, \dot g_i(0) = X_i
+$$
+put $h(t) = [g_1(t), g_2(t)]$. Neglecting $O(t^3)$ terms so $h(t) = I + h_1t +h_2t^2$, $g_i(t) = I + X_it + W_it^2$. Expand commuator (half a page of working worth doing at least once)
+$$
+g_2g_1h = g_1 g_2 \implies h_1 = 0, h_2  = [X_1, X_2]
+$$
+$$
+D(h) = D(I + t^2[X_1,X_2] + ...) = D(I) + t^2[\frac{d}{dt}D(h(t))|_{t=0} + ...= I + t^2 d([X_1,X_2]) + ... = D(g_1)^{-1}D(g_2)^{-1}D(g_1)D(g_2)
+$$
+$$
+D(g_i) = I + td(X_i) + t^2 B_i + ...
+$$
+$$
+D(g_i^{-1}) = I - td(X_i) _ t^2[d(X_i)^2 - B_i]+...
+$$
+Therefore
+$$
+D(h) = I + t^2[d(X_1), d(X_2)] _ ...
+$$
+so by comparing the order $t^2$ terms between lines we have $d([X_1,X_2]) = [d(X_1),d(X_2)]$ and as it is matrix linearity is automatic. Conversely, given a representation of $G$, we define $D(g = \exp X) = \exp (d(X))$. Prove that $D$ is a representation of $Im \exp(d(X))$.\\\\
+$D(g)$ is non-singular for all $g \in G$. Suppose $g_1 = e^{X_1}$,$g_2=e^{X_2} \in Im \exp(L(G))$
+$$
+D(g_1g_2) = \exp( d(X_1 + X_2 + \frac{1}{2}[X_1,X_2] + ...)) = \exp( d(X_1) + d(x_2) + \frac{1}{2} d([X_1,X_2]) + ...) = e^{d(X_1)}e^{d(X_2)}
+$$
+\section{Lecture 7}
+We often say that "$\phi$ is in the fundamental representation" when we stricly mean in the representation space. For a different group there can be different representations of different sizes of $G$ and $L(G)$ with different dimensions. Each comes with its associated representation of $G$ via the exponential map. 
+\textbf{Examples}
+$d(X) = O_{n\timesn} \implies D(g) = I_{n\times n} \forall g \in G$ this is called the trival/singlet representation.\\
+If G is a matrix group defined in terms of $n\times n$ matrices. Then $D(g) = g$ is called the fundamental representation. For the $L(SO(n))$, $d(X)$ is in the space of real, anti-symmetric matrices. L(SU(n)), d(X) gives anti-hermitian $n\times n$ matrices.\\\\
+Every group $G$ has an adjoint representation which plays a special role in some sense it's the natural representation on $L(G)$:
+$$
+D_{Ad}(g)X = Ad_g(X) = gXg^{-1} \forall g \in G, X \in L(G)
+$$
+It is a representation since $Ad_{(g_1,g_2)}X = g_1g_2X(g_1g_2)^{-1} = g_1g_2Xg_2^{-1}g_1^{-1} = Ad_{g_1}(Ad_{g_2}(X))$. Claim that $gXg^{-1} \in L(G)$ so it closes. Proof:\\\\
+There exists a curve $g(t) = I + tX + ...$ in $G$ with tangent $X$ at $t=0$. Then the new curve $\tilde g(t) = g g'(t) g^{-1}$ is another curve in the $G$. Substitute in $g(t)$ gives $\tilde g(t) = I + tgXg^{-1}$ which has tangent $gXg^{-1}$ at $t=0$ so $gXg^{-1} \in L(G)$. So the representation space of the adjoint rep is $L(G)$. The adjoint representation of the Lie algebra is: 
+$$
+d_{Adj}(X) = ad_X \forall X \in L(G)
+$$
+where $ad_X(Y) = [X,Y] \forall Y \in L(G)$. Lets choose a basis for the lie alegbra $B= \{T^a\}$, $a=1$, ... dim G for $L(G)$, $X= X^aT_a$, $Y= Y^aT_a$.\\
+$$
+[ad_X(Y)]^c = [X,Y]^c = X^aY^b[T_a,T_b]^c = X^aY^b f^c_{ab} = [d_{Adj}(X)]^c_b Y^b
+$$
+$$
+[d_{Adj} (X)]^c_b = X^a f^c_{ab}
+$$
+this is a dim G x dim G matrix. Need to check this is a representation of the Lie algebra: 
+$$
+[d_{Adj}, d_{Adj}](z)=(ad_Xad_Y - ad_Y ad_X)(z) = [X,[Y,Z]] - [Y,[X,Z] = [[X,Y],Z] = ad_{[X,Y]}(z) = d_{Adj}([X,Y])(z)
+$$
+\textbf{Example}
+L(SU(2)) has $[T_a, T_b] = \epsilon_{abc}T_c$, $a,b,c \in \{1,2,3\}$
+$$
+f^c_{ab} = \epsilon_{abc}
+$$
+$$
+[d_{Adj}(X)]^c_b = X^af^c_{ab} = X^a \epsilon_{abc}
+$$
+We put this equal to $X^a$ times adjoint representation basis matrices $T_a^{ad}$. i.e. $(T_a^{ad} = - \epsilon_{abc})$. We already saw this as the fundamental representation of L(SO(3)).\\\\
+If two n-dimensional represetnations $D(g), D'(g)$ or $d(X), d'(X)$ are related by the following:
+$$
+D(g) = SD(g)S^{-1} \forall g \in G
+$$
+and an $n\times n$ invertible matrix S. Then the two representations are said to be isomorphic/equivalent. As this is just like changing the basis of the representation space. \\\\
+\textbf{Example}: SO(3) invariant field theory\\
+So for an internal symmetry the representation space might be composed of fields. Lets take a theory of three scalar fields $\bm \phi$ (three column vector with each element a scalar field $\phi_i$) and G = SO(3). Want to say the theory is invariant with respect to mixing up these three fields. Here $D(g)$ is the fundamental representation, if we set it equal to $R_{ij}$ (the three dimensional rotation for group examples eariler I haven't typed up yet). If $S = \int d^4 x \mathfrak{L}$ is invariant under $\bm \phi \rightarrow D(g) \bm \phi$. This implies that $\bm \phi^T \rightarrow \bm \phi^T D(g)^T = \bm \phi^T D(g^{-1})$. Note that $\bm \phi^T\bm \phi \rightarrow^{SO(3)} \bm \phi6T D(g)^{-1}D(g)\bm \phi = \bm \phi^T \bm \phi$ so $\bm \phi^T \bm \phi$ is invariant under SO(3). So therefore the following is SO(3) invariant:
+$$
+\mathfrak{L} = \frac{1}{2}(\partial_{\mu} \bm \phi^T) (\partial^{\mu} \bm \phi) - \frac{m^2}{2} \bm \phi^T \bm \phi - \lambda (\bm \phi^T \bm \phi)^2
+$$
+As g doesn't depend on $\bm x$ or $t$ it's a global symmetry, if it did then we would have trouble iwth the first term as we have the derivatives knocking around. Also the symmetry has constrained the 3 masses to be the same and if we expanded out the last term we would have lots of quartic terms with the same pre multipler so the interactions are also "coupled".\\\\
+If we change $\bm \phi = (\phi_1, ..., \phi_n)$(pretend this is a column) with \bm n being a valid representation of SO(3). $D(g)$ becomes an $n\times n$ matrix but the expression for the SO(3) invariant lagrangian remains the same.
+\subsection{Making new representations from old ones}
+Take $D(g)$ and $d(g)$ (in space V) as a representation of $G$ and $L(G)$ respectively then the complex conjugates $D(g)^*$ and $d(g)^*$ (in space $V^*$) are also representations. These are called the conjugate representations and come with an associated conjugate representation space. If a representation is equal to its conjugate rep, then it is called a real representation (e.g. SO(3)). If the two representations are isomorphic $D(g) \approx D(g)^*$ but not equal $D(g) \neq D(g)^*$ it is called pseudo-real. IN this case we have that $\bar V = SV$\\\\
+Can also combine representations in a couple of ways to make new ones. Take representations of the Lie Algebra L(G) $d_1, d_2$ with dimensions $n_1, n_2$ and representation spaces $V_1$, $V_2$.\\
+\textbf{Direct sum}: $d_1 \oplus d_2 = \begin{cmatrix} d_1(X) & |&o \\
+_ & & _\\
+0 & | & d_2(X)\end{cmatrix} \forall X \in L(G)$
+This is a representation of $L(G)$ prove on example sheet. The represenation space is $V_1 \oplus V_2 = \begin{cmatrix} V_1 \\ V_2 \end{cmatrix}$ so dim ($d_1 \oplus d_2$) is $n_1 + n_2$. The block diaglonal structure survives exp so $D_1(g) \oplus D_2(g)$ is defined similarly. A representation $d(X)$ of L(G) and its representation space V have an invariant subspace $U < V$ (excluding trival case $U=V$ and $U= {0}$) if $d(X)_U \in U \forall X \in L(G)$ and $u\in U$. Important because an exp some of representation space will untouched by group operations: $D(g)u = u \forall g \in G, u \in U$.\\\\
+An irreducible representation (irrep) of L(G) has no non-trivial invariant subspaces. 
+\end{document}

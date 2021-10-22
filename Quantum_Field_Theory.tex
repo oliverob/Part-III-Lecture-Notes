@@ -1,0 +1,608 @@
+\documentclass[12pt, a4paper, twoside, titlepage]{article}
+\usepackage{amsfonts}
+\usepackage{bm}
+\begin{document}
+\title{Quantum Field Theory}
+\maketitle
+\section{Preliminaries}
+\subsection{Natural units}
+$$
+[c] = LT^{-1} \> \>
+[\overline{h}] = L^2MT^{-1} \> \>
+[G] = L^3M^{-1}T^{-2}
+$$
+We set $c=\overline{h}=1$ to give the natural units. All quantities expressed in natural units scale with some power of mass or energy. We use notation below to describe this:
+$$
+X \tilda M^{\delta}, \. [X] = \delta
+$$
+where $\delta$ is the scaling dimension. e.g. $[E] = +1$ and $[L] = -1$. In order to convert back from natural units we need to know what we have calculated. For example, if it is energy then we multiply by $c^2$ as $E=mc^2$ but in natural units $c=1$. Basically everything is done in units of energy/mass with $c$ and $\overline{h}$ giving the scale of choice between length, time and energy.
+\subsection{Classical Fields}
+A classical scalar field is one that maps from Minkowski spacetime to the "field space":
+$$
+\phi: \mathbb{R}^{3,1} \rightarrow \mathbb{R}
+$$
+The scalar part of the definition implies that the field is invariant under Lorentz transformations that are defined by keeping the metric ($\eta = {+1,-1,-1,-1}$) invariant:
+$$
+\Lambda^{\mu}_{\sigma}\Lambda^{\nu}_{\tau}\eta^{\sigma \tau} = \eta^{\mu \nu}
+$$
+the further restrection of $\deta \Lambda = +1$ removes the possibility of reflection and defines the Lorentz group $G_L = SO(3,1)$.\\
+The active convention for describing a scalar field is:
+$$
+\phi(x) \rightarrow^{\Lambda} \phi'(x)
+$$
+where $\phi'(x) = \phi (\Lambda^{-1} \cdot \vec{x})$. It is clear that $\Lambda^{-1} \in SO(3,1)$ and $(\Lambda^{-1})^{\mu}_{l}\Lambda^{l}_{\nu} = \delta^{\mu}_{\nu}$.
+\subsection{Spacetime derivatives}
+$$
+\partial_{\mu}\phi(x) = \frac{\partial \phi(x)}{\partial x^{\mu}}
+$$
+$$
+\partial_{\mu}\phi(x) \rightarrow^{\Lambda} \partial_{\mu}\phi'(x) =  \frac{\partial \phi(\Lambda^{-1}\cdot x)}{\partial x^{\mu}} = (\Lambda^{-1})^{\nu}_{\mu} \partial_{\nu}\phi((\Lambda^{-1} \cdot x)}
+$$
+\textbf{4-Vector Field}
+$$
+V: \mathbb{R}^{3,1} \rightarrow \mathbb{R}^{3,1}
+$$
+$$
+v^{\mu}(x) \rightarrow^{\Lambda} \Lambda^{\mu}_{\nu}v^{\nu}(\Lambda^{-1}\cdot x)
+$$
+\subsection{Lagrangians}
+\textbf{Action}
+$$
+S[q] = \int_{t_i}^{t_f} dt L(q(t),\dot q(t))
+$$
+Principle of least action: If you vary the path with fixed endpoints then the stationary action ($\partial S = 0$) is equivalent to the Euler-Lagrange equation
+\subsubsection{Lagrangian for scalar field theory}
+Demand Lorentz invariant action, locality and at most two time derivatives. Langrangian is a functional as it must give a number for every field.
+$$
+L(t) = L[\phi, \partial_{\mu} \phi] = \int d^3x \mathfrak{L}(\phi(x),\partial_{mu}\phi(x))
+$$
+where $\mathfrak{L}$ is the Lagrangian density. This ensures locality as the field is EOM will only be influenced by the local field.
+$$
+S_{t_i,t_f}[\phi, \partial_{\mu}\phi] = \int_{t_i}^{t_f} L[\phi, \parital_{\mu}\phi] dt = \int_{t_i}^{t_f} dt \int d^3x \mathfrak{L}
+$$
+Take infinite time interval (nice interval to take when assuming that before and after interaction particles where very far apart)
+$$
+S = \int_{\mathbb{R}^{3,1}} d^4x \mathfrak{L} (\phi(x), \partial_{\mu}\phi(x))
+$$
+Consider L.T. $\Lambda \in SO(3,1)$ and require that $\mathfrak{L}$ is a scalar field:
+$$
+\mathfrak{L}(x) \rightarrow^{\Lambda} \mathfrak{L}(\Lambda^{-1}\cdot x)
+$$
+then
+$$
+S =  \int_{\mathbb{R}^{3,1}} d^4x \mathfrak{L} (x) \rightarrow^{\Lambda}  \int_{\mathbb{R}^{3,1}} d^4x \mathfrak{L} (\Lambda^{-1} \cdot x) = S'
+$$
+choose variables of $y^{\mu} = \Lambda^{-1}^{\mu}_{\nu} x^{\nu}$ giving:
+$$
+S' = \int_{\mathbb{R}^{3,1}} d^4y \mathfrak{L} (y) 
+$$
+so the action is Lorentz invariant if the Lagrangian density is a scalar field.
+\subsubsection{General Lagrangian}
+\begin{equation}
+        \mathfrack{L} = \frac{1}{2}\partial_{\mu}\phi \partial^{\mu} \phi - V(\phi)
+\end{equation}
+general terms you can have if you want at most two time derivatives. Not quite most general as could have an arbitrary function of $\phi$ as a pre-factor to the kinetic term but is ruled out later by a dimensionality constraint. No need to separately consider $\phi \partial_{\mu}^{\mu}\phi$ but once it is inside the action this is the kinetic term by integration by parts (differs only by a surface term).\\\\
+\textbf{Everytime two indicies are contracted top and bottom they use the metric}:
+$$
+\eta_{\mu \nu}\Lambda^{\mu}_{\sigma} = \Lambda_{\mu \sigma}
+$$
+$$
+\partial_{\mu}\phi \partial^{\mu} \phi  = \eta_{\mu \nu}\partial^{\mu}\phi \partial^{\nu} \phi 
+$$
+
+\section{Lecture 3}
+\textbf{Principle of Least Action}
+Vary the field conifguration: $\phi(x) \rightarrow \phi(x) + \delta \phi (x)$ but fix the boundary condition: $\delta \phi(x) = \phi(t,x) \rightarrow 0$ for $|\bm x| \rightarrow \infinity$ and $t \rightarrow \infinity$. Consider variation of action:
+$$
+\partial S = \int d^4 x \left[ \frac{\partial \mathfrak{L}}{\partial \phi} \cdot \delta \phi + \frac{\partial \mathfrak{L}}{\partial (\partial_{\mu} \phi)} \delta(\partial_{\mu} \phi)\right]
+$$
+$$
+= \int dx^4 \left[ (\frac{\partial \mathfrak{L}}{\partial \phi} - \parital_{\mu} (\frac{\partial \mathfrak{L}}{\partial{\partial_{\mu} \phi}}  )\delta \phi + \parital_{\mu} (\frac{\partial \mathfrak{L}}{\partial (\partial_{mu} \phi) } \delta \phi) \right]
+$$
+$$
+ B = \int_{\mathbb{R}^{3,1}} dx^4 \partial_{\mu} (\frac{\partial \mathfrak{L} }{\partial \partial_{\mu} \phi} \delta \phi) =  \int_{\partial(\mathbb{R}^{3,1})} dS_{\mu} \frac{\partial \mathfrak{L} }{\partial \partial_{\mu} \phi} \delta \phi
+$$
+The boundary $\partial \mathbb{R}^{3,1}$ represents where $| \bm x | \rightarrow \infty$ and $t \rightarrow \pm \infty$. Therefore, $\delta \phi = 0$ and $\partial (\mathbb{R}^{3,1})$. This means we can set this integrand to zero. The above needs modifying to match notes but it is essentially the same derivation we use for Euler-Lagrange in classical mechanics.
+\subsubsection{Euler-Lagrange equation}
+\begin{equation}
+        \frac{\partial \mathfrak{L}}{\partial \phi} - \partial_{\mu} \left( \frac{\partial \mathfrak{L}}{ \partial(\partial_{\mu} \phi) } \right) = 0 
+\end{equation}
+$$
+\frac{\partial \mathfrak{L} }{\partial \phi} = - V'(\phi)
+$$
+$$
+\frac{\partial \mathfrak{L}}{\partial (\partial_{\mu} \phi)} = \partial^{\mu}\phi
+$$
+gives general field equation of motion:
+\begin{equation}
+\partial_{\mu}\partial^{\mu} \phi + V'(\phi)  =0
+\end{equation}
+$$
+\partial_{\mu}\partial^{\mu} \phi = \frac{\partial^2}{\partial t^2} - \nabla^2_{\bm x}
+$$
+This is in general a second order PDE which is hard to solve normally need computer. We want to consider special case that is easy to solve e.g. choose a quadratic potential to give a linear EOM:
+$$
+V(\phi) = \frac{1}{2} m^2 \phi^2
+$$
+gives the Klein-Gordan equation:
+\begin{equation}
+\partial_{\mu}\partial^{\mu} \phi + m^2\phi  =0
+\end{equation}
+This is indeed a lorentz invariant equation, which is good as the whole point of the action stuff was to generate EOM that were lorentz invariant. This is a wave equation, and we can immediately say quite a lot about it. It has wave-like solutions, e.g. trial solution:
+$$
+\phi = e^{i \bm x \cdot \bm p} = e^{i\omega t - i \bm k \cdot \bm x}
+$$
+gives dispersion relation:
+$$
+\omega_k = \sqrt{|k| + m^2}
+$$
+You can see that when we go to the quantum scale this will correspond to free massive particles as, as this is basically the wave-particle dual for a standard particle of mass m. This gives a free particle as we have a linear classical equation so it has a superposition principle so you can add together solutions so you will get non-interacting particles. \\\\
+The general case is the case when we have a non-linear PDE given by a non-quadratic potential. Yoy won't have localised wave packets they will disperse. If you try to form lumps of fields then they will interact with each other and disperse. No superposition principle. may have exotict solutions like solitons. In notes from last year there is also a short section of applying this to maxwells equation of electromagneticism if his doesn't do this after covering maxwells stuff go read the ntoes from last year.
+\subsection{Symmetry}
+\textbf{Definition}: Variation of the field that leaves the action invariant\\
+Typically has the structure of the group and if it is a continuous variation then it behaves like a manifold (this is a Lie Group). Why are they important in field theory - because they tell us about the conserved quantities in the theory. As every symmetry implies a conservation law by Noether's Theorem. Important in any theory as we will bung some particles in and have some coming out at the but the key constraint on what is allowed and what is not is the conservation laws in the theory e.g. tells us we cant have an electron go in and a positron come out as that would violate a conservation law. More generally than that, they have much richer consequences e.g. non-abelian symmetries then infact the imprint which that leaves on the observerables of that theory that is much more than conservation laws. It leaves restrictions on the allowed masses and spectrums etc. Here we are generally talking about global symmetry which is the things we can actually compute (and we will use the field as a proxy for this) change under the application of the symmetry whereas gauge symmetry the observables actually remain unchanged.\\\\ We will implemment symmetries as a variation of the field not the coordinates, below are listed some symmetries and their action on coordinates and on fields. \\\\
+
+\textbf{Translation}: $\bm x^{\mu} \rightarrow \bm x^{\mu} + \bm c^{\mu}$ for a $\bm c \in \mathbb{R}^{3.1}$
+$$
+\phi(x) \rightarrow \phi'(x) = \phi(x - c)
+$$
+Automatic that all the actions that are written down are invariant under translation as we integrated over all space so they are translation invariant.\\\\
+\textbf{Lorentz}: $\bm x^{\mu} \rightarrow \Lambda^{\mu}_{\nu}\bm x^{\nu}$
+$$
+\phi(x) \rightarrow \phi(\Lambda^{-1} \cdot x)
+$$
+If massless ($m=0$) and $\nu = 0$ then also get a \textbf{scale transformation}: $\bm x^{mu} \rightarrow \lambda x^{\mu}$ for $\lambda \in \mathbb{R}^+$
+$$
+\phi(x) \rightarrow \lambda^{-\Delta}\phi(\lambda^{-1} x), \Delta = [\phi]
+$$
+\subsection{Internal Symmetry}
+Does not act on the coordinates, and its generators commute with all the generators of the global symmetry above. These give properties of particles such as electric charge, flavour and colour.\\\\
+\textbf{Example}: Complex scalar field
+$$
+\psi: \mathbb{R}^{3,1} \rightarrow \mathbb{C}
+$$
+Need real lagrangian so need to contract with complex conjugate. \textbf{When finding the Euler-Lagrange equation of a complex scalar field you treat $\phi$ and $\phi^*$ as independent variables so you get two E-L equations}. Below is one possible complex field with a specific form of potential that generates an internal symmetry.
+$$
+\mathfrak{L} = \partial_{\mu}\psi^* \partial^{\mu} \psi - V(|\psi|^2)
+$$
+This has an internal symmetry as:
+$$
+\psi(x) \rightarrow \psi'(x) = e^{i\alpha}\psi(x)
+$$
+$$
+\psi^*(x) \rightarrow \psi^*'(x) = e^{-i\alpha}\psi^*(x)
+$$
+which gives broth $\mathfrak{L}$ and $S$ are invariant. It doesn't need to be invariant in the lagrangian density to be a symmetry but this stronger case often occurs in internal symmetries unlike in the case of Lorentz transformation where $\mathfrak{L}$ was not invariant.\\\\
+Continous symmetry form matrix Lie groups e.g. Lorentz group
+$$
+G_L = \{\Lambda \in Mat_4(\mathbb{R}), \Lambda \cdot  \eta  \cdot \Lambda^T = \eta, \det \Lambda = 1\} = SO(3,1)
+$$
+One can ask about how the different space-time symmetries fit together. The lorentz transformations corrospond to $SO(3,1)$ and when combined with transformations (which don't commute with lorentz transformations) you get the Poincare group. Finally, if we specialise to the case where the mass is zero then we get space invariance and this further enhances the group to give the conformal group (SO(4,2)).
+\section{Lecture 4}
+\subsection{Finite vs Infinitesimal transformations}
+You don't have to understand the full non-linearity of the Lie Group everything can be thought of by just considering the behaviour of the group elements near the identity. Group elements sufficently near the identity can be written in the following form:
+$$
+g = \exp(\alpha X), \alpha \in \mathbb{R}, X \in \mathbb{L}(G)
+$$
+For all the examples in the course we are only considering matrix lie groups so all the elements are matrices. $\mathbb{L}(G)$ is called the Lie Algebra of the gorup. Therefore, $\exp( \alpha X) = \Sigma_{n=0}^{\infty} \frac{1}{n!} (\alpha X)^n$. We are going to consider this for $|\alpha| <<1$ to give $\exp( \alpha X) = I + \alpha X + O(\alpha^2)$, which is called an infintesimal transformation. 
+\subsubsection{Example}
+$$
+\alpha = \partial_{\mu}\psi^* \partial^{\mu} \psi - V(|\psi|^2)
+$$
+can undergo finite transformation:
+$$
+\psi \rightarrow g \psi, g = \exp(i \alpha)
+$$
+so has infintesimal transformation:
+$$
+\psi \rightarrow \psi + \delta \psi, \delta \psi = i\alpha \psi
+$$
+\subsubsection{Lorentz Transformations}
+$$
+x^{\mu} \rightarrow x'^{\mu} = \Lambda^{\mu}_{\nu} x^{\nu}
+$$
+$$
+\Lambda^{\mu}_{\sigma}\Lambda^{\nu}_{\tau}\eta^{\sigma \tau} = \eta^{\mu \nu}
+$$
+$$\deta \Lambda = +1$$
+Can express lambda as:
+$$
+\Lambda = \exp(s \Omega), \Omega \in \mathbb{L}(SO(3,1))
+$$
+$$
+\Lambda = \delta^{\mu}_{\nu} + s \Omega^{\mu}_{\nu} + O(s^2)
+$$
+Expand in linear order:
+$$
+(\delta^{\mu}_{\alpha} + s \Omega^{\mu}_{\alpha})\eta^{\alpha \beta}(\delta^{\nu}_{\beta} + s \Omega^{\nu}_{\beta}) = \eta^{\mu \nu}
+$$
+Consider $O(s)$:
+$$
+s\Omega^{\mu \nu} + s\Omega^{\nu \mu} = 0 
+$$
+so:
+$$
+\Omega_{\mu \nu} = - \Omega_{\nu \mu} 
+$$
+As this means the diagonal must be zero and it is symmetric about the diagonal, $\Omega$ only has six degrees of freedom. Now linearise the transformation of the scalar field:
+$$
+\phi(x) \rightarrow \phi(\Lambda^{-1} \cdot x)
+$$
+$$
+(\Lambda^{-1})^{\mu}_{\nu} =  \delta^{\mu}_{\nu} - s \Omega^{\mu}_{\nu} + O(s^2)
+$$
+so to $O(s)$
+$$
+\phi(\Lambda^{-1} \cdot x) = \phi(x - s \Omega \cdot x + O(s^2)) = \phi(x) - s\Omega^{\mu}_{nu}x^{nu}\partial_{mu}\phi(x) + O(s^2)
+$$
+so the infinitesimal transformation is:
+$$
+        \phi(x) \rightarrow \phi(x) + \delta\phi(x)
+  $$      
+\begin{equation}
+        \delta \phi(x) = -s \Omega^{\mu}_{\nu}x^{\nu}\partial_{\mu}\phi(x)
+\end{equation}
+\subsection{Noether's Theorem}
+A continous symmetry implies a conserved current.
+$$
+\phi(x) \rightarrow \phi + \delta \phi(x)
+$$
+As the variation is local the transformation will just be in terms of the field and its derivatives at the point:
+$$
+\delta \phi(x) = X(\phi(x), \partial\phi(x))
+$$
+How does $\mathfrak{L}$ vary?\\
+\textbf{Lorentz transformation}
+$$
+\phi(x) \rightarrow \phi(\Lambda^{-1}\cdot x)
+$$
+gives
+$$
+\delta \mathfrak{L} =  -s \Omega^{\mu}_{\nu}x^{\nu}\partial_{\mu}\mathfrak{L}(x) =\partial_{\mu}( -s \Omega^{\mu}_{\nu}x^{\nu}\mathfrak{L}(x))  
+$$
+above we used the fact that $\Omega$ is anti-symmetric to vanish the term $-s \Omega^{\mu}_{\nu}\partial_{\mu}(x^{\nu})\mathfrak{L}(x)$. So we can rewrite the variation of the lagrangian under the lorentz transformation as a total derivative.\\
+\textbf{Translation}
+$$
+\phi(x) \rightarrow \phi(x-c)
+$$
+$$
+\delta \phi(x) = X = - c^{\mu}\partial_{\mu}\phi(x)
+$$
+$$
+\delta \mathfrak{L} =  - c^{\mu}\partial_{\mu}\mathfrak{L}(x)
+$$
+If the lagrangian transforms as a total derivative then the action will be invariant.\\
+\textbf{General symmetry}
+\begin{equation}
+        \delta \mathfrak{L} = \partial_{\mu} F^{\mu}
+\end{equation}
+$$
+F^{\mu} = F^{\mu} (\phi(x), \partial\phi(x))
+$$
+As:
+$$
+\parital S = \int_{\mathbb{R}^{3,1}} d^4x \delta \mathfrak{L} = \int_{\mathbb{R}^{3,1}} d^4x \partial_{\mu} F^{\mu} =  \int_{\partial (\mathbb{R}^{3,1} )} dS_{\mu} F^{\mu}
+                $$
+So if $\phi$, $\partial \phi$ decay fast enough then this goes to 0.
+\subsubsection{Conserved current}
+$$
+j^{\mu} (x) = j^{\mu}(\phi(x), \partial\phi(x))
+$$
+is conserved if 
+$$
+\partial_{\mu} j^{\mu} = 0
+$$
+when $\phi$ obeys its E-L equations.
+$$
+j^{\mu}(x) = j^{\mu}(t,x) = (j^0(x,t), \bm J(x,t))
+$$
+$j^0$ is charge density and $\bm J$ is the current density.\\
+Total charge in region $V < \mathbb{R}^3$ = $ Q(t) = \int_V dV j^0(t,x)$.\\
+Rate of change of $Q(t)$ with conserved current`: $$\frac{dQ(t)}{dt} = \int_V dV \frac{\partial}{\parti`:w
+al t} j^0(t,x)  = - \int_V dV \nabla \cdot \bm J = - \int_{\partial V} d \bm S \cdot \bm J $$
+This means that whenever we have a conserved current we have a conserved charge, and any changes in charge are accounted for by the flux of current across the boundary.\\\\
+\textbf{Proof of Noether's theorem}
+$$
+\partial \mathfrak{L} (x) = \frac{\partial \mathfrak{L}}{\partial \phi} \delta \phi + \frac{\partial \mathfrak{L}}{\partial(\partial_{\mu}\phi)} \delta (\partial_{\mu} \phi)
+$$
+$$
+\partial \mathfrak{L} (x) = [\frac{\partial \mathfrak{L}}{\partial \phi} - \partial_{\mu} (\frac{\partial \mathfrak{L}}{\partial (\partial_{\mu} \phi)}) ] \delta \phi + \partial_{\mu} (\frac{\partial \mathfrak{L}}{\partial(\partial_{\mu} \phi)} \delta \phi)
+$$
+if $\phi$ obeys EL then
+\begin{equation}
+\partial \mathfrak{L} (x) = \partial_{\mu} (\frac{\partial \mathfrak{L} }{\partial(\partial_{\mu}\phi)} X(\phi, \partial \phi))
+\end{equation}
+As for any symmetry we have 
+$$
+\delta \mathfrak{L} = \partial_{\mu} F^{\mu}
+$$
+so define conserved current to be:
+$$
+j^{\mu} = \frac{\partial \mathfrak{L} }{\partial(\partial_{\mu}\phi_a)} X(\phi_a, \partial \phi_a) - F^{\mu}
+$$
+As both of these are equal to the variation of the lagrangian it will be conserved.
+\section{Lecture 5}
+Focus on spacetime translations:
+$$
+x^{\mu} \rightarrow x^{\mu} - \epsilon^{\mu}
+$$
+$$
+\phi(x) \rightarrow \phi(x + \epsilon) \approx \phi(x) + \epsilon^{\mu}\partial_{\mu}\phi(x) + O(\epsilon^2)
+$$
+$$
+\delta \phi(x) = + \epsilon^{\mu} \partial_{\mu} \phi(x)
+$$
+$$
+\delta \mathfrak{L}(x) = + \epsilon^{\mu} \partial_{\mu} \mathfrak{L}(x)
+$$
+$$
+\delta \phi(x)  = \epsilon^{\nu}X_{\nu}(\phi)
+$$
+$$
+\delta \mathfrak{L} (x) = \epsilon^{\nu} \partial_{\mu} F^{\mu}_{\nu}(\phi)
+$$
+$$
+X_{\nu} = \partial_{\nu} \phi, F^{\mu}_{\nu} = \delta^{\mu}_{\nu}\mathfrak{L}
+$$
+So this can give us 4 conserved currents(\textbf{energy-momentum tensor}):
+\begin{equation}
+        T^{\mu}_{\nu} = \frac{\partial \mathfrak{L}}{\partial (\partial_{\mu}\pphi)}\partial_{\nu} \phi - \delta ^{\mu}_{\nu} \mathfrak{L}
+\end{equation}
+$$
+\partial_{\mu}T^{\mu}_{\nu} = 0
+$$
+Conserved charge that corresponds to energy comes from the zeroth component:
+$$
+E= \int_{\mathbb{R}^3} d^3x T^{00}
+$$
+similarly for translations in space:
+$$
+ P^i = \int_{\mathbb{R}^3} d^3x T^{0i}
+$$
+\subsection{Example: free scalar field/Klein Gordan}
+$$
+\mathfrak{L} = \frac{1}{2} (\partial_{\mu}\phi)(\partial^{\mu}\phi) - \frac{m^2}{2}\phi^2
+$$
+$$
+T^{\mu \nu} = \partial^{\mu}\phi\partial^{\nu}\phi - \eta^{\mu \nu} \mathfrak{L}
+$$
+Look at conserved energy when $\mu = \nu = 0$.
+$$
+E = \int_{\mathbb{R}^3} d^3 T^{00} = \int_{\mathbb{R}^3} d^3 (\frac{1}{2}\dot\phi^2 + \frac{1}{2} |\nabla \phi|^2 + \frac{1}{2} m^2 \phi^2)
+$$
+This formula has several nice features as the energy is bounded below which is something we often want as we often have ground states. It also follows the same pattern as the Lagranagian in classical dynamics if the first term is interpretted as being the kinetic energy and the remaining as potential energy (it goes from $L= T-V $ to $E= T+V$).\\\\
+The energy momentum tensor is clearly a symmetric tensor, now that is not neccessarily a general feature but in a system when you have a rotationals symmetry you can always .... didn't really make much sense have a look in the notes. Basically he was trying to say that energy doesn't really make an awful lot of sense until you couple it to gravity and then the energy momentum tensor becomes very important. \\\\
+\subsection{Canonical Quantisation}
+\subsubsection{Quick review of classical hamiltonian mechanics}
+Consider non-relativistic particle ($m=1$) in potential $V(q)$:
+$$
+L(q(t),\dot q(t) ) = \frac{1}{2} \dot q^2 - V(q)
+$$
+Define momentum $p$ conjugate to $q$:
+$$
+p = \frac{\partial L}{\partial \dot q} = \dot q
+$$
+Define Legendre transform as
+$$
+H = p\dot q - L(q, \dot q)
+$$
+with $\dot q$ replaced with $p$ to give:
+$$
+H = \frac{1}{2} p^2 + V(q)
+$$
+Now consider system with N degrees of freedom:
+$$
+L = L(\{q_i(t)\}, \{\dot q_i(t)\})
+$$
+$$
+H = \sum_{i} p_i\dot q_i - L
+$$
+and eliminate $\dot q$.\\\\
+\textbf{Poisson Bracket}:  For $F = F(p,q)$ and $G = G(p,q)$, $\{F,G\} =  \sum_i \frac{\partial F}{\partial q_i}\frac{\partial G}{\partial p_i} - \frac{\partial F}{\partial p_i}\frac{\partial G}{\partial q_i}$
+$$
+\{q_i,q_j\} = \{p_i, p_j\} = 0, \{q_i, p_j\} = \delta_{ij}
+$$
+\textbf{State} of system at time $t=0$ is given by specifying your momentum and position ($q_i(0)$ and $p_i(0)$). So time evolution is completely governed by the hamiltonian. For any function $F(p,q)$, $$\dot F = \{F,H\}$$
+In particular, choose $F=p_i$ or $q_i$ gives hamiltons equations. $$\dot q_i = \{q_i, H\} = \frac{\partial F}{\partial p_i}$$$$\dot p_i = \{p_i, H\} = -\frac{\partial F}{\partial q_i}$$
+$$
+\dot Q = 0 \iff \{H,Q\} = 0
+$$
+\section{Lecture 6}
+\subsubsection{Quantization}
+States are vectors in a Hilbert space. Quantization means turning classical functions into a hermitian operator. The basic rule as first written down by Dirac is:
+$$
+\{,\} \rightarrow \frac{1}{i\hbar}[,]
+$$
+replace poisson bracket with the commutator. e.g. can apply this recipe to the coordinates and their momentum
+$$
+q_i \rightarrow \hat q_i, p_i \rightarrow \hat p_i
+$$
+and 
+$$
+[\hat q_i, \hat q_j] = [\hat p_i, \hat p_j] = 0, [\hat q_i, \hat q_j] = i\hbar \delta_{ij}
+$$
+In general the problem of quantisation is finding a representation for this algebra which is in this case is the $\frac{\partial}{\partial x}$ representation of $p$.\\\\
+The time evolution of the quantised system is described by the transformed Hamiltonian $\hat H( \hat p, \hat q)$. This often leads to ambiguity as the ordering of the $\hat p$ and $\hat q$ is important in $\hat H$ (most of this we will be able to brush under the carpet as we will mainly deal with free states). If we deal with the Schrödinger picture then the states are thought of as time dependent:
+$$
+-i\hbar \frac{\partial }{\partial t} \ket{\psi(t)} = \hat H \ket{\psi(t)}
+$$
+The special case is when $\ket{\psi(t)}$ is an eigenstate of the Hamiltonian where
+$$
+\hat H\ket{\psi} = E \ket{\psi}
+$$
+\textbf{Field Theory} is an infinite dimensional dynamical system. We think about this as replacing the dynamical variable $q_i(t)$ with $\phi(\bm x, t)$. So in the dynamical system we have a discrete label $i$ whereas the field has a continuous label $\bm x \in \mathbb{R}^3$. It turns out it is not valid to treat these the same but for the purposes of this course we can pretend it is possible. Though in AQFT you will find out you need to take an appropriate limit using something called a regulator. There are two types of infinite in this system: the IR (infrared) divergences associated with the infinite range of $x$ ('large distances'), the UV (ultraviolet) divergences are associated with the fact we have a continuous infinite that we can consider infinitely close together points ('short distances').\\\\
+As we have a dynamical variable the next step is defining a conjugate momentum:
+$$
+\pi(\bm x,t) = \frac{\partial \mathfrak{L}(\bm x, t)}{\partial \dot \phi(\bm x, t)}
+$$
+Perform a Legendre transform to get a Hamiltonian density
+$$
+\mathcal{H} = \pi(\bm x,t) \dot \phi(\bm x,t) - \mathfrak{L}(\bm x,t)
+$$
+Just like in classical dynamics we can now eliminate the time derivative from the hamiltonian density using the definition of $\pi$ to give $\mathcal{H} = \mathcal{H}(\phi(\bm x,t), \pi(\bm x,t))$. Define the hamiltonian as:
+$$
+H = \int_{\mathbb{R}^3} d^3x \mathcal{H}(\bm x,t)
+$$
+\textbf{Example}
+$$
+\mathfrak{L} = \frac{1}{2} (\partial_{\mu}\phi)(\partial^{\mu}\phi - V(\phi)
+$$
+One problem with the hamiltonian treatment is it breaks lorentz invariance so we need to split this up into space and time components.
+$$
+\mathfrak{L} = \frac{1}{2} \dot \phi^2 - \frac{1}{2}|\nabla \phi| ^2 - V(\phi)
+$$
+Conjugate momentum
+$$
+\pi(\bm x, t) = \frac{\partial \mathfrak{L}}{\partial \dot \phi} = \dot \phi(\bm x, t)
+$$
+$$
+\mathcal{H} = \pi \dot \phi - \mathfrak{L} = \frac{1}{2} \pi^2  + \frac{1}{2}|\nabla \phi| ^2 +V(\phi) = T^{00}
+$$
+$$
+H = \int_{\mathbb{R}^3} d^3x \frac{1}{2} \pi^2  + \frac{1}{2}|\nabla \phi| ^2 +V(\phi) =  \int_{\mathbb{R}^3} d^3x T^{00} = E 
+$$
+Now lets quantise it. 
+$$
+\{\phi(\bm x, t), \pi(\bm y, t)\} = \delta^{(3)}(\bm x - \bm y)
+$$
+Suppress/fix the time coordinate for the moment.\\
+\textbf{Canonical Quantisation}
+$$
+\phi(\bm x) \rightarrow \hat \phi(\bm x)
+$$
+$$
+\pi(\bm x) \rightarrow \hat \pi(\bm x)
+$$
+$$
+[\hat \phi(\bm x, t), \hat \pi(\bm y, t)] = i \hbar \delta^{(3)}(\bm x - \bm y)
+$$
+$$
+H = \int_{\mathbb{R}^3} d^3x \frac{1}{2} \hat \pi^2  + \frac{1}{2}|\nabla \hat \phi| ^2 +V(\hat \phi) $$
+except in the case of free field theory we aren't going to do this as describing the hilbert space is very hard so we will do it for free field theory and perturb around from it. In the above note that we normally work in natural units but we have left the $\hbar$ here to show the parallel with the classical case. The hamiltonian is very hard to understand here except in the case of free field theory as we are taking derivatives of operators and stuff all over the place.\\\\
+Can solve the free field theory because of the superposition principle allowing us to effectively consider it as an infinite number of simple harmonic oscillators.
+\subsection{Free Field Theory}
+$$
+\mathfrak{L} = \frac{1}{2} (\partial_{\mu}\phi)(\partial^{\mu}\phi) - \frac{m^2}{2}\phi^2
+$$
+Equation of motion:
+$$
+\partial_{\mu}\partial^{\mu}\phi + m^2 \phi  = 0
+$$
+As this is linear we can find general solution by solving with Fourier transform.
+$$
+\phi(\bm x, t) = \int \frac{d^3 p}{(2\pi)^3}e^{i\bm p \cdot \bm x} \tilde \phi( \bm p, t) 
+$$
+If we want $\phi(\bm x,t) \in \mathbb{R}$ then we need $\tilde \phi^*(\bm p,t) = \tilde \phi(-\bm p,t)$. The equation becomes:
+$$
+(\frac{\partial^2}{\partial t^2} + |\bm p|^2 + m^2) \tilde \phi(\bm p,t) = 0
+$$
+This is essentially the equation for simple harmonic motion so solutions are:
+$$
+\tilde \phi(\bm p, t) = A_{\bm p} e^{i \omega_{\bm p} t} + B_{\bm p} e^{-i \omega_{\bm p} t} 
+$$
+for $\omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$. In reality $ A_{\bm p}^* =  A_{-\bm p}$ to give a real field. Also the action becomes:
+$$
+S= \int dt \int d^3 x \mathfrak{L}(\bm x,t) = \frac{1}{2} \int dt \int d^3 p \tilde \phi^*(\bm p, t) (- \frac{\partial^2}{\partial t^2} - |\bm p|^2 - m^2)\tilde \phi(\bm p,t)
+$$
+This is what gives the sense of an infinite set of a decoupled simple harmonic oscillators, as for any fixed value of $\bm p$ this gives the action of the harmonic oscillator.
+\section{Lecture 7}
+\subsection{Quantum Simple harmonic oscillator}
+$$
+L = \frac{1}{2} \dot q ^2  - \frac{\omega^2}{2} q^2
+$$
+$$
+H = \frac{1}{2} \dot p^2  + \frac{\omega^2}{2} q^2
+$$
+First off replace $q \rightarrrow \hat q$ and $p \rightarrow \hat p$ with $[\hat q, \hat p] = i\hbar$. Define creation and annihilation operators:
+$$
+\hat a = \sqrt{\frac{\omega}{2}} \hat q + \frac{i}{\sqrt{2\omega}} \hat p
+$$
+$$
+\hat a^{\dagger} = \sqrt{\frac{\omega}{2}} \hat q - \frac{i}{\sqrt{2\omega}} \hat p
+$$
+\begin{equation}
+[\hat a, \hat \a^{\dagger}] = \hbar
+\end{equation}
+Rule of ordering always have annihalition operators on the right
+$$
+\hat H = \frac{\omega}{2}(\hat a^{\dagger} \hat a +  \frac{\hbar}{2})
+$$
+$$
+[\hat H, \hat a ] = -\omega \hbar \hat a
+$$
+$$
+[\hat H, \hat a^{dagger} ] = \omega \hbar \hat a^{dagger}}
+$$
+Consider:
+$$
+\hat H \ket{E} = E \ket{E}
+$$
+Communation relations tell us
+$$
+\hat H(\hat a^{dagger} \ket{E} ) = (E+\hbar \omega) \hat a^{\dagger} \ket{E}
+$$
+$$
+\hat H(\hat a \ket{E} ) = (E-\hbar \omega) \hat a \ket{E}
+$$
+Either spectrum unbounded below or have $a\ket{0} = 0$. Therefore:
+$$
+\hat H \ket{0} = \frac{\hbar \omega}{2} \ket{0}
+$$
+and the raising opertator gives the infinite tower of excited states
+$$
+\ket{n} = (\hat a^{\dagger}^n) \ket{0}
+$$
+$$
+\hat H \ket{n} = (n+\frac{1}{2}) \hbar \omega \ket{n}
+$$
+Define number operator: $\hat N = \hat a^{\dagger}\hat a$
+$$
+\hat N\ket{n} = n\hat{n}, \hat H = \omega \hat N + \frac{1}{2} \hbar \omega
+$$
+\subsection{Quantisation}
+$$
+[\hat \phi(\bm x), \hat \pi (\bm y)] = i\delta^{(3)}(\bm x - \bm y)
+$$
+Dirac delta function
+$$
+\int_{\mathbb(R)^3} f(\bm x) \delta^{(3)}(\bm x - \bm y) = f(\bm y)
+$$
+$$
+\delta^{(3)}(\bm x) = \int \frac{d^3p}{(2\pi)^3} e^{i \bm p \cdot \bm x}
+$$
+$$
+\hat H = \int_{\mathbb{R}^3} d^3 x (\frac{\hat \pi^2}{2} + \frac{|\nabla \hat \phi|^2}{2} + \frac{m^2}{2}\hat \phi^2
+$$
+Write field in fourier space. This is a defintion that we then check produces thecorrect communator relations.
+$$
+\hat \phi(\bm x) = \int \frac{d^3p}{(2\pi)^3} [\hat a_{\bm p} e^{\bm p \cdot \bm x} + \hat a^{\dagger}_{\bm p} e^{-\bm p \cdot \bm x} ] \frac{1}{\sqrt{2\omega_{\bm p}}
+$$
+for $\omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$.
+$$
+\hat \pi(\bm x) = \int \frac{d^3p}{(2\pi)^3}  (-i) \sqrt{\frac{\omega_{\bm p}}{2}} [\hat a_{\bm p} e^{\bm p \cdot \bm x} - \hat a^{\dagger}_{\bm p} e^{-\bm p \cdot \bm x} ]}
+$$
+Make the claim that
+$$
+[\hat \phi(\bm x), \hat \phi(\bm y)] = [\hat \pi(\bm x), \hat \pi(\bm y)] =0, 
+[\hat \phi(\bm x), \hat \pi (\bm y)] = i\delta^{(3)}(\bm x - \bm y)
+$$
+is equivalent to:
+$$
+[\hat a_{\bm p}, \hat a_{\bm q}] = [\hat a^{\dagger}_{\bm q}, \hat a_{\bm p}] = 0
+$$
+$$
+[\hat a_{\bm p}, \hat a^{\dagger}_{\bm q}]  = (2\pi)^3 \delta^{(3)}(\bm p - \bm q)
+$$
+Check that:
+$$
+[\hat \phi(\bm x), \hat \pi(\bm y)] = \frac{-i}{2} \frac{d^3p}{(2\pi)^3} \frac{d^3q}{(2\pi)^3} \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}[\hat a_{\bm p} e^{i\bm p \cdot \bm x} + \hat a^{\dagger}_{\bm p} e^{-i \bm p \cdot \bm x} , \hat a_{\bm q} e^{i\bm q \cdot \bm y} + \hat a^{\dagger}_{\bm q} e^{-i \bm q \cdot \bm y} ]
+$$
+$$
+[,] = -e^{i\bm p \cdot \bm x - i \bm q \cdot \bm y}[\hat a_{\bm p} , \hat a^{\dagger}_{\bm q}] + e^{-i\bm p \cdot \bm x + i \bm q \cdot \bm y}[\hat a^{\dagger}_{\bm p} , \hat a_{\bm q}] = -(2\pi)^3 \delta^{(3)}(\bm p - \bm q) (e^{i\bm p \cdot \bm x - i \bm q \cdot y} + e^{-i\bm p \cdot \bm x + i \bm q \cdot y})
+$$
+first do $\int d^3 q$ which just sets $\bm p = \bm q$. Then collect up everything that is left as:
+$$
+[\hat \phi(\bm x), \hat \pi(\bm y)] = \frac{1}{2} \int \frac{d^3p}{(2\pi)^3} (e^{i\bm p \cdot \bm x - i \bm q \cdot y} + e^{-i\bm p \cdot \bm x + i \bm q \cdot y}) = i \delta^{(3)}(\bm x - \bm y)
+$$ 
+Above set is done by inspection using the integral expression for the delta function.
+\end{document}

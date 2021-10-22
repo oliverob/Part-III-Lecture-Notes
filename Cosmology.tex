@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{bm}
+\begin{document}
+\section{Dynamics and Geometry of the Universe}
+Homogeneous and isometric. The invariant line element is given by:
+$$
+ds^2 = g_{\mu \nu}dX^{\mu}dX^{\nu}
+$$
+In special relativity the metric is fixed at $\{-1,+1,+1,+1\}$ whereas in general relativity the metric is a function of time and position which is influenced by the content of the universe. because homogeneous and isomeric we can describe space-time via a time-ordered sequence of symmetric 3-spaces with 3-d line element:
+$$
+dl^2 = \gamma_{ij}(t)dx^idx^j
+$$
+giving the general 4d metric:
+$$
+ds^2 = dt^2 - \gamma_{ij}dx^idx^j
+$$
+Therefore to determine the metric of our universe just write down line elements $dl^2$ of all possible maximally symmetric 3-spaces. Therefore either flat, positive curvature or negative curvature.\\
+\textbf{Flat space}:
+$$
+dl^2 = \delta_{ij}dx^i dx^j
+$$
+\textbf{Positive curvature}:
+$$
+dl^2 = d\bm{x}^2 +  du^2
+$$
+$$
+\bm{x}^2 + u^2 = a^2
+$$
+\textbf{Negative curvature}
+$$
+dl^2 = d\bm{x}^2 -  du^2
+$$
+$$
+\bm{x}^2 - u^2 = -a^2
+$$
+\subsection{Unified Line element}
+\begin{equation}
+        dl^2 = a^2 \left[ d\bm{x}^2 + k \frac{(\bm x \cdot d \bm x)^2}{1-k\bm x^2} \right]
+\end{equation}
+$$
+        d \bm{x}^2 = dr^2 + r^2(d \theta^2 + \sin^2 \theta d\phi^2), \bm x \cdot d \bm x = r dr
+$$
+\subsection{FRW metric}
+\begin{equation}
+ds^2 = dt^2 - a^2(t) \left[ \frac{dr^2}{1-kr^2} + r^2 d\Omega^2 \right]
+\end{equation}
+$$
+d\Omega^2 = d\theta^2 + \sin^2 \theta d\phi^2
+$$
+entire dynamics of universe will be encoded in the scale factor $a(t)$. Can be scaled arbitrarily so we pick $a(t_0)=1$\\
+The coordinates $r$, $\theta$ and $\phi$ are unchanged as $a(t)$ evolves, and so are called the \textbf{co-moving coordinates}.\\
+\subsubsection{Physical coordinate}
+Position - $a(t)\bm x$\\
+Velocity - $\frac{d}{dt}(a(t)\bm x)= \dot a(t) \bm x +  a(t) \frac{d \bm x}{dt} = H \bm x + a(t) \bm v$\\
+Hubble parameter - $H(t) = \frac{\dot a}{a}$
+$$
+       dl^2 = a^2(t) \left[ dX^2 + S_k(X)d\Omega^2 \right]
+$$
+$$
+S_k(X) = X, \sin X, \sinh X
+$$
+$$dX = \frac{dr}{1-kr^2}$$
+If we introduce conformal time $d\tau = \frac{dt}{a}$:
+\begin{equation}
+        ds^2 = a^2(\tau) \left[ d\tau^2 - (dX^2 + + S_k(X)d\Omega^2) \right ]
+\end{equation}
+This is useful as photons have $ds = 0$, so radial trajectory has $\Delta \tau = \Delta X$.
+\subsubsection{Calculating motion in FRW}
+Velocity of a particle on trajectory $X^{\mu}(s)$ is $U^{\mu}(s) = \frac{dX^{\mu}}{ds}$. \\
+Particles travel along geodesics which extremise the proper time $\delta s$ along their path
+$$
+\frac{dU^{\mu}}{ds} + \eta^{\mu}{\alpha \beta}U^{\alpha}U^{\beta} = 0
+$$
+$$
+\eta^{\mu}{\alpha \beta} =  \frac{1}{2}(\patial_{\alpha} g_{\beta \lambda} + \partial_{\beta}g_{\alpha\lambda} - \partial_{\lambda}g_{\alpha \beta})
+$$
+$$
+\frac{dU^{\mu}}{ds} = \frac{dX^{\alpha}}{ds} \frac{dU^{\mu}}{dX^{\alpha}} = U^{\alpha} \frac{d U^{\mu}}{d X^{\alpha}}
+$$
+$$
+\rho^{\mu}  = mU^{\mu}
+$$
+\begin{equation}
+        \rho^{\alpha} \frac{\partial \rho^{\mu}}{\partial X^{\alpha}} + \eta^{\mu}{\alpha \beta} \rho^{\alpha}\rho^{\beta} = 0
+\end{equation}
+valid equation of geodesic line for massive and massless paritcles
+$\mu = 0$ component for FRW:
+$$
+E\frac{dE}{dt} = -\frac{\dot a}{a} p^2 
+$$
+with $E^2 - \rho^2 = m^2$ get $EdE = p dp$. Therefore,
+$$
+\frac{\dot p}{p} = - \frac{\dot a }{a}
+$$
+so $p \prop \frac{1}{a}$.\\
+For massless particles $E = p$, and since $E = \frac{\hbar}{\lambda}$, $\lambda \proportional a$.\\
+Therefore, $\lambda_0 = \frac{a(t_0)}{a(t_1)}\lambda_1$\\
+\textbf{Redshift}: $z = \frac{\lambda_0 - \lambda_1}{\lambda_1}$ so $1+z = \frac{1}{a}$
+For near by sources we can taylor expand: $a(t_1) = a(t_0 + (t_1 - t_0)) = a(t_0) + a(t_1 - t_0)\\ 
+$a(t_1) = a(t_0)(1+(t_1-t_0)H_0 + ...)$\\
+$z = H_0(t_0-t_1)$ as it is a nearby source $z = H_0 d$  as $t_0 -t_1 = d/c$ (for near things)
+\end{document}
