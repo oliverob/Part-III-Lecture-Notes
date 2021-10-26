@@ -187,7 +187,7 @@ A mixed state is a seperable state if it can be written as an ensemble with pure
 The four pure states in $\mathbb{C}^2 \otimes \mathbb{C}^2$ are called Bell states and EPR states.
 \subsection{Schmidt decomposition}
 Any state in space $\mathbm{H}_A \otimes \mathbm{H}_B $ can be described using coefficients of basis states of the form $\ket{i_A} \otimes \ket{i_B}$ where $\ket{i_A}$ for some set of basis eigenstates $\ket{i_A}$, $\ket{i_B}$. The schmidt rank is the number of positive Schmidt coefficents.\\\\
-There always exists a set of orthonormal vectors $\{\ket{i_A}\}$ and $\{\ket{i_B}\} such that:
+There always exists a set of orthonormal vectors $\{\ket{i_A}\}$ and $\{\ket{i_B}\}$ such that:
 $$
 \ket{\psi_{AB}} = \sum_{i=1}^{\kappa=min(d_a,d_b)} \lambda_i \ket{i_A}\ket{i_B}
 $$
@@ -195,7 +195,7 @@ Proof:
 $$
 \psi_{AB} = \sum_{r,\alpha} a_{r\alpha} \ket{\gamma_A}\ket{\alpha_B}
 $$
-\textbf{Singular Value Decompisition (SVD)}: Need to know\\
+\textbf{Singular Value Decompisition (SVD)}: Need to know proof look up in notes\\
 There exists unitaries U $d_A\times d_A$ and V $d_B \times d_B$ s.t $A = UDV$ with D a diagonal matrix $d_A \times d_B$ . Therefore,
 $$
 \alpha_{r,\alpha} = \sum_{i=1}^{d_A} \sum_{\beta=1}^{d_B} u_{\gamma i} d_{i \beta} u_{\beta \alpha}
@@ -203,10 +203,68 @@ $$
 $$
 \ket{\psi_{AB}} = \sum \sum d_{i\beta} (\sum u_{r i} \ket{r_A}) (\sum v_{\beta \alpha} \ket{\alpha_B})
 $$
+as $d_{i \beta} = \deta_{i \beta}d_{ii}$
+$$
+\ket{\psi_{AB}} = \sum_i d_{ii} (\ket{i_A}) (\ket{i_B}) = \sum_i \lambda_i (\ket{i_A}) (\ket{i_B}) 
+$$
+Now need to check these $\{\ket{i_A}\}$, $\{\ket{i_B}\}$ are an orthonormal basis. So need to check they are orthonormal and complete ($\sum^{min(d_A,d_B)}_i \ket{i_A}\bra{i_B} = 1$). To check completeness consider:
+$$
+\rho_{AB} =  \ket{\psi_{AB}} \bra{\psi_{AB}}
+$$
+$$
+\rho_A =  = Tr_B \ket{\psi_{AB}} \bra{\psi_{AB}} = Tr_B (\sum_i \lambda_i \ket{i_A} \ket{i_B}) (\sum_j \lambda_j \ket{j_A} \ket{j_B}) = \sum_{ij} \lambda_i \lamdba_j \ket{i_A}\bra{j_A} \otimes Tr_B \ket{j_A} \bra{j_B} = \sum_i \lambda_i^2 \ket{i_A} \bra{i_A}
+$$
+This means that if AB is in a pure state $\ket{\psi_{AB}}$ then $\rho_A$ and $\rho_B$ have identical sets of non-zero eigenvalues. If $d_A >d_B$ then $\rho_A$ has set of eigenvalues $\{\lamdba_i^2\}^{min(d_A,d_B)}$ and the rest are zero.\\\\
+Is the schmidt deompistion unique? No if the eginvalues are degenerate. As you can generate the schmidt decompistion by diagonlising $\rho_A$ and $\rho_B$ then matching eigenvectors of the same eigenvalues (which is non-unique if there are degenerate eigenstates.
 \subsection{Purification}
 It is possible to convert a mixed state into a pure state by adding a purifying reference system $\mathbm{R}$ with Hilbert space $\mathbm{H}_R$, and defining a pure state $\ket{\psi_{AR}} \in \mathbm{H}_A \otimes \mathbm{H}_B$ such that:
 $$
 \rho_A = Tr_R \ket{\psi_{AR}}\bra{\psi_{AR}} = \sum_{i=1}\lambda_i^2 \ket{i_A}\bra{i_A}
 $$
+Given a $\rho_A$ we write its spectral decompistion (diagonlise it): 
+$$
+\rho_A = \sum^{d_A}_{i=1} p_i \ket{i_a} \bra{i_A}
+$$
+Define
+$$
+\ket{\psi_{AR}} = \sum_{i=1}^{d_A} \sqrt{p_i} \ket{i_A} \ket{i_R}
+$$
+then it is easy to check this statifies the relation above. More generally there is a canonical way of writing a purification:
+$$
+\ket{\psi_{AR}} = (\sqrt{\rho_A} \otimes I) \ket{\tilde \Omega} 
+$$
+for $\ket{\tilde \Omega} = \sqrt{d} \ket{\Omega}$ and $\ket{\Omega} = \frac{1}{\sqrt{d}} \sum_{i=1}^{d} \ket{i_A}\ket{i_R}$. Need to check that $\rho_A = Tr_R \ket{\psi_{AR}}\bra{\psi_{AR}} $
+Usefulness of pure states:
+$$
+\rho = \sum \lamda_i \ket{i} \bra{i} \implies f(\rho) = \sum f(\lambda_i) \ket{i} \bra{i} \implies \sqrt{\rho} = \sum \sqrt{\lambda_i} \ket{i}\bra{i}
+$$
+\subsection{No-cloning theorem (N.C thm}
+There does not exist a universal quantum copier. You cannot make perfect copies of arbitary unknown quantum states. You can copy some states undersome conditions. \\
+\textbf{Proof by contradiction}:\\
+Assume there exists a universal quantum copier which takes arbitary states $\ket{\psi}$ or $\ket{\phi}$ and blank slate $\ket{s}$. Assume there exists U s.t.
+$$
+U(\ket{\psi}\ket{s}) = \ket{\psi}\ket{\psi}, U(\ket{\phi}\ket{s}) = \ket{\phi}\ket{\phi}
+$$
+Take inner product of LHS
+$$
+\bra{\psi} \bra{s} U^{\dagger} U \ket{\psi} \ket{s} = \bra{\psi} \bra{\psi} \ket{\phi} \ket{\phi
+$$
+$$
+\bra{\psi} \ket{\phi} \bra{s} \ket{s} = \bra{\psi}\ket{\phi}^2
+$$
+so cannot copy arbitary states can only copy orthogonal states with the same copier as must have $\bra{\psi}\ket{\phi} = 0$ (orthogonal) or $\bra{\psi}\ket{\phi} = 1$ (identical states).\\
+\textbf{Second proof by contradiction}
+Use qubits: $\psi = \alpha \ket{0} + \beta \ket{1}$, and $\ket{s} = \ket{0}$. Therefore assume that U exists such that:
+$$
+U\ket{\psi}\ket{0} = \ket{\psi}\ket{\psi} = \alpha^2 \ket{0} \ket{0} + \alpha \beta\ket{0} \ket{1} + \alpha \beta \ket{1} \ket{0} + \beta^2 \ket{1} \ket{1}
+$$
+$$
+U\ket{0}\ket{0} = \ket{0}\ket{0}, U\ket{1}\ket{0} = \ket{1}\ket{1}
+$$
+So,
+$$
+U(\ket{\psi}\ket{0}) = U(\alpha \ket{0} + \beta \ket{1}) \ket{0} = \alpha \ket{0} \ket{0} + \beta \ket{1} \ket{1}
+$$
+So this is a contradiction unless $\alpha=1, \beta = 0$ or $\alpha =0, \beta =1$.
 \end{document}
 

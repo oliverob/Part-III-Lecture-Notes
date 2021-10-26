@@ -595,7 +595,7 @@ $$
 $$
 Check that:
 $$
-[\hat \phi(\bm x), \hat \pi(\bm y)] = \frac{-i}{2} \frac{d^3p}{(2\pi)^3} \frac{d^3q}{(2\pi)^3} \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}[\hat a_{\bm p} e^{i\bm p \cdot \bm x} + \hat a^{\dagger}_{\bm p} e^{-i \bm p \cdot \bm x} , \hat a_{\bm q} e^{i\bm q \cdot \bm y} + \hat a^{\dagger}_{\bm q} e^{-i \bm q \cdot \bm y} ]
+[\hat \phi(\bm x), \hat \pi(\bm y)] = \frac{-i}{2}\int \frac{d^3p}{(2\pi)^3}\int \frac{d^3q}{(2\pi)^3} \sqrt{\frac{\omega_{\bm q}}{\omega_{\bm p}}[\hat a_{\bm p} e^{i\bm p \cdot \bm x} + \hat a^{\dagger}_{\bm p} e^{-i \bm p \cdot \bm x} , \hat a_{\bm q} e^{i\bm q \cdot \bm y} + \hat a^{\dagger}_{\bm q} e^{-i \bm q \cdot \bm y} ]
 $$
 $$
 [,] = -e^{i\bm p \cdot \bm x - i \bm q \cdot \bm y}[\hat a_{\bm p} , \hat a^{\dagger}_{\bm q}] + e^{-i\bm p \cdot \bm x + i \bm q \cdot \bm y}[\hat a^{\dagger}_{\bm p} , \hat a_{\bm q}] = -(2\pi)^3 \delta^{(3)}(\bm p - \bm q) (e^{i\bm p \cdot \bm x - i \bm q \cdot y} + e^{-i\bm p \cdot \bm x + i \bm q \cdot y})
@@ -604,5 +604,64 @@ first do $\int d^3 q$ which just sets $\bm p = \bm q$. Then collect up everythin
 $$
 [\hat \phi(\bm x), \hat \pi(\bm y)] = \frac{1}{2} \int \frac{d^3p}{(2\pi)^3} (e^{i\bm p \cdot \bm x - i \bm q \cdot y} + e^{-i\bm p \cdot \bm x + i \bm q \cdot y}) = i \delta^{(3)}(\bm x - \bm y)
 $$ 
-Above set is done by inspection using the integral expression for the delta function.
+Above set is done by inspection using the integral expression for the delta function.\\\\
+\section{Lecture 8}
+Can subsitute these values for $\hat \phi$ and $\hat \pi$ into $H$ to give:
+$$
+\hat H = \frac{1}{4} \int \frac{d^3 p}{(2\pi)^3} \frac{1}{\omega_{\bm p}} (-\omega_{\bm p}^2 + |\bm p|^2 + m^2)(\hat a_{\bm p} \hat a_{\bm p} + \hat a^{\dagger}_{\bm p} \hat a^{\dagger}_{- \bm p})+ (\omega_{\bm p}^2 + |\bm p|^2 + m^2)(\hat a_{\bm p} \hat a^{\dagger}_{\bm p} + \hat a^{\dagger}_{\bm p} \hat a_{ \bm p})
+$$
+$$
+\hat H = \frac{1}{2} \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} (\hat a_{\bm p}\hat a^{\dagger}_{\bm p} + \hat a^{\dagger}_{\bm p} \hat a_{\bm p})
+$$
+\subsection{The Vacuum}
+This is an infinite set of non-interacting quantum simple harmonic oscillators. The state $\ket{0}$ has the lowest energy and is annihaliated by all of the lowering operators:
+$$
+\hat a_{\bm p} = 0 \forall \bm p \in \mathbb{R}^3
+$$
+$$
+\hat H \ket{0} = E_0 \ket{0}
+$$
+$E_0$ is the vacuum energy. Use the same trick of reordering the operators so the annihilation operator is always to the right.
+$$
+\hat H = \frac{1}{2}  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} (\hat a_{\bm p}\hat a^{\dagger}_{\bm p} + \hat a^{\dagger}_{\bm p} \hat a_{\bm p}) = \frac{1}{2}  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} (2 \hat a^{\dagger}_{\bm p} \hat a_{\bm p} + (2\pi)^3\delta^{(3)}(0)) 
+$$
+This is our first sight of the infinites of quantum field theory. First write as normal ordered hamiltonian
+$$
+\hat H = \int \frac{d^3 p}{(2 \pi)^3}  \omega_{\bm p}  \hat a^{\dagger}_{\bm p} \hat a_{\bm p} +\int \frac{d^3 p}{2} \omega_{\bm p}  \delta^{(3)}(0) 
+$$
+Therefore vacuum energy is the remaining constant piece:
+$$
+E_0 = \frac{1}{2} \int d^3p \omega_{\bm p} \delta^{(3)}(0)
+$$
+As we have two types of infinity:\\
+IR: Large distance (low energy)
+$$
+(2 \pi)^3 \delta^{(3)}(\bm p) = \int_{\mathbb{R}} d^4 x e^{i \bm x \cdot \bm p}
+$$
+divergence of $\bm p = 0$ comes from the infinite volume of space. So the cure for the infrared infinity is to put the theory in a large box of size L and then consider $L \rightarrow \infty$ by taking $x \in [\frac{-L}{2}, \frac{L}{2}]$.
+$$
+(2\pi)^3 \delta^{(3)}(\bm p) = \lim_{L\rightarrow \infty} \int^{\frac{L}{2}}_{-\frac{L}{2}} d^3 x e^{i \bm x \cdot \bm p} $$
+$$
+(2\pi)^3 \delta^{(3)}(0) = \lim_{L \rightarrow \inty} V_L
+$$
+So this infinity is just reflecting the fact that the volume of the box grows to infinty. All this tells us is we should be calculating an energy density rather than an energy as if we have constant energy density it will give us infinite energy when integrated over infinite space. So we should consider the energy density:
+$$
+\epsilon_{0} = \lim_{L \rightarrow \frac{E_{(L)}_0}{V_L}
+$$
+$$
+E_0^{(L)} = \int_{-\frac{L}{2}}^{\frac{L}{2}} d^4 x \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p} \implies \epsilon_0 \int \frac{d^3p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p}
+$$
+with $\omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$. Infinity covers from large $|\bm p|$ with:
+$$
+\epsilon_0 \sim \int |\bm p|^3 d|\bm p| = \infty
+$$
+This is giving a UV divergences as we are adding up infinitily small distances (infinity high frequencies and momentum).\\\\
+Can cure UV diveregence by introducing a UV cutoff so short distacne rather than large distance. So introduce $\lambda >> m >> L^{-1}$ with $L$ is size of box.
+$$
+\epsilon_0^{(\lambda)} = \int_{|\bm p|<\lambda} \frac{d^3 p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p} = \frac{4 \pi}{2(2\pi)^3} \int^{\lambda}_{0} |\bm p|^2 \sqrt{|\bm p|^2 + m^2} d |\bm p| = \frac{1}{16\pi^2} \lambda^4(1+O(\frac{m^2}{\lambda^2}))
+$$
+Alternatively put theory on a space time lattice with lattice spacing choosen so $a << m^{-1}$, find $\epsilon^{(a)} \sim \frac{1}$.\\\\
+One viewpoint is called effective field theory:
+You need to define QFT as a continuum limit (a limit in which the cutoff goes to infinity/lattice spacing goes to zero). In order to define this limit you need to identify the quantities that hold fixed in that limit. Theory need to be valid up to some maximum scale.\\\\
+\textbf{Specific to vacuum energy}: This is a very special type of divergence. Just and additive constant we add to the energy. Consider a different quantisation with ordering chosen so it is normal ordering of all products of field operators ($\hat \phi$) and momentum ($\hat \pi$) operators.
 \end{document}

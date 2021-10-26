@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  21 OCT 2021 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  25 OCT 2021 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -716,24 +716,150 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
+Overfull \hbox (6.39873pt too wide) detected at line 599
+\OT1/cmr/m/n/12 [[](\OML/cmm/b/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 y\OT1/cmr/m/n/12 )] = [] [] [] [] [][]
+ []
+
+
 Overfull \hbox (33.94318pt too wide) detected at line 602
 \OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ] = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] + \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ^^Y\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 ^^N[]\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 p \OMS/cmsy/m/n/12 ^^@ \OML/cmm/b/it/12 q\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )
  []
 
-[18] (./Quantum_Field_Theory.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
+
+ []
+
+
+Overfull \hbox (9.49643pt too wide) detected at line 612
+[] \OT1/cmr/m/n/12 = [] [] [][](\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ![] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )([][] + [][]) + (\OML/cmm/m/it/12 ![] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )([][] + [][])
+ []
+
+[18]
+./Quantum_Field_Theory.tex:617: Undefined control sequence.
+<recently read> \ket 
+                     
+l.617 ...ple harmonic oscillators. The state $\ket
+                                                  {0}$ has the lowest energy...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:622: Undefined control sequence.
+l.622 \hat H \ket
+                 {0} = E_0 \ket{0}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:622: Undefined control sequence.
+l.622 \hat H \ket{0} = E_0 \ket
+                               {0}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:645: Undefined control sequence.
+l.645 ...elta^{(3)}(0) = \lim_{L \rightarrow \inty
+                                                  } V_L
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[19]
+./Quantum_Field_Theory.tex:649: Double subscript.
+<argument> E_{(L)}_
+                   0
+l.649 ...\lim_{L \rightarrow \frac{E_{(L)}_0}{V_L}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./Quantum_Field_Theory.tex:650: Missing } inserted.
+<inserted text> 
+                }
+l.650 $
+       $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Field_Theory.tex:652: Undefined control sequence.
+l.652 ...i)^3} \frac{1}{2} \omega_{\bm p} \implies
+                                                   \epsilon_0 \int \frac{d^3...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--660
+
+ []
+
+
+Overfull \hbox (8.27226pt too wide) detected at line 662
+\OML/cmm/m/it/12 ^^O[] \OT1/cmr/m/n/12 = [][] [][]\OML/cmm/m/it/12 ![] \OT1/cmr/m/n/12 = [] [][] \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j[][]\OML/cmm/m/it/12 d\OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 ^^U[]\OT1/cmr/m/n/12 (1 + \OML/cmm/m/it/12 O\OT1/cmr/m/n/12 ([]))
+ []
+
+./Quantum_Field_Theory.tex:663: Missing } inserted.
+<inserted text> 
+                }
+l.663 ...-1}$, find $\epsilon^{(a)} \sim \frac{1}$
+                                                  .\\\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Field_Theory.tex:663: Too many }'s.
+\frac  #1#2->{\begingroup #1\endgroup \over #2}
+                                               
+l.663 ...-1}$, find $\epsilon^{(a)} \sim \frac{1}$
+                                                  .\\\\
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--667
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--667
+
+ []
+
+[20] (./Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
  669 strings out of 478599
  10581 string characters out of 5858101
- 309696 words of memory out of 5000000
+ 311696 words of memory out of 5000000
  18585 multiletter control sequences out of 15000+600000
  417817 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  33i,6n,41p,1327b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Quantum_Field_Theory.pdf (18 pages, 217864 bytes).
+Output written on Quantum_Field_Theory.pdf (20 pages, 225991 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 149 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

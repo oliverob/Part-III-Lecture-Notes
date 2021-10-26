@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{bm}
+\usepackage{amsmath}
 \begin{document}
 In kinetic theory they would say there is a distribution function of velocities at every point and time, but in fluids we characterise every point with just one number describing the velocities.\\
 If given $L$ (size of the system) and $\lambda$ (mean path of particles), then the fluid approach is valid when $\lambda << L$. Usual formula for $\lambda$ is $\lambda = \frac{1}{n\sigma}$ with $n$ number density and $\delta$ cross-section.\\
@@ -182,7 +183,7 @@ As
 $$
 \nabla \times( \bm u \times \bm B)  = \bm u (\nabla \cdot \bm B) + (\bm B \cdot \nabla) \bm u - (\bm u \cdot \nabla) \bm B - \bm B (\nabla \cdot \bm u) 
 $$
-We have $\nabla \cdot \bm B = 0$ and $\nabla \times( \bm u \times \bm B) = \frac{\partial \bm B}{\partial t} so 
+We have $\nabla \cdot \bm B = 0$ and $\nabla \times( \bm u \times \bm B) = \frac{\partial \bm B}{\partial t}$ so 
 $$
 \frac{D\bm B}{Dt} =  (\bm B \cdot \nabla) \bm u - \bm B (\nabla  \cdot u) 
 $$
@@ -192,7 +193,7 @@ $$
 $$
 This gives the motion of the field lines.
 \begin{equation}
-\frac{D}{Dt}(\frac{\bm B}{\rho} = (\frac{\bm B}{\rho} \cdot \nabla} \bm u
+\frac{D}{Dt}(\frac{\bm B}{\rho}) = \frac{\bm B}{\rho} \cdot \nabla} \bm u
 \end{equation}
 This is equivalent to the motion of laine eleemnet from the start of the course so $\frac{\bm B}{\rho} \sim \delta \bm x$ scale proportionally. \\\\
 Consider a cyclinder of length $\delta x$ and cross section $\delta S$ with magnetic field $\bm B$ so $\delta m = \rho \delta S \delta x = \bm B \delta S$. Therefore, as the mass is fixed so must the magentic flux element must stay constant. This also holds more generally, consider magnetic flux throguh a surface $S$
@@ -264,13 +265,82 @@ $$
 $$
 \frac{\partial \bm B_p}{\partial t} = 0, \frac{\partial B_{\psi}}{\partial t} = R(\bm B_p \cdot \nabla) \Omega
 $$
-In steady state have $ \frac{\partial B_{\psi}}{\partial t}  = 0 \implies (\bm B_p \cdot \nabla) \Omega = 0$ so the gradient of $\Omega$ is always orthogonal to $\bm B_p$ which means $\Omega$ is constant on magnetic surfaces. This is called the \textbf{Ferronos' isozotation law}
+In steady state have $ \frac{\partial B_{\psi}}{\partial t}  = 0$ $ \implies (\bm B_p \cdot \nabla) \Omega = 0$ so the gradient of $\Omega$ is always orthogonal to $\bm B_p$ which means $\Omega$ is constant on magnetic surfaces. This is called the \textbf{Ferronos' isozotation law}
 \subsection{Magnetic Forces - force balance}
 $$
-\frac{D \partial}{Dt} = - \frac{\nabla P}{\rho} - \nabla \phi + \frac{\nabla \times \bm B) \times \bm B}{4 \pi \rho}
+\frac{D \bm u}{Dt} = - \frac{\nabla P}{\rho} - \nabla \phi + \frac{(\nabla \times \bm B) \times \bm B}{4 \pi \rho}
 $$
 L, T are the length and time scales. LHS and first term comparison $\frac{u \rho L}{\rho c_s^2 T} = \frac{v}{c}^2$ if $u<<c_s$ can neglect ineterial LHS compared to 1st term on RHS.\\
-Now compare LHS and 3rd term. $\frac{4\pi uL\rho}{TB^2} \sim \frac{u^2}{\frac{B^2}{4\pi \rho}}$.  \frac{B}{\sqrt{4\pi \rho}} is the Alfeven velocity $u_A$. so is $\frac{u}{u_A}^2$. So if $u << u_A$ can neglect inertial term compared ot magnetic force.
+Now compare LHS and 3rd term. $\frac{4\pi uL\rho}{TB^2} \sim \frac{u^2}{\frac{B^2}{4\pi \rho}}$. $ \frac{B}{\sqrt{4\pi \rho}}$ is the Alfeven velocity $u_A$. so this ratio is $\frac{u}{u_A}^2$. So if $u << u_A$ can neglect inertial term compared to magnetic force. Consider third term against first term: $\frac{(3)}{(1)} \sim \frac{B^2}{4\pi \rho L}\frac{\rho L}{\rho c_s^2} = \frac{u_A}{c_s}^2$
+\\\\
+\noindent
+When $u << c_s$ neglect inertial vs pressure\\
+When $u << u_A$ can neglect inertial vs magnetic stresses\\
+When $c_s << u_A$ can neglect thermal pressure vs magnetic pressure\\ \\
+\textbf{Plasma $\beta$ }\\
+$p$ - thermal pressure\\
+$p_B = \frac{B^2}{8\pi}$ - magnetic pressure\\
+$$
+\beta = \frac{p}{p_B} \sim \frac{c_s}{u_A}^2
+$$
+So whenever $\beta <<1$ then thermal pressure is negligible, and if $\beta >>1$ then magnetic pressure dominates.\\
+\subsection{Magnetic Buoyancy}
+If we have a magnetic structure in which the velocity is very small so we can set the magnetic structure to zero:
+$$
+0 = - \nabla p - \rho \nabla \phi + \frac{(\nabla \times \bm B) \times \bm B}{4 \pi} = -\nabla p - \rho \nabla \phi + \frac{1}{4\pi} B^2 \frac{\bm u}{R_c} - \nabla_{\perp}p_B
+$$
+Imagine a flux tube with considerably stronger flux density than the surrounding fluid which the magnetic field going in the $-x$ direction with graviational acceleration in $-z$ direction. Look $z$ in a plane. Assume $R_c \rightarrow \infty$ as magnetic field lines straight and parallel, also as $\nabla \phi$ is in $-z$ direction. The only contributions in the $x$ direction is: 
+$$
+0 = - \nabla_{\perp} (p+p_B) \implies p+p_B = p + \frac{B^2}{8\pi}= c(z)
+$$
+Let $B_2$ be the much stronger magnetic flux inside the tube and $B_1$ be the flux outside.
+$$
+ p_1 + \frac{B_1^2}{8\pi} =  p_2 + \frac{B_2^2}{8\pi} \implies p_1 > p_2
+ $$
+ This means that $\rho_2 < \rho_1$ if we assume the temperature remains constant in the centre of a star as the thermal timescales are to quick and equillibrium will be found quickly. This generates an archimedian force that pushes the flux tube up hence the magnetic buoyancy. So strong areas of magnetic fields will float up to the surface of a star for instance. \\
+\texbf{Sunspot}\\
+At some point on the surface of the sun you have an area with a much higher magnetic field flux ($B_2$) than the surrounding area ($B_1$). Can again fix $z$ constant we would find the same equations again:$p_1 + \frac{B_1^2}{8\pi} =  p_2 + \frac{B_2^2}{8\pi} \implies p_1 > p_2$ at fixed $z$.Typically the temperature does vary a lot here rather than density, as it is easily possible to lose heat. As emissivity $\sim 6T^4$ we get a magnetically dominated areas being dark sun spots.
+\subsection{Force-free equilibrium}
+Assume that $\beta <<1$ meaning that $p_B >> p$, then we can neglect gravity, so the magnetic force dominates the force balance. Useful if gravity is very weak. This means $\bm F_k = 0$ which looks weird as it looks like the magnetic force is zero but it actually just means the magnetic terms are so much large than the rest. Remember the decompistion of the magnetic force:
+$$
+\bm F_k = \frac{(\nabla \times \bm B) \times \bm B}{4 \pi} = \frac{\bm J \times \bm B}{c} = 0
+$$
+so when $\bm J || \bm B$ we are in the free force state. Therefore, $\bm J = \alpha(\bm u)\bm B$ so $\nabla \times \bm B = \frac{4\pi}{x} \bm J = \frac{4 \pi \alpha(\bm u) }{c} \bm B$.
+Take the divergence of this equation:
+$$
+0 = \frac{4\pi}{c}\left( ( \bm B \cdot \nabla) \alpha + \alpha (\nabla \cdot \bm B) \right) \implies $(\bm B \cdot \nabla) \alpha = 0
+$$
+This looks very similar to the Ferrono's isozotation but here it means that $\alpha(\bm u)$ is constant along the magnetic field lines so not just an arbitrary function. We have
+$$
+\frac{4\pi}{c} \alpha(\bm u) \bm B = \nabla \times \bm B 
+$$
+which is linear in $\bm B$. If know distribution of $\alpha(S)$ on a particular surface S then I can solve this whole system. The structure of the upper solar atmosphere is force free, same is true for magnetosphere of pulsars. \\\\
+Lets consider the consquences of assuming $\alpha$ is constant. Then we would find that $\nabla \cdot \bm B = \frac{4\pi \alpha}{c} \bm B$ (take the curl):
+$$
+\nabla \times(\nabla \cdot \bm B) = \nabla(\nabla \cdot \bm B) - \nabla^2 \bm B = \frac{4\pi \alpha}{c} \nabla \times \bm B = (\frac{4\pi \alpha}{c}) ^2\bm B 
+$$
+This gives a Helmholtz equation (this is a nice linear equation):
+$$
+\nabla^2 \bm B +  (\frac{4\pi \alpha}{c}) ^2\bm B = 0
+$$
+\textbf{Cylindrical force free equilibrium}\\
+Assume $\alpha$ is constant and cylindrically symmetrical. $\bm r = ( R, z, \psi)$, $\bm B = (B_R, B_z, B_{\psi})$, $\frac{\partial}{\partial \psi} = 0$,$\frac{\partial}{\partial z} = 0$
+$$
+\nabla \cdot \bm B = 0 \implies \frac{1}{R}\frac{\partial}{\partial R} (R B_R) = 0 \implies RB_R(R) = \text{constant}
+$$
+This is a solution but it is a bad solution as it diverges at $R=0$ and the only way to get a non-singular system is to set the constant to 0 so $B_R =0$.\\
+$$
+\nabla \times \bm B = -\frac{\partial B_z}{\partial R}\bm e_{\psi} + \frac{1}{R} \frac{\partial}{\partial R}(RB_{\psi} \bm e_z
+$$
+$$
+\frac{4\pi\alpha}{c}\bm B = \frac{4\pi\alpha}{c}B_{\psi}\bm e_{\psi} + \frac{4\pi\alpha}{c}B_z \bm e_z
+$$
+$$
+B_{\psi} = \frac{c}{4\pi \alpha}(-\frac{\partial B_z}{R}), \alpha B_z = \frac{c}{4\pi} \frac{1}{R} \frac{\partial}{\partial R} (R B_{\psi})
+$$
+$$
+\alpha B_z = \frac{c}{4\pi} \frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{c}{4\pi \alpha} (-\frac{\partial B_z}{\partial R}) \right)
+$$
 \end{document}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 OCT 2021 09:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  26 OCT 2021 10:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -218,10 +218,47 @@ Overfull \hbox (17.08173pt too wide) detected at line 175
  [] []\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 r[]
  []
 
-./Quantum_Information_Theory.tex:179: Undefined control sequence.
+
+Overfull \hbox (93.71895pt too wide) detected at line 183
+\OML/cmm/m/it/10 < M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[] [] [] r[] [] [] \OMS/cmsy/m/n/10 
+ [] []\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 r[]Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[] [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]^^Z[]\OT1/cmr/m/n/10 )
+ []
+
+
+./Quantum_Information_Theory.tex:187: LaTeX Error: \mathbb allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 The four pure states in $\mathbb
+                                      {C}^2 \otimes \mathbb{C}^2$ are called...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Information_Theory.tex:187: Missing $ inserted.
+<inserted text> 
+                $
+l.187 The four pure states in $\mathbb{C}^
+                                          2 \otimes \mathbb{C}^2$ are called...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
+
+ []
+
+[6]
+./Quantum_Information_Theory.tex:189: Undefined control sequence.
 <recently read> \mathbm 
                         
-l.179 Any state in space $\mathbm
+l.189 Any state in space $\mathbm
                                  {H}_A \otimes \mathbm{H}_B $ can be describ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -229,8 +266,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:179: Undefined control sequence.
-l.179 ...te in space $\mathbm{H}_A \otimes \mathbm
+./Quantum_Information_Theory.tex:189: Undefined control sequence.
+l.189 ...te in space $\mathbm{H}_A \otimes \mathbm
                                                   {H}_B $ can be described u...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -238,10 +275,59 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:181: Undefined control sequence.
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
+
+./Quantum_Information_Theory.tex:206: Undefined control sequence.
+l.206 as $d_{i \beta} = \deta
+                             _{i \beta}d_{ii}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Information_Theory.tex:215: Undefined control sequence.
+l.215 ... \ket{j_B}) = \sum_{ij} \lambda_i \lamdba
+                                                  _j \ket{i_A}\bra{j_A} \oti...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Information_Theory.tex:215: Double subscript.
+l.215 ...\ket{j_B}) = \sum_{ij} \lambda_i \lamdba_
+                                                  j \ket{i_A}\bra{j_A} \otim...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+Overfull \hbox (157.24324pt too wide) detected at line 216
+\OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 == \OML/cmm/m/it/10 Tr[] [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[]\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 ^^U[] [] []\OT1/cmr/m/n/10 )([] \OML/cmm/m/it/10 ^^U[] [] []\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 ^^U[][] [] [] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 Tr[] [] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^U[] [] []
+ []
+
+./Quantum_Information_Theory.tex:217: Undefined control sequence.
+l.217 ...\rho_A$ has set of eigenvalues $\{\lamdba
+                                                  _i^2\}^{min(d_A,d_B)}$ and...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
+
+ []
+
+[7]
+./Quantum_Information_Theory.tex:220: Undefined control sequence.
 <recently read> \mathbm 
                         
-l.181 ...ing a purifying reference system $\mathbm
+l.220 ...ing a purifying reference system $\mathbm
                                                   {R}$ with Hilbert space $\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -249,10 +335,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:181: Undefined control sequence.
+./Quantum_Information_Theory.tex:220: Undefined control sequence.
 <recently read> \mathbm 
                         
-l.181 ... $\mathbm{R}$ with Hilbert space $\mathbm
+l.220 ... $\mathbm{R}$ with Hilbert space $\mathbm
                                                   {H}_R$, and defining a pur...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -260,8 +346,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:181: Undefined control sequence.
-l.181 ...a pure state $\ket{\psi_{AR}} \in \mathbm
+./Quantum_Information_Theory.tex:220: Undefined control sequence.
+l.220 ...a pure state $\ket{\psi_{AR}} \in \mathbm
                                                   {H}_A \otimes \mathbm{H}_B...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -269,8 +355,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:181: Undefined control sequence.
-l.181 ...si_{AR}} \in \mathbm{H}_A \otimes \mathbm
+./Quantum_Information_Theory.tex:220: Undefined control sequence.
+l.220 ...si_{AR}} \in \mathbm{H}_A \otimes \mathbm
                                                   {H}_B$ such that:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -278,20 +364,73 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[6] [7] (./Quantum_Information_Theory.aux) ) 
+./Quantum_Information_Theory.tex:239: Undefined control sequence.
+l.239 \rho = \sum \lamda
+                        _i \ket{i} \bra{i} \implies f(\rho) = \sum f(\lambda...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Information_Theory.tex:239: Undefined control sequence.
+l.239 ... = \sum \lamda_i \ket{i} \bra{i} \implies
+                                                   f(\rho) = \sum f(\lambda_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Information_Theory.tex:239: Undefined control sequence.
+l.239 ...sum f(\lambda_i) \ket{i} \bra{i} \implies
+                                                   \sqrt{\rho} = \sum \sqrt{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+{\phi $$ $$ \bra {\psi } \ket {\phi } \bra {s} \ket {s} = \bra {\psi \ETC.
+./Quantum_Information_Theory.tex:270: Paragraph ended before \ket was complete.
+<to be read again> 
+                   \par 
+l.270 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Quantum_Information_Theory.tex:270: Missing $ inserted.
+<inserted text> 
+                $
+l.270 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Information_Theory.tex:270: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.270 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+)
+! Emergency stop.
+<*> Quantum_Information_Theory.tex
+                                  
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 1157 strings out of 478599
- 15963 string characters out of 5858101
- 312281 words of memory out of 5000000
+ 1155 strings out of 478599
+ 15901 string characters out of 5858101
+ 315281 words of memory out of 5000000
  19054 multiletter control sequences out of 15000+600000
  416912 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,52p,821b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Quantum_Information_Theory.pdf (7 pages, 219334 bytes).
-PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!
