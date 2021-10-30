@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{bm}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{braket}
 \title{Quantum Information Theory}
 \author{oliverobrien111 }
@@ -215,7 +216,9 @@ $$
 \rho_A =  = Tr_B \ket{\psi_{AB}} \bra{\psi_{AB}} = Tr_B (\sum_i \lambda_i \ket{i_A} \ket{i_B}) (\sum_j \lambda_j \ket{j_A} \ket{j_B}) = \sum_{ij} \lambda_i \lamdba_j \ket{i_A}\bra{j_A} \otimes Tr_B \ket{j_A} \bra{j_B} = \sum_i \lambda_i^2 \ket{i_A} \bra{i_A}
 $$
 This means that if AB is in a pure state $\ket{\psi_{AB}}$ then $\rho_A$ and $\rho_B$ have identical sets of non-zero eigenvalues. If $d_A >d_B$ then $\rho_A$ has set of eigenvalues $\{\lamdba_i^2\}^{min(d_A,d_B)}$ and the rest are zero.\\\\
-Is the schmidt deompistion unique? No if the eginvalues are degenerate. As you can generate the schmidt decompistion by diagonlising $\rho_A$ and $\rho_B$ then matching eigenvectors of the same eigenvalues (which is non-unique if there are degenerate eigenstates.
+Is the schmidt deompistion unique? No if the eginvalues are degenerate. As you can generate the schmidt decompistion by diagonlising $\rho_A$ and $\rho_B$ then matching eigenvectors of the same eigenvalues (which is non-unique if there are degenerate eigenstates.\\\\
+The set of $\{\lambda_i\}$ are called Schmidt coefficents, and the set $\{\ket{i_A}\}$, $\{\ket{i_B}\}$ are the schmidt baseses, and $n(\psi_{AB})$ (the number of non-zero schmidt coefficents) is called the Schmidt rank. The schmidt rank is the simplest signature of entanglement as $\ket{\psi_{AB}}$ is entangled iff $n(\psi_{AB}) >1$. Easy to see that $n(\psi_{AB}) = 1 \implies$ product state as then can write $\psi_{AB} = \ket{i_A} \otimes \ket{j_B}$ as only one non-zero schmidt coefficent.
+
 \subsection{Purification}
 It is possible to convert a mixed state into a pure state by adding a purifying reference system $\mathbm{R}$ with Hilbert space $\mathbm{H}_R$, and defining a pure state $\ket{\psi_{AR}} \in \mathbm{H}_A \otimes \mathbm{H}_B$ such that:
 $$
@@ -238,7 +241,7 @@ Usefulness of pure states:
 $$
 \rho = \sum \lamda_i \ket{i} \bra{i} \implies f(\rho) = \sum f(\lambda_i) \ket{i} \bra{i} \implies \sqrt{\rho} = \sum \sqrt{\lambda_i} \ket{i}\bra{i}
 $$
-\subsection{No-cloning theorem (N.C thm}
+\subsection{No-cloning theorem (N.C thm)}
 There does not exist a universal quantum copier. You cannot make perfect copies of arbitary unknown quantum states. You can copy some states undersome conditions. \\
 \textbf{Proof by contradiction}:\\
 Assume there exists a universal quantum copier which takes arbitary states $\ket{\psi}$ or $\ket{\phi}$ and blank slate $\ket{s}$. Assume there exists U s.t.
@@ -247,7 +250,7 @@ U(\ket{\psi}\ket{s}) = \ket{\psi}\ket{\psi}, U(\ket{\phi}\ket{s}) = \ket{\phi}\k
 $$
 Take inner product of LHS
 $$
-\bra{\psi} \bra{s} U^{\dagger} U \ket{\psi} \ket{s} = \bra{\psi} \bra{\psi} \ket{\phi} \ket{\phi
+\bra{\psi} \bra{s} U^{\dagger} U \ket{\psi} \ket{s} = \bra{\psi} \bra{\psi} \ket{\phi} \ket{\phi}
 $$
 $$
 \bra{\psi} \ket{\phi} \bra{s} \ket{s} = \bra{\psi}\ket{\phi}^2
@@ -265,6 +268,126 @@ So,
 $$
 U(\ket{\psi}\ket{0}) = U(\alpha \ket{0} + \beta \ket{1}) \ket{0} = \alpha \ket{0} \ket{0} + \beta \ket{1} \ket{1}
 $$
-So this is a contradiction unless $\alpha=1, \beta = 0$ or $\alpha =0, \beta =1$.
+So this is a contradiction unless $\alpha=1, \beta = 0$ or $\alpha =0, \beta =1$.\\\\
+An implication of the no-cloning theorem is that superluminal communication is impossible.
+\subsection{Maximally Entangled States}
+$$
+\ket{\psi_{AB}}, \lambda_i = \frac{1}{\sqrt{d}}, d = min(d_A, d_B)
+$$
+$$
+\ket{\psi_{AB}} = \frac{1}{\sqrt{d}} \sum_{i=1}^d \ket{i_A} \ket{i_B} 
+$$
+Its reduced states are completely mixed states if $d_A = d_B = d$:
+$$
+\rho_A = \frac{1}{d} \sum \ket{i_A} \bra{i_A}, \rho_B = \frac{1}{d} \sum \ket{i_B}\bra{i_B}
+$$
+If $d_A < d_B$ then $\rho_A$ is a completely mixed state and $\rho_B$ is a completely mixed state on their supports:
+$$
+\rho_A = \frac{1}{d_A} \sum \ket{i_A} \bra{i_A}, \rho_B = \frac{1}{d_A} \sum^{d_A} \ket{i_B}\bra{i_B}
+$$
+\textbf{Properties}\\
+$\ket{\psi_{AB}} = \mathrm{H}_A \otimes \mathrm{H}_B \approx \mathbb{C}^d \otimes \mathbb{C}^d$
+These are two qudits. 
+Fix the orthonormal basis on $\mathbb{C}^2$ of $\{\ket{i}\}^d_{i=1}$ and let:
+$$
+\ket{\Omega} = \frac{1}{\sqrt{d}} \sum^{d}_{i=1} \ket{i} \ket{i} 
+$$
+\textbf{Lemma 1}: $\forall A, B \in \mathfrak{B}(\mathbb{C}^d)$ we have $\bra{\Omega} A \otimes B \ket{\Omega} = Tr(A^T B)$ where T is the transposition in the chosen basis (schmidt basis of $\ket{\Omega}$\\\\
+\textbf{Lemma 2}: Ricoche trick $ (A \otimes I) \ket{\Omega} = (I \otimes A^T) \ket{\Omega}$\\
+Proof:
+$$
+A = \sum_{i=1}^d a_{jk} \ket{j} \bra{k}
+$$
+LHS of lemma 2:
+$$
+= \frac{1}{\sqrt{d}}\sum_i[(\sum_{jk} a_{jk} \ket{j} \bra{k} )\otimes I] \ket{i} \otimes \ketPi} = \frac{1}{\sqrt{d}}\sum_{ij} a_{ji} \ket{j}\ket{i}
+$$
+$$
+A^T = \sum_{kj} \ket{j} \bra{k} 
+$$
+RHS of lemma 2:
+$$
+= \frac{1}{\sqrt{d}}\sum_{ij} \ket{i} \otimes a_{ij} \ket{j} =  \frac{1}{\sqrt{d}}\sum_{ij}  a_{ij} \ket{j}\ket{i}$$
+Remember these lemmas we will use it over and over again.\\
+\textbf{Implications of Lemma 1}\\
+Given a state $\rho_A$ then the canonical purification is$\ket{\psi_{AB}} = \sqrt{d} (\sqrt{\rho_A} \otimes I) \ket{\Omega}$ as:
+$$
+\rho_A = Tr_B \ket{\psi_{AB}}\bra{\psi_{AB}} = Tr_B d (\sqrt{\rho_A} \otimes I) \ket{\Omega} \bra{\Omega}  (\sqrt{\rho_A} \otimes I) = Tr_B \sum_{ij} \sqrt{\rho_A} \ket{i} \bra{j} \sqrt{\rho_A} \otimes \ket{i} \bra{j} = \sum_i \sqrt{\rho_A} \ket{i} \bra{i} \sqrt{\rho_A} = I $$
+Every biparitate state can be written:
+$$
+\ket{\psi_{AB}} = (I \otimes R) \ket{\Omega}
+$$
+for some operator R. Proof by construction:\\
+$$
+\ket{\psi_{AB}} = \sum \lambda_i \ket{i_A} \ket{i_B} \in \mathrm{H}_A \otimes \mathrm{H}_B
+$$
+Choose two isometries U, V s.t.
+$$
+U^{\dagger}U = V^{\dagger}V = I, U\ket{i} = \ket{i_A}, V\ket{i} = \ket{i_B}, D = \sum \lambda_k \ket{k} \bra{k}
+$$
+Let $R = \sqrt{d} V D U^T$ therefore:
+$$
+(I \otimes R) \ket{\Omega} = (I \otimes VDU^T) \ket{\Omega} = (I \otimes VD)(I \otimes U^T) \ket{\Omega} =^{\text{lemma 2}}  (U \otimes VD)\ket{\Omega}
+$$
+$$
+(I \otimes R) \ket{\Omega} = \sum_i (U \otimes VD)\ket{i} \otimes \ket{i} = \sum_i \ket{i_A} \otimes V \sum_k \lambda_k \ket{k} \bra{k} \ket{i} =  \sum_i \ket{i_A} \otimes V \lambda_i \ket{i} =  \sum_i \lambda_i  \ket{i_A} \otimes \ket{i_B} 
+$$
+\textbf{Aside about Schmidt}\\
+$\ket{\psi_{AB}} = \ket{\psi_A} \otimes \ket{\xi_B} \neq \sum_{i>1} \lambda_i \ket{i_A}\ket{i_B}$ as the schmidt coefficents are unique as they are the eigenvalues of $\rho_A$ and $\rho_B$, so the schmidt rank is unique.
+\section{Time evolution of open quantum system}
+Dynamics is given by a quantum operation (also called a quantum channel).\\
+\textbf{Quantum Operation}: $\Lambda: \mathrm{D}(\mathrm{H}) \rightarrow \mathrm{D}(\mathrm{K})$ and is a completely positive, trace-preserving map (CPTP) map\\
+- It enables a description of discrete state changes
+$$
+\Lambda \rho_{t=0} \rightarrow \rho'_{t>0} = \Lambda(\rho)
+$$
+$\Lambda$ is a superoperator and can map from operators in general $\mathrm{H}$ to other operators on $\mathrm{H}$: $\Lambda: \mathrm{B}(\mathrm{H}) \rightarrow \mathrm{B}(\mathrm{K})$.\\
+\textbf{Properties of $\Lambda$}\\
+- Linearity $\Lambda(p_1 \rho_1 + p_2 \rho_2) = p_1 \Lambda (\rho_1) + p_2 \Lambda(\rho_2)$\\
+- Trace preserving: $Tr \Lambda(\rho) = Tr \rho = 1$, $\rho \in \mathrm{D}(\mathrm{H})$ this corresponds to the conservation of probablity.\\
+- Positivity [positive(-semidefiniteness) preserving] $\rho \geq 0 \implies \Lambda(\rho) \geq 0$\\
+- Completely positive (CP):
+$$
+(\Lambda \otimes id_B): \mathrm{D}(\mathrm{H}_A)\otimes\mathrm{B}(\mathrm{H}_B) \rightarrow \mathrm{D}(\mathrm{K})\otimes\mathrm{B}(\mathrm{H}_B)
+$$
+is completely positive if $(\Lambda \otimes id_B)$ is positive for all $B$:
+$$
+(\Lambda \otimes id_B)\rho_{AB} \geq 0
+$$
+\textbf{Further consideration of completely positiveness (CP)}\\
+$$
+\mathrm{H} = \mathbb{C}^m, \mathrm{K} = \mathbb{C}^n
+$$
+use notation: $M_m$ is set of complex $m \times m$ matrices, $M^+_m$ is set of positive semi definite complex $m \times m$ matrices, $\mathrm{B}(\mathbb{C}^n) = M_m$, $\mathrm{D}(\mathrm{H}) = \{ \rho \in M^+_m , Tr \rho = 1\}$. \\\\
+A linear map $\Lambda: M_m \rightarrow M_n$ is positive if $\Lambda(A) \in M^+_n $ if $A \in M^+_m$.\\\\
+k-positive for any $k \geq 1$ if $(\Lambda \otimes id_k)$ is positive\\\\
+Is completely positive if it is k-positive for all positive integres k\\
+\subsubsection{Necessary and sufficent condtion for complete positivity}
+A linear map $\Lambda: \mathrm{B}(\mathrm{H}) \rightarrow \mathrm{B}(\mathrm{K})$ with $\mathrm{H} = \mathbb{C}^d$ and  $\mathrm{K} = \mathbb{C}^{d'}$  is completely positive iff
+$$
+(\Lambda \otimes id_d)\ket{\Omega}\bra{\Omega} \geq 0
+$$
+Proof:
+If it is completely positive then it is obvious as it is a completely positive operator acting on a positive state so it will be positive. Now proof opposite direction:\\\\
+Consider an arbitary $k \geq 1$ and a bipartite state $\rho \in M_d \otimes M_k$ with spectral decomposition: $\rho = \sum_{i=1}^d \lambda_i \ket{\psi_i} \bra{\psi_i}$.
+$$
+(\Lambda \otimes id_k)\rho \geq 0 \iff \sum \lambda_i (\Lambda \otimes id_k)\ket{\psi_i}\bra{\psi_i} \geq 0 \iff (\Lambda \otimes id_k)\ket{\psi_i}\bra{\psi_i} \geq 0 \forall i
+$$
+second iff holds as $\lambda_i \geq 0$. As any bipartite state can be written $\ket{\psi} = (I \otimes R) \ket{\Omega}$. Since $\ket{\Omega_i} \in \mathbb{C}^d \otimes \mathbb{C}^k$ there exists $R_i$ s.t. $\ket{\psi_i} = (I \otimes R_i) \ket{\Omega}$. So the above can be written as:
+$$
+(\Lambda \otimes id_k)(I \otimes R_i) \ket{\Omega} \bra{\Omega} (I_d \otimes R^{\dagger}_i) \geq 0
+$$
+Note that $R_i \in \mathcal{B}(\mathbb{C}^d, \mathbb{C}^d$). Define a superoperator $Q_i: \mathcal{B}(\mathbb{C}^d) \rightarrow \mathcal{B}(\mathbb{C}^k)$ such that $Q_i(.) R_i(.)R_i^{\dagger}$. So:
+$$
+(\Lambda \otimes id_k)(I \otimes R_i) \ket{\Omega} \bra{\Omega} (I_d \otimes R^{\dagger}_i) = (\Lambda \otimes id_k)(id_d \otimes Q_i) \ket{\Omega} \bra{\Omega}= (id_{d'} \otimes Q_i) (\Lambda \otimes id_d)(\ket{\Omega} \bra{\Omega} \geq 0
+$$
+$$
+(id_{d'} \otimes R_i) (\Lambda \otimes id_d)(\ket{\Omega} \bra{\Omega} (id_{d'} \otimes R^{\dagger}_i) \geq 0
+$$
+let $A= (id_{d'} \otimes R_i) $ and $B = (\Lambda \otimes id_d)\ket{\Omega} \bra{\Omega} $
+as
+$$
+B \geq 0 \implies ABA^{\dagger} \geq 0$$
+$$(\Lambda \otimes id_d)\ket{\Omega} \bra{\Omega} \geq 0 \implies (\Lambda \otimes id_d)\rho \geq 0$$
 \end{document}
 

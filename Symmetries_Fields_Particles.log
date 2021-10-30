@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 OCT 2021 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  26 OCT 2021 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,27 +343,27 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count292
 \l__pdf_internal_box=\box64
 ) (./Symmetries_Fields_Particles.aux)
 \openout1 = `Symmetries_Fields_Particles.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
  (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count293
@@ -379,49 +379,28 @@ LaTeX Font Info:    ... okay on input line 5.
 \everyMPtoPDFconversion=\toks38
 ) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (c:/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
- (c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)) (c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
  (c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 
-Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices automatically placed. You can disable this warning by setting /tikzfeynman/warn luatex=false on input line 5.
+Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices automatically placed. You can disable this warning by setting /tikzfeynman/warn luatex=false on input line 6.
 
 
-Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[compat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on input line 5.
+Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[compat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on input line 6.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-./Symmetries_Fields_Particles.tex:21: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:22: Undefined control sequence.
 <argument> 2\pir 
                  
-l.21 ...y $\mathbb{C}$ numbers $e^{\frac{2\pir}{n}
+l.22 ...y $\mathbb{C}$ numbers $e^{\frac{2\pir}{n}
                                                   $ for $r=$ 0, 1, ..., $n-1...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -429,10 +408,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:21: Missing } inserted.
+./Symmetries_Fields_Particles.tex:22: Missing } inserted.
 <inserted text> 
                 }
-l.21 ... $\mathbb{C}$ numbers $e^{\frac{2\pir}{n}$
+l.22 ... $\mathbb{C}$ numbers $e^{\frac{2\pir}{n}$
                                                    for $r=$ 0, 1, ..., $n-1$...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -441,56 +420,56 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Package tikz-feynman Warning: The key you tried to use '/tikz/horizontal' requires LuaTeX. It will be ignored. on input line 30.
+Package tikz-feynman Warning: The key you tried to use '/tikz/horizontal' requires LuaTeX. It will be ignored. on input line 31.
 
 
-Package tikz-feynman Warning: The key you tried to use '/graph drawing/node distance' requires LuaTeX. It will be ignored. on input line 30.
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node distance' requires LuaTeX. It will be ignored. on input line 31.
 
 
-Package tikz-feynman Warning: The key you tried to use '/graph drawing/level distance' requires LuaTeX. It will be ignored. on input line 30.
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level distance' requires LuaTeX. It will be ignored. on input line 31.
 
 
-Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling distance' requires LuaTeX. It will be ignored. on input line 30.
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling distance' requires LuaTeX. It will be ignored. on input line 31.
 
 
-Package tikz-feynman Warning: The key you tried to use '/tikz/graphs/spring layout' requires LuaTeX. It will be ignored. on input line 30.
+Package tikz-feynman Warning: The key you tried to use '/tikz/graphs/spring layout' requires LuaTeX. It will be ignored. on input line 31.
 
 
-Package tikz-feynman Warning: The key you tried to use '/tikz/horizontal' requires LuaTeX. It will be ignored. on input line 30.
+Package tikz-feynman Warning: The key you tried to use '/tikz/horizontal' requires LuaTeX. It will be ignored. on input line 31.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--36
+Underfull \hbox (badness 10000) in paragraph at lines 29--37
 
  []
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./Symmetries_Fields_Particles.tex:44: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:45: Missing $ inserted.
 <inserted text> 
                 $
-l.44         $W^{\pm}, $Z^
+l.45         $W^{\pm}, $Z^
                           0$ Bosons & 1 & O(100)m_{proton} & Electroweak\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:44: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:45: Missing $ inserted.
 <inserted text> 
                 $
-l.44         $W^{\pm}, $Z^0$ Bosons & 1 & O(100)m_
+l.45         $W^{\pm}, $Z^0$ Bosons & 1 & O(100)m_
                                                   {proton} & Electroweak\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:44: Extra }, or forgotten $.
+./Symmetries_Fields_Particles.tex:45: Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.44 ...pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} &
+l.45 ...pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} &
                                                    Electroweak\\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -498,18 +477,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./Symmetries_Fields_Particles.tex:44: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:45: Missing $ inserted.
 <inserted text> 
                 $
-l.44 ...pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} &
+l.45 ...pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} &
                                                    Electroweak\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:44: Missing } inserted.
+./Symmetries_Fields_Particles.tex:45: Missing } inserted.
 <inserted text> 
                 }
-l.44 ...pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} &
+l.45 ...pm}, $Z^0$ Bosons & 1 & O(100)m_{proton} &
                                                    Electroweak\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -518,12 +497,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--48
+Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
  []
 
-./Symmetries_Fields_Particles.tex:51: Undefined control sequence.
-l.51 i) Reflexivity: $s \tilda
+./Symmetries_Fields_Particles.tex:52: Undefined control sequence.
+l.52 i) Reflexivity: $s \tilda
                                s \forall s \in S$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -531,8 +510,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:52: Undefined control sequence.
-l.52 ii) Symmetry: $s\tilda
+./Symmetries_Fields_Particles.tex:53: Undefined control sequence.
+l.53 ii) Symmetry: $s\tilda
                             s' \implies s' \tilda s \forall s,s' \in S$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -540,8 +519,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:52: Undefined control sequence.
-l.52 ii) Symmetry: $s\tilda s' \implies s' \tilda
+./Symmetries_Fields_Particles.tex:53: Undefined control sequence.
+l.53 ii) Symmetry: $s\tilda s' \implies s' \tilda
                                                   s \forall s,s' \in S$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -549,8 +528,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:53: Undefined control sequence.
-l.53 iii) Transivity $s\tilda
+./Symmetries_Fields_Particles.tex:54: Undefined control sequence.
+l.54 iii) Transivity $s\tilda
                               s'$ and $s'\tilda s'' \imples s \tilda s'' \fo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -558,10 +537,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:53: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:54: Undefined control sequence.
 <recently read> \tilda 
                        
-l.53 iii) Transivity $s\tilda s'$ and $s'\tilda
+l.54 iii) Transivity $s\tilda s'$ and $s'\tilda
                                                 s'' \imples s \tilda s'' \fo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -569,8 +548,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:53: Undefined control sequence.
-l.53 ...ity $s\tilda s'$ and $s'\tilda s'' \imples
+./Symmetries_Fields_Particles.tex:54: Undefined control sequence.
+l.54 ...ity $s\tilda s'$ and $s'\tilda s'' \imples
                                                    s \tilda s'' \forall s, s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -578,8 +557,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:53: Undefined control sequence.
-l.53 ...lda s'$ and $s'\tilda s'' \imples s \tilda
+./Symmetries_Fields_Particles.tex:54: Undefined control sequence.
+l.54 ...lda s'$ and $s'\tilda s'' \imples s \tilda
                                                    s'' \forall s, s', s'' \i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -587,8 +566,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:54: Undefined control sequence.
-l.54 Equivalence class of $s\inS
+./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
+l.55 Equivalence class of $s\inS
                                 $: $[s] = {s'\in S; s' \tilda s}$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -596,8 +575,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:54: Undefined control sequence.
-l.54 ...ass of $s\inS$: $[s] = {s'\in S; s' \tilda
+./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
+l.55 ...ass of $s\inS$: $[s] = {s'\in S; s' \tilda
                                                    s}$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -605,8 +584,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
-l.55 ...er disjoint or equal, since for $s, \tilda
+./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
+l.56 ...er disjoint or equal, since for $s, \tilda
                                                    s \in S$ either $s \union...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -614,8 +593,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
-l.55 ...e for $s, \tilda s \in S$ either $s \union
+./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
+l.56 ...e for $s, \tilda s \in S$ either $s \union
                                                    \tilda s = \empty$ or tak...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -623,8 +602,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
-l.55 ...s, \tilda s \in S$ either $s \union \tilda
+./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
+l.56 ...s, \tilda s \in S$ either $s \union \tilda
                                                    s = \empty$ or take $s' \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -632,8 +611,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
-l.55 ...ilda s = \empty$ or take $s' \in [s]\union
+./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
+l.56 ...ilda s = \empty$ or take $s' \in [s]\union
                                                    [\tilda s]$ then for $s''...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -641,8 +620,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:55: Undefined control sequence.
-l.55 ... \empty$ or take $s' \in [s]\union [\tilda
+./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
+l.56 ... \empty$ or take $s' \in [s]\union [\tilda
                                                    s]$ then for $s'' \in [s]$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -650,8 +629,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
-l.56 $s' \tilda
+./Symmetries_Fields_Particles.tex:57: Undefined control sequence.
+l.57 $s' \tilda
                 s'' \implies s'' \tilda s'' \implies s''\in [\tilda s]$ and ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -659,8 +638,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
-l.56 $s' \tilda s'' \implies s'' \tilda
+./Symmetries_Fields_Particles.tex:57: Undefined control sequence.
+l.57 $s' \tilda s'' \implies s'' \tilda
                                         s'' \implies s''\in [\tilda s]$ and ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -668,8 +647,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
-l.56 ...ies s'' \tilda s'' \implies s''\in [\tilda
+./Symmetries_Fields_Particles.tex:57: Undefined control sequence.
+l.57 ...ies s'' \tilda s'' \implies s''\in [\tilda
                                                    s]$ and vise verse so $[s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -677,8 +656,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:56: Undefined control sequence.
-l.56 ...tilda s]$ and vise verse so $[s] = [\tilda
+./Symmetries_Fields_Particles.tex:57: Undefined control sequence.
+l.57 ...tilda s]$ and vise verse so $[s] = [\tilda
                                                    s ]$ so equivalence class...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -686,8 +665,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:57: Undefined control sequence.
-l.57 e.g. take $S = \{\mathbb{Z}\}$ and $s \tilda
+./Symmetries_Fields_Particles.tex:58: Undefined control sequence.
+l.58 e.g. take $S = \{\mathbb{Z}\}$ and $s \tilda
                                                   s'$ if $s mod 2 = s' mod 2...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -696,13 +675,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--59
+Underfull \hbox (badness 10000) in paragraph at lines 52--60
 
  []
 
 [2]
-./Symmetries_Fields_Particles.tex:60: Undefined control sequence.
-l.60 g_i \tilda
+./Symmetries_Fields_Particles.tex:61: Undefined control sequence.
+l.61 g_i \tilda
                 g_j \iff g_i = g_jh \textrm{ for some } h \in H
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -711,26 +690,26 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--70
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 71.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 72.
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
 [3]
-./Symmetries_Fields_Particles.tex:105: Undefined control sequence.
-l.105 \textbf{Semi-Direct Product}: Take $H \sub
+./Symmetries_Fields_Particles.tex:106: Undefined control sequence.
+l.106 \textbf{Semi-Direct Product}: Take $H \sub
                                                  AutG$ s.t. for any $h\in H$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -739,12 +718,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (0.50842pt too wide) in paragraph at lines 102--107
+Overfull \hbox (0.50842pt too wide) in paragraph at lines 103--108
 \OT1/cmr/m/n/10 The set of all au-to-mopho-risms forms a group called AutG which in-cludes $\OML/cmm/m/it/10 G=\U/euf/m/n/10 Z\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 )$
  []
 
-./Symmetries_Fields_Particles.tex:152: Undefined control sequence.
-l.152 \subsubsubsection
+./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
+l.153 \subsubsubsection
                        {Examples}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -752,8 +731,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
-l.153 $ (\mathbb{R}^n, +) \bm
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
+l.154 $ (\mathbb{R}^n, +) \bm
                               x'' = \bm x + \bm x'$ is a smooth $f^n$ of $\b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -761,8 +740,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
-l.153 $ (\mathbb{R}^n, +) \bm x'' = \bm
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
+l.154 $ (\mathbb{R}^n, +) \bm x'' = \bm
                                         x + \bm x'$ is a smooth $f^n$ of $\b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -770,8 +749,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
-l.153 $ (\mathbb{R}^n, +) \bm x'' = \bm x + \bm
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
+l.154 $ (\mathbb{R}^n, +) \bm x'' = \bm x + \bm
                                                 x'$ is a smooth $f^n$ of $\b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -779,10 +758,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
 <recently read> \bm 
                     
-l.153 ...\bm x + \bm x'$ is a smooth $f^n$ of $\bm
+l.154 ...\bm x + \bm x'$ is a smooth $f^n$ of $\bm
                                                    x$, $\bm x'$ - the invers...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -790,10 +769,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
 <recently read> \bm 
                     
-l.153 ...bm x'$ is a smooth $f^n$ of $\bm x$, $\bm
+l.154 ...bm x'$ is a smooth $f^n$ of $\bm x$, $\bm
                                                    x'$ - the inverse $\bm x^...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -801,10 +780,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
 <recently read> \bm 
                     
-l.153 ...$ of $\bm x$, $\bm x'$ - the inverse $\bm
+l.154 ...$ of $\bm x$, $\bm x'$ - the inverse $\bm
                                                    x^{-1} = - \bm x$ is a sm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -812,8 +791,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
-l.153 ...\bm x'$ - the inverse $\bm x^{-1} = - \bm
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
+l.154 ...\bm x'$ - the inverse $\bm x^{-1} = - \bm
                                                    x$ is a smooth $f^n$ of $...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -821,10 +800,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
 <recently read> \bm 
                     
-l.153 ...{-1} = - \bm x$ is a smooth $f^n$ of $\bm
+l.154 ...{-1} = - \bm x$ is a smooth $f^n$ of $\bm
                                                    x$, $\bm x'$\\\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -832,10 +811,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:153: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:154: Undefined control sequence.
 <recently read> \bm 
                     
-l.153 ...\bm x$ is a smooth $f^n$ of $\bm x$, $\bm
+l.154 ...\bm x$ is a smooth $f^n$ of $\bm x$, $\bm
                                                    x'$\\\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -844,20 +823,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--156
+Underfull \hbox (badness 10000) in paragraph at lines 150--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--156
+Underfull \hbox (badness 10000) in paragraph at lines 150--157
 
  []
 
 [4]
-./Symmetries_Fields_Particles.tex:166: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:167: Undefined control sequence.
 <recently read> \bm 
                     
-l.166 ...that $M$ act on n-dimensional vector $\bm
+l.167 ...that $M$ act on n-dimensional vector $\bm
                                                    v$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -866,22 +845,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--167
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--167
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
 
-Overfull \hbox (14.5011pt too wide) in paragraph at lines 157--167
+Overfull \hbox (14.5011pt too wide) in paragraph at lines 158--168
 \OT1/cmr/m/n/10 The \OT1/cmr/bx/n/10 Gen-eral Lin-ear Group $\OML/cmm/m/it/10 GL\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n; F\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10 n[]\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 .
  []
 
-./Symmetries_Fields_Particles.tex:168: Undefined control sequence.
-l.168 \bm
+./Symmetries_Fields_Particles.tex:169: Undefined control sequence.
+l.169 \bm
           v \rightarrow \bm v' = M\bm v
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -889,8 +868,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:168: Undefined control sequence.
-l.168 \bm v \rightarrow \bm
+./Symmetries_Fields_Particles.tex:169: Undefined control sequence.
+l.169 \bm v \rightarrow \bm
                             v' = M\bm v
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -898,8 +877,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:168: Undefined control sequence.
-l.168 \bm v \rightarrow \bm v' = M\bm
+./Symmetries_Fields_Particles.tex:169: Undefined control sequence.
+l.169 \bm v \rightarrow \bm v' = M\bm
                                       v
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -907,16 +886,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:171: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:172: Missing $ inserted.
 <inserted text> 
                 $
-l.171 ...ear group $SL(n, \mathbb{R})$ = {M : \det
+l.172 ...ear group $SL(n, \mathbb{R})$ = {M : \det
                                                    M = 1}$ gives $dim SL(n, ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:171: Extra }, or forgotten $.
-l.171 ...up $SL(n, \mathbb{R})$ = {M : \det M = 1}
+./Symmetries_Fields_Particles.tex:172: Extra }, or forgotten $.
+l.172 ...up $SL(n, \mathbb{R})$ = {M : \det M = 1}
                                                   $ gives $dim SL(n, \mathbb...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -925,12 +904,12 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 \bm
           v_1^T \bm v_2 \rightarrow^{O(n)} \bm v_1'^T \bm v_2' = \bm v_1^TM^...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -938,8 +917,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 \bm v_1^T \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 \bm v_1^T \bm
                     v_2 \rightarrow^{O(n)} \bm v_1'^T \bm v_2' = \bm v_1^TM^...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -947,8 +926,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 \bm v_1^T \bm v_2 \rightarrow^{O(n)} \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 \bm v_1^T \bm v_2 \rightarrow^{O(n)} \bm
                                                v_1'^T \bm v_2' = \bm v_1^TM^...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -956,8 +935,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 ...\bm v_2 \rightarrow^{O(n)} \bm v_1'^T \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 ...\bm v_2 \rightarrow^{O(n)} \bm v_1'^T \bm
                                                    v_2' = \bm v_1^TM^T M\bm ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -965,8 +944,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 ...ghtarrow^{O(n)} \bm v_1'^T \bm v_2' = \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 ...ghtarrow^{O(n)} \bm v_1'^T \bm v_2' = \bm
                                                    v_1^TM^T M\bm v_2 = \bm v...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -974,8 +953,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 ...} \bm v_1'^T \bm v_2' = \bm v_1^TM^T M\bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 ...} \bm v_1'^T \bm v_2' = \bm v_1^TM^T M\bm
                                                    v_2 = \bm v_1^T \bm v_2
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -983,8 +962,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 ...^T \bm v_2' = \bm v_1^TM^T M\bm v_2 = \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 ...^T \bm v_2' = \bm v_1^TM^T M\bm v_2 = \bm
                                                    v_1^T \bm v_2
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -992,8 +971,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:174: Undefined control sequence.
-l.174 ...' = \bm v_1^TM^T M\bm v_2 = \bm v_1^T \bm
+./Symmetries_Fields_Particles.tex:175: Undefined control sequence.
+l.175 ...' = \bm v_1^TM^T M\bm v_2 = \bm v_1^T \bm
                                                    v_2
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1001,25 +980,25 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 178.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 179.
 (c:/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
 
-./Symmetries_Fields_Particles.tex:178: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:179: Missing $ inserted.
 <inserted text> 
                 $
-l.178 ...in notes as how to write\}$ gives $dim S_
+l.179 ...in notes as how to write\}$ gives $dim S_
                                                   p(2n, \mathbb{R}) = n(2n+1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:178: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:179: Undefined control sequence.
 <recently read> \bm 
                     
-l.178 ...b{R}) = n(2n+1)$. Antisymmetric form $\bm
+l.179 ...b{R}) = n(2n+1)$. Antisymmetric form $\bm
                                                    v_1^T J \bm v_2 = -  \bm ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1027,8 +1006,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:178: Undefined control sequence.
-l.178 ...+1)$. Antisymmetric form $\bm v_1^T J \bm
+./Symmetries_Fields_Particles.tex:179: Undefined control sequence.
+l.179 ...+1)$. Antisymmetric form $\bm v_1^T J \bm
                                                    v_2 = -  \bm v_2^T J \bm ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1036,8 +1015,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:178: Undefined control sequence.
-l.178 ...metric form $\bm v_1^T J \bm v_2 = -  \bm
+./Symmetries_Fields_Particles.tex:179: Undefined control sequence.
+l.179 ...metric form $\bm v_1^T J \bm v_2 = -  \bm
                                                    v_2^T J \bm v_1$ is invar...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1045,8 +1024,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:178: Undefined control sequence.
-l.178 ...$\bm v_1^T J \bm v_2 = -  \bm v_2^T J \bm
+./Symmetries_Fields_Particles.tex:179: Undefined control sequence.
+l.179 ...$\bm v_1^T J \bm v_2 = -  \bm v_2^T J \bm
                                                    v_1$ is invariant.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1055,20 +1034,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--179
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--179
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
 
  []
 
 [5]
-./Symmetries_Fields_Particles.tex:180: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:181: Undefined control sequence.
 <recently read> \bm 
                     
-l.180 ...: U^{\dagger}U = \}$. This preserves $\bm
+l.181 ...: U^{\dagger}U = \}$. This preserves $\bm
                                                    v_1^{\dagger} \bm v_2$ wh...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1076,8 +1055,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:180: Undefined control sequence.
-l.180 ...}$. This preserves $\bm v_1^{\dagger} \bm
+./Symmetries_Fields_Particles.tex:181: Undefined control sequence.
+l.181 ...}$. This preserves $\bm v_1^{\dagger} \bm
                                                    v_2$ which is important i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1086,19 +1065,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
-./Symmetries_Fields_Particles.tex:184: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:185: Undefined control sequence.
 <recently read> \bm 
                     
-l.184 ...M^T\eta M = \eta$. Invariant form is $\bm
+l.185 ...M^T\eta M = \eta$. Invariant form is $\bm
                                                    v_1^T \eta \bm v_2$ dim O...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1106,8 +1085,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:184: Undefined control sequence.
-l.184 ...a$. Invariant form is $\bm v_1^T \eta \bm
+./Symmetries_Fields_Particles.tex:185: Undefined control sequence.
+l.185 ...a$. Invariant form is $\bm v_1^T \eta \bm
                                                    v_2$ dim O(n,m) = dim O(n...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1115,10 +1094,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:191: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:192: Undefined control sequence.
 <recently read> \texbf 
                        
-l.191 \texbf
+l.192 \texbf
             {Closure}: $g(z)=g(x)g(y)$  where $z^r$ is some smooth $f^n$ of ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1127,12 +1106,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--193
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
 
  []
 
-./Symmetries_Fields_Particles.tex:196: Undefined control sequence.
-l.196 define $g(\bar x) = g(x)^{-1} \imples
+./Symmetries_Fields_Particles.tex:197: Undefined control sequence.
+l.197 define $g(\bar x) = g(x)^{-1} \imples
                                             \phi^r(\bar x, x) = \phi^r(x, \b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1141,70 +1120,70 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--199
+Underfull \hbox (badness 10000) in paragraph at lines 196--200
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
  []
 
-./Symmetries_Fields_Particles.tex:210: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:211: Missing $ inserted.
 <inserted text> 
                 $
-l.210 \subsubsection
+l.211 \subsubsection
                     {Examples}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--229
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
-./Symmetries_Fields_Particles.tex:231: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:232: Missing $ inserted.
 <inserted text> 
                 $
-l.231 ii) $[\alpha
+l.232 ii) $[\alpha
                    X + \beta Y, Z] = \alpha[X,Z] + \beta [Y,Z]$\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--235
+Underfull \hbox (badness 10000) in paragraph at lines 230--236
 
  []
 
 [7]
-./Symmetries_Fields_Particles.tex:241: Display math should end with $$.
+./Symmetries_Fields_Particles.tex:242: Display math should end with $$.
 <to be read again> 
                     
-l.241 dy^r = \theta^a\mu_a^r(z)$
+l.242 dy^r = \theta^a\mu_a^r(z)$
                                 
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Symmetries_Fields_Particles.tex:244: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:245: Missing $ inserted.
 <inserted text> 
                 $
-l.244 \theta
+l.245 \theta
             ^a = dy^s \lambda_s^a(y)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:246: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:247: Missing $ inserted.
 <inserted text> 
                 $
-l.246 where $\lambda
+l.247 where $\lambda
                     (y)$ is the matrix inverse of $\mu(y)$. i.e $ \lambda^a_...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:258: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:259: Undefined control sequence.
 <argument> \partiall 
                      y^t
-l.258 ...mu_b^t (y) \frac{\partial}{\partiall y^t}
+l.259 ...mu_b^t (y) \frac{\partial}{\partiall y^t}
                                                    \frac{\partial z^r}{\part...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1213,33 +1192,33 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [8]
-Overfull \hbox (12.40459pt too wide) in paragraph at lines 313--317
+Overfull \hbox (12.40459pt too wide) in paragraph at lines 314--318
 \OT1/cmr/m/n/10 which is the same as in the L(SU(2)) so the Lie Al-ge-bras are iso-mor-phic ($\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 SU\OT1/cmr/m/n/10 (2) \OMS/cmsy/m/n/10 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
 [9]
-Overfull \hbox (19.03943pt too wide) detected at line 358
+Overfull \hbox (19.03943pt too wide) detected at line 359
 \OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 = [] [] = [] [](\OML/cmm/m/it/10 n; k\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 s[][] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 s[][][]
  []
 
 [10]
-./Symmetries_Fields_Particles.tex:377: Missing $ inserted.
+./Symmetries_Fields_Particles.tex:378: Missing $ inserted.
 <inserted text> 
                 $
-l.377 ... = gx \implies $h'x' = x'$ for $h' = ghg^
+l.378 ... = gx \implies $h'x' = x'$ for $h' = ghg^
                                                   {-1}$.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Symmetries_Fields_Particles.tex:387: You can't use `macro parameter character #' in horizontal mode.
+./Symmetries_Fields_Particles.tex:388: You can't use `macro parameter character #' in horizontal mode.
 <recently read> ##
                   
-l.387 #
+l.388 #
        Note that there exists a direct relation between representations of G...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1247,37 +1226,37 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--388
+Underfull \hbox (badness 10000) in paragraph at lines 383--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--388
+Underfull \hbox (badness 10000) in paragraph at lines 383--389
 
  []
 
 [11]
-Overfull \hbox (146.40224pt too wide) detected at line 402
+Overfull \hbox (146.40224pt too wide) detected at line 403
 \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X[]; X[]\OT1/cmr/m/n/10 ] + \OML/cmm/m/it/10 :::\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ))\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 I \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 t[]d\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 X[]; X[]\OT1/cmr/m/n/10 ]) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 )
  []
 
 
-Overfull \hbox (23.12881pt too wide) in paragraph at lines 412--415
+Overfull \hbox (23.12881pt too wide) in paragraph at lines 413--416
 \OT1/cmr/m/n/10 so by com-par-ing the or-der $\OML/cmm/m/it/10 t[]$ \OT1/cmr/m/n/10 terms be-tween lines we have $\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 X[]; X[]\OT1/cmr/m/n/10 ]) = [\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 )]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--415
+Underfull \hbox (badness 10000) in paragraph at lines 413--416
 
  []
 
 
-Overfull \hbox (77.6789pt too wide) detected at line 417
+Overfull \hbox (77.6789pt too wide) detected at line 418
 \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]g[]\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 X[] \OT1/cmr/m/n/10 + [][\OML/cmm/m/it/10 X[]; X[]\OT1/cmr/m/n/10 ] + \OML/cmm/m/it/10 :::\OT1/cmr/m/n/10 )) = [](\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) + []\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 X[]; X[]\OT1/cmr/m/n/10 ]) + \OML/cmm/m/it/10 :::\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 e[]e[]
  []
 
-./Symmetries_Fields_Particles.tex:421: Undefined control sequence.
-l.421 $d(X) = O_{n\timesn
+./Symmetries_Fields_Particles.tex:422: Undefined control sequence.
+l.422 $d(X) = O_{n\timesn
                          } \implies D(g) = I_{n\times n} \forall g \in G$ th...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1286,34 +1265,34 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--424
+Underfull \hbox (badness 10000) in paragraph at lines 420--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--429
+Underfull \hbox (badness 10000) in paragraph at lines 427--430
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
 
  []
 
 
-Overfull \hbox (125.13364pt too wide) detected at line 442
+Overfull \hbox (125.13364pt too wide) detected at line 443
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 d[]; d[]\OT1/cmr/m/n/10 ](\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 ad[]ad[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ad[]ad[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) = [\OML/cmm/m/it/10 X; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Y; Z\OT1/cmr/m/n/10 ]] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Y; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X; Z\OT1/cmr/m/n/10 ] = [[\OML/cmm/m/it/10 X; Y\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Z\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 ad[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 d[]\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 X; Y\OT1/cmr/m/n/10 ])(\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--453
+Underfull \hbox (badness 10000) in paragraph at lines 451--454
 
  []
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
 <recently read> \bm 
                     
-l.458 ...take a theory of three scalar fields $\bm
+l.459 ...take a theory of three scalar fields $\bm
                                                    \phi$ (three column vecto...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1321,10 +1300,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
 <recently read> \bm 
                     
-l.458 ...4 x \mathfrak{L}$ is invariant under $\bm
+l.459 ...4 x \mathfrak{L}$ is invariant under $\bm
                                                    \phi \rightarrow D(g) \bm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1332,8 +1311,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...iant under $\bm \phi \rightarrow D(g) \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...iant under $\bm \phi \rightarrow D(g) \bm
                                                    \phi$. This implies that ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1341,10 +1320,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
 <recently read> \bm 
                     
-l.458 ...ow D(g) \bm \phi$. This implies that $\bm
+l.459 ...ow D(g) \bm \phi$. This implies that $\bm
                                                    \phi^T \rightarrow \bm \p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1352,8 +1331,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ... implies that $\bm \phi^T \rightarrow \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ... implies that $\bm \phi^T \rightarrow \bm
                                                    \phi^T D(g)^T = \bm \phi^...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1361,8 +1340,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...phi^T \rightarrow \bm \phi^T D(g)^T = \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...phi^T \rightarrow \bm \phi^T D(g)^T = \bm
                                                    \phi^T D(g^{-1})$. Note t...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1370,10 +1349,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
 <recently read> \bm 
                     
-l.458 ...T = \bm \phi^T D(g^{-1})$. Note that $\bm
+l.459 ...T = \bm \phi^T D(g^{-1})$. Note that $\bm
                                                    \phi^T\bm \phi \rightarro...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1381,8 +1360,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...hi^T D(g^{-1})$. Note that $\bm \phi^T\bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...hi^T D(g^{-1})$. Note that $\bm \phi^T\bm
                                                    \phi \rightarrow^{SO(3)} ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1390,8 +1369,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...bm \phi^T\bm \phi \rightarrow^{SO(3)} \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...bm \phi^T\bm \phi \rightarrow^{SO(3)} \bm
                                                    \phi6T D(g)^{-1}D(g)\bm \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1399,8 +1378,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...arrow^{SO(3)} \bm \phi6T D(g)^{-1}D(g)\bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...arrow^{SO(3)} \bm \phi6T D(g)^{-1}D(g)\bm
                                                    \phi = \bm \phi^T \bm \ph...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1408,8 +1387,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...)} \bm \phi6T D(g)^{-1}D(g)\bm \phi = \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...)} \bm \phi6T D(g)^{-1}D(g)\bm \phi = \bm
                                                    \phi^T \bm \phi$ so $\bm ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1417,8 +1396,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...6T D(g)^{-1}D(g)\bm \phi = \bm \phi^T \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...6T D(g)^{-1}D(g)\bm \phi = \bm \phi^T \bm
                                                    \phi$ so $\bm \phi^T \bm ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1426,10 +1405,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
 <recently read> \bm 
                     
-l.458 ...g)\bm \phi = \bm \phi^T \bm \phi$ so $\bm
+l.459 ...g)\bm \phi = \bm \phi^T \bm \phi$ so $\bm
                                                    \phi^T \bm \phi$ is invar...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1437,8 +1416,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:458: Undefined control sequence.
-l.458 ...= \bm \phi^T \bm \phi$ so $\bm \phi^T \bm
+./Symmetries_Fields_Particles.tex:459: Undefined control sequence.
+l.459 ...= \bm \phi^T \bm \phi$ so $\bm \phi^T \bm
                                                    \phi$ is invariant under ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1447,12 +1426,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--459
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
 
  []
 
-./Symmetries_Fields_Particles.tex:460: Undefined control sequence.
-l.460 ...hfrak{L} = \frac{1}{2}(\partial_{\mu} \bm
+./Symmetries_Fields_Particles.tex:461: Undefined control sequence.
+l.461 ...hfrak{L} = \frac{1}{2}(\partial_{\mu} \bm
                                                    \phi^T) (\partial^{\mu} \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1460,8 +1439,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:460: Undefined control sequence.
-l.460 ...ial_{\mu} \bm \phi^T) (\partial^{\mu} \bm
+./Symmetries_Fields_Particles.tex:461: Undefined control sequence.
+l.461 ...ial_{\mu} \bm \phi^T) (\partial^{\mu} \bm
                                                    \phi) - \frac{m^2}{2} \bm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1469,8 +1448,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:460: Undefined control sequence.
-l.460 ...rtial^{\mu} \bm \phi) - \frac{m^2}{2} \bm
+./Symmetries_Fields_Particles.tex:461: Undefined control sequence.
+l.461 ...rtial^{\mu} \bm \phi) - \frac{m^2}{2} \bm
                                                    \phi^T \bm \phi - \lambda...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1478,8 +1457,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:460: Undefined control sequence.
-l.460 ... \bm \phi) - \frac{m^2}{2} \bm \phi^T \bm
+./Symmetries_Fields_Particles.tex:461: Undefined control sequence.
+l.461 ... \bm \phi) - \frac{m^2}{2} \bm \phi^T \bm
                                                    \phi - \lambda (\bm \phi^...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1487,8 +1466,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:460: Undefined control sequence.
-l.460 ...^2}{2} \bm \phi^T \bm \phi - \lambda (\bm
+./Symmetries_Fields_Particles.tex:461: Undefined control sequence.
+l.461 ...^2}{2} \bm \phi^T \bm \phi - \lambda (\bm
                                                    \phi^T \bm \phi)^2
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1496,8 +1475,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:460: Undefined control sequence.
-l.460 ...\phi^T \bm \phi - \lambda (\bm \phi^T \bm
+./Symmetries_Fields_Particles.tex:461: Undefined control sequence.
+l.461 ...\phi^T \bm \phi - \lambda (\bm \phi^T \bm
                                                    \phi)^2
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1506,10 +1485,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [13]
-./Symmetries_Fields_Particles.tex:462: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:463: Undefined control sequence.
 <recently read> \bm 
                     
-l.462 As g doesn't depend on $\bm
+l.463 As g doesn't depend on $\bm
                                   x$ or $t$ it's a global symmetry, if it di...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1517,10 +1496,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:463: Undefined control sequence.
+./Symmetries_Fields_Particles.tex:464: Undefined control sequence.
 <recently read> \bm 
                     
-l.463 If we change $\bm
+l.464 If we change $\bm
                         \phi = (\phi_1, ..., \phi_n)$(pretend this is a colu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1528,8 +1507,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Symmetries_Fields_Particles.tex:463: Undefined control sequence.
-l.463 ...hi_n)$(pretend this is a column) with \bm
+./Symmetries_Fields_Particles.tex:464: Undefined control sequence.
+l.464 ...hi_n)$(pretend this is a column) with \bm
                                                    n being a valid represent...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1538,25 +1517,25 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--464
+Underfull \hbox (badness 10000) in paragraph at lines 462--465
 
  []
 
 
-./Symmetries_Fields_Particles.tex:467: LaTeX Error: Environment cmatrix undefined.
+./Symmetries_Fields_Particles.tex:468: LaTeX Error: Environment cmatrix undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.467 ...t sum}: $d_1 \oplus d_2 = \begin{cmatrix}
+l.468 ...t sum}: $d_1 \oplus d_2 = \begin{cmatrix}
                                                    d_1(X) & |&o \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./Symmetries_Fields_Particles.tex:467: Misplaced alignment tab character &.
-l.467 ...d_1 \oplus d_2 = \begin{cmatrix} d_1(X) &
+./Symmetries_Fields_Particles.tex:468: Misplaced alignment tab character &.
+l.468 ...d_1 \oplus d_2 = \begin{cmatrix} d_1(X) &
                                                    |&o \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1565,8 +1544,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Symmetries_Fields_Particles.tex:467: Misplaced alignment tab character &.
-l.467 ... \oplus d_2 = \begin{cmatrix} d_1(X) & |&
+./Symmetries_Fields_Particles.tex:468: Misplaced alignment tab character &.
+l.468 ... \oplus d_2 = \begin{cmatrix} d_1(X) & |&
                                                   o \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1575,20 +1554,20 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Symmetries_Fields_Particles.tex:468: Missing { inserted.
+./Symmetries_Fields_Particles.tex:469: Missing { inserted.
 <to be read again> 
                    &
-l.468 _ &
+l.469 _ &
           & _\\
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
-./Symmetries_Fields_Particles.tex:468: Misplaced alignment tab character &.
+./Symmetries_Fields_Particles.tex:469: Misplaced alignment tab character &.
 <recently read> &
                  
-l.468 _ &
+l.469 _ &
           & _\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1597,8 +1576,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Symmetries_Fields_Particles.tex:468: Misplaced alignment tab character &.
-l.468 _ & &
+./Symmetries_Fields_Particles.tex:469: Misplaced alignment tab character &.
+l.469 _ & &
             _\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1607,18 +1586,18 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Symmetries_Fields_Particles.tex:468: Missing { inserted.
+./Symmetries_Fields_Particles.tex:469: Missing { inserted.
 <to be read again> 
                    \let 
-l.468 _ & & _\\
+l.469 _ & & _\\
                
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
-./Symmetries_Fields_Particles.tex:469: Misplaced alignment tab character &.
-l.469 0 &
+./Symmetries_Fields_Particles.tex:470: Misplaced alignment tab character &.
+l.470 0 &
           | & d_2(X)\end{cmatrix} \forall X \in L(G)$
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1627,8 +1606,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Symmetries_Fields_Particles.tex:469: Misplaced alignment tab character &.
-l.469 0 & | &
+./Symmetries_Fields_Particles.tex:470: Misplaced alignment tab character &.
+l.470 0 & | &
               d_2(X)\end{cmatrix} \forall X \in L(G)$
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1638,94 +1617,258 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./Symmetries_Fields_Particles.tex:469: LaTeX Error: \begin{document} ended by \end{cmatrix}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.469 0 & | & d_2(X)\end{cmatrix}
-                                  \forall X \in L(G)$
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Symmetries_Fields_Particles.tex:469: Missing } inserted.
-<inserted text> 
-                }
-l.469 0 & | & d_2(X)\end{cmatrix}
-                                  \forall X \in L(G)$
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Symmetries_Fields_Particles.tex:469: Missing } inserted.
-<inserted text> 
-                }
-l.469 0 & | & d_2(X)\end{cmatrix}
-                                  \forall X \in L(G)$
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./Symmetries_Fields_Particles.tex:470: LaTeX Error: Environment cmatrix undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.470 ...pace is $V_1 \oplus V_2 = \begin{cmatrix}
-                                                   V_1 \\ V_2 \end{cmatrix}$...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 ./Symmetries_Fields_Particles.tex:470: LaTeX Error: \begin{document} ended by \end{cmatrix}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.470 ... \begin{cmatrix} V_1 \\ V_2 \end{cmatrix}
+l.470 0 & | & d_2(X)\end{cmatrix}
+                                  \forall X \in L(G)$
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Symmetries_Fields_Particles.tex:470: Missing } inserted.
+<inserted text> 
+                }
+l.470 0 & | & d_2(X)\end{cmatrix}
+                                  \forall X \in L(G)$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Symmetries_Fields_Particles.tex:470: Missing } inserted.
+<inserted text> 
+                }
+l.470 0 & | & d_2(X)\end{cmatrix}
+                                  \forall X \in L(G)$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./Symmetries_Fields_Particles.tex:471: LaTeX Error: Environment cmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 ...pace is $V_1 \oplus V_2 = \begin{cmatrix}
+                                                   V_1 \\ V_2 \end{cmatrix}$...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./Symmetries_Fields_Particles.tex:471: LaTeX Error: \begin{document} ended by \end{cmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 ... \begin{cmatrix} V_1 \\ V_2 \end{cmatrix}
                                                   $ so dim ($d_1 \oplus d_2$...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--472
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--472
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
 
  []
 
-[14] (./Symmetries_Fields_Particles.aux) )
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
+
+ []
+
+./Symmetries_Fields_Particles.tex:476: Undefined control sequence.
+l.476 V = U_1 \oplus U_2 \oplus ... \plus
+                                          U_k s.t. D(G) U_i = U_i
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[14]
+./Symmetries_Fields_Particles.tex:487: Missing } inserted.
+<inserted text> 
+                }
+l.487 ...ith associated $d_n$ of $L_{mathbb{R}(G)$
+                                                   such that $D_n(\hat U) = ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Symmetries_Fields_Particles.tex:487: Extra }, or forgotten $.
+l.487 ...hat X)) < GL(\mathbb{C},dim \mathrm{H}_n}
+                                                  ) $. If the transformation...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--488
+
+ []
+
+
+Overfull \hbox (29.62712pt too wide) in paragraph at lines 483--488
+\OT1/cmr/m/n/10 If we have a max-i-mal set of lin-early in-de-pen-dent "con-served quan-ti-ties" $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 I[]s:t:\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ] =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--493
+
+ []
+
+
+Overfull \hbox (8.09308pt too wide) in paragraph at lines 493--493
+[]\OT1/cmr/bx/n/12 Second way of com-bin-ing rep-re-sen-ta-tions - Ten-sor prod-
+ []
+
+[15]
+./Symmetries_Fields_Particles.tex:504: Undefined control sequence.
+l.504 ...x objects). As an example: in SO(3) $(\bm
+                                                   3 \otimes \bm 3) = T_{ij}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Symmetries_Fields_Particles.tex:504: Undefined control sequence.
+l.504 ... an example: in SO(3) $(\bm 3 \otimes \bm
+                                                   3) = T_{ij} $ where $i,j ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--505
+
+ []
+
+./Symmetries_Fields_Particles.tex:512: Undefined control sequence.
+<recently read> \bm 
+                    
+l.512 ...he tensor product and is the singlet $\bm
+                                                   1$. Let $\phi = \frac{1}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (57.66368pt too wide) detected at line 515
+\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^O[]T[] \OMS/cmsy/m/n/10 ![] \OML/cmm/m/it/10 R[]R[]R[]R[]R[]^^O[]T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^N[]^^N[]T[]R[]^^O[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[]^^O[]T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[]v[]
+ []
+
+
+Overfull \hbox (95.27866pt too wide) detected at line 519
+\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ![] \OML/cmm/m/it/10 R[]R[]T[]\OT1/cmr/m/n/10 ([]) = \OML/cmm/m/it/10 R[]R[]T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 T[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--522
+
+ []
+
+[16]
+./Symmetries_Fields_Particles.tex:526: Undefined control sequence.
+l.526 \bm
+          3 \otimes \bm 3 = \bm 5 \oplus \bm 3 \oplus \bm 1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Symmetries_Fields_Particles.tex:526: Undefined control sequence.
+l.526 \bm 3 \otimes \bm
+                        3 = \bm 5 \oplus \bm 3 \oplus \bm 1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Symmetries_Fields_Particles.tex:526: Undefined control sequence.
+l.526 \bm 3 \otimes \bm 3 = \bm
+                                5 \oplus \bm 3 \oplus \bm 1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Symmetries_Fields_Particles.tex:526: Undefined control sequence.
+l.526 \bm 3 \otimes \bm 3 = \bm 5 \oplus \bm
+                                             3 \oplus \bm 1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Symmetries_Fields_Particles.tex:526: Undefined control sequence.
+l.526 ...mes \bm 3 = \bm 5 \oplus \bm 3 \oplus \bm
+                                                   1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Symmetries_Fields_Particles.tex:528: Missing $ inserted.
+<inserted text> 
+                $
+l.528 ...ild an invariant Lagrangian e.g. using S_
+                                                  {ij}$ all you have to do i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[17] (./Symmetries_Fields_Particles.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 171 ({)
+### simple group (level 1) entered at line 172 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16325 strings out of 478599
- 352075 string characters out of 5858101
- 663005 words of memory out of 5000000
- 33892 multiletter control sequences out of 15000+600000
+ 15901 strings out of 478599
+ 344463 string characters out of 5858101
+ 655089 words of memory out of 5000000
+ 33492 multiletter control sequences out of 15000+600000
  407355 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,11n,122p,876b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Symmetries_Fields_Particles.pdf (14 pages, 222159 bytes).
+Output written on Symmetries_Fields_Particles.pdf (17 pages, 236249 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

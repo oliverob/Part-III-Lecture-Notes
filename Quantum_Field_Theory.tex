@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper, twoside, titlepage]{article}
 \usepackage{amsfonts}
 \usepackage{bm}
+\usepackage{braket}
 \begin{document}
 \title{Quantum Field Theory}
 \maketitle
@@ -660,8 +661,162 @@ Can cure UV diveregence by introducing a UV cutoff so short distacne rather than
 $$
 \epsilon_0^{(\lambda)} = \int_{|\bm p|<\lambda} \frac{d^3 p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p} = \frac{4 \pi}{2(2\pi)^3} \int^{\lambda}_{0} |\bm p|^2 \sqrt{|\bm p|^2 + m^2} d |\bm p| = \frac{1}{16\pi^2} \lambda^4(1+O(\frac{m^2}{\lambda^2}))
 $$
-Alternatively put theory on a space time lattice with lattice spacing choosen so $a << m^{-1}$, find $\epsilon^{(a)} \sim \frac{1}$.\\\\
+Alternatively put theory on a space time lattice with lattice spacing choosen so $a << m^{-1}$, find $\epsilon^{(a)} \sim \frac{1}{a^4}$.\\\\
 One viewpoint is called effective field theory:
 You need to define QFT as a continuum limit (a limit in which the cutoff goes to infinity/lattice spacing goes to zero). In order to define this limit you need to identify the quantities that hold fixed in that limit. Theory need to be valid up to some maximum scale.\\\\
-\textbf{Specific to vacuum energy}: This is a very special type of divergence. Just and additive constant we add to the energy. Consider a different quantisation with ordering chosen so it is normal ordering of all products of field operators ($\hat \phi$) and momentum ($\hat \pi$) operators.
+\textbf{Specific to vacuum energy}: This is a very special type of divergence. Just and additive constant we add to the energy. Can remove this additive constant by considering a different quantisation with ordering chosen so it is normal ordering of all products of field operators ($\hat \phi$) and momentum ($\hat \pi$) operators. 
+\section{Lecture 9}
+Normal ordering symbol: $:X:$ place all annihilation operators to the right. $:\hat a \hat a^{\daggger}^2 \hat a \hat a^{\dagger}: = \hat a^{\dagger}^3 \hat a^2$
+$$
+:\hat H: = \frac{1}{2}  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} :(\hat a_{\bm p}\hat a^{\dagger}_{\bm p} + \hat a^{\dagger}_{\bm p} \hat a_{\bm p}): =   \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} \hat a^{\dagger}_{\bm p} \hat a_{\bm p}
+$$
+This implies $(\epsilon_0)_{\text{Normal}} = 0$ as we can see that as $\hat a\ket{0} = 0$ so this will annihilate the ground state.\\\\
+We care about the ground state energy as gravity cares about energy and says that energy gravitates. The energy momentum tensor appears on the RHS of Einstiens equations seen below:
+$$
+R_{\mu \nu} - \frac{1}{2}Rg_{\mu \nu} = 8 \pi G T_{\mu \nu}
+$$
+We might reasonably ask that if we have some QFT coupled to gravity then:
+$$
+\bra{0} \hat T_{\mu \nu} \ket{0} = \epsilon_0 g_{\mu \nu}
+$$
+This leads to problems as if you allow the expectation to the RHS of Einsteins equations, then it contributes a cosomological constant to Einstiens equations. Measurement gave a value to the cosmological constant of $\lambda \sim (10^{-3} eV)^2$ which is very small compared to the energy scales of HEP. We might consider QFT with a UV cuttoff $\lambda$ of $\lambda \sim M_{pl} = \sqrt{\frac{\hbar c}{G}}$ then we would get $\epsilon_0 \sim \lambda^4$ which would give $\lambda \sim (10^{28} eV)^2$. So either QFT does not predict the vacuum energy or it does but it is many many orders of magnitude off from the observation.\\
+\textbf{Casmir Effect}:
+If we put two metal plates a distance $d$ apart, we can repeat the calcualtion of the energy density in the presence of these plates. Now we need to take into account the boundary conditions of the field that the electric field has to vanish on the plate. So in this context we get $\epsilon_0 = \epsilon_0(d)$ which therefore exerts a force on these plates and can correctly predict the force on these plates (so vacuum energy is a real thing that can be measured). \\\\
+\subsection{Excited states}
+Define:
+$$
+\ket{\bm p} = \hat a^{\dagger} \ket{0} \forall \bm p \in \mathbb{R}^3
+$$
+\textbf{Energy}
+$$
+\hat H - E_0 =  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} \hat a^{\dagger}_{\bm p} \hat a_{\bm p}
+$$
+$$
+(\hat H - E_0) \ket{\bm p} = (\hat H- E_0) \hat a^{\dagger} \ket{0} = \hat a^{\dagger} (\hat H- E_0) \ket{0}  + [(\hat H- E_0),\hat a^{\dagger}] \ket{0}
+$$
+$$
+[(\hat H- E_0),\hat a^{\dagger}] =  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} [ \hat a^{\dagger}_{\bm p} \hat a_{\bm p}, \hat a^{\dagger}_{\bm q}] =  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} \hat a^{\dagger}_{\bm p} [ \hat a_{\bm p}, \hat a^{\dagger}_{\bm q}] =  \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} \hat a^{\dagger}_{\bm p} (2 \pi)^3 \delta^{(3)}(\bm q - \bm p)
+$$
+$$
+(\hat H - E_0) \ket{\bm p}  = \omega_{\bm p} \hat a^{\dagger}_{\bm p} \ket{0} = \omega_{\bm p} \ket{ \bm p}
+$$
+$E_1 = \omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$\\
+Consider classical momnetum of the field: $p^i = \int d^3x T^{0i}$ and $T^{\mu \nu} = \partial^{\mu}} \phi \partial^{\nu} \phi - \eta^{\mu \nu} \mathfrak{L}$. This is converted into a quantum operator on ES2 to give result:
+$$
+\hat{\bm p} = \int \frac{d^3 p}{(2\pi)^3} \bm p \hat{a^{\dagger}_{\bm p}} \hat a_{\bm p}
+$$
+$$
+\hat{\bm p} \ket{\bm p} = \bm p \ket{\bm p}
+$$
+Therefore, the state $\ket{\bm p}$ are corresponds to a relativistic particle of mass m, spin 0, momentum $\bm p$ and energy $E_{\bm p} = \sqrt{|\bm p|^2 + m^2}$. Do the same process of this to angular momentum, and you get that there must be $\bm J \ket{0} = 0$ for $\ket{0}$ of a particle in its rest frame which confirms it is a spin 0 particle.
+\subsection{Multiparticle states}
+We can construct states correpsonding to any number ofthese particles by simply acting by a lot of operators:
+$$
+\ket{\bm p_1, \bm p_2,... , \bm p_n} = \hat a^{\dagger}_{\bm p_1} \hat a^{\dagger}_{\bm p_2} ... \hat a^{\dagger}_{\bm p_n}  \ket{0}
+$$
+This gives us energy $E- E_0 = \sum_{a=1}^n E_{\bm p_a}$ and momentum $\bm p = \sum_{a=1}^n \bm p_a$. These particles must be identical particles as:
+$$
+\ket{\bm p_1, \bm p_2} = \hat a^{\dagger}_{\bm p_1} \hat a^{\dagger}_{\bm p_2}  \ket{0} = \hat a^{\dagger}_{\bm p_2} \hat a^{\dagger}_{\bm p_1} \ket{0} = \ket{\bm p_2, \bm p_1} 
+$$
+\section{Lecture 10}
+Introduce particle number operator:
+$$
+\hat N = \int \frac{d^3p}{(2 \pi)^3} \hat a^{\dagger}_{\bm p} \hat a_{\bm p}
+$$
+$$
+\hat N \ket{\bm p_1, \bm p_2,... , \bm p_n} = n \ket{\bm p_1, \bm p_2,... , \bm p_n} 
+$$
+for free field $\hat H$ is conserved quanitity: $[\hat H, \hat N] = 0$. THis is not the case when we have interactions
+\subsection{Normalisation}
+We can choose without any loss of generality to take our vacuum state to have norm 1: $\bra{0}\ket{0} =1$ and
+$$
+\bra{p} \ket{q} = \bra{0} \hat a_{\bm p} \hat a^{\dagger}_{\bm p} \ket{0} = (2\pi)^3 \delta^{(3)}(\bm p - \bm q)
+$$
+We want to change this normalisation system to make it lorentz invariant (above is not lorentz covariant). Instead of considering directly the overlap of the states we will consider the completeness identity:
+$$
+\hat I = \int \frac{d^3p}{(2 \pi)^3} \bra{\bm p}\ket{\bm p}
+$$
+This will help us to renormalise the states to a lorentz invariant way as we need to change this measure by changing this completeness identity as the unit operator is by definition lorentz invariant. $d^3p$ is an integral over the spatial components so is not lorentz invariant, so we could try and reforumalte this as the below \textbf{relativistic integration measure}:
+$$
+\int d^4 p \delta (p_{\mu}p^{\mu} - m^2) \theta(P_0)
+$$
+First note the $\delta$- function and the $\theta$ function (picks out the positive root): impose the constraints 
+$$
+[^{\mu}p_{\mu} = m^2, p^0 > 0 \implies P_0 = + \sqrt{|\bm p|^2 + m^2} = E_{\bm p}
+$$
+$$
+\int d\mu_p = \int d^3 p \int^{\infty}_0 \frac{d(p_0)^2}{2 p_0} \delta (p_o^2 - |\bm p|^2 - m^2) = \int \frac{d^3 p}{2 E_{\bm p}
+$$
+Rewrite the completeness relation:
+$$
+\ket{\bm p^4} = \sqrt{2 E_{\bm p}} \ket{\bm p}
+$$
+$$
+\hat I = \int \frac{d^3p}{(2 \pi)^3} \frac{1}{2 E_{\bm p}} \bra{\bm p^4}\ket{\bm p^4} = \int \frac{d\mu_p}{(2 \pi)^3} \bra{\bm p^4}\ket{\bm p^4} $$
+For multiparticle states are renormalised to:
+$$
+\Pi_{a=1}^n (\sqrt{2 E_{\bm p_a}}) \times \ket{\bm p_1, \bm p_2,... , \bm p_n}
+$$
+\subsection{Complex Scalar Fields}
+The details are only change in very small places and we will now highlight these main places:
+$$
+ \mathfrack{L} = \frac{1}{2}\partial_{\mu}\phi^* \partial^{\mu} \phi - m^2 \psi^* \psi$$
+ can rewrite interms of real and imaginary parts and what you get is the sum of the lagrangian for two real scalar fields $\phi_1(x)$ and $\phi_2(x)$ where $\psi= \frac{\phi_1(x) + i\phi_2(x)}{\sqrt{2}}$. This makes manifest a global symmetry:
+ $$
+ \psi \rightarrow e^{i\alpha}\psi, \psi^* \rightarrow e^{-i\alpha}\psi^*
+ $$
+ This gives rise to a conserved current that you would not have if you just had one field and it is:
+ $$
+ j^{\mu} = i(\partial^{\mu}\psi^*) \psi - i \psi^* (\partial^{\mu} \psi)
+ $$
+ We can write down hamiltonian formulation:
+ $$
+ \pi = \frac{\mathfrak{L}}{\partial \dot \psi} = \dot \psi^*
+ $$
+ Try quantisation:
+ $$
+ \psi(\bm x, t) \rightarrow \hat \psi(\bm x,t)
+ $$
+ $$
+ \psi^*(\bm x, t) \rightarrow \hat \psi^{\dagger}(\bm x,t)
+ $$
+ $$
+ [\hat \psi(\bm x) , \hat \pi(\bm y)] = i \delta^{(3)}(\bm x - \bm y)
+ $$
+ $$
+ [\hat \psi^{\dagger}(\bm x) , \hat \pi^{\dagger}(\bm y)] = i \delta^{(3)}(\bm x - \bm y)
+ $$
+ Now do mode expansion:
+ $$
+ \hat \psi(\bm x) = \int \frac{dp^3}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} (\hat b_{\bm p} e^{i \bm p \cdot \bm x} + \bm c^{\dagger}_{\bm p} e^{-\bm p\cdot \bm x})
+ $$
+ get e.g.
+ $$
+ [\bm b_{\bm p}, \bm b^{\dagger}_{\bm q}] = (2\pi)^3 \delta^{(3)}(\bm p - \bm q)
+ $$
+ $$
+ \ket{\bm p, +} = \hat \bm c^{\dagger}_{\bm p}\ket{0}
+ $$
+ $$
+ \ket{\bm p, -} = \hat \bm b^{\dagger}_{\bm p}\ket{0}
+ $$
+
+ $$
+ :\hat H:  =   \int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} ( \hat b^{\dagger}_{\bm p} \hat b_{\bm p}+ \hat c^{\dagger}_{\bm p} \hat c_{\bm p}))
+ $$
+ So we have a $U(1)$ conserved charge by starting from the classical charge we can get:
+ $$
+ \hat Q = i\int d^3 x (\hat \pi \hat \psi - \hat \psi^{\dagger} \hat \pi^{\dagger}) =\int \frac{d^3 p}{(2 \pi)^3} \omega_{\bm p} ( \hat b^{\dagger}_{\bm p} \hat b_{\bm p}- \hat c^{\dagger}_{\bm p} \hat c_{\bm p}))
+ $$
+ To check this is conserved we have to check $[\hat Q, \hat H] =0$ which is easy as all the things commute. If we evaluate the conserved charge:
+ $$
+ \hat Q  \ket{\bm p, \pm} =  \pm \ket{\bm p, \pm}
+ $$
+ So for the complex scalar field we have two particles that in addtion to all the quantum numbers we have a charge number which distinguish between particle and antiparticle. We have operators that conserve the $U(1)$ charge. Even in the interacting theory this symmetry is conserved.
+ \subsection{Time dependance}
+ So far we have worked in the schrodinger picture, so really:
+ $$
+ \hat \phi(\bm x) = \hat \phi_S(\bm x)
+ $$
+ so there is no time dependence in the field operator the time dependance all lives in the space.
 \end{document}

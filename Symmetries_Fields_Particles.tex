@@ -2,6 +2,7 @@
 \usepackage{tikz-feynman}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{braket}
 \begin{document}
 \section{Lecture 1}
 A symmetry is a transformation $g_i$ that leaves some physical properties (e.g. energy, scattering probabilities etc.) unchanged.\\
@@ -467,6 +468,67 @@ Can also combine representations in a couple of ways to make new ones. Take repr
 \textbf{Direct sum}: $d_1 \oplus d_2 = \begin{cmatrix} d_1(X) & |&o \\
 _ & & _\\
 0 & | & d_2(X)\end{cmatrix} \forall X \in L(G)$
-This is a representation of $L(G)$ prove on example sheet. The represenation space is $V_1 \oplus V_2 = \begin{cmatrix} V_1 \\ V_2 \end{cmatrix}$ so dim ($d_1 \oplus d_2$) is $n_1 + n_2$. The block diaglonal structure survives exp so $D_1(g) \oplus D_2(g)$ is defined similarly. A representation $d(X)$ of L(G) and its representation space V have an invariant subspace $U < V$ (excluding trival case $U=V$ and $U= {0}$) if $d(X)_U \in U \forall X \in L(G)$ and $u\in U$. Important because an exp some of representation space will untouched by group operations: $D(g)u = u \forall g \in G, u \in U$.\\\\
-An irreducible representation (irrep) of L(G) has no non-trivial invariant subspaces. 
+This is a representation of $L(G)$ prove on example sheet. The represenation space is $V_1 \oplus V_2 = \begin{cmatrix} V_1 \\ V_2 \end{cmatrix}$ so dim ($d_1 \oplus d_2$) is $n_1 + n_2$. The block diaglonal structure survives exp so $D_1(g) \oplus D_2(g)$ is defined similarly.\\\\ A representation $d(X)$ of L(G) and its representation space V have an invariant subspace $U < V$ (excluding trival case $U=V$ and $U= {0}$) if $d(X)_U \in U \forall X \in L(G)$ and $u\in U$. Important because an exp some of representation space will untouched by group operations: $D(g)u = u \forall g \in G, u \in U$.\\\\
+An irreducible representation (irrep) of L(G) has no non-trivial invariant subspaces.
+\section{Lecture 8}
+A representation is totally reducible if it can be decomposed into irreducible pieces via the direct sum
+$$
+V = U_1 \oplus U_2 \oplus ... \plus U_k s.t. D(G) U_i = U_i
+$$
+and D(G) restricted to $U_ui$ is an irrep. In matrix language this means that there exists a basis V s.t. simulataneously such that for all $g$, $d(g)$ is block-diagonalisible. so $d(g) = \oplus_{i=1}^k d_k(g)$ (and could replace $d$ by $D$ for analogous result). Only states in each $U_i$ are related by G and therefore have similar properties. States in $U_i$ are not related to those in $U_{j\neq i}$. If e.g. G acts on a Hilbert space V of all physical states only those within an irreducible subspace $U_i$ have similar properties.
+\subsection{Symmetries in Quantum Mechanics}
+Consider a quantum mechanical system with energy levels $E_0 < E_1 < ...$ for a hamiltonian operator $\hat H$. The states of the system are elements of a Hilbert space $\mathrm{H} = \oplus_{n \geq 0} \mathrm{H}_n$ where $\hat H \ket{\psi} = E_n \ket{\psi} \forall \ket{\psi} \in \mathrm{H}_n$. So a symmetry transformation $\ket{\psi} \rightarrow \ket{\psi'} = \hat U \ket{\psi}$ where $\hat u: \mathrm{H} \rightarrow \mathrm{H}$ is a unitary operation s.t. $\hat U \hat H \hat U^{\dagger} = \hat H$. Under a symmetry transformation the inner producted is preserved.
+$$
+(\bra{\psi'}\ket{\phi'} = \bra{\psi}\ket{\phi})
+$$
+and the energy is conserved. A \textbf{conserved quanitity} is an observable $\hat I = \hat I^{\dagger}$ such that $[\hat I, \hat H] = 0$. Then $\hat U = \exp (i s \hat I), s \in \mathbb{R}$ is a symmetry transformation.\\\\
+If we have a maximal set of linearly independent "conserved quantities" $\{I^a s.t. [\hat I^a, \hat H] = 0, a =1,..., d\}$ then define (real Lie Algebra): $L_{\mathbb{R}}(G) = span_{\mathbb{R}} \{ iI^a, a=1,...,d\}$ is a real Lie algebra with Lie bracket is $[\hat I^a, \hat I^b]$. If we consider all symmetry transformations of the form $\hat U = \exp(\hat X) \hat X \in L_{\mathbb{R}}(G)$ then $\{\hat U\} $ forms a compact Lie group G (compact as it is the product of unitary groups).\\
+As $[\hat X, \hat H] = 0 \forall \hat X \in L_{\mathbb{R}}(G)$ the $\mathrm{H}_n$ are invariant under action of G.\\
+Each $\mathrm{H}_n$ carries a represention $D_n$ of $G$ with associated $d_n$ of $L_{mathbb{R}(G)$ such that $D_n(\hat U) = \exp(d_n(\hat X)) < GL(\mathbb{C},dim \mathrm{H}_n}) $. If the transformation preserves the inner prodcut, Wigner showed it must either be unitary or anti-unitary (which isn't interesting to us in this course). Unitary ones are where:
+$$
+D_n(\hat U)^{-1} = D_n(\hat U)^{\dagger} \iff d_n(\hat X)^{\dagger} = - d_n(\hat X)
+$$
+\textbf{Theorem}\\
+A finite-dimensional unitary representation is totally reducible (proved on exercise sheet 2).\\\\
+\subsection{Second way of combining representations - Tensor product}
+$d_1, d_2 \in L(G)$, the tensor product is written $d_1 \otimes d_2$ and acts on $V_1 \otimes V_2 = \{v_1 \otimes v_2,v_1 \in V_1, v_2 \in V_2\}$ such that 
+$$
+(d_1 \otimes d_2)(X)(v_1 \otimes v_2) = (d_1(X)v_1) \otimes v_2 + v_1 \otimes (d_2(X) v_2) \forall X \in L(G)
+$$
+Choosing bases $B_1 = \{v_1^j \} j = 1,...,n_1$ for $V_1$ and $B_2 = \{v_2^j \} j = 1,...,n_2$ for $V_2$. We can define a basis for $V_1 \otimes V_2$ as $B_{1\otimes 2} = B_1 \otimes B_2 = \{v_1^j \otimes v_2^{\alpha}, j = 1,...,n_1, \alpha = 1,..., n_2\}$. Let $\omega \in V_1 \otimes V_2$ with components $\omega_{j\alpha}$ in $B_{1\otimes 2}$. So then we write the tensor product of the representations of the Lie Algebra ($d_1 \otimes d_2)(X)$ in terms of its components $$(d_1 \otimes d_2)(X)_{i\alpha, j \beta} = d_1(X)_{ij} \delta_{\alpha \beta} + \delta_{ij} d_2(X)_{\alpha \beta}$$
+If this is going to be a valid representation of the Lie Algebra you need to show linearity and 
+$$
+(d_1 \otimes d_2)(X)([X,Y]) = [(d_1\otimes d_2)(X), (d_1 \otimes d_2)(Y)] \forall X,Y \in L(G)
+$$
+show this on exercise sheet 2. There is a lemma to the theorem above: if $d_1, d_2$ are unitary and finite dimensional then the tensor product $d_1 \otimes d_2 = \oplus_{i}\tilde d_i$ for irreps $\tilde d_i$.\\\\
+We can denote the representation space of a tensor product with objects with several indicies (multi-index objects). As an example: in SO(3) $(\bm 3 \otimes \bm 3) = T_{ij} $ where $i,j \in \{1,2,3\}$. As these are free indicies under an SO(3) transformation you get a factor $R$ in the following sense:
+$$
+T_{ij} \rightarrow^{SO(3)} R_{ik}R_{jl}T_{kl} \text{ where } R\in SO(3)
+$$
+If you think about this more carefully there is an invariant subspace
+$$
+T_{ii} = \delta_{k i} \delta_{l i} T_{kl} \rightarrow^{SO(3)} R_{ik}R_{jl}\delta_{k i} \delta_{l i} T_{kl}  = (R^T R)_{kl} T_{kl} = delta_{kl} T_{kl} = T_{ii}
+$$
+so $T_{ii}$ is an invariant subspace of the tensor product and is the singlet $\bm 1$. Let $\phi = \frac{1}{3} \delta_{ij}T_{ij}$ be an irreducible representation in terms of the tensor $T_{ij}$. A special role is played by $\delta_{ij} \rightarrow^{SO(3)} R_{ik}R_{jl} \delta_{kl} = R_{ik}R_{jk} = \delta_{ij}$ which is an invariant tensor of SO(3). There is another invariant tensor $\epsilon_{ijk} \rightarrow^{SO(3)} R_{il}R_{jm}R_{kn} \epsilon_{lmn} = det(R) \epsilon_{ijk} = \epsilon_{ijk}$. You can build up more complicated ones by products and sums. e.g.
+$$
+v_k = \epsilon_{ijk}T_{ij} \rightarrow^{SO(3)} R_{il}R_{jm}R_{kn}R_{io}R_{jp} \epsilon_{lmn}T_{op} = \delta_{lo}\delta_{mp}T_{op} R_{kn} \epsilon_{lmn} = R_{kn} \epsilon_{lmn} T_{lm} = R_{kn}v_n
+$$
+So this is an invariant subspace $v_k$ is an irrep. Lastly note that
+$$
+T_{(ij)} = \frac{1}{2}(T_{ij} + T_{ji}) = T_{kl}(\frac{\delta{ki}\delta{lj} + \delta{kj}\delta_{li}}{2}) \rightarrow^{SO(3)} R_{kx}R_{ly}T_{xy}(\frac{\delta{ki}\delta{lj} + \delta{kj}\delta_{li}}{2})  = R_{ix}R_{jy}T_{(xy)} = T_{(ij)}
+$$
+So the traceless part $S_{ij} = T_{(ij)} - \frac{1}{3}\delta_{ij}T_{kk}$ is an invariant subspace and is 5 dimensional.\\\\
+We can decompose our tensor:
+$$
+T_{ij} = S_{ij} + \epsilon_{ijk}v_k + \frac{1}{3} \delta_{ij} \phi
+$$
+$$
+\bm 3 \otimes \bm 3 = \bm 5 \oplus \bm 3 \oplus \bm 1
+$$
+As all irreps so could use them to build an invariant Lagrangian e.g. using S_{ij}$ all you have to do is sum over the indicies
+$$
+\mathfrak{L} = \frac{1}{2} \partial_{\mu} S_{ij} \partial ^{\mu} S^{ij} - \frac{m^2}{2} S_{ij}S_{ij} - \lambda(S_{ij}S_{ij})^2
+$$
+
+
 \end{document}

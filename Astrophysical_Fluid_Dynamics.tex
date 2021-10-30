@@ -99,7 +99,7 @@ $$
 $$
 Can rewrite as energy equation:
 \begin{equation}
-        \frac{\partial \rho}{\partial t} + (\bm u \cdot \nabla) p  + \gamma p \nabla \cdot \bm u = 0
+        \frac{\partial p}{\partial t} + (\bm u \cdot \nabla) p  + \gamma p \nabla \cdot \bm u = 0
 \end{equation}
 An ideal fluid is described by equations (1), (3), (4) and (6).
 \subsection{Departures from $p=\frac{n}{\mu}kT$}
@@ -308,7 +308,7 @@ $$
 so when $\bm J || \bm B$ we are in the free force state. Therefore, $\bm J = \alpha(\bm u)\bm B$ so $\nabla \times \bm B = \frac{4\pi}{x} \bm J = \frac{4 \pi \alpha(\bm u) }{c} \bm B$.
 Take the divergence of this equation:
 $$
-0 = \frac{4\pi}{c}\left( ( \bm B \cdot \nabla) \alpha + \alpha (\nabla \cdot \bm B) \right) \implies $(\bm B \cdot \nabla) \alpha = 0
+0 = \frac{4\pi}{c}\left( ( \bm B \cdot \nabla) \alpha + \alpha (\nabla \cdot \bm B) \right) \implies (\bm B \cdot \nabla) \alpha = 0
 $$
 This looks very similar to the Ferrono's isozotation but here it means that $\alpha(\bm u)$ is constant along the magnetic field lines so not just an arbitrary function. We have
 $$
@@ -341,6 +341,250 @@ $$
 $$
 \alpha B_z = \frac{c}{4\pi} \frac{1}{R} \frac{\partial}{\partial R} \left( R \frac{c}{4\pi \alpha} (-\frac{\partial B_z}{\partial R}) \right)
 $$
+\section{Lecture 8}
+$$
+\frac{1}{R}\frac{\partial}{\partial R}(R \frac{\partial B_z}{\partial R}) + (\frac{4 \pi \alpha}{c})^2 B_z = 0
+$$
+This is a version of Helmholtz equation and remember that in cyclindrical geometry $$\nabla^2 f = \frac{1}{R} \frac{\partial}{\partial R} (R \frac{\partial f}{\partial R}) + \frac{\partial^2 f}{\partial z^2} + \frac{1}{R^2}\frac{\partial^2 f}{\partial \phi^2}$$
+The solutions to this equation have form:
+$$
+B_z = H_aJ_a(\tilde \alpha R)
+$$
+$$
+B_{\phi} = B_a J_1(\tilde \alpha R)
+$$
+where $\tilde \alpha = \frac{4 \pi}{c} \alpha$, $J_o, J_1$ are Bessel functions. Which satisify:
+$$
+(tJ_o'(t))' + tJ_0(t) = 0, J_1(t) = -J_0'(t)
+$$
+This length scale $\alpha$ depends on the stength of the current running along the field lines. If the current is very high then the field variations will be on a shorter length scale.
+\subsection{Potential Field}
+This gets realised whenever $\bm J = 0$ so $\alpha = 0$ everywhere. We know that $\bm J \sim \nabla \times \bm B$ so $\nabla \times \bm B = 0$, so therefore $\bm B = \nabla \phi$ so is a potential field. As we still have $\nabla \cdot \bm B = 0$ we get $\nabla^2 \phi = 0$. This is a familar equation that we know how to solve. e.g. Consider a magnetic star with boundary condition on surface of star if we know $\bm B $ at $r = R_*$, then $\phi = \sum_{l=0}^{\infty} \sum_{m=-l}^l (a_{lm}r^l + b_{lm}r^{-(l+1)})P_l^m(\cos \theta) e^{im\phi}$.
+
+\subsection{Grad-Shafranov Equation}
+Lets consider a system with pressure and B-field in equilibrium. The equation of motion of this system is 
+$$
+-\nabla p + \frac{\bm J \times \bm B}{c} = 0
+$$
+Take a scalar product with $\bm B$:
+$$
+(\bm B \cdot \nabla) p = 0
+$$
+So the gradient of magnetic pressure has to be perpendicular to magnetic pressure/magnetic field lines have to be perpendicular to surfaces where the pressure is constant. If you take scalar product with $\bm J$:
+$$
+(\bm J \cdot \nabla)p =0
+$$ so same result as for $\bm B$. If I construct surfaces of constant $p$: $p(x,y,z) p constant$ then it follows that $\bm B, \bm J$ must lie on these surfaces.\\\\
+Assume axisymmetry $\frac{\partial }{\partial \phi} =0$:
+$$
+\bm B = \bm B_p + B_{\phi} \bm e_{\phi}
+$$
+Introduce magentic flux:
+$$
+\psi(R,z) = \int^R_0 B_z 2\pi R dR
+$$
+Introduce current:
+$$
+I(R,z) = \int^R_0 J_z 2\pi R dR
+$$
+Flux can be considered like a label of magnetic surfaces by the value of $\psi$ that they are enclosing.
+$$
+I = I(\psi), p = p(\psi)
+$$
+(current and pressure are constant on surfaces of given $\psi$). From defintion of flux:
+$$
+B_z = \frac{1}{2\pi R} \frac{\partial \psi}{\partial R}
+$$
+from defintion of current:
+$$
+J_z = \frac{1}{2\pi R} \frac{\partial I}{\partial R}
+$$
+From $\nabla \cdot \bm B = 0$:
+$$
+\frac{1}{R} \frac{\partial R}{\parital R} (R B_R) + \frac{\partial B_z}{\partial z} = 0
+$$
+$$
+\frac{1}{R} \frac{\partial }{\partial R}(R B_R) + \frac{1}{2\pi R} \frac{\partial^2 \psi}{\partial z \parital R}  = 0
+$$
+$$
+RB_R + \frac{1}{2\pi} \frac{\partial \psi}{\partial z} = c(z) \implies B_R = -\frac{1}{2\pi R} \frac{\partial \psi}{\partial z} + \frac{c(z)}{R}
+$$
+As we want a solution that is non-singular so the last term must be zero
+$$
+B_R = -\frac{1}{2\pi R} \frac{\partial \psi}{\partial z}
+$$
+We now know $B_R$ and $B_z$ so 
+$$
+\bm B_p =  -\frac{1}{2\pi R} (\frac{\partial \psi}{\partial z}, \frac{\partial \psi}{\partial R} ) = \frac{\nabla \psi \times \bm e_{\phi}}{2\pi R}
+$$
+Lets look at the current:
+$$
+I = \int_S \bm J \cdot d\bm S = \int_S \frac{c}{4\pi} (\nabla \times \bm B) \cdot d\bm S = \frac{c}{4\pi} \int_C \bm B \cdot d\bm l = \frac{c}{4\pi} B_{\phi} 2 \pi R = \frac{c B_{\phi}R}{2}
+$$
+$$
+B_{\phi} = \frac{2 I(\psi)}{Rc}
+$$
+$$
+\bm B =  \frac{\nabla \psi \times \bm e_{\phi}}{2\pi R} +  \frac{2 I(\psi)}{Rc}\bm e_{\phi}}
+$$
+For $\bm J = \frac{c}{4\pi} \nabla \times \bm B \implies \nabla \cdot \bm J = 0$. We could do the same derivation the current and we will get exactly the same expression for the poliodal component of hte current:
+$$
+\bm J_p =  \frac{\nabla I(\psi) \times \bm e_{\phi}}{2\pi R}
+$$
+For $J_{\phi}$ we can consider $J_{\phi} = \frac{c}{4\pi}( \nabla \times \bm B)_{\phi}$ so
+$$
+\bm J =  \frac{\nabla I(\psi) \times \bm e_{\phi}}{2\pi R} + \frac{c}{4\pi}( \nabla \times \bm B)_{\phi}\bm e_{\phi}
+$$
+This expression has second derivatives of $\psi$ in it as we differentiate $B$ again.
+\section{Lecture 9}
+$$
+\nabla p = \frac{\partial p}{\partial \psi} \nabla \psi = \frac{\bm J \times \bm B}{c}
+$$
+This is normal to the surface of constant pressure, and so it is also normal to the flux surfaces and the current surfaces. As the RHS is also normal to the flux and current surface this equation only has one component, therefore:
+$$
+\frac{\bm J \times \bm B}{c} = G(\nabla \psi)
+$$
+This force is non-linear (it is quadratic in $\psi$, $\bm B$ contains first derivatives in $\psi$ and $\bm J$ contains second derivatives of $\psi$). He will not be deriving the expression for $G$, just giving the final result which is:
+$$
+\frac{\partial p}{\partial \psi} \nabla \psi = G \nabla \psi \implies \nabla \psi(G - \frac{\partial p}{\partial \psi}) = 0
+$$
+\textbf{Grad-Shafrahov equation}:
+$$
+G - \frac{\partial p}{\partial \psi} = 0
+$$
+Often called equation of cross-field balance or trans-field balance.\\
+G in particular case: Cyclindrical coordinates (R, z)
+$$
+\frac{\partial^2 \psi}{\partial R^2} - \frac{1}{R} \frac{\partial \psi}{\partial R} + \frac{\partial ^2 \psi}{\partial z^2} = - 16\pi^3 R^2 \frac{\partial p}{\partial \psi} - \frac{8\pi^2}{c^2} \frac{\partial I^2(\psi)}{\partial \psi}
+$$
+Don't have to memorise this lol i'm glad. The power of this approach is we can just solve this system and we can then get the behaviour of everything (current and pressure) just from the flux $\psi(R,z)$. LHS does not reduce very nicely unfortunately it is: $R^2 \nabla \cdot( \frac{1}{R^2} \nabal \psi)$. What is interesting is flux function was originally used as just a coordinate for labeling our pressure surfaces and it has become an independant function that we need to solve for. This equation does not have to be linear as $p(\psi)$ and $I(\psi)$ could be anything (normally specified at the beginning of the problem). We can very easily get force free by dropping pressure term.\\\\
+Consider force-free cyclindrical equilibrium structure ($\frac{\partial }{\partial z} = 0, p = 0$). Assume that $I(\psi) = \kappa \psi$ so:
+$$
+\frac{\partial^2 \psi}{\partial R^2} - \frac{1}{R} \frac{\partial \psi}{\partial R} = - \frac{16\pi^2\kappa^2}{c^2}\psi$$
+$$
+\frac{\partial}{\partial R}(R\frac{1}{2 \pi R} \frac{\partial \psi}{\partial R}) - \frac{1}{2\pi R} \frac{\partial \psi}{\partial R} = - \frac{8 \pi \kappa^2}{c^2} \psi
+$$
+$$
+\frac{\partial}{\partial R}(RB_z) - B_z = R\frac{\partial B_z}{\partial R} = - \frac{8 \pi \kappa^2}{c^2} \psi
+$$
+$$
+\frac{1}{R}\frac{\partial}{\partial R} R \frac{\partial B_z}{\partial R} =  - \frac{16 \pi^2 \kappa^2}{c^2} \frac{1}{2\pi R}\frac{\partial \psi}{\partial R} = - \frac{16 \pi^2 \kappa^2}{c^2} B_z
+$$
+let $\alpha = \frac{4\pi\kappa}{c}$ and this reduces to the Helmholtz equation
+$$
+\nabla^2 B_z + \alpha^2 B_z = 0
+$$
+\section{Conservation Laws}
+Some variable has a density (amount per volume) $q(\bm x, t)$ that satisfies an equation:
+$$
+\frac{\partial q}{\partial t} + \nabla \cdot \bm F = 0
+$$
+then we say that $\bm F$ is a flux of $q$. By analogy with continiuity equation: $q = \rho$, $\bm F = \rho \bm u$. Amount of $q$ in volume $V$: $Q = \int_V q(\bm x,t) dV$.
+$$
+\frac{\partial Q}{\partial t} = - \int_V \nabla \cdot \bm F  dV = - \int_S \bm F \cdot d \bm S \text{ flux of $q$ across surface of V}
+$$
+Define a material invariant as a scalar field $f(\bm x, t)$ for which $\frac{D f}{Dt} = 0$. e.g. Entropy is a material invariant. Then $\frac{\partial f}{\partial t} + (\bm u \cdot \nabla)f = 0$, therefore $\rho\frac{\partial f}{\partial t} + (\rho\bm u \cdot \nabla)f = 0$ and as $f\frac{\partial \rho}{\partial t} + f\nabla \cdot (\rho \bm u) =0$:
+$$
+\frac{\partial (\rho f)}{\partial t} + \nabla \cdot ( \rho f \bm u) = 0
+$$
+Consider energy density:
+$$
+\epsilon = \rho(\frac{u^2}{2} + \phi + e) + \frac{B^2}{8\pi}
+$$
+We want to find $\bm F_{\epsilon}$ such that $$\frac{\partial \epsilon}{\partial t} + \nabla \cdot \bm F_{\epsilon} = 0$$
+$$
+\frac{\partial \epsilon}{\partial t} = \frac{\partial \rho}{\partial t} ( \frac{u^2}{2} + \phi + e) + \frac{1}{8\pi} \frac{\partial B^2}{\partial t} + \rho (\frac{1}{2} \frac{\partial u^2}{\partial t} + \frac{\partial \phi}{\partial t} + \frac{\partial e}{\partial t})
+$$
+$$
+\frac{1}{8 \pi } \frac{\partial B^2}{\partial t} = \frac{\bm B}{4 \pi} \frac{\partial \bm B}{\partial t} =^{maxwells} - \frac{\bm B c}{4 \pi} (\nabla \times \bm E) = - \frac{c}{4\pi} \bm B \cdot (\nabla \times \bm E)
+$$
+$$
+\rho \frac{1}{2} \frac{\partial u^2}{\partial t} = \rho \bm u \frac{\partial \bm u}{\partial t} = \rho \bm u ( - (\bm u \cdot \nabla) \bm u - \frac{\nabla p}{\rho} - \nabla \phi \rho + \frac{1}{4\pi \rho}((\nabla \times \bm B) \times \bm B)) 
+$$
+$$
+\frac{De}{Dt} =T \frac{Ds}{Dt} - p\frac{dV}{Dt} = t\frac{Ds}{Dt} + \frac{p}{\rho^2}\frac{D\rho}{Dt}
+$$
+$$
+\frac{\partial e}{\partial t}  = T \frac{Ds}{Dt} -(\bm u \cdot \nabla) e - \frac{p}{\rho}(\nabla \cdot \bm)
+$$
+\section{Lecture 9}
+$$
+\frac{\partial \epsilon}{\partial t} = -\frac{\partial \rho}{\partial t} ( \frac{u^2}{2} + \phi + e) - \rho \bm u( \bm u \cdot \nabla) \bm u - (\bm u \cdot \nabla) \phi + \frac{\bm u \cdot( (\nabla \times \bm B) \times \bm B)}{4\pi}  + \frac{\partial \phi}{\partial t} - (\rho \bm u) \cdot \nabla e - p (\nabla \cdot \bm u) + \rho T \frac{Ds}{Dt} 
+$$
+$$
+\frac{\partial \epsilon}{\partial t} =  -\frac{\partial \rho}{\partial t} ( \frac{u^2}{2} + \phi + e) - \rho(\bm \cdot \nabla) \frac{u^2}{2} - )\rho \bm u \cdot \nabla)e - p(\nabla \cdot \bm u) - (\bm u \cdot \nabla )p - (\bm u \cdot \nabla) \phi - \frac{c}{4\pi} \bm B \cdot (\nabla \times \bm E) + \frac{c(\nabla \tims \bm ) \bm B \times \frac{\bm u}{c}}{4\pi} + \rho \frac{\partial \phi}{\partial t} + \rho T \frac{Ds}{Dt} 
+$$
+$$
+\frac{\partial \epsilon}{\partial t} = -\frac{\partial \rho}{\partial t} ( \frac{u^2}{2} + \phi + e) - (\rho \bm u \cdot \nabla) (\frac{u^2}{2} + e + \phi) - \nabla \cdot (p \bm u) - \frac{c}{4\pi}(\bm B \cdot (\nabla \times \bm E)- (\nabla \times \bm B)\bm E)
+$$
+$$
+\frac{\partial \epsilon}{\partial t} = -\nabla \cdot (\rho\bm u (\frac{u^2}{2} + \phi + e) + p \bm u) - \frac{c}{4\pi}(\bm B \cdot (\nabla \times \bm E)- (\nabla \times \bm B)\bm E) + \rho \frac{\partial \phi}{\partial t} + \rho T \frac{Ds}{Dt}
+$$
+as
+$$
+\nabla \cdot (\bm M \times \bm N) = \bm N \cdot (\nabla \times \bm M) - \bm M \cdot (\nabla \times \bm N) \implies \bm B \cdot (\nabla \times \bm E)- (\nabla \times \bm B)\bm E = \nabla \cdot( \bm E \times \bm B)
+$$
+$$
+\frac{\partial \epsilon}{\partial t} = -\nabla \cdot (\rho\bm u (\frac{u^2}{2} + \phi + e) + p \bm u) - \nabla \cdot( \frac{c}{4\pi} \bm E \times \bm B) + \rho \frac{\partial \phi}{\partial t} + \rho T \frac{D s}{Dt}  = - \nabla \cdot (\rho\bm u (\frac{u^2}{2} + \phi + e + \frac{P}{\rho}) + \frac{c}{4\pi} \bm E \times \bm B) + \rho \frac{\partial \phi}{\partial t} + \rho T \frac{Ds}{Dt}
+$$
+so
+\begin{equation}
+        \frac{\partial \epsilon}{\partial t} + \nabla \cdot \bm F_{\epsilon} = \rho \frac{\partial \phi}{\partial t} + \rho T \frac{Ds}{Dt}
+\end{equation}
+for $F_{epsilon} = \rho\bm u (\frac{u^2}{2} + \phi +h) + \frac{c}{4\pi} \bm E \times \bm B$, with $e + \frac{P}{\rho} = h$ (enthalpy)
+\subsection{Bernoulli invariant}
+$$
+\frac{\partial \epsilon}{\partial t} + \nabla \cdot \bm F_{\epsilon} = 0
+$$
+In steady state $\frac{\partial \epsilon}{\partial t} = 0$ so $\nabla \cdot \bm F_{\epsilon} = 0$. Assume hydrodynamic limit, $\bm B \rightarrow 0$ which implis
+$$
+\nabla\cdot (\rho \bm u(\frac{u^2}{2} + \phi + h) = 0
+$$
+$$
+\nabla\cdot(\rho \bm u) (\frac{u^2}{2} + \phi + h) + \rho (\bm u \cdot \nabla) (\frac{u^2}{2} + \phi + h)) = 0
+$$
+so $\bm u \cdot \nabla ) B_B = 0, and $ B_B = \frac{u^2}{2} + \phi + h$ so $B_B$ is constant along streamlines of the flow.
+\subsection{Magnetic helicity conservation}
+Vector potential $\bm A$, $\bm B = \nabla \times \bm A \implies \nabla \cdot \bm B = 0$. Define magnetic helicity:
+$$
+H_m = \int_V \bm A \cdot \bm B dV
+$$
+$$
+\frac{\partial}{\partial t} \bm A \cdot \bm B = \bm B \cdot \frac{\partial \bm A}{\partial t} + \bm A \cdot \frac{\partial \bm B}{\partial t} = \bm B \cdot \frac{\partial \bm A}{\partial t} + \bm A \cdot ( \nabla \times (\bm u \times \bm B))
+$$
+Maxwell's equation
+$$
+- \nabla \times \bm E = \frac{1}{c} \frac{\partial \bm B}{\partial t} = \frac{1}{c} \nabla \times \frac{\partial \bm A}{\partial t} \implies \nabla \times( \frac{1}{c} \frac{\partial \bm A}{\partial t} + \bm E) = 0
+$$
+$$
+\bm E + \frac{1}{c}\frac{\partial \bm A}{\partial t} = - \nabla \phi_l
+$$
+where $\phi_l$ is th electrostatic potential
+$$
+\frac{\partial \bm A}{\partial t} = -c(\bm E + \nabla \phi_l)
+$$
+so 
+$$
+\frac{\partial }{\partial t} \bm A \cdot \bm B = - c(\bm B \cdot \nabla \phi_l) - c (\bm E \cdot \bm B) + \bm A \cdot (\nabla \times( \bm u \times \bm B))
+$$
+Second term vanishes as $E = - \frac{\bm u \times \bm B}{c}$ 
+$$
+\nabla \cdot (\bm A \times (\bm u \times \bm B)) = (\bm u \times \bm B) \cdot (\nabla \times \bm A) - \bm A \cdot \nabla \times (\bm u \times \bm B) = \bm B \cdot (\bm u \times \bm B) - \bm A \cdot \nabla \times (\bm u \times \bm B)
+$$
+so
+$$
+\bm A \cdot \nabla \times(\bm u \times \bm B) = - \nabla \cdot (\bm A \times (\bm u \times \bm B))
+$$
+First term (use fact $\nabla \cdot \bm B = 0$):
+$$
+(\bm B \cdot \nabla) \phi_e = (\bm B \cdot \nabla) \phi_e + \phi_e \nabla \cdot \bm B = \nabla \cdot(\bm B \phi_e)
+$$
+so:
+$$
+\frac{\partial}{\partial t} \bm A \cdot \bm B = - c \nabla \cdot (\bm B \phi_e) - \nabla \cdot (\bm A \times (\bm u \times \bm B)) = - \nabla \times (c \bm B \phi_e + \bm A \times (\bm u \times \bm B))
+$$
+\begin{equation}
+        \frac{\partial H_m}{\partial t} + \nabla \cdot \bm F_{H_m} = 0
+\end{equation}
+for $\bm F_{H_m} = c \bm B \phi_e + \bm A \times (\bm u \times \bm B)$
+(often have to derive conservation laws like this in exams so understand and learn technique)
 \end{document}
-
-

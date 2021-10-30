@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  26 OCT 2021 10:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  29 OCT 2021 11:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -43,168 +43,229 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen139
+)) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+LaTeX Info: Redefining \boldsymbol on input line 28.
+\pmbraise@=\dimen140
+) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count195
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks20
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks21
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks22
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count190
-\l__pdf_internal_box=\box50
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box52
 ) (./Quantum_Information_Theory.aux)
 \openout1 = `Quantum_Information_Theory.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 17.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 47--50
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--62
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--62
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 79--82
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
+Underfull \hbox (badness 10000) in paragraph at lines 122--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
 [4]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 138.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 139.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 144--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 151--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 151--156
 
  []
 
 
-Overfull \hbox (119.2351pt too wide) detected at line 157
+Overfull \hbox (119.2351pt too wide) detected at line 158
 \OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Y\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) [](1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p [] p\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T [] j\OML/cmm/m/it/10 J[]\OMS/cmsy/m/n/10 j ^^@ \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) = 1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 )
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
 
  []
 
-./Quantum_Information_Theory.tex:169: Missing $ inserted.
+./Quantum_Information_Theory.tex:170: Missing $ inserted.
 <inserted text> 
                 $
-l.169 ...te A is given by the reduces state: $\rho
+l.170 ...te A is given by the reduces state: $\rho
                                                   _A = Tr_B \rho_{AB}. Consi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 169.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 170.
 (c:/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
 
-./Quantum_Information_Theory.tex:169: Missing $ inserted.
+./Quantum_Information_Theory.tex:170: Missing $ inserted.
 <inserted text> 
                 $
-l.169 .... Consider orthonomal basis $\{ \ket{i_A}
+l.170 .... Consider orthonomal basis $\{ \ket{i_A}
                                                    \}$ in $\mathcal{H}_A$ an...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--170
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--170
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
  []
 
 
-Overfull \hbox (35.55093pt too wide) in paragraph at lines 167--170
+Overfull \hbox (35.55093pt too wide) in paragraph at lines 168--171
 \OMS/cmsy/m/n/10 H[]$\OT1/cmr/m/n/10 . If AB is in the state $\OML/cmm/m/it/10 ^^Z[] \OMS/cmsy/m/n/10 2 \U/euf/m/n/10 D\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 H[] 
  H[]$\OT1/cmr/m/n/10 )$\OML/cmm/m/it/10 thenstateAisgivenbythereducesstate \OT1/cmr/m/n/10 :$$\OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 =
  []
 
-./Quantum_Information_Theory.tex:175: Missing } inserted.
+./Quantum_Information_Theory.tex:176: Missing } inserted.
 <inserted text> 
                 }
-l.175 $
+l.176 $
        $
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -213,52 +274,52 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (17.08173pt too wide) detected at line 175
+Overfull \hbox (17.08173pt too wide) detected at line 176
 \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[]^^Z[]B \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[]\OT1/cmr/m/n/10 ([] [] \OML/cmm/m/it/10 r[] [] [] \OMS/cmsy/m/n/10 
  [] []\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 r[]
  []
 
 
-Overfull \hbox (93.71895pt too wide) detected at line 183
+Overfull \hbox (93.71895pt too wide) detected at line 184
 \OML/cmm/m/it/10 < M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[] [] [] r[] [] [] \OMS/cmsy/m/n/10 
  [] []\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 r[]Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[] [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]^^Z[]\OT1/cmr/m/n/10 )
  []
 
 
-./Quantum_Information_Theory.tex:187: LaTeX Error: \mathbb allowed only in math mode.
+./Quantum_Information_Theory.tex:188: LaTeX Error: \mathbb allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.187 The four pure states in $\mathbb
+l.188 The four pure states in $\mathbb
                                       {C}^2 \otimes \mathbb{C}^2$ are called...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Information_Theory.tex:187: Missing $ inserted.
+./Quantum_Information_Theory.tex:188: Missing $ inserted.
 <inserted text> 
                 $
-l.187 The four pure states in $\mathbb{C}^
+l.188 The four pure states in $\mathbb{C}^
                                           2 \otimes \mathbb{C}^2$ are called...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 184--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+Underfull \hbox (badness 10000) in paragraph at lines 184--189
 
  []
 
 [6]
-./Quantum_Information_Theory.tex:189: Undefined control sequence.
+./Quantum_Information_Theory.tex:190: Undefined control sequence.
 <recently read> \mathbm 
                         
-l.189 Any state in space $\mathbm
+l.190 Any state in space $\mathbm
                                  {H}_A \otimes \mathbm{H}_B $ can be describ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -266,8 +327,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:189: Undefined control sequence.
-l.189 ...te in space $\mathbm{H}_A \otimes \mathbm
+./Quantum_Information_Theory.tex:190: Undefined control sequence.
+l.190 ...te in space $\mathbm{H}_A \otimes \mathbm
                                                   {H}_B $ can be described u...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -276,12 +337,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
-./Quantum_Information_Theory.tex:206: Undefined control sequence.
-l.206 as $d_{i \beta} = \deta
+./Quantum_Information_Theory.tex:207: Undefined control sequence.
+l.207 as $d_{i \beta} = \deta
                              _{i \beta}d_{ii}$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -289,8 +350,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:215: Undefined control sequence.
-l.215 ... \ket{j_B}) = \sum_{ij} \lambda_i \lamdba
+./Quantum_Information_Theory.tex:216: Undefined control sequence.
+l.216 ... \ket{j_B}) = \sum_{ij} \lambda_i \lamdba
                                                   _j \ket{i_A}\bra{j_A} \oti...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -298,19 +359,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:215: Double subscript.
-l.215 ...\ket{j_B}) = \sum_{ij} \lambda_i \lamdba_
+./Quantum_Information_Theory.tex:216: Double subscript.
+l.216 ...\ket{j_B}) = \sum_{ij} \lambda_i \lamdba_
                                                   j \ket{i_A}\bra{j_A} \otim...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Overfull \hbox (157.24324pt too wide) detected at line 216
+Overfull \hbox (157.24324pt too wide) detected at line 217
 \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 == \OML/cmm/m/it/10 Tr[] [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[]\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 ^^U[] [] []\OT1/cmr/m/n/10 )([] \OML/cmm/m/it/10 ^^U[] [] []\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 ^^U[][] [] [] \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 Tr[] [] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^U[] [] []
  []
 
-./Quantum_Information_Theory.tex:217: Undefined control sequence.
-l.217 ...\rho_A$ has set of eigenvalues $\{\lamdba
+./Quantum_Information_Theory.tex:218: Undefined control sequence.
+l.218 ...\rho_A$ has set of eigenvalues $\{\lamdba
                                                   _i^2\}^{min(d_A,d_B)}$ and...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -319,15 +380,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--219
+Underfull \hbox (badness 10000) in paragraph at lines 217--221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--221
 
  []
 
 [7]
-./Quantum_Information_Theory.tex:220: Undefined control sequence.
+./Quantum_Information_Theory.tex:223: Undefined control sequence.
 <recently read> \mathbm 
                         
-l.220 ...ing a purifying reference system $\mathbm
+l.223 ...ing a purifying reference system $\mathbm
                                                   {R}$ with Hilbert space $\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -335,10 +401,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:220: Undefined control sequence.
+./Quantum_Information_Theory.tex:223: Undefined control sequence.
 <recently read> \mathbm 
                         
-l.220 ... $\mathbm{R}$ with Hilbert space $\mathbm
+l.223 ... $\mathbm{R}$ with Hilbert space $\mathbm
                                                   {H}_R$, and defining a pur...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -346,8 +412,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:220: Undefined control sequence.
-l.220 ...a pure state $\ket{\psi_{AR}} \in \mathbm
+./Quantum_Information_Theory.tex:223: Undefined control sequence.
+l.223 ...a pure state $\ket{\psi_{AR}} \in \mathbm
                                                   {H}_A \otimes \mathbm{H}_B...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -355,8 +421,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:220: Undefined control sequence.
-l.220 ...si_{AR}} \in \mathbm{H}_A \otimes \mathbm
+./Quantum_Information_Theory.tex:223: Undefined control sequence.
+l.223 ...si_{AR}} \in \mathbm{H}_A \otimes \mathbm
                                                   {H}_B$ such that:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -364,8 +430,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:239: Undefined control sequence.
-l.239 \rho = \sum \lamda
+./Quantum_Information_Theory.tex:242: Undefined control sequence.
+l.242 \rho = \sum \lamda
                         _i \ket{i} \bra{i} \implies f(\rho) = \sum f(\lambda...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -373,64 +439,114 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:239: Undefined control sequence.
-l.239 ... = \sum \lamda_i \ket{i} \bra{i} \implies
-                                                   f(\rho) = \sum f(\lambda_...
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 270--273
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 294--298
+
+ []
+
+./Quantum_Information_Theory.tex:303: Undefined control sequence.
+l.303 ...bra{k} )\otimes I] \ket{i} \otimes \ketPi
+                                                  } = \frac{1}{\sqrt{d}}\sum...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:239: Undefined control sequence.
-l.239 ...sum f(\lambda_i) \ket{i} \bra{i} \implies
-                                                   \sqrt{\rho} = \sum \sqrt{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+./Quantum_Information_Theory.tex:303: Extra }, or forgotten $.
+l.303 ...ra{k} )\otimes I] \ket{i} \otimes \ketPi}
+                                                   = \frac{1}{\sqrt{d}}\sum_...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Runaway argument?
-{\phi $$ $$ \bra {\psi } \ket {\phi } \bra {s} \ket {s} = \bra {\psi \ETC.
-./Quantum_Information_Theory.tex:270: Paragraph ended before \ket was complete.
-<to be read again> 
-                   \par 
-l.270 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
-./Quantum_Information_Theory.tex:270: Missing $ inserted.
-<inserted text> 
-                $
-l.270 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Overfull \hbox (165.95473pt too wide) detected at line 315
+\OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[] [] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[]d\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 I\OT1/cmr/m/n/10 ) [] [] ([] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 I\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Tr[] [] [] [] [] [] \OMS/cmsy/m/n/10 
+ [] [] \OT1/cmr/m/n/10 = [] [] [] [] [] = \OML/cmm/m/it/10 I
+ []
 
-./Quantum_Information_Theory.tex:270: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.270 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
 
-)
-! Emergency stop.
-<*> Quantum_Information_Theory.tex
-                                  
-*** (job aborted, no legal \end found)
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 
- 
+ []
+
+
+Overfull \hbox (90.93158pt too wide) detected at line 334
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 ) [] = [](\OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 VD\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/10 
+ [] \OT1/cmr/m/n/10 = [] [] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 V [] ^^U[] [] [] [] \OT1/cmr/m/n/10 = [] [] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 V^^U[] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^U[] [] \OMS/cmsy/m/n/10 
+ []
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 356--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--373
+
+ []
+
+[11]
+Overfull \hbox (56.1961pt too wide) detected at line 383
+\OT1/cmr/m/n/10 (^^C \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 id[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 ) [] [] (\OML/cmm/m/it/10 I[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 ) = (^^C \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 id[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 id[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 ) [] [] = (\OML/cmm/m/it/10 id[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 )(^^C \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 id[]\OT1/cmr/m/n/10 )([] [] \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0
+ []
+
+[12] (./Quantum_Information_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 1155 strings out of 478599
- 15901 string characters out of 5858101
- 315281 words of memory out of 5000000
- 19054 multiletter control sequences out of 15000+600000
+ 1786 strings out of 478599
+ 23269 string characters out of 5858101
+ 326424 words of memory out of 5000000
+ 19667 multiletter control sequences out of 15000+600000
  416912 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,52p,821b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 56i,6n,66p,821b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Quantum_Information_Theory.pdf (12 pages, 247159 bytes).
+PDF statistics:
+ 133 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

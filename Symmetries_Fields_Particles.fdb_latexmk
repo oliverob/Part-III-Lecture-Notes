@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1634900093 "Symmetries_Fields_Particles.tex" "Symmetries_Fields_Particles.pdf" "Symmetries_Fields_Particles" 1634900093
-  "Symmetries_Fields_Particles.aux" 1634900015 3519 f1a659aa7ea0be6b5d36991840611e31 "pdflatex"
-  "Symmetries_Fields_Particles.tex" 1634900092 30784 dab44f2ef42a85ef46555adb0be40b57 ""
+["pdflatex"] 1635246034 "Symmetries_Fields_Particles.tex" "Symmetries_Fields_Particles.pdf" "Symmetries_Fields_Particles" 1635246034
+  "Symmetries_Fields_Particles.aux" 1635245818 3892 f5619596591f32852f50db510a0af26b "pdflatex"
+  "Symmetries_Fields_Particles.tex" 1635246032 37186 5282a8dfdc7fb6e13558cbfdb8a99b36 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630418551 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1630413436 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1630413436 1040 b84415f97d114011685943ade933dc71 ""
@@ -34,11 +34,6 @@
   "c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1630422462 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty" 1630419876 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1630419876 6501 4011d89d9621e0b0901138815ba5ff29 ""
-  "c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1630419964 8356 7bbb2c2373aa810be568c29e333da8ed ""
-  "c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty" 1630420561 5412 d5a2436094cd7be85769db90f29250a6 ""
-  "c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty" 1630420573 13807 952b0226d4efca026f0e19dd266dcc22 ""
-  "c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty" 1630421513 17859 4409f8f50cd365c68e684407e5350b1b ""
-  "c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty" 1630423186 20089 80423eac55aa175305d35b49e04fe23b ""
   "c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1630423226 992 855ff26741653ab54814101ca36e153c ""
   "c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1630423226 43820 1fef971b75380574ab35a0d37fd92608 ""
   "c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex" 1630423226 19324 f4e4c6403dd0f1605fd20ed22fa79dea ""
@@ -121,6 +116,7 @@
   "c:/texlive/2021/texmf-dist/tex/latex/base/article.cls" 1630420684 20144 0fe9067680219956678b52f12bdce8ee ""
   "c:/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd" 1630420684 2469 ed49302eacbaebdd899d39dedcd25393 ""
   "c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo" 1630420684 8448 05e1c6a8fc5db344ed9d7aeb299acbce ""
+  "c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty" 1630415019 3601 193635d942bc4777a5acaaeeffdce692 ""
   "c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1630417728 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1630419170 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1630419170 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -129,8 +125,6 @@
   "c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty" 1630419165 7972 81ea1752666dc7c1e93f0b4c10665ca1 ""
   "c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty" 1630419165 2671 4de6781a30211fe0ea4c672e4a2a8166 ""
   "c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty" 1630419165 4007 3bccccf8f35e1bc1ef0f7c55ceeb7713 ""
-  "c:/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty" 1630419252 7133 b94bbacbee6e4fdccdc7f810b2aec370 ""
-  "c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1630420569 22521 d2fceb764a442a2001d257ef11db7618 ""
   "c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1630420595 27662 df2ac0cbce6c3f309d48d78e7c627ccb ""
   "c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1630420865 678 4792914a8f45be57bb98413425e4c7af ""
   "c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1630423226 1090 bae35ef70b3168089ef166db3e66f5b2 ""
@@ -153,6 +147,6 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1630426339 2797772 235209822cc2568e25123ecf25b284e7 ""
   "c:/texlive/2021/texmf.cnf" 1630426082 713 e69b156964470283e0530f5060668171 ""
   (generated)
+  "Symmetries_Fields_Particles.aux"
   "Symmetries_Fields_Particles.pdf"
   "Symmetries_Fields_Particles.log"
-  "Symmetries_Fields_Particles.aux"
