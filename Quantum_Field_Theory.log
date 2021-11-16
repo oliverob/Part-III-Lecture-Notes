@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  30 OCT 2021 12:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  16 NOV 2021 12:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -30,6 +30,60 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen139
+)) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count195
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks18
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks19
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 ) (c:/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
@@ -41,30 +95,30 @@ Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 ) (c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count190
-\l__pdf_internal_box=\box50
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box52
 ) (./Quantum_Field_Theory.aux)
 \openout1 = `Quantum_Field_Theory.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -74,8 +128,8 @@ LaTeX Warning: No \author given.
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./Quantum_Field_Theory.tex:17: Undefined control sequence.
-l.17 X \tilda
+./Quantum_Field_Theory.tex:18: Undefined control sequence.
+l.18 X \tilda
               M^{\delta}, \. [X] = \delta
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -84,20 +138,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Command \. invalid in math mode on input line 17.
+LaTeX Warning: Command \. invalid in math mode on input line 18.
 
-./Quantum_Field_Theory.tex:17: Please use \mathaccent for accents in math mode.
+./Quantum_Field_Theory.tex:18: Please use \mathaccent for accents in math mode.
 \add@accent ... \let \ignorespaces \relax \accent 
                                                   #1 #2\egroup \spacefactor ...
-l.17 X \tilda M^{\delta}, \. [
+l.18 X \tilda M^{\delta}, \. [
                               X] = \delta
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
-./Quantum_Field_Theory.tex:17: You can't use `\spacefactor' in display math mode.
+./Quantum_Field_Theory.tex:18: You can't use `\spacefactor' in display math mode.
 \add@accent ... \accent #1 #2\egroup \spacefactor 
                                                   \accent@spacefactor 
-l.17 X \tilda M^{\delta}, \. [
+l.18 X \tilda M^{\delta}, \. [
                               X] = \delta
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -106,14 +160,14 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font cmex10!
 
-Overfull \hbox (34.48758pt too wide) in paragraph at lines 24--26
+Overfull \hbox (34.48758pt too wide) in paragraph at lines 25--27
 \OT1/cmr/m/n/12 Lorentz trans-for-ma-tions that are de-fined by keep-ing the met-ric ($\OML/cmm/m/it/12 ^^Q \OT1/cmr/m/n/12 = []$)
  []
 
-./Quantum_Field_Theory.tex:29: Undefined control sequence.
+./Quantum_Field_Theory.tex:30: Undefined control sequence.
 <recently read> \deta 
                       
-l.29 the further restrection of $\deta
+l.30 the further restrection of $\deta
                                        \Lambda = +1$ removes the possibility...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -121,8 +175,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:40: Extra }, or forgotten $.
-l.40 ...\partial_{\nu}\phi((\Lambda^{-1} \cdot x)}
+./Quantum_Field_Theory.tex:41: Extra }, or forgotten $.
+l.41 ...\partial_{\nu}\phi((\Lambda^{-1} \cdot x)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -131,12 +185,12 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 58.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 59.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-./Quantum_Field_Theory.tex:62: Undefined control sequence.
-l.62 ...}\phi] = \int_{t_i}^{t_f} L[\phi, \parital
+./Quantum_Field_Theory.tex:63: Undefined control sequence.
+l.63 ...}\phi] = \int_{t_i}^{t_f} L[\phi, \parital
                                                   _{\mu}\phi] dt = \int_{t_i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -144,13 +198,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:76: Double superscript.
-l.76 choose variables of $y^{\mu} = \Lambda^{-1}^
+./Quantum_Field_Theory.tex:77: Double superscript.
+l.77 choose variables of $y^{\mu} = \Lambda^{-1}^
                                                  {\mu}_{\nu} x^{\nu}$ giving:
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-./Quantum_Field_Theory.tex:83: Undefined control sequence.
-l.83         \mathfrack
+./Quantum_Field_Theory.tex:84: Undefined control sequence.
+l.84         \mathfrack
                        {L} = \frac{1}{2}\partial_{\mu}\phi \partial^{\mu} \p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -159,13 +213,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
 [3]
-./Quantum_Field_Theory.tex:96: Undefined control sequence.
-l.96 ...rrow 0$ for $|\bm x| \rightarrow \infinity
+./Quantum_Field_Theory.tex:97: Undefined control sequence.
+l.97 ...rrow 0$ for $|\bm x| \rightarrow \infinity
                                                   $ and $t \rightarrow \infi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -173,8 +227,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:96: Undefined control sequence.
-l.96 ...ow \infinity$ and $t \rightarrow \infinity
+./Quantum_Field_Theory.tex:97: Undefined control sequence.
+l.97 ...ow \infinity$ and $t \rightarrow \infinity
                                                   $. Consider variation of a...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -182,8 +236,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:101: Undefined control sequence.
-l.101 ...l \mathfrak{L}}{\partial \phi} - \parital
+./Quantum_Field_Theory.tex:102: Undefined control sequence.
+l.102 ...l \mathfrak{L}}{\partial \phi} - \parital
                                                   _{\mu} (\frac{\partial \ma...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -191,8 +245,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:101: Undefined control sequence.
-l.101 ...ial_{\mu} \phi}}  )\delta \phi + \parital
+./Quantum_Field_Theory.tex:102: Undefined control sequence.
+l.102 ...ial_{\mu} \phi}}  )\delta \phi + \parital
                                                   _{\mu} (\frac{\partial \ma...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -201,51 +255,51 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 139--142
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
 [6]
-./Quantum_Field_Theory.tex:174: Double superscript.
+./Quantum_Field_Theory.tex:175: Double superscript.
 <recently read> ^
                  
-l.174 \psi^*(x) \rightarrow \psi^*'
+l.175 \psi^*(x) \rightarrow \psi^*'
                                    (x) = e^{-i\alpha}\psi^*(x)
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
+Underfull \hbox (badness 10000) in paragraph at lines 176--179
 
  []
 
 [7]
-./Quantum_Field_Theory.tex:208: Undefined control sequence.
-l.208 $$\deta
+./Quantum_Field_Theory.tex:209: Undefined control sequence.
+l.209 $$\deta
               \Lambda = +1$$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -254,14 +308,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [8]
-Overfull \hbox (32.3736pt too wide) in paragraph at lines 263--266
+Overfull \hbox (32.3736pt too wide) in paragraph at lines 264--267
 \OT1/cmr/m/n/12 above we used the fact that $
 $ is anti-symmetric to van-ish the term $\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 
 []\OML/cmm/m/it/12 @[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )\U/euf/m/n/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$.
  []
 
-./Quantum_Field_Theory.tex:285: Undefined control sequence.
-l.285 \parital
+./Quantum_Field_Theory.tex:286: Undefined control sequence.
+l.286 \parital
                S = \int_{\mathbb{R}^{3,1}} d^4x \delta \mathfrak{L} = \int_{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -270,10 +324,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [9]
-./Quantum_Field_Theory.tex:303: Undefined control sequence.
+./Quantum_Field_Theory.tex:304: Undefined control sequence.
 <argument> \parti 
                   `:w al t
-l.303 al t}
+l.304 al t}
             j^0(t,x)  = - \int_V dV \nabla \cdot \bm J = - \int_{\partial V}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -282,15 +336,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--306
+Underfull \hbox (badness 10000) in paragraph at lines 304--307
 
  []
 
 [10]
-./Quantum_Field_Theory.tex:350: Undefined control sequence.
+./Quantum_Field_Theory.tex:351: Undefined control sequence.
 <argument> \partial (\partial _{\mu }\pphi 
                                            )
-l.350 ...hfrak{L}}{\partial (\partial_{\mu}\pphi)}
+l.351 ...hfrak{L}}{\partial (\partial_{\mu}\pphi)}
                                                   \partial_{\nu} \phi - \del...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -299,48 +353,48 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 373--376
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--376
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--376
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 400--403
+Underfull \hbox (badness 10000) in paragraph at lines 401--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--427
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
+Underfull \hbox (badness 10000) in paragraph at lines 434--437
 
  []
 
 
-Overfull \hbox (10.23514pt too wide) in paragraph at lines 442--444
+Overfull \hbox (10.23514pt too wide) in paragraph at lines 443--445
 \OT1/cmr/m/n/12 the hamil-to-nian den-sity us-ing the def-i-ni-tion of $\OML/cmm/m/it/12 ^^Y$ \OT1/cmr/m/n/12 to give $\OMS/cmsy/m/n/12 H \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 H\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 x\OML/cmm/m/it/12 ; t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; ^^Y\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 x\OML/cmm/m/it/12 ; t\OT1/cmr/m/n/12 ))$.
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 481--484
+Underfull \hbox (badness 10000) in paragraph at lines 482--485
 
  []
 
 [15]
-./Quantum_Field_Theory.tex:517: Undefined control sequence.
-l.517 First off replace $q \rightarrrow
+./Quantum_Field_Theory.tex:518: Undefined control sequence.
+l.518 First off replace $q \rightarrrow
                                         \hat q$ and $p \rightarrow \hat p$ w...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -348,153 +402,77 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:525: Missing { inserted.
+
+LaTeX Warning: Command \$ invalid in math mode on input line 526.
+
+
+./Quantum_Field_Theory.tex:526: LaTeX Error: Command \$ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.526 [\hat a, \hat \a
+                      ^{\dagger}] = \hbar
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Quantum_Field_Theory.tex:526: Extra }, or forgotten $.
+\mathaccentV ...blethree \frozen@everymath {}$#5$}
+                                                  \macc@tmp \ifnum \macc@dep...
+l.526 [\hat a, \hat \a
+                      ^{\dagger}] = \hbar
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Quantum_Field_Theory.tex:526: Argument of \a has an extra }.
+<inserted text> 
+                \par 
+l.526 [\hat a, \hat \a
+                      ^{\dagger}] = \hbar
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./Quantum_Field_Theory.tex:526: Paragraph ended before \a was complete.
 <to be read again> 
-                   \begingroup 
-l.525 [\hat a, \hat \a^
-                       {\dagger}] = \hbar
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+                   \par 
+l.526 [\hat a, \hat \a
+                      ^{\dagger}] = \hbar
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-
-LaTeX Warning: Command \^ invalid in math mode on input line 525.
-
-./Quantum_Field_Theory.tex:525: Missing $ inserted.
+./Quantum_Field_Theory.tex:526: Missing $ inserted.
 <inserted text> 
                 $
-l.525 [\hat a, \hat \a^{\dagger}
-                                ] = \hbar
+l.526 [\hat a, \hat \a
+                      ^{\dagger}] = \hbar
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Field_Theory.tex:525: Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.525 [\hat a, \hat \a^{\dagger}
-                                ] = \hbar
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-./Quantum_Field_Theory.tex:525: Extra }, or forgotten $.
-\add@accent ... \accent@spacefactor \spacefactor }
-                                                  \let \maybe@load@fontshape...
-l.525 [\hat a, \hat \a^{\dagger}
-                                ] = \hbar
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./Quantum_Field_Theory.tex:525: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.525 [\hat a, \hat \a^{\dagger}
-                                ] = \hbar
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./Quantum_Field_Theory.tex:525: Extra }, or forgotten $.
-\add@accent ...spaces \relax \accent #1 #2\egroup 
-                                                  \spacefactor \accent@space...
-l.525 [\hat a, \hat \a^{\dagger}
-                                ] = \hbar
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./Quantum_Field_Theory.tex:525: You can't use `\spacefactor' in math mode.
-\add@accent ... \accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.525 [\hat a, \hat \a^{\dagger}
-                                ] = \hbar
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./Quantum_Field_Theory.tex:526: You can't use `\eqno' in math mode.
-\endequation ->\eqno 
-                     \hbox {\@eqnnum }$$\@ignoretrue 
-l.526 \end{equation}
-                    
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./Quantum_Field_Theory.tex:526: Missing $ inserted.
-<inserted text> 
-                $
-l.526 \end{equation}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 ./Quantum_Field_Theory.tex:526: Missing } inserted.
 <inserted text> 
                 }
-l.526 \end{equation}
-                    
+l.526 [\hat a, \hat \a
+                      ^{\dagger}] = \hbar
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
-
-./Quantum_Field_Theory.tex:526: Missing } inserted.
-<inserted text> 
-                }
-l.526 \end{equation}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Quantum_Field_Theory.tex:526: Missing } inserted.
-<inserted text> 
-                }
-l.526 \end{equation}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Quantum_Field_Theory.tex:526: Missing $ inserted.
-<inserted text> 
-                $
-l.526 \end{equation}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Quantum_Field_Theory.tex:526: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.526 \end{equation}
-                    
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
 
 [16]
-./Quantum_Field_Theory.tex:535: Extra }, or forgotten $.
-l.535 ...dagger} ] = \omega \hbar \hat a^{dagger}}
+./Quantum_Field_Theory.tex:536: Extra }, or forgotten $.
+l.536 ...dagger} ] = \omega \hbar \hat a^{dagger}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -502,15 +480,15 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./Quantum_Field_Theory.tex:554: Double superscript.
-l.554 \ket{n} = (\hat a^{\dagger}^
+./Quantum_Field_Theory.tex:555: Double superscript.
+l.555 \ket{n} = (\hat a^{\dagger}^
                                   n) \ket{0}
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-./Quantum_Field_Theory.tex:583: Missing } inserted.
+./Quantum_Field_Theory.tex:584: Missing } inserted.
 <inserted text> 
                 }
-l.583 ...dagger}_{\bm p} e^{-\bm p \cdot \bm x} ]}
+l.584 ...dagger}_{\bm p} e^{-\bm p \cdot \bm x} ]}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -519,10 +497,10 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 [17]
-./Quantum_Field_Theory.tex:583: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \over #2}
-                                               
-l.583 ...dagger}_{\bm p} e^{-\bm p \cdot \bm x} ]}
+./Quantum_Field_Theory.tex:584: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.584 ...dagger}_{\bm p} e^{-\bm p \cdot \bm x} ]}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -530,10 +508,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./Quantum_Field_Theory.tex:600: Missing } inserted.
+./Quantum_Field_Theory.tex:601: Missing } inserted.
 <inserted text> 
                 }
-l.600 $
+l.601 $
        $
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -542,33 +520,33 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (6.39873pt too wide) detected at line 600
+Overfull \hbox (6.39873pt too wide) detected at line 601
 \OT1/cmr/m/n/12 [[](\OML/cmm/b/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 y\OT1/cmr/m/n/12 )] = [] [] [] [] [][]
  []
 
 
-Overfull \hbox (33.94318pt too wide) detected at line 603
+Overfull \hbox (33.94318pt too wide) detected at line 604
 \OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ] = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] + \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ^^Y\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 ^^N[]\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 p \OMS/cmsy/m/n/12 ^^@ \OML/cmm/b/it/12 q\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--609
+Underfull \hbox (badness 10000) in paragraph at lines 608--610
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--609
+Underfull \hbox (badness 10000) in paragraph at lines 608--610
 
  []
 
 
-Overfull \hbox (9.49643pt too wide) detected at line 613
+Overfull \hbox (9.49643pt too wide) detected at line 614
 [] \OT1/cmr/m/n/12 = [] [] [][](\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ![] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )([][] + [][]) + (\OML/cmm/m/it/12 ![] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )([][] + [][])
  []
 
 [18]
-./Quantum_Field_Theory.tex:646: Undefined control sequence.
-l.646 ...elta^{(3)}(0) = \lim_{L \rightarrow \inty
+./Quantum_Field_Theory.tex:647: Undefined control sequence.
+l.647 ...elta^{(3)}(0) = \lim_{L \rightarrow \inty
                                                   } V_L
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -577,17 +555,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [19]
-./Quantum_Field_Theory.tex:650: Double subscript.
+./Quantum_Field_Theory.tex:651: Double subscript.
 <argument> E_{(L)}_
                    0
-l.650 ...\lim_{L \rightarrow \frac{E_{(L)}_0}{V_L}
+l.651 ...\lim_{L \rightarrow \frac{E_{(L)}_0}{V_L}
                                                   
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./Quantum_Field_Theory.tex:651: Missing } inserted.
+./Quantum_Field_Theory.tex:652: Missing } inserted.
 <inserted text> 
                 }
-l.651 $
+l.652 $
        $
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -595,37 +573,28 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Quantum_Field_Theory.tex:653: Undefined control sequence.
-l.653 ...i)^3} \frac{1}{2} \omega_{\bm p} \implies
-                                                   \epsilon_0 \int \frac{d^3...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 658--661
+Underfull \hbox (badness 10000) in paragraph at lines 659--662
 
  []
 
 
-Overfull \hbox (8.27226pt too wide) detected at line 663
+Overfull \hbox (8.27226pt too wide) detected at line 664
 \OML/cmm/m/it/12 ^^O[] \OT1/cmr/m/n/12 = [][] [][]\OML/cmm/m/it/12 ![] \OT1/cmr/m/n/12 = [] [][] \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j[][]\OML/cmm/m/it/12 d\OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 p\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 ^^U[]\OT1/cmr/m/n/12 (1 + \OML/cmm/m/it/12 O\OT1/cmr/m/n/12 ([]))
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--668
+Underfull \hbox (badness 10000) in paragraph at lines 664--669
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--668
+Underfull \hbox (badness 10000) in paragraph at lines 664--669
 
  []
 
-./Quantum_Field_Theory.tex:669: Undefined control sequence.
-l.669 ...s to the right. $:\hat a \hat a^{\daggger
+./Quantum_Field_Theory.tex:670: Undefined control sequence.
+l.670 ...s to the right. $:\hat a \hat a^{\daggger
                                                   }^2 \hat a \hat a^{\dagger...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -633,48 +602,38 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Field_Theory.tex:669: Double superscript.
-l.669 ...to the right. $:\hat a \hat a^{\daggger}^
+./Quantum_Field_Theory.tex:670: Double superscript.
+l.670 ...to the right. $:\hat a \hat a^{\daggger}^
                                                   2 \hat a \hat a^{\dagger}:...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-./Quantum_Field_Theory.tex:669: Double superscript.
-l.669 ...t a \hat a^{\dagger}: = \hat a^{\dagger}^
+./Quantum_Field_Theory.tex:670: Double superscript.
+l.670 ...t a \hat a^{\dagger}: = \hat a^{\dagger}^
                                                   3 \hat a^2$
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 [20]
-./Quantum_Field_Theory.tex:673: Undefined control sequence.
-l.673 This implies $(\epsilon_0)_{\text
-                                       {Normal}} = 0$ as we can see that as ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 672--675
+Underfull \hbox (badness 10000) in paragraph at lines 673--676
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--685
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--685
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
 
  []
 
 [21]
-Overfull \hbox (73.11334pt too wide) detected at line 699
+Overfull \hbox (73.11334pt too wide) detected at line 700
 \OT1/cmr/m/n/12 [([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] = [] []\OML/cmm/m/it/12 ![]\OT1/cmr/m/n/12 [[][]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] = [] []\OML/cmm/m/it/12 ![][]\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ] = [] []\OML/cmm/m/it/12 ![][]\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ^^Y\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 ^^N[]\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 q \OMS/cmsy/m/n/12 ^^@ \OML/cmm/b/it/12 p\OT1/cmr/m/n/12 )
  []
 
-./Quantum_Field_Theory.tex:704: Extra }, or forgotten $.
-l.704 ...^{0i}$ and $T^{\mu \nu} = \partial^{\mu}}
+./Quantum_Field_Theory.tex:705: Extra }, or forgotten $.
+l.705 ...^{0i}$ and $T^{\mu \nu} = \partial^{\mu}}
                                                    \phi \partial^{\nu} \phi ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -683,40 +642,451 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [22]
-./Quantum_Field_Theory.tex:745: Undefined control sequence.
-l.745 [^{\mu}p_{\mu} = m^2, p^0 > 0 \implies
-                                             P_0 = + \sqrt{|\bm p|^2 + m^2} ...
+./Quantum_Field_Theory.tex:764: Undefined control sequence.
+l.764  \mathfrack
+                 {L} = \frac{1}{2}\partial_{\mu}\phi^* \partial^{\mu} \phi -...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)
-Runaway argument?
-{2 E_{\bm p} $$ Rewrite the completeness relation: $$ \ket {\bm p^4} \ETC.
-! File ended while scanning use of \frac .
+[23]
+./Quantum_Field_Theory.tex:799: Argument of \bm has an extra }.
 <inserted text> 
                 \par 
-<*> Quantum_Field_Theory.tex
-                            
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+l.799  \ket{\bm p, +} = \hat \bm
+                                 c^{\dagger}_{\bm p}\ket{0}
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
 
-! Emergency stop.
-<*> Quantum_Field_Theory.tex
-                            
-*** (job aborted, no legal \end found)
+Runaway argument?
+./Quantum_Field_Theory.tex:799: Paragraph ended before \bm was complete.
+<to be read again> 
+                   \par 
+l.799  \ket{\bm p, +} = \hat \bm
+                                 c^{\dagger}_{\bm p}\ket{0}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
- 
+./Quantum_Field_Theory.tex:799: Missing $ inserted.
+<inserted text> 
+                $
+l.799  \ket{\bm p, +} = \hat \bm
+                                 c^{\dagger}_{\bm p}\ket{0}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Field_Theory.tex:799: Missing } inserted.
+<inserted text> 
+                }
+l.799  \ket{\bm p, +} = \hat \bm
+                                 c^{\dagger}_{\bm p}\ket{0}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Field_Theory.tex:799: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.799  \ket{\bm p, +} = \hat \bm
+                                 c^{\dagger}_{\bm p}\ket{0}
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Quantum_Field_Theory.tex:799: Too many }'s.
+<recently read> }
+                 
+l.799  \ket{\bm p, +} = \hat \bm
+                                 c^{\dagger}_{\bm p}\ket{0}
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Quantum_Field_Theory.tex:799: Missing $ inserted.
+<inserted text> 
+                $
+l.799  \ket{\bm p, +} = \hat \bm c^
+                                   {\dagger}_{\bm p}\ket{0}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Field_Theory.tex:802: Argument of \bm has an extra }.
+<inserted text> 
+                \par 
+l.802  \ket{\bm p, -} = \hat \bm
+                                 b^{\dagger}_{\bm p}\ket{0}
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./Quantum_Field_Theory.tex:802: Paragraph ended before \bm was complete.
+<to be read again> 
+                   \par 
+l.802  \ket{\bm p, -} = \hat \bm
+                                 b^{\dagger}_{\bm p}\ket{0}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Quantum_Field_Theory.tex:802: Missing $ inserted.
+<inserted text> 
+                $
+l.802  \ket{\bm p, -} = \hat \bm
+                                 b^{\dagger}_{\bm p}\ket{0}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Field_Theory.tex:802: Missing } inserted.
+<inserted text> 
+                }
+l.802  \ket{\bm p, -} = \hat \bm
+                                 b^{\dagger}_{\bm p}\ket{0}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Field_Theory.tex:802: Too many }'s.
+<recently read> }
+                 
+l.802  \ket{\bm p, -} = \hat \bm
+                                 b^{\dagger}_{\bm p}\ket{0}
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Quantum_Field_Theory.tex:802: Missing $ inserted.
+<inserted text> 
+                $
+l.802  \ket{\bm p, -} = \hat \bm b^
+                                   {\dagger}_{\bm p}\ket{0}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Field_Theory.tex:804: Missing $ inserted.
+<inserted text> 
+                $
+l.804 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[24] [25] [26]
+./Quantum_Field_Theory.tex:908: Missing } inserted.
+<inserted text> 
+                }
+l.908 $
+       $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Field_Theory.tex:908: Missing } inserted.
+<inserted text> 
+                }
+l.908 $
+       $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--914
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 924--927
+
+ []
+
+[27]
+./Quantum_Field_Theory.tex:931: Missing } inserted.
+<inserted text> 
+                }
+l.931 ...igh energy as if $\lambda_n << (E)^{4-n)$
+                                                   then $\tilde \lambda_n <<...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--936
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--936
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--936
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
+
+ []
+
+[29]
+./Quantum_Field_Theory.tex:1010: Extra }, or forgotten $.
+l.1010 ...(I + \frac{1}{i}\int^t dt' \hat H_I(t')}
+                                                   - \frac{1}{2} \int^t \int...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (79.28275pt too wide) detected at line 1021
+\OML/cmm/m/it/12 i[]T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) [] = [](\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 I \OT1/cmr/m/n/12 + [] [][] \OML/cmm/m/it/12 dt[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 ) [] \OMS/cmsy/m/n/12 ^^Y []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) []
+ []
+
+
+Overfull \hbox (30.30038pt too wide) detected at line 1022
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = [][[][] [][]] = [][[][] [] = [][[][]
+ []
+
+./Quantum_Field_Theory.tex:1025: Missing $ inserted.
+<inserted text> 
+                $
+l.1025 A_
+         {i \rightarrow f} = \lim_{T\rightarrow \infty} [_S\bra{f,t=+\frac{T...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Field_Theory.tex:1031: Missing $ inserted.
+<inserted text> 
+                $
+l.1031  \section
+                {Lecture 12}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (3.12894pt too wide) in paragraph at lines 1024--1031
+\OT1/cmr/m/n/12 A$[] = [][][[][] [][]]\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 ) []]$$$$\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (389.8282pt too wide) in paragraph at lines 1024--1031
+[][]\OT1/cmr/m/n/12 [[][] [][]] = []\OML/cmm/m/it/12 S []\OT1/cmr/m/n/12 ]$$\OML/cmm/m/it/12 THESELASTFEWEQUATIONSMESSEDUPLOOKATLASTFIVEMINSOFLECTURE\OT1/cmr/m/n/12 11[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1031
+
+ []
+
+[30]
+Overfull \hbox (134.72508pt too wide) detected at line 1075
+\OML/cmm/m/it/12 T[] \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) = ([](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) + [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ))([](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) + [](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )) = [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) + [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) + [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) + [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )
+ []
+
+[31]
+Overfull \hbox (60.10843pt too wide) detected at line 1084
+\OML/cmm/m/it/12 D\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) = [[](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )] = [] [][][[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 = [] [][][]\OML/cmm/m/it/12 e[]
+ []
+
+[32]
+./Quantum_Field_Theory.tex:1124: Missing } inserted.
+<inserted text> 
+                }
+l.1124 $
+        $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (58.16364pt too wide) detected at line 1127
+\OT1/cmr/m/n/12 ^^A[](\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) = [] []\OML/cmm/m/it/12 ie[] \OMS/cmsy/m/n/12 ^^B ^^@\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^YiRes[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 I\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 )) = [] []\OML/cmm/m/it/12 ie[][]e[]
+ []
+
+[33] [34]
+Overfull \hbox (473.34526pt too wide) detected at line 1180
+\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 N[]N[]; N[] \OT1/cmr/m/n/12 = [] [](\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) [] = [][] [] [] [] [][]\OML/cmm/m/it/12 e[] [] [][][][] [] \OT1/cmr/m/n/12 = [][] [] [] [] [][]\OML/cmm/m/it/12 e[]A
+ []
+
+
+Overfull \hbox (112.12917pt too wide) detected at line 1195
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = []([])[] [] \OML/cmm/m/it/12 d[]x[] [] d[]x[]N[]N[]\OT1/cmr/m/n/12 ^^A[](\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) = []([])[] [] \OML/cmm/m/it/12 d[]x[] [] d[]x[]N[]N[] [] [][]
+ []
+
+
+Overfull \hbox (179.23294pt too wide) detected at line 1198
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = []([])[] [] [] [] [][](\OML/cmm/m/it/12 e[]e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e[]e[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 x[]  \OMS/cmsy/m/n/12 ([])  \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )
+ []
+
+
+Overfull \hbox (50.12622pt too wide) detected at line 1202
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 i\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ig\OT1/cmr/m/n/12 )[](2\OML/cmm/m/it/12 ^^Y\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 ^^N[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 p[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 ([] + [])
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1226--1229
+
+ []
+
+./Quantum_Field_Theory.tex:1241: Undefined control sequence.
+l.1241 ...mathbb{R})\}$ where $\Lambda \eta \Lamda
+                                                  ^T = \eta, det \Lamda = +1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1241: Undefined control sequence.
+l.1241 ...\Lambda \eta \Lamda^T = \eta, det \Lamda
+                                                   = +1$.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[36]
+./Quantum_Field_Theory.tex:1253: Undefined control sequence.
+l.1253 D(\Lamdba
+                _{AB})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1266
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1287
+
+ []
+
+
+Overfull \hbox (0.93094pt too wide) in paragraph at lines 1285--1287
+\OT1/cmr/m/n/12 Consider proper Lorentz trans-for-ma-tions with $\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 SO\OT1/cmr/m/n/12 (3\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)$ so $^^C = \OML/cmm/m/it/12 Exp\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )$.
+ []
+
+[38]
+./Quantum_Field_Theory.tex:1311: Undefined control sequence.
+l.1311 ...$\{\gamma^{\mu}, \gamma^{\nu} \} = \gamm
+                                                  ^{\mu} \gamma^{\nu} + \gam...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1313
+
+ []
+
+./Quantum_Field_Theory.tex:1315: Undefined control sequence.
+l.1315 ...   \mathbb{I}_2 & 0 \end{pmatrix}, \gamm
+                                                  ^i = \begin{pmatrix} 0 & \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[39] [40]
+./Quantum_Field_Theory.tex:1373: Double superscript.
+<recently read> ^
+                 
+l.1373 \psi^{\alpha}(x) \rightarrow \psi^{\alpha}'
+                                                  (x) = S[\Lambda]^{\alpha}_...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1393--1397
+
+ []
+
+./Quantum_Field_Theory.tex:1409: Undefined control sequence.
+l.1409 ...^i, \gamma^0\} - \gamma^0 \gamma^0 \gamm
+                                                  ^i = (\gamma^i)^{\dagger},...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1409: Double superscript.
+l.1409 ...i, \gamma^0\} - \gamma^0 \gamma^0 \gamm^
+                                                  i = (\gamma^i)^{\dagger}, ...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+
+Overfull \hbox (67.1302pt too wide) detected at line 1418
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 )[] = []([\OML/cmm/m/it/12 ^^M[]; ^^M[]\OT1/cmr/m/n/12 ])[] = []([(\OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/12 )[]]) = [][\OML/cmm/m/it/12 ^^M[]^^M[]^^M[]; ^^M[]^^M[]^^M[]\OT1/cmr/m/n/12 ] = []\OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ^^M[]; ^^M[]\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ^^M[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ^^M[]S[]^^M[]
+ []
+
+[41]
+Overfull \hbox (87.20729pt too wide) detected at line 1422
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 [^^C])[] = [[]([]
+[]\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 )][] = []([]
+[](\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 )[]) = [](\OMS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 
+[]\OML/cmm/m/it/12 ^^M[]S[]^^M[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^M[] []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 
+[]\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ^^M[]
+ []
+
+[42] (./Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 698 strings out of 478599
- 10965 string characters out of 5858101
- 312896 words of memory out of 5000000
- 18612 multiletter control sequences out of 15000+600000
- 417817 words of font info for 80 fonts, out of 8000000 for 9000
+ 1332 strings out of 478599
+ 18343 string characters out of 5858101
+ 327880 words of memory out of 5000000
+ 19228 multiletter control sequences out of 15000+600000
+ 418525 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,41p,1327b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 56i,8n,66p,1327b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Quantum_Field_Theory.pdf (42 pages, 340126 bytes).
+PDF statistics:
+ 241 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

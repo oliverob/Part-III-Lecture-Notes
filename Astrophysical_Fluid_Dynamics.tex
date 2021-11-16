@@ -276,7 +276,8 @@ Now compare LHS and 3rd term. $\frac{4\pi uL\rho}{TB^2} \sim \frac{u^2}{\frac{B^
 \noindent
 When $u << c_s$ neglect inertial vs pressure\\
 When $u << u_A$ can neglect inertial vs magnetic stresses\\
-When $c_s << u_A$ can neglect thermal pressure vs magnetic pressure\\ \\
+When $c_s << u_A$ can neglect thermal pressure vs magnetic pressure\\\\
+\textbf{magnetostatic equilibrium}: is a static solution when $\bm u = 0$\\ \\
 \textbf{Plasma $\beta$ }\\
 $p$ - thermal pressure\\
 $p_B = \frac{B^2}{8\pi}$ - magnetic pressure\\
@@ -587,4 +588,436 @@ $$
 \end{equation}
 for $\bm F_{H_m} = c \bm B \phi_e + \bm A \times (\bm u \times \bm B)$
 (often have to derive conservation laws like this in exams so understand and learn technique)
-\end{document}
+\section{Lecture 10}
+There is also kinetic heliocity:
+$$
+H_k = \int_V \bm u \cdot \bm \omega dV, \omega = \nabla \times \bm u
+$$
+this gives completely anologous results for vorticity and magnetic field so
+$$
+\frac{\partial\bm \omega}{\partial t} = \nabla \times (\bm u \times \bm \omega)
+$$
+\subsection{Momentum conservation law}
+Momentum density $\rho \bm u$\\
+One can show that there exists a symmetric tensor $\Pi_{ij}=\Pi_{ji}$ s.t.
+$$
+\frac{\partial (\rho \bm u}{\partial t} + \nabla \cdot \bm{\Pi} = 0
+$$
+consdier ith component:
+$$
+\frac{\partial \rho}{\partial t} u_i + \rho \frac{\partial u_i}{\partial t} + \frac{\partial}{\partial x_i} \Pi_{ij} = (- \nabla \cdot(\rho \bm u))u_i + \rho \frac{\partial u_i}{\partial t} + \frac{\partial \Pi_{ij}}{\partial x_j}=0
+$$
+$$
+-u_i \frac{\partial (\rho u_i)}{\partial x_j} - \rho u_j \frac{\partial u_i}{\partial x_j} + \rho \frac{\partial u_i}{\partial t} + \rho u_j \frac{\partial u_i}{\partial x_j}  + \frac{\partial \Pi_{ij}}{\partial x_j}=0
+$$
+$$
+-\frac{\partial}{\partial x_j}{\rho u_i u_j} + \rho \frac{D u_i}{Dt}  + \frac{\partial Pi_{ij}}{\partial x_j}=0
+$$
+$$
+\rho \frac{Du_i}{Dt} = \frac{\partial }{\partial x_j}(\rho u_i u_j - \Pi_{ij}) = \frac{\partial}{\partial x_j}T_{ij}
+$$
+\textbf{Stress tensor}: $T_{ij} = \rho u_i u_j - \Pi_{ij}$\\
+\begin{equation}
+\frac{D\bm u}{Dt} = \nabla \cdot \bm T
+\end{equation}
+The first term in the stress tensor we are removing the advection so are just looking at the stresses.\\
+\textbf{Find $T_{ij}$}
+$$
+\rho \frac{D \bm u}{D t} = \nabla \cdot \bm T = - \nabla p - \rho \nabla \phi + \frac{1}{4\pi}((\nabla \times \bm B) \times \bm B)
+$$
+Let $\bm p$ be an arbitary vector. Form a tensor $\bm P = P_{ij} = \bm p_i \bm p_j$. We can prove the following to be true:
+$$
+\nabla \cdot(\bm P - \frac{1}{2} p^2\bm I) = (\nabla \cdot \bm p) \bm pp + (\nabla \times \bm p) \times \bm p
+$$
+Recall that:
+$$
+(\nabla \times \bm p) \times \bm p = (\bm p \cdot \nabla) \bm p - \nabla (\frac{\bm p}{2})
+$$
+So:
+$$
+\frac{\partial }{\partial x_j} (p_i p_j - \frac{p^2}{2} I_{ij} = ((\nabla \cdot \bm p)\bm p + (\nabla \times \bm p) \times \bm p)_i
+$$
+Introduce Maxwell's stress tensor $\bm M$:
+$$
+M_{ij} = \frac{1}{4 \pi} (B_i B_j - \frac{B^2}{2} I_{ij}
+$$
+implies an expresssion for the lorentz force:
+$$
+\frac{1}{4\pi} (\nabla \times \bm B) \times \bm B = \nabla \cdot \bm M
+$$
+Consider pressure:
+$$
+(\nabla p)_i = \frac{\partial p}{\partial x_j} I_{ij} = \frac{\partial}{\partial x_j}(pI_{ij}) = \nabla \cdot( p \bm I)
+$$
+Consider gravity:
+$$
+4 \pi \rho G = \nabla^2 G = - \nabla \cdot \bm g
+$$
+$$
+-\rho \nabla \phi = (- \frac{\nabla \cdot \bm g}{4 \pi G} (- \bm g) = -\frac{1}{4\pi G} (\nabla \cdot \bm g) \bm g
+$$
+$$
+(\nabla \cdot \bm g) \bm g + (\nabla \times \bm g )\times \bm g = \nabla \cdot (g_i g_j - \frac{g^2}{2} I_{ij}
+$$
+Second term is zero so:
+$$
+- \rho \nabla \phi = - \frac{1}{4\pi G} \nabla \cdot(g_i g_j - \frac{g^2}{2} I_{ij} 
+$$
+so we get a gravitional stress tesnor
+$$
+G_{ij} = - \frac{1}{4\pi G} \nabla \cdot(g_i g_j - \frac{g^2}{2} I_{ij} 
+$$
+$$
+-\rho \nabla \phi = \nabla \times G
+$$
+so combining it all together we get:
+$$
+\nabla \codt \bm T = \nabla \cdot (- p \bm I + \bm G + \bm M)
+$$
+$$
+\bm T = - p \bm I + \bm G + \bm M
+$$
+\begin{equation}
+        T_{ij} = -p I_{ij} -\frac{1}{4\pi G} \nabla \cdot(g_i g_j - \frac{g^2}{2} I_{ij})  + \frac{1}{4 \pi} (B_i B_j - \frac{B^2}{2} I_{ij})
+\end{equation}
+\subsection{Virial relations}
+Stem from considering $I_{ij} = \int_V x_i x_j \rho dV$. Take second time derivative
+$$
+\frac{1}{2}\frac{D^2 I_{ij}}{Dt^2}= \int_V (2K_{ij} - T_{ij}) dV
+$$
+for $K_{ij} = \rho u_i u_j$. This is a statement of the Tensor Virial Theorem. Take average over long timescales to give:
+$$
+<.> = \frac{1}{T} \lim_{T\rightarrow \infty} \int^T_0 dt
+$$
+The LHS will go to zero so you will will ened up with the difference of two first derivatives inside the limit but these are finite and as $T\rightarrow \infty$ this will go to zero. So:
+$$
+2<K_{ij}> = <T_{ij}>
+$$
+Scalar viral theorem is obtained by taking the trace of this expression. So you get the total kinetic energy of the system from the LHS, and the potential energy of the field from the RHS:
+$$
+Tr K_{ij} = Tr \frac{1}{2} \int \rho u_i u_j dV = \frac{1}{2} \rho u^2 dV = K, Tr T_{ij} = 3(\gamma -1) E_{thermal} + E_{mag} + E_{grav}
+$$
+Therefore:
+$$
+2<K> + 3(\gamma -1) <E_{th}> + <E_m> + <E_g> = 0
+$$
+For $<E_{th}> = <E_m> =0 \implies -2<K> = <E_g>$. So the total energy: $<E> = <E_k> + <E_g> = \frac{E_g}{2}$.
+\section{Examples class 1}
+Standard identity it is worth learning:
+$$
+(\nabla \times \bm u) \times \bm u = (\bm u \cdot \nabla) \bm u - \frac{1}{2} \nabla (u^2)
+$$
+YOU GET SO MANY FORMULAS AT THE FRONT OF THE EXAM BOOKLET!!
+$$
+de = TdS - p dV \implies \nabla e = T \nabla S - P \nabla V \implies \nabla e = T \nabla S - p \nabla V \implies \nabla \times \nabla e = 0 = \nabla T \times \nabla S - \nabla p \times \nabla V 
+$$
+In ideal fluid:
+$$
+\frac{DS}{Dt} = \frac{\partial S}{\partial t} + \bm u \cdot \nabla S =0
+$$
+Thermal energy equation:
+$$
+ \frac{DP}{Dt} = - \Gamma_1 P \nabla \cdot \bm u
+$$
+Be careful when doing things like $A_{ij}c_id_j = B_{ij}c_id_j \implies A_{ij}=B_{ij}$ as this is not true generally if $c = d$ so the right tensor is symmetric as then it only has 6 independant variables. In this case (/in all cases) you could take the derivative with respect to $c$ or $d$ to remove them safely. As clearly $\epilson_{ijk}x_jx_k = 0$ but $\epsilon_{ijk} \neq 0$.
+\section{Lecture 11}
+\subsection{MHD Waves}
+Start with basic static state, characterised by unperturbed variables: $\bm B_0(\bm x)$ unperturbed $\bm B$ field, $\rho_0(\bm x)$ unperturbed density, $p_0(x)$ unperturbed pressure, $\phi_0(\bm x)$ unperturbed potential, $\bm u_0(\bm x) = \bm 0$ unperturbed velocity. We then introduce a few perturbations e.g. $\delta \rho, \delta p, \delta \phi$.\\\\
+\textbf{Governing equations}:
+$$
+\frac{\partial \rho}{\partial t} = -(\bm u\cdot \nabla )\rho - \rho(\nabla \cdot \bm u)
+$$
+$$
+\frac{\partial p}{\partial t} = -(\bm u\cdot \nabla )p - \gamma p(\nabla \cdot \bm u)
+$$
+$$
+\frac{\partial \bm B}{\partial t} = \nabla \times(\bm u \times \bm B)
+$$
+Now linearise thsese terms in perturbations:
+$$
+\frac{\partial \delta \rho}{\partial t} = -(\delta \bm u\cdot \nabla )\rho_0 - \rho_0(\nabla \cdot \delta \bm u)
+$$
+$$
+\frac{\partial \delta p}{\partial t} = -(\delta \bm u\cdot \nabla )p_0 - \gamma p_0(\nabla \cdot \delta \bm u)
+$$
+$$
+\frac{\partial \delta \bm B}{\partial t} = \nabla \times(\delta \bm u \times \bm B_0)
+$$
+Can simplify these equations by introducing a displacement vector $\xi$: $\delta \bm u = \frac{\partial \bm \xi}{\partial t}$. You don't need to know the physical meaning of this. The physical meaning is the rate of change of the vectors connecting the perturbed trajectory and the unpertubed trajectory.
+$$
+\frac{\partial \delta \rho}{\partial t} = -(\frac{\partial \bm \xi}{\partial t}\cdot \nabla )\rho_0 - \rho_0(\nabla \cdot\frac{\partial \bm \xi}{\partial t}) 
+$$
+$$
+\frac{\partial \delta p}{\partial t} = -(\frac{\partial \bm \xi}{\partial t}\cdot \nabla )p_0 - \gamma p_0(\nabla \cdot\frac{\partial \bm \xi}{\partial t} )
+$$
+$$
+\frac{\partial \delta \bm B}{\partial t} = \nabla \times(\frac{\partial \bm \xi}{\partial t}\times \bm B_0)
+$$
+Can then integrate over time as only time dependance in $\bm \xi$:
+\begin{equation}
+\delta \rho = -( \bm \xi\cdot \nabla )\rho_0 - \rho_0(\nabla \cdot\bm \xi) 
+\end{equation}
+\begin{equation}
+\delta p = -( \bm \xi\cdot \nabla )p_0 - p_0(\nabla \cdot\bm \xi) 
+\end{equation}
+\begin{equation}
+\delta \bm B= \nabla \times(\bm \xi\times \bm B_0) = (\bm B \cdot \nabla) \bm \xi - \bm B(\nabla \cdot \bm \xi) - (\bm \xi \cdot \nabla) \bm B
+\end{equation}
+So knowing $\bm \xi$ gives you the full behaviour of the system. Use equation of motion to determine $\bm \xi$:
+$$
+\rho \frac{\partial \bm u}{\partial t} + \rho (\bm u \cdot \nabla ) \bm u = - \nabla p - \rho \nabla \phi + \frac{\nabla \times \bm B) \times \bm B}{4 \pi} = - \nabla p - \rho \nabla \phi + \frac{(\bm B \cdot \nabla) \bm B - \nabla (\frac{ B^2}{2})}{4\pi}
+$$
+Linearise:
+$$
+\rho_0 \frac{\partial^2 \bm \xi}{\partial t^2} =  - \nabla (\delta p + \delta(\frac{ B^2}{8\pi}) ) - \rho \nabla \delta \phi + \delta \rho \nabla \phi + \frac{1}{4\pi} ((\delta \bm B \cdot \nabla) \bm B + (\bm B \cdot \nabla) \delta \bm B)
+$$
+We have poisson: $\nabla ^2 \phi = 4 \pi G \rho \implies \nabla^2 \delta \phi = 4\pi G \delta \rho$. There is a slight issue with this equation when we look at a homogenous system this comes as a result of Jeans swindle, as this does not have a well behaved solution. The above equations come about from assuming that the background state is steady and in equilibirum so $0 = - \nabla p_0 - \rho_0 \nabla \phi_0 + \frac{(\nabla \times \bm B_0)\times \bm B_0}{4 \pi}$.\\\\
+Consider $\delta (p + \frac{B^2}{8\pi}) = \delta p = \bm B \cdot \frac{\delta \bm B}{4 \pi} = - (\bm \xi \cdot \nabla) p - \gamma (\nabla \cdot \bm \xi) + \frac{\bm B}{4\pi} ((\bm B \cdot \nabla) \bm \xi - \bm B(\nabla \cdot \bm \xi)- (\bm \xi \cdot \nabla)\bm B) $ so:
+$$
+\delta (p + \frac{B^2}{8\pi}) = - (\bm \xi \cdot \nabla)(p + \frac{B^2}{8\pi}) - (\gamma p + \frac{B^2}{4\pi} )(\nabla \cdot \bm \xi) + \frac{1}{4\pi} \bm B \cdot (\bm B \cdot \nabla) \bm \xi
+$$
+\section{Lecture 12}
+Assume homogeneity and neglect gravity to simplify equaitons to:
+$$
+\delta \rho = \rho (\nabla \cdot \bm \xi)
+$$
+$$
+\delta p = - \gamma p (\nabla \cdot \bm \xi)
+$$
+$$
+\delta \bm B = (\bm B \cdot \nabla) \bm \xi - \bm B (\nabla \cdot \bm \xi)
+$$
+$$
+\delta( p + \frac{B^2}{8\pi} ) = -(\gamma P + \frac{B^2}{4 \pi}) + \frac{1}{4\pi}\bm B((\bm B \cdot \nabla)\bm \xi)
+$$
+$$
+\rho \frac{\partial \bm \xi}{\partial t^2} = - \nabla \delta (p + \frac{B^2}{8\pi} + \frac{1}{4\pi}\bm B \cdot \nabla((\bm B \cdot \nabla)\bm \xi - \bm B(\nabla \cdot \bm \xi))
+$$
+Since we are interested in wave like equations we will plug in an ansatz. Assuming that $\bm \xi = \tilde \bm \xi e^{i(\bm k \cdot \bm x  -\omega t)}$ (wave ansatz). This means a lot of simplifications:
+$$
+\nabla f \rightarrow i\bm k f, \frac{\partial f}{\partial x} \rightarrow -i\omega f, \nabla \cdot \bm f \rightarrow i \bm k \cdot \bm f, (\bm F \cdot \nabla ) f \rightarrow i (\bm k \cdot \bm F) f
+$$
+so
+$$
+\delta (p + \frac{B^2}{4\pi}) \rightarrow -(\gamma p + \frac{B^2}{4\pi}) i \bm k \cdot \bm \xi + \frac{i}{4\pi}(\bm B \cdot \bm K)( \bm B \cdot \bm \xi)
+$$
+This gives EOM:
+$$
+\rho  (-i \omega)^2  \bm xi = i \bm k( -(\gamma p + \frac{B^2}{4\pi}) i \bm k \cdot \bm \xi + \frac{i}{4\pi}(\bm B \cdot \bm K)( \bm B \cdot \bm \xi)) + \frac{1}{4\pi}(\bm B \cdot i \bm k)(\bm B \cdot i \bm k) \bm \xi - \bm B i(\bm k \cdot \bm \xi)
+$$
+$$
+\rho \omega^2 \bm \xi = (\gamma p + \frac{B^2}{4\pi})(\bm k \cdot \bm \xi) \bm k - (\bm B \cdot \bm k)(\bm B \cdot \bm\xi) \frac{\bm k}{4 \pi} + \frac{1}{4\pi} (\bm B \cdot \bm k) ((\bm B \cdot \bm k) \bm \xi -- \bm B( \bm k \cdot \bm \xi))
+$$
+take dot with $\bm k$:
+$$
+\rho \omega^2 (\bm k \cdot \bm \xi) = (\gamma p + \frac{B^2}{4\pi} k^2 (\bm k \cdot \bm \xi) - \frac{1}{4\pi} (\bm B \cdot \bm k) (\bm B \cdot \bm \xi) k^2 + \frac{1}{4\pi}(\bm B \cdot \bm k) \times((\bm B \cdot \bm k)(\bm k \cdot \bm \xi) - (\bm B \cdot \bm k) (\bm k \cdot \bm \xi))
+$$
+\begin{equation}
+(\rho \omega^2`-k^2(\gamma p + \frac{B^2}{4\pi}))  (\bm k \cdot \bm \xi) + \frac{1}{4\pi} (\bm B \cdot \bm k) (\bm B \cdot \bm \xi) k^2  =0
+\end{equation}
+Take the first equation with doted $\bm B$ this time:
+\begin{equation}
+\gamma p(\bm B \cdot \bm k)(\bm k \cdot \bm \xi) - \rho \omega^2 (\bm B \cdot \bm \xi)  =0
+\end{equation}
+$$
+\begin{cmatrix}
+        \rho \omega^2`-k^2(\gamma p + \frac{B^2}{4\pi}) & \frac{1}{4\pi} (\bm B \cdot \bm k) \\
+        \gamma p(\bm B \cdot \bm k) && - \rho \omega^2
+\end{cmatrix}
+\begin{cmatrix}
+        (\bm k \cdot \bm \xi)\\
+        (\bm B \cdot \bm \xi)
+\end{cmatrix} =0
+$$
+First possibility is $(\bm k \cdot \bm \xi) = (\bm B \cdot \bm \xi) = 0$ implying the displacement vector is orthongonal to both $\bm k$ and $\bm B$.If we plug this assumption back into the orginal equaiont we get:
+$$
+\rho \omega^2 \bm \xi = \frac{(\bm B \cdot \bm k)^2}{4\pi} \bm \xi \implies \omega^2 = \frac{(\bm B \cdot \bm k)^2}{4 \pi \rho} = (\bm k \cdot \bm u_a)^2
+$$
+where $\bm u_a =  \frac{\bm B}{\sqrt{4\pi \rho}}$ is the alfven velcotiy and the dispersion relation of the Alfen waves is $\omega = \pm (\bm k \cdot \b u_a) - \bm k u_a \cos \theta$ with phase velocity $\bm u_{ph} = \frac{\omega}{k}\hat{\bm k} = \pm u_a \cdot \theta \hat{\bm k}$ and group velocity $\bm u_{gr} = \frac{\partial \omega}{\partial k} = \pm \bm u_a$. we have $\bm u_{ph} || \bm k$ and $\bm u_{gr} || \bm B$.\\\\
+Magnetic tension is the restoring force for the Alfen waves, and we have
+$$
+\delta \rho = 0, \delta p = 0
+$$
+so Alfen waves are incompressible. So it is just oscillation of the magnetic field lines. \\\\
+The second possibility is $(\bm k \cdot \bm \xi) \neq 0$ and $(\bm B \cdot \bm \xi) \neq 0$ so only get a solition when determinant is zero:
+$$
+- \rho \omega^2(\rho \omega^2-k^2(\gamma p + \frac{B^2}{4\pi})) - \frac{1}{4\pi} (\bm B \cdot \bm k)(\gamma p(\bm B \cdot \bm k) = 0
+$$
+\section{Lecture 13}
+In the non-magnetic case  ($\bm B = 0$):
+$$
+\rho \omega^2(\rho \omega^2 - k^2 \gamma p) = 0
+$$
+So for propagating waves we need $\omega \neq 0$ so have $\omega^2 = \frac{\gamma p}{\rho} k^2$. If we have isotropic waves then $p = k \rho^{\gamma}$, $c_s^2 = \frac{\parital p}{\parital \rho} = \gamma p^{\gamma -1} k = \frac{\gamma P}{\rho}$ so $\omega^2 = (c_sk)^2$ so these are sound waves. For sound waves the phase velocity: $\bm u_p = \frac{\omega}{k} \hat{\bm k} =  \pm c_s \hat{\bm k}$ and group velocty: $\bm u_{gr} = \pm c_s \hat{\bm k}$. So for sound waves phase velocity is the same as group velocity and are longitudinal as $\bm \xi || \bm k$.\\\\
+In the magnetic case:
+$$
+\omega^2(\omega^2 - k^2(\frac{\gamma p}{\rho} + \frac{B^2}{4\po \rho}) + \frac{\gamma P}{\rho}k^2( \frac{\bm B}{\sqrt{4\pi \rho}} \bm k)^2 = 0
+$$
+$$
+\omega^4 - \omega^2 k^2 (c_s^2 + u_A^2) + k^2 c_s^2(\bm u_A \cdot \bm k)^2 = 0
+$$
+so the disperion relation is:
+$$
+\omega^2 = \frac{1}{2}(k^2(c_s^2 + u_A^2)\pm \sqrt{k^4(c_s^2 + u_A^2)^2 - 4k^2 c_s^2 (\bm u_A \cdot \bm k)^2}
+$$
+Let $u_p = \frac{\omega}{k}$:
+$$
+u_p^2 = frac{1}{2}((c_s^2 + u_A^2)\pm \sqrt{(c_s^2 + u_A^2)^2 - 4u_A^2c_s^2 cos^2\theta}
+$$
+This gives two modes with the fast wave given by the "+" ssign and the slow wave given by the "-" sign. These are called magentosonic waves as it contains both thermal and magnetic pressure act as restoring forces.\\\\
+Consider the limit as $\theta = 90^o$ ($\bm k \prep \bm B$). For the fast wave we get $u_p = c^s + u_A^2$ and for the slow wave $u_p = 0$.\\
+Consider $\theta = 0, 180^o$ ($\bm k || \bm B$) gives:
+$$
+u_p^2 = \frac{1}{2} (c_s^2 + u_A^2 \pm|c_s^2 - u_A^2|)
+$$
+For $c_s > u_A$ we have $u_p^2 = c_s^2$ (fast) and $u_p^2 = u_A^2$ (slow) and for  $c_s < u_A$ we have $u_p^2 = u_A^2$ (fast) and $u_p^2 = c_s^2$ (slow). So for
+$$
+u_p^2 = \begin{cases} max(c_s^2, u_A^2) & \text{fast} \\
+min(c_s^2, u_A^2) & \text{slow}\end{cases}
+$$
+\textbf{Look up Friedrichs diagram as no way I can reproduce it here.} 
+$u_p$ for fast wave is always between $\sqrt{c_s^2 + u_a^2} $ and $max(c_s, u_A)$ as can be seen from the diagram. But this is not very much of a deivateion from $c_s$ so waves propogate quasi-isotropically. They are restored by total pressure $p+\frac{B^2}{8 \pi}$. Slow waves are sound waves strongly channeled along the $\bm B$field when the field is strong. 
+\subsection{Non-linear waves}
+Considering non-magnetic, no gravity, assume spatial uniformity of background, assume isentropic setup so $p= P(\rho)$ and $c_s = c_s(\rho) = c_s(p)$ and only consider 1D setup $u=(u,0,0)$.\\\\
+Start by considering a general wave solution (\textbf{Simple wave}):
+$$
+\frac{\partial f}{\partial t} + \frac{\partial }{\partial x}(\rho u) = 0
+$$
+$$
+\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = - \frac{1}{\rho} \frac{\partial p}{\partial x}
+$$
+Assume that $u= u(\rho)$ so $u= u(c_s)$:
+\begin{equation}
+\frac{\partial \rho}{\partial t} + \frac{\partial (\rho u)}{\partial \rho}\frac{\partial \rho}{\partial x} = 0
+\end{equation}
+\begin{equation}
+        \frac{\partial u}{\partial t} + (u + \frac{1}{\rho}\frac{\partial p}{\partial u}) \frac{\partial u}{\partial x} = 0
+\end{equation}
+\section{Lecture 14}
+$$
+\rho(x,t) \implies d\rho = \frac{\partial \rho}{\partial t} dt + \frac{\partial \rho}{\partial x} dx
+$$
+For fixed $\rho$ ($d \rho = 0)$:
+$$
+\frac{\partial \rho}{\partial t} + \frac{\parial \rho}{\partial x} (\frac{\partial x}{\partial t})_{\rho} \implies (\frac{\partial x}{\partial t})_{\rho} = - \frac{\frac{\partial \rho}{\parital t}}{\frac{\partial \rho}{\partial x}}
+$$
+Similarly consider $u= u(x,t)$ for fixed $u$:
+$$ (\frac{\partial x}{\partial t})_{u} = - \frac{\frac{\partial u}{\partial t}}{\frac{\partial u}{\partial x}}
+$$
+$$
+(\frac{\partial x}{\partial t} )_{\rho} = \frac{\frac{\partial(u \rho}{\partial \rho}\frac{\partial \rho}{\partial x}}{\frac{\partial \rho}{\partial x}} = u + \rho \frac{\partial u}{\partial \rho}
+$$
+similarly and using 27`:
+$$
+(\frac{\partial x}{\partial t} )_{\rho} = u + \frac{1}{\rho} \frac{\partial p}{\partial \rho}
+$$
+Since $u= u(\rho)$, $(\frac{\partial x}{\partial t})_{\rho}=(\frac{\partial x}{\partial t})_{u}$:
+$$
+u + \rho \frac{\partial u}{\partial \rho} = u + \frac{1}{\rho} \frac{\partial p}{\partial u}
+$$
+$$
+\frac{\partial u}{\partial \rho} = \frac{1}{\rho^2} \frac{\partial p}{\partial u} = \frac{1}{\rho^2} \frac{\partial p }{\partial \rho} \frac{\partial \rho}{\partial u} = \frac{c_s^2}{\rho^2}(\frac{\partial u}{\partial \rho})^{-1}
+$$
+so
+$$
+(\frac{\partial u}{\partial \rho})^2 = \frac{c_s}{\rho}^2 \implies \frac{\partial u}{\partial \rho} = \pm \frac{c_s}{\rho}
+$$
+So therefore:
+$$
+u = \pm \int \frac{c_s}{\rho} d\rho = \pm \int \frac{1}{c_s\rho} dp = u(\rho) = u(p)
+$$
+\textbf{For Polytropic gas}: $P = k \rho^{\gamma}$, $c_s^2 = \gamma k \rho^{\gamma -1}$, $c_s = (\gamma k)^{1/2} \rho^{\frac{\gamma -1}{2}}$. 
+$$
+u = \pm (\gamma k)^{\frac{1}{2}} \int \rho^{\frac{\gamma -3}{2}} d\rho = \pm \frac{2}{\gamma -1} (\gamma k)^{\frac{1}{2}}( \rho^{\frac{\gamma -1}{2}} - \rho_0^{\frac{\gamma -1}{2}})
+$$
+with $\rho_0$ is the unperturbed density i.e $\rho = \rho_0$ when $u=0$. Can be rewritten:
+$$
+u = \pm \frac{2}{\gamma -1}( c_s - c_{s,0}) \implies c_s = c_{s,0} \pm \frac{\gamma -1}{2} u
+$$
+Need lots of practice with polytropic gas is going to be used everywhere YAY waves part II love that stuff.\\\\
+\textbf{Simple wave}
+From $u= \pm \int \frac{dp}{\rho c_s}$:
+$$
+\frac{\partial p}{\partial u} = \pm \rho c_s
+$$
+But $(\frac{\partial x}{\partial t}_u = u + \frac{1}{\rho} \frac{\partial \rho}{\partial u} = u \pm c_s(u)$. Can integrate directly and find an algebraic relation between $u$, $x$ and $t$ (an implict solution for $u(x,t)$.
+$$
+x = (u \pm c_s(u)) t + f(u)
+$$
+At $t=0$, $x= f(u)$ so $f$ is just the initial condition of some sort.\\\\
+If at $t=0$ we have velocity distribution in space s.t. $u(x,t=0) = g(x)$ as $x= f(u)$ so $f= g^{-1}$.
+FOR THIS SECTION USE PART II WAVES NOTES IT WAS TAUGHT MUCH BETTER. Though here we seem to only think about the right propograting wave and also it is possible to have non-polytropic gas but it must have some relation $P=(\rho)$. We consider shock waves. They don't talk much about charctersitics and lecture seems keen on intutitive understanding of what shockwaves look like (eventually look like sawtooths would eventually tip over). Explanation given by shockwaves is that $u$ cannot be multivalued in hydrodynamics(unlike in kinetic theory) so it just becomes a shock (discontinuity).\\\\
+\textbf{Riemann invariants}\\
+$$\frac{\partial \rho}{\partial t} = \frac{\partial \rho}{\partial p} \frac{\partial p}{\partial t}= \frac{1}{c_s^2} \frac{\partal p}{\partial t}, \frac{\partial \rho}{\partial x} = \frac{1}{c_s^2}\frac{\partial p}{\partial x}$$
+$$
+\frac{\partial \rho}{\partial t} + \rho \frac{\partial u}{\partial x} + u \frac{\partial \rho}{\partial x} = \frac{1}{c_s^2} \frac{\partial p}{\partial t} + \rho \frac{ \partial u}{\partial x} + \frac{u}{c_s^2}\frac{\partial p}{\partial x} = 0
+$$
+$$
+\frac{\partial p}{\partial t} + \rho c_s^2 \frac{\partial u}{\partial x} + u \frac{\partial p}{\partial x} = 0
+$$
+\section{Lecture 15}
+Standard riemann derivation(my jam!). Silly astrophysicists don't use $Q = \int \frac{dp}{c_s\rho}$
+$$
+\frac{\partial u}{\partial t} \pm \frac{\partial p}{\partial t}  + \frac{\partial u}{\partial x}(u \pm c_s) + \frac{\partial p}{\partial x}(\frac{1}{\rho} \pm \frac{u}{\rho c_s}) = 0
+$$
+$$
+(\frac{\partial}{\partial t} (u \pm \int \frac{dp}{\rho c_s}) + (u \pm c_s) \frac{\partial}{\partial x}( u \pm \int \frac{dp}{\rho c_s}) = 0
+$$
+Riemann invariants: $J_{pm} = u \pm \int \frac{dp}{\rho c_s}$. These are constant along lines of $\frac{\partial x}{ \partial t}_{J_{\pm}} = u \pm c_s$.
+Did about twenty minutes of example of a simple wave ect. all done much better in waves notes so just re read them. \\\\
+For a simple wave when does it break given some initial conditions. Denote $v = u \pm c_s(u) \implies \frac{\partial v}{\partial t} = \frac{\partial u}{\partial t} \pm \frac{\partial c_s}{\partial y} \frac{\partial u}{\partial t} = \frac{\partial u}{\partial t}(1 \pm \frac{\partial c_s}{\partial u})$ similarly $\frac{partial v}{\partial x} = \frac{\partial u}{\partial x}(1 \pm \frac{\partial c_s}{\partial u})$. As we know:
+$$
+\frac{\partial u}{\partial t} + (u + \frac{1}{\rho}\frac{\partial p}{\partial u}) \frac{\partial u}{\partial x}  = 0, \frac{\partial p}{\partial u} = \pm \rho c_s
+$$
+So,
+$$
+\frac{\partial u}{\partial t} = - (u \pm c_s) \frac{\partial u}{\partial x}
+$$
+$$
+\frac{\partial v}{\partial t} = - (u \pm c_s) \frac{\partial u}{\partial x}(1 \pm \frac{\partial c_s}{\partial y}) = -v\frac{\partial v}{\partial x}
+$$
+So gives the inviscid burgers equation:
+\begin{equation}
+        \frac{\partial v}{\partial t} + v \frac{\partial v}{\partial x} = 0
+\end{equation}
+It is has a very simple solution:
+$$
+v(x,t) = F(x- vt)
+$$
+$F$ determined from initial conditions. At $t=0$, $v(x,0) = F(x)$.
+$$
+\frac{\partial v}{\partial x} = F'(1 - \frac{\partial v}{\partial x}t) \implies \frac{\partial v}{\partial x} + F' t \frac{\partial v}{\partial x} = F'
+$$
+$$
+\frac{\partial v}{\partial x} = \frac{F'}{1+F't} = \frac{v_0'(x-vt)}{1+v_0'(x-vt)}
+$$
+So $v$ is advected along charactersics $x= x_0 + vt$ and a shock forms when $\frac{\partial v}{\partial x} \rightarrow \infty$.
+\section{Lecture 16}
+To find where on wave it will first break is by finding the steepest part of the slope: $max(- v_0'(x_0))$ at $t= (max(-v_0'(x_0))^{-1}$. After the shock it continues to evolve after the shock, and it is called an "N-wave". It can be shown that the amplitude of the "N"-wave decays with $A(t) \prop t^{-\frac{1}{2}}$ and $w(t) \prop t^{\frac{1}{2}}$. As it is 3D as the wave propogrates it has to decay in energy so needs to decay in amplitude, as the energy flux is proporotional to the amplitude squared but there are also other effects such as damping (like heat conduction).\\\\
+At the shock visocitity starts to play an important role. 
+
+$$
+\frac{\partial u}{\partial t} + u \frac{\partial u}{\parital x} = - \frac{1}{\rho} \frac{\partial p}{\partial x} + \frac{4}{3} \frac{\eta}{\rho} \frac{\partial^2 u}{\partial x^2}
+$$
+The last term looks like $\frac{\eta}{\rho} (\nabla^2 \bm u + \frac{1}{3} \nabla(\nabla \cdot \bm u))$ where $\eta$ is the bulk viscosity and $\frac{\eta}{\rho}= \nu$ is the kinematic viscosity. Can always be written as $\nu \sim c_s \lambda$ where $\lambda$ is the mean free path of particles. When you are apporaching a shock your second derivative takes on a very large value and so becomes important. Estimate shock width, assume term 2 ($\frac{u^2}{\delta x}$) and term 4  ($\nu \frac{u}{\delta x^2}$) are of comparable size so $\delta x = \sim \frac{\nu}{\mu} \sim \frac{\nu}{c_s} \sim \lambda$. This is not surprising as this is the length scale of collisions occuring in the system. In astrophysics we sometimes have very large mean free paths so our shocks are often mediated not by collisions but by the electromagnetic effects. These collisionless shocks are very complicated entities.
+\subsubsection{Shock jump conditions}
+Planar shock propogating in x-direction with speed $v_{sh}$ so $\frac{\partial }{\partial z} = \frac{\partial}{\partial y} = 0$. Switch to frame comoving with shock, so pre shock velocity is $v_1= v_{pre} - v_{sh}$ and post shock velocity is $v_2 = v_{post} - v_{sh}$. The jump conditions are the relations between the collection $\rho_1, v_1, c_{s,1}, p_1$ and $\rho_2, v_2, c_{s,2}, p_2$. Turns out it is determined by Mach number $M= \frac{v_1}{c_{s,1}}$ which needs $M>1$ for the shock to happen. We use the conservation laws. \\
+        Mass conservation:
+        $$
+        \frac{\partial \rho}{\partial t} + \nabla \cdot \bm F_m = 0, \bm F_m = \rho \bm v \implies \rho_1 v_{x,1} = \rho_2 v_{x,2}
+        $$
+        Momentum conservation:
+        $$
+        \frac{\partial (\rho \bm v)}{\partial t} + \nabla \cdot \bm \Pi = 0, \Pi_{ij} = \rho v_i v_j - T_{ij} = \rho v_i v_i + (p+ \frac{B^2}{8 \pi}) \delta_{ij} - \frac{B_i}{B_j} \implies [\rho v_x v_z - \frac{B_x B_z}{4 \pi}] = 0
+        $$
+        Energy conservation:
+        $$
+        \frac{\partial}{\partial t}(\rho(\frac{v^2}{2} + e) + \frac{B^2}{8\pi}) + \nabla \cdot \bm F_E = 0, \bm F_E = \rho \bm v(\frac{v^2}{2} + h) + \frac{c}{4\pi}(\bm E \times \bm B) \implies [\rho v_x(\frac{v^2}{2} + h) + \frac{c}{4\pi} (E_y B_z - E_z B_y)] = 0
+        $$
+        Electrodynamic constraints:\\
+        $\bm B_n$ (normal magnetic field) is continous so $[\bm B_n] = 0$ so $$[B_x] = 0$$
+        $\bm E_t$ (tangental electric field) is continous so $[E_t] = 0 \implies [E_y] = [E_z] = 0$. As $\bm E = - \frac{\bm v \times \bm B}{c}$ so 
+        $$[v_x B_z -v_zB_x] = 0$$
+        $$[v_x B_y - v_y B_x] = 0$$
+\end{document} 
+
