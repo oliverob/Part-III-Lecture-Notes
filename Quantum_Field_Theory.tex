@@ -1425,5 +1425,25 @@ Using the fact the $\gamma^0)^2 = 1$ on the last equality. As the inverse of $e^
         (S[\Lambda])^{\dagger} = \gamma^0 (S[\Lambda])^{-1} \gamma^0
 \end{equation}
 This will allow us to construct real scalar quantities out of these fields.
+\section{Example class 2}
+In the Heisenberg picture for the free scalar field:
+$$
+\dot \phi(x) = i [H, \phi(x)] = \pi(x), \dot \pi(x) = i [H, \pi(x)] = \nabla^2 \phi(x) - m^2 \phi(x)
+$$
+The reason the signs flip when we go into the Heinsberg picutre is because $e^{i\bm p \cdot \bmx} e^{-i E t} = e^{- i p_{\mu} x^{\mu}}$ as $p_{\mu} x^{\mu} = p_0 x^0 - \bm p \cdot \bm x$
+Tips for question 4:
+$$
+\int d^3 x\> x^j e^{i(q - p) \cdot x} = -i(2\pi)^3 \frac{\partial}{\partial q^j} \delta^{(3)}(q-p)
+$$
+$$
+L=q^k \frac{partial }{\partial q^j} - q^j \frac{\partial}{\partial q^k}
+$$
+If $f(q) = f(|q|)$ (is spherically symmetric, then $Lf = 0$.
+\textbf{Feymann diagram notation}\\
+Let $\Gamma$ be a Feynmann diagram, and let $v(\Gamma)$ be the final value of the diagram (the sum of all the terms it represents in the perturbation series. So $\bra{0}S \ket{0} = \sum_{\Gamma} v(\Gamma)$. $|\Gamma|$ is the value of $\Gamma$ after applying Feynmann rules: write down $-i\lambda$ at each vertex, write down a propogator at each (internal) edge, multiply and integrate. $v(\Gamma) = \frac{1}{|Aut(\Gamma)|} |\Gamma|$ with $|Aut(\Gamma)|$ being the symmetry factor of $\Gamma$, as $Aut(\Gamma)$ is a map of the vertices to themselves that preserves the graph structure. Count how many ways you can connect the half edges (draw the vertices and half edges without connecting them and then count the number of ways you could connect them up and still generate the same diagram)\\
+Every feynmann diagram only corresponds to one term of the expansion you get addition from having multiple possible feynmann diagram. However, it is actually representing a collection of multiple term e.g $\int \phi^{\cdot}(x)\phi^*(x) \phi^{\cdot} \phi^*$ and $\int \phi^{*}(x)\phi^{\cdot}(x) \phi^{\cdot} \phi^*$ are represented by the same diagram. Number of half edges is equal to the number of fields in the perturbation. In general for a disjoint union of connected diagrams:
+$$
+\Gamma = \Gamma^{n_1}_1 \Gamma^{n_2}_2... \Gamma^{n_k}_k \implies v(\Gamma) = \frac{1}{n_1! ... n_k!} v(\Gamma_1)^{n_1} ... v(\Gamma_k)^{n_k}
+$$
 \end{document}
 
