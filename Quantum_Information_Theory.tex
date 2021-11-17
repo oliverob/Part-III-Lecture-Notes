@@ -841,4 +841,95 @@ General expression for density matrix from the defining properties: $\rho \geq 0
 $$
 \rho = \begin{pmatrix} a & b-ic \\ b+ ic & 1-a\end{pmatrix}
 $$
+\section{Lecture 17}
+\subsection{Quantum Entropies}
+Given a state $\rho \in \mathcal{D}(\mathcal{H}$ the von Neumann entropy is:.
+$$
+S(\rho) = Tr(\rho \log \rho) = - \sum_i \lambda_i \log \lambda_i = H(\{\lambda_i\})
+$$
+For spectral decomposition $\rho = \sum \lambda_1 \ket{\psi_i} \bra{\psi_i}$ we have $\log \rho = \sum_i (\log \lambda_i) \ket{\psi_i}\bra{\psi_i}$.\\
+\textbf{Properties}\\
+1) $S(\rho) \geq 0$ and $S(\rho) = 0 \iff \rho$ is a pure state. If $\rho$ pure then $\lambda_i = 1$ for some i and $\lambda_j = 0$ for the rest so from defintion $S(\rho) = 0$. Other direction if $S(\rho) = 0$ the only way the RHS can be 0 is if only one of the $\lambda_i$ is 1.\\
+2) $S(U\rho U^{\dagger}) = S(\rho)$ for all unitary U. As it just depends on the eigenvalues which a unitary operation won't change.\\
+3) Concavity $\{p_i\}$ probability distribution $\{\rho_i\} set of states. $$S(\sum_i p_i \rho_i) \geq p_i S(\rho_i)$$
+4) $S(\rho) \leq \log d$ and equality only holds if $\rho = \frac{I}{d}$
+\subsubsection{Quantum Relative Entropy}
+For $\rho \in \mathcal{D}(\mathcal{H}), \sigma \in \mathcal{B}(\mathcal{H}), \sigma \geq 0$.
+\begin{equation}
+        D(\rho || \sigma) = \begin{cases} Tr(\rho \log \rho) - Tr( \rho \log \sigma) & supp \> \rho < supp \> \sigma \\ \infty & otherwise \end{cases}
+\end{equation}
+1) $D(\rho || \sigma) \geq 0$ with equality iff $\rho = \sigma$ (Klein's inequality) this is sort of a "distance measure" but not really.\\
+Proof: Let $\rho = \sum \lambda_i \ket{i} \bra{i}, \sigma = \sum_{\alpha} \mu_{\alpha} \ket{\alpha} \bra{\alpha}$
+$$
+D(\rho || \sigma) = \sum \lambda_i \log \lambda_i - Tr( \sum \lambda_i \ket{i} \bra{i} \sum_{\alpha} (\log \mu_{\alpha}) \ket{\alpha} \bra{\alpha} = \sum \lambda_i \log \lambda_i - \sum \lambda_i \log \mu_{\alpha} |\bra{i}\ket{\alpha}|^2
+$$
+$$
+p_{i\alpha} = |\bra{i} \ket{\alpha}|^2 \geq 0, \sum_i p_{i\alpha} = \sum_i \bra{\alpha} \ket{i} \bra{i} \ket{\alpha} = 1, \sum_{\alpha} p_{i \alpha} = 1
+$$
+So $p_{i \alpha}$ are eleemnts of a doubly stochastic matric so creates probability distributions: $\{p_{i\alpha}\}_i$ and $\{p_{i \alpha}\}_{\alpha}$. So $\log x$ is concave:
+$$
+\log( \sum_{\alpha} p_{i\alpha} \mu_{\alpha}) \geq \sum_{\alpha} p_{i \alpha} \log \mu_{\alpha}
+$$
+So:
+$$
+D(\rho || \sigma) = \sum \lambda_i \log \lambda_i - \sum_i \lambda_i \sum_{\alpha}( \log \mu_{\alpha} ) p_{i\alpha} \geq \sum \lambda_i( \log \lambda_i - \log (\sum_{\alpha} p_{i \alpha} \mu_{\alpha}))
+$$
+Consider $r_i = \sum_{\alpha} p_{i\alpha} \mu_{\alpha} \geq 0$ which has $\sum_i ri = \sum_{alpha} (\sum_i \rho_{i\alpha}) \mu_{\alpha} - 1$ so $r_i$ is a probability distribution so:
+$$
+D(\rho || \sigma) \geq \sum \lambda_i \log \frac{\lambda_i}{r_i} = D_{KL}(\{\lambda_i\}|| \{r_i\}) \geq 0
+$$
+\textbf{Use this to prove property 4 of von Neuman entropy}\\
+For $\sigma = \frac{I}{d}$:
+$$
+0 \leq D(\rho || \sigma) = - S(\rho) - Tr(\rho \log(\frac{I}{d})) = - S(\rho) - Tr(\log(\frac{1}{d})\rho I) = - S(\rho) + \log(d) \implies S(\rho) \leq \log d
+$$
+\subsubsection{Data processing inequality}
+                $$
+                D(\Lambda(\rho) || \Lambda(\sigma)) \leq D(\rho || \sigma)
+                $$
+                Proof uses joint convexity: for $\{p_i\}$, $\{\rho_i\}$ and $\{\sigma\}$ these are jointyl convex if $D(\sum_i p_i \rho_i || \sum_i p_i \sigma_i) \leq \sum_i p_i D(\rho_i || \sigma_i)$. Proof on example sheet.\\
+                Also uses: $D(\rho \otimes \omega || \sigma \otimes \nu) = D(\rho || \sigma) + D(\omega || \nu)$ and $= D(\rho || \sigma)$ if $\omega = \nu$\\
+                Also uses: $D(U\rho U^{\dagger} || U \sigma U^{\dagger}) = D(\rho || \sigma)$ for all unitaries U.\\\\
+                Take two operators $X,Z \in \mathcal{B}(\mathcal{H})$ defined for $k, m.\in \{0,1,..., d-1\}$ with:
+                $$
+                X^k \ket{j} = \ket{j \oplus k}, Z^m \ket{k} = e^{2\pi i m j}{d} \ket{j}
+                $$
+                e.g. for $d=2$ this would just give the pauli matrices $X = \sigma_x$ and $Z = \sigma_z$. \\
+                Define $W_{k,m} = X^{k}Z^{m} \in \mathcal{B}(\mathbb{C}^d)$ which are unitary and called the Heisenberg-Weyl operators.\\\\
+                Finally uses $\forall A \in \mathcal{B}(\mathcal{C}^d)$ andd $\frac{1}{d^2} \sum_{k,m} W_{km} A W_{km}^{\dagger} = Tr(A) \frac{I}{d} \implies \frac{1}{d^2} \sum (I \otimes W_{km} ) X (I \otimes W_{km}^{\dagger} = Tr_2 X \otimes \tau$ with $\tau = \frac{I}{d}$.\\\\
+                \textbf{Proof of Data Processing Inequality}:
+                $$
+                D(\Lambda(\rho) || \Lambda(\sigma)) = D(\Lambda(\rho) \otimes \tau || \Lambda(\sigma) \otimes tau)
+                $$
+                Using Stinesprings Dilation Theorem: $\Lambda(\rho) = Tr_2 U(\rho \otimes \phi) U^{\dagger} = Tr_2 X$:
+                $$
+                \Lambda(\rho) \otimes \tau = Tr_2 X \otimes \tau =  \frac{1}{d^2} \sum_{km} (I \otimes W_{km} U(\rho \otimes \phi) U^{\dagger} (I \otimes W^{\dagger}_{km}
+                $$
+                similarly:
+                $$
+\Lambda(\sigma) \otimes \tau = Tr_2 X \otimes \tau =  \frac{1}{d^2} \sum_{km} (I \otimes W_{km} U(\sigma \otimes \phi) U^{\dagger} (I \otimes W^{\dagger}_{km}
+                $$
+                Define $V_{km} = (I \otimes W_{km}) U$ so:
+                $$
+                D(\Lambda(\rho) || \Lambda(\sigma)) = D( \frac{1}{d^2} \sum_{km} V_{km} (\rho \otimes \phi) V^{\dagger}_{km} || \frac{1}{d^2} \sum_{km} V_{km} (\sigma \otimes \phi) V^{\dagger}_{km})
+                $$
+                Use joint convexity:
+                $$
+        D(\Lambda(\rho) || \Lambda(\sigma))  \leq \frac{1}{d^2} \sum_{km} D(V_{km}(\rho \otimes \phi)V_{km}^{\dagger}||V_{km}(\sigma \otimes \phi)V_{km}^{\dagger})
+                Invariance under unitary:
+                $$
+                $$
+                D(\Lambda(\rho) || \Lambda(\sigma))  \leq \frac{1}{d^2} \sum_{km} D(\rho \otimes \phi || \sigma \otimes \phi) = D(\rho || \sigma) + D(\phi || \phi) = D(\rho || \sigma)
+                $$
+                \subsubsection{Lieb's concavity Theorem}
+                Implies joint convexity.\\
+                Let X be a matrix and $0 \leq t \leq 1$, and $f(A,B) = Tr( X^{\dagger} A^t X B^{1-t})$ and $A,B \geq 0$:
+                $$
+                f(\sum_i p_i A_i, \sum_i B_i) \geq \sum_i p_i f(A_i, B_i)
+                $$
+                Proof in the example sheets optional exercise. Lecturer very keen on the mathematiciain that came up with it but won't expect us to know it in an exam.\\\\
+                \subsubsection{Composite systems}
+                Quantum Joint entropy: $S(\rho_{AB}) = - Tr( \rho_{AB} \log \rho_{AB})$\\
+                Conditoinal entropy: $S(A|B) = S(\rho_{AB}) - S(\rho_B)$\\
+                Quantum mutual information: $I(A:B) = S(\rho_A) + S(\rho_B) - S(\rho_{AB}) = S)\rho_A) - S(A|B) = S(\rho_B) - S(B|A)$
 \end{document}
