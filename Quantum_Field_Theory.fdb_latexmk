@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1637087991 "Quantum_Field_Theory.tex" "Quantum_Field_Theory.pdf" "Quantum_Field_Theory" 1637087991
-  "Quantum_Field_Theory.aux" 1637087978 6328 17b455925638bb181ac83f3b95853239 "pdflatex"
-  "Quantum_Field_Theory.tex" 1637087990 83167 911bbc9b297c47624e117d4d94cafd73 ""
+["pdflatex"] 1637672256 "Quantum_Field_Theory.tex" "Quantum_Field_Theory.pdf" "Quantum_Field_Theory" 1637672256
+  "Quantum_Field_Theory.aux" 1637672241 7221 d5f0214daed21555e88ed6396bbc96a0 "pdflatex"
+  "Quantum_Field_Theory.tex" 1637672255 99145 0d3e54d75cb2ede9fe7bcd579ddc910f ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630409836 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1630409836 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -54,6 +54,7 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb" 1630409836 38151 b99966dad75d57fae7995e2606557fa7 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1630409836 35479 2cca68718f15872e7cce1a8f6033b99b ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1630409836 21098 d4aee7c0aac232caac5688b586b9363c ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1630409837 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1630409837 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1630409837 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd" 1630409837 1047 4252767c0fde12e3ce9f914ef4bb1ea1 ""
@@ -67,6 +68,7 @@
   "c:/texlive/2021/texmf-dist/tex/latex/base/article.cls" 1630417084 20144 0fe9067680219956678b52f12bdce8ee ""
   "c:/texlive/2021/texmf-dist/tex/latex/base/size12.clo" 1630417084 8449 6d2bb4e793199f4e5ccb1cfc6d242d27 ""
   "c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty" 1630411419 3601 193635d942bc4777a5acaaeeffdce692 ""
+  "c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty" 1630411617 7592 dd751af313a16a0308545d5bfd7aaaa2 ""
   "c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1630416995 27662 df2ac0cbce6c3f309d48d78e7c627ccb ""
   "c:/texlive/2021/texmf-dist/tex/latex/tools/bm.sty" 1630421646 13197 df0fe9a9695763546b59e02a008447b3 ""
   "c:/texlive/2021/texmf-dist/web2c/texmf.cnf" 1630416919 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
@@ -74,6 +76,6 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1630422739 2797772 235209822cc2568e25123ecf25b284e7 ""
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "Quantum_Field_Theory.aux"
   "Quantum_Field_Theory.pdf"
+  "Quantum_Field_Theory.aux"
   "Quantum_Field_Theory.log"

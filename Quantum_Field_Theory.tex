@@ -2,6 +2,7 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{bm}
+\usepackage{cancel}
 \usepackage{braket}
 \begin{document}
 \title{Quantum Field Theory}
@@ -1445,5 +1446,261 @@ Every feynmann diagram only corresponds to one term of the expansion you get add
 $$
 \Gamma = \Gamma^{n_1}_1 \Gamma^{n_2}_2... \Gamma^{n_k}_k \implies v(\Gamma) = \frac{1}{n_1! ... n_k!} v(\Gamma_1)^{n_1} ... v(\Gamma_k)^{n_k}
 $$
+\section{Lecture 18}
+Define Dirac Adjoint:
+$$
+\bar \psi(x) = \psi^{\dagger}(x) \gamma^0
+$$
+Under a Lorentz Transformation $\Lambda \in G_L$:
+$$
+\bar \psi(x) \rightarrow^{\Lamdba} \bar \psi'(x) = \psi^{\dagger}(\Lambda^{-1} \cdot x) S^{\dagger}(\Lambda) \gamma^0 =  \psi^{\dagger}(\Lambda^{-1} \cdot x) \gamma^0 S(\Lambda)^{-1} \gamma^0 \gamma^0 = \bar \psi(\Lambda^{-1} \cdot x) S(\Lambda)^{-1}
+$$
+Define $\Sigma(x) = \bar \psi(x) \psi(x)$. We claim $\Sigma (x)$ is a real scalar field.\\
+Proof it is real: $\Sigma^*(x) = (\psi^{\dagger}(x) \gamma^0 \psi(x))^{\dagger} = \psi^{\dagger}(x) (\gamma^0)^{\dagger} \psi(x) = \Sigma(x)$\\
+Proof it is scalar: $\Sigma(x) \rightarrow \Sigma'(x) = \bar \psi(\Lambda^{-1} \cdot x) S(\Lambda)^{-1} S(\Lambda) \psi(\Lambda^{-1} \cdot x) = \bar \psi(\Lambda^{-1} \cdot x) \psi (\Lambda^{-1} \cdot x) = \Sigma (\Lambda^{-1} \cdot x)$\\\\
+Can also form a vector field: $V^{\mu}= \bar \psi(x) \gamma^{\mu} \psi(x)$ transforms as
+$$
+V^{\mu} (x) \rightarrow \Lambda^{\mu}_{\nu} V^{\nu} (\Lambda^{-1} \cdot x) = \Lambda^{\mu}_{\nu \bar \psi(\Lambda^{-1} \cdot x) \gamma^{\nu} \psi(\Lambda^{-1} \cdot x)
+$$
+Proof of above: 
+$$
+V^{\mu} \rightarrow \bar \psi(\Lambda^{-1} \cdot x) \cdot S(\Lambda)^{-1} \cdot \gamma^{\mu} \cdot S(\Lambda) \cdot \psi(\Lambda^{-1} \cdot x)
+$$
+Hence this is true if $S[\Lambda]^{-1} \gamma^{\mu} S[\Lambda] = \Lambda^{\mu}_{\nu} \gamma^{\nu}$. Two spinor acting on gamma matrix is equivalent to one lorentz transfomration. Exercise is to prove this at the lienarised level by expanding out the exponential expressions for these terms and it becomes equivalent to the identity: $[\gamma^{\mu}, S^{\rho \sigma}] = \eta^{\rho \mu} \gamma^{\sigma] - \eta^{\sigma \mu} \gamma^{\rho}$. It is a lot more work to prove the full identity.
+        \subsection{Dirac Action}
+        Action for spinor fields, needs to be lorentz invariant and real. We want the $\mathfrak{L}$ to be a real (at least up to surface terms) scalar field. 
+        $$
+        \mathfrak{L}(x) = \mathfrak{L_1} + \mathfrak{L_2} = \bar \psi(x) i \gamma^{\mu} \partial _{\mu} \psi(x) - m \bar \psi(x) \psi(x)
+        $$
+        We know that $\mathfrak{L_2} = - m \Sigma(x)$ so is a real scalar field.
+        $$
+        \mathfrac{L_1} \rightarrow^{\Lambda} \bar \psi(\Lambda^{-1} \cdot x) S(\Lambda)^{-1} i \gamma^{\mu} (\Lambda^{-1})^{\nu}_{\mu} S[\Lambda] \partial _{\nu} \psi(\Lambda^{-1} \cdot x) = \bar \psi( \Lambda^{-1} \cdot x) i \Lambda^{\mu}_{\rho} \gamma^{\rho} (\Lambda^{-1})^{\nu}_{\mu} \partial _{\nu} \psi(\Lambda^{-1} \cdot x)
+        $$
+        So
+        $$
+        \mathfrac{L_1} \rightarrow^{\Lambda} i \bar \psi(\Lambda^{-1} \cdot x) \gamma \partial_{\mu} \psi(\Lambda^{-1} \cdot x)
+        $$
+        So $\mathfrac{L_1}$ is a scalar field. now check it is real:
+        $$
+        \mathfrac{L_1} = i \psi^{\dagger}(x) \gamma^0 i \gamma^{\mu} \parital_{\mu} \psi(x)
+        $$
+        $$
+        \mathfrac{L_1}^* = -i \parital_{\mu} \psi^{\dagger}(x) \gamma^{\mu})^{\dagger}  \gamma^0 \psi(x) = - i \partial_{\mu} \psi^{\dagger}(x) \gamma^0 \gamma ^{\mu} \gamma^0 \gamma^0 \psi(x) = - i \partial_{mu} \bar \psi(x) \gamma^{\mu} \psi(x) = i \bar \psi(x) \gamma^{\mu} \partial_{\mu} \psi(x) - i \partial_{\mu} (\bar \psi(x) \gamma^{\mu} \psi(x) = \mathfrac{L_1} + \text{ surface term}
+        $$
+        \textbf{Dirac action}
+        \begin{equation}
+                S = \int d^4 x (\bar \psi(x) \cdot (i \gamma^{\mu}\partial_{\mu} - m) \cdot \phi(x))
+        \end{equation}
+        Having got this action we can derive the field equation (EOM). For these purposes it is convient to think about the two independant fields are $\bar \psi$ and $\psi$ rather than real and imaginary parts.
+        \begin{equation}
+                (i \gamma_{\mu}\partial_{\mu} -  m) \cdot \psi(x) = 0
+\end{equation}
+Vary the action with respect to $\psi(x)$ gives $i(\partial_{\mu} \bar \psi) \cdot \gamma^{\mu} + m \bar \psi  = 0$. \textbf{Notation}  on 4 vector $\cancel{V} = \gamma^{\mu} V_{\mu}$ so dirac equation becomes $(i \cancel{\partial} - m )\cdot \psi = 0$.\\\\
+Consider rotations ($\bm \phi$): $\Omega_{jk} = - \epsilon_{ijk} \phi^k$ or boosts $\Omega_{i0} = - \Oemga_{0i} = \chi_i$. We can look at the spinor representation of these and they are all block diagonal:
+$$
+                                        S(\bm \phi) = \begin{pmatrix} e^{i \frac{\bm \phi \cdot \bm \sigma}{2}} & 0 \\0&e^{i \frac{\bm \phi \cdot \bm \sigma}{2}} \end{pmatrix}
+$$
+$$
+                                        S(\bm \chi) = \begin{pmatrix} e^{ \frac{\bm \chi \cdot \bm \sigma}{2}} & 0 \\0&e^{- \frac{\bm \chi \cdot \bm \sigma}{2}} \end{pmatrix}
+$$
+This reflects something non-trival about the spinor representaion as every lorentz transformation is representated by a block diagonal matrix. So the spinor representation is a reducible representation.
+\section{Lecture 20}
+The rules for constructing the field theory are to basically find representaitons of the lorentz groups that introduce fields that transform in these reperesentations that produce particles that also live in the corresponding representaiion of the lorentz group. So we are talking about the representation theory of the lorentz group $G_L = SO(3,1)$. We actually we are considering representations of its cover $spin(3,1)$ we normally do this be exponenting a Lie algebra represenation which is much simplier as it is linear and there is no distinct between the covering group and the group. Once we get to classifying the representations of the Lie Algebra there is a useful trick of passing to the complexification of the Lie Algebra, as if you project back from these onto the real lie algebra they will give you representations. There are many different Lie Algebras that have the same complixification. Therefore:
+$$
+\mathbb{L}(spin(3,1)) = \mathbb{L}(SO(3,1)), \mathbb{L}_{\mathbb{C}} (SO(3,1)) = \mathbb{L}_{\mathbb{C}}(SO(4)) = \mathbb{L}_{\mathbb{C}}(SU(2)) \oplus \mathbb{L}_{\mathbb{C}}(SU(2))
+$$
+We know the finite dimensional representations of $\mathbb{L}_{\mathbb{C}}(SU(2))$ which are claisificed by $j=0, \frac{1}{2}, ...$ and $-j \leq j_z \leq j$. So the representaiton of spin $R_j$ has dimesnion $2j +1$. So you can classify the representations of the lorentz group you can classify by combining these so they are labled by two spins $(j_+, j_-)$ so the dimension $R_{(j_+, j_-)} = (2j_+ +1, 2j_- +1)$. So you can see these dimensions will grow very rapidly with spin.
+$$
+\begin{tabular}{|c|c|c|c|}
+        & j_+ & j_- & D\\
+        scalar & 0 & 0 & 1\\
+        Left handed Weyl spinors & $\frac{1}{2}$ & 0 & 2\\
+        Right handed Weyl spinors & 0 & $\frac{1}{2}$ & 2\\
+ 4 vector & $\frac{1}{2}$ & $\frac{1}{2}$ & 4
+\end{tabular}
+$$
+The Dirac repinos term is a combination of left and right hadned Weyl spinors = $(\frac{1}{2}, 0 ) \oplus (0, \frac{1}{2})$.
+\subsection{Solutions of Dirac Equation}
+$$(i \gamma^{\mu} \partial_{\mu} - m \bm I_4 ) \phi(x) = 0$$
+act with $(-i \gamma^{nu}\partial_{\nu} - m \bm I_4)$:
+$$
+(\gamma^{\mu} \gamma^{\nu} \partial_{\nu} \partial_{\mu} + m^2 \bm I_4) \phi(x) = 0
+$$
+As $\frac{1}{2} \{ \gamma^{\mu}, \gamma^{\nu} \} = \eta^{\mu \nu} \bm I_4
+$$
+(\partial_{\mu}\partial^{\mu} + m^2 ) \phi(x) = 0
+$$
+So each of the ocmpoentsn of $\phi$ always obeys the Klien Gordane equation, and we know these have wave like solutions with on shell solution:
+$$
+\phi \sim e^{\pm i p \cdot x}
+$$
+So $p^{\mu}p_{\mu} = m^2$, $p^0 = E_{\bm p} = \sqrt{|\bm p|^2 + m^2}$ so we will search for the positive frequency solutions using the antzats
+$$
+\psi_{\alpha}(x) = u_{\alpha}(p)e^{-ip\cdot x}
+$$
+pluggin into Dirac:
+$$
+(p_{\mu} \gamma^{\mu} - m \bm I_4) u(p) = 0}
+$$
+Use the chiral representation for $\gamma$ then:
+$$
+                                        \begin{pmatrix} - m \bm I_2 & p_{\mu}\sigma^{\mu}\\
+                                        p_{\mu} \bar \sigma^{\mu} ^ - m\bm I_2 \end{pmatrix} u = 0
+$$
+with $\sigma^{\mu} = (I_2, \sigma^i)$ and $\bar \sigma^{\mu} = (I_2, - \sigma^i)$. Show that the general solutino is:
+$$
+u(p)= \begin{pmatrix} \sqrt{p_{\mu} \sigma^{\mu}} \xi \\ 
+\sqrt{p_{\mu} \bar \sigma^{\mu} \xi\end{pmatrix}
+$$
+where $\xi$ is a n arbitary 2 componetn complex vector. As you can always diagonlise a hermitian matrix so the sqrt of $H$ is defined as $\sqrt{H} = U^{-1} \sqrt{\Lambda} U$ for $U$ s.t. $H = U^{-1} \Lambda U$ and $\sqrt{\Lambda} = diag\{ \sqrt{\lamdba_1}}, \sqrt{\lambda_2}\}$.\\\\
+Choose basis vectors $\xi^s$ with $s=1,2$ (spin component) and each on is a 2 component complex vector with 
+$$
+(\xi^r)^{\dagger} \xi^s = \delta^{rs}
+$$
+E.g. Could choose $\xi^1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ $x^2 = \begin{pmartix} 0 \\ 1 \end{pmatrix}.
+So the basis of solutions are of the form:
+$$
+\psi^{(r)}(x) = u^{(r)} (p) e^{-i p \cdot x}
+$$
+with $u^{(r)} = \begin{pmatrix} \sqrt{p_{\mu} \sigma^{\mu}} \xi^r \\ 
+\sqrt{p_{\mu} \bar \sigma^{\mu}} \xi^r \end{pmatrix}$
+Similarly we have "negative" frequency solutions:
+$$
+\psi^{(r)}(x) = v^{(r)} (p) e^{i p\cdot x}
+$$
+with basis $\eta^s$ giving:
+$$
+v^{(s)} = \begin{pmatrix} \sqrt{p_{\mu} \sigma^{\mu}} \eta^s \\ 
+-\sqrt{p_{\mu} \bar \sigma^{\mu} \eta^s\end{pmatrix}$
+$$
+This gives a total of four linearlly independant solutions. \\\\
+We are going to need quite a few identities in order to do practical calculations, series of identities that are proved on example sheet 3 (useful to be able to derive these):
+$$
+u^{r \dagger} (p) u^s(p) = 2p_0 \delta^{rs}
+$$
+$$
+\bar u^r(p) u^s(p) = 2m \delta^{rs}
+$$
+$$
+v^{r \dagger} (p) v^s(p) = 2p_0 \delta^{rs}
+$$
+$$
+\bar v^r(p) v^s(p) = -2m \delta^{rs}
+$$
+$$
+\bar u^s(p) v^r(p) = 0
+$$
+$$
+u^{s \dagger}(p) v^r(p') - 0
+$$
+for $p' = (p_0, - \bm p)$. Instead contracting the spin indicies
+$$
+\sum_{s=1}^2 u_{\alpha}^s(p) \bar u_{\beta}^s(p) = (\cancel{p} +m )_{\alpha \beta}
+$$
+$$
+\sum_{s=1}^2 v_{\alpha}^s(p) \bar v_{\beta}^s(p) = (\cancel{p} -m )_{\alpha \beta}
+$$
+\subsection{Quantization of spinor field}
+$$
+\mathfrac{L} = i \bar \psi(x) \gamma^{\mu} \parital_{\mu} \psi(x) = m\bar \phi(x) \psi(x)
+$$
+Symmetry of dirac action:
+$$
+\psi(x) \rightarrow e^{- i \alpha} \psi(x)
+$$
+$$
+\bar \psi(x) \rightarrow e^{i \alpha} \bar \psi(x)
+$$
+Conserved current:
+$$
+j^{\mu}_{\nu} = \bar \psi \gamma^{\mu} \psi = V^{\mu}
+$$
+$$
+\partial_{\mu} j^{\mu}_{nu}
+$$
+Conserved charge:
+$$
+Q= \int d^3 x j^0_{\nu} = \int d^3 x \bar \psi \gamma^0 \psi = \int \psi^{\dagger} \psi
+$$
+\section{Lecture 21}
+\subsection{Hamiltonian Formulation}
+Conjugate momentum of $\psi(x)$:
+$$
+\pi(x) = \frac{\partial \mathfrak{L}}{\parital \dot \psi(x)} = i \bar \psi(x) \gamma^0 = i \gamma^{\dagger}(x)
+$$
+Hamilitonian:
+$$
+H = \int d^3 x \mathrm{H}
+$$
+$$
+\mathrm{H}(x) =  \pi(x) \dot \psi(x) - \mathfrak{L}(x) = \bar \psi(x) (- i \gamma^i \partial_i + m) \psi(x)
+$$
+Expand the field in a complete set of solutnos of the dirac equation, these are lablled by $p_{\mu}$, $s=1,2$ (the momentum is on shell which means $p^{\mu}p_{\mu} = m^2$.
+$$
+\psi(x) = u^s (p) e^{-ip \cdot x}, v^s(p) e^{i p\cdot x}
+$$
+$$
+\psi_{\alpha}(x) = \sum_{s=1}^2 \int \frac{d^3 p}{(2\pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} (b^s_p u_{\alpha}^s(p) e^{-i p\cdot x} + c^{s\dagger}_p v^s_{\alpha}(p)e^{i p\cdot x})
+$$
+\subsubsection{Spin-Statistics Theorem}
+Correlates in a relativistic field theory how we quantise a field with its spin. IN particular it says that if we have particles with half integer spin we must quantise these particles as ferminons. If we don't do this then the energy of our system will be unbounded below. \\\\
+Qu
+antization in the schrodinger picture (at fixed time): $\psi(x) = \psi(\bm x, t) \rightarrow \psi(\hat x)$ and $\psi^{\dagger}(x) = \psi^{\dagger}(\bm x, t) \rightarrow \hat \psi^{\dagger}(\hat x)$. Impose cannonical anti-commutator relations:
+$$
+\{ \hat \psi_{\alpha}(\bm x) , \hat \psi_{\beta}^{\dagger}(\bm y) \} = \delta_{\alpha \beta} \delta^{(3)}(\bm x- \bm y)
+$$
+$$
+\{\hat \psi_{\alpha}(\bm x), \hat \psi_{\beta}(\bm y) \} = \{\hat \psi^{\dagger}_{\alpha}(\bm x), \hat \psi^{\dagger}_{\beta}(\bm y) \} = 0,
+$$
+Mode expansion:
+$$
+\hat \psi_{\alpha}(\bm x) = \sum_{s=1}^2 \int \frac{d^3p}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} (\hat b_{\bm p} u^s_{\alpha} (p) e^{i \bm p \cdot \bm x} + \hat c^{s \dagger}_{\bm p} v^s_{\alpha}(p) e^{- i \bm p \cdot x})
+$$
+This implies that all the anticommuators vansih except:
+$$
+\{ b^s_{\bm p}, b^{r \dagger}_{\bm q} \} = \{ c^s_{\bm p}, c^{r \dagger}_{\bm q} \} = (2 \pi)^3 \delta^{rs} \delta^{(3)}(\bm p - \bm q)
+$$
+If we consider this in the context of the Ferminonic Simple Harmonic Oscillator then:\\\\
+We introduce $\hat b$ and $\hat b^{\dagger}$ but rather than posing there commuator relation we posit a anticommuator:
+$$
+\{\hat b, \hat b^{\dagger} \} = 1, \{ \hat b, \hat b\} = \{ \hat b^{\dagger}, b^{\dagger} \} = 0
+$$
+This implies that $\hat b^2 = \hat b^{\dagger 2} = 0$ so they are nilpotent operators. We can try and define a hamiltonian for our fermions:
+$$
+H = \frac{1}{2} \omega (\hat b^{\dagger} \hat b - \hat b \hat b^{\dagger} ) = \omega( \hat N_F - \frac{1}{2}) 
+$$
+with $N_F =  \hat b^{\dagger} \hat b$. With respect to this operator $\hat b$ and $\hat b^{\dagger}$ are raising and lower operators. Can check that:
+$$
+[\hat H_F, \hat b] = - \omega \hat b, [\hat H_F, \hat b^{\dagger}] = \omega \hat b^{\dagger}
+$$
+Ground state $\ket{0}$ has $\hat H_F \ket{0} = -\frac{1}{2} \omega \ket{0}$. Then there is also  a $\ket{1} = \hat{b^{\dagger}} \ket{0} = \frac{1}{2} \omega{1}$ but no more states as $(\hat b^{\dagger})^2 \ket{0} = 0$. This means you can only fill a fermionic system once so this imposes the pauli exclusion principle.\\\\
+Starting with our hamiltonian for a free field after normal ordering we get:
+$$
+H = \int \frac{d^3 p}{(2 \pi)^3} E_{\bm p} \sum_{s=1}^2 (\hat b^{s \dagger}_{\bm p} \hat b^s_{\bm p} - \hat c^{s}_{\bm p} c^{s \dagger}_{\bm p}) =  \int \frac{d^3 p}{(2 \pi)^3} E_{\bm p} (\sum_{s=1}^2 (\hat b^{s \dagger}_{\bm p} \hat b^s_{\bm p} + \hat c^{s \dagger}_{\bm p} c^{s}_{\bm p} )- (2\pi)^3 \delta^{(3)}(0)) 
+$$
+So we can clearly see we have a hamiltonian that is just made up of number operators for all the possible momentum and particles so the field is again just an infinite number of harmonic oscillators. If we had used commuators instead of anticommuators we would have got a minus sign between the bs and cs, which would mean we could have an arbitarily negative energy by occupying the c states. So have to use fermion quantisation description rather than the bosonic (anticommuator means they are antisymmetric under exchange whereas commuator means they are symmetric under exchage).
+$$
+\hat Q = \int \frac{d^3 p}{(2\pi)^3} \sum_{s=1}^2 (\hat b^{s \dagger}_{\bm p} \hat b^s_{\bm p} - \hat c^{s \dagger}_{\bm p} \hat c^s_{\bm p})
+$$
+So $b$ particles and $c$ particles have opposite charge.\\\\
+\textbf{Particle Spectrum}:
+$$
+\hat b^{r}_{\bm p}\ket{0} = \hat c^r_{\bm p} \ket{0} = 0, r= 1,2 \forall \bm p \in \mathbb{R}^3
+$$
+1-particle state:
+$$
+\hat b^{s \dagger}_{\bm p} = \ket{p,s}
+$$
+As $b$ have positive charge $Q=+1$ and energy $E_{\bm p} = \sqrt{|\bm p|^2 + m^2}$ but we also have the spin index which can take two values (as appropriate for a spin 1/2 particle). These states are assocaited with the two different spinor indices which are then assocaited with our arbitary choose of $\xi$ basis so we could pick zbasis? .... (more to be done to show that these represent the spin of these particles need to act on it with angular momentum etc.).\\\\
+1-anti particle state:
+$$
+\hat c^{s \dagger}_{\bm p} = \bar{\ket{p,s}}
+$$
+so $Q=-1$ and $E = E_{\bm p}$. The fact we only get four states rather than eight states is because the hermitian conjugate is also the canonical conjugate of the field (lol not sure what this means).\\\\
+Multi-particle states:
+$$
+\ket{p,r ; q,s} = \hat b^{r \dagger}_{\bm p} \hat b^{ s \dagger}_{\bm q} \ket{0} = -\ket{q,s; p,r}
+$$
+simply because $\{b_{\bm p}^{r \dagger}, b_{\bm q}^{s \dagger}\} = 0$
 \end{document}
 

@@ -1040,6 +1040,168 @@ Planar shock propogating in x-direction with speed $v_{sh}$ so $\frac{\partial }
         In the shock $[p]> 0$, $[\rho] >0$ and $[T] >0$. In the frame of the shock it is deccelerating the fluid however in the inertial frame it could be accelerating the fluid. In hydrodynamic fluids we see that the tangential velocity is preserved unlike in MHD where we have $\rho v_x [v_y] = [\frac{B_x B_y}{4 \pi}] \implies [v_y] = \frac{B_x[B_y]}{4\pi \rho v_x}$. In MHD you can have three different types of shocks unlike here (you can have alfven shocks fast shocks or slow shocks).\\\\
         Rewatch minutes 15 to 25 of 17/11/2021 as it is a dicussion about contact discontinuity and the reverse and forward shock around the sun (includes disccusion of the size of vorticity).
         \subsection{Super nova explosion}
-        $E \sim 10^{51} eng$ $M_{ej} \sim 1 M_{\odot}$ Assume the fluid is cold as it has negillible impact. $\frac{1}{2} M_{ej} v^2_{ej} \sim E \implies $v_{ej} = (\frac{2 E}{M_{ej}})^{\frac{1}{2}} \sim 10^4 \frac{km}{s} E^{\frac{1}{2}}_{51} M^{-\frac{1}{2}}_{ej,1}$. THis is much higher than the speed of sound so mach number is $M \sim 10^2 - 10^3 >>1$. As the ejecta is expanding the density will be going down, when it encounters the interstellar medium it would send an forward shock into the interstellar medium with some velocity $v_{sh}$ (not the same as $v_{ej}). In the frame of the ejector the interstellar medium is running into you so that sends a reverse shock going backwards through the medium. THere will be another contact discountuity in the middle seperating these mediums. At some point the ejecta will accumulate enough mass in front of it to considerably slow down. At this point the energy of the explosion will have been transferred into the shock through the interstellar medium. THis occurs when $M_{ej} \sim \frac{4\pi}{3} m_p n_0 R^{3}_{tz}$ giving the transition radius of $R_{tz} \sim (\frac{3}{4\pi} \frac{M_{ej}}{m_p n_0})^{\frac{1}{3}} \sim 2 pc (\frac{M_{ej,1}}{n_{0,1}}$. The time this takes is $t_{tz} \sim \frac{R_{tz}}{v_{ej}} \sim 200 yrs E^{-\frac{1}{2}} M_{ej}^{\frac{5}{6}} n_{0,1}^{-\frac{1}{3}}$. For $t > t_{tz}$ we can forget about the initial conditions. So the two remaining parameters are $E, n_0$.The kinetic energy of the explosion is so much larger than the energy lost through luminscene so can consider this to be an adiabatic explosion. 
+        $E \sim 10^{51} eng$ $M_{ej} \sim 1 M_{\odot}$ Assume the fluid is cold as it has negillible impact. $\frac{1}{2} M_{ej} v^2_{ej} \sim E \implies $v_{ej} = (\frac{2 E}{M_{ej}})^{\frac{1}{2}} \sim 10^4 \frac{km}{s} E^{\frac{1}{2}}_{51} M^{-\frac{1}{2}}_{ej,1}$. THis is much higher than the speed of sound so mach number is $M \sim 10^2 - 10^3 >>1$. As the ejecta is expanding the density will be going down, when it encounters the interstellar medium it would send an forward shock into the interstellar medium with some velocity $v_{sh}$ (not the same as $v_{ej}). In the frame of the ejector the interstellar medium is running into you so that sends a reverse shock going backwards through the medium. THere will be another contact discountuity in the middle seperating these mediums. At some point the ejecta will accumulate enough mass in front of it to considerably slow down. At this point the energy of the explosion will have been transferred into the shock through the interstellar medium. THis occurs when $M_{ej} \sim \frac{4\pi}{3} m_p n_0 R^{3}_{tz}$ giving the transition radius of $R_{tz} \sim (\frac{3}{4\pi} \frac{M_{ej}}{m_p n_0})^{\frac{1}{3}} \sim 2 pc (\frac{M_{ej,1}}{n_{0,1}}$. The time this takes is $t_{tz} \sim \frac{R_{tz}}{v_{ej}} \sim 200 yrs E^{-\frac{1}{2}} M_{ej}^{\frac{5}{6}} n_{0,1}^{-\frac{1}{3}}$. For $t > t_{tz}$ we can forget about the initial conditions. So the two remaining parameters are $E, n_0$.The kinetic energy of the explosion is so much larger than the energy lost through luminscene so can consider this to be an adiabatic explosion. Also adopt a spherically symmetric set up. Assume that at some point in time there was an explision that released a lot of energy $E$ and now we just have some shock propogating into the interstellar medium with density $n_0$ with some radius $R(t)$. $v_{sh} = \dot R(t)$. \textbf{The ratio across a strong shock is} $\rho = \rho_o\frac{\gamma +1}{\gamma-1}$. So for $\gamma= \frac{5}{3}$ $\rho = 4 \rho_0$ so this is indepedant of the energy of the shock whereas the pressure does depend on speed et.c $p= \frac{2}{\gamma+1} \rho_0 v^2_{sh}$.
+        \section{Lecture 18}
+        In the shock frame:
+        $$
+        [\rho u] = 0 \implies \rho(R) u \rho(R) = \rho u_{sh} \implies u(R) = \frac{\rho_0}{\rho} u_{sh} = \frac{\gamma-1}{\gamma +1} u_{sh}
+        $$
+        In the inertial frame $$u(R) = u_{sh}-\frac{\gamma -1}{\gamma +1} \frac{2}{\gamma +1} u_{sh} = \frac{2}{\gamma 1} u_{sh}$$. 
+        Continuity equation:
+        $$
+        \frac{\partial \rho}{\partial t} + \frac{1}{r^2} \frac{\partial }{\partial r} (r^2 \rho u) = 0
+        $$
+        Momentum equation:
+        $$
+        \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial r} + \frac{1}{\rho} \frac{\partial \rho}{\partial r} = 0 
+        $$
+        Energy equation:
+        $$
+        \frac{\partial }{\partial t} (\frac{1}{2} \rho u^2 + \frac{p}{\gamma -1} + \frac{1}{r^2}\frac{\partial}{\partial r}(r^2( \frac{1}{2} \rho u^2 + \frac{\gamma p}{\gamma -1})u) = 0
+        $$
+        We have the boundary conditions and the equations of motion but we have no knowledge of where the boundary conitions should be applied we don't know where $R$ should be. We generally solve this issue using dimensional anlysis. We have to charactersitics of the problem we ahve energy ($E =[ML^2 T^{-2}]$) and density ($ \rho_0 = [ML^{-3}]$). We need an additional variable of time in order to get a length scale so we add the time scale of the explosion into the mix. $\frac{E}{\rho_0} = [L^5 T^{-2}]$ so say consider $\frac{E}{\rho_0}t^2 = [L^5]$ so a natural scale for the strong explosion is: $R(t) = (\alpha \frac{E}{\rho_0}t^2)^{1/5}$ with $\alpha$ some dimensionless constant. The dependance on $R$ can come only in the form $\xi = \frac{r}{R(t)}$. This is a similarility variable and is typical of self-similar problems. \\\\
+        If I have unknown $f(r,t) = \phi(t) \tilde f \frac{r}{R(t)}$ (similarity anzatz). $\rho = \rho_0 \tilde \rho(\xi)$, $u= \dot R(t) \tilde u(\xi)$, $p=\rho_0 \dot R^2 \tilde p(\xi)$ the tilde functions are always dimensionless (similarity solution you pull out all the dimensions into the prefactors).
+        $$
+        \frac{\partial f}{\partial t} = \frac{\partial f}{\partial \xi}\frac{\partial \xi}{\partial t} = - \frac{r}{R} \dot R \frac{\partial f}{\partial \xi} = - \frac{\dot R}{R} \xi \frac{\partial f}{\partial \xi}
+        $$
+        $$
+        \frac{\partial f}{\partial r} = \frac{1}{R} \frac{\partial f}{\partial \xi}
+        $$
+        $$
+        \frac{\dot R}{R} = \frac{\partial \ln R}{\partial t} = \frac{\partial (\ln t^{\frac{3}{5})}}{\partial t} = \frac{2}{5} t^{-1}
+        $$
+        $$
+        \ddot R = - \frac{3}{5} C t^{-\frac{8}{5}} = - \frac{3}{5} C t^{-\frac{3}{5}} t^{-1} = - \frac{3}{5} \dot R \frac{5}{2} \frac{\dot R}{R} = - \frac{3}{2} \frac{\dot R^2}{R}
+        $$
+        Continuity equation becomes:
+        $$
+        - \frac{\dot R}{R} \xi \frac{\partial \tilde \rho}{\partial \xi} \rho_0 + \frac{1}{R^2 \xi^2} \frac{1}{R} \frac{\partial}{\partial \xi}(R^2 \xi^2 \rho_0 \tilde \rho \dot R \tilde u)  = 0
+        $$
+        $$
+        - \xi \frac{\partial \tilde \rho}{\partial \xi} + \tilde u \frac{\partial \tilde \rho}{\partial \xi}+ \frac{\tilde \rho}{\xi^2} \frac{\partial}{\partial \xi}(\xi^2 \tilde u) = 0
+        $$
+        \begin{equation}
+        (\tilde u - \xi) \frac{\partial \tilde \rho}{\partial \xi} + \frac{\tilde \rho}{\xi^2} \frac{\partial }{\partial \xi} (\xi^2 \tilde u) = 0
+\end{equation}
+        From momentum equation:
+        $$
+        \frac{\partial \dot R}{\partial t} \tilde u + \dot R \frac{\partial \tilde u}{\partial t} + \dot R^2 \frac{1}{R} \frac{\partial \tilde u}{\partial \xi} + \frac{1}{\rho_0 \tilde \rho R} \frac{\partial}{\partial \xi} (\rho_0 \dot R^2 \tilde \rho) = 0
+        $$
+        $$
+\frac{-3}{2} \frac{\dot R^2}{R} \tilde u + \frac{\dot R}{R} \xi \frac{\partial \tilde u}{\partial \xi} + \frac{\dot R^2}{R} \tilde u \frac{\partial \tilde u}{\partial \xi} + \frac{\dot R^2}{R} \frac{1}{\tilde \rho} \frac{\partial}{\partial \xi} \tilde p =0 
+        $$
+        \begin{equation}
+        (\tilde u - \xi) \frac{\partial \tilde u}{\partial \xi} - \frac{3}{2}\tilde u + \frac{1}{\tilde \rho} \frac{\partial \tilde p}{\partial \xi} = 0
+        \end{equation}
+        Total energy is conserved so :
+        $$
+        E= 4 \pi \int_0^R r^2 dr (\frac{1}{2} \rho u^2 + \frac{p}{\gamma -1} = 4 \pi R^3 \int_01 \xi^2 d\xi (\frac{1}{2} \tilde \rho \tilde u^2 + \frac{\tilde p}{\gamma -1}) \rho_0 \dot R^2
+        $$
+        using expressions for $\dot R$:
+        $$
+        E= 4 \pi R^3 \rho_0 \frac{4}{25} t^{-2} R^2 \int^1_0 \xi^2 d \xi (\frac{1}{2} \tilde \rho \tilde u + \frac{\tilde p}{\gamma - 1}) =  \frac{16 \pi}{25} \rho_0 \alpha^5 \frac{E}{\rho_0} t^2 t^{-2} \int^1_0 \xi^2 d \xi (\frac{1}{2} \tilde \rho \tilde u + \frac{\tilde p}{\gamma - 1}) 
+        $$
+        This gives a condition on $\alpha$, so once we have the full solution we can find $\alpha$:
+        $$
+        1 = \frac{16\pi}{25} \alpha^5 \int^1_0 \xi^2 d\xi (\frac{1}{2} \tilde \rho \tilde u + \frac{\tilde p}{\gamma - 1})
+        $$
+        Rewrite energy equation in form:
+        $$
+        \frac{\partial q}{\partial t} + \frac{\partial F}{\partial r}  =0, q = r^2 (\frac{1}{2}\rho u^2 + \frac{p}{\gamma -1}), F = r^2 (\frac{1}{2} \rho u^2 + \frac{\gamma p}{\gamma -1})
+        $$
+        get $q = \rho_0 \dot R^2 R^2 \xi^2 (\frac{1}{2} \tilde \rho \tilde u^2 + \frac{\tilde p^2}{\gamma -1})$, $F = \rho_0 \dot R^2 R^2( \frac{1}{2} \tilde \rho \tilde u^2 + \frac{\gamma \tilde p}{\gamma -1}) \xi^2 \tilde u$. Define $\tilde q(\xi)$ and $\tilde F(\xi)$ as everything to the right of $R^2$ in the prevoious equations so the energy quation becomes
+        $$
+        \rho_0 \frac{\partial}{\partial t}(\dot R^2 R^2 ) \tilde q + \rho_0 \dot R^2 R^2 ( - \xi \frac{\dot R}{R} \frac{\partial \tilde q}{\partial \xi} ) + \rho_0 \dot R^3 R^2 \frac{1}{R} \frac{\partial \tilde F}{\partial \xi} = 0
+        $$
+        \section{Lecture 20}
+        Excercise show that:
+$$
+\frac{\partial}{\partial t} (\dot R^2 R^2) = - \dot R^3 R
+$$
+So can write the relation as:
+$$
+-\rho_0 \dot R^4 R \tilde q - \rho_0 \dot R^2 R^2 \xi \frac{\partial \tilde q}{\partial \xi} \frac{\dot R}{R} + \rho_0 \dot R^3 R \frac{\parital \tilde F}{\partial \epsilon} = 0
+$$
+All of the dimensions canncel to give:
+$$
+- \tilde q - \xi \frac{\partial \tilde q}{\partial \xi} + \frac{\partial \tilde F}{\partial \xi} =0 
+$$
+$$
+ \frac{\partial F}{\partial \xi} = \frac{\partial}{\partial \xi}{\xi \tilde q}
+$$
+No integration constant as in centre $\xi = 0$
+$$
+\tilde F = \xi \tilde q \implies \xi^2 \tilde u (\frac{1}{2} \tilde \rho \tilde u^2 + \frac{\gamma \tilde p}{\gamma -1}) = \xi^3(\frac{1}{2} \tilde \rho \tilde u^2 + \frac{\tilde p^2}{\gamma -1})
+
+$$
+\begin{equation}
+\tilde p = \frac{\gamma -1}{2} \tilde \rho \tilde u^2 \frac{u^2 - \xi}{\xi - \gamma \tilde u}
+               \end{equation}
+               Left with 2 equations for $\tilde \rho $ and $\tilde u$, can be solved by making subsitution $\tilde u = \xi v(\xi)$. We find a solution for $\xi = \xi(v), \tilde \rho(v), \tilde p(v), \tilde u(v)$.\\
+               \textbf{For gamma = $\frac{5}{3}$}, $\tilde \rho(1) = 4, \tilde u = \frac{3}{4}$:
+               $$
+       \xi(v) = (\frac{4v}{3})^{-\frac{2}{5}} (\frac{20 v}{3} - 4)^{\frac{2}{13}} (\frac{5}{2} - 2 v)^{- \frac{82}{195}}
+               $$
+               $$
+               \tilde \rho(v) = 4 (4 - 4v)^{-4} (\frac{20 v}{3} - 4)^{\frac{7}{13}} (\frac{5}{2} - 2 v)^{- \frac{82}{13}}
+               $$
+               $$
+               \tilde p(v) = \frac{3}{4} (\frac{4v}{3})^{\frac{6}{5}}(4 - 4v)^{-5}(\frac{5}{2} - 2 v)^{- \frac{82}{15}}
+
+               $$
+               $\xi \in (0,1)$ maps to $v \in (\frac{3}{5}, \frac{3}{4})$.
+               Need to know the qualitative shape of the curves$p(\xi), \rho(\xi), u(\xi)$etc. Lecture 20 20th miniute. Derive these shapes by considering how they behave as $\xi$ goes to $0$.\\\\
+               1) Most mass is in a thin shell\\
+               2) Inside the shell pressure is roughly constant. As temperature is very high the speed of sound is very high so sound waves can smooth out deviations from the equilibirum very quickly.\\
+               3) Velocity structure is close to a Hubble Flow (so the velocity is increasing with distance).\\\\
+               This is called the Sedov-Taylor phase and gives a post shock temperature of:
+               $$
+               R(t) = 5 pc E_{51}^{\frac{1}{5}} t_{3}^{\frac{2}{5}} n_1^{-\frac{1}{5}}
+               $$
+               $$
+               v(t) = 2000 \frac{km}{s} E_{51}^{\frac{1}{5}} t_{3}^{-{3}{5}} n_1^{-\frac{1}{5}}
+               $$
+$$
+T(t, r=R) = 5 \times 10^7 K E^{\frac{2}{5}} t_3^{-\frac{6}{5}} n_1^{-\frac{2}{5}}
+$$
+At some point cooling becomes important. The plasma will cool by free-free emission (Bremsttruhlung), when you have a sea of protons and a sea of fast moving electrons and when an electron is deflected it causes emmission of a photon. The free-free emissivity (power per unit volume) goes like $\dot e \prop T^{\frac{1}{2}} n^2$ then the cooling time is $t_{cool} \sim \frac{e}{\dot e} \prop \frac{n T}{T^{\frac{1}{2}}} = T^{\frac{1}{2}} n^{-1}$. As $n$ is roughly constant, but $T$ decreases with $T \prop t^{-\frac{6}{5}}$ so $t_{cool}$ goes down and $t$ goes up so at some point $t_{cool} \sim t$ which is the end of the Sedov-Taylor phase. ST stops at around 2000 years. First there was an ejector stage (first 200 years) then there was a Sedov-Taylor phase (till 2000 years) and then there is a slow plough solution. \\\\
+Snow plough solution: As the shell cools down the inside of the shell doesn't as it is sooooo hot, so as the shell cools down its pressure falls and it gets compressed by the inside of the shell. SO then the inside high pressure and temperature is pushing along a cold very dense region that keeps picking up more and more matter.\\\\
+Sometimes supernova can all explode in a cluster forming a superbubble this causes momentum feedback on the gas and might even expel it from the galaxy!
+\section{Lecture 21}
+\subsection{Bondi Accretion}
+Same assumptions as before no B fields, sphereical symmtery, adiabacity but now include attractor.
+$$\phi = -\frac{GM}{r}$$
+Steady-state:$\frac{\partial \rho}{\partial t} = 0= - \nabla \cdot (\rho \bar u)$, $\bar u = (u_r, 0 , 0) = (u, 0, 0)$ so
+$$
+- \frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \rho u) = 0
+$$
+Thus, $r^2 \rho u$ is constant. We define a mass accretion rate $\dot M = 4 \pi r^2 \rho u$ (sometimes this is defined with a minus sign). 
+$$
+\rho u \frac{du}{dr} = - \rho \frac{d \phi}{dr} - \frac{dp}{dr} \implies u\frac{du}{dr} = - \frac{d \phi}{dr} - \frac{1}{\rho} \frac{dp}{dr}
+$$
+Integrate to get bernoulli constant: $B = \frac{1}{2} u^2 + \phi + h$ with $h = \int \frac{dp}{\rho}$. \\
+Transform $-\frac{dp}{dr} = -\frac{dp}{d\rho}\frac{d \rho}{\dr} = - c_s^2 \frac{d \rho}{dr}$ and use the constant $r^2\rho u$ to get $\frac{d\rho}{dr} = -\frac{2\rho}{r} - \frac{\rho}{u} \frac{d u}{dr}$. So $- \frac{dp}{dr} = c^2_s \rho (\frac{2}{r} + \frac{1}{u}\frac{du}{dr})$ and therefore EOM becomes:
+$$
+\rho u \frac{du}{dr} = - \rho \frac{d\phi}{dr} + \rho c_s^2 \frac{2}{r} + \frac{\rho c_s^2}{u} \frac{du}{dr} \implies u^2 \frac{du}{dr} = - u \frac{d \phi}{dr} + c_s^2 \frac{2u}{r} + c_s^2 \frac{du}{dr}
+$$
+\begin{equation}
+(u^2- c_s^2 ) \frac{du}{dr} = u (\frac{2 c_s^2}{r} - \frac{d\phi}{dr})
+\end{equation}
+This gives a constraint. At a point in the flow where $u= c_s$ smooth passage through this point means that we have $\frac{d\phi}{dr} = \frac{2c_s^2}{r}$ or $u =c_s  = 0$. This point is called a sonic point (because the velocity of the fluid becomes equal to the sound speed. Denote all variables at the sonic point with subscript s: $\rho_s, r_s,...$.
+$$
+\frac{2 c_{s,s}^2}{r} = \frac{d \phi}{dr} = \frac{GM}{r_s^2}, c_{s,s}^2 = \frac{GM}{2r_s}
+$$
+Bernoulli constant at the sonic point:
+$$
+h = \frac{\gamma}{\gamma -1} \frac{p}{\rho} = \frac{c_s^2}{\gamma -1}
+$$
+$$
+B= \frac{c_{s,s}^2}{2} - \frac{GM}{r_s} + h = \frac{GM}{2r_s} (\frac{1}{2} + \frac{1}{\gamma -1}) - \frac{GM}{r_s} = \frac{GM}{r_s} (\frac{\gamma +1}{4 (\gamma -1)} -1) = \frac{GM}{r_s} \frac{5-3\gamma}{4(\gamma-1)} 
+$$
+$$
+r_s = \frac{GM}{B} \frac{5 -3 \gamma}{4(\gamma -1)}, c_{s,s}^2 = B \frac{2(\gamma -1)}{5-3\gamma}
+$$
+So can get the value for the sonic radius from the Bernoulli constant. These constraints only occur if at some point in the flow it goes from subsonic to supersonic.\\\\
+Look for transonic solutions, smoothly passing through the sonic point.
 \end{document} 
 

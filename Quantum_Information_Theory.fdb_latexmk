@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1637142548 "Quantum_Information_Theory.tex" "Quantum_Information_Theory.pdf" "Quantum_Information_Theory" 1637142547
-  "Quantum_Information_Theory.aux" 1637142529 5221 145a39ae0fa8b43320d21cffa82c0bfc "pdflatex"
-  "Quantum_Information_Theory.tex" 1637142547 67758 514edb5c2520c83c6be78a4578bd2e0e ""
+["pdflatex"] 1637747747 "Quantum_Information_Theory.tex" "Quantum_Information_Theory.pdf" "Quantum_Information_Theory" 1637747746
+  "Quantum_Information_Theory.aux" 1637747653 6781 62b017c3e247071f232358595e04f8a6 "pdflatex"
+  "Quantum_Information_Theory.tex" 1637747745 83877 bab26957b594987b742796d9b6edfa22 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630409836 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630409836 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -82,6 +82,6 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1630422739 2797772 235209822cc2568e25123ecf25b284e7 ""
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
+  "Quantum_Information_Theory.log"
   "Quantum_Information_Theory.aux"
   "Quantum_Information_Theory.pdf"
-  "Quantum_Information_Theory.log"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  17 NOV 2021 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  24 NOV 2021 09:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1064,57 +1064,234 @@ Underfull \hbox (badness 10000) in paragraph at lines 838--841
 
  []
 
-./Quantum_Information_Theory.tex:855: Missing $ inserted.
+./Quantum_Information_Theory.tex:856: Missing $ inserted.
 <inserted text> 
                 $
-l.855 4) $S(\rho
+l.856 4) $S(\rho
                 ) \leq \log d$ and equality only holds if $\rho = \frac{I}{d}$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (5.88557pt too wide) in paragraph at lines 849--856
+Overfull \hbox (5.88557pt too wide) in paragraph at lines 850--857
 \OT1/cmr/m/n/10 For spec-tral de-com-po-si-tion $\OML/cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^U[] [] []$ \OT1/cmr/m/n/10 we have $[] \OML/cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = [][]([] \OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 ) [] []$. 
  []
 
 
-Overfull \hbox (37.36566pt too wide) in paragraph at lines 849--856
+Overfull \hbox (37.36566pt too wide) in paragraph at lines 850--857
 \OT1/cmr/m/n/10 3) Con-cav-ity $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 p[]\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 prob-a-bil-ity dis-tri-bu-tion $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^Z[]\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 setofstates:$$S\OT1/cmr/m/n/10 ([][] \OML/cmm/m/it/10 p[]^^Z[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^U \OML/cmm/m/it/10 p[]S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 )$$4)$S($\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T
  []
 
 [26]
-Overfull \hbox (67.70282pt too wide) detected at line 865
+Overfull \hbox (67.70282pt too wide) detected at line 866
 \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 ^^U[] [] ^^U[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 ^^U[] [] [] []\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 ) [] [] = [] \OML/cmm/m/it/10 ^^U[] [] ^^U[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ^^U[] [] ^^V[]\OMS/cmsy/m/n/10 j [] [] j[]
  []
 
 
-Overfull \hbox (71.38673pt too wide) detected at line 885
+Overfull \hbox (71.38673pt too wide) detected at line 886
 \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z []\OT1/cmr/m/n/10 ([])) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 ([]([])\OML/cmm/m/it/10 ^^ZI\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 )  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T [] \OML/cmm/m/it/10 d
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--894
+Underfull \hbox (badness 10000) in paragraph at lines 890--895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--901
+Underfull \hbox (badness 10000) in paragraph at lines 897--902
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--901
+Underfull \hbox (badness 10000) in paragraph at lines 897--902
 
  []
 
 [27]
-Overfull \hbox (24.5738pt too wide) detected at line 920
+Overfull \hbox (24.5738pt too wide) detected at line 921
 \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (^^C(\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 jj\OT1/cmr/m/n/10 ^^C(\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 ^^T [] [] \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 V[]\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[ \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 Invarianceunderunitary \OT1/cmr/m/n/10 :
  []
 
-[28] (./Quantum_Information_Theory.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--932
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 950--953
+
+ []
+
+./Quantum_Information_Theory.tex:954: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.954 ...imes \ket{f_k}$ with eigenvalues $\lamdba
+                                                  _i \mu_k$\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (277.73802pt too wide) detected at line 962
+\OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 ^^Z[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 ([](\OML/cmm/m/it/10 ^^Z[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 I[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 I[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 )) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 I[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--966
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--979
+
+ []
+
+[29]
+Overfull \hbox (7.6722pt too wide) in paragraph at lines 981--987
+\OT1/cmr/m/n/10 3) Quan-tum op-er-a-tions never in-crease mu-tual in-for-ma-tion. Sup-pose $^^C : \OMS/cmsy/m/n/10 D\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 H[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 !
+ []
+
+./Quantum_Information_Theory.tex:1007: Missing $ inserted.
+<inserted text> 
+                $
+l.1007 ...)}:\mathcal{H}_{d_c^{(n)}})$ \rightarrow
+                                                   \mathcal{D}(\mathcal{H}_{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1041
+
+ []
+
+./Quantum_Information_Theory.tex:1043: Missing } inserted.
+<inserted text> 
+                }
+l.1043 $
+        $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (57.92963pt too wide) detected at line 1043
+\OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Tr [] P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[] [] []\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 ^^U[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 q[]:::q[] \OT1/cmr/m/n/10 = []
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1050
+
+ []
+
+./Quantum_Information_Theory.tex:1056: Extra }, or forgotten $.
+l.1056 ...} P_{\epsilon}^{(n)} \ket{\psi_k^{(n)}}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Quantum_Information_Theory.tex:1058: Double superscript.
+l.1058 ...that $Tr \tilde \rho_k^{(n)} - \alpha^k^
+                                                  2 + \beta_k^2$ and define ...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+[32]
+Overfull \hbox (28.22136pt too wide) in paragraph at lines 1073--1077
+\OT1/cmr/m/n/10 So the prob-a-bil-ity of cor-rect in-fer-ence is: $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 correct\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]^^Z[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 error\OT1/cmr/m/n/10 ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1077
+
+ []
+
+./Quantum_Information_Theory.tex:1086: Missing $ inserted.
+<inserted text> 
+                $
+l.1086 ...the following quantum operation (\Lambda
+                                                  : $\mathcal{H}_{QB} \right...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Information_Theory.tex:1086: LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1086 ...ng quantum operation (\Lambda: $\mathcal
+                                                  {H}_{QB} \rightarrow \math...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Information_Theory.tex:1086: Missing $ inserted.
+<inserted text> 
+                $
+l.1086 ...uantum operation (\Lambda: $\mathcal{H}_
+                                                  {QB} \rightarrow \mathcal{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1087
+
+ []
+
+./Quantum_Information_Theory.tex:1096: Undefined control sequence.
+l.1096 \Lambda( \rho_{QB}) = \sum_y A_y \pho
+                                            _{QB} A^{\dagger}_y, A_y = \sqrt...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Information_Theory.tex:1096: Double subscript.
+l.1096 \Lambda( \rho_{QB}) = \sum_y A_y \pho_
+                                             {QB} A^{\dagger}_y, A_y = \sqrt...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1100
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1104
+
+ []
+
+[34] (./Quantum_Information_Theory.aux) ) 
 Here is how much of TeX's memory you used:
  1790 strings out of 478599
  23291 string characters out of 5858101
@@ -1124,10 +1301,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  56i,7n,66p,821b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Quantum_Information_Theory.pdf (28 pages, 322575 bytes).
+Output written on Quantum_Information_Theory.pdf (34 pages, 347935 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 209 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

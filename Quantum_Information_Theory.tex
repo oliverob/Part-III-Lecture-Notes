@@ -841,6 +841,7 @@ General expression for density matrix from the defining properties: $\rho \geq 0
 $$
 \rho = \begin{pmatrix} a & b-ic \\ b+ ic & 1-a\end{pmatrix}
 $$
+Bloch state: $\rho = \frac{1}{2} (I + \bm s \cdot \bm \sigma ) = \frac{1}{2} \sum_{i=0}^3 s_k \sigma_k$
 \section{Lecture 17}
 \subsection{Quantum Entropies}
 Given a state $\rho \in \mathcal{D}(\mathcal{H}$ the von Neumann entropy is:.
@@ -932,4 +933,214 @@ $$
                 Quantum Joint entropy: $S(\rho_{AB}) = - Tr( \rho_{AB} \log \rho_{AB})$\\
                 Conditoinal entropy: $S(A|B) = S(\rho_{AB}) - S(\rho_B)$\\
                 Quantum mutual information: $I(A:B) = S(\rho_A) + S(\rho_B) - S(\rho_{AB}) = S)\rho_A) - S(A|B) = S(\rho_B) - S(B|A)$
+                \section{Lecture 18}
+                $$
+                S(A|B) = S(\rho_{AB}) - S(\rho_B) = - D(\rho_{AB} || I_A \otimes \rho_B)
+                $$
+                $$
+                I(A:B) = S(\rho_A) + S(\rho_B) - S(\rho_{AB}) = D(\rho_{AB} || \rho_A\otimes \rho_B)
+                $$
+                Some of the properties of the classical entropy are not satisified by the quantum entropy. For example, in classical information theory:
+                $$
+                H(X,Y) \geq H(X) \implies H(Y|X) \geq 0
+                $$
+                But in quantum information this is not the case. Take $\rho_{AB} = \ket{\phi^+}\bra{\phi^+} \in \mathcal{D}(\mathbb{C}^2 \otimes \mathbb{C}^2)$, with $\ket{\phi^+} = \frac{1}{\sqrt{2}} (\ket{00} + \ket{11})$, $\rho_A= \frac{I}{2}$, $\rho_B = \frac{I}{2}$:
+                $$
+                S(A|B) = S(\rho_{AB}) - S(\rho_B) = 0 - \log 2 = -1 < 0
+                $$
+                \\\\
+                We cannot say that $D(\rho|| \sigma) \geq 0$ if $\sigma$ is not a density matrix (even though $D$ is still defined in this case).
+                \subsubsection{Entropic inequalities}
+                1) Additivity: $S(\rho_A \otimes \rho_B) = S(\rho_A) + S(\rho_B)$ with $\rho_A = \sum \lambda_i \ket{e_i} \bra{e_i}$ $\rho_B = \sum \mu_i \ket{f_k} \bra{f_k}$ with $\rho_A \otimes \rho_B$ having eigenvectors $\ket{e_i} \otimes \ket{f_k}$ with eigenvalues $\lamdba_i \mu_k$\\
+                2) Subadditivity: $\rho_{AB} \neq \rho_A \rho_B$
+                $$
+                S(\rho_{AB}) \leq S(\rho_A) + S(\rho_B)
+                $$
+                Proof using Klein's inequality:
+                $$
+                0 \leq D(\rho_B || \rho_A \otimes \rho_B) = - S(\rho) - Tr(\rho_{AB} \log (\rho_A \otimes \rho_B) = -S(\rho_B) - Tr( \log (\rho_A \otimes I_B) (I_A \otimes \rho_B)) = - S(\rho_B) - Tr( \rho_{AB} \log(\rho_A \otimes I_B) -Tr(\rho_{AB} \log(I_A \otimes \rho_B) 
+                $$
+                Finish proof\\\\
+                3) If $\rho_{AB} = \ket{\psi_{AB}} \bra{\psi_{AB}}$ then $S(\rho_A) = S(\rho_B)$ because the schmidt decomposition is unique (both of the partial traces will have the same eigenvalues.\\
+                4) Araki-Lieb inequality (Triangle inequality)
+                $$
+                S(\rho_{AB}) \geq | S(\rho_A) - S(\rho_B) |
+                $$
+Proof: Let $\ket{\psi_{ABR}}$ s.t. $\rho_{AB} = Tr_R \ket{\psi_{ABR}}\bra{\psi_{ABR}}$.
+$$
+S(ABR) = S(\ket{\psi_{ABR}} \bra{\psi_{ABR}}) = 0
+$$
+By 3) (schmidt) $S(AB) = S(R)$ and $S(AR) = S(B)$. Now use subadditivity:
+$$
+S(B) = S(AR) \leq S(A) + S(R) = S(A) + S(AB)
+$$
+So: $S(AB) \geq S(B) - S(A)$ and by symmetry we could have interchanged $A$ and $B$ so done.\\\\
+\textbf{Strong Subadditivity (SSA)}
+\begin{equation}
+S(ABC) + S(B) \leq S(AB) + S(BC)
+\end{equation}
+Implications:\\
+1) Conditioning reduces entropy: $S(A|BC) \leq S(AB)$\\
+2) Discarding quantum systems never increases mutual information, $I(A:B) \leq I(A:BC)$ (check this)\\
+3) Quantum operations never increase mutual information. Suppose $\Lambda: \mathcal{D}(\mathcal{H}_B) \rightarrow \mathcal{D} (\mathcal{H}_{B'})$ then for $(I \otimes \Lambda) \rho_{AB} = \sigma_{A'B'}$, we have $I(A': B')_{\sigma} \leq I(A: B)_{\rho}$.\\
+Proof: Use stinesprings Dilation of $\Lambda$. There exists $\mathcal{H}_C$ s.t. $\omega \in \mathcal{D}(\mathcal{H}_B)$:
+$$
+\Lambda(\omega) = Tr_C ( U_{BC} (\omega \otimes \phi_C) U^{\dagger}_{BC}
+$$
+$$
+\rho_{ABC} = \rho_{AB} \otimes \phi_C  \implies \rho_{BC} = \rho_B \otimes \phi_C
+$$
+$$
+\sigma_{A'B'C'} = (I_A \otimes U_{BC}) (\rho_{AB} \otimes \phi_C) (I_A \otimes U^{\dagger}_{BC} \implies \sigma_{B' C'} = U_{BC} (\rho_B \otimes \phi_C) U^{\dagger}_{BC}
+$$
+$$
+\sigma_{A' B'} = Tr_{C'} \sigma_{A'B'C'}
+$$
+Lemma: $I(A:B)_{\rho} = I(A:BC)_{\rho}$ as $C$ is uncorrelated with $AB$. Proven by $I(A: BC) = D(\rho_{ABC} || \rho_A \otimes \rho_{BC}) = D(\rho_{AB} \otimes \phi_C || \rho_A \otimes \rho_B \otimes \phi_C)) = D(\rho_{AB} || \rho_A \otimes \rho_B) + D(\phi_c || \phi_C) = I(A:B)$
+$$
+I(ABC)_{\rho} = I(A': B' C')_{\sigma} \text{ as } \sigma_{A'} = \rho_A, \sigma_{B' C'} = U \rho_{BC} U^{\dagger}
+$$
+Using 2)$I(A': B'C')_{\sigma} \geq I(A':B')_{\sigma}$.
+\subsection{Quantum Data Compression}
+Quantum information source is given by an ensemble of states: $\{ p_i, \ket{\psi_i} \} \in \mathcal{H}$. In general $\bra{\psi_i} \ket{\psi_i} \neq \delta_{ij}$. These $\ket{\psi_i}$ are th signals( outputs) of the source and they are emmited with probabiltiy $p_i$. We can asscoiated a desnity matrix with the source (this is not a spectral decompositoin: $\rho = \sum p_i \ket{\psi_i}$. Can compute the von Neumann entropy of the source.\\
+\textbf{Data compression limit}: Evaluated in $n$ uses of the source.\\
+Signals emmitted $\ket{\psi_k^{(n)}}$ with probability $p_k^{(n)}$: $\rho^{(n)} = \sum p_k^({n}) \ket{\psi_k^{(n)}} \bra{\psi_k^{(n)}}$. Now compress with map: $\zeta: \ket{\psi_k^{(n)}}\bra{\psi_k^{(n)}} \in \mathcal{D}(\mathcal{H}_{d^{n}}) \rightarrow \tilde \rho^{(n)} \in \mathcal(D)(\mathcal{H}_{d_c^{(n)}})$ with $d_c^{(n)} < d^n$. Similarliy there is a decompression scheme: $\mathfrak{D}^{(n)}:\mathcal{H}_{d_c^{(n)}})$ \rightarrow \mathcal{D}(\mathcal{H}_{d^{n}})$. Rate of $(\zeta^{(n)}, \mathfrak{D}^{(n)}) = \frac{\log(d_c^{(n)})}{n}$ and for all $R \geq 0$ $(\zeta^{(n)}, \mathfrak{D}^{(n)}, R) $ is a compression-decompression ma with a rate of R if dim $\mathcal{H}_{d_c^{(n)}} = 2^{nR}$.
+\section{Lecture 19}
+\subsection{Optimal rate of reliable data compression scheme}
+Instead we use the ensemble average fidelity $\bar F_n (C^{(n)}, D^{(n)}, R)$. If $\bar F_n \rightarrow 1$ as $n\rightarrow \infty$ then the compression scheme is reliable.
+$$
+\bar F_n = \sum_k p_k^{(n)} \bra{\psi^{(n)}_k} D^{(n)}(C^{(n)}(\ket{\psi^{(n)}_k}\bra{\psi^{(n)}_k})\ket{\psi_k^{(n)}}
+$$
+Check that $0 \leq \bar F_n \leq 1$ and $F_n = 1 \iff D^{(n)}(C^{(n)}(\ket{\psi^{(n)}_k}\bra{\psi^{(n)}_k})) = \bra{\psi^{(n)}_k}\ket{\psi^{(n)}_k}$.
+\subsubsection{Simplest example of quantum information source}
+Memoryless (i.i.d) quantum information source. No correlation between successive signals emmitted by the source. The density matrix characterising $n$ uses of the the source is $\rho^{(n)} = \pi^{\otimes n}, \pi \in \mathcal{D}(\mathcal{H})$. Let $\pi = \sum_i q_i \ket{\psi_i} \bra{\psi_i}$and  $\rho = \sum_i^{(n)}\lambda_i^{(n)} \ket{\chi_i} \bra{\chi_i}$. Therefore, $\lambda_i^{(n)} = q_{i_1}q_{i_2}...q_{i_n}$ and $\ket{\chi^{(n)}_i} = \ket{\psi_{i_1}} \otimes \ket{\psi_{i_2}} \otimes ... \otimes \ket{\psi_{i_n}}$. Therefore we are summing over the vector $\bm i = (i_1, i_2,..., i_n)$ so we can consider typical sequences again.
+$$
+S(\rho^{(n)} = S(\pi^{\otimes n}) = n S(\pi) = nH(\{q_i\})
+$$
+For any given $\epsilon> 0$, let $T_{\epsilon}^{(n)}$ be a classical typical set of sequences $\bm i = (i_1,...,i_n)$.\\
+\textbf{Correspondance}\\
+Classical  - Quantum\\
+$(u_1...u_n)$ - $\bm = (i_1...i_n)$\\
+$p(u_1...u_n)$ - $\lambda_{\bm i}^{(n)} = q_{i_1}...q_{i_n}$
+$$
+2^{-n(H(\pi) + \epsilon)} \leq q_{i_1}...q_{i_n} \leq 2^{-n(S(\pi) - \epsilon)}\forall \bm i= (i_1...i_n) \in T_{\epsilon}^{(n)}
+$$
+$$
+\mathfrak{T}_{\epsilon}^{(n)} = span\{ \ket{\chi_{\bm i}^{(n)}}| \bm i \in T_{\epsilon}^{(n)}\}
+$$
+\subsubsection{Typical Subspace Theorem}
+For any $\delta>0$ and $n$ large enough, for an i.i.d  quantum information source. Let $P_{\epsilon}^{(n)}$ be an orthogonal projection onto $\mathfrak{T}_{\epsilon}^{(n)} $. Then
+\begin{equation}
+Tr(P_{\epsilon}^{(n)} \rho^{(n)}) > 1-\delta
+\end{equation}
+\begin{equation}
+(1-\delta)2^{n(S(\pi) - \epsilon)} \leq dim \mathfrak{T}_{\epsilon}^{(n)} \leq 2^{n(S(\pi) + \epsilon)}
+\end{equation}
+as there is a 1-1 correspondance between typical sequences $\bm i = (i_1...i_n)$ in $T_{\epsilon}^{(n)}$ and vectors $\ket{\chi_{\bm i}^{(n)}} \in \mathfrak{T}_{\epsilon}^{(n)} $ which implies $dim \mathfrak{T}_{\epsilon}^{(n)} = |T_{\epsilon}^{(n)}|$.\\\\
+Proof of equation 14:
+$$
+Tr(P_{\epsilon}(\rho^{(n)}) = Tr \sum_{\bm i} P_{\epsilon}^{(n)} (\lambda_{\bm i}^{(n)} \ket{\chi^{(n)}}\bra{\chi^{(n)}}) = \sum_{i \in T_{\epsilon}^{(n)}} \lambda_i^{(n)} = \sum_{\bm i \in T_{\epsilon}^{(n)}} q_{i_1}... q_{i_n} = \sum_{\bm i \in T_{\epsilon}^{(n)} p(\bm i) = p\{T_{\epsilon}^{(n)}
+$$
+Proof equaiton 15 yourself:
+\subsubsection{Schumacher's Thereom}
+Consider a memoryless quantum information source $\{\pi, \mathcal{H}\}$.\\
+i) If $R> S(\pi)$ then there exists a reliable compresion decompression scheme of rate R\\
+ii) If $R< S(\pi)$ then anyu compression decompression scheem of rate $R$ is not reliable.\\\\
+Proof: i) Choose $\epsilon>0$ s.t. $R> S(\pi) + \epsilon$ and choose $n$ large enough s.t. $\mathfrak{T}_{\epsilon}^{(n)}$ satisifies the typical subspace theorem (equation 14 and 15). From equation 15.
+$$
+dim \mathfrak{T}_{\epsilon}^{(n)}  \leq 2^{n(S(\pi) + \epsilon)} < 2^{nR}
+$$
+Compression map:
+$\rho^{(n)}: \ket{\psi^{(n)}_k} \bra{\psi^{(n)}_k} \rightarrow \tilde \rho_k^{(n)}$ where $\tilde \rho_k^{(n)} = \alpha^2_k \ket{\tilde \psi_k^{(n)}}\bra{\tilde \psi^{(n)}_k} + \beta_k^2 \ket{\phi^{(n)}_0} \bra{\phi_0^{(n)}}$.
+$$
+\ket{\psi_k^{(n)}} = \frac{P_{\epsilon}^{(n)} \ket{\psi_k^{(n)}}}{\sqrt{\bra{\psi_k^{(n)}} P_{\epsilon}^{(n)} \ket{\psi_k^{(n)}}}}, \alpha_k^2= \bra{\psi_k^{(n)}} P_{\epsilon}^{(n)} \ket{\psi_k^{(n)}}}
+$$
+$\ket{\phi_0^{(n)}}$ is a fixed state in $\mathfrak{T}_{\epsilon}^{(n)} $, $\beta_k^2 = \bra{\psi_k^{(n)} } (I_n - P_{\epsilon}^{(n)}) \ket{\psi_k^{(n)}}$. Check that $Tr \tilde \rho_k^{(n)} - \alpha^k^2 + \beta_k^2$ and define the decompression scheme $\mathfrak{D}(\tilde \rho_k^{(n)}) = \tilde \rho_k^{(n)} \oplus \bm 0 = \hat \rho_k^{(n)}$
+$$
+\bar F_n = \sum p_k^{(n)} \bar{\psi_k^{(n)}} \tilde \rho_k^{(n)} \ket{\psi_k^{(n)}} = \sum p_k^{(n)} [\alpha_k^2 |\bra{\psi_k^{(n)}}\ket{\psi_k^{(n)}}|^2 + \beta_k^2 |\bra{\psi_k^{(n)}} \ket{\phi_0^{(n)}}|^2 ] $$
+$$
+\bar F_n \geq \sum p_k^{(n)} \alpha_k^2 \frac{|\bra{\psi_k^{(n)}} P_{\epsilon}^{(n)} \ket{\psi_k^{(n)}}|^2}{\bra{\psi_k^{(n)}} P_{\epsilon}^{(n)} \ket{\psi_k^{(n)}}} = \sum p_k^{(n)} \alpha^4_k \geq \sum p_k^{(n)} (2\alpha^2 k-1)  
+$$
+$$
+\bar F_n \geq 2 \sum p_k^{(n)}
+        \bra{\psi_k^{(n)}} P_{\epsilon} \ket{\psi_k^{(n)}} - 1 = 2 Tr(P_{\epsilon \rho^{(n)}}) -1 \geq 2(1-\delta) -1 = 1- 2 \delta
+$$
+\section{Lecture 21}
+\subsection{Accessible information and Holevo Bound}
+Scenario is Alice has a classical information source $X \sim p(x), x \in J$, and wants to communicate the messages to a distant party Bob but no classical communication is possible but does have a noiseless quantum channel. Alice takes the classical information and encodes it into the quantum state and sends it to Bob, who then decodes it using a POVM to the original message. So $x \rightarrow \rho_x \rightarrow_{\{E_y\}} y$ so if Bob recieves $\rho_x$:
+$$
+P(Y=y | X=x) = p(y|x) = Tr(E_y \rho_x)
+$$
+So the probability of correct inference is: $P(correct) = Tr(E_x \rho_x) = p(x|x), P(error) = 1- Tr(E_x \rho_x)$.\\\\
+How much information can Bob gain about $x$ through his measurement (e.g. through $y$):\\
+This is the mutual information $I(X:Y)$ as this is a measure of how much information is common between $x$ and $y$. so we want:
+$$
+I_{acc}(\{p_x, \rho_x\}) = max I(X:Y)
+$$
+So in otherwords it is the amount of classical information that can be stored in and recovered from a quantum system. Aim is to find upper bound on accessible information (let $\mathcal{E} = \{ p_x, \rho_x\}$. 
+\subsubsection{Holevo Bound}
+For any measurement $I(X:Y) \leq \chi(\{p_x, \rho_x\})= \chi(\mathcal{E})$ with Holevo chi quantity ($\chi(\mathcal{E}) = S(\sum p_x \rho_x) - \sum p_x S(\rho_x)$). Equality holds if all the $\rho_x$'s commute and projection measurement are on some eigenbasis of $\rho_x$'s.\\
+If all $\rho_x$ are pure then $\chi(\mathcal{E}) = S(\rho)$. \\\\
+The proof employs strong strong subadditivity (SSA) which is $S(AQB) + S(B) \leq S(AB) + S(QB)$ but we will actually use consequences of this.\\
+First consider 3 quantum systems: 1) $A: \mathcal{H}_A$ which is the classical $X$ embeedded in quantum system by picking $dim \mathcal{H}_A = |J|$ by using orthonormal basis $\{ \ket{x} \}_{x \in J}$, 2) $Q: \mathcal{H}_Q$ in a quantum system in whose state $\rho_x$ the message $x$ is encoded in. $\rho_x \in \mathcal{D}(\mathcal{H}_Q)$, 3) $B: \mathcal{H}_B$ Bob's measuring device, initially in a pure state $\phi_B = \ket{\phi_B} \bra{\phi_B}$ with orthonormal basis: $\{\ket{y}\}_{y \in J}$. \\\\
+Initial state: $\rho_{AQB} = (\sum_x p_x \ket{x} \bra{x} \otimes \rho_x )\otimes \phi_B$ ($B$ is uncorrelated with $AQ$). Then apply POVM measurement which is described by the following quantum operation (\Lambda: $\mathcal{H}_{QB} \rightarrow \mathcal{H}_{QB}$) (if we don't read out the measurement result):
+$$
+\Lambda(\sigma \otimes \phi_B) = \sum_{y \in J} \sqrt{E_y} \sigma \sqrt{E_y} \otimes \ket{y} \bra{y}
+$$
+The above is using the possible choice of measurement operator $M_a = \sqrt{E_a}$. Prove this is a quantum operation by writing it in Kraus form, which we do by defining a set of unitary operators $\{ U_y \}$:
+$$
+U_y \ket{\phi_B} = \ket{y}
+$$
+So let:
+$$
+\Lambda( \rho_{QB}) = \sum_y A_y \pho_{QB} A^{\dagger}_y, A_y = \sqrt{E_y} \otimes U_y
+$$
+Can easily check completeness on above, and if you substitute in $\rho_{QB} = \sigma \otimes \phi_B$ then you get back the original form of $\Lambda$ so it is a quantum operation. \\\\
+Let $A'Q'B'$ be the composite system after the measurement:
+$$
+\rho_{A'Q'B'} = \sum p_x \ket{x} \bra{x} \otimes \sqrt{E_y} \rho_x \sqrt{E_y} \otimes \ket{y} \bra{y}
+$$
+SSA implies $I(A:Q) = I(A:QB)$ (because $B$ is uncorrelated with $AQ$) and $I(A:QB) \geq I(A': Q'B')$ (as qauntum operations cannot increase mutual infroamtion and $\rho_{A'Q'B'} = (I \otimes \Lambda) \rho_{AQB}$) and thirdly $I(A':Q' B') \geq I(A': B')$. So therefore, $I(A:Q) \geq I(A':B')$.\\\\
+$$
+I(A:Q) = S(A) + S(Q) - S(AQ)
+$$
+$$
+\rho_{AQ} = Tr_B \rho_{AQB} = \sum_x p_x \ket{x} \bra{x} \otimes \rho_d^x
+$$
+$$
+\rho_A = \sum p_x \ket{x} \bra{x}
+$$
+$$
+\rho_Q = \rho = \sum_x p_x \rho_x
+$$
+$$
+S(\rho_A) = H(\{p_x\}), S(\rho_Q) =  S(\rho)
+$$
+$A$ and $Q$ have mutually orthogonal supports illustrated by $\omega_0 = \ket{0}\bra{0} \otimes \rho^0$ and $\omega_1 = \ket{1}\bra{1} \otimes \rho^1$ being block diagonal matrices with 0 everywhere other than where $\ket{0}\bra{0}$ etc.) Therefore by result in ES3
+$$
+S(\rho_{AQ}) =  H(\{p_x\}) + \sum_x p_x S(\rho_x)
+$$
+So
+$$
+I(A:Q) = H(\{p_x \}) + S(\rho) - H(\{p_x\}) - \sum p_x S(\rho_x)  = \chi(\mathcal{E})
+$$
+and
+$$
+I(A':B') = S(A') + S(B') - S(A'B')
+$$
+$$
+Tr(\sqrt{E_y} \rho_x \sqrt{E_y}) = Tr(E_y p_x) = p(y|x)
+$$
+So
+$$
+\rho_{A'B'} = \sum p_x \ket{x} \bra{x} p(y|x) \otimes \ket{y} \bra{y} = \sum p(x,y) \ket{xy} \bra{xy} 
+$$
+So 
+$$
+S(\rho_{A'B'}) = H(XY)
+$$
+As $S(\rho_A) = H(X), S(\rho_B) = H(Y)$:
+$$
+H(X) + H(Y) - H(XY)  = I(X:Y) \leq \chi(\mathcal{E})
+$$
 \end{document}

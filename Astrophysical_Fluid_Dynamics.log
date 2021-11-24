@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  17 NOV 2021 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  24 NOV 2021 12:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1014,20 +1014,203 @@ Overfull \hbox (1679.91158pt too wide) in paragraph at lines 1043--1044
 \OT1/cmr/m/n/10 ve-loc-ity $\OML/cmm/m/it/10 v[]$ \OT1/cmr/m/n/10 (not the same as $\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :Intheframeoftheejectortheinterstellarmediumisrunningintoyousothatsendsareverseshockgoingbackwardsthroughthemedium:THerewillbeanothercontactdiscountuityinthemiddleseperatingthesemediums:Atsomepointtheejectawillaccumulateenoughmassinfrontofittoconsiderablyslowdown:Atthispointtheenergyoftheexplosionwillhavebeentransferredintotheshockthroughtheinterstellarmedium:THisoccurswhen$\OT1/cmr/m/n/10 M$[] \OMS/cmsy/m/n/10 ^^X
  []
 
-[28] (./Astrophysical_Fluid_Dynamics.aux) ) 
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1064
+
+ []
+
+[29]
+Overfull \hbox (27.70804pt too wide) detected at line 1103
+\OML/cmm/m/it/10 E \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 ^^YR[]^^Z[][]t[]R[] [][] ^^X[]d^^X\OT1/cmr/m/n/10 ([][][] + []) = []\OML/cmm/m/it/10 ^^Z[][][]t[]t[] [][] ^^X[]d^^X\OT1/cmr/m/n/10 ([][][] + [])
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:1123: Undefined control sequence.
+<argument> \parital 
+                    \tilde F
+l.1123 ...ac{\parital \tilde F}{\partial \epsilon}
+                                                   = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[30]
+./Astrophysical_Fluid_Dynamics.tex:1135: Missing $ inserted.
+<inserted text> 
+                $
+l.1135 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Astrophysical_Fluid_Dynamics.tex:1135: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.1135 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./Astrophysical_Fluid_Dynamics.tex:1137: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1137 \begin{equation}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Astrophysical_Fluid_Dynamics.tex:1139: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1139                \end{equation}
+                                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./Astrophysical_Fluid_Dynamics.tex:1139: LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1139                \end{equation}
+                                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Astrophysical_Fluid_Dynamics.tex:1139: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1139                \end{equation}
+                                    
+Things are pretty mixed up, but I think the worst is over.
+
+./Astrophysical_Fluid_Dynamics.tex:1150: Missing $ inserted.
+<inserted text> 
+                $
+l.1150 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Astrophysical_Fluid_Dynamics.tex:1150: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.1150 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Astrophysical_Fluid_Dynamics.tex:1152: Display math should end with $$.
+<to be read again> 
+                   \xi 
+l.1152                $\xi
+                           \in (0,1)$ maps to $v \in (\frac{3}{5}, \frac{3}{...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Astrophysical_Fluid_Dynamics.tex:1152: Missing $ inserted.
+<inserted text> 
+                $
+l.1152                $\xi
+                           \in (0,1)$ maps to $v \in (\frac{3}{5}, \frac{3}{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1152--1158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1152--1158
+
+ []
+
+[31]
+./Astrophysical_Fluid_Dynamics.tex:1167: Undefined control sequence.
+l.1167 ...per unit volume) goes like $\dot e \prop
+                                                   T^{\frac{1}{2}} n^2$ then...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Astrophysical_Fluid_Dynamics.tex:1167: Undefined control sequence.
+l.1167 ...is $t_{cool} \sim \frac{e}{\dot e} \prop
+                                                   \frac{n T}{T^{\frac{1}{2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Astrophysical_Fluid_Dynamics.tex:1167: Undefined control sequence.
+l.1167 ...onstant, but $T$ decreases with $T \prop
+                                                   t^{-\frac{6}{5}}$ so $t_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1170
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:1183: Undefined control sequence.
+<argument> \dr 
+               
+l.1183 ...r} = -\frac{dp}{d\rho}\frac{d \rho}{\dr}
+                                                   = - c_s^2 \frac{d \rho}{d...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[32]
+Overfull \hbox (13.06842pt too wide) detected at line 1200
+\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h \OT1/cmr/m/n/10 = []([] + []) \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = []([] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1) = [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1206
+
+ []
+
+[33] (./Astrophysical_Fluid_Dynamics.aux) ) 
 Here is how much of TeX's memory you used:
- 1182 strings out of 478599
- 16277 string characters out of 5858101
+ 1183 strings out of 478599
+ 16279 string characters out of 5858101
  332230 words of memory out of 5000000
- 19099 multiletter control sequences out of 15000+600000
+ 19100 multiletter control sequences out of 15000+600000
  413425 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,9n,66p,1647b,136s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,9n,66p,2200b,136s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Astrophysical_Fluid_Dynamics.pdf (28 pages, 343196 bytes).
+Output written on Astrophysical_Fluid_Dynamics.pdf (33 pages, 362959 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 211 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
