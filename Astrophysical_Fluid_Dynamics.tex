@@ -1202,6 +1202,25 @@ $$
 r_s = \frac{GM}{B} \frac{5 -3 \gamma}{4(\gamma -1)}, c_{s,s}^2 = B \frac{2(\gamma -1)}{5-3\gamma}
 $$
 So can get the value for the sonic radius from the Bernoulli constant. These constraints only occur if at some point in the flow it goes from subsonic to supersonic.\\\\
-Look for transonic solutions, smoothly passing through the sonic point.
+Look for transonic solutions, smoothly passing through the sonic point. \\
+\textbf{Wind}: Start near central object with $u=0$ but high $c_s$ and go to $r\rightarrow \infty$, where you end up with $u= constant$, $\rho \rightarrow \frac{1}{r^2}$.\\
+\textbf{Accretion}: Start with $r\rightarrow \infty$ with some $\rho_0, c_{s,0}$ and at rest $u=0$. Then accerlerate towards the center passing through the sonic point.\\\\
+Diagram of wind and accretion solutions at 30 min of 21 lecture.\\\\
+For accretion at $\rightarrow \infty$ $ B= \frac{c_{s,0}^2}{\gamma-1}$, so $r_s = \frac{GM}{c_{s,0}^2} \frac{5-3\gamma}{4}$ and $c^2_{s,s} = c^2_{s,0} \frac{2}{5-3\gamma}$.
+$$
+\dot M = 4\pi r^2_s \rho_s u_s = 4 \pi r_s^2 \rho_s c_{s,s}
+$$
+$$
+P \prop \rho^{\gamma}, c_s^2 \rho^{\gamma -1} \implies (\frac{c_{s,s}}{c_{s,0}})^2  = (\frac{\rho_s}{\rho_0})^{\gamma -1} \implies \rho_s = \rho_0( \frac{2}{5-3\gamma}^\frac{1}{\gamma -1}
+$$
+$$
+\dot M = 4 \pi (\frac{GM}{c_{s,0}^2})^2 (\frac{5-3\gamma}{2})^2 \rho_0 (\frac{2}{5-3\gamma})^{\frac{1}{\gamma-1}}c_{s,0} (\frac{2}{5-3\gamma}^{\frac{1}{2}} = \pi (\frac{GM}{c_{s,0}})^2 \rho_0 c_{s,0} f(\gamma)
+$$
+with $f(\gamma) = (\frac{2}{5-3\gamma})^{\frac{5-3\gamma}{2(\gamma-1)}}$. So to have a transonic solution you need $1<\gamma <\frac{5}{3}$. $f(\frac{5}{3}) = 1, f(1) = e^{\frac{3}{2}}$. \\\\
+Bondi radius: $R_B = \frac{GM}{c_{s,0}^2}$ and $\dot M = \pi R_B^2 \rho_0 c_{s,0}$ so the accretion rate corresponds to the rate at which the fluid flows across the Bondi radius with the sound speed and density at infinity.
+$$
+c_{s,0}^2 = \frac{GM}{R_B}$
+$$
+So the thermal energy of gas at $\infty$ is of order of the gravitional energy at $R_B$.
 \end{document} 
 

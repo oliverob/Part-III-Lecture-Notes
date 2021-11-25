@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1637757002 "Astrophysical_Fluid_Dynamics.tex" "Astrophysical_Fluid_Dynamics.pdf" "Astrophysical_Fluid_Dynamics" 1637757002
-  "Astrophysical_Fluid_Dynamics.aux" 1637756971 4511 b2d56a04df30039d7dd1ef38f78f321b "pdflatex"
-  "Astrophysical_Fluid_Dynamics.tex" 1637757000 78616 1623f329565ad671878c7d8b54d2c358 ""
+["pdflatex"] 1637758482 "Astrophysical_Fluid_Dynamics.tex" "Astrophysical_Fluid_Dynamics.pdf" "Astrophysical_Fluid_Dynamics" 1637758482
+  "Astrophysical_Fluid_Dynamics.aux" 1637758373 4511 5a4ec688736100f3587454fee18534dd "pdflatex"
+  "Astrophysical_Fluid_Dynamics.tex" 1637758481 80221 34a743ee5d4abaad739bbfa8a6b28ac3 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630409836 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630409836 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -66,5 +66,5 @@
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
   "Astrophysical_Fluid_Dynamics.aux"
-  "Astrophysical_Fluid_Dynamics.log"
   "Astrophysical_Fluid_Dynamics.pdf"
+  "Astrophysical_Fluid_Dynamics.log"

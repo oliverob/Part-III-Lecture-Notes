@@ -1702,5 +1702,110 @@ $$
 \ket{p,r ; q,s} = \hat b^{r \dagger}_{\bm p} \hat b^{ s \dagger}_{\bm q} \ket{0} = -\ket{q,s; p,r}
 $$
 simply because $\{b_{\bm p}^{r \dagger}, b_{\bm q}^{s \dagger}\} = 0$
+\section{Lecture 22}
+\subsection{Interacting Fermions}
+$$
+\mathfrak{L} = \mathfrak{L}_0 + \mathfrak{L}_{int}
+$$
+$$
+\mathfrak{L}_0 = \bar \psi (i \gamma^{\mu}\partial_{\mu} - m) \psi
+$$
+Dimensional analysis: $[\mathfrak{L}] = 4$, $[\partial ] = +1 \implies [\psi] = [\bar \psi] = \frac{3}{2}$. Consider the simplest possible self-coupling that is consistent with lorentz invariance (neeeds to be powers of $\psi \bar \psi$:
+$$
+\mathfrak{L}_{int} = - g_F(\psi \bar \psi)^2
+$$
+as $[g_F] = -2$ so this is an irrelevent coupling (leads to non-renormalisable field theory). So we need to consider fermions coupling to other fields e.g. Yukawa theory or coupling to bosons:
+\subsection{Yukawa theory}
+Real scalar field $\phi(x)$:
+$$
+\mathfrak{L} = \mathfrak{L}_0 + \frac{1}{2} (\partial_{\mu} \phi)(\partial ^{\mu} \phi) - \frac{\mu^2}{2} \phi^2 - \lambda \phi \psi \bar \psi
+$$
+$[\lambda] = 0$ so this is a marginal interaction.
+\subsubsection{Calculate scattering amplitudes}
+Dyson's formula which will give rise to Time ordered products of the field operators, and then we will need to contract them with a version of wicks theorem. In doing so you get an answer in terms of a set of Feynman rules. So the rest of the course we will fill in these theories for Yukawa theory and QED (which uses gauge fields).\\\\
+\textbf{Feynmann Propogator}\\
+$$
+S_F(x-y)_{\alpha \beta} = \bra{0} T[\hat \psi_{\alpha}(x) \hat {\bar{\psi}}_{\beta}(y)] \ket{0}
+$$
+Like in the scalar case we are thinking about the Heinsberg picture, so the fields above are the Heisenberg picture field operators. We need to worry about the order that fields appear in the product in all cases as they have a vanishing anticommutator. So:
+$$
+                                                T[\hat \psi_{\alpha}(x) \hat {\bar{\psi}}_{\beta}(y)]  = \begin{cases} \hat \psi_{\alpha}(x) \hat {\bar{\psi}}_{\beta}(y) & x^0 > y^0\\
+                                                -\hat {\bar{\psi}}_{\beta}(y) \hat \psi_{\alpha}(x)  & x^0 < y^0 \end{cases}
+$$
+In the case where $x^0 = y^0$ they still anticommute so in order for the expression to be unambigious it needs this minus sign.  Lets start with the first ordering above ($x^0 > y^0$) call it $M_+$. Consider the mode expansion:
+$$
+\hat \psi_{\alpha}(x) = \sum_{s=1}^2 \int \frac{d^3 p}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} ( \hat b^s_{\bm p}^2 u^s_{\alpha}(p) e^{-i p\cdot x} + \hat c^{s \dagger}_{\bm p} v^s_{\alpha} (p) e^{i p \cdot x})
+$$
+$$
+\hat {\bar{\psi}}_{\beta}(x) = (\hat \psi^{\dagger} (x) \gamma^0)_{\alpha}
+$$
+So
+$$
+\hat {\bar{\psi}}_{\beta}(x) = \sum_{s=1}^2 \int \frac{d^3 p}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} ( \hat b^{s \dagger}_{\bm p}^2 \bar{u}^s_{\alpha}(p) e^{-i p\cdot x} + \hat c^{s}_{\bm p} \bar{v}^s_{\alpha} (p) e^{i p \cdot x})
+$$
+So
+$$
+M_+ = \ket{0} \hat \psi_{\alpha}(x) \hat {\bar{\psi}}_{\beta}(y) \bra{0} = \sum_{r,s=1}^2 \int \frac{d^3p}{(2\pi)^3} \int \frac{d^3 q}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p} 2 E_{\bm q}}} (u^s_{\alpha} (p) \bar{u}^r_{\beta} (q) e^{-i(p\cdot x - q \cdot y)} \bra{0} \hat b^r_{\bm p} \hat b^{s \dagger}_{\bm q} \ket{0}
+$$
+We can replace $ \hat b^r_{\bm p} \hat b^{s \dagger}_{\bm q}$ with $\{ \hat b^r_{\bm p} ,\hat b^{s \dagger}_{\bm q} \} = (2\pi)^3 \delta^{rs} \delta^{(3)}(\bm p - \bm q)$ so contract out the p and q:
+$$
+M_+ = \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 E_{\bm p}} e^{-i p \cdot(x-y)} \sum_{s=1}^2 u^s_{\alpha}(p) \bra{u}_{\beta}^s (p) 
+$$
+and as $\sum_{s=1}^2 u^s_{\alpha}(p) \bra{u}_{\beta}^s (p) = (\cancel{p} + m\bm I_4)_{\alpha \beta}$:
+$$
+M_+ = \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 E_{\bm p}} e^{-i p \cdot(x-y)} (\cancel{p} + m\bm I_4)_{\alpha \beta} 
+$$
+Similarly:
+$$
+M_- = \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2 E_{\bm p}} e^{i p \cdot(x-y)} (\cancel{p} - m\bm I_4)_{\alpha \beta} 
+$$
+and we have:
+$$
+                                                        S_F(x-y)_{\alpha \beta} = \begin{cases} M_+ & x^0 > y^0 \\
+                                                        -M_- & x^0 < y^0 \end{cases}
+$$
+Use the same technique as for the scalar case to turn this into a contour integral that picsk up the minus signs by depending on the plane you close it in:
+$$
+S_F(x-y)_{\alpha \beta}  = \int \frac{d^4p}{(2\pi)^4} i \frac{(\cancel{p}+ m)_{\alpha \beta}}{ p^2 - m^2 + i \epsilon} e^{- i p\cdot (x-y)
+$$
+\textbf{Wicks theorem for fermions}\\
+Now the individual creation operators and annihilation operators do not communte with themselves so you also have to keep track of the ordering of the sets of the same operators:
+$$
+T[\hat \psi_{\alpha}\hat {\bar{\psi}}_{\beta}(y) ] = : \hat \psi_{\alpha}\hat {\bar{\psi}}_{\beta}(y) : + \hat \psi^{\cdot}_{\alpha}\hat {\bar{\psi^{\cdot}}}_{\beta}(y) 
+$$
+The operators still anticommute within the normal ordering! Take the vaccum expecation value:
+$$
+\hat \psi^{\cdot}_{\alpha}\hat {\bar{\psi^{\cdot}}}_{\beta}(y) = \bra{0} T[ \hat \psi_{\alpha}(x) \bar{\psi}_{\beta}(y)] \ket{0} = S_F (x-y)_{\alpha \beta}
+$$
+The contraction between $\psi \psi$ and $\bar \psi \bar \psi$ would vannish.The fermonic operators anticommute inside normal ordering:
+$$
+: \hat \psi_1 \hat \psi_2: = - : \hat \psi_2 \psi_1 :
+$$
+\textbf{Wicks Theorem}\\
+Let $\hat \pi$ be an arbitary product $\hat \psi$, $\hat \bar \psi$ with $\hat \psi(x_1) = \hat \psi_1$ and let 
+$$
+\hat \pi = \hat \psi_1 \hat \psi_2 \hat \bar \psi_3 \psi_4
+$$
+For any such product, the time ordered product is normal order of the sum over all the contractions:
+$$
+T[\hat \pi] = : G[\hat p\i]:
+$$
+\subsection{Gauge Fields}
+4-vector fields assocaited with the electromagentic fields, as the observed fields $E$ and $B$ can be expressed in terms of the 4-vector potential $A^{\mu}$ which is a 4-vector field meaning it tranforms as:
+$$
+A^{\mu}(x) \rightarrow \Lambda^{\mu}_{\nu} A^{\nu}(\Lamdba^{-1} \cdot x)
+$$
+This field is not in of its self a physical thing there are transformations you can perform on A that level the physcially observable things $E$ and $B$ unchanged which is what makes this a guage field. There is the observeable field strength tensor which contains $\bm E$ and $\bm B$:
+$$
+F^{\mu \nu} = \partial^{\mu} A^{\nu} - \partial^{\nu} A^{\mu}
+$$
+This field strength tensor is invariant under gauge transformations of $A^{\mu}$:
+$$
+A^{\mu} \rightarrow A^{\mu} + \partial^{\mu} \lambda, \lamdbda: \mathbb{R}^{3,1} \rightarrow \mathbb{R}
+$$
+We need to write an action for this field theory with Lagrangian desnity (which is the only thing it could be to produce linear EOM whilst being lorentz invaraint and guage invariant):
+$$
+\mathfrak{L} = -\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
+$$
+Principle of least action varying the field $A^{\mu}$ whilst keeping the values at is boundaries fixed produces an equation of motion:
 \end{document}
-

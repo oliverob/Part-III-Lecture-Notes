@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  23 NOV 2021 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  25 NOV 2021 12:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1559,7 +1559,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 1698--1701
 
  []
 
-[49] [50] (./Quantum_Field_Theory.aux) ) 
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 1725--1727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1725--1727
+
+ []
+
+[50]
+./Quantum_Field_Theory.tex:1737: Double superscript.
+l.1737 ...{\sqrt{2 E_{\bm p}}} ( \hat b^s_{\bm p}^
+                                                  2 u^s_{\alpha}(p) e^{-i p\...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+./Quantum_Field_Theory.tex:1744: Double superscript.
+l.1744 ..._{\bm p}}} ( \hat b^{s \dagger}_{\bm p}^
+                                                  2 \bar{u}^s_{\alpha}(p) e^...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+
+Overfull \hbox (83.73163pt too wide) detected at line 1749
+\OML/cmm/m/it/12 M[] \OT1/cmr/m/n/12 = [] [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] = [] [] [] [] [][](\OML/cmm/m/it/12 u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 e[] [] [][] []
+ []
+
+[51]
+./Quantum_Field_Theory.tex:1770: Missing } inserted.
+<inserted text> 
+                }
+l.1770 $
+        $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 1791.
+
+./Quantum_Field_Theory.tex:1796: Undefined control sequence.
+l.1796 ...rrow \Lambda^{\mu}_{\nu} A^{\nu}(\Lamdba
+                                                  ^{-1} \cdot x)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[52]
+./Quantum_Field_Theory.tex:1804: Undefined control sequence.
+l.1804 ...{\mu} + \partial^{\mu} \lambda, \lamdbda
+                                                  : \mathbb{R}^{3,1} \righta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[53] (./Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
  1368 strings out of 478599
  18866 string characters out of 5858101
@@ -1569,10 +1629,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  56i,12n,66p,1327b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Quantum_Field_Theory.pdf (50 pages, 370743 bytes).
+Output written on Quantum_Field_Theory.pdf (53 pages, 380331 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+ 281 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
