@@ -1741,7 +1741,7 @@ $$
 $$
 So
 $$
-\hat {\bar{\psi}}_{\beta}(x) = \sum_{s=1}^2 \int \frac{d^3 p}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} ( \hat b^{s \dagger}_{\bm p}^2 \bar{u}^s_{\alpha}(p) e^{-i p\cdot x} + \hat c^{s}_{\bm p} \bar{v}^s_{\alpha} (p) e^{i p \cdot x})
+\hat {\bar{\psi}}_{\beta}(x) = \sum_{s=1}^2 \int \frac{d^3 p}{(2 \pi)^3} \frac{1}{\sqrt{2 E_{\bm p}}} ( \hat b^{s \dagger}_{\bm p}^2 \bar{u}^s_{\alpha}(p) e^{i p\cdot x} + \hat c^{s}_{\bm p} \bar{v}^s_{\alpha} (p) e^{-i p \cdot x})
 $$
 So
 $$
@@ -1807,5 +1807,172 @@ We need to write an action for this field theory with Lagrangian desnity (which 
 $$
 \mathfrak{L} = -\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
 $$
-Principle of least action varying the field $A^{\mu}$ whilst keeping the values at is boundaries fixed produces an equation of motion:
+Conjugate momenta:
+$$
+                                                                \pi_{\mu} = \frac{\partial \mathfrak{L}}{\partial \dot A_{\mu}} = \begin{cases} 0 & \mu  = 0\\ - F^{oi} = E^i & \mu = \{1,2,3\}\end{cases}
+$$
+This wont work with our normal canonical commuation relations as the zeroth term is 0. This is because we need to treat the gauge transformation properly\\
+Configuratoins of $A^{\mu}$ that are related by a gauge transformation are physically indisguisable.\\
+The configuration space is all configuratoins of the field as some fixed time, and it is covered by sets of gauge orbits. A is foliated by gauge orbits and we need to fix a gauge. \\\\
+\textbf{Lorentz gauge}
+$$
+\partial_{\mu} A^{\mu} = 0
+$$
+This condition is lorentz invariant, and also doesn't completely fixed the gauge. Now think about dynamics with this gauge, by modifying the Lagrangian:
+$$
+\mathfrak{L}_{\epsilon} = -\frac{1}{4} F_{\mu \nu} F^{\mu \nu} - \frac{1}{2\epsilon} (\partial_{\mu} A^{\mu})^2
+$$
+This reduces to Maxwell when the lorentz gauge is imposed and now we will have conjugate momentum for all $\mu$. We can further speicify to the Feynmann gauge with $\epsilon = 1$ but you don't need to. It is a good excercise to leave $\epsilon$ unset and check that it makes no difference to the final equations.
+$$
+                                                                \partial_{\mu} (\frac{\partial \mathfrak{L}}{\partial(\partial_{mu}A^{\mu}} = - \partial_{\mu} F^{\mu \nu} - \partial_{\mu} (\eta^{\mu \nu} (\partial_{\rho}A^{\rho}) =  - \partial_{\mu}\partial^{\mu} A^{\nu} + \partial_{\mu} \partial^{\nu} A^{\mu} - \partial^{\nu} \partial_{\mu} A^{\mu} = - \parital_{\nu}\partial^{\nu} A^{\mu}$$
+                                                                So the canconial momenta is:
+                                                                $$
+\pi^0 = -(\partial_{\mu} A^{\mu}), \pi^i = \partial^i A^0 - \dot A^i
+                                                                $$
+Strategy (Guple-Bleuler procedure) is to first quantitise and then constrain to the lorentz gauge. Consider in the schrodinger picture:
+$$
+A^{\mu} \rightarrow \hat A^{\mu}, \phi^{\mu} \rightarrow \hat \pi^{\mu}
+$$
+with Non-vanishing commuators:
+$$
+[\hat A^{\mu} (\bm x), \hat \pi^{\mu}(\bm y)] = i \eta^{\mu \nu} \delta^{(3)}(\bm x - \bm y)
+$$
+We have a spin 1 field so we expect to be quantitsed in a bosonic way hence why we are using commuators. \\
+Consider mode expansion of field theory:
+$$
+\parital_{\nu}\partial^{\nu} A^{\mu} = 0
+$$
+So this has solutions of the form $ \epsilon^{\mu} e^{\pm i p \cdot x}$ wit. These are labled by on shell 4-momentum ($p_{\mu}p^{\mu} = 0, p^0 \geq 0 \implies p^{\mu} = (E_{\bm p}, \bm p)$ and the $\epsilon$ (the polarisation 4vector).\\\\
+Chose an orthonormal basis $\epsilon^{(\lambda)}_{\mu} (p)$ ($\lamdba in \{0,1,2,3\}$) with $\eta^{\mu \nu} \epsilon_{\mu}^{(\lambda)}(p) \epsilon_{\nu}^{(\rho)}(p) = \eta^{\lambda \rho}$ this  tells us that $\epsilon^{(0)}$ is timelike and $\epilson^{(i)}$ is spacelike. can show completeness relation: $\eta_{\lambda \rho} \epsilon_{\mu}^{(\lambda)}(p) \epsilon_{\nu}^{(\rho)}(p) = \eta_{\mu \nu}. $ \\\\
+It is useful to choose $\epsilon^{(1)}, \epsilon^{(2)}$ to be transverse ($p^{\mu} \epsilon_{\mu}^{(i)} =0$) but $p^{\mu} \epsilon_{\mu}^{(3)} \neq 0$. Now we can mode expand te field operator:
+$$
+\hat A_{\mu}(x) = \int \frac{d^3 p}{(2\pi)^3} \frac{1}{\sqrt{2 |\bm p|}} \sum^3_{\lambda = 0} \epsilon^{(\lambda)}_{\mu} (p) (\hat a^{\lamdba}_{\bm p} e^{i \bm p \cdot \bm x} + \hat a^{\lamdba \dagger}_{\bm p} e^{-i \bm p \cdot \bm x}
+$$
+$$
+\hat \pi_{\mu}(x) = i \int \frac{d^3 p}{(2\pi)^3} \sqrt{\frac{|\bm p|}{2}} \sum^3_{\lambda = 0} \epsilon^{(\lambda)}_{\mu} (p) (\hat a^{\lamdba}_{\bm p} e^{i \bm p \cdot \bm x} - \hat a^{\lamdba \dagger}_{\bm p} e^{-i \bm p \cdot \bm x}
+$$
+Now should check that the field commutation relations imply the oscillator communation rleaitons:
+$$
+[a^{\lamdba}_{\bm p}, a^{\rho \dagger}_{\bm q} ] = - \eta^{\lambda \rho}(2 \pi )^3 \delta^{(3)} (\bm p - \bm q)
+$$
+This creates a hilbert space with a non-positive norm so is not positive semidefinitie (this is because we aren't talking about a physical space, when we restrict otthe physcial sybspace this will dissappear). We can calculate the hamiltonian:
+$$
+\hat H = \int \frac{d^3 p}{(2\pi)^3} |\bm p| (\sum _{\i=1}^3 \hat a^{i \dagger}_{\bm p} \hat a^i_{\bm p} - \hat a^{0 \dagger}_{\bm p} \hat a^0_{\bm p}
+$$
+So the vaccum states are defined such that:
+$$
+\hat a^{\lamdba}_{\bm p} \ket{0} = 0
+$$
+The "Big" "Hilbert" space:
+$$
+\ket{\bm p_1, ..., \bm p_n, \lambda_1,..., \lambda_n} = \hat a^{\dagger \lambda_1}_{\bm p_1}...\hat a^{\dagger \lambda_n}_{\bm p_n} \ket{0}
+$$\section{Lecture 24}
+Heisnberg field operator
+$$
+A_{\mu} (x) = \int \frac{d^3 p}{(2\pi)^3} \frac{1}{\sqrt{2|\bm p|}} \sum_{\lamda=0}^3 \epsilon^{(\lambda)}_{\mu} (p) (\hat a_{\bm p}^{\lambda} e^{-i p \cdot x} + \hat a_{\bm p}^{\lambda \dagger} e^{i p \cdot x})
+$$
+$$
+[\hat a_{\bm p}^{\lambda}, \hat a^{\mu}_{\bm q}] = - \eta^{\lambda \mu} (2\pi)^3 \delta^{(3)}(\bm p - \bm q)
+$$
+We can get particles which we call photons by acting in different componetnts on the vaccum state as above. We know this is wrong as there should only be two degrees of freedom corresponding to a photon as the polarisation is aligned trasverse in 2d whereas this gives us 4 degreees of freedom. There is also a mathematical problema s the big "Hilbert space" spanned by this states contain negative norm states and 0 norm states so it is not really a hilbert space.
+$$
+\bra{\bm p, 0} \ket{\bm q, 0} = \bra{0} \hat a_{\bm p}^0 \hat a^{0 \dagger}_{\bm q} \ket{0} = -(2 \pi)^3 \delta^{(3)}(\bm p - \bm q)
+$$
+These problems go away when we impose the lorentz gauge constraint which classically is:
+$$
+\partial_{\mu} A^{\mu} = 0 $$
+To impose this quantumly we use the Gupta-Bleuler strategy. We define a physical subspace s.t.
+$$
+\bra{\Psi'} \partial_{\mu} \hat A(x) \ket{\Psi} = 0 \forall \ket{\Psi'}, \ket{\Psi} \in \mathcal{H}_p
+$$
+$$
+\partial_{\mu}\hat A^{\mu} = \int \frac{d^3 p}{(2\pi)^3} \frac{1}{\sqrt{2|\bm p|}} \sum_{\lamda=0}^3 (-i p^{\mu})\epsilon^{(\lambda)}_{\mu} (p) (\hat a_{\bm p}^{\lambda} e^{-i p \cdot x} - \hat a_{\bm p}^{\lambda \dagger} e^{i p \cdot x})
+$$
+This won't constrain transverse polarisations for which $p^{\mu} \epsilon_{\mu}$ as it will vanish always. Choose a canonical lorentz frame with $p^{\mu} = (p,0,0,p)$, and orthonormal basis $\epsilon_{\mu}^{(\lambda)}(p) = \delta^{\lambda}_{\mu}$. The point is that the GB condition then allows only photons with polarisation obeying $p^{\mu}\epsilon_{\mu} = 0$ so we have transverse photons: $\ket{\psi} = \ket{\bm p, \lamdba = 1,2}$ and also certain linearly combinations of unphysical photons: $\ket{\phi} = \ket{\bm p, 0} - \ket{\bm p, 3}$ ("time like photon and longitudal photon"). So we haven't coompletly removed the extra degrees of freedom but this is good enough, as these states have zero norm and the expectation of the Hamiltonian is also zero. This means you can get rid of them by taking a quotient, by identifying states which differ by a state with zero norm $\ket{\psi} \sim \ket{\psi'} + \ket{\phi}$. The upshot after all of this is we can restrict our attention to the two transverse operations.\\\\
+\subsubsection{Photon propogator}
+$$
+\Delta_{\mu \nu}(x - y) = \bra{0} T[\hat A_{\mu}(x) \hat A_{\nu}(y)] \ket{0}
+$$
+Evaluate using the mode expansion in exactly the same way and we will get an integral representation of the form:
+$$
+\int \frac{d^4 p}{(2 \pi)^4} \frac{-i \eta_{\mu \nu}}{p^2 + i\epsilon} e^{-i p\cdot (x-y)}
+$$
+\subsubsection{Coupling to matter}
+Maxwell equation with source
+$$
+\partial_{\mu} F^{\mu \nu} =J^{\nu}
+$$
+$$
+J^{\nu} = (\rho(\bm x,t), \bm J(\bm x,t))
+$$
+The charge conservation equation means we must have a conserved current:
+$$
+\partial_{\mu} J^{\mu} = 0
+$$
+Comes from the action:
+$$
+S = \int d^4 x \mathfrak{L}
+$$
+$$
+\mathfrak{L} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} - A_{\mu} J^{\mu}
+$$
+$$
+F_{\mu \nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu}
+$$
+$F$ is invariant under the lorentz gauge transformation, and so is $A_{\mu}J^{\mu}$ as
+$$
+A_{\mu} \rightarrow A_{\mu} + \partial_{\mu} \lambda \implies A_{\mu}J^{\mu} \rightarrow A_{\mu}J^{\mu} + \partial_{\mu} \lambda J^{\mu} = A_{\mu} J^{\mu}
+$$
+Source is provided by the spinor field so write down the dirac lagragian:
+$$
+\mathfrak{L}_F = \bar \psi(x) (i \gamma^{\mu}\partial_{\mu} - m) \psi(x)
+$$
+This has a U(1) symmetry that gives rise toa conserved current:
+$$
+\psi (x) \rightarrow e^{-i\alpha} \psi(x), \bar \psi(x) \rightarrow e^{i\alpha} \bar \psi (x) \implies \partial_{\mu} J^{\mu}_{\nu} = 0, J^{\mu}_{\nu} = \bar \psi \gamma^{\mu} \psi 
+$$
+\subsubsection{Quantum Electrodynamics}
+$$
+\mathfrak{L} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} + \bar \psi(i \gamma^{\mu} \partial_{\mu} - m) \psi - e( \bar \psi \gamma^{\mu} \psi) A_{\mu}
+$$
+Check that this is gauge invariant:\\
+It is obviously a lorentz scalar as this was already demonstrated for the dirac lagrangian and the FF term. We have shown that $\bar \psi \gamma^{\mu} \psi$ is a lorentz vector so contracts to a lorentz scalar with $A_{\mu}$. Now we can keep the symmetry if we turn it into a local symmetry:
+$$
+\psi(x) \rightarrow e^{- e \alpha(x)} \psi(x), \bar \psi(x) \rightarrow e^{i e \alpha(x)} \bar \psi
+$$
+Want to check this is equivalent to $A^{\mu} \rightarrow A^{\mu} + \partial^{\mu} \alpha (x)$.\\\\
+Define a covariant derivative:
+$$
+D_{\mu} \psi(x) = \partial_{\mu} \psi(x) + i eA_{\mu} (x) \psi(x)
+$$
+$$
+D_{\mu} \psi(x) \rightarrow \partial_{\mu} (e^{-i e \alpha(x)} \psi(x)) + ie(A_{\mu}(x) + \partial_{\mu}\alpha(x)) e^{-ie \alpha(x)} \psi(x) 
+$$
+$$
+D_{\mu} \psi(x) \rightarrow  e^{-ie\alpha(x)} (\partial_{\mu} \psi(x) - ie \partial_{\mu} \alpha(x) \psi(x) + ie A_{\mu} \psi(x) + i e \partial_{\mu} \alpha(x) \psi(x) = e^{- ie \alpha(x)} D_{\mu} \psi(x)
+$$
+Now we write
+$$
+\mathfrak{L} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} + \bar \psi( i \gamma^{\mu} D_{\nu} - m ) \psi
+$$
+$$
+\mathfrak{L}_{int} = -e \bar \psi \gamma^{\mu} \psi A_{\mu}
+$$
+Dimensional analaysis: $[\mathfrak{L}] =4$ $[\psi]=[\bar \psi] = frac{3}{2}$ and $[A^{\mu}] =1$ so $[e] = 0$. So $e$ is a marginal coupling. The true expansion parameter $\alpha = \frac{e^2}{4\pi}$. If we identify $e$ with the charge of the electron and restoring units by dividing through by $\hbar c$ and this comes out to $\alpha \approx \frac{1}{137}$. It is the fact that this number being small that allows pertubration theory ot work as each term differes form the next by powers of this number.
+\section{Examples Class 3}
+To show that $Tr \gamma^{\mu}=0$ we observe that $\{\gamma^{\mu},\gamma^{\nu}\} = 0$ for $\mu \neq \nu$ so $\gamma^{\nu} \gamma^{\mu} (\gamma^{\nu})^{-1} + \gamma^{\nu} = 0$ and then take trace of both sides. Also neat trick:
+$$
+\gamma^{\nu} \gamma^{\mu} = \frac{1}{2} \{ \gamma^{\nu}, \gamma^{\mu}\} + \frac{1}{2} [ \gamma^{\nu} , \gamma^{\mu}]
+$$
+Q5:
+$$
+(p \cdot \sigma) (p \cdot \bar \sigma) = p^2 \neq 0 
+$$
+$$
+\bar \psi \prop \bar u b^{\dagger} + \bar v c 
+$$
+I forgot the bars on the u and v\\\\
+Fermonic sign in feynmann rules: if we consider $\bra{0} T(\psi_1 \psi_2 \psi_3 \psi_3 \ket{0} = \bra{0} T(\psi^,_1 \psi^._2 \psi^,_3 \psi^._4) \ket{0} + \bra{0} T(\psi^._1 \psi^._2 \psi^,_3 \psi^,_4) \ket{0} +  \bra{0} T(\psi^._1 \psi^,_2 \psi^,_3 \psi^._4) \ket{0}  $ to make sure that the contractions are between ajacent operators we need to count how many times we need to swap fermonic operators and this gives us the parity. No way of doing this form feynmann diagrams (as it depends on the order of the external operators the ones defining the final and initial state).\\\\
+When looking for relative signs just need to think about how many times you need to swap positions to go from one contraction to another\\\\
+The reason you cant contract out any more terms as you will either get a loop or one particle will pass throughout without interacting. Also in feynmann rules look at the back of q8 to see the rules for a fermionic paying particular attention to the u and v associated with ingoign and outgoing lines.
 \end{document}

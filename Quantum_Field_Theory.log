@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  25 NOV 2021 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  30 NOV 2021 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1619,20 +1619,223 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[53] (./Quantum_Field_Theory.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1813--1818
+
+ []
+
+[53]
+./Quantum_Field_Theory.tex:1827: Undefined control sequence.
+l.1827 ...\nu} \partial_{\mu} A^{\mu} = - \parital
+                                                  _{\nu}\partial^{\nu} A^{\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (21.71387pt too wide) detected at line 1827
+\OML/cmm/m/it/12 @[]\OT1/cmr/m/n/12 ([] = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 @[]F[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 @[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Q[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 @[]A[]\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 @[]@[]A[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 @[]@[]A[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 @[]@[]A[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[]\OML/cmm/m/it/12 @[]A[]
+ []
+
+./Quantum_Field_Theory.tex:1843: Undefined control sequence.
+l.1843 \parital
+               _{\nu}\partial^{\nu} A^{\mu} = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1846: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.1846 ...epsilon^{(\lambda)}_{\mu} (p)$ ($\lamdba
+                                                   in \{0,1,2,3\}$) with $\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1846: Undefined control sequence.
+<recently read> \epilson 
+                         
+l.1846 ...epsilon^{(0)}$ is timelike and $\epilson
+                                                  ^{(i)}$ is spacelike. can ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1848
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1848
+
+ []
+
+./Quantum_Field_Theory.tex:1849: Undefined control sequence.
+l.1849 ...n^{(\lambda)}_{\mu} (p) (\hat a^{\lamdba
+                                                  }_{\bm p} e^{i \bm p \cdot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1849: Undefined control sequence.
+l.1849 ...^{i \bm p \cdot \bm x} + \hat a^{\lamdba
+                                                   \dagger}_{\bm p} e^{-i \b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1852: Undefined control sequence.
+l.1852 ...n^{(\lambda)}_{\mu} (p) (\hat a^{\lamdba
+                                                  }_{\bm p} e^{i \bm p \cdot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1852: Undefined control sequence.
+l.1852 ...^{i \bm p \cdot \bm x} - \hat a^{\lamdba
+                                                   \dagger}_{\bm p} e^{-i \b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1856: Undefined control sequence.
+l.1856 [a^{\lamdba
+                  }_{\bm p}, a^{\rho \dagger}_{\bm q} ] = - \eta^{\lambda \r...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[54]
+
+LaTeX Warning: Command \i invalid in math mode on input line 1860.
+
+./Quantum_Field_Theory.tex:1864: Undefined control sequence.
+l.1864 \hat a^{\lamdba
+                      }_{\bm p} \ket{0} = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1872: Undefined control sequence.
+l.1872 ...} \frac{1}{\sqrt{2|\bm p|}} \sum_{\lamda
+                                                  =0}^3 \epsilon^{(\lambda)}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[55]
+./Quantum_Field_Theory.tex:1889: Undefined control sequence.
+l.1889 ...} \frac{1}{\sqrt{2|\bm p|}} \sum_{\lamda
+                                                  =0}^3 (-i p^{\mu})\epsilon...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Field_Theory.tex:1891: Undefined control sequence.
+<argument> \bm p, \lamdba 
+                          = 1,2
+l.1891 ...$\ket{\psi} = \ket{\bm p, \lamdba = 1,2}
+                                                  $ and also certain linearl...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1890--1892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1890--1892
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1942--1945
+
+ []
+
+
+Overfull \hbox (48.16492pt too wide) detected at line 1953
+\OML/cmm/m/it/12 D[] \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 @[] \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ie@[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ieA[] \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ie@[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 e[]D[] \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )
+ []
+
+[57]
+Overfull \hbox (3.00558pt too wide) in paragraph at lines 1963--1964
+\OT1/cmr/m/n/12 To show that $\OML/cmm/m/it/12 Tr^^M[] \OT1/cmr/m/n/12 = 0$ we ob-serve that $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 ^^M[]; ^^M[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = 0$ for $\OML/cmm/m/it/12 ^^V \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^W$ \OT1/cmr/m/n/12 so $\OML/cmm/m/it/12 ^^M[]^^M[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/12 )[] +
+ []
+
+./Quantum_Field_Theory.tex:1972: Undefined control sequence.
+l.1972 \bar \psi \prop
+                       \bar u b^{\dagger} + \bar v c
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1973--1978
+
+ []
+
+
+Overfull \hbox (68.2241pt too wide) in paragraph at lines 1973--1978
+\OT1/cmr/m/n/12 Fermonic sign in feyn-mann rules: if we con-sider $[] \OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12  [] [] [] [] [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12  [] [] [] []\OT1/cmr/m/n/12 ) [] +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1973--1978
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1973--1978
+
+ []
+
+[58] (./Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 1368 strings out of 478599
- 18866 string characters out of 5858101
+ 1370 strings out of 478599
+ 18879 string characters out of 5858101
  328707 words of memory out of 5000000
- 19260 multiletter control sequences out of 15000+600000
+ 19262 multiletter control sequences out of 15000+600000
  418525 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,66p,1327b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Quantum_Field_Theory.pdf (53 pages, 380331 bytes).
+Output written on Quantum_Field_Theory.pdf (58 pages, 396095 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
+ 297 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

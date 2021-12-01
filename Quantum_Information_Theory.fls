@@ -133,6 +133,17 @@ INPUT c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -235,5 +246,6 @@ INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb

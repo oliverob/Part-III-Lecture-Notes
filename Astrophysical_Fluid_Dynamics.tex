@@ -1211,7 +1211,7 @@ $$
 \dot M = 4\pi r^2_s \rho_s u_s = 4 \pi r_s^2 \rho_s c_{s,s}
 $$
 $$
-P \prop \rho^{\gamma}, c_s^2 \rho^{\gamma -1} \implies (\frac{c_{s,s}}{c_{s,0}})^2  = (\frac{\rho_s}{\rho_0})^{\gamma -1} \implies \rho_s = \rho_0( \frac{2}{5-3\gamma}^\frac{1}{\gamma -1}
+P \sim \rho^{\gamma}, c_s^2 \rho^{\gamma -1} \implies (\frac{c_{s,s}}{c_{s,0}})^2  = (\frac{\rho_s}{\rho_0})^{\gamma -1} \implies \rho_s = \rho_0( \frac{2}{5-3\gamma}^\frac{1}{\gamma -1}
 $$
 $$
 \dot M = 4 \pi (\frac{GM}{c_{s,0}^2})^2 (\frac{5-3\gamma}{2})^2 \rho_0 (\frac{2}{5-3\gamma})^{\frac{1}{\gamma-1}}c_{s,0} (\frac{2}{5-3\gamma}^{\frac{1}{2}} = \pi (\frac{GM}{c_{s,0}})^2 \rho_0 c_{s,0} f(\gamma)
@@ -1219,8 +1219,53 @@ $$
 with $f(\gamma) = (\frac{2}{5-3\gamma})^{\frac{5-3\gamma}{2(\gamma-1)}}$. So to have a transonic solution you need $1<\gamma <\frac{5}{3}$. $f(\frac{5}{3}) = 1, f(1) = e^{\frac{3}{2}}$. \\\\
 Bondi radius: $R_B = \frac{GM}{c_{s,0}^2}$ and $\dot M = \pi R_B^2 \rho_0 c_{s,0}$ so the accretion rate corresponds to the rate at which the fluid flows across the Bondi radius with the sound speed and density at infinity.
 $$
-c_{s,0}^2 = \frac{GM}{R_B}$
+c_{s,0}^2 = \frac{GM}{R_B}
 $$
 So the thermal energy of gas at $\infty$ is of order of the gravitional energy at $R_B$.
+\section{Lecture 22}
+The above situation of a critical surface arising when the flow speed is equal to the speed of wave propogration is a common motif in inflow and outflow problems of a variety of types.\\\\
+Outside of $r_s$ (the cirtical surface) the pressure is strong, assume that for $r< r_s$ assume that gravity wins and we can neglect the pressure term. So we can guess that the velovity of the flow is something liek $v = \sqrt{\frac{GM}{r}} $ this would imply that $\dot M = 4 \pi r^2 u \rho_1 \implies \rho \sim \frac{1}{r^2 u} r^{-\frac{3}{2}}$. Need to check that this assumption is valid:
+$$
+\phi \sim \frac{GM}{r}, \frac{p}{\rho} \sim \rho^{\gamma-1} \sim r^{-\frac{3}{2}(\gamma -1}
+$$
+only $\gamma$ appraoching $\frac{5}{3}$ is $\frac{P}{\rho} \sim r^{-1}$ so for any other $\gamma$ this assumption is valid.\\\\
+\textbf{Accretion onto a moving object}: Not going to solve it but will dicuss certain characteristics. As fluid passes by the object it will deflect the fluid until it forms a shock behind the object and then will be acreted (if it passes clsoe enough ot the object. Now in addition to thermal energy we also have kinteic energy of the gas going by. So the acretion radius is where the sum of the kinetic and thermal energies is of order $\frac{GM}{r_a}$ so $v^2 + c^2_{s,0} \sim \frac{GM}{r_a}$, $r_a \sim \frac{GM}{v^2 + c^2_{s,0}$.
+        $$
+        \dot M \sim \pi r^2_a \rho_a \sqrt{v^2 + c^s_{s,0} = \pi \frac{(GM)^2}{(v^2 + c_{s,0}^2)^{\frac{3}{2}} \rho_0
+        $$
+        This is called Bondi-Littleton accretion rate. \\\\For $v >> c_{s,0}$ (supersonic acretor we have $r_a \sim \frac{GM}{v^2} = \frac{GM}{c_{s,0}^2M^2} = \frac{R_B}{M^2}$. As $M>>1$ for supersonic speed, so for supersonic speeds the acretion radius and the accretion rate are massively decreased:
+        $$
+        \dot M_{BL} \sim \pi \frac{(GM)^2}{v^3} \rho_0 \sim \dot M_B \frac{1}{M^3} << \dot M_B
+        $$
+        SMBH in our galaxy with $M \sim 4 \times 10^6 M_{\odot}$, we have measure $\rho_0$ at $R_B$ found that the actual acretion rate is much less than the calculated creation rate. A similar situation exists in the bulk of the galaxy with neutron stars and black holes floating around not being anywhere near  as bright as they owuld be with a acretion rate of the calculated size.
+        \subsection{Axisymmetric MHD outflows}
+        $\bm B = \bm B_p + \bm B_{\phi} = \frac{\nabla \psi \times \bm e_{\phi}}{2 \pi R} + B_{\phi} \bm e_{\phi}$ with $B_{\phi} = \frac{2 I(\psi)}{CR}$. Since we arrived at these equations from just the induction equaiotn they remain valid for MHD with $\bm u \neq 0$.\\\\
+                \textbf{Mass loading Equation}\\
+                In steady state induction gives $\nabla \times (\bm u \times \bm B) = 0$ which means that $\bm u \times \bm B = \nabla \phi(r,z)$ ( purely polidal). 
+                $$
+                \bm u \times \bm B = \bm u_p \times \bm B_p + \bm u_p \times \bm e_{\phi} B_{\phi} + u_{\phi} \bm e_{\phi} \times \bm B_p
+                $$
+                But also is purely polidal $\bm u_p \times \bm B_p = 0$ so $\bm u_p || \bm B_p$ so $\bm u_p$ lies on magnetic surfaces: 
+                $$
+                \rho \bm u_p = k \bm B_p
+                $$
+                Can now apply the continiuty equation. In steady stateL
+                $$
+                0 = \nabla \cdot (\rho \bm u) = \nabla \cdot (\rho \bm u_p) = \nabla \cdot(k \bm B_p) = \bm B_p \cdot \nabla k + k (\nabla \cdot \bm B_p) = (\bm B_p \cdot \nabla) k = 0
+                $$
+                This tells us that $\bm B_p \prep k$ and so $k$ is constant on magnetic surfaces, meaning that $k(r) = k(\psi)$. so $\bm u_p = \frac{k(\psi) \bm B_p}{\rho}$. Now look at the second part of the polidal equation:
+                $$
+                \bm u \times \bm B = \bm e_{\phi}( u_{\phi} \bm B_p - B_{\phi} \bm u_p) = \bm e_{\phi} \times (u_{\phi} \bm B_p -\frac{B_{\phi}k(\psi)}{\rho} \bm B_p) = (u_{\phi} - \frac{B_{\phi}k(\psi)}{\rho}) \bm e_{\phi} \times  \bm B_p
+                $$
+                As
+                $$
+                \bm e_{\phi} \times \bm B_p = \frac{1}{2\pi R} \bm e_{\phi} \times (\nabla \psi \times \bm e_{\phi}) = \frac{\nabla \psi - \bm e_{\phi} (\nabla \psi \cdot \bm e_{\phi})}{2\pi R} = \frac{ \nabla \psi}{2 \pi R}
+                $$
+        $$
+        0 = \nabla \times( \bm u \times \bm B) = \frac{1}{2\pi} \nabla \times (\frac{ u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}\nabla \psi) = \frac{1}{2\pi} \nabla( \frac{u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}) \times \nabla \psi =0
+                $$
+        so $\nabla( \frac{u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}) || \nabla \psi$ therefore $w(\psi) = \frac{u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}$.
+                \section{Lecture 23}
+        
 \end{document} 
 

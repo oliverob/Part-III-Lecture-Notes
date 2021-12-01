@@ -4,6 +4,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{braket}
+\usepackage{cancel}
 \title{Quantum Information Theory}
 \author{oliverobrien111 }
 \date{July 2021}
@@ -1143,4 +1144,107 @@ As $S(\rho_A) = H(X), S(\rho_B) = H(Y)$:
 $$
 H(X) + H(Y) - H(XY)  = I(X:Y) \leq \chi(\mathcal{E})
 $$
+\section{Lecture 23}
+Properties of $\chi(\mathcal{E})$: (cheeck these)\\\\
+$$
+\chi(\mathcal{E}) = \sum p_x D(\rho_x || \rho)
+$$
+So $\chi(\mathcal{E}) \geq 0$ which can also be seen from concavity of von neunmann entropy. $\chi(\mathcal{E}) = 0 \iff \rho_x = \rho$ which only happens if all $\rho_x$ are identical. So concavity only equal when all $\rho_x $ are identical.\\\\
+Data Processing Inequality/Lindblerg-Uhlmann monotoncity implies that ofr every quantum operation $\Lambda$: $D(\Lambda(\rho)|| \Lambda(\sigma)) \leq D(\rho|| \sigma)$ so
+$$
+D(\Lamdba(\rho_x) || \Lambda(\rho)) \leq D(\rho_x|| \rho)
+$$
+So consider $\mathcal{E} = \{ p_x, \rho_x\} \rightarrow \mathcal{E}' = \{p_x \Lambda(\rho_x\}$ so $\chi(\mathcal{E}') \leq \chi(\mathcal{E})$ so is a good measure of the information encoded in a quantum system. IN contrast to the von neuman entropy as some quantum channels increaase and some decreae the von nueman entropy. 
+\subsubsection{Noisy quantum channel}
+Bob is now measuring $\Lambda(\rho_x)$ so now the maxiumium amount of classical informaiton that Bob can infer is $\chi(\{p_x, \Lambda(\rho_x)\} = S(\sum_{p_x} \Lambda(\rho_x)) - \sum p_x S(\Lambda(\rho_x))$. \\\\
+We want to consider a memoryless cahnnel with no correlation between the noise acting on successive inputs to the channel.\\\\
+\textbf{Depolarising channel}:
+$$
+\Lambda(\rho) = (1-p) \rho + p \frac{I}{d}, \rho \in \mathcal{D}(\mathcal{H})= d
+$$
+What is the classical capacity of the iid quantum channel? (the maximium rate of classical information that can be reliably transmitted through the channel) This is evaluated in the limit with $n\rightarrow \infty$.\\\\
+If you have a classical channel it is described by the matrix of conditional probabilities $p(y|x)$ and there is a funciton for the unique capacity of $C = max I(X:Y)$. Whereas for a quantum channel it has various different capacities depdnding on 1) the type of information (quantum or classical) and 2) if the inputs on n uses are product states or entangled, 3) is Bob's measurment collective or individual, 4) Alice and Bob could have some other resource for example prior shared entanglement (e.g. quantum teleportation). We are going to focus on just the classical capacity with the following scenario.\\\\
+Alice has a set of messages $\mathcal{M} = \{ 1,2,..., |\mathcal{M}|\}$ and she wants to send the particular state $M \in \mathcal{M}$. So she sends it through the channel and Bob recieves the state $\Lambda^{\otimes n}(\rho_M^{(n)})$ and then Bob measures in POVM with probability of success:
+$$
+P(correct inference) = Tr(E_M^{(n)} \Lambda^{\otimes n}(\rho_M^{(n)}))
+$$
+We use the benchmark of the maximium probability of error so:
+$$
+p_{max}^{(n)} = max_{M \in \mathcal{M}} (1 -  Tr(E_M^{(n)} \Lambda^{\otimes n}(\rho_M^{(n)}))
+)
+$$
+Information transmission is reliable if $p^{(n)}_{max} \rightarrow 0$ as $n \rightarrow \infty$. The rate of information transmission is defined as $R= \frac{\log |\mathcal{M}|}{n}$ so $|\mathcal{M}| = 2^{nR}$, if it is possible to create a reliable scheme with this rate it is called an achievable rate. The classical capcity is the maximium possible achievable rate $C(\Lambda) = max\{ R: R is achievable rate\}$. A tractable expression for $C(\Lambda)$ is no known, but what is known is the capacity if ALice encodes her message only in product states: $\rho_M^{(n)} = \rho_1 \otimes... \otimes \rho_n$ then the capacity is (given by HSW Theorem):
+$$
+C^{(1)}(\Lambda) = \chi^*(\Lambda) = max_{\{p_i, \rho_i\}} \chi(\{p_i, \Lambda(\rho_i)\})
+$$
+where $\chi^*(\Lambda)$ is the Holevo capacity. The above maximium can be restricted to be taken over the pure state ensembles of $d^2$ eleemnts like $\{ p_i, \ket{\phi_i}\bra{\phi_i}\}_{i=1}^{d^2}$\\\\
+Equivalently (check this), $\chi^*(\Lambda) = max_{\rho_{XA}} I(X:B)_{\tilde \rho}$ with
+$$
+\{ p_x, \rho_x\} \rightarrow \rho_{XA} = \sum p_x \bra{x} \ket{x} \otimes \rho_x, \tilde \rho_{XB} = \sum p_x \ket{x} \bra{x} \otimes \Lambda(\rho_x)
+$$
+\textbf{Lemma}: Any arbitary quantum channel can be used to transmit classical inforamtion as long as it is not trival ($\Lambda(\rho) $ is not identical for all $\rho$.\\\\
+Proof: In this case there must exist two pure states $\ket{\phi}\bra{\phi}$ and $\ket{\psi} \bra{\psi}$ s.t. that $\Lambda(\ket{\phi}\bra{\phi}) \neq \Lambda(\ket{\psi}\bra{\psi})$.\\\\
+Consider $\mathcal{E} = \{ q_i , \ket{\Psi_i}\}^2_{i=1}$, $q_1 = \frac{1}{2} = q_2$ with $\ket{\Psi_1} = \ket{\psi}$ and $\ket{\Psi_2} = \ket{\phi}$. So $\mathcal{E}' = \{ q_i, \Lambda(\ket{\Psi_i} \bra{\Psi_i}\}$, so we know $\chi(\mathcal{E}') >0$ as we know that $\chi(\mathcal{E}') =0$ iff $\rho_x$ are idenical and we have picked states so they aren't
+\section{Lecture 23}
+We will only prove the converse:\\
+If  $R > \chi^*(\Lambda)$ then $\forall( \mathcal{C}^{(n)})$ of rate R, $p^{(n)}$ does not tend to 0 as $n \rightarrow \infty$.\\\\
+Assume without loss of generality that the messages $M \in \mathcal{M}$ are uniformly distributed (Alice wants to send $M \in \mathcal{M}$ with probability $\frac{1}{|\mathcal{M}|}$. As the crition for reliable transmission depends on the maximium probablity of error which does not depend on distribution of messages.
+$$
+P(\hat M \neq M) = 1 - Tr(E_m^{(n)} \sigma_M^{(n)})
+$$
+Exercise: Use the holevo bound to justify that by transmitting n qubits to Bob, Alice can send at most n bits of classical information\\\\
+$nR$ is the number of bits sent through n uses, and Bob recievs $\sigma_M^{(n)} \in \mathcal{D}(\mathcal{H}_B^{\otimes n})$ with $dim \mathcal{H}_B = d_B$. Therefore, $nR \leq n log d_B$.\\\\
+Let $q= P(\hat M \neq M)$, $h(q) = - q \log q - (1-q) \log(1-q)$. \\\\
+\textbf{Gan Fano inequality}: $H(M|\hat M) \leq h(q) + q \log(|\mathcal{M}|-1)$ so
+$$
+H(M | \hat M) \leq h(q) + q \log( |\mathcal{M}|) = h(q) + qn R \leq h(q) + qn \log d_B
+$$
+Therefore,
+$$
+q n \log d_B \geq H(M|\hat M) - h(q) = H(M) - I(M:\hat M) - h(q)
+$$
+The Holevo bound gives: $I(M: \hat M) \leq \chi(\{ \frac{1}{|\mathcal{M}|}, \sigma_M^{(n)} \})$ and:
+$$
+I(M:\hat M)  = S(\frac{1}{|\mathcal{M}|}\sum_{M \in \mathcal{M}} \sigma_M^{(n)}) - \frac{1}{|\mathcal{M}|} \sum_{M \in \mathcal{M}} S(\sigma_M^{(n)})
+$$
+As $\sigma_M^{(n)}) = \sigma^1_M \otimes ... \otimes ... \sigma^n_M$:
+$$
+I(M:\hat M)  = S(\frac{1}{|\mathcal{M}|}\sum_{M \in \mathcal{M}} \sigma_M^{(n)}) - \frac{1}{|\mathcal{M}|} \sum_{M \in \mathcal{M}}\sum_{j=1}^n S(\sigma_M^{j})
+$$
+Use subadditivity of von neumann entropy:
+$$
+S(\rho_{A_1...A_n} \leq S(\rho_{A_1}) + S(\rho_{A_2}) +...+ S(\rho_{A_n}) = \sum_{j =1}^n S(Tr_{\cancel{j}}(\rho_{A_1...A_n})
+$$
+$$
+I(M: \hat M) \leq \sum_{j=1}^n S(Tr_{\cancel{j}} ( \frac{1}{|\mathcal{M}|} \sum \sigma_M^{(n)} - \frac{1}{|\mathcal{M}|} \sum_{M \in \mathcal{M}}\sum_{j=1}^n S(\sigma_M^{j}) $$
+The partial trace over everything except $j$ will turn all the states except for $\sigma_M^j$ to 1:
+$$
+I(M: \hat M) \leq sum_{j=1}^n( S(\frac{1}{|\mathcal{M}|} \sum_{M \in \mathcal{M}} \sigma^j_M) - \sum_{M \in \mathcal{M}} \frac{1}{|\mathcal{M}|} S(\sigma^j_M)
+$$
+$$
+I(M: \hat M) \leq \sum_{j=1}^n \chi (\{ \frac{1}{|\mathcal{M}|}, \sigma^j_M \}) \leq \chi^* (\Lamdba)
+$$
+Therefore substituting backinto earlier inequality:
+$$
+qn \log d_B \geq M(M) - n \chi^*(\Lambda) - h(q)
+$$
+As $H(M) = \log |\mathcal{M}| = \log 2^{nR} = n R$:
+$$
+qn \log d_B \geq n(R- \chi^*(\Lambda)) - \log q
+$$
+As $p_{max} \geq q$:
+$$
+p_{max} \geq q \geq \frac{R- \chi^*(\Lambda)}{\log d_B} - \frac{h(q)}{n \log d_B}
+$$
+As we have chosen $R > \chi^*(\Lambda)$ and as $n\rightarrow \infty$ the negative term tends to zero so:
+$$
+\lim_{n\rightarrow \infty} p^{(n)}_{max} \geq \frac{R- \chi^*(\Lambda)}{\log d_B} > 0
+$$
+So $\lim_{n\rightarrow \infty} p^{(n)}_{max} \neq 0$ so not reliable.\\\\
+Can using entangled states as input to $\Lambda^{\otimes n}$ increase the capacity?\\
+\textbf{Conjecture}: $\chi^*(\Lambda_1 \otimes \Lambda_2) = \chi^*(\Lambda_1) + \chi^*(\Lambda_2)$\\\\
+\textbf{Classical capacity of $\Lambda$} (Can be shown beyond course that full capacity without any restriction on entangeled or not) $C(\Lambda) = \lim_{n \rightarrow \infty} \frac{1}{n} \chi^* (\Lambda^{\otimes n}) $\\\\
+Can prove subadditivity: $\chi^*(\Lambda_1 \otimes \Lambda_2) \geq \chi^*(\Lambda_1) + \chi^*(\Lambda_2)$ which implies:
+$ C_{classical}(\Lambda) \geq \lim_{n \rightarrow \infty} \frac{1}{n} n \chi^* (\Lambda) \geq \chi^*(\Lambda)$\\\\
+so if the conjecture holds then $C_{classical} > \chi^*(\Lambda)$ but this isn't ture as someone found a counter example to the conjecture.
 \end{document}
