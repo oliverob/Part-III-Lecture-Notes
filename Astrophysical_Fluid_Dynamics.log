@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  1 DEC 2021 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  1 DEC 2021 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1217,31 +1217,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 1226--1228
 
  []
 
-)
-Runaway argument?
-{v^2 + c^2_{s,0}$. $$ \dot M \sim \pi r^2_a \rho _a \sqrt {v^2 + c^s_\ETC.
-! File ended while scanning use of \frac .
+
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1245
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:1256: Undefined control sequence.
+l.1256 ...       This tells us that $\bm B_p \prep
+                                                   k$ and so $k$ is constant...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[35]
+./Astrophysical_Fluid_Dynamics.tex:1300: Undefined control sequence.
+l.1300 ...(\bm u_p \cdot \nabla ) u_{\phi} + \fraC
+                                                  {u_{\phi}u_R}{R}) = \frac{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Astrophysical_Fluid_Dynamics.tex:1304: Undefined control sequence.
+<argument> \parital 
+                    z
+l.1304 ...ac{1}{R} (u_z\frac{\partial}{\parital z}
+                                                   (R u_{\phi}) + u_R \frac{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1350
+
+ []
+
+[37]
+./Astrophysical_Fluid_Dynamics.tex:1378: Argument of \frac  has an extra }.
 <inserted text> 
                 \par 
-<*> Astrophysical_Fluid_Dynamics.tex
-                                    
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+                                                  {4 \pi k} - \omega( Ru_{\p...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
 
-! Emergency stop.
-<*> Astrophysical_Fluid_Dynamics.tex
-                                    
-*** (job aborted, no legal \end found)
+Runaway argument?
+./Astrophysical_Fluid_Dynamics.tex:1378: Paragraph ended before \frac  was complete.
+<to be read again> 
+                   \par 
+l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+                                                  {4 \pi k} - \omega( Ru_{\p...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
- 
+./Astrophysical_Fluid_Dynamics.tex:1378: Missing $ inserted.
+<inserted text> 
+                $
+l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+                                                  {4 \pi k} - \omega( Ru_{\p...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1378
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:1378: Too many }'s.
+<recently read> }
+                 
+l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+                                                  {4 \pi k} - \omega( Ru_{\p...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Astrophysical_Fluid_Dynamics.tex:1378: Missing $ inserted.
+<inserted text> 
+                $
+l.1378 ...hi + h - \frac{\omega R B_{\phi}}}{4 \pi
+                                                   k} - \omega( Ru_{\phi} - ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Astrophysical_Fluid_Dynamics.tex:1378: Extra }, or forgotten $.
+l.1378 ...+ h - \frac{\omega R B_{\phi}}}{4 \pi k}
+                                                   - \omega( Ru_{\phi} - \fr...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1381--1384
+
+ []
+
+[38] (./Astrophysical_Fluid_Dynamics.aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1378 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 1182 strings out of 478599
- 16217 string characters out of 5858101
+ 1183 strings out of 478599
+ 16279 string characters out of 5858101
  332230 words of memory out of 5000000
- 19101 multiletter control sequences out of 15000+600000
+ 19100 multiletter control sequences out of 15000+600000
  413425 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,9n,66p,2200b,136s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Astrophysical_Fluid_Dynamics.pdf (38 pages, 383533 bytes).
+PDF statistics:
+ 229 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

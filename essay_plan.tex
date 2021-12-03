@@ -1,0 +1,58 @@
+
+\documentclass[twoside]{article}
+\begin{document}
+\title{Essay Plan}
+\author{ O'Brien, Oliver}
+
+\maketitle
+\section{Introduction}
+\begin{enumerate}
+        \item Explain the motivation, why do we want to map fermions to qubits, and elaborate. For instance, we might want to find the ground state energy of a fermionic Hamiltonian (e.g. Drude-sommerfeld model) but why is that useful?
+        \item Explain the different techniques that can be applied to solving these problems (e.g. phase estimation, VQE). In particular, make sure to explain the Trooter-Suzuki expansion for phase estimation (and how to transform an example expansion into a set of quantum gates)
+        \item Explain how representations of fermions are necessarily non-local in order for the statistics to work. Discuss first versus second quantisation
+\end{enumerate}
+\section{Jordan-Wigner map}
+\begin{enumerate}
+        \item Illustrate (like in Nielsen, 2005) that the Fermionic CCR are all you need to define creation and annihilation operators. Nielsen says they did not do these derivations in complete rigour so maybe I could expand on them in my essay
+        \item State we map fermionic modes to qubit states and then search for combinations of Pauli states that satisfy the CCR. Outline the operators used and show that they satisfy CCR. Write out an example
+        \item  \textit{Not sure whether to include this section:} We are often interested in quadratic Hamiltonians of the form $H = \sum_{jk} a_j a^{\dagger}_k$, so include the proof that these can be diagonalised and represented in terms of $b_j$ where $b_j$ also satisfy CCR. Maybe briefly discuss the advantage of relating a qubit Hamiltonian to a quadratic fermionic Hamiltonian (sometimes allows the energy levels to be found analytically e.g. Ising model)
+\end{enumerate}
+\section{Bravyi-Kitaev map}
+\begin{enumerate}
+        \item Describe how the Jordan-Wigner map puts all the non-locality into the operators, and that a more efficient mapping might be one which puts some of that non-locality into the states. Outline the mechanics of the scheme, clearly explaining how it works (I have not quite understood the explanations in lots of the papers so I think I can improve on them)
+        \item Show that the mapping satisfies the CCR. Write out an example
+\end{enumerate}
+\section{Derby-Klassen map}
+\begin{enumerate}
+        \item Explain general technique of inventing local mappings by finding a mapping to vertex and edge operators
+        \item Outline the particulars of this mapping in particular the face qubits, and the addition of the majorana operator mapping to the standard technique
+        \item Show that the mapping satisfies the CCR
+        \item Consider the different possible cases of even sided lattices, odd sided lattices (with face qubits at the corners and without). Discuss the special case of a logical qubit being created and show that it is topologically error protected.
+\end{enumerate}
+\section{Fermionic enumeration}
+\begin{enumerate}
+        \item Explain the importance of enumeration within the Jordan-Wigner map in 2 dimensions or higher, and the relation between the problem of minimising average Pauli weight and minimum edge sum
+        \item Proof that Mitchison-Durbin pattern is optimal for an NxN array
+        \item The paper just discusses 2D is there a possible extension to 3D? Would enumeration be important in Bravyi-Kitaev as well to some extent as all the even states are still localised? 
+\end{enumerate}
+\section{Comparison}
+\begin{enumerate}
+        \item For Bravyi-Kitaev you need at most $4 \log i +2$ gates to simulate one fermionic operation, this is smaller than the simple $i$ gates of the Jordan-Wigner when $i \geq 19$. Outline experimental simulation results. Do they agree?
+        \item Bravyi-Kitaev and Jordan-Wigner mapping have the same T count
+        \item Bravyi-Kitaev uses fewer CNOT gates than Jordan-Wigner at the expense of more single qubit clifford gates
+        \item Bravyi-Kitaev uses fewer gates than Jordan-Wigner to simulate a range of molecules. If you optimise by removing duplicate gates the Bravyi-Kitaev gets even better relatively and absolutely
+        \item Trotter ordering is important. When lexicographically ordering the advantage of Bravyi-Kitaev completely disappears and in fact Jordan-Wigner uses slightly fewer gates. Explain what lexicographic ordering is. Consider trotter error (it is not important as chemically accurate in small number of steps for all orderings). Lexicographic ordering might not always be possible due to architecture constraints. Maybe discuss architecture?
+        \item The gate reduction fermionic enumeration can provide to Jordan-Wigner might make it more efficent than Bravyi-Kitaev if a similar scheme cannot be developed for the later.
+        \item Deby-Klassen only uses 1.5 qubits per fermionic mode 
+        \item Both fermionic enumeration and Derby-Klassen are restricted to certain types of 2D lattice
+\end{enumerate}
+\section{Conclusion}:
+\section{Notes from meeting}:
+Main avenue for self-expression is choosing a mapping for a particular toy model or problem (e.g. VQE), and dicussing how an abstract hamiltonian would map across\\
+Look at original Kitaev 2004 paper for a good explanation of toric codes\\
+Include an explanation of VQE (no more than a page will be needed)\\
+Pitch it to someone who is mathematically competent but not learned in Quantum Computing, e.g. another part III student not studying QIT\\
+Solving for the ground state allows us to extract information about the system by then measuring different observables. Can give us properties of materials and also we can create a hamiltonian that when the ground state is found gives us the optimasation to a problem. Look up adiabatic quantum computing which effectively cools a system until it ends up in the ground state to find the solution to an  optimisation problem.\\
+The major advantage of fermionic enumeration is it take no resources or fancy hardware\\
+Main metrics to consider are how many qubits and how many gates + also how local is it.
+\end{document}

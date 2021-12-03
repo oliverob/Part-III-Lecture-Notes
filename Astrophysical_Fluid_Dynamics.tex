@@ -1229,9 +1229,9 @@ $$
 \phi \sim \frac{GM}{r}, \frac{p}{\rho} \sim \rho^{\gamma-1} \sim r^{-\frac{3}{2}(\gamma -1}
 $$
 only $\gamma$ appraoching $\frac{5}{3}$ is $\frac{P}{\rho} \sim r^{-1}$ so for any other $\gamma$ this assumption is valid.\\\\
-\textbf{Accretion onto a moving object}: Not going to solve it but will dicuss certain characteristics. As fluid passes by the object it will deflect the fluid until it forms a shock behind the object and then will be acreted (if it passes clsoe enough ot the object. Now in addition to thermal energy we also have kinteic energy of the gas going by. So the acretion radius is where the sum of the kinetic and thermal energies is of order $\frac{GM}{r_a}$ so $v^2 + c^2_{s,0} \sim \frac{GM}{r_a}$, $r_a \sim \frac{GM}{v^2 + c^2_{s,0}$.
+\textbf{Accretion onto a moving object}: Not going to solve it but will dicuss certain characteristics. As fluid passes by the object it will deflect the fluid until it forms a shock behind the object and then will be acreted (if it passes clsoe enough ot the object. Now in addition to thermal energy we also have kinteic energy of the gas going by. So the acretion radius is where the sum of the kinetic and thermal energies is of order $\frac{GM}{r_a}$ so $v^2 + c^2_{s,0} \sim \frac{GM}{r_a}$, $r_a \sim \frac{GM}{v^2 + c^2_{s,0}}$.
         $$
-        \dot M \sim \pi r^2_a \rho_a \sqrt{v^2 + c^s_{s,0} = \pi \frac{(GM)^2}{(v^2 + c_{s,0}^2)^{\frac{3}{2}} \rho_0
+        \dot M \sim \pi r^2_a \rho_a \sqrt{v^2 + c^s_{s,0}} = \pi \frac{(GM)^2}{(v^2 + c_{s,0}^2)}^{\frac{3}{2}} \rho_0
         $$
         This is called Bondi-Littleton accretion rate. \\\\For $v >> c_{s,0}$ (supersonic acretor we have $r_a \sim \frac{GM}{v^2} = \frac{GM}{c_{s,0}^2M^2} = \frac{R_B}{M^2}$. As $M>>1$ for supersonic speed, so for supersonic speeds the acretion radius and the accretion rate are massively decreased:
         $$
@@ -1256,16 +1256,157 @@ only $\gamma$ appraoching $\frac{5}{3}$ is $\frac{P}{\rho} \sim r^{-1}$ so for a
                 This tells us that $\bm B_p \prep k$ and so $k$ is constant on magnetic surfaces, meaning that $k(r) = k(\psi)$. so $\bm u_p = \frac{k(\psi) \bm B_p}{\rho}$. Now look at the second part of the polidal equation:
                 $$
                 \bm u \times \bm B = \bm e_{\phi}( u_{\phi} \bm B_p - B_{\phi} \bm u_p) = \bm e_{\phi} \times (u_{\phi} \bm B_p -\frac{B_{\phi}k(\psi)}{\rho} \bm B_p) = (u_{\phi} - \frac{B_{\phi}k(\psi)}{\rho}) \bm e_{\phi} \times  \bm B_p
-                $$
+        $$
                 As
                 $$
                 \bm e_{\phi} \times \bm B_p = \frac{1}{2\pi R} \bm e_{\phi} \times (\nabla \psi \times \bm e_{\phi}) = \frac{\nabla \psi - \bm e_{\phi} (\nabla \psi \cdot \bm e_{\phi})}{2\pi R} = \frac{ \nabla \psi}{2 \pi R}
-                $$
+        $$
         $$
         0 = \nabla \times( \bm u \times \bm B) = \frac{1}{2\pi} \nabla \times (\frac{ u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}\nabla \psi) = \frac{1}{2\pi} \nabla( \frac{u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}) \times \nabla \psi =0
                 $$
         so $\nabla( \frac{u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}) || \nabla \psi$ therefore $w(\psi) = \frac{u_{\phi}}{R} - \frac{B_{\phi}k}{\rho R}$.
                 \section{Lecture 23}
-        
-\end{document} 
-
+$$
+u_{\phi} = R\omega(\psi) + \frac{k(\psi)B_{\psi}}{\rho}
+$$
+so full velocity of flow is:
+$$
+\bm u = \frac{k \bm B_p}{\rho} + \frac{k B_{\phi} \bm e_{\phi}}{\rho} + R \omega \bm e_{\phi} = \frac{k \bm B}{\rho} + \omega R \bm e_{\phi}
+$$
+Let's switch to the frame rotating with angular vecloty $\omega(\psi)$
+$$
+\bm u' = \bm u - \omega R \bm e_{\phi} = \frac{k \bm B}{\rho}
+$$
+so $\bm u' || \bm B$ so fluid flows along the field in this grame like deads on a wire.\\
+\textbf{Entropy}
+$$
+\frac{Ds}{Dt}  = 0 \implies (\bm u \cdot \nabla) s = 0 \implies (\bm u_p \cdot \nabla) s = 0 \implies (\bm B_p \cdot \nabla ) S = 0
+$$
+So $S = S(\psi)$\\
+\textbf{Angular momentum}\\
+EoM in MHD steady state:
+$$
+\rho(\bm u \cdot \nabla) \bm u = - \nabla P - \nabla \phi \rho + \frac{1}{4\pi} ((\bm B \cdot \nabla)\bm B + \nabla(\frac{B^2}{2}) )$$
+Take scalar product with $\bm e_{\phi}$:
+$$
+\rho \bm e_{\phi} \cdot (\bm u \cdot \nabla) \bm u  =  \frac{1}{4\pi} (\bm B \cdot \nabla)\bm B )\cdot \bm e_{\phi}
+$$
+As LHS: 
+$$
+\rho \bm e_{\phi} \cdot (\bm u \cdot \nabla) \bm u  = \bm e_{\phi} \cdot (\bm e_{\phi} (\bm u_p \cdot \nabla) u_{\phi} + \frac{u_{\phi} u_{R}}{R} \bm e_{\phi})
+$$
+as the same thing is true fro the RHS:
+$$
+\rho((\bm u_p \cdot \nabla ) u_{\phi} + \fraC{u_{\phi}u_R}{R}) = \frac{1}{4\pi}(\bm B_p \cdot \nabla) B_{\phi} + \frac{B_{\phi}B_R}{R})
+$$
+Look at 
+$$
+\frac{1}{R}(\bm u_p \cdot \nabla) (R u_{\phi}) = \frac{1}{R} (u_z\frac{\partial}{\parital z} (R u_{\phi}) + u_R \frac{\partial }{\partial R}(R u_{\phi})) = (\bm u_p \cdot u_{\phi} + \frac{u_{\phi}u_R}{R}
+$$
+So
+$$
+\rho(\bm u_p \cdot \nabla) (Ru_{\phi}) = \frac{1}{4\pi}( \bm B_P \cdot \nabla) (R B_{\phi})
+$$
+$$
+k(\psi)\rho(\bm B_p \cdot \nabla) (Ru_{\phi}) = \frac{1}{4\pi}( \bm B_P \cdot \nabla) (R B_{\phi})
+$$
+So
+$$
+(\bm B_p \cdot \nabla) (k(\psi) R u_{\phi} - \frac{R B_{\phi}}{4 \pi}) = 0
+$$
+So angular momentum is $l(\psi) = k(\psi) R u_{\phi} - \frac{R B_{\phi}}{4 \pi}$ (first term is advected angular momentum and the second is the magnetic stress) is a function of $\psi$.
+$$
+R u_{\phi} = \frac{R B_{\phi } }{4\pi k(\psi )} + l(\psi)
+$$
+\textbf{Bernoulli intergral}
+$$
+\nabla \cdot( \rho \bm u( \frac{u^2}{2} + \phi + h) + c \frac{ \bm E \times \bm B}{4\pi}) = 0
+$$
+As
+$$
+\bm E = - \frac{1}{c} \bm u \times \bm B = - \frac{1}{c} ( \frac{k \bm B}{\rho} + \omega R \bm e_{\phi}) \times \bm B = - \frac{\omega R}{c} \bm e_{\phi} \times \bm B = - \frac{\omega R}{c} \bm e_{\phi} \times \bm B_p
+$$
+so is purely polidal and so therfore:
+$$
+(\bm E \times \bm B)_p = - \frac{\omega R}{c} (\bm e_{\phi} \times B_P) \times (B_{\phi}\bm e_{\phi}) = - \frac{\omega R B_{\phi}}{c} \bm B_p
+$$
+so energy equation becomes
+$$
+\nabla \cdot (\bm B_p (k(\psi) (\frac{u^2}{2} + \phi + h) - \frac{\omega R B_{\phi}}{4\pi})) = 0
+$$
+$$
+(\bm B_p \cdot \nabla) (k(\psi) (\frac{u^2}{2} + \phi + h) - \frac{\omega RB_{\phi}}{4 \pi})) = 0
+$$
+So therefore the following is a function of $\psi$:
+$$
+\epsilon( \psi) = \frac{1}{2} u^2 + \phi + h - \frac{\omega R B_{\phi}}{4 \pi k(\psi)}
+$$
+To get $\psi(R,z)$ we need to look at the projection of EoM onto the poloidal plane such as the Grad-Shafanov equation
+$$
+(EoM)_p = \nabla \psi( GS eq)
+$$
+This will be a second order in $\psi$ PDE wiht a number of integrals of motion in it. So it exhbitis a number of cirtical surfaces like in bondi accretion (sonic surface/point). \\\\
+Define poloidal Alfven velocity
+$$
+v^2_{o,p} = \frac{B_p^2}{4 \pi \rho}
+$$
+define polidal alfven number
+$$
+A = \frac{u_p}{v_{a,p}} \implies A^2 = \frac{ (u_p \rho)^2}{B_p^2} \frac{4\pi}{\rho} = \frac{4 \pi k^2{\psi}}{\rho}
+$$
+\section{Lecture 24}
+$A$ goes from 0 to $\infty$ crossing $A=1$ inbetween as at infinity $\rho = 0$ so $A$ is infinite and at origin $\psi = 0$. We have
+$$
+R u_{\phi} = \frac{R B_{\phi}}{4 \pi k} + l(\psi), \frac{u_{\phi}}{R} = \frac{k B_{\phi}}{R\rho} + \omega(\psi)
+$$
+Eliminate $B_{\phi}$ and get:
+$$
+        (u_{\phi} - \frac{l}{R}) = \frac{\rho}{4 \pi k^2}( u_{\phi} - \omega R) 
+$$
+$$
+u_{\phi} - \frac{ R^2 \omega(\psi) - A^2 l(\psi)}{R(1-A^2)}
+$$
+Therefore $A=1$ is a special point with $R^2 = \frac{l(\psi)}{\omega(\psi)} \implies R_A = \sqrt{\frac{l(\psi)}{\omega(\psi)}}$ is the Alfven radius/surfce.
+For $A<<1$ this is sub-Alfvenic, and we have $u_{\phi} \approx \omega(\psi) R$ - solid body rotation in forced by magnetic stresses! 
+$$
+A^2 \sim \frac{\epsilon_{kin}}{\epsilon_{mag}}
+$$
+For $A>>1$ - super Alfvenic and we ahve $u_{\phi} \approx \frac{l(\psi)}{R}$ so now the fluid expands preserving its angular momentum so magnetic stresses are no longer important\\\\
+Disk orbits at $\Omega_k = (\frac{GM}{R^3})^{\frac{1}{2}}$ in ideal MHD we have that $\omega(\psi) = \Omega_k(R(\psi))$ as the magnetic field lines are frozzen in the disk. Initial AM of the fluid is $l_0 = \Omega_k (R_0) R_0^2$. At Alfven point $l_A \approx \Omega_k(R_0) R_A^2$. "Lever arm effect" leads to a much larger loss of angular momentum than the fluid would have when it was just part of the disk, the magnetic field is transfering some of the angular momentum into the outflowing wind. Angular momentum flow through the disk is propotiaonl to the angular moemntum flow in the wind $\dot M_d \omega_k(R_o) R_o^2 \sim \dot M_w \omega_k(R_0) R_A^2$ so $\frac{\dot M_d}{\dot M_\omega} = (\frac{R_A}{R_0})^2$. Sometimes called the slingshot effect - this is very important need to look into this. Is a very efficent way to lose angular momentum very a small amount of fluid if the flow is signitficantly mangetised and the alfven radius is large. \\\\
+How do you launch the wind from the disk?\\
+New integral of motion (Jacobi integral):
+$\epsilon'(\psi) = \epsilon(\psi) - \omega(\psi) l(\psi) =  \frac{1}{2}u^2 + \phi + h - \frac{\omega R B_{\phi}}}{4 \pi k} - \omega( Ru_{\phi} - \frac{RB_{\phi}{4\pi k}} = \frac{1}{2} u_p^2 + \frac{1}{2} - \omega Ru_{\phi} + \frac{1}{2}(\omega R)^2 + h + \phi$
+$$
+\epsilon'(\psi) = \frac{1}{2} u^2_p + \frac{1}{2}(u_p - \omega R)^2 + h + \phi - \frac{1}{2} \omega^2 R^2
+$$
+with $\phi_{cg} = \phi - \frac{1}{2} \omega^2 R^2$.\\\\
+Consider a cold flow so $h = 0$, near the launching point, $A<<1$ so $u_{\phi} \approx \omega R$. So $\epsilon' \approx \frac{1}{2} u_p^2 + \phi_{cg}(R,z)$. To acclerate and launch fluid $\phi_{cg}$ needs to decrease along the flux surface.
+$$
+\phi_{cg} = - \frac{GM}{\sqrt{R^2 + z^2}} - \frac{1}{2} \Omega^2_k(R_0) R^2
+$$
+Look at diagram in minute 35 of lecture 24 to see what this potential looks like. We get a saddle point of this potential (on the graph of $z$ against $R$ at $z = 0$ $R=R_0$. So in order to launch to infinity we need to launch into the RHS section of the graph that has negative and we need to figure out the maximium angle at which is is possible (which is the samea s finding the angle of the equipotential hitting $R_0$.
+$$
+\phi_{cg}(R,z) = \phi_{cg}(R_0, 0) + \frac{1}{2} \phi_{cg, RR} (R-R_0)^2 + \frac{1}{2} \phi_{cg, zz} z^2
+$$
+$$
+\phi_{cg,R} = \frac{R GM}{(R^2 + z^2)^{\frac{3}{2}}} - \Omega^2_k(R_0)R
+$$
+$$
+\phi_{cg, RR} = - 3 \frac{GM}{R_0}^3
+$$
+$$
+\phi_{cg, z} = \frac{-1}{2} ( - \frac{2GMz}{(R^2+ z^2}^{\frac{3}{2}} = \frac{GM z}{(R^2+z^2)^{\frac{3}{2}}}
+$$
+$$
+\phi_{cg, zz} = \frac{GM}{R_0^3}
+$$
+So:
+$$
+\phi_{cg}(R,Z) = \phi_{cg}(R_0,0) - \frac{1}{2} \frac{GM}{R_0^3}(R-R_0)^2 + \frac{1}{2} \frac{GM}{R_0^3} (z-z_0)^2
+$$
+At separatrix: $\phi_{cg} = \phi_{cg}(R_0,0)$ so the angle is the tangent of the line:
+$$
+3(R-R_0)^2 = z^2 
+$$
+which is $\tan \alpha = \frac{z}{R-R_0} = \sqrt{3}$ so the critical angle is 60 degrees. So the lines have to be bent more than 60 degrees and then you can launch a wind.
+\end{document}
