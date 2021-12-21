@@ -1024,7 +1024,7 @@ Classical  - Quantum\\
 $(u_1...u_n)$ - $\bm = (i_1...i_n)$\\
 $p(u_1...u_n)$ - $\lambda_{\bm i}^{(n)} = q_{i_1}...q_{i_n}$
 $$
-2^{-n(H(\pi) + \epsilon)} \leq q_{i_1}...q_{i_n} \leq 2^{-n(S(\pi) - \epsilon)}\forall \bm i= (i_1...i_n) \in T_{\epsilon}^{(n)}
+2^{-n(S(\pi) + \epsilon)} \leq q_{i_1}...q_{i_n} \leq 2^{-n(S(\pi) - \epsilon)}\forall \bm i= (i_1...i_n) \in T_{\epsilon}^{(n)}
 $$
 $$
 \mathfrak{T}_{\epsilon}^{(n)} = span\{ \ket{\chi_{\bm i}^{(n)}}| \bm i \in T_{\epsilon}^{(n)}\}
@@ -1042,7 +1042,7 @@ Proof of equation 14:
 $$
 Tr(P_{\epsilon}(\rho^{(n)}) = Tr \sum_{\bm i} P_{\epsilon}^{(n)} (\lambda_{\bm i}^{(n)} \ket{\chi^{(n)}}\bra{\chi^{(n)}}) = \sum_{i \in T_{\epsilon}^{(n)}} \lambda_i^{(n)} = \sum_{\bm i \in T_{\epsilon}^{(n)}} q_{i_1}... q_{i_n} = \sum_{\bm i \in T_{\epsilon}^{(n)} p(\bm i) = p\{T_{\epsilon}^{(n)}
 $$
-Proof equaiton 15 yourself:
+Proof equaiton 15 yourself (uses the fact that the spectral decomposition is made of orthonogonal states so the dimensions of the typical subspace is just the magnitude of the typical subset as all of the states are orthonormal)
 \subsubsection{Schumacher's Thereom}
 Consider a memoryless quantum information source $\{\pi, \mathcal{H}\}$.\\
 i) If $R> S(\pi)$ then there exists a reliable compresion decompression scheme of rate R\\
@@ -1066,6 +1066,7 @@ $$
 \bar F_n \geq 2 \sum p_k^{(n)}
         \bra{\psi_k^{(n)}} P_{\epsilon} \ket{\psi_k^{(n)}} - 1 = 2 Tr(P_{\epsilon \rho^{(n)}}) -1 \geq 2(1-\delta) -1 = 1- 2 \delta
 $$
+Above $a^4_k \geq 2 a^2_k -1$ seems like a bit of a jump but think about $(x^2-1)^2 \geq 0$
 \section{Lecture 21}
 \subsection{Accessible information and Holevo Bound}
 Scenario is Alice has a classical information source $X \sim p(x), x \in J$, and wants to communicate the messages to a distant party Bob but no classical communication is possible but does have a noiseless quantum channel. Alice takes the classical information and encodes it into the quantum state and sends it to Bob, who then decodes it using a POVM to the original message. So $x \rightarrow \rho_x \rightarrow_{\{E_y\}} y$ so if Bob recieves $\rho_x$:
@@ -1080,6 +1081,7 @@ I_{acc}(\{p_x, \rho_x\}) = max I(X:Y)
 $$
 So in otherwords it is the amount of classical information that can be stored in and recovered from a quantum system. Aim is to find upper bound on accessible information (let $\mathcal{E} = \{ p_x, \rho_x\}$. 
 \subsubsection{Holevo Bound}
+Holevo bound is how much information you can store in a set of quantum states, whereas the holevo capcity is how much information can you send through a noisy channel by storing it in the optimal way.\\\\
 For any measurement $I(X:Y) \leq \chi(\{p_x, \rho_x\})= \chi(\mathcal{E})$ with Holevo chi quantity ($\chi(\mathcal{E}) = S(\sum p_x \rho_x) - \sum p_x S(\rho_x)$). Equality holds if all the $\rho_x$'s commute and projection measurement are on some eigenbasis of $\rho_x$'s.\\
 If all $\rho_x$ are pure then $\chi(\mathcal{E}) = S(\rho)$. \\\\
 The proof employs strong strong subadditivity (SSA) which is $S(AQB) + S(B) \leq S(AB) + S(QB)$ but we will actually use consequences of this.\\
@@ -1152,7 +1154,7 @@ $$
 So $\chi(\mathcal{E}) \geq 0$ which can also be seen from concavity of von neunmann entropy. $\chi(\mathcal{E}) = 0 \iff \rho_x = \rho$ which only happens if all $\rho_x$ are identical. So concavity only equal when all $\rho_x $ are identical.\\\\
 Data Processing Inequality/Lindblerg-Uhlmann monotoncity implies that ofr every quantum operation $\Lambda$: $D(\Lambda(\rho)|| \Lambda(\sigma)) \leq D(\rho|| \sigma)$ so
 $$
-D(\Lamdba(\rho_x) || \Lambda(\rho)) \leq D(\rho_x|| \rho)
+D(\Lambda (\rho_x) || \Lambda(\rho)) \leq D(\rho_x|| \rho)
 $$
 So consider $\mathcal{E} = \{ p_x, \rho_x\} \rightarrow \mathcal{E}' = \{p_x \Lambda(\rho_x\}$ so $\chi(\mathcal{E}') \leq \chi(\mathcal{E})$ so is a good measure of the information encoded in a quantum system. IN contrast to the von neuman entropy as some quantum channels increaase and some decreae the von nueman entropy. 
 \subsubsection{Noisy quantum channel}
@@ -1246,5 +1248,97 @@ Can using entangled states as input to $\Lambda^{\otimes n}$ increase the capaci
 \textbf{Classical capacity of $\Lambda$} (Can be shown beyond course that full capacity without any restriction on entangeled or not) $C(\Lambda) = \lim_{n \rightarrow \infty} \frac{1}{n} \chi^* (\Lambda^{\otimes n}) $\\\\
 Can prove subadditivity: $\chi^*(\Lambda_1 \otimes \Lambda_2) \geq \chi^*(\Lambda_1) + \chi^*(\Lambda_2)$ which implies:
 $ C_{classical}(\Lambda) \geq \lim_{n \rightarrow \infty} \frac{1}{n} n \chi^* (\Lambda) \geq \chi^*(\Lambda)$\\\\
-so if the conjecture holds then $C_{classical} > \chi^*(\Lambda)$ but this isn't ture as someone found a counter example to the conjecture.
+so if the conjecture holds then $C_{classical} > \chi^*(\Lambda)$ but this isn't ture as someone found a counter example to the conjecture.\\\\
+$F(\rho, \Lambda) = 1$ iff $\Lambda(\ket{\psi}\bra{\psi}) = \ket{\psi}\bra{\psi}$ for all $\ket{\psi}$ in the support of $\rho$.
+\section{Lecture 24}
+A lot of figures for this lecture on the moodle. Now talking about sending quantum informaiton thorugh a channel. \\
+Figure 1, 2 and 3\\
+$$
+\rho'_{RQ} = (I \otimes \Lambda) \rho_{RQ}
+$$
+$$
+\rho_{Q'} = \Lambda(\rho_Q) = Tr_E ( (I \otimes U_{QE}) (\rho_{RQ} \otimes \ket{0} \bra{0}) (I_R \otimes U_{QE}^{\dagger}))
+$$
+$$
+\psi_{RQE} = \ket{\psi_{RQ}} \otimes \ket{0}
+$$
+$$
+\ket{\psi'_{RQ'E}} = (I_R \otimes U_{BE}) \ket{\psi_{RQE}}
+$$
+Coherent information:
+$$
+I_C (\Lambda, \rho) = - S(R|Q)_{\rho'} = -S(\rho_{RQ'}) + S(\rho'_{Q'}) = - S(\rho_E') + S(\rho_{RE}') = S(R|E)
+$$
+Above using the fact that the bipartite partition of a pure state gives reduced density matrices with the same eigenvlaues
+$$
+I_c(\Lambda, \rho) \leq S(\rho)
+$$
+Proof:
+$$
+I_C(\Lambda, \rho) = S(\rho'_{RE}) - S(\rho'_E) \leq S(\rho_R') + S(\rho'_E) - S(\rho_E') 
+$$
+$$
+I(\Lambda, \rho) \leq S(\rho_R') = S(\rho_R) = S(\rho_Q) = S(\rho)
+$$
+Using the quantum fenos inequality we can prove that $I_c(\Lambda, \rho) = S(\rho) $ iff it is such a noisy channel it can be reversed( there exists $\Lambda' s.t. F(\rho, \Lambda' \Lambda (\rho) ) = 1$.\\
+Proof:
+$$
+\ket{\psi_{RQ}} = \ket{\psi_R} \otimes \ket{\chi_Q}
+$$
+So
+$$
+\rho'_{RQ'} = (I \otimes \Lambda) (\ket{\psi_R} \bra{\psi_R} \otimes \ket{\chi_Q}\bra{\chi_Q}
+$$
+$$
+S(\rho'_{RQ'}) = S(\psi_R) + S(\Lambda(\chi_Q)) = S(\rho'_{Q'})
+$$
+$$
+I_c(\Lambda, \rho) = - S(R|Q')_{\rho'} = - S(\rho'_{RQ'}) + S(\rho'_{Q'}) = 0
+$$
+Now consider the quantum data processing inequality:
+$$
+I_c( \Lambda_2 \Lambda_1 , \rho) \geq I_c(\Lambda_1, \rho) \leq S(\rho)
+$$
+This proof depends on strong sub additivity. look at figure 4, $\rho'$ correpondes to $\psi'$ etc.
+$$
+\ket{\psi_{RQE_1E_2}} = \ket{\psi_{RQ}} \otimes \ket{0_{E_1}} \otimes \ket{0_{E_2}}
+$$
+$$
+\ket{\psi'_{R Q_1 E_1 E_2}} = (I_R \otimes U_{QE_1} \otimes I_{E_2}) \ket{\psi_{RQE_1E_2}}
+$$
+$$
+\ket{\psi''_{RQ_2 E_1 E_2}} = (I_R \otimes I_{E_1} \otimes V_{Q_1 E_2}) \ket{\psi_{RQ_1 E_1 E_2}}
+$$
+We need to prove that $I_c( \Lambda_2 \Lambda_1 , \rho) \geq I_c(\Lambda_1, \rho)$:
+$$
+S(R|E_1)_{\rho'} \geq S(R| E_1 E_2)_{\rho''}
+$$
+follows straight from  SSA $RE_1 E_2$ as $S(A|BC) \leq S(A|B)$. RHS = $S(R|E_1)_{\rho''} = S(\rho''_{RE_1}) - S(\rho''_{E_1}) = S(\rho'_{RE_1}) - S(\rho'_{E_1})  = S(R|E_1)_{\rho'} = I_c(\Lambda, \rho)$.\\\\
+After n uses of the channel, we apply the cahnnel $\Lambda^{\otimes n}$ and then the decoding scheme $\mathfrak{D}$ to get the final state $\omega_n$ but bob doesn't measure it as we are trying to transmit a quantum state. So the condition for reliabitly is actually:
+$$
+lim_{n\rightarrow \infty} F(\omega_n, \rho_n) = 1
+$$
+\textbf{Quantum Capacity of $\Lambda$}\\
+LSD theorem\\
+$$
+Q(\Lambda) = \lim_{n \rightarrow \infty} \frac{1}{n} max_{\rho_n \in \mathfrak{D}(\mathcal{H}^{\otimes n}} I_c( \Lambda^{\otimes n}, \rho_n)
+$$
+$$
+C(\Lambda) = \lim_{n\rightarrow  \infty} \frac{1}{n} \chi^*(\Lambda^{\otimes n})
+$$
+Peter shor has proved that the minimium ouput entropy $S_{min} = min_{\rho} S(\Lambda(\rho))$ has an additivity conjecture: $S_{min} (\Lambda_1 \otimes \Lambda_2) = S_}min} (\Lambda_1) + S_{min} (\Lamdba_2)$ which is equivalent to the additivity conjecture for the standard S. THis is much easier to disprove and is how it was done.\\\\
+$$
+I_c(\Lambda) = max_{\rho} I_c(\Lambda, \rho), I_c(\Lambda^{\otimes n}) = n I_c(\Lambda)
+$$
+$$
+Q(\Lambda) = I_c(\Lambda) = Q^{(1)}(\Lambda)
+$$
+\textbf{Degrable channels}
+The complenetary channel is the channel to the environemnt by taking the trace over the system rather than the environemnt. A degrable channel is one that could have another map by simulating the output to the environment from the output to the system.
+\section{Example sheet 4}
+The general forumla for the density matrix of a qubit is not $p\ket{0}\bra{0} + (1-p) \ket{1}\bra{1}$ but rather:
+$$
+\rho = \frac{1}{2}(I + \bm r \cdot \sigma) \text{ or } \rho = \begin{pmatrix} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+$$
 \end{document}
+

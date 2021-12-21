@@ -1,8 +1,14 @@
-% A sample file for Journal of Quantum Information and Computation (QIC)
-% Source: http://www.rintonpress.com/style/index.html
-%
+% a sample file for Journal of Quantum Information and Computation (QIC) in 
+% LaTex2e by inputing macro file "qic.sty" with command \usepackage{qic}, 
+% all the macros have been defined in the style file, so it is no need to 
+% put many macros at the beginning of the text file  
+
 \documentclass[twoside]{article}
-\usepackage{qic}
+\usepackage{qic,epsfig}
+\usepackage{braket}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{qcircuit}
 
 \textwidth=5.6truein
 \textheight=8.0truein
@@ -14,8 +20,8 @@
 \begin{document}
 \setlength{\textheight}{8.0truein}    %FOR 2ND PAGE ONWARDS
 
-\runninghead{Title  $\ldots$}
-            {Author(s) $\ldots$}
+\runninghead{Mapping Fermions to Qubits  $\ldots$}
+            {Oliver O'Brien $\ldots$}
 
 \normalsize\textlineskip
 \thispagestyle{empty}
@@ -34,33 +40,17 @@
 %%%%%%%%%%%%%%%%%%%%%
 %Put in titiles here
 %%%%%%%%%%%%%%%%%%%%%
-INSTRUCTIONS FOR TYPESETTING AN ARTICLE}
-\vspace*{0.035truein}
-\centerline{\bf FOR QUANTUM INFORMATION AND COMPUTATION\footnote{Typeset the
-title in 10 pt Times Roman, uppercase and boldface.}}
+MAPPING FERMIONS TO QUBITS}
 \vspace*{0.37truein}
 \centerline{\footnotesize
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %put authors' name and address here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-FIRST AUTHOR\footnote{Typeset names in
-10 pt Times Roman, uppercase. Use the footnote to indicate the
-present or permanent address of the author.}}
+OLIVER O'BRIEN}
 \vspace*{0.015truein}
-\centerline{\footnotesize\it University Department, University
-Name, Address}
+\centerline{\footnotesize\it DAMTP, Centre for Mathematical Sciences, University of Cambridge, Cambridge CB30WA, UK}
 \baselineskip=10pt
-\centerline{\footnotesize\it City, State ZIP/Zone,
-Country\footnote{State completely without abbreviations, the
-affiliation and mailing address, including country. Typeset in 8
-pt Times Italic.}}
-\vspace*{10pt}
-\centerline{\footnotesize 
-SECOND AUTHOR}
-\vspace*{0.015truein}
-\centerline{\footnotesize\it Group, Laboratory, Address}
-\baselineskip=10pt
-\centerline{\footnotesize\it City, State ZIP/Zone, Country}
+\centerline{\footnotesize\it Christ's College, Cambridge, UK}
 \vspace*{0.225truein}
 \publisher{(received date)}{(revised date)}
 
@@ -89,6 +79,69 @@ Your abstract goes here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %put the text of the paper here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+"Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy." - \textsl{Dr Richard Feynman} \cite{feynmann} \\\\
+Ever since Dr Richard Feynman said these famous words at the end of his keynote speech in 1982, one of the main tasks facing quantum computers has been simulating quantum systems. Intuitively a quantum computer should be able to handle this problem better than a classic computer as they operate within the same bizarre world of entanglement and superposition. However, there are many challenges to overcome before quantum advantage can be achieved in this field. We will consider one such challenge in this essay: the optimum mapping scheme from fermions to qubits.\\\\
+One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them in terms a quantum computer can process, that is qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of anti-commutation (\textbf{need to explain why it is non-local}), whereas qubits are independent local units. Therefore a non-trival mapping scheme which introduces this non-local behaviour is necessary.\\\\
+The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented nearly a century ago \cite{originalJordanWigner}, and we will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev map} and the \textbf{Derby-Klassen map}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. Furthermore, recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in a given mapping (we consider solely the Jordan-Wigner case) offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.\\\\
+It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system . Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).\\\\
+\textbf{First and second quantitisation - good pros v cons in vqe paper}. Grid vs Basis set look at Sam McArdles review
+\section{Applications to fermionic systems}\label{applications_section}
+\subsection{Estimating ground state energies}
+Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach, which is unfeasible on a classical computer where it scales exponentially (\textbf{verify this is true}) in the number of fermionic modes.
+\subsubsection{Variational Quantum Eigensolver}
+A VQE provides an upper bound on the ground state energy of a Hamiltonian by utilising the variational principle:
+\begin{equation}
+        \frac{\bra{\psi} \hat H \ket{\psi}}{\braket{\psi | \psi}} \geq E_0 \>\>\>\> \forall \> \ket{\psi}\in \mathcal{H}
+\end{equation}
+The algorithm consists of two stages. First a variational ansatz is initialised based on a set of parameters $\bm \theta$. Then, the Hamiltonian is measured a number of times, and the parameters of the ansatz are varied until a minimum is found. This is an example of a variational quantum algorithm, which performs a classical optimisation over a quantum oracle (\textbf{is this a correct description}). By exporting lots of the work to a classical computer, VQEs are one of the quantum algorithms that are achievable in the NISQ (Noisy Intermediate-scale Quantum) era.\\\\ 
+The preparation of ansatz can be done without any regard for fermions or what underlying wavefunction it represents. Generally a given circuit structure is picked with some of the gates depending upon the parameters (i.e. an $R_z(\theta)$ gate). However, there are some schemes for preparing ansatz that correlate to known wavefunctions, so the wavefunction corresponding to the minimum energy estimate can be found (\textbf{check this is true, find example and see if mapping is important} - Unitary Coupled Cluser - gaussian).\\\\
+It is in the measurement of the Hamiltonian that the mapping becomes important. The Hamiltonian in question will be a combination of fermionic raising and lowering operators, so needs to be mapped to a combination of Pauli operators that can be measured on a quantum computer. \textbf{consider measurement strategies that minimise repetitions}. After this mapping has been performed we are left with a qubit Hamiltonian that is a sum of Pauli strings (strings of Pauli operators). Therefore, we can measure the effectiveness of different mappings by the resource costs of implementing this qubit Hamiltonian. We will focus on three metrics (\textbf{this bit might be too similar to vqe page 31}):
+\begin{romanlist}
+\item \textbf{Number of qubits:} The less qubits required by the mapping the smaller the quantum computer required to run the simulation.
+\item \textbf{Average Pauli weight:} The average number of Pauli operators in each Pauli string in the Hamiltonian. The smaller the Pauli weight the less gates needed to measure the Hamiltonian, which reduces both the resource cost and the error due to gate infidelity. \textbf{Low-weight operators protect against barren plateau} \url{doi:10.1038/s41467-021-21728-w.}. \textbf{Could potentially elaborate here as it is a bit more complex than just less gates per string it also increases parallelisation and reduces ansatz depth}. \textbf{Mention locality}
+\item \textbf{Number of Pauli-strings:} Each Pauli-string is measured separately, so the fewer Pauli-strings to measure, the fewer times the ansatz needs to be initialized and measured.
+\end{romanlist}
+\subsubsection{Quantum Phase estimation}
+QPE can be used to estimate the energy levels of a Hamiltonian to $n$ bits. This is achieved by applying successive steps of time evolution as a controlled gate with the target being the input state and the control being successive Hadamard ancilla qubits (illustrated in Fig.~\ref{QPECircuit}). Then by performing an inverse Quantum Fourier Transform on these ancilla qubits we get a superposition of binary expressions for the energy levels.\\
+\begin{figure}[htbp]
+               \centerline{ \Qcircuit @C=1em @R=.7em {
+                               \lstick{\ket{0}} & \gate{H} & \qw            & \qw              & \qw              & \qw              & \qw &  \cdots &                & \ctrl{8}           & \qw & \multigate{7}{QFT^{-1}} & \qw \\ \\ \lstick{\cdots} & \cdots  & \cdots & \cdots & \cdots &\cdots &  & \cdots & &  & \cdots& & \cdots  \\   \\
+                               \lstick{\ket{0}} & \gate{H} & \qw            & \qw              & \qw              & \ctrl{4}         & \qw &  \cdots &                & \qw                & \qw & \ghost{QFT^{-1}}& \qw  \\
+                               \lstick{\ket{0}} & \gate{H} & \qw            & \qw              & \ctrl{3}         & \qw              & \qw &  \cdots &                & \qw                & \qw & \ghost{QFT^{-1}}& \qw   \\
+                               \lstick{\ket{0}} & \gate{H} & \qw            & \ctrl{2}         & \qw              & \qw              & \qw &  \cdots &                & \qw                & \qw & \ghost{QFT^{-1}}& \qw   \\
+                               \lstick{\ket{0}} & \gate{H} & \ctrl{1}       & \qw              & \qw              & \qw              & \qw &  \cdots &                & \qw                & \qw & \ghost{QFT^{-1}}& \qw   \\
+                               \lstick{\ket{u}} & \qw      & \gate{U^{2^0}} & \gate{U^{2^{1}}} & \gate{U^{2^{2}}} & \gate{U^{2^{3}}} & \qw &  \cdots &                & \gate{U^{2^{n-1}}} & \qw & \qw & \qw
+        }}
+        \vspace*{13pt}
+        \fcaption{\label{QPECircuit} Circuit diagram of QPE. In order to calcualte energy levels $U = e^{-2\pi i \hat H}$ is used.}
+\end{figure} \\
+An important feature of the algorithm is that the input state $\ket{u}$ must have overlap with the ground state. This can be seen by working through in detail (we have adapted the following treatment from \cite{chemistryReview}):\\
+\begin{itemlist}
+\item We can express $\ket{u}$ in the basis of energy eigenstates: $\ket{u} = \sum_i c_i \ket{E_i}$. Therefore, the total state after the application of the Hadamard gates is: 
+        \begin{equation}
+                \frac{1}{\sqrt{2^n}} \sum_i \sum_x \ket{x} c_i \ket{E_i}
+        \end{equation}
+\item After the application of the controlled gates shown in Fig.~\ref{QPECircuit}, this transforms to:
+        \begin{equation}
+        \frac{1}{\sqrt{2^n}} \sum_i c_i (\ket{0} + e^{-2\pi i  E_i 2^0}\ket{1})(\ket{0} + e^{-2\pi i E_i 2^1} \ket{1}) \cdots (\ket{0} + e^{-2\pi i  E_i 2^{n-1}}\ket{1}) \ket{E_i} \end{equation}
+        as $x = x_0 2^0 + x_1 2^1 + \cdots + x_{n-1} 2^{n-1}$ for $x_i \in \{0,1\}$, this reduces to:
+        \begin{equation}
+                \frac{1}{\sqrt{2^n}} \sum_i \sum_x e^{-2\pi i E_i x}c_i \ket{x}  \ket{E_i}
+        \end{equation}
+\item By applying an inverse Fourier transform the phase can be extracted:
+        \begin{equation}
+                \frac{1}{\sqrt{2^n}} \sum_i \sum_x e^{-2\pi i E_i x}c_i \ket{x}  \ket{E_i} \xrightarrow{QFT^{-1}} \sum_i c_i \ket{\text{bin}(E_i)} \ket{E_i}
+        \end{equation}
+\item Therefore, by measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$. As $E_i$ is likely not exact to $n$ bits there will be a potential error introduced by the Quantum Fourier Transform, so to be accurate to $n$ bits a few more ancilla qubits will be needed \cite{nielsenChuang}. So, to find the ground energy state it needs to be in the expansion of $\ket{u}$ and the larger the amplitude the less times QPE needs to be repeated
+\end{itemlist}
+\subsection{Simulating dynamics - see Nielsen Cheung}
+\section{Jordan-Wigner Transformation}\label{jordan-wigner_section}
+\section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
+\section{Derby-Klassen Map}\label{derby-klassen_section}
+\section{Fermionic Enumeration}\label{fermionic-enumeration_section}
+\section{Relative performance}\label{comparision_section}
+\pagebreak
 \section{Introduction}        
 The journal of {\it Quantum Information and Computation},
 for both on-line and in-print editions,
@@ -200,8 +253,8 @@ reference. The postscript files of figures can be imported by using
 the commends used in the examples here.
 
 \begin{figure} [htbp]
-\vspace*{13pt}
-\centerline{\epsfig{file=fig1-eps-converted-to.pdf, width=8.2cm}} %100 percent
+%\vspace*{13pt}
+\centerline{\epsfig{file=fig1.eps, width=8.2cm}} %100 percent
 \vspace*{13pt}
 \fcaption{\label{motion}figure caption goes here.}
 \end{figure}
@@ -280,7 +333,15 @@ use the standard abbreviations. Typeset references in 9 pt Times
 Roman.
 
 \begin{thebibliography}{000}
-\bibitem{first}
+        \bibitem{feynmann} Feynman, R.P.. {\it Simulating physics with computers}. International Journal of Theoretical Physics 1982;21(6-7):467–488. \url{doi:10.1007/bf02650179}.
+        \bibitem{originalJordanWigner} Pascual Jordan and Eugene Wigner. {\it  {\"U}ber das Paulische {\"A}quivalenzverbot}. Zeitschrift fur Physik, 47(9-10):631{651, September 1928.
+                \bibitem{fermionicEncoding} Chiew, M. and Strelchuk, S.. {\it Optimal Fermion-Qubit Mappings}. ArXiv:2110.12792 [Quant-Ph], 25 October 2021. \url{http://arxiv.org/abs/2110.12792}
+                \bibitem{vqe}
+                Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176} \textbf{look for journal version}
+                \bibitem{chemistryReview} McArdle, Sam, Suguru Endo, Alán Aspuru-Guzik, Simon C. Benjamin, and Xiao Yuan. {\it Quantum Computational Chemistry}. Reviews of Modern Physics 92, no. 1 (30 March 2020): 015003. \url{https://doi.org/10.1103/RevModPhys.92.015003}.
+                \bibitem{nielsenChuang} Nielsen, M.A., Chuang, I.L.. {\it Quantum Computation and Quantum Information}. Cambridge: Cambridge University Press; 2009. ISBN
+9780511976667. doi:10.1017/cbo9780511976667.
+                \bibitem{first}
 P. Horodecki and R. Horodecki (2001), {\it Distillation and bound entanglement},
 Quantum Inf. Comput., Vol.1, pp. 045-075.
 
@@ -312,3 +373,4 @@ etc.
 \end{equation}
 
 \end{document}
+

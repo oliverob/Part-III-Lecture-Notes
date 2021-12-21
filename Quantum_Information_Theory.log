@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  29 NOV 2021 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  10 DEC 2021 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1217,55 +1217,61 @@ l.1059 ...that $Tr \tilde \rho_k^{(n)} - \alpha^k^
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 [32]
-Overfull \hbox (28.22136pt too wide) in paragraph at lines 1074--1078
+Overfull \hbox (28.22136pt too wide) in paragraph at lines 1075--1079
 \OT1/cmr/m/n/10 So the prob-a-bil-ity of cor-rect in-fer-ence is: $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 correct\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Tr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]^^Z[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 error\OT1/cmr/m/n/10 ) =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1078
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1079
 
  []
 
-./Quantum_Information_Theory.tex:1087: Missing $ inserted.
+./Quantum_Information_Theory.tex:1089: Missing $ inserted.
 <inserted text> 
                 $
-l.1087 ...the following quantum operation (\Lambda
+l.1089 ...the following quantum operation (\Lambda
                                                   : $\mathcal{H}_{QB} \right...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-./Quantum_Information_Theory.tex:1087: LaTeX Error: \mathcal allowed only in math mode.
+./Quantum_Information_Theory.tex:1089: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1087 ...ng quantum operation (\Lambda: $\mathcal
+l.1089 ...ng quantum operation (\Lambda: $\mathcal
                                                   {H}_{QB} \rightarrow \math...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Information_Theory.tex:1087: Missing $ inserted.
+./Quantum_Information_Theory.tex:1089: Missing $ inserted.
 <inserted text> 
                 $
-l.1087 ...uantum operation (\Lambda: $\mathcal{H}_
+l.1089 ...uantum operation (\Lambda: $\mathcal{H}_
                                                   {QB} \rightarrow \mathcal{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1088
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1090
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1088
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1090
 
  []
 
-./Quantum_Information_Theory.tex:1097: Undefined control sequence.
-l.1097 \Lambda( \rho_{QB}) = \sum_y A_y \pho
+
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1090
+
+ []
+
+[33]
+./Quantum_Information_Theory.tex:1099: Undefined control sequence.
+l.1099 \Lambda( \rho_{QB}) = \sum_y A_y \pho
                                             _{QB} A^{\dagger}_y, A_y = \sqrt...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1273,108 +1279,99 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Information_Theory.tex:1097: Double subscript.
-l.1097 \Lambda( \rho_{QB}) = \sum_y A_y \pho_
+./Quantum_Information_Theory.tex:1099: Double subscript.
+l.1099 \Lambda( \rho_{QB}) = \sum_y A_y \pho_
                                              {QB} A^{\dagger}_y, A_y = \sqrt...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1101
-
- []
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1105
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1105
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1151--1154
-
- []
-
-./Quantum_Information_Theory.tex:1155: Undefined control sequence.
-l.1155 D(\Lamdba
-                (\rho_x) || \Lambda(\rho)) \leq D(\rho_x|| \rho)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1159--1162
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1159--1162
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1168
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1168
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1170
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1179--1182
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1189--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1201
 
  []
 
 [36]
-./Quantum_Information_Theory.tex:1225: Undefined control sequence.
-l.1225 ...}|}, \sigma^j_M \}) \leq \chi^* (\Lamdba
+./Quantum_Information_Theory.tex:1227: Undefined control sequence.
+l.1227 ...}|}, \sigma^j_M \}) \leq \chi^* (\Lamdba
                                                   )
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1383,45 +1380,171 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1252
 
  []
 
 
-Overfull \hbox (26.85521pt too wide) in paragraph at lines 1242--1250
+Overfull \hbox (26.85521pt too wide) in paragraph at lines 1244--1252
 \OT1/cmr/m/n/10 Can prove sub-ad-di-tiv-ity: $\OML/cmm/m/it/10 ^^_[]\OT1/cmr/m/n/10 (^^C[] \OMS/cmsy/m/n/10 
  \OT1/cmr/m/n/10 ^^C[]) \OMS/cmsy/m/n/10 ^^U \OML/cmm/m/it/10 ^^_[]\OT1/cmr/m/n/10 (^^C[]) + \OML/cmm/m/it/10 ^^_[]\OT1/cmr/m/n/10 (^^C[])$ which im-plies: $\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (^^C) \OMS/cmsy/m/n/10 ^^U
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1252
 
  []
 
-[38] (./Quantum_Information_Theory.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1255
+
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1322
+
+ []
+
+./Quantum_Information_Theory.tex:1328: Missing { inserted.
+<to be read again> 
+                   }
+l.1328 ...min} (\Lambda_1 \otimes \Lambda_2) = S_}
+                                                  min} (\Lambda_1) + S_{min}...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./Quantum_Information_Theory.tex:1328: Extra }, or forgotten $.
+l.1328 ... (\Lambda_1 \otimes \Lambda_2) = S_}min}
+                                                   (\Lambda_1) + S_{min} (\L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Quantum_Information_Theory.tex:1328: Undefined control sequence.
+l.1328 ...= S_}min} (\Lambda_1) + S_{min} (\Lamdba
+                                                  _2)$ which is equivalent t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1329
+
+ []
+
+[39]
+
+./Quantum_Information_Theory.tex:1340: LaTeX Error: \begin{pmatrix} on input line 1340 ended by \end{pamtrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Quantum_Information_Theory.tex:1340: Missing $ inserted.
+<inserted text> 
+                $
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Information_Theory.tex:1340: Missing } inserted.
+<inserted text> 
+                }
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Information_Theory.tex:1340: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+I'm guessing that you meant to end an alignment here.
+
+./Quantum_Information_Theory.tex:1340: Missing $ inserted.
+<inserted text> 
+                $
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Information_Theory.tex:1340: Missing } inserted.
+<inserted text> 
+                }
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Information_Theory.tex:1340: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.1340 ...x} a & b- ic \\ b+ ic & 1-a\end{pamtrix}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[40] (./Quantum_Information_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 1824 strings out of 478599
- 23799 string characters out of 5858101
+ 1825 strings out of 478599
+ 23809 string characters out of 5858101
  329252 words of memory out of 5000000
- 19701 multiletter control sequences out of 15000+600000
+ 19702 multiletter control sequences out of 15000+600000
  416912 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,66p,821b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Quantum_Information_Theory.pdf (38 pages, 363957 bytes).
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Quantum_Information_Theory.pdf (40 pages, 372998 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 240 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
