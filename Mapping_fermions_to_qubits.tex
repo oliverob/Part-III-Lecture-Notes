@@ -87,7 +87,7 @@ The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented 
 It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system . Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).\\\\
 \textbf{First and second quantitisation - good pros v cons in vqe paper}. Grid vs Basis set look at Sam McArdles review
 \section{Applications to fermionic systems}\label{applications_section}
-\subsection{Estimating ground state energies}
+\subsection{Estimating ground state energies}\label{vqe_section}
 Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach, which is unfeasible on a classical computer where it scales exponentially (\textbf{verify this is true}) in the number of fermionic modes.
 \subsubsection{Variational Quantum Eigensolver}
 A VQE provides an upper bound on the ground state energy of a Hamiltonian by utilising the variational principle:
@@ -133,8 +133,25 @@ An important feature of the algorithm is that the input state $\ket{u}$ must hav
         \begin{equation}
                 \frac{1}{\sqrt{2^n}} \sum_i \sum_x e^{-2\pi i E_i x}c_i \ket{x}  \ket{E_i} \xrightarrow{QFT^{-1}} \sum_i c_i \ket{\text{bin}(E_i)} \ket{E_i}
         \end{equation}
-\item Therefore, by measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$. As $E_i$ is likely not exact to $n$ bits there will be a potential error introduced by the Quantum Fourier Transform, so to be accurate to $n$ bits a few more ancilla qubits will be needed \cite{nielsenChuang}. So, to find the ground energy state it needs to be in the expansion of $\ket{u}$ and the larger the amplitude the less times QPE needs to be repeated
+\item As $E_i$ is likely not exact to $n$ bits there will be a potential error introduced by the Quantum Fourier Transform, so to be accurate to $n$ bits a few more ancilla qubits will be needed \cite{nielsenChuang}.
+\item By measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$.  So to find the ground state energy level, the ground state eigenstate needs to be in the original expansion of $\ket{u}$. The larger the amplitude of the ground state eigenstate ($c_0$) the fewer repetitions of QPE are required before $E_0$ is measured. Therefore, QPE works better if an input state close to the exact ground state is used.
 \end{itemlist}
+The portion of this algorithm for which fermionic mapping is relevant is the construction of the controlled gates $U^{2^k} = e^{-2 \pi i \hat H 2^k}$. Not only do the same metrics for the efficiency of the corresponding qubit Hamiltonian listed in Section~\ref{vqe_section} apply, now we need to consider the impact of exponentiation. As the Hamiltonian is the sum of non-commuting Pauli-strings taking the exponential is non-trivial and requires the Trotter-Suzuki approximation \cite{suzuki}. To first order this gives:
+\begin{equation}
+        e^{\frac{-it}{\hbar} \sum^m_k \hat H_k} = \left( \prod^m_k e^{\frac{-i t \hat H_k}{\hbar S}\right)^S + O(t^2/S)
+\end{equation}
+In order to achieve a desired accuracy of $\epsilon$ a sufficient number of Trotter steps $S= O(t^2/ \epsilon)$ need to be used \cite{chemistryReview}. The ordering of the terms in this Trotter-Suzuki expansion greatly influences the error and therefore how many Trotter steps are required. This is important to consider as the impact the ordering has varies depending on the mapping chosen as we will discuss in Section~\ref{comparision_section}.\\\\
+Finally, it is useful to consider how each Trotter step is represented as a circuit. As $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ applies a phase shift of $e^{i\theta}$ if the parity of the $n$ qubits is even and $e^{-i\theta}$ if the parity is odd. It is possible to transform $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ into the exponentiation of any Pauli-string. Therefore, in general the exponential of a $n$-fold tensor product of Pauli matrices will require $2(n-1)$ CNOT gates centred around one single-qubit gate and enough single-qubit gates to transform the required qubits into and out of their respective basis before and after \cite{seeley}. The circuit required for computing the term $e^{i(YXZY)\theta}$ is shown in Fig.~\ref{trotterStepCircuit}. \begin{figure}[htbp]
+\centerline{ \Qcircuit @C=1em @R=.7em {
+        &\gate{R_X} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \gate{R_X^{\dagger}}&\qw \\
+        &\gate{H} & \targ & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \targ & \gate{H}& \qw\\
+        & \qw & \qw & \targ & \ctrl{1} & \qw & \ctrl{1} & \targ & \qw & \qw &  \qw\\
+        &\gate{R_X} & \qw & \qw & \targ & \gate{R_Z(2 \theta)} & \targ & \qw & \qw & \gate{R_X^{\dagger}} &\qw \\
+}}
+        \vspace*{13pt}
+        \fcaption{\label{trotterStepCircuit} The circuit required to exponentiate Pauli-string $YXZY$ by first converting the qubits into the correct basis using $R_X$ and $H$ gates, then computing the parity of the four qubits before applying a single-qubit phase rotation. After this we uncompute the parity and revert to the computational (Z) basis. This is adapted from \cite{seeley}.}
+
+\end{figure}
 \subsection{Simulating dynamics - see Nielsen Cheung}
 \section{Jordan-Wigner Transformation}\label{jordan-wigner_section}
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
@@ -340,7 +357,11 @@ Roman.
                 Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176} \textbf{look for journal version}
                 \bibitem{chemistryReview} McArdle, Sam, Suguru Endo, Alán Aspuru-Guzik, Simon C. Benjamin, and Xiao Yuan. {\it Quantum Computational Chemistry}. Reviews of Modern Physics 92, no. 1 (30 March 2020): 015003. \url{https://doi.org/10.1103/RevModPhys.92.015003}.
                 \bibitem{nielsenChuang} Nielsen, M.A., Chuang, I.L.. {\it Quantum Computation and Quantum Information}. Cambridge: Cambridge University Press; 2009. ISBN
+                \bibitem{seeley} Seeley, Jacob T., Martin J. Richard, and Peter J. Love. {\it The Bravyi-Kitaev Transformation for Quantum Computation of Electronic Structure}. The Journal of Chemical Physics 137, no. 22 (14 December 2012): 224109. \url{https://doi.org/10.1063/1.4768229}.
+
 9780511976667. doi:10.1017/cbo9780511976667.
+\bibitem{suzuki} Suzuki, Masuo. {\it Generalized Trotter’s Formula and Systematic Approximants of Exponential Operators and Inner Derivations with Applications to Many-Body Problems}. Communications in Mathematical Physics 51, no. 2 (June 1976): 183–90. \url{https://doi.org/10.1007/BF01609348}.
+
                 \bibitem{first}
 P. Horodecki and R. Horodecki (2001), {\it Distillation and bound entanglement},
 Quantum Inf. Comput., Vol.1, pp. 045-075.
