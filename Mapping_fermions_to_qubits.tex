@@ -84,12 +84,34 @@ Your abstract goes here.
 Ever since Dr Richard Feynman said these famous words at the end of his keynote speech in 1982, one of the main tasks facing quantum computers has been simulating quantum systems. Intuitively a quantum computer should be able to handle this problem better than a classic computer as they operate within the same bizarre world of entanglement and superposition. However, there are many challenges to overcome before quantum advantage can be achieved in this field. We will consider one such challenge in this essay: the optimum mapping scheme from fermions to qubits.\\\\
 One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them in terms a quantum computer can process, that is qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of anti-commutation (\textbf{need to explain why it is non-local}), whereas qubits are independent local units. Therefore a non-trival mapping scheme which introduces this non-local behaviour is necessary.\\\\
 The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented nearly a century ago \cite{originalJordanWigner}, and we will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev map} and the \textbf{Derby-Klassen map}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. Furthermore, recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in a given mapping (we consider solely the Jordan-Wigner case) offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.\\\\
-It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system . Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).\\\\
+It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system . Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
 \subsection{First and second quantization}
-From Quantum Field Theory, we know that fermions must be antisymmetric under exchange. This property is commonly represented in two ways known as the first and second quanization. The first quanization is when the antisymmetry is retained in the wavefunction such as with:
+From Quantum Field Theory (\textbf{citation needed}), we know that fermions must be antisymmetric under exchange. This property is commonly represented in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
 \begin{equation}
         \ket{\Phi} = \frac{1}{\sqrt{2}}(\ket{\phi}_1 \ket{\psi}_2 - \ket{\psi}_1 \ket{\phi}_2)
 \end{equation}
+This generalises \cite{chemistryReview} to larger numbers of fermions through a Slater determinant (Eq.~\ref{slater}), which satisfies the antisymmetry as swapping any two rows of a determinant gives a sign change:
+\begin{equation}\label{slater}
+        \phi(\bm x_0, ..., \bm x_{N-1}) = \frac{1}{\sqrt{N!}} 
+        \begin{vmatrix} 
+                \phi_0(\bm x_0) & \cdots & \phi_{M-1}(\bm x_0)\\
+                \vdots & \ddots & \vdots \\
+                \phi_0(\bm x_{N-1}) & \cdots & \phi_{M-1}(\bm x_{N-1})
+        \end{vmatrix}
+\end{equation}
+Here $M$ is the number of spin orbitals possible, and $N$ is the number of electrons. Typically we have more spin orbitals than electrons, so the Slater determinant will only contain the $N$ occupied spin orbitals. Acting with fermionic creation and annihilation operators on the first quantization is trivial (if long-winded) as the operators either commute with or act upon each mode. \\\\
+The second quantisation compresses the information of the Slater determinant by only tracking whether each orbital or fermionic mode is occupied. Therefore the above is written as:
+\begin{equation}
+        \phi(\bm x_0, ..., \bm x_{N-1}) = \ket{f_0,\cdots, f_i, \cdots, f_{M-1}}
+\end{equation}
+where $f_i$ (the occupation number) $ =1$ when $\phi_p$ is occupied, and 0 otherwise. Acting on this abstraction with the fermionic creation and annihilation is more complex and is given by \cite{chemistryReview}:
+\begin{equation}
+        \begin{align}
+        a_p \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 1} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}\\
+        a_p^{\dagger} \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 0} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}
+\end{align}
+\end{equation}
+Therefore, second quantization can be thought of as encoding the antisymmetry of the fermions in the operators rather than the quantum states. All the mappings we will consider are examples of encoding second quantization (\textbf{should I consider first quantisation techniques}).
 \section{Applications to fermionic systems}\label{applications_section}
 \subsection{Estimating ground state energies}\label{vqe_section}
 Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach, which is unfeasible on a classical computer where it scales exponentially (\textbf{verify this is true}) in the number of fermionic modes.
@@ -153,11 +175,11 @@ Finally, it is useful to consider how each Trotter step is represented as a circ
         &\gate{R_X} & \qw & \qw & \targ & \gate{R_Z(2 \theta)} & \targ & \qw & \qw & \gate{R_X^{\dagger}} &\qw \\
 }}
         \vspace*{13pt}
-        \fcaption{\label{trotterStepCircuit} The circuit required to exponentiate Pauli-string $YXZY$ by first converting the qubits into the correct basis using $R_X$ and $H$ gates, then computing the parity of the four qubits before applying a single-qubit phase rotation. After this we uncompute the parity and revert to the computational (Z) basis. This is adapted from \cite{seeley}.}
+        \fcaption{\label{trotterStepCircuit} The circuit required to exponentiate the Pauli-string $YXZY$ by first converting the qubits into the correct basis using $R_X$ and $H$ gates, then computing the parity of the four qubits before applying a single-qubit phase rotation. After this we uncompute the parity and revert to the computational (Z) basis. This is adapted from \cite{seeley}.}
 \end{figure}
 \subsection{Simulating dynamics - see Nielsen Cheung}
 \section{Jordan-Wigner Transformation}\label{jordan-wigner_section}
-The Jordan-Wigner transformation straight forwardly stores the occupation number of the $i$-th orbital in the $i$-th qubit. Therefore, all the non-local behaviour needs to be mapped into the operators
+The Jordan-Wigner transformation straight forwardly stores the occupation number of the $i$-th orbital in the $i$-th qubit. Therefore, all the non-local behaviour (the parity information) will have to be encoded in the operators. 
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
 \section{Derby-Klassen Map}\label{derby-klassen_section}
 \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
