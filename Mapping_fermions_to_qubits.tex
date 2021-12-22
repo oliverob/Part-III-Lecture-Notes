@@ -85,33 +85,7 @@ Ever since Dr Richard Feynman said these famous words at the end of his keynote 
 One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them in terms a quantum computer can process, that is qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of anti-commutation (\textbf{need to explain why it is non-local}), whereas qubits are independent local units. Therefore a non-trival mapping scheme which introduces this non-local behaviour is necessary.\\\\
 The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented nearly a century ago \cite{originalJordanWigner}, and we will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev map} and the \textbf{Derby-Klassen map}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. Furthermore, recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in a given mapping (we consider solely the Jordan-Wigner case) offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.\\\\
 It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system . Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
-\subsection{First and second quantization}
-From Quantum Field Theory (\textbf{citation needed}), we know that fermions must be antisymmetric under exchange. This property is commonly represented in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
-\begin{equation}
-        \ket{\Phi} = \frac{1}{\sqrt{2}}(\ket{\phi}_1 \ket{\psi}_2 - \ket{\psi}_1 \ket{\phi}_2)
-\end{equation}
-This generalises \cite{chemistryReview} to larger numbers of fermions through a Slater determinant (Eq.~\ref{slater}), which satisfies the antisymmetry as swapping any two rows of a determinant gives a sign change:
-\begin{equation}\label{slater}
-        \phi(\bm x_0, ..., \bm x_{N-1}) = \frac{1}{\sqrt{N!}} 
-        \begin{vmatrix} 
-                \phi_0(\bm x_0) & \cdots & \phi_{M-1}(\bm x_0)\\
-                \vdots & \ddots & \vdots \\
-                \phi_0(\bm x_{N-1}) & \cdots & \phi_{M-1}(\bm x_{N-1})
-        \end{vmatrix}
-\end{equation}
-Here $M$ is the number of spin orbitals possible, and $N$ is the number of electrons. Typically we have more spin orbitals than electrons, so the Slater determinant will only contain the $N$ occupied spin orbitals. Acting with fermionic creation and annihilation operators on the first quantization is trivial (if long-winded) as the operators either commute with or act upon each mode. \\\\
-The second quantisation compresses the information of the Slater determinant by only tracking whether each orbital or fermionic mode is occupied. Therefore the above is written as:
-\begin{equation}
-        \phi(\bm x_0, ..., \bm x_{N-1}) = \ket{f_0,\cdots, f_i, \cdots, f_{M-1}}
-\end{equation}
-where $f_i$ (the occupation number) $ =1$ when $\phi_p$ is occupied, and 0 otherwise. Acting on this abstraction with the fermionic creation and annihilation is more complex and is given by \cite{chemistryReview}:
-\begin{equation}
-        \begin{align}
-        a_p \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 1} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}\\
-        a_p^{\dagger} \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 0} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}
-\end{align}
-\end{equation}
-Therefore, second quantization can be thought of as encoding the antisymmetry of the fermions in the operators rather than the quantum states. All the mappings we will consider are examples of encoding second quantization (\textbf{should I consider first quantisation techniques}).
+
 \section{Applications to fermionic systems}\label{applications_section}
 \subsection{Estimating ground state energies}\label{vqe_section}
 Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach, which is unfeasible on a classical computer where it scales exponentially (\textbf{verify this is true}) in the number of fermionic modes.
@@ -142,7 +116,7 @@ QPE can be used to estimate the energy levels of a Hamiltonian to $n$ bits. This
         \vspace*{13pt}
         \fcaption{\label{QPECircuit} Circuit diagram of QPE. In order to calcualte energy levels $U = e^{-2\pi i \hat H}$ is used.}
 \end{figure} \\
-An important feature of the algorithm is that the input state $\ket{u}$ must have overlap with the ground state. This can be seen by working through in detail (we have adapted the following treatment from \cite{chemistryReview}):\\
+An important feature of the algorithm is that the guiding state $\ket{u}$ must have overlap with the ground state. This can be seen by working through in detail (we have adapted the following treatment from \cite{chemistryReview}):\\
 \begin{itemlist}
 \item We can express $\ket{u}$ in the basis of energy eigenstates: $\ket{u} = \sum_i c_i \ket{E_i}$. Therefore, the total state after the application of the Hadamard gates is: 
         \begin{equation}
@@ -160,7 +134,7 @@ An important feature of the algorithm is that the input state $\ket{u}$ must hav
                 \frac{1}{\sqrt{2^n}} \sum_i \sum_x e^{-2\pi i E_i x}c_i \ket{x}  \ket{E_i} \xrightarrow{QFT^{-1}} \sum_i c_i \ket{\text{bin}(E_i)} \ket{E_i}
         \end{equation}
 \item As $E_i$ is likely not exact to $n$ bits there will be a potential error introduced by the Quantum Fourier Transform, so to be accurate to $n$ bits a few more ancilla qubits will be needed \cite{nielsenChuang}.
-\item By measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$.  So to find the ground state energy level, the ground state eigenstate needs to be in the original expansion of $\ket{u}$. The larger the amplitude of the ground state eigenstate ($c_0$) the fewer repetitions of QPE are required before $E_0$ is measured. Therefore, QPE works better if an input state close to the exact ground state is used.
+\item By measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$.  So to find the ground state energy level, the ground state eigenstate needs to be in the original expansion of the guiding state $\ket{u}$. The larger the amplitude of the ground state eigenstate ($c_0$) the fewer repetitions of QPE are required before $E_0$ is measured. Therefore, QPE works better if a guiding state close to the exact ground state is used.
 \end{itemlist}
 The portion of this algorithm for which fermionic mapping is relevant is the construction of the controlled gates $U^{2^k} = e^{-2 \pi i \hat H 2^k}$. Not only do the same metrics for the efficiency of the corresponding qubit Hamiltonian listed in Section~\ref{vqe_section} apply, now we need to consider the impact of exponentiation. As the Hamiltonian is the sum of non-commuting Pauli-strings taking the exponential is non-trivial and requires the Trotter-Suzuki approximation \cite{suzuki}. To first order this gives:
 \begin{equation}
@@ -178,9 +152,62 @@ Finally, it is useful to consider how each Trotter step is represented as a circ
         \fcaption{\label{trotterStepCircuit} The circuit required to exponentiate the Pauli-string $YXZY$ by first converting the qubits into the correct basis using $R_X$ and $H$ gates, then computing the parity of the four qubits before applying a single-qubit phase rotation. After this we uncompute the parity and revert to the computational (Z) basis. This is adapted from \cite{seeley}.}
 \end{figure}
 \subsection{Simulating dynamics - see Nielsen Cheung}
+\section{First and second quantization}
+From Quantum Field Theory (\textbf{citation needed}), we know that fermions must be antisymmetric under exchange. This property is commonly represented in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
+\begin{equation}
+        \ket{\Phi} = \frac{1}{\sqrt{2}}(\ket{\phi}_1 \ket{\psi}_2 - \ket{\psi}_1 \ket{\phi}_2)
+\end{equation}
+This generalises \cite{chemistryReview} to larger numbers of fermions through a Slater determinant (Eq.~\ref{slater}). This satisfies the antisymmetry condition as swapping any two rows of a determinant produces a sign change:
+\begin{equation}\label{slater}
+        \phi(\bm x_0, ..., \bm x_{N-1}) = \frac{1}{\sqrt{N!}} 
+        \begin{vmatrix} 
+                \phi_0(\bm x_0) & \cdots & \phi_{M-1}(\bm x_0)\\
+                \vdots & \ddots & \vdots \\
+                \phi_0(\bm x_{N-1}) & \cdots & \phi_{M-1}(\bm x_{N-1})
+        \end{vmatrix}
+\end{equation}
+Here $M$ is the number of spin orbitals possible, and $N$ is the number of electrons. Typically we have more spin orbitals than electrons, so the Slater determinant will only contain the $N$ occupied spin orbitals. Acting with fermionic creation and annihilation operators on the first quantization is trivial (if long-winded) as the operators either commute with or act upon each mode. \\\\
+The second quantisation compresses the information of the Slater determinant by only tracking whether each orbital or fermionic mode is occupied. Therefore the above is written as:
+\begin{equation}
+        \phi(\bm x_0, ..., \bm x_{N-1}) = \ket{f_0,\cdots, f_i, \cdots, f_{M-1}}
+\end{equation}
+where $f_i$ (the occupation number) $ =1$ when $\phi_p$ is occupied, and 0 otherwise. This is termed the Fock basis. Acting on the Fock basis with the fermionic creation and annihilation is more complex and is given by \cite{chemistryReview}:
+\begin{equation}
+        \begin{align}
+        a_p \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 1} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}\\
+        a_p^{\dagger} \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 0} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}
+\end{align}
+\end{equation}
+Therefore, second quantization can be thought of as encoding the antisymmetry of the fermions in the operators rather than the quantum states. All the mappings we will consider are examples of encoding second quantization (\textbf{should I consider first quantisation techniques}).\\\\
+\textbf{explain advantages of second quantisation vqe chemistry review tranter 2015}
 \section{Jordan-Wigner Transformation}\label{jordan-wigner_section}
-The Jordan-Wigner transformation straight forwardly stores the occupation number of the $i$-th orbital in the $i$-th qubit. Therefore, all the non-local behaviour (the parity information) will have to be encoded in the operators. 
+The Jordan-Wigner transformation straight forwardly stores the occupation number of the $i$-th orbital in the $i$-th qubit. Therefore, all the non-local behaviour (the parity information) will have to be encoded in the operators \cite{fermionicEncoding}:
+\begin{equation}
+        \begin{align}
+        a_i \rightarrow \left( \bigotimes_{k=1}^{i-1} Z_k \right) \sigma_i^-\\
+        a^{\dagger}_i \rightarrow \left( \bigotimes_{k=1}^{i-1} Z_k \right) \sigma_i^+
+\end{align}
+\end{equation}
+where
+\begin{equation}
+        \begin{align}
+                \sigma^-_i = \frac{1}{2} (X_i + i Y_i) = \ket{0}_i \bra{1}_i\\
+                \sigma^+_i = \frac{1}{2} (X_i - i Y_i) = \ket{1}_i \bra{0}_i 
+        \end{align}
+\end{equation}
+It is clear to see that these operators act in exactly the same way on a qubit spin basis that the fermionic creation and annihilation operators act upon the Fock basis.
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
+The Jordan-Wigner transformation uses O(1) qubits to represent each fermionic mode, however it requires O(N) gates to simulate one fermionic operation. This is because it stores the occupation number locally and the parity non-locally. An alternative scheme called the parity basis stores the parity locally and the occupation number non-locally, however this still requires O(N) gates to simulate one fermionic operation \cite{seeley}. The Bravyi-Kiteav is a halfway house which partially stores both the occupation number and parity non-locally.\\\\
+To explain the mapping first we must define a partial order $\prec$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$ and $\alpha \neq \beta$, then $\alpha \prec \beta$. 
+\begin{itemlist}
+\item Every qubit $\ket{q_j}$ stores the parity of a set of $2^x$ modes for some $x \geq 0$
+\item For even values of $j$, $\ket{q_j}$ stores the occupation number of the $j$-th mode
+\item For odd values of $j$, it stores the parity of a subset of adjacent modes with index less than or equal to $j$:
+        \begin{romanlist}
+        \item When $\log_2 (j +1)$, the set is all the modes less than or equal to $j$
+        \item 
+        \end{romanlist}
+\end{itemlist}
 \section{Derby-Klassen Map}\label{derby-klassen_section}
 \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}
