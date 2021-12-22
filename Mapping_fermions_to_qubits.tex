@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{qcircuit}
 \usepackage{mathtools}
+\usepackage{verbatim}
 
 \textwidth=5.6truein
 \textheight=8.0truein
@@ -220,9 +221,8 @@ For the $i$-th qubit we store the parity of all modes $f_k$ with $k \preceq i$:
 \begin{equation}
         q_i = \sum_{k \preceq i} f_k 
 \end{equation}
-For example, the mapping in the eight qubit case is \cite{tranter2018}:
-\begin{equation}
-        \renewcommand\arraystretch{1.35}
+The mapping in the eight qubit case is given below (with all sums taken modulo 2) \cite{tranter2018}:
+\begin{equation}        
         \begin{bmatrix}
                 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
                 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -232,8 +232,7 @@ For example, the mapping in the eight qubit case is \cite{tranter2018}:
                 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
                 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
                 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
-        \end{bmatrix}
-        \renewcommand\arraystretch{1.2}
+        \end{bmatrix}        
         \begin{bmatrix}
                 f_0 \\
                 f_1 \\
@@ -243,7 +242,6 @@ For example, the mapping in the eight qubit case is \cite{tranter2018}:
                 f_5 \\
                 f_6 \\
                 f_7 \\
-                f_8 \\
         \end{bmatrix}
         = \begin{bmatrix}
                 q_0 \\
@@ -254,15 +252,36 @@ For example, the mapping in the eight qubit case is \cite{tranter2018}:
                 q_5 \\
                 q_6 \\
                 q_7 \\
-                q_8 \\
         \end{bmatrix}
 \end{equation}
-The maximum number of qubits that rely upon a given mode is $\log_2(N)$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits rather than $O(N)$. 
-
+The maximum number of qubits that rely upon a given mode is $\log_2(N) + 1$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits rather than $O(N)$ as in the parity basis. \\\\
+If we define the set $L(\beta)$ such that $\alpha \in L(\beta)$ if and only if for some $i_0$, $\beta_{i_0} = 1$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = 1$ for $i< i_0$. Then, in order to find the parity of all the fermionic modes up to a given index $i$ we simply need to find the parity of all qubits in the set $L(i+1)$ \cite{bravyikitaev} (\textbf{prove this}). As the set $L(i)$ has at most $\log(i)$ members, we only need to use $O(\log(N))$ gates to compute the parity rather than $O(N)$ gates in the Jordan-Wigner basis. For example, in the eight qubit case Table~\ref{parityTable} gives the parity calculations:
+\vspace*{4pt}   %only when needed
+\begin{table}[hb]
+        \tcaption{\label{parityTable} Example of calculating parity for eight qubit case}
+\centerline{\footnotesize\smalllineskip
+\begin{tabular}{ c c c c }\\
+\hline
+Qubit & $i+1$ in binary & $L(i+1)$ & Parity of qubits in $L(i+1)$\\
+\hline
+$q_0$ & 001 & 000 & $f_0$\\
+$q_1$ & 010 & 001 & $f_0 + f_1$\\
+$q_2$ & 011 & 001, 010 & $f_0 + f_1$, $f_2$\\
+$q_3$ & 100 & 011 & $f_0 +  f_1 + f_2 + f_3$\\
+$q_4$ & 101 & 011, 100 & $f_0 +  f_1 + f_2 + f_3$, $f_4$ \\
+$q_5$ & 110 & 011, 101 & $f_0 +  f_1 + f_2 + f_3$, $f_4 + f_5$ \\
+$q_6$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$, $f_4 + f_5$, $f_6$\\
+$q_7$ & 1000 & 111 & $f_0 + f_1 + f_2 + f_3 + f_4 + f_5 + f_6 + f_7$\\
+\hline\\
+\end{tabular}}
+\end{table}
 \section{Derby-Klassen Map}\label{derby-klassen_section}
 \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}
-\pagebreak
+
+
+
+        \pagebreak
 \section{Introduction}        
 The journal of {\it Quantum Information and Computation},
 for both on-line and in-print editions,
@@ -452,7 +471,6 @@ place where the work appears.
 Use the style shown in the following examples. For journal names,
 use the standard abbreviations. Typeset references in 9 pt Times
 Roman.
-
 \begin{thebibliography}{000}
         \bibitem{feynmann} Feynman, R.P.. {\it Simulating physics with computers}. International Journal of Theoretical Physics 1982;21(6-7):467–488. \url{doi:10.1007/bf02650179}.
         \bibitem{originalJordanWigner} Pascual Jordan and Eugene Wigner. {\it  {\"U}ber das Paulische {\"A}quivalenzverbot}. Zeitschrift fur Physik, 47(9-10):631{651, September 1928.
@@ -498,6 +516,5 @@ etc.
 \langle\hat{O}\rangle=\int\psi^*(x)O(x)\psi(x)d^3x~. 
 \label{that}
 \end{equation}
-
 \end{document}
 
