@@ -12,6 +12,7 @@
 \usepackage{qcircuit}
 \usepackage{mathtools}
 \usepackage{verbatim}
+\usepackage{breqn}
 
 \textwidth=5.6truein
 \textheight=8.0truein
@@ -141,7 +142,7 @@ An important feature of the algorithm is that the guiding state $\ket{u}$ must h
 \end{itemlist}
 The portion of this algorithm for which fermionic mapping is relevant is the construction of the controlled gates $U^{2^k} = e^{-2 \pi i \hat H 2^k}$. Not only do the same metrics for the efficiency of the corresponding qubit Hamiltonian listed in Section~\ref{vqe_section} apply, now we need to consider the impact of exponentiation. As the Hamiltonian is the sum of non-commuting Pauli-strings taking the exponential is non-trivial and requires the Trotter-Suzuki approximation \cite{suzuki}. To first order this gives:
 \begin{equation}
-        e^{\frac{-it}{\hbar} \sum^m_k \hat H_k} = \left( \prod^m_k e^{\frac{-i t \hat H_k}{\hbar S}\right)^S + O(t^2/S)
+        e^{\frac{-it}{\hbar} \sum^m_k \hat H_k} = \left( \prod^m_k e^{\frac{-i t \hat H_k}{\hbar S}}\right)^S + O(t^2/S)
 \end{equation}
 In order to achieve a desired accuracy of $\epsilon$ a sufficient number of Trotter steps $S= O(t^2/ \epsilon)$ need to be used \cite{chemistryReview}. The ordering of the terms in this Trotter-Suzuki expansion greatly influences the error and therefore how many Trotter steps are required. This is important to consider as the impact the ordering has varies depending on the mapping chosen as we will discuss in Section~\ref{comparision_section}.\\\\
 Finally, it is useful to consider how each Trotter step is represented as a circuit. First, we consider that $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ applies a phase shift of $e^{i\theta}$ if the parity of the $n$ qubits is even and $e^{-i\theta}$ if the parity is odd. Secondly, it is possible to transform $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ into the exponentiation of any Pauli-string by applying $R_X$ or Hadamard gates to change the basis to the X or Y basis, respectively. Therefore, in general the exponential of a $n$-fold tensor product of Pauli matrices will require $2(n-1)$ CNOT gates centred around one phase-shift gate and enough $R_X$ and Hadamard gates to transform into and out of the necessary basis before and after \cite{seeley}. The circuit required for computing the term $e^{i(YXZY)\theta}$ is shown in Fig.~\ref{trotterStepCircuit}. \begin{figure}[htbp]
@@ -176,6 +177,7 @@ The second quantisation compresses the information of the Slater determinant by 
 \end{equation}
 where $f_i$ (the occupation number) $ =1$ when $\phi_p$ is occupied, and 0 otherwise. This is termed the Fock basis. Acting on the Fock basis with the fermionic creation and annihilation is more complex and is given by \cite{chemistryReview}:
 \begin{equation}
+        \label{secondQuant}
         \begin{align}
         a_p \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 1} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}\\
         a_p^{\dagger} \ket{f_0,\cdots, f_i, \cdots, f_{M-1}} = \delta_{f_p, 0} (-1)^{\sum_{i=0}^{p-1} f_i} \ket{f_0,\cdots, f_p \oplus 1, \cdots, f_{M-1}}
@@ -221,7 +223,20 @@ For the $i$-th qubit we store the parity of all modes $f_k$ with $k \preceq i$:
 \begin{equation}
         q_i = \sum_{k \preceq i} f_k 
 \end{equation}
-The mapping in the eight qubit case is given below (with all sums taken modulo 2) \cite{tranter2018}:
+Alternatively, the transformation matrices $\beta_i$ can be described recursively as in \cite{seeley}. The base case $\beta_1$ is a ($1 \times 1$) matrix with a single entry of 1. Then we construct $\beta_{2^n}$ by taking $I \otimes \beta_{2^n}$ and filling the bottom row of the bottom-left quadrant of this matrix with 1s:
+\begin{equation}
+        \beta_{2^{n+1}} = \left( \begin{array}{@{}c|c@{}} 
+                        \beta_{2^n}  & \begin{matrix}
+                                \mbox{\normalfont \Large \bfseries 0}\\
+                        \end{matrix} \\
+                \hline
+                \begin{matrix} \mbox{\normalfont\large\bfseries 0}\\
+                        \leftarrow 1 \rightarrow 
+                \end{matrix} &  \beta_{2^n}
+        \end{array}
+         \right)
+\end{equation}
+$\beta_i$ with $2^x < i < 2^{x+1}$ is just the $i \times i$ segment of $\beta_{2^{x+1}}$ that includes $b_0$ through $b_{i-1}$. The mapping in the eight qubit case with the transformation matrix $\beta_8$ is shown below (with all sums taken modulo 2) \cite{tranter2018}:
 \begin{equation}        
         \begin{bmatrix}
                 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -254,27 +269,104 @@ The mapping in the eight qubit case is given below (with all sums taken modulo 2
                 q_7 \\
         \end{bmatrix}
 \end{equation}
-The maximum number of qubits that rely upon a given mode is $\log_2(N) + 1$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits rather than $O(N)$ as in the parity basis. \\\\
-If we define the set $L(\beta)$ such that $\alpha \in L(\beta)$ if and only if for some $i_0$, $\beta_{i_0} = 1$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = 1$ for $i< i_0$. Then, in order to find the parity of all the fermionic modes up to a given index $i$ we simply need to find the parity of all qubits in the set $L(i+1)$ \cite{bravyikitaev} (\textbf{prove this}). As the set $L(i)$ has at most $\log(i)$ members, we only need to use $O(\log(N))$ gates to compute the parity rather than $O(N)$ gates in the Jordan-Wigner basis. For example, in the eight qubit case Table~\ref{parityTable} gives the parity calculations:
+
+\vspace*{12pt}
+\noindent
+{\bf Lemma~1 \cite{bravyikitaev}:} Define the set $L(\beta)$ such that $\alpha \in L(\beta)$ if and only if for some $i_0$, $\beta_{i_0} = 1$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = 1$ for $i< i_0$, then:
+\begin{equation}
+        \sum_{j \in L(i)} q_j = \sum_{j < i} f_j
+\end{equation}
+\vspace*{12pt}
+
+\noindent
+The following proof is of my own invention:
+\begin{equation}
+L(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i\text{ s.t. } \alpha_{i_0} = 1\}
+\end{equation}
+Define $A(\beta)$ as the set of $j$ such that $j \preceq \beta$:
+\begin{equation}
+        A(\beta) = \{ \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_0} \gamma_{j_0 -1} \ldots \gamma_0 : \forall j_0\text{ s.t. } \beta_i = 1\text{ for }i<j_0\text{ and all }\gamma  \}
+\end{equation}
+Let $j_{max}$ be the maximum $j$ such that $\beta_i = 1$ for all $i<j$.
+\begin{multline}
+        A(\beta) = \{ \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_{max}} \gamma^1_{j_{max} -1} \ldots \gamma^1_{0},\\  \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_{max}-1} \gamma^2_{j_{max} -2} \ldots \gamma^2_{0}, \cdots,\beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{0}: \text{ for all } \bm \gamma \}
+\end{multline}
+As $\bm \gamma$ has no restrictions all the later sets are actually included within the first so:
+\begin{equation}
+        A(\beta) = \{ \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_{max}} \gamma_{j_{max} -1} \ldots \gamma_{0}: \text{ for all }  \gamma \}
+\end{equation}
+
+For $\beta \in L(\alpha)$, we have $j_{max} = i_0$ as $\beta_i = 1$ for $i<i_0$ and $\beta_{i_0} = 0$, therefore:
+\begin{equation}
+        A(L(\alpha)) = \{\{  \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 \gamma_{i_0 -1} \ldots \gamma_{0} \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \text{ and all } \gamma\}
+\end{equation}
+\begin{equation}
+        \label{AL}
+A(L(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 1 \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \}
+\end{equation}
+As $A(\beta)$ for $\beta = 11\ldots 1$ contains every integer $j \leq \beta$, Eq.~\ref{AL} is an algorithm for generating the set of all the integers less than $\alpha$. It achieves this by working from right to left reducing every $1$ to $0$ and then iterating over all the possible suffixes whilst keeping the unaltered prefix. It never attains $\alpha$ as the first altered bit in every element is reduced from $1$ to $0$, though it does attain $\alpha -1$ in the case of the rightmost bit being switched to zero and suffixed by $11\ldots 1$. Therefore,  
+\begin{equation}
+        \sum_{j \in L(i)} q_j = \sum_{k \in L(i)} \sum_{j \preceq k} f_j = \sum_{S \in A(L(i))} \sum_{j \in S} f_j = \sum_{j<i} f_j
+\end{equation}
+ $\square$\,.
+ 
+\vspace*{12pt}
+\noindent
+{\bf Lemma~2 \cite{bravyikitaev}:} Define the set $K(\beta)$ such that $\alpha \in K(\beta)$ if and only if for some $i_0$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i\neq i_0$ and $\beta_i = 1$ for $i< i_0$, then:
+\begin{equation}
+        q_i - \sum_{j \in K(i)} q_j = \sum_{j \prec i} f_j
+\end{equation}
+\vspace*{12pt}
+
+\noindent
+The following proof is of my own invention:
+\begin{equation}
+        K(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
+\end{equation}
+For $\beta \in K(\alpha)$, we have $j_{max} = i_0$ as $\beta_i = 1$ for $i<i_0$ and $\beta_{i_0} = 0$, therefore:
+\begin{equation}
+        A(K(\alpha)) = \{\{  \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 \gamma_{i_0 -1} \ldots \gamma_{0} \} \forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\text{ and all } \gamma\}
+\end{equation}
+\begin{equation}
+        \label{AK}
+A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 1 \}\forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
+\end{equation}
+Let $i_{max}$ be the maximum $i$ such that $\alpha_j =1$ for all $j < i$:
+\begin{multline}
+        A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}0 1 \ldots 1 \},\\ \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}00 1 \ldots 1 \}, \cdots, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 10 \} \} \end{multline}
+        \begin{equation}
+                A(K(\alpha) = \{ \{ j: j \preceq \alpha^0 \}, \{ j: j \preceq \alpha^1 \}, \cdots, \{ j: j \preceq \alpha^{i_{max}} \} \}
+        \end{equation}
+        As $\alpha^i$ for $i\neq 0$ are all the integers one partial order below $\alpha$:
+        \begin{equation}\bigcup_{i>0} \{j: j \preceq \alpha^i\} = \{j: j \prec \alpha\}\end{equation}
+
+To define the Bravyi-Kitaev operators we need to consider a more detailed treatment of how annihilating and creating fermionic modes affects the mapping. There are three different sets of qubits impacted by updating the fermionic mode $f_i$:
+\begin{itemlist}
+\item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 is equivalent to $L(i)$. This needs to be calculated so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than $O(N)$ gates in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
 \vspace*{4pt}   %only when needed
 \begin{table}[hb]
         \tcaption{\label{parityTable} Example of calculating parity for eight qubit case}
 \centerline{\footnotesize\smalllineskip
-\begin{tabular}{ c c c c }\\
+\begin{tabular}{ c c l l }\\
 \hline
-Qubit & $i+1$ in binary & $L(i+1)$ & Parity of qubits in $L(i+1)$\\
+Qubit & $i$ in binary & $L(i)$ & Parity of qubits in $L(i)$\\
 \hline
-$q_0$ & 001 & 000 & $f_0$\\
-$q_1$ & 010 & 001 & $f_0 + f_1$\\
-$q_2$ & 011 & 001, 010 & $f_0 + f_1$, $f_2$\\
-$q_3$ & 100 & 011 & $f_0 +  f_1 + f_2 + f_3$\\
-$q_4$ & 101 & 011, 100 & $f_0 +  f_1 + f_2 + f_3$, $f_4$ \\
-$q_5$ & 110 & 011, 101 & $f_0 +  f_1 + f_2 + f_3$, $f_4 + f_5$ \\
-$q_6$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$, $f_4 + f_5$, $f_6$\\
-$q_7$ & 1000 & 111 & $f_0 + f_1 + f_2 + f_3 + f_4 + f_5 + f_6 + f_7$\\
+$q_0$ & 000 & & \\
+$q_1$ & 001 & 000 & $f_0$\\
+$q_2$ & 010 & 001 & $f_0 + f_1$\\
+$q_3$ & 011 & 001, 010 & $f_0 + f_1$ \,,\, $f_2$\\
+$q_4$ & 100 & 011 & $f_0 +  f_1 + f_2 + f_3$\\
+$q_5$ & 101 & 011, 100 & $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4$ \\
+$q_6$ & 110 & 011, 101 & $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \\
+$q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, $f_6$\\
 \hline\\
 \end{tabular}}
 \end{table}
+
+\item \textbf{Update set ($U_i$)}: The set of qubits that store the parity of $f_i$ in their partial sum, and therefore need to be flipped when this mode is created or annihilated. This can easily be read off as the columns of $\beta_n$, or simply all $j$ such that $i \prec j$. As every strict partial ordering reduces at least one binary digit from $1$ to $0$, the maximum number of composed strict partial orderings possible on index $N$ is $\log_2(N)$. So, the maximum number of qubits that rely upon a given mode is $\log_2(N) + 1$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits (using $O(\log(N))$ local $X$ gates) rather than $O(N)$ as in the parity basis (\textbf{need to elaborate upon the parity basis earlier}). \\ 
+\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). As $\beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. The parity of these qubits needs to be computed so we need to apply local $Z$ gates. \textbf{Do same for flip set as for parity set + prove Flip is subset of parity}. 
+
+\end{itemlist}
 \section{Derby-Klassen Map}\label{derby-klassen_section}
 \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}

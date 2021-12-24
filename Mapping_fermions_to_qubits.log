@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 DEC 2021 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  24 DEC 2021 09:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -285,90 +285,197 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_shortintertext_sep=\dimen259
 \xmathstrut@box=\box57
 \xmathstrut@dim=\dimen260
-) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (c:/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks30
+\verbatim@line=\toks31
+\verbatim@in@stream=\read4
+) (c:/texlive/2021/texmf-dist/tex/latex/breqn/breqn.sty (c:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-08-27 L3 programming layer (loader) 
+ (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box58
+))
+Package: breqn 2020/09/24 v0.98k Breaking equations
+ (c:/texlive/2021/texmf-dist/tex/latex/breqn/flexisym.sty
+Package: flexisym 2020/09/24 v0.98k Make math characters macros
+LaTeX Info: Redefining \textprime on input line 299.
+LaTeX Info: Redefining \not on input line 357.
+ (c:/texlive/2021/texmf-dist/tex/latex/breqn/cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 324.
+LaTeX Info: Redefining \surd on input line 326.
+LaTeX Info: Redefining \angle on input line 334.
+LaTeX Info: Redefining \neq on input line 335.
+LaTeX Info: Redefining \mapsto on input line 336.
+LaTeX Info: Redefining \cong on input line 337.
+LaTeX Info: Redefining \notin on input line 340.
+LaTeX Info: Redefining \rightleftharpoons on input line 341.
+LaTeX Info: Redefining \doteq on input line 342.
+LaTeX Info: Redefining \hookrightarrow on input line 343.
+LaTeX Info: Redefining \hookleftarrow on input line 344.
+LaTeX Info: Redefining \bowtie on input line 345.
+LaTeX Info: Redefining \models on input line 346.
+LaTeX Info: Redefining \Longrightarrow on input line 347.
+LaTeX Info: Redefining \longrightarrow on input line 348.
+LaTeX Info: Redefining \Longleftarrow on input line 349.
+LaTeX Info: Redefining \longleftarrow on input line 350.
+LaTeX Info: Redefining \longmapsto on input line 351.
+LaTeX Info: Redefining \longleftrightarrow on input line 352.
+LaTeX Info: Redefining \Longleftrightarrow on input line 353.
+LaTeX Info: Redefining \cdots on input line 357.
+LaTeX Info: Redefining \vdots on input line 360.
+LaTeX Info: Redefining \ddots on input line 365.
+) (c:/texlive/2021/texmf-dist/tex/latex/breqn/mathstyle.sty
+Package: mathstyle 2020/09/24 v0.98k Tracking mathstyle implicitly
+LaTeX Info: Redefining \displaystyle on input line 95.
+LaTeX Info: Redefining \textstyle on input line 97.
+LaTeX Info: Redefining \scriptstyle on input line 99.
+LaTeX Info: Redefining \scriptscriptstyle on input line 101.
+LaTeX Info: Redefining \genfrac on input line 149.
+))
+\inf@bad=\count294
+\maxint=\count295
+\listwidth=\dimen261
+\eqnumsep=\dimen262
+\eqmargin=\dimen263
+\eqlinespacing=\skip56
+\eqlineskip=\skip57
+\eqlineskiplimit=\dimen264
+\eqbinoffset=\muskip17
+\eqdelimoffset=\muskip18
+\eqindentstep=\dimen265
+\eqstyle=\toks32
+\eqbreakdepth=\count296
+\eqinterlinepenalty=\count297
+\intereqpenalty=\count298
+\intereqskip=\skip58
+\prerelpenalty=\count299
+\prebinoppenalty=\count300
+\Dmedmuskip=\muskip19
+\Dthickmuskip=\muskip20
+\eqleftskip=\skip59
+\eqrightskip=\skip60
+\eq@vspan=\skip61
+\eq@binoffset=\muskip21
+\EQ@box=\box59
+\EQ@copy=\box60
+\EQ@numbox=\box61
+\eq@wdNum=\dimen266
+\GRP@numbox=\box62
+\grp@wdNum=\dimen267
+\eq@lines=\count301
+\eq@curline=\count302
+\eq@badness=\count303
+\EQ@vims=\count304
+\eq@dp=\dimen268
+\eq@wdL=\dimen269
+\eq@wdT=\dimen270
+\eq@wdMin=\dimen271
+\grp@wdL=\dimen272
+\grp@wdR=\dimen273
+\grp@wdT=\dimen274
+\eq@wdRmax=\dimen275
+\eq@firstht=\dimen276
+\eq@wdCond=\dimen277
+\eq@indentstep=\dimen278
+\eq@linewidth=\dimen279
+\grp@linewidth=\dimen280
+\eq@hshift=\dimen281
+\eq@given@sidespace=\dimen282
+\mathindent=\dimen283
+\eq@final@linecount=\count305
+\eq@wdR=\dimen284
+\EQ@continue=\toks33
+\lr@level=\count306
+\GRP@queue=\toks34
+\GRP@box=\box63
+\GRP@wholebox=\box64
+\darraycolsep=\skip62
+\cur@row=\count307
+\cur@col=\count308
+\conditionsep=\skip63
 ) (./Mapping_fermions_to_qubits.aux)
 \openout1 = `Mapping_fermions_to_qubits.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen261
-\scratchbox=\box59
-\nofMPsegments=\count295
-\nofMParguments=\count296
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen262
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count309
+\scratchdimen=\dimen285
+\scratchbox=\box65
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen286
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks36
 ) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.39998pt on input line 22.
+Package xypdf Info: Line width: 0.39998pt on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 98--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
 
  []
 
 [2]
-./Mapping_fermions_to_qubits.tex:104: Undefined control sequence.
-l.104 ...tors protect against barren plateau} \url
+./Mapping_fermions_to_qubits.tex:106: Undefined control sequence.
+l.106 ...tors protect against barren plateau} \url
                                                   {doi:10.1038/s41467-021-21...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -377,161 +484,148 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 <xymatrix 13x9 3274>
-Underfull \hbox (badness 10000) in paragraph at lines 108--122
+Underfull \hbox (badness 10000) in paragraph at lines 110--124
 
  []
 
 
 Underfull \vbox (badness 1484) has occurred while \output is active []
 
- [3]
-./Mapping_fermions_to_qubits.tex:143: Missing } inserted.
-<inserted text> 
-                }
-l.143 ..._k e^{\frac{-i t \hat H_k}{\hbar S}\right
-                                                  )^S + O(t^2/S)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<xymatrix 11x4 2169>
-Underfull \hbox (badness 10000) in paragraph at lines 144--156
+ [3] <xymatrix 11x4 2169>
+Underfull \hbox (badness 10000) in paragraph at lines 146--158
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 
  []
 
 
-./Mapping_fermions_to_qubits.tex:181: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:184: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \end{align}
+l.184 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
 
  []
 
 [5]
 
-./Mapping_fermions_to_qubits.tex:191: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:194: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 \end{align}
+l.194 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Mapping_fermions_to_qubits.tex:198: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:201: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.198         \end{align}
+l.201         \end{align}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 259--278
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
-
+[8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7] [8]
+ [9] [10]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 362.
+(amsmath)                 on input line 457.
 
-./Mapping_fermions_to_qubits.tex:384: Missing $ inserted.
+./Mapping_fermions_to_qubits.tex:479: Missing $ inserted.
 <inserted text> 
                 $
-l.384 {\bf Proof:} Proofs should end with \square
+l.479 {\bf Proof:} Proofs should end with \square
                                                  \,.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Mapping_fermions_to_qubits.tex:385: Missing $ inserted.
+./Mapping_fermions_to_qubits.tex:480: Missing $ inserted.
 <inserted text> 
                 $
-l.385 
+l.480 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: File `fig1.eps' not found on input line 394.
+LaTeX Warning: File `fig1.eps' not found on input line 489.
 
 Package epstopdf Info: Source file: <fig1.eps>
 (epstopdf)             Output file: <fig1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=fig1-eps-converted-to.pdf fig1.eps>
-(epstopdf)             \includegraphics on input line 394.
+(epstopdf)             \includegraphics on input line 489.
 Package epstopdf Info: Output file is already uptodate.
 
-./Mapping_fermions_to_qubits.tex:394: Package pdftex.def Error: File `fig1-eps-converted-to.pdf' not found: using draft setting.
+./Mapping_fermions_to_qubits.tex:489: Package pdftex.def Error: File `fig1-eps-converted-to.pdf' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.394 ...line{\epsfig{file=fig1.eps, width=8.2cm}}
+l.489 ...line{\epsfig{file=fig1.eps, width=8.2cm}}
                                                    %100 percent
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[9]
+[11]
 
-./Mapping_fermions_to_qubits.tex:472: Package calc Error: `0' invalid at this point.
+./Mapping_fermions_to_qubits.tex:566: Package calc Error: `0' invalid at this point.
 
 See the calc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 \begin{thebibliography}{000}
+l.566 \begin{thebibliography}{000}
                                   
 I expected to see one of: + - * / )
 
-[10]
-./Mapping_fermions_to_qubits.tex:472: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:566: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.472 \begin{thebibliography}{000}
+l.566 \begin{thebibliography}{000}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:472: Illegal unit of measure (pt inserted).
+./Mapping_fermions_to_qubits.tex:566: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.472 \begin{thebibliography}{000}
+l.566 \begin{thebibliography}{000}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -540,8 +634,8 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:473: Undefined control sequence.
-l.473 ...ical Physics 1982;21(6-7):467–488. \url
+./Mapping_fermions_to_qubits.tex:567: Undefined control sequence.
+l.567 ...ical Physics 1982;21(6-7):467–488. \url
                                                   {doi:10.1007/bf02650179}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -549,8 +643,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:475: Undefined control sequence.
-l.475 ...0.12792 [Quant-Ph], 25 October 2021. \url
+[12]
+./Mapping_fermions_to_qubits.tex:569: Undefined control sequence.
+l.569 ...0.12792 [Quant-Ph], 25 October 2021. \url
                                                   {http://arxiv.org/abs/2110...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -558,8 +653,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
-l.477 ...1.05176 [Quant-Ph], 9 November 2021. \url
+./Mapping_fermions_to_qubits.tex:571: Undefined control sequence.
+l.571 ...1.05176 [Quant-Ph], 9 November 2021. \url
                                                   {http://arxiv.org/abs/2111...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -567,8 +662,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:478: Undefined control sequence.
-l.478 ...s 92, no. 1 (30 March 2020): 015003. \url
+./Mapping_fermions_to_qubits.tex:572: Undefined control sequence.
+l.572 ...s 92, no. 1 (30 March 2020): 015003. \url
                                                   {https://doi.org/10.1103/R...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -576,8 +671,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:480: Undefined control sequence.
-l.480 ..., no. 22 (14 December 2012): 224109. \url
+./Mapping_fermions_to_qubits.tex:574: Undefined control sequence.
+l.574 ..., no. 22 (14 December 2012): 224109. \url
                                                   {https://doi.org/10.1063/1...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -585,8 +680,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:483: Undefined control sequence.
-l.483 ...ics 51, no. 2 (June 1976): 183–90. \url
+./Mapping_fermions_to_qubits.tex:577: Undefined control sequence.
+l.577 ...ics 51, no. 2 (June 1976): 183–90. \url
                                                   {https://doi.org/10.1007/B...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -594,8 +689,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:484: Undefined control sequence.
-l.484 ...ics 298, no. 1 (May 2002): 210–26. \url
+./Mapping_fermions_to_qubits.tex:578: Undefined control sequence.
+l.578 ...ics 298, no. 1 (May 2002): 210–26. \url
                                                   {https://doi.org/10.1006/a...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -603,8 +698,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:485: Undefined control sequence.
-l.485 ...o. 11 (13 November 2018): 5617–30. \url
+./Mapping_fermions_to_qubits.tex:579: Undefined control sequence.
+l.579 ...o. 11 (13 November 2018): 5617–30. \url
                                                   {https://doi.org/10.1021/a...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -612,10 +707,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:503: Missing } inserted.
+./Mapping_fermions_to_qubits.tex:597: Missing } inserted.
 <inserted text> 
                 }
-l.503 \end{thebibliography}
+l.597 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -624,50 +719,50 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Mapping_fermions_to_qubits.tex:503: LaTeX Error: \begin{list} on input line 472 ended by \end{thebibliography}.
+./Mapping_fermions_to_qubits.tex:597: LaTeX Error: \begin{list} on input line 566 ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.503 \end{thebibliography}
+l.597 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Mapping_fermions_to_qubits.tex:518: LaTeX Error: \begin{thebibliography} on input line 472 ended by \end{document}.
+./Mapping_fermions_to_qubits.tex:611: LaTeX Error: \begin{thebibliography} on input line 566 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.518 \end{document}
+l.611 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[11] (./Mapping_fermions_to_qubits.aux) )
+[13] (./Mapping_fermions_to_qubits.aux) )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 472 (\begingroup)
+### semi simple group (level 1) entered at line 566 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6089 strings out of 478599
- 78014 string characters out of 5858101
- 520158 words of memory out of 5000000
- 23850 multiletter control sequences out of 15000+600000
- 418434 words of font info for 83 fonts, out of 8000000 for 9000
+ 6859 strings out of 478599
+ 88194 string characters out of 5858101
+ 534416 words of memory out of 5000000
+ 24601 multiletter control sequences out of 15000+600000
+ 419644 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,26n,83p,1443b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (11 pages, 417032 bytes).
+ 77i,26n,89p,1443b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on Mapping_fermions_to_qubits.pdf (13 pages, 438690 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 214 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
