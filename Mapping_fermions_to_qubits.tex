@@ -13,6 +13,8 @@
 \usepackage{mathtools}
 \usepackage{verbatim}
 \usepackage{breqn}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 
 \textwidth=5.6truein
 \textheight=8.0truein
@@ -203,6 +205,7 @@ where
 It is clear to see that these operators act in exactly the same way on a qubit spin basis that the fermionic creation and annihilation operators act upon the Fock basis.
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
 The Jordan-Wigner transformation uses O(1) qubits to represent each fermionic mode, however it requires O(N) gates to simulate one fermionic operation. This is because it stores the occupation number locally and the parity non-locally. An alternative scheme called the parity basis stores the parity locally and the occupation number non-locally, however this still requires O(N) gates to simulate one fermionic operation \cite{seeley}. The Bravyi-Kiteav is a halfway house which partially stores both the occupation number and parity non-locally.\\\\
+\textbf{Also talk about Fenwick trees \cite{operatorLocality}}
 The following explanation of the mapping is adapted from \cite{bravyikitaev}. First, we must define a partial order $\preceq$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$, then $\alpha \preceq \beta$. For example:
 $$
 \begin{rcases}
@@ -335,14 +338,24 @@ Let $i_{max}$ be the maximum $i$ such that $\alpha_j =1$ for all $j < i$:
 \begin{multline}
         A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}0 1 \ldots 1 \},\\ \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}00 1 \ldots 1 \}, \cdots, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 10 \} \} \end{multline}
         \begin{equation}
-                A(K(\alpha) = \{ \{ j: j \preceq \alpha^0 \}, \{ j: j \preceq \alpha^1 \}, \cdots, \{ j: j \preceq \alpha^{i_{max}} \} \}
+                A(K(\alpha)) = \{ \{ j: j \preceq \alpha^0 \}, \{ j: j \preceq \alpha^1 \}, \cdots, \{ j: j \preceq \alpha^{i_{max}} \} \}
         \end{equation}
         As $\alpha^i$ for $i\neq 0$ are all the integers one partial order below $\alpha$:
         \begin{equation}\bigcup_{i>0} \{j: j \preceq \alpha^i\} = \{j: j \prec \alpha\}\end{equation}
-
+        As these sets are disjoint, $A(K(i))$ is equivalent to the following after applying the summation:
+        \begin{equation}
+                A(K(i)) = \{ \{ j: j \preceq i \}, \{j: j \prec i \}\}
+        \end{equation}
+So,
+\begin{equation}
+        q_i - \sum_{j \in K(i)} q_j = \sum_{j \preceq i} f_j - \sum_{S \in A(K(i))} \sum_{j \in S} f_j = \sum_{j \preceq i }f_j - \left( \sum_{j \preceq i} + \sum_{j \prec i}\right) f_j = \sum_{j \prec i} f_j
+        \end{equation}
+         $\square$\,.\\\\
+         $K(i)$ is clearly a subset of $L(i)$ as $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = \beta_i = 1$ for $i< i_0$, satisfies the requirements that $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i > i_0$ and $\alpha_i =1$ for $i < i_0$ regardless of whether $\beta_{i_0} =1$ or not.
+         \pagebreak \\
 To define the Bravyi-Kitaev operators we need to consider a more detailed treatment of how annihilating and creating fermionic modes affects the mapping. There are three different sets of qubits impacted by updating the fermionic mode $f_i$:
 \begin{itemlist}
-\item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 is equivalent to $L(i)$. This needs to be calculated so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than $O(N)$ gates in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
+\item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 is equivalent to $L(i)$. This needs to be calculated so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. (\textbf{maybe include the transformation matrix forumlation}). The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than $O(N)$ gates in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
 \vspace*{4pt}   %only when needed
 \begin{table}[hb]
         \tcaption{\label{parityTable} Example of calculating parity for eight qubit case}
@@ -364,11 +377,157 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
 \end{table}
 
 \item \textbf{Update set ($U_i$)}: The set of qubits that store the parity of $f_i$ in their partial sum, and therefore need to be flipped when this mode is created or annihilated. This can easily be read off as the columns of $\beta_n$, or simply all $j$ such that $i \prec j$. As every strict partial ordering reduces at least one binary digit from $1$ to $0$, the maximum number of composed strict partial orderings possible on index $N$ is $\log_2(N)$. So, the maximum number of qubits that rely upon a given mode is $\log_2(N) + 1$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits (using $O(\log(N))$ local $X$ gates) rather than $O(N)$ as in the parity basis (\textbf{need to elaborate upon the parity basis earlier}). \\ 
-\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). As $\beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. The parity of these qubits needs to be computed so we need to apply local $Z$ gates. \textbf{Do same for flip set as for parity set + prove Flip is subset of parity}. 
-
+\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). From Lemma~2, it is clear this is equivalent to $K(i)$, however it is also possible to find a formulation in terms of transformation matrices. As $\sum_j \beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. To compute the flip parity we need to apply $O(\log(N))$ $Z$ gates as $K(i)$ has at most $\log(i)$ ($< \log(N)$) elements. As $K(i)$ is a subset of $L(i)$, the Flip set is a subset of the Parity set.\\\\
+        Now we can define the Bravyi-Kiteav creation and annihilation operators, in a similar fashion to \cite{seeley}. We will use the notation $U_S$ to mean $U$ applied to every qubit in set $S$.\\\\
+        Using the flip set we can alter our definition of $\sigma^-_i$ and $\sigma^+_i$ from Jordan-Wigner to reflect the fact that when the flip set has parity one we act with the inverse:
+        \begin{equation}
+                \begin{align}
+                        \sigma^-_i &= \frac{1}{2}(X_i Z_{K(i)} + i Y_i) \\
+                        \sigma^+_i &= \frac{1}{2}(X_i Z_{K(i)} - i Y_i) \\
+                \end{align}
+        \end{equation}
+        As this will introduce an overall sign equal to the parity of $K(i)$ to the operators  $\sigma^-_i$ and $\sigma^+_i$, we only need to calculate the parity of the remaining qubits in the parity set ($R_i$):
+        \begin{equation}
+                \begin{align}
+                a_i \rightarrow X_{U(i)}  \sigma^-_i  Z_{R_i} = \frac{1}{2}\left( \bigotimes_{j \succ i} X_j \otimes X_i \otimes \bigotimes_{j \in L(i)} Z_j + i \bigotimes_{j \succ i} X_j \otimes Y_i\otimes \bigotimes_{j \in R_i} Z_j \right) \\
+                a^{\dagger}_i \rightarrow X_{U(i)}  \sigma^+_iZ_{R_i} = \frac{1}{2}\left( \bigotimes_{j \succ i} X_j \otimes X_i \otimes \bigotimes_{j \in L(i)} Z_j - i \bigotimes_{j \succ i} X_j \otimes Y_i\otimes \bigotimes_{j \in R_i} Z_j \right) 
+                \end{align}
+        \end{equation}
+        Therefore, every fermionic operation in the Bravyi-Kiteav mapping only requires $O(\log(N))$ gates.
 \end{itemlist}
+\section{Superfast encoding}
+Often we wish to simulate a Hamiltonian on a system of $m$ Fermi modes with only a few qubit interactions of weight $d << m$. It is possible to encode these interactions with Pauli-weight $O(d)$ using $O(md)$ qubits. 
 \section{Derby-Klassen Map}\label{derby-klassen_section}
-\section{Fermionic Enumeration}\label{fermionic-enumeration_section}
+As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. One strategy used to find 'local' mappings is searching for sets of low weight Pauli-strings for the fermionic edge ($E_{jk}$) and vertex ($V_j$) operators. These are defined below in terms of the Majorana operators $\gamma_j$:
+\begin{equation}
+\gamma_j = a_j + a^{\dagger}_j, \> \bar{\gamma_j} = \frac{a_j - a_j^{\dagger}}{i}
+\end{equation}
+\begin{equation}
+        E_{jk} = - i \gamma_j \gamma_k, \> V_j = - i \gamma_j \bar{\gamma_j}
+\end{equation}
+These operators can be used to express all even fermionic operators \cite{superfast} (\textbf{proove this}):
+\begin{equation}
+        \begin{align}
+                a_j^{\dagger} a_k + a_k^{\dagger} a_j &=& (\gamma_j - i \bar{\gamma_j}) (\gamma_k + i \bar{\gamma_k})  + (\gamma_k - i \bar{\gamma_k}) (\gamma_j + i \bar{\gamma_j}) &=& -\frac{i}{2}& E_{jk} (V_j - V_k)\\
+                a_j^{\dagger} a_j &=& (\gamma_j - i \bar{\gamma_j}) (\gamma_j + i \bar{\gamma_j}) &=&  \frac{1}{2}& (I - V_j)\\
+\end{align}
+\end{equation}
+So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.~\ref{edgecomm}) \cite{derbyklassen} and the loop condition (Eq.~\ref{loopcond}) that define these edges and vertices then we have a mapping from even fermionic operators to qubits operators. 
+\begin{equation}
+        \label{edgecomm}
+        \begin{align}
+                \{ E_{jk}, V_j\} = 0, \{ E_{ij}, E_{jk} \} &= 0\\
+                [V_i, V_j] =0, [E_{ij}, V_m] = 0, [E_{ij}, E_{mn}] &= 0 \>\forall i \neq j \neq m \neq n
+\end{align}
+\end{equation}
+\begin{equation}
+        \label{loopcond}
+        i^{|p| -1} \prod_{i=1}^{|p| -1} E_{p_i p_{i+1}} = 1
+        \end{equation}
+        for a cyclic sequence of sites $p = \{p_1, p_2,\ldots\}$.\\\\
+        In a 'local' mapping or superfast encoding we only need to find representations for the few interactions that exist in a particular Hamiltonian rather than all the possible operators that could be applied to a general system. We will consider the case of the Derby-Klassen mapping which applies to square lattices and has lower Pauli-weights and uses fewer qubits per mode than all other existing local mappings \cite{derbyklassen}. \\\\
+        \subsubsection{Definition of mapping}
+        This definition is largely taken from \cite{derbyklassen}. For a square lattice of fermionic modes, we map every vertex to a "vertex" qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional "face" qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counterclockwise around white spaces alternating every row (Fig.~\ref{squareLattice}). Now map the edge operators as below:
+        \begin{equation}
+                E_{ij} = \begin{cases}
+                        X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented downwards}\\
+                        -X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented upwards}\\
+                        X_i Y_j Y_{f(i,j)} & (i,j) \text{ horizontal}\\
+                \end{cases}
+        \end{equation}
+\begin{figure}[htbp]
+\centerline{
+        \begin{tikzpicture}
+                \filldraw [black] (-2,2) circle (2pt);
+                \filldraw [black] (-1,2) circle (2pt);
+                \filldraw [black] (0,2) circle (2pt);
+                \filldraw [black] (1,2) circle (2pt);
+                \filldraw [black] (2,2) circle (2pt);
+                \filldraw [black] (-2,1) circle (2pt);
+                \filldraw [black] (-1,1) circle (2pt);
+                \filldraw [black] (0,1) circle (2pt);
+                \filldraw [black] (1,1) circle (2pt);
+                \filldraw [black] (2,1) circle (2pt);
+                \filldraw [black] (-2,0) circle (2pt);
+                \filldraw [black] (-1,0) circle (2pt);
+                \filldraw [black] (0,0) circle (2pt);
+                \filldraw [black] (1,0) circle (2pt);
+                \filldraw [black] (2,0) circle (2pt);
+                \filldraw [black] (-2,-1) circle (2pt);
+                \filldraw [black] (-1,-1) circle (2pt);
+                \filldraw [black] (0,-1) circle (2pt);
+                \filldraw [black] (1,-1) circle (2pt);
+                \filldraw [black] (2,-1) circle (2pt);
+                \filldraw [black] (-2,-2) circle (2pt);
+                \filldraw [black] (-1,-2) circle (2pt);
+                \filldraw [black] (0,-2) circle (2pt);
+                \filldraw [black] (1,-2) circle (2pt);
+                \filldraw [black] (2,-2) circle (2pt);
+                \draw[fill=gray, opacity=0.5] (-2,2) rectangle (-1,1);
+                \draw[fill=gray, opacity=0.5] (0,2) rectangle (1,1);
+                \draw[fill=gray, opacity=0.5] (-1,1) rectangle (0,0);
+                \draw[fill=gray, opacity=0.5] (1,1) rectangle (2,0);
+                \draw[fill=gray, opacity=0.5] (-2,0) rectangle (-1,-1);
+                \draw[fill=gray, opacity=0.5] (0,0) rectangle (1,-1);
+                \draw[fill=gray, opacity=0.5] (-1,-1) rectangle (0,-2);
+                \draw[fill=gray, opacity=0.5] (1,-1) rectangle (2,-2);
+                \filldraw [black] (-1.5, 1.5) circle (2pt);
+                \filldraw [black] (0.5, 1.5) circle (2pt);
+                \filldraw [black] (-0.5, 0.5) circle (2pt);
+                \filldraw [black] (1.5, 0.5) circle (2pt);
+                \filldraw [black] (-1.5, -0.5) circle (2pt);
+                \filldraw [black] (0.5, -0.5) circle (2pt);
+                \filldraw [black] (-0.5, -1.5) circle (2pt);
+                \filldraw [black] (1.5, -1.5) circle (2pt);
+                \draw [ultra thick, latex-, gray](-1.85,2) -- (-1.15,2) (2pt);
+                \draw [ultra thick, latex-, gray](-0.85,2) -- (-0.15,2) (2pt);
+                \draw [ultra thick, latex-, gray](0.15,2) -- (0.85,2) (2pt);
+                \draw [ultra thick, latex-, gray](1.15,2) -- (1.85,2) (2pt);
+                \draw [ultra thick, -latex, gray](-1.85,1) -- (-1.15,1) (2pt);
+                \draw [ultra thick, -latex, gray](-0.85,1) -- (-0.15,1) (2pt);
+                \draw [ultra thick, -latex, gray](0.15,1) -- (0.85,1) (2pt);
+               \draw [ultra thick, -latex, gray](1.15,1) -- (1.85,1) (2pt);
+               \draw [ultra thick, latex-, gray](-1.85,0) -- (-1.15,0) (2pt);
+                \draw [ultra thick, latex-, gray](-0.85,0) -- (-0.15,0) (2pt);
+                \draw [ultra thick, latex-, gray](0.15,0) -- (0.85,0) (2pt);
+                \draw [ultra thick, latex-, gray](1.15,0) -- (1.85,0) (2pt);
+                \draw [ultra thick, -latex, gray](-1.85,-1) -- (-1.15,-1) (2pt);
+                \draw [ultra thick, -latex, gray](-0.85,-1) -- (-0.15,-1) (2pt);
+                \draw [ultra thick, -latex, gray](0.15,-1) -- (0.85,-1) (2pt);
+               \draw [ultra thick, -latex, gray](1.15,-1) -- (1.85,-1) (2pt);
+               \draw [ultra thick, latex-, gray](-1.85,-2) -- (-1.15,-2) (2pt);
+                \draw [ultra thick, latex-, gray](-0.85,-2) -- (-0.15,-2) (2pt);
+                \draw [ultra thick, latex-, gray](0.15,-2) -- (0.85,-2) (2pt);
+                \draw [ultra thick, latex-, gray](1.15,-2) -- (1.85,-2) (2pt);
+
+                \draw [ultra thick, -latex, gray](2,-1.85) -- (2,-1.15) (2pt);
+                \draw [ultra thick, -latex, gray](2,-0.85) -- (2,-0.15) (2pt);
+                \draw [ultra thick, -latex, gray](2,0.15) -- (2,0.85) (2pt);
+                \draw [ultra thick, -latex, gray](2,1.15) -- (2,1.85) (2pt);
+                \draw [ultra thick, latex-, gray](1,-1.85) -- (1,-1.15) (2pt);
+                \draw [ultra thick, latex-, gray](1,-0.85) -- (1,-0.15) (2pt);
+                \draw [ultra thick, latex-, gray](1,0.15) -- (1,0.85) (2pt);
+               \draw [ultra thick, latex-, gray](1,1.15) -- (1,1.85) (2pt);
+               \draw [ultra thick, -latex, gray](0,-1.85) -- (0,-1.15) (2pt);
+                \draw [ultra thick, -latex, gray](0,-0.85) -- (0,-0.15) (2pt);
+                \draw [ultra thick, -latex, gray](0,0.15) -- (0,0.85) (2pt);
+                \draw [ultra thick, -latex, gray](0,1.15) -- (0,1.85) (2pt);
+                \draw [ultra thick, latex-, gray](-1,-1.85) -- (-1,-1.15) (2pt);
+                \draw [ultra thick, latex-, gray](-1,-0.85) -- (-1,-0.15) (2pt);
+                \draw [ultra thick, latex-, gray](-1,0.15) -- (-1,0.85) (2pt);
+               \draw [ultra thick, latex-, gray](-1,1.15) -- (-1,1.85) (2pt);
+               \draw [ultra thick, -latex, gray](-2,-1.85) -- (-2,-1.15) (2pt);
+                \draw [ultra thick, -latex, gray](-2, -0.85) -- (-2,-0.15) (2pt);
+                \draw [ultra thick, -latex, gray](-2, 0.15) -- (-2,0.85) (2pt);
+                \draw [ultra thick, -latex, gray](-2, 1.15) -- (-2,1.85) (2pt);
+                \node[below] at (-1.5,1.5) {\small $f(i,j)$};
+                \node[right] at (-1,2) {\small $i$};
+                \node[right] at (-1,1) {\small $j$};
+        \end{tikzpicture}
+}
+\fcaption{\label{squareLattice}}
+\end{figure}
+        \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}
 
 
@@ -577,7 +736,9 @@ Roman.
 \bibitem{suzuki} Suzuki, Masuo. {\it Generalized Trotter’s Formula and Systematic Approximants of Exponential Operators and Inner Derivations with Applications to Many-Body Problems}. Communications in Mathematical Physics 51, no. 2 (June 1976): 183–90. \url{https://doi.org/10.1007/BF01609348}.
 \bibitem{bravyikitaev} Bravyi, Sergey, and Alexei Kitaev. {\it Fermionic Quantum Computation}. Annals of Physics 298, no. 1 (May 2002): 210–26. \url{https://doi.org/10.1006/aphy.2002.6254}.
 \bibitem{tranter2018} Tranter, Andrew, Peter J. Love, Florian Mintert, and Peter V. Coveney. {\it A Comparison of the Bravyi-Kitaev and Jordan-Wigner Transformations for the Quantum Simulation of Quantum Chemistry}. Journal of Chemical Theory and Computation 14, no. 11 (13 November 2018): 5617–30. \url{https://doi.org/10.1021/acs.jctc.8b00450}.
-
+\bibitem{operatorLocality} Havlíček, Vojtěch, Matthias Troyer, and James D. Whitfield. {\it Operator Locality in Quantum Simulation of Fermionic Models}. Physical Review A 95, no. 3 (29 March 2017): 032332. \url{https://doi.org/10.1103/PhysRevA.95.032332}.
+\bibitem{superfast} Setia, Kanav, Sergey Bravyi, Antonio Mezzacapo, and James D. Whitfield. {\it Superfast Encodings for Fermionic Quantum Simulation}. Physical Review Research 1, no. 3 (18 October 2019): 033033. \url{https://doi.org/10.1103/PhysRevResearch.1.033033}.
+\bibitem{derbyklassen} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping}. Physical Review B 104, no. 3 (8 July 2021): 035118. \url{https://doi.org/10.1103/PhysRevB.104.035118}.
                 \bibitem{first}
 P. Horodecki and R. Horodecki (2001), {\it Distillation and bound entanglement},
 Quantum Inf. Comput., Vol.1, pp. 045-075.
