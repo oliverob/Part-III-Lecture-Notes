@@ -416,28 +416,29 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
 \begin{equation}
         \label{edgecomm}
         \begin{align}
-                \{ E_{jk}, V_j\} = 0, \{ E_{ij}, E_{jk} \} &= 0\\
-                [V_i, V_j] =0, [E_{ij}, V_m] = 0, [E_{ij}, E_{mn}] &= 0 \>\forall i \neq j \neq m \neq n
+                \{ E_{jk}, V_j\} = 0, \{ E_{ij}, E_{jk} \} &= 0 \> \forall \>i \neq k\\
+                [V_i, V_j] =0, [E_{ij}, V_m] = 0, [E_{ij}, E_{mn}] &= 0 \>\forall \>i \neq j \neq m \neq n
 \end{align}
 \end{equation}
 \begin{equation}
         \label{loopcond}
-        i^{|p| -1} \prod_{i=1}^{|p| -1} E_{p_i p_{i+1}} = 1
+        i^{n} \prod_{i=1}^{n} E_{p_i p_{i+1}} = 1
         \end{equation}
-        for a cyclic sequence of sites $p = \{p_1, p_2,\ldots\}$.\\\\
+        for a cyclic sequence of sites $p = \{p_1, p_2,\ldots, p_n, p_{n+1}: p_1 = p_{n+1} \}$.\\\\
         In a 'local' mapping or superfast encoding we only need to find representations for the few interactions that exist in a particular Hamiltonian rather than all the possible operators that could be applied to a general system. We will consider the case of the Derby-Klassen mapping which applies to square lattices and has lower Pauli-weights and uses fewer qubits per mode than all other existing local mappings \cite{derbyklassen}. \\\\
         \subsubsection{Definition of mapping}
-        This definition is largely taken from \cite{derbyklassen}. For a square lattice of fermionic modes, we map every vertex to a "vertex" qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional "face" qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counterclockwise around white spaces alternating every row (Fig.~\ref{squareLattice}). Now map the edge operators as below:
-        \begin{equation}
-                E_{ij} = \begin{cases}
-                        X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented downwards}\\
-                        -X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented upwards}\\
-                        X_i Y_j Y_{f(i,j)} & (i,j) \text{ horizontal}\\
-                \end{cases}
-        \end{equation}
+        This definition is largely taken from \cite{derbyklassen}. For a square lattice of fermionic modes, we map every vertex to a "vertex" qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional "face" qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}: 
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
+                \fill [gray, opacity=0.5] (-2,2) rectangle (-1,1);
+                \fill [gray, opacity=0.5] (0,2) rectangle (1,1);
+                \fill [gray, opacity=0.5] (-1,1) rectangle (0,0);
+                \fill [gray, opacity=0.5] (1,1) rectangle (2,0);
+                \fill [gray, opacity=0.5] (-2,0) rectangle (-1,-1);
+                \fill [gray, opacity=0.5] (0,0) rectangle (1,-1);
+                \fill [gray, opacity=0.5] (-1,-1) rectangle (0,-2);
+                \fill [gray, opacity=0.5] (1,-1) rectangle (2,-2);
                 \filldraw [black] (-2,2) circle (2pt);
                 \filldraw [black] (-1,2) circle (2pt);
                 \filldraw [black] (0,2) circle (2pt);
@@ -463,14 +464,7 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
                 \filldraw [black] (0,-2) circle (2pt);
                 \filldraw [black] (1,-2) circle (2pt);
                 \filldraw [black] (2,-2) circle (2pt);
-                \draw[fill=gray, opacity=0.5] (-2,2) rectangle (-1,1);
-                \draw[fill=gray, opacity=0.5] (0,2) rectangle (1,1);
-                \draw[fill=gray, opacity=0.5] (-1,1) rectangle (0,0);
-                \draw[fill=gray, opacity=0.5] (1,1) rectangle (2,0);
-                \draw[fill=gray, opacity=0.5] (-2,0) rectangle (-1,-1);
-                \draw[fill=gray, opacity=0.5] (0,0) rectangle (1,-1);
-                \draw[fill=gray, opacity=0.5] (-1,-1) rectangle (0,-2);
-                \draw[fill=gray, opacity=0.5] (1,-1) rectangle (2,-2);
+
                 \filldraw [black] (-1.5, 1.5) circle (2pt);
                 \filldraw [black] (0.5, 1.5) circle (2pt);
                 \filldraw [black] (-0.5, 0.5) circle (2pt);
@@ -521,14 +515,71 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
                 \draw [ultra thick, -latex, gray](-2, 0.15) -- (-2,0.85) (2pt);
                 \draw [ultra thick, -latex, gray](-2, 1.15) -- (-2,1.85) (2pt);
                 \node[below] at (-1.5,1.5) {\small $f(i,j)$};
-                \node[right] at (-1,2) {\small $i$};
-                \node[right] at (-1,1) {\small $j$};
+                \node[below right] at (-1,2) {\small $i$};
+                \node[above right] at (-1,1) {\small $j$};
         \end{tikzpicture}
 }
 \fcaption{\label{squareLattice}}
 \end{figure}
+
+
+        Now map the edge operators as below:
+        \begin{equation}
+                E_{ij} = \begin{cases}
+                        X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented downwards}\\
+                        -X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented upwards}\\
+                        X_i Y_j Y_{f(i,j)} & (i,j) \text{ horizontal}\\
+                \end{cases}
+        \end{equation}
+        with the last term ignored if the edge lies on a boundary with no adjacent face qubit. Also map the vertex operators to:
+        \begin{equation}
+                V_j = Z_j
+        \end{equation}
+        These satisfy the anti-commutation relations as shown below:
+        \begin{equation}
+                \{E_{jk}, V_j\} = \begin{cases} \{ X_j Y_k X_{f(j,k)}, Z_j\}\\
+-\{ X_j Y_k X_{f(j,k)}, Z_j\}\\
+\{X_j Y_k Y_{f(j,k)}, Z_j \}
+\end{cases}= \begin{cases} 
+\{X_j, Z_j\}  Y_k X_{f(j,k)}\\
+-\{X_j, Z_j\}  Y_k X_{f(j,k)}\\
+\{X_j, Z_j\}  Y_k Y_{f(j,k)}\\
+\end{cases} = 0
+        \end{equation}
+        \begin{equation}
+                \{E_{ij}, E_{jk}\} = \begin{cases}
+                        \{ X_i Y_j X_{f(i,j)}, X_j Y_k X_{f(j,k)} \} & (i,j) \text{ and } (j,k) \text{ oriented downwards (1)}\\
+                        \{ -X_i Y_j X_{f(i,j)}, X_j Y_k X_{f(j,k)}\} & (i,j) \text{ oriented upwards and } (j,k) \text{ oriented downwards (2) }\\
+                        \{ X_i Y_j Y_{f(i,j)} , X_j Y_k X_{f(j,k)}\} & (i,j) \text{ oriented horizontal and } (j,k) \text{ oriented downwards (3)} \\
+                        \{ X_i Y_j X_{f(i,j)}, -X_j Y_k X_{f(j,k)} \} & (i,j) \text{ oriented downwards and } (j,k) \text{ oriented upwards (4)}\\
+                        \{ -X_i Y_j X_{f(i,j)}, -X_j Y_k X_{f(j,k)}\} & (i,j) \text{ and } (j,k) \text{ oriented upwards (5)} \\
+                        \{ X_i Y_j Y_{f(i,j)} , -X_j Y_k X_{f(j,k)} \} & (i,j) \text{ oriented horizontal and } (j,k) \text{ oriented upwards (6)} \\
+                        \{ X_i Y_j X_{f(i,j)}, X_j Y_k Y_{f(j,k)} \} & (i,j) \text{ oriented downwards and } (j,k) \text{ oriented horizontal (7)}\\
+                        \{ -X_i Y_j X_{f(i,j)}, X_j Y_k Y_{f(j,k)}\} & (i,j) \text{ oriented upwards and } (j,k) \text{ oriented horizontal (8)} \\
+                        \{ X_i Y_j Y_{f(i,j)} , X_j Y_k Y_{f(j,k)} \} & (i,j) \text{ and } (j,k) \text{ oriented horizontal (9)} \\
+                        \end{cases} 
+        \end{equation}
+        \begin{equation}
+\{E_{ij}, E_{jk}\} = \begin{cases}
+        \{Y_j,X_j\} Y_j X_{f(i,j)} Y_k X_{f(j,k)} & (1) \text{ or } (5)\\
+        \{  Y_j Y_{f(i,j)} , X_j  X_{f(i,j)}\} X_iY_k & (3) \text{ and } f(i,j) = f(j,k)\\
+        \{  Y_j X_{f(i,j)} , X_j  Y_{f(i,j)}\} X_iY_k & (7) \text{ and } f(i,j) = f(j,k)\\
+\{ Y_j , X_j  \} X_iY_k Y_{f(i,j)} X_{f(j,k)} & (3) \text{ or } (7) \text{ and } f(i,j) \neq f(j,k)\\
+-\{  Y_j Y_{f(i,j)} , X_j  X_{f(i,j)}\} X_iY_k & (6) \text{ and } f(i,j) = f(j,k)\\
+-\{  Y_j X_{f(i,j)} , X_j  Y_{f(i,j)}\} X_iY_k & (8) \text{ and } f(i,j) = f(j,k)\\
+-\{ Y_j , X_j  \} X_iY_k Y_{f(i,j)} X_{f(j,k)} & (6) \text{ or } (8)  \text{ and } f(i,j) \neq f(j,k)\\
+\{X_i Y_j Y_{f(i,j)}, X_j Y_i Y_{f(i,j)} \} & (9) \text{ and } f(i, j) = f(j,k) \\
+\{Y_j, X_j\} X_i Y_{f(i,j)} Y_k Y_{f(j,k}} & (9) \text{ and } f(i,j) \neq f(j,k)
+\end{cases}
+        \end{equation}
+Therefore, as $\{Y_j, X_j\} = 0$, we have $\{E_{ij}, E_{jk}\} = 0$ for $f(i,j) \neq f(j,k)$. So any directed edges that meet head to tail anti-commute.
+\\\\
+        It is necessary to introduce a sign change into the definition of the vertical edge operators depending on orientation so the loops around the black faces equal 1 (and so satisfy the loop condition). \\\\
+        Derby-Klassen have developed a design technique for compact fermionic encoding. First you take an undirected graph, then start assigning arrows to it. You then assign qubit operators to every arrow with a X operator at the head of every arrow and a Y operator at the tail. These will automatically anticommute with the Z vertex operator at every mode, and they will anticommute with each other if they are head to tail. However, they will commute with each other if they meet tial to tail or head to head and we want them to anticommute so we add an ancilla qubit to produce this behaviour. For every pair of qubits that commute and we want to anticommute assign a common ancilla and have them act with X and Y respectively. In some instances we can use this qubits for multiple pairs of edges as on the square lattice without breaking the existing commutation and anticommutation rules. Got all this insight from the video. If every $e_{ij}$ anticommutes with $e_{rs}$ then it will anticommute with $e_{sr}$ as $e_{rs} = e_{sr}$, so we only need to consider a directed graph.
+
         \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}
+Talk about how the long strings of Z increase the depth as it makes it hard to decompose in parallel
 
 
 
