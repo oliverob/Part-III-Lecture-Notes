@@ -433,9 +433,9 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
         \item All edges that do not share a common vertex must commute
         \item All edges must commute with vertices they do not include
         \end{romanlist}
-        For a given system we only need to find edge representations for the few local interactions that exist rather than between every pair of modes like the Jordan-Wigner and Bravyi-Kitaev provide. Charles Derby and Joel Klassen \cite{derbyklassen2} have developed a design strategy for creating these representations for a given regular lattice of interactions. We will illustrate this technique by using the simplest case of the square lattice \cite{derbyklassen}: \\\\
+        For a given system we only need to find edge representations for the few local interactions that exist rather than between every pair of modes like the Jordan-Wigner and Bravyi-Kitaev provide. Charles Derby and Joel Klassen \cite{derbyklassen2} have developed a design strategy for creating these representations for a given regular lattice of interactions. We will illustrate this technique by using the simplest case of the square lattice \cite{derbyklassen}:
         \subsubsection{Definition of mapping}
-        For a square lattice of fermionic modes, we map every vertex to a ``vertex'' qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional ``face'' qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}: 
+        For a square lattice of fermionic modes, we map every vertex to a ``vertex'' qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional ``face'' qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}:
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -527,11 +527,12 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
                 \node[above right] at (-1,1) {\small $j$};
         \end{tikzpicture}
 }
+
 \fcaption{\label{squareLattice}}
 \end{figure}
 
 
-The design strategy involves mapping each edge operation to a Pauli string acting with a Y gate acting on the qubit at the head of the arrow and an X gate acting on the qubit at the tail of the arrow, and each vertex operation to a Z gate acting on the vertex. Straight away this can seem to satisfy the intuitive conditions i), iii), iv) and v). We also have that every pair of edges that meet head-to-tail anti-commute, but pairs of edges that meet head-to-head or tail-to-tail commute when they should anti-commute. Therefore, we additionally map every pair of these edges to act on a common ancillary qubit with an X and Y gate respectively so they now anti-commute. On a square lattice these common ancillary qubits can be the face qubit adjacent to the edge, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). Using the each ancillary ``face'' qubit to introduce two anti-commutation relations does not break restriction iv) if opposite sides of black squares act in commutable ways (i.e. with same gate). Finally, in order to satisfy the loop condition applying any given loop of edges needs to return the ``vertex'' qubits to their original state. As every loop can be decomposed in to a combination of loops around individual faces, we must simply consider the impact of looping a black and white face. As shown in Fig~\ref{faceloops}, looping an odd face introduces a negative sign to every qubit as action on the qubits is:
+The design strategy involves mapping each edge operation to a Pauli string acting with a Y gate acting on the qubit at the head of the arrow and an X gate acting on the qubit at the tail of the arrow, and each vertex operation to a Z gate acting on the vertex. Straight away this can seem to satisfy the intuitive conditions i), iii), iv) and v). We also have that every pair of edges that meet head-to-tail anti-commute, but pairs of edges that meet head-to-head or tail-to-tail commute when they should anti-commute. Therefore, we additionally map every pair of these edges to act on a common ancillary qubit with an X and Y gate respectively so they now anti-commute. On a square lattice these common ancillary qubits can be the face qubit adjacent to the edge, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). Using the each ancillary ``face'' qubit to introduce two anti-commutation relations does not break restriction iv) if opposite sides of black squares act in commutable ways (i.e. with same gate). Finally, in order to satisfy the loop condition applying any given loop of edges needs to return the ``vertex'' qubits to their original state. As every loop can be decomposed in to a combination of loops around individual faces, we must simply consider the impact of looping a black or a white face. As shown in Fig~\ref{faceloops}, looping a black face introduces a negative sign to every qubit, however this can be fixed by simply flipping the sign of one of the four edges.
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -552,15 +553,22 @@ The design strategy involves mapping each edge operation to a Pauli string actin
                                   \draw[ultra thick, -, gray] (centreX1.west) -- (BL2TL.center);
 
                                    \draw[ultra thick, -, gray] (centreX2.east) -- (BR2TR.center);
-                                   \draw[dashed,-latex, gray, label=left:{-1} ] (BL.west)  to[bend left] (TL.west);
+                                   \draw[dashed,-latex, gray ] (BL.west)  to[bend left]   (TL.west);
                                    \draw[dashed,-latex, gray] (BR.south) to[bend left](BL.south);
                                    \draw[dashed,-latex, gray] (TL.north) to[bend left](TR.north);
-                                   \draw[dashed,-latex, gray, label=right:{-1}] (TR.east) to[bend left](BR.east);
-                
+                                   \draw[dashed,-latex, gray] (TR.east) to[bend left](BR.east) ;
+                                   \draw [thick, ->, gray] (BL.south)arc(40:-300:0.3); 
+                                   \node[below left, black] at (BL) {\small Z};
+                                    \draw [thick, ->, gray] (BR.east)arc(120:-210:0.3);
+                                    \node[below right, black] at (BR) {\small Z};
+                                    \draw [thick, ->, gray] (TR.north)arc(210:-130:0.3);
+                                            \node[above right, black] at (TR) {\small Z};
 
+                                    \draw [thick, ->, gray] (TL.west)arc(300:-20:0.3);
+                                    \node[above left, black] at (TL){\small Z};
 
-        \end{tikzpicture}
-        \fcaption{\label{faceloops}}
+                   \end{tikzpicture}}
+                   \fcaption{\label{faceloops} This gives $- I$ at every qubit as two of the edges need to have their orientation flipped which also introduces a negative sign. So we have $-YZX = -I$ at every ``vertex'' qubit and $(-X)Y(-X)Y =(iZ)^2= -I$ at the face qubit.}
         \end{figure}
 \begin{equation}
                 E_{ij} = \begin{cases}
