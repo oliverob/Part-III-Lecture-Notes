@@ -425,9 +425,17 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
         i^{n} \prod_{i=1}^{n} E_{p_i p_{i+1}} = 1
         \end{equation}
         for a cyclic sequence of sites $p = \{p_1, p_2,\ldots, p_n, p_{n+1}: p_1 = p_{n+1} \}$.\\\\
-        In a 'local' mapping or superfast encoding we only need to find representations for the few interactions that exist in a particular Hamiltonian rather than all the possible operators that could be applied to a general system. We will consider the case of the Derby-Klassen mapping which applies to square lattices and has lower Pauli-weights and uses fewer qubits per mode than all other existing local mappings \cite{derbyklassen}. \\\\
+        In an intuitive sense these restrictions mean:
+        \begin{romanlist}
+        \item Edge operators must anti-commute with any vertices they include
+        \item Edge operators must anti-commute with any edges they share vertices with
+        \item All vertices must commute with each other
+        \item All edges that do not share a common vertex must commute
+        \item All edges must commute with vertices they do not include
+        \end{romanlist}
+        For a given system we only need to find edge representations for the few local interactions that exist rather than between every pair of modes like the Jordan-Wigner and Bravyi-Kitaev provide. Charles Derby and Joel Klassen \cite{derbyklassen2} have developed a design strategy for creating these representations for a given regular lattice of interactions. We will illustrate this technique by using the simplest case of the square lattice \cite{derbyklassen}: \\\\
         \subsubsection{Definition of mapping}
-        This definition is largely taken from \cite{derbyklassen}. For a square lattice of fermionic modes, we map every vertex to a "vertex" qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional "face" qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}: 
+        For a square lattice of fermionic modes, we map every vertex to a ``vertex'' qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional ``face'' qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}: 
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -523,8 +531,38 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
 \end{figure}
 
 
-        Now map the edge operators as below:
-        \begin{equation}
+The design strategy involves mapping each edge operation to a Pauli string acting with a Y gate acting on the qubit at the head of the arrow and an X gate acting on the qubit at the tail of the arrow, and each vertex operation to a Z gate acting on the vertex. Straight away this can seem to satisfy the intuitive conditions i), iii), iv) and v). We also have that every pair of edges that meet head-to-tail anti-commute, but pairs of edges that meet head-to-head or tail-to-tail commute when they should anti-commute. Therefore, we additionally map every pair of these edges to act on a common ancillary qubit with an X and Y gate respectively so they now anti-commute. On a square lattice these common ancillary qubits can be the face qubit adjacent to the edge, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). Using the each ancillary ``face'' qubit to introduce two anti-commutation relations does not break restriction iv) if opposite sides of black squares act in commutable ways (i.e. with same gate). Finally, in order to satisfy the loop condition applying any given loop of edges needs to return the ``vertex'' qubits to their original state. As every loop can be decomposed in to a combination of loops around individual faces, we must simply consider the impact of looping a black and white face. As shown in Fig~\ref{faceloops}, looping an odd face introduces a negative sign to every qubit as action on the qubits is:
+\begin{figure}[htbp]
+\centerline{
+        \begin{tikzpicture}
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=bottomLeftY]right:{\small Y}}, label={[name=bottomLeftY2]above:{\small Y}}](BL) at (-1,-1) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=topLeftX]below:\small X}, label={[name=topLeftX2]right:\small X}](TL) at (-1,1) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=bottomrightX]left:\small X},  label={[name=bottomrightX2]above:\small X}](BR) at (1,-1) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=toprightY]left:\small Y}, label={[name=toprightY2]below:\small Y}](TR) at (1,1) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=centreX1]left:\small X}, label={[name=centreX2]right:\small X},label={[name=centreY1]below:\small Y}, label={[name=centreY2]above:\small Y}] at (0,0) {};
+
+                                \draw[ultra thick, latex-, gray] (bottomLeftY.east) -- node [midway](BL2BR){} (bottomrightX.west);
+                                
+                                \draw[ultra thick, -, gray] (centreY1.south) -- (BL2BR.center);
+                                \draw[ultra thick, latex-, gray] (bottomLeftY2.north) --  node [midway](BL2TL){} (topLeftX.south);
+                                \draw[ultra thick, -latex, gray] (topLeftX2.east) --  node [midway](TL2TR){} (toprightY.west);
+                                \draw[ultra thick, -latex, gray] (bottomrightX2.north) --  node [midway](BR2TR){} (toprightY2.south);
+                                 \draw[ultra thick, -, gray] (centreY2.north) -- (TL2TR.center);
+
+                                  \draw[ultra thick, -, gray] (centreX1.west) -- (BL2TL.center);
+
+                                   \draw[ultra thick, -, gray] (centreX2.east) -- (BR2TR.center);
+                                   \draw[dashed,-latex, gray, label=left:{-1} ] (BL.west)  to[bend left] (TL.west);
+                                   \draw[dashed,-latex, gray] (BR.south) to[bend left](BL.south);
+                                   \draw[dashed,-latex, gray] (TL.north) to[bend left](TR.north);
+                                   \draw[dashed,-latex, gray, label=right:{-1}] (TR.east) to[bend left](BR.east);
+                
+
+
+        \end{tikzpicture}
+        \fcaption{\label{faceloops}}
+        \end{figure}
+\begin{equation}
                 E_{ij} = \begin{cases}
                         X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented downwards}\\
                         -X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented upwards}\\
@@ -790,6 +828,7 @@ Roman.
 \bibitem{operatorLocality} Havlíček, Vojtěch, Matthias Troyer, and James D. Whitfield. {\it Operator Locality in Quantum Simulation of Fermionic Models}. Physical Review A 95, no. 3 (29 March 2017): 032332. \url{https://doi.org/10.1103/PhysRevA.95.032332}.
 \bibitem{superfast} Setia, Kanav, Sergey Bravyi, Antonio Mezzacapo, and James D. Whitfield. {\it Superfast Encodings for Fermionic Quantum Simulation}. Physical Review Research 1, no. 3 (18 October 2019): 033033. \url{https://doi.org/10.1103/PhysRevResearch.1.033033}.
 \bibitem{derbyklassen} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping}. Physical Review B 104, no. 3 (8 July 2021): 035118. \url{https://doi.org/10.1103/PhysRevB.104.035118}.
+\bibitem{derbyklassen2} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping Part 2: Alternative Lattice Geometries}. ArXiv:2101.10735 [Quant-Ph], 26 January 2021. http://arxiv.org/abs/2101.10735.
                 \bibitem{first}
 P. Horodecki and R. Horodecki (2001), {\it Distillation and bound entanglement},
 Quantum Inf. Comput., Vol.1, pp. 045-075.
