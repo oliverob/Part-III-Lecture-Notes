@@ -14,6 +14,7 @@
 \usepackage{verbatim}
 \usepackage{breqn}
 \usepackage{tikz}
+\usepackage{url}
 \usetikzlibrary{arrows.meta}
 
 \textwidth=5.6truein
@@ -532,20 +533,38 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
 \end{figure}
 
 
-The design strategy involves mapping each edge operation to a Pauli string acting with a Y gate acting on the qubit at the head of the arrow and an X gate acting on the qubit at the tail of the arrow, and each vertex operation to a Z gate acting on the vertex.\\\\
+The design strategy involves mapping each edge operation to a Pauli string acting with a Y gate acting on the qubit at the head of the arrow and an X gate acting on the qubit at the tail of the arrow, and each vertex operation to a Z gate acting on the vertex. This is illustrated in Fig~\ref{derbyklassenline}:\\
+\begin{figure}[htbp]
+\centerline{
+        \begin{tikzpicture}
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=left]right:{\small Y}}](L) at (-1,0) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=right]left:\small X}](R) at (1,0) {};
+\draw[ultra thick, -latex, gray] (left.east) --  (right.west);
+
+        \end{tikzpicture}}
+        \fcaption{\label{derbyklassenline}}
+\end{figure}\\
 Straight away this can be seen to satisfy the intuitive conditions i), iii), iv) and v). Also as $X$ and $Y$ anti-commute, it is clear that every pair of edges that meet head-to-tail anti-commute, whereas pairs of edges that meet head-to-head or tail-to-tail commute. We can correct this behaviour by mapping every pair of these edges, those which currently commute but should anti-commute, to act upon a common ancillary qubit with X and Y gates respectively. Though this procedure is performed on a directed graph it still holds for edges in both directions as $E_{ij} = -E_{ji}$, so if $E_{ij}$ anti-commutes with something so will $E_{ji}$.
 \\\\ On a square lattice this common ancillary qubit can be the face qubit adjacent to the edges, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). It can be seen that using an ancillary ``face'' qubit to introduce two anti-commutation relations does not break the restriction iv) as long as opposite edges of black squares act in commutable ways upon the ``face'' qubit (i.e. with same gate). \\\\
-Finally, in order to satisfy the loop condition applying any given loop of edges needs to correspond to an identity in the fermionic Fock space. In other words this mapping is only valid for fermionic state representations that lie in the space stabilised by cycles of edges. It can be shown that the stabiliser code space of cycles is isomorphic to the group of even Majorana operators:\\\\
-\begin{quote}
-        To summarize, given a connected fermionic graph G, corresponding to some
-fermionic system, to construct a local fermionic encoding it suffices to specify
-5
-a local mapping σ of the edges and vertices of the graph to multi-qubit Pauli
-operators, satisfying the relations 7, such that no element of CG is mapped to
-−1.
-\end{quote} \textbf{need to prove this then done}\\\\
-First can show that the group of even majorana operators is isomorphic to the quotient group $M_G/C_G$, and so if we have a mapping to qubit operators such that all members of $\sigma(C_G)$ 1 have a common +1 eigenspace $U$ then by projecting on it. We have a mapping $\sigma_U$ that takes all members of $C_G$ to 1, and so $C_G$ is in the kernel of $\sigma_U$. Therefore, $\sigma_U$ maps from $M_G/C_G$ to $L(\mathcal{H}$ and so it maps from the even majorana operators to the qubit operators. As $C_G$ all commute, and as long as the cycles never map to $-1$ they form a stabilizer of a +1 eigenspace that can be taken to be $U$ (nieslen chuang 455). Therefore the even majorana states map into the code space of the stabilisers (the cycles). In this case if there wasn't anywhere we could inject majarona operators then the only states possible would be those that where themselves under application of an even face cycle so ones that satsify $\prod_i V_i = 1$ so the even fermonic algebra. In order to discuss how the code space actually represents the odd algebra we need to insert marjoranas at corners.\\
-As every cycle can be decomposed in to a combination of cycles around individual faces (\textbf{proof}), we must simply consider the impact of cycling around a black or a white face.\\\\ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning it cannot be in a stabilizer, however this can be fixed by simply flipping the sign of one of the four edges. Then we get $X_1Y_5Y_2 \otimes -Y_2X_5X_3 \otimes X_3Y_5Y_4 \otimes Y_4 X_5 X_1 = -X_1^2 Y_2^2 X_3^2 Y_4^2 (Y_5X_5)^2 = - (iZ_5)^2 = I$.
+Finally, in order to satisfy the loop condition applying any given loop of edges needs to correspond to an identity in the fermionic Fock space. In other words this mapping is only valid for fermionic state representations that lie in the space stabilised by cycles of edges. This is shown by the following reasoning (found in \cite{derbyklassen2}):
+\begin{romanlist}
+\item Let $M_G$ be the group of directed edges $E_{ij}$ and $V_{i}$ which satisfy Eq.~\ref{edgecomm} for a given graph of edges and vertices $G$, and $C_G$ be the directed cycles of graph $G$
+\item The group of even fermionic operators $M_E$ is isomorphic to the quotient group $M_G/C_G$
+\item The quotient group $M_G/C_G$ has a faithful representation in the Hilbert subspace $U$ as:
+        \begin{alphlist}
+        \item The group $M_G$ has a representation $\sigma$ in the Hilbert space $\mathcal{H}$ of a system of qubits
+        \item If a stabiliser of a non-trival subgroup of $\sigma$ contains all the elements of $C_G$, then can define new representation $\tau$ as:
+                \begin{equation}
+                        \tau (m C_G) = Proj_U \circ \sigma(m) \> \forall \> m \in M_G/C_G
+                \end{equation}
+                with $U$ the common +1 eigenspace of $\sigma(C_G)$.
+        \end{alphlist}
+\item If $\sigma$ is a representation in the multi-qubit Pauli operators $\{\pm 1, \pm i\} \times^N_i \{I_i, X_i, Y_i, Z_i\}$ then any subgroup $S$ that is abelian and does not contain $-I$ is a stabiliser of a non-trivial vector space (Nieslen Chuang)
+\item Since $C_G$ is abelian (\textbf{Proof}), $\sigma(C_G)$ is abelian. So if $-I \in\xnot \sigma(C_G)$, $\sigma(C_G)$ is the stabiliser of the common +1 eigenspace of $\sigma(C_G)$
+\item $M_G/C_G$ (and hence $M_E$) has a representation in the code space of $\sigma(C_G)$
+\end{romanlist}
+Therefore, the mapping we have found is valid as long as no cycle is mapped to $-I$. As all cycles on this square lattice can be decomposed into a combination of cycles around single black and white faces, we only need to consider these stabiliser generators individually. \\\\
+As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning it cannot be in a stabilizer, however this can be fixed by simply flipping the sign of one of the four edges. Then we get $X_1Y_5Y_2 \otimes -Y_2X_5X_3 \otimes X_3Y_5Y_4 \otimes Y_4 X_5 X_1 = -X_1^2 Y_2^2 X_3^2 Y_4^2 (Y_5X_5)^2 = - (iZ_5)^2 = I$.
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -573,9 +592,9 @@ As every cycle can be decomposed in to a combination of cycles around individual
 
 
                    \end{tikzpicture}}
-           \fcaption{\label{blackfaceloops} Diagram of looping around black face. This gives $X^2 = Y^2 = I$ at every ``vertex'' qubit, but $(-X)Y(-X)Y = (XY)^2 = (iZ)^2 = -I$ at the ``face'' qubit. The negative signs are introduced by having to flip the orientation of the vertical edges, however they cancel out as they can both be consider to act upon the ``face'' qubit.}
+           \fcaption{\label{blackfaceloops} Diagram of looping around black face. This gives $X^2 = Y^2 = I$ at every ``vertex'' qubit, but $(-X)Y(-X)Y = (XY)^2 = (iZ)^2 = -I$ at the ``face'' qubit. The two negative signs introduced by having to flip the orientation of the vertical edges cancel each other out.}
    \end{figure}\\
-   It can be seen in Fig~\ref{whitefaceloops}, that looping a white face produces a non-trivial stabilizer. \\
+   It can be seen in Fig~\ref{whitefaceloops}, that looping a white face produces a non-trivial stabilizer, which is not $-I$. Therefore, using the mapping described with the sign flipped on one edge of every black face will give a faithful representation of the even fermionic algebra. \\
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -660,8 +679,7 @@ As every cycle can be decomposed in to a combination of cycles around individual
         \end{equation}
 Therefore, as $\{Y_j, X_j\} = 0$, we have $\{E_{ij}, E_{jk}\} = 0$ for $f(i,j) \neq f(j,k)$. So any directed edges that meet head to tail anti-commute.
 \\\\
-        It is necessary to introduce a sign change into the definition of the vertical edge operators depending on orientation so the loops around the black faces equal 1 (and so satisfy the loop condition). \\\\
-        Derby-Klassen have developed a design technique for compact fermionic encoding. First you take an undirected graph, then start assigning arrows to it. You then assign qubit operators to every arrow with a X operator at the head of every arrow and a Y operator at the tail. These will automatically anticommute with the Z vertex operator at every mode, and they will anticommute with each other if they are head to tail. However, they will commute with each other if they meet tial to tail or head to head and we want them to anticommute so we add an ancilla qubit to produce this behaviour. For every pair of qubits that commute and we want to anticommute assign a common ancilla and have them act with X and Y respectively. In some instances we can use this qubits for multiple pairs of edges as on the square lattice without breaking the existing commutation and anticommutation rules. Got all this insight from the video. If every $e_{ij}$ anticommutes with $e_{rs}$ then it will anticommute with $e_{sr}$ as $e_{rs} = e_{sr}$, so we only need to consider a directed graph.
+
 
         \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}
