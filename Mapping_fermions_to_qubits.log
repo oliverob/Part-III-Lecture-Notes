@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  4 JAN 2022 08:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  4 JAN 2022 10:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -799,34 +799,39 @@ Overfull \hbox (11.98552pt too wide) in paragraph at lines 396--398
  []
 
 
-./Mapping_fermions_to_qubits.tex:414: Package amsmath Error: Erroneous nesting of equation structures;
+Underfull \hbox (badness 10000) in paragraph at lines 400--402
+
+ []
+
+
+./Mapping_fermions_to_qubits.tex:413: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414 \end{align}
+l.413 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [10]
 
-./Mapping_fermions_to_qubits.tex:422: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:421: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.422 \end{align}
+l.421 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--430
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
 
  []
 
@@ -1274,18 +1279,32 @@ l.530 }
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--550
+Underfull \hbox (badness 10000) in paragraph at lines 536--554
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--550
+Underfull \hbox (badness 10000) in paragraph at lines 536--554
 
  []
 
 [11]
-./Mapping_fermions_to_qubits.tex:563: Undefined control sequence.
-l.563 ...igma(C_G)$ is abelian. So if $-I \in\xnot
+
+./Mapping_fermions_to_qubits.tex:564: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564                         \end{align}
+                                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[12]
+./Mapping_fermions_to_qubits.tex:591: Undefined control sequence.
+l.591 ...igma(C_G)$ is abelian. So if $-I \in\xnot
                                                    \sigma(C_G)$, $\sigma(C_G...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1294,109 +1313,82 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--630
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 638--640
+Underfull \hbox (badness 10000) in paragraph at lines 594--658
 
  []
 
 [13]
-Overfull \hbox (63.73279pt too wide) detected at line 666
-\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 E[]; E[]\OMS/cmsy/m/n/10 g \OT1/cmr/m/n/10 = []
- []
-
-./Mapping_fermions_to_qubits.tex:677: Extra }, or forgotten $.
-l.677 \{Y_j, X_j\} X_i Y_{f(i,j)} Y_k Y_{f(j,k}}
-                                                 & (9) \text{ and } f(i,j) \...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 679--682
+Underfull \hbox (badness 10000) in paragraph at lines 666--668
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 679--682
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14] [15]
+[14] [15]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 771.
+(amsmath)                 on input line 758.
 
-./Mapping_fermions_to_qubits.tex:793: Missing $ inserted.
+./Mapping_fermions_to_qubits.tex:780: Missing $ inserted.
 <inserted text> 
                 $
-l.793 {\bf Proof:} Proofs should end with \square
+l.780 {\bf Proof:} Proofs should end with \square
                                                  \,.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Mapping_fermions_to_qubits.tex:794: Missing $ inserted.
+./Mapping_fermions_to_qubits.tex:781: Missing $ inserted.
 <inserted text> 
                 $
-l.794 
+l.781 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: File `fig1.eps' not found on input line 803.
+LaTeX Warning: File `fig1.eps' not found on input line 790.
 
 Package epstopdf Info: Source file: <fig1.eps>
 (epstopdf)             Output file: <fig1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=fig1-eps-converted-to.pdf fig1.eps>
-(epstopdf)             \includegraphics on input line 803.
+(epstopdf)             \includegraphics on input line 790.
 Package epstopdf Info: Output file is already uptodate.
 
-./Mapping_fermions_to_qubits.tex:803: Package pdftex.def Error: File `fig1-eps-converted-to.pdf' not found: using draft setting.
+./Mapping_fermions_to_qubits.tex:790: Package pdftex.def Error: File `fig1-eps-converted-to.pdf' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.803 ...line{\epsfig{file=fig1.eps, width=8.2cm}}
+l.790 ...line{\epsfig{file=fig1.eps, width=8.2cm}}
                                                    %100 percent
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [16]
 
-./Mapping_fermions_to_qubits.tex:880: Package calc Error: `0' invalid at this point.
+./Mapping_fermions_to_qubits.tex:867: Package calc Error: `0' invalid at this point.
 
 See the calc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.880 \begin{thebibliography}{000}
+l.867 \begin{thebibliography}{000}
                                   
 I expected to see one of: + - * / )
 
-./Mapping_fermions_to_qubits.tex:880: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:867: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.880 \begin{thebibliography}{000}
+l.867 \begin{thebibliography}{000}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:880: Illegal unit of measure (pt inserted).
+./Mapping_fermions_to_qubits.tex:867: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.880 \begin{thebibliography}{000}
+l.867 \begin{thebibliography}{000}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1406,19 +1398,19 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 897--898
+Underfull \hbox (badness 10000) in paragraph at lines 884--885
 []\OT1/cmr/m/n/9 Derby, Charles, and Joel Klassen. \OT1/cmr/m/it/9 A Com-pact Fermion to Qubit Map-ping Part
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 897--898
+Underfull \hbox (badness 10000) in paragraph at lines 884--885
 \OT1/cmr/m/it/9 2: Al-ter-na-tive Lat-tice Ge-ome-tries\OT1/cmr/m/n/9 . ArXiv:2101.10735 [Quant-Ph], 26 Jan-uary 2021.
  []
 
-./Mapping_fermions_to_qubits.tex:914: Missing } inserted.
+./Mapping_fermions_to_qubits.tex:901: Missing } inserted.
 <inserted text> 
                 }
-l.914 \end{thebibliography}
+l.901 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1427,13 +1419,13 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Mapping_fermions_to_qubits.tex:914: LaTeX Error: \begin{list} on input line 880 ended by \end{thebibliography}.
+./Mapping_fermions_to_qubits.tex:901: LaTeX Error: \begin{list} on input line 867 ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.914 \end{thebibliography}
+l.901 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1441,13 +1433,13 @@ or  <return>  to continue without it.
 
 [18] [19]
 
-./Mapping_fermions_to_qubits.tex:928: LaTeX Error: \begin{thebibliography} on input line 880 ended by \end{document}.
+./Mapping_fermions_to_qubits.tex:915: LaTeX Error: \begin{thebibliography} on input line 867 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.928 \end{document}
+l.915 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1456,19 +1448,19 @@ or  <return>  to continue without it.
 (./Mapping_fermions_to_qubits.aux) )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 880 (\begingroup)
+### semi simple group (level 1) entered at line 867 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17933 strings out of 478599
- 324852 string characters out of 5858101
- 741120 words of memory out of 5000000
- 35453 multiletter control sequences out of 15000+600000
+ 17983 strings out of 478599
+ 326097 string characters out of 5858101
+ 741121 words of memory out of 5000000
+ 35503 multiletter control sequences out of 15000+600000
  419811 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,26n,89p,1443b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (19 pages, 489454 bytes).
+Output written on Mapping_fermions_to_qubits.pdf (19 pages, 490679 bytes).
 PDF statistics:
  246 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams

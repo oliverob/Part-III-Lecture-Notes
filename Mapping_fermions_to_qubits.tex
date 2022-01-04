@@ -396,17 +396,16 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
         \end{equation}
         Therefore, every fermionic operation in the Bravyi-Kiteav mapping only requires $O(\log(N))$ gates.
 \end{itemlist}
-\section{Superfast encoding}
-Often we wish to simulate a Hamiltonian on a system of $m$ Fermi modes with only a few qubit interactions of weight $d << m$. It is possible to encode these interactions with Pauli-weight $O(d)$ using $O(md)$ qubits. 
 \section{Derby-Klassen Map}\label{derby-klassen_section}
-As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. One strategy used to find 'local' mappings is searching for sets of low weight Pauli-strings for the fermionic edge ($E_{jk}$) and vertex ($V_j$) operators. These are defined below in terms of the Majorana operators $\gamma_j$:
+As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. These schemes only find representations for the few local interactions that exist in the Hamiltonian, rather than between every pair of modes like the Jordan-Wigner or Bravyi-Kitaev mapping. Generally this results in using more qubits but drastically smaller Pauli weights.\\\\
+One strategy used to find 'local' mappings is searching for sets of low weight Pauli-strings for representing the fermionic edge ($E_{jk}$) and vertex ($V_j$) operators. These are defined below in terms of the Majorana operators $\gamma_j$:
 \begin{equation}
 \gamma_j = a_j + a^{\dagger}_j, \> \bar{\gamma_j} = \frac{a_j - a_j^{\dagger}}{i}
 \end{equation}
 \begin{equation}
         E_{jk} = - i \gamma_j \gamma_k, \> V_j = - i \gamma_j \bar{\gamma_j}
 \end{equation}
-These operators can be used to express all even fermionic operators \cite{superfast} (\textbf{proove this}):
+The full set of these operators represent the full even fermionic algebra \cite{superfast} (\textbf{proove this}):
 \begin{equation}
         \begin{align}
                 a_j^{\dagger} a_k + a_k^{\dagger} a_j &=& (\gamma_j - i \bar{\gamma_j}) (\gamma_k + i \bar{\gamma_k})  + (\gamma_k - i \bar{\gamma_k}) (\gamma_j + i \bar{\gamma_j}) &=& -\frac{i}{2}& E_{jk} (V_j - V_k)\\
@@ -433,10 +432,11 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
         \item All vertices must commute with each other
         \item All edges that do not share a common vertex must commute
         \item All edges must commute with vertices they do not include
+        \item Any cycle of edges must leave the state unchanged
         \end{romanlist}
-        For a given system we only need to find edge representations for the few local interactions that exist rather than between every pair of modes like the Jordan-Wigner and Bravyi-Kitaev provide. Charles Derby and Joel Klassen \cite{derbyklassen2} have developed a design strategy for creating these representations for a given regular lattice of interactions. We will illustrate this technique by using the simplest case of the square lattice \cite{derbyklassen}:
+        In a `local' mapping we find a way of mapping only a selection of these edges (ones representing local interactions) to qubit operators in such a way that the full even fermionic algebra is preserved. Charles Derby and Joel Klassen \cite{derbyklassen2} have developed a design strategy for creating representations that satisfy these restrictions for a given regular lattice of interactions. We will illustrate this technique by using the simplest case of the square lattice \cite{derbyklassen}:
         \subsubsection{Definition of mapping}
-        For a square lattice of fermionic modes, we map every vertex to a ``vertex'' qubit. Consider each square of the square lattice as either black or white tiled like a chess board and associate an additional ``face'' qubit with every black square. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}:
+        For a square lattice of fermionic modes, we map every vertex to a ``vertex'' qubit. Consider each square of the square lattice as either a black or white face (tiled like a chess board) and associate an additional ``face'' qubit with every black face. Let $f(i,j)$ index the unique odd face adjacent to edge $(i,j)$, and assign an orientation to the edges so they circulate clockwise or counter-clockwise around white spaces alternating every row. This is illustrated below by Fig.~\ref{squareLattice}:
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -540,16 +540,44 @@ The design strategy involves mapping each edge operation to a Pauli string actin
                 \node[circle, fill, minimum size =4, inner sep = 0, label={[name=left]right:{\small Y}}](L) at (-1,0) {};
                 \node[circle, fill, minimum size =4, inner sep = 0, label={[name=right]left:\small X}](R) at (1,0) {};
 \draw[ultra thick, -latex, gray] (left.east) --  (right.west);
+\draw [thick, ->, gray] (L.north)arc(15:345:0.3);
+                                    \node[left, black] at (L) {\small Z};
+                                    \draw [thick, ->, gray] (R.south)arc(-165:165:0.3);
+                                    \node[right, black] at (R) {\small Z};
 
         \end{tikzpicture}}
         \fcaption{\label{derbyklassenline}}
 \end{figure}\\
-Straight away this can be seen to satisfy the intuitive conditions i), iii), iv) and v). Also as $X$ and $Y$ anti-commute, it is clear that every pair of edges that meet head-to-tail anti-commute, whereas pairs of edges that meet head-to-head or tail-to-tail commute. We can correct this behaviour by mapping every pair of these edges, those which currently commute but should anti-commute, to act upon a common ancillary qubit with X and Y gates respectively. Though this procedure is performed on a directed graph it still holds for edges in both directions as $E_{ij} = -E_{ji}$, so if $E_{ij}$ anti-commutes with something so will $E_{ji}$.
-\\\\ On a square lattice this common ancillary qubit can be the face qubit adjacent to the edges, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). It can be seen that using an ancillary ``face'' qubit to introduce two anti-commutation relations does not break the restriction iv) as long as opposite edges of black squares act in commutable ways upon the ``face'' qubit (i.e. with same gate). \\\\
-Finally, in order to satisfy the loop condition applying any given loop of edges needs to correspond to an identity in the fermionic Fock space. In other words this mapping is only valid for fermionic state representations that lie in the space stabilised by cycles of edges. This is shown by the following reasoning (found in \cite{derbyklassen2}):
+Straight away this can be seen to satisfy the intuitive conditions i), iii), iv) and v). Also as $X$ and $Y$ anti-commute, it is clear that every pair of edges that meet head-to-tail anti-commute, whereas pairs of edges that meet head-to-head or tail-to-tail commute. We can correct this behaviour by mapping every pair of these edges, those which currently commute but should anti-commute, to act upon a common ancillary qubit with X and Y gates respectively. Though this procedure is performed on a directed graph it still holds for edges in both directions as $E_{ij} = -E_{ji}$, so if $E_{ij}$ anti-commutes with an operator so will $E_{ji}$. Therefore, by adding ancillary qubits we can make the mapping also satisfy restriction ii).
+\\\\ On a square lattice this common ancillary qubit can be the face qubit adjacent to the edges, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). It can be seen that using an ancillary ``face'' qubit to introduce two separate anti-commutation relations does not break the restriction iv), as long as opposite edges of black squares act in commutable ways upon the ``face'' qubit (i.e. with same gate). \\\\
+In order to satisfy the loop condition, applying any given loop of edges needs to correspond to an identity in the fermionic Fock space. In other words this mapping is only valid for fermionic state representations that lie in the space stabilised by cycles of edges. This is shown in detail by the following reasoning (found in \cite{derbyklassen2}):
 \begin{romanlist}
-\item Let $M_G$ be the group of directed edges $E_{ij}$ and $V_{i}$ which satisfy Eq.~\ref{edgecomm} for a given graph of edges and vertices $G$, and $C_G$ be the directed cycles of graph $G$
-\item The group of even fermionic operators $M_E$ is isomorphic to the quotient group $M_G/C_G$
+\item Let $M_G$ be the group of directed edges $e_{ij}$ and vertices $v_{i}$ which satisfy Eq.~\ref{edgecomm} for a given graph $G$, and $C_G$ be the directed cycles of graph $G$
+\item The group of even fermionic operators $M_E$ is isomorphic to the quotient group $M_G/C_G$\  \textbf{Proof:}
+        \begin{alphlist}
+        \item Define the following invertible transformation for all edges and vertices in $G$:
+                \begin{equation}
+                        \begin{align}
+                                M_G/C_G &\longleftrightarrow M_E\\
+                                v_i C_G &\longleftrightarrow V_i\\
+                         e_{ij}C_G &\longleftrightarrow E_{ij}
+                        \end{align}
+                \end{equation}
+        \item $M_E$ contains all the possible edges not just those in $G$. As $G$ is connected, all edges not in $G$ can be constructed by composition of defined edge operators in $G$. Define this composition as:
+                \begin{equation}
+                        e_{ik} = e_{ij} \circ e_{jk} \longleftrightarrow E_{ik} = i E_{ij} E_{jk}
+                \end{equation}
+        \item As $M_G$ satisfies Eq.~\ref{edgecomm} for all $e_{ij}$ and $v_i$ in $G$, this holds for $M_G/C_G$, and therefore for all $E_{ij}$ and $V_{i}$ in $G$.
+        \item All $E_{ij}$ not in $G$ can be decomposed into $E_{ij}$ in $G$ and the introduced phase difference will have no impact on Eq.~\ref{edgecomm}. Therefore, all edges and vertices satisfy the anti-commutation and commutation relations
+        \item All cyclic paths in $G$ satisfy Eq.~\ref{loopcond} as:
+                \begin{equation}
+                       I = f(IC_G) = f\left( i^{n} \prod_{i=1}^n e_{p_i, p_{i+1}} C_G \right) =  i^{n} \prod_{i=1}^n E_{p_i, p_{i+1}}
+                \end{equation}
+                \item All cyclic paths that include edges ($\tilde E_{ij}$) not in $G$ also satisfy Eq.~\ref{loopcond} as the definition of composition adds a factor of $i$ for every edge that gets added so the total phase is preserved:
+                \begin{multline}
+                        i^{n+2} \prod^n_{i=0}E_{p_i,p_{i+1}} \tilde E_{p_{n-1}, p_n} \tilde E_{p_n p_{n+1}} =\\ i^{n+2} \prod^n_{i=0}E_{p_i,p_{i+1}} i E_{p_{n-1}, p_k} E_{p_k, p_{n+1}} i E_{p_{n+1}, p_l} E_{p_l, p_{n+1}}= i^{n+4} \prod^{n+4}_{i=1}E_{p_i, p_{i+1}} = I
+                \end{multline}
+        \end{alphlist} $\square$.
 \item The quotient group $M_G/C_G$ has a faithful representation in the Hilbert subspace $U$ as:
         \begin{alphlist}
         \item The group $M_G$ has a representation $\sigma$ in the Hilbert space $\mathcal{H}$ of a system of qubits
@@ -559,11 +587,11 @@ Finally, in order to satisfy the loop condition applying any given loop of edges
                 \end{equation}
                 with $U$ the common +1 eigenspace of $\sigma(C_G)$.
         \end{alphlist}
-\item If $\sigma$ is a representation in the multi-qubit Pauli operators $\{\pm 1, \pm i\} \times^N_i \{I_i, X_i, Y_i, Z_i\}$ then any subgroup $S$ that is abelian and does not contain $-I$ is a stabiliser of a non-trivial vector space (Nieslen Chuang)
+\item If $\sigma$ is a representation in the multi-qubit Pauli operators $\{\pm 1, \pm i\} \times^N_i \{I_i, X_i, Y_i, Z_i\}$ then any subgroup $S$ that is abelian and does not contain $-I$ is the stabiliser of a non-trivial vector space \cite{nielsenChuang}.
 \item Since $C_G$ is abelian (\textbf{Proof}), $\sigma(C_G)$ is abelian. So if $-I \in\xnot \sigma(C_G)$, $\sigma(C_G)$ is the stabiliser of the common +1 eigenspace of $\sigma(C_G)$
 \item $M_G/C_G$ (and hence $M_E$) has a representation in the code space of $\sigma(C_G)$
 \end{romanlist}
-Therefore, the mapping we have found is valid as long as no cycle is mapped to $-I$. As all cycles on this square lattice can be decomposed into a combination of cycles around single black and white faces, we only need to consider these stabiliser generators individually. \\\\
+Therefore, the mapping we have found is valid as long as no cycle is mapped to $-I$. As all cycles on this square lattice can be decomposed into a combination of cycles around single black and white faces (\textbf{proof}), we only need to consider these stabiliser generators individually. \\\\
 As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning it cannot be in a stabilizer, however this can be fixed by simply flipping the sign of one of the four edges. Then we get $X_1Y_5Y_2 \otimes -Y_2X_5X_3 \otimes X_3Y_5Y_4 \otimes Y_4 X_5 X_1 = -X_1^2 Y_2^2 X_3^2 Y_4^2 (Y_5X_5)^2 = - (iZ_5)^2 = I$.
 \begin{figure}[htbp]
 \centerline{
@@ -594,7 +622,7 @@ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning
                    \end{tikzpicture}}
            \fcaption{\label{blackfaceloops} Diagram of looping around black face. This gives $X^2 = Y^2 = I$ at every ``vertex'' qubit, but $(-X)Y(-X)Y = (XY)^2 = (iZ)^2 = -I$ at the ``face'' qubit. The two negative signs introduced by having to flip the orientation of the vertical edges cancel each other out.}
    \end{figure}\\
-   It can be seen in Fig~\ref{whitefaceloops}, that looping a white face produces a non-trivial stabilizer, which is not $-I$. Therefore, using the mapping described with the sign flipped on one edge of every black face will give a faithful representation of the even fermionic algebra. \\
+   It can be seen in Fig~\ref{whitefaceloops}, that looping a white face produces a non-trivial stabilizer, which is not $-I$. Therefore, using the mapping described (with the sign flipped on one edge of every black face) will give a faithful representation of the even fermionic algebra. \\
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
@@ -640,48 +668,7 @@ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning
         \begin{equation}
                 V_j = Z_j
         \end{equation}
-        These satisfy the anti-commutation relations as shown below:
-        \begin{equation}
-                \{E_{jk}, V_j\} = \begin{cases} \{ X_j Y_k X_{f(j,k)}, Z_j\}\\
--\{ X_j Y_k X_{f(j,k)}, Z_j\}\\
-\{X_j Y_k Y_{f(j,k)}, Z_j \}
-\end{cases}= \begin{cases} 
-\{X_j, Z_j\}  Y_k X_{f(j,k)}\\
--\{X_j, Z_j\}  Y_k X_{f(j,k)}\\
-\{X_j, Z_j\}  Y_k Y_{f(j,k)}\\
-\end{cases} = 0
-        \end{equation}
-        \begin{equation}
-                \{E_{ij}, E_{jk}\} = \begin{cases}
-                        \{ X_i Y_j X_{f(i,j)}, X_j Y_k X_{f(j,k)} \} & (i,j) \text{ and } (j,k) \text{ oriented downwards (1)}\\
-                        \{ -X_i Y_j X_{f(i,j)}, X_j Y_k X_{f(j,k)}\} & (i,j) \text{ oriented upwards and } (j,k) \text{ oriented downwards (2) }\\
-                        \{ X_i Y_j Y_{f(i,j)} , X_j Y_k X_{f(j,k)}\} & (i,j) \text{ oriented horizontal and } (j,k) \text{ oriented downwards (3)} \\
-                        \{ X_i Y_j X_{f(i,j)}, -X_j Y_k X_{f(j,k)} \} & (i,j) \text{ oriented downwards and } (j,k) \text{ oriented upwards (4)}\\
-                        \{ -X_i Y_j X_{f(i,j)}, -X_j Y_k X_{f(j,k)}\} & (i,j) \text{ and } (j,k) \text{ oriented upwards (5)} \\
-                        \{ X_i Y_j Y_{f(i,j)} , -X_j Y_k X_{f(j,k)} \} & (i,j) \text{ oriented horizontal and } (j,k) \text{ oriented upwards (6)} \\
-                        \{ X_i Y_j X_{f(i,j)}, X_j Y_k Y_{f(j,k)} \} & (i,j) \text{ oriented downwards and } (j,k) \text{ oriented horizontal (7)}\\
-                        \{ -X_i Y_j X_{f(i,j)}, X_j Y_k Y_{f(j,k)}\} & (i,j) \text{ oriented upwards and } (j,k) \text{ oriented horizontal (8)} \\
-                        \{ X_i Y_j Y_{f(i,j)} , X_j Y_k Y_{f(j,k)} \} & (i,j) \text{ and } (j,k) \text{ oriented horizontal (9)} \\
-                        \end{cases} 
-        \end{equation}
-        \begin{equation}
-\{E_{ij}, E_{jk}\} = \begin{cases}
-        \{Y_j,X_j\} Y_j X_{f(i,j)} Y_k X_{f(j,k)} & (1) \text{ or } (5)\\
-        \{  Y_j Y_{f(i,j)} , X_j  X_{f(i,j)}\} X_iY_k & (3) \text{ and } f(i,j) = f(j,k)\\
-        \{  Y_j X_{f(i,j)} , X_j  Y_{f(i,j)}\} X_iY_k & (7) \text{ and } f(i,j) = f(j,k)\\
-\{ Y_j , X_j  \} X_iY_k Y_{f(i,j)} X_{f(j,k)} & (3) \text{ or } (7) \text{ and } f(i,j) \neq f(j,k)\\
--\{  Y_j Y_{f(i,j)} , X_j  X_{f(i,j)}\} X_iY_k & (6) \text{ and } f(i,j) = f(j,k)\\
--\{  Y_j X_{f(i,j)} , X_j  Y_{f(i,j)}\} X_iY_k & (8) \text{ and } f(i,j) = f(j,k)\\
--\{ Y_j , X_j  \} X_iY_k Y_{f(i,j)} X_{f(j,k)} & (6) \text{ or } (8)  \text{ and } f(i,j) \neq f(j,k)\\
-\{X_i Y_j Y_{f(i,j)}, X_j Y_i Y_{f(i,j)} \} & (9) \text{ and } f(i, j) = f(j,k) \\
-\{Y_j, X_j\} X_i Y_{f(i,j)} Y_k Y_{f(j,k}} & (9) \text{ and } f(i,j) \neq f(j,k)
-\end{cases}
-        \end{equation}
-Therefore, as $\{Y_j, X_j\} = 0$, we have $\{E_{ij}, E_{jk}\} = 0$ for $f(i,j) \neq f(j,k)$. So any directed edges that meet head to tail anti-commute.
-\\\\
-
-
-        \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
+               \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
 \section{Relative performance}\label{comparision_section}
 Talk about how the long strings of Z increase the depth as it makes it hard to decompose in parallel
 

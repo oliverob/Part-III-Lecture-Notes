@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1641283737 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1641283737
-  "Mapping_fermions_to_qubits.aux" 1641283729 4961 2dae2e1f2a3102c7c9d0a627126a2ded "pdflatex"
-  "Mapping_fermions_to_qubits.tex" 1641283736 69252 d531519d1ad51d66330a823ac604d23e ""
+["pdflatex"] 1641291533 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1641291533
+  "Mapping_fermions_to_qubits.aux" 1641291522 4878 8b2da162035c01c75a7bc5aaef1baf5f "pdflatex"
+  "Mapping_fermions_to_qubits.tex" 1641291532 69075 c61de5cd8829d6871def79d075bc90d4 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1630412158 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm" 1630413782 1536 05df9db6aeccc4eea94fec15c9024f79 ""
@@ -214,5 +214,5 @@
   "qic.sty" 1640009890 13022 9c2cb222906c73694e71994b353e1542 ""
   (generated)
   "Mapping_fermions_to_qubits.pdf"
-  "Mapping_fermions_to_qubits.aux"
   "Mapping_fermions_to_qubits.log"
+  "Mapping_fermions_to_qubits.aux"
