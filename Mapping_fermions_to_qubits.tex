@@ -109,7 +109,7 @@ It is in the measurement of the Hamiltonian that the mapping becomes important. 
 \item \textbf{Average Pauli weight:} The average number of Pauli operators in each Pauli string in the Hamiltonian. The smaller the Pauli weight the less gates needed to measure the Hamiltonian, which reduces both the resource cost and the error due to gate infidelity. \textbf{Low-weight operators protect against barren plateau} \url{doi:10.1038/s41467-021-21728-w.}. \textbf{Could potentially elaborate here as it is a bit more complex than just less gates per string it also increases parallelisation and reduces ansatz depth}. \textbf{Mention locality}
 \item \textbf{Number of Pauli-strings:} Each Pauli-string is measured separately, so the fewer Pauli-strings to measure, the fewer times the ansatz needs to be initialized and measured.
 \end{romanlist}
-\subsubsection{Quantum Phase estimation}
+\subsubsection{Quantum Phase estimation} \label{qpe_section}
 QPE can be used to estimate the energy levels of a Hamiltonian to $n$ bits. This is achieved by applying successive steps of time evolution as a controlled gate with the target being the input state and the control being successive Hadamard ancilla qubits (illustrated in Fig.~\ref{QPECircuit}). Then by performing an inverse Quantum Fourier Transform on these ancilla qubits we get a superposition of binary expressions for the energy levels.\\
 \begin{figure}[htbp]
                \centerline{ \Qcircuit @C=1em @R=.7em {
@@ -397,7 +397,7 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
         Therefore, every fermionic operation in the Bravyi-Kiteav mapping only requires $O(\log(N))$ gates.
 \end{itemlist}
 \section{Derby-Klassen Map}\label{derby-klassen_section}
-As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. These schemes only find representations for the few local interactions that exist in the Hamiltonian, rather than between every pair of modes like the Jordan-Wigner or Bravyi-Kitaev mapping. Generally this results in using more qubits but drastically smaller Pauli weights.\\\\
+As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. These schemes only find representations for the few local interactions that exist in the Hamiltonian, rather than between every pair of modes like the Jordan-Wigner or Bravyi-Kitaev mapping. Generally this results in using more qubits but drastically smaller Pauli weights and thus fewer gates.\\\\
 One strategy used to find 'local' mappings is searching for sets of low weight Pauli-strings for representing the fermionic edge ($E_{jk}$) and vertex ($V_j$) operators. These are defined below in terms of the Majorana operators $\gamma_j$:
 \begin{equation}
 \gamma_j = a_j + a^{\dagger}_j, \> \bar{\gamma_j} = \frac{a_j - a_j^{\dagger}}{i}
@@ -669,201 +669,60 @@ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning
                 V_j = Z_j
         \end{equation}
                \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
-\section{Relative performance}\label{comparision_section}
+               Mitchell Chiew and Sergii Strelchuk \cite{fermionicEncoding} realised that for all the mappings we have discussed so far there is the potential for reducing resource costs without changing anything other than the order we encode qubits. This is achieved by improving the locality of the mapping, so local operations have lower Pauli weights. In the following treatment (adapted from \cite{fermionicEncoding}) we will consider the application to the Jordan-Wigner transformation. (\textbf{waiting for new paper on applications to mappings with additional auxillary})\\\\
+               In 1-D the enumeration is trivial, however, in 2D it becomes an interesting problem. For instance, consider a fermionic square lattice every mode must be assigned a qubit from a 1-D qubit array. There are many different ways of accomplishing this; most notably the S or Z pattern illustrated in Fig~\ref{SZpattern}. As discussed in Section~\ref{derby-klassen_section}, we are often interested in Hamiltonians with local interactions (e.g. between adjacent modes in the lattice). Therefore, the particular enumeration you use will impact the number of qubits that lie between neighbouring modes in the lattice. This is important as in the Jordan-Wigner transformation the Pauli-weight of a fermionic operation scales with the difference in enumeration. Thus by minimising the difference in enumeration between adjacent modes we minimise the average Pauli-weight of local interactions. This reduces to the problem of simple optimal linear arrangement (or edgesum) \cite{edgesum} from graph theory, and is formulated as:\\\\
+               \textbf{Simple Optimal Linear Arrangement}: For a graph G with vertices V and edges E. Find an enumeration scheme $f: V \rightarrow \{1,2,...,n\}$ that minimises the cost function
+               \begin{equation}
+                       C(f) = \sum_{\alpha, \beta} |f(\alpha) - f(\beta)|
+               \end{equation}
+               where the average Pauli weight is given by $\frac{C(f)}{|E|} +1$.\\\\
+               This problem is NP-complete \cite{edgesum} though a number of solutions are known for a range of graphs. We will consider the case of the square lattice to illustrate the principle, but it could be equally well applied to any of the other graphs with known solutions.\\\\
+               The Mitchison-Durbin pattern (illustrated in Fig~\ref{mitchisondurbin}) provides the fermion enumeration scheme that minimises the average Pauli weight of hopping terms in a square lattice. The following proof of this proposition is adapted from \cite{fermionicEncoding} and \cite{mitchisondurbin}:
+               \begin{itemlist}
+               \item \textbf{Lemma 7.1}: The minimum  cost will be attained by a horizontally and vertically ordered enumeration
+                       \begin{alphlist}
+                       \item Horizontal ordering means each row increases in numbering from left to right, and vertical ordering means each column increases in numbering from top to bottom
+                       \item It is clear that horizontally ordering a row will always decrease horizontal contributions to $C(f)$ (\textbf{is this clear?})
+                       \item \textbf{Lemma 7.1.1}: Horizontally ordering an enumeration will never increase the vertical contributions to $C(f)$
+                               \begin{romanlist}
+                               \item Horizontal ordering will only ever affect the vertical contributions if it acts upon adjacent rows differently, so modes that were not vertically adjacent now are. This only occurs if one row is in a different horizontal ordering to the other.
+                               \item It suffices to consider only the generative cases of swapping two modes: \\$f(\mu, \nu) < f(\mu, \nu+1)$ and $f(\mu+1, \nu) > f(\mu+1, \nu+1)$ or\\ $f(\mu, \nu) > f(\mu, \nu+1)$ and $f(\mu+1, \nu) < f(\mu+1, \nu+1)$
+                               \item In both instances, before vertical ordering their vertical contributions are $|f(\mu,\nu) -f(\mu+1, \nu)| + |f(\mu, \nu+1) - \f(\mu+1, \nu+1)|$, and after vertical ordering their vertical contributions are $|f(\mu,\nu) -f(\mu+1, \nu+1)| + |f(\mu, \nu+1) - \f(\mu+1, \nu)|$
+                               \item WLOG map the four modes to $\{i_1,i_2,i_3,i_4: i_k > i_j \text{ for } k>j\}$. Before the vertical ordering we have (I) $|i_4-i_2| + |i_1- i_3|$, (II) $|i_4 - i_1| + |i_2 - i_3|$ or (III) $|i_4 - i_1| + |i_3- i_2|$, and after we have $|i_4-i_3| + |i_1-i_2|$, $|i_4-i_2| +  |i_3 - i_1|$ or $|i_4 - i_3| + |i_2 - i_1|$ respectively. As $|i_4-i_2| > |i_4-i_3|$ and $|i_1-i_3|>|i_1-i_2|$, vertical ordering decreases the contribution in case I. As $|i_4-i_1| > |i_4-i_3|$ and $|i_1-i_2|>|i_3-i_2|$, vertical ordering decreases the contribution in case III. Case II simplifies to $i_4 +i_3 - i_1 - i_2$ before and  after so the contribution remains the same. $\square.$
+                               \end{romanlist}
+                       \item In a symmetrical manner to Lemma 7.1.1 vertically ordering an enumeration will never increase the horizontal contributions, and it will clearly only ever decrease the vertical contributions
+                       \item \textbf{Lemma 7.1.2}: Vertical ordering preserves horizontal ordering
+                               \begin{romanlist}
+                               \item  Assume the contrary that there is a horizontally ordered enumeration $h_{ij}$ that has been vertically ordered to enumeration $v_{ij}$, and now is no longer horizontally ordered
+                               \item This means that there is some $i<j$ and $k$ such that $v_{ik} > v_{jk}$. Vertical ordering implies that $v_{jn} \leq v_{jk}$ for all $n \in [1,k]$. Therefore, as vertical ordering just reorders within columns $(v_{jn}=)h_{jm}$ has $k$ values of $m$ for which $h_{jm} \leq v_{jk}$. Therefore, every column of $h$ to the left of $j$ has $k$ values of $m$ for which $h_{jm} < v_{jk}$. As $i<j$, column $i$ has $k$ values of $m$ for which $h_{im} \leq v_{jk} < v_{ik}$, which is a contradiction as $v_{ik}$ only has $k-1$ values less than it in its column $\square.$
+                       \end{romanlist}
+               \item Given an optimal enumeration with minimum cost we can apply horizontal ordering without increasing the cost, and then apply vertical ordering without disrupting the horizontal ordering or increasing the cost. Therefore, the minimum cost will be attained by a horizontally and vertically ordered enumeration $\square.$
+               \end{alphlist}
+       \item \textbf{Lemma 7.2}: Given a horizontally and vertically ordered enumeration scheme for the lattice, the cost function for the minimum-1-sum problem is:
+               \begin{equation}
+                       C(f) = \sum_{\alpha\in V_b} f(\alpha) + \sum_{\alpha\in V_r} f(\alpha) - \sum_{\alpha\in V_l} f(\alpha) - \sum_{\alpha\in V_t} f(\alpha) 
+               \end{equation}
+               where $V_b$, $V_r$, $V_l$ and $V_t$ are the vertices in the bottom row, right column, left column and top row respectively.
+               \begin{alphlist}
+               \item As horizontally and vertically ordered every absolute sign can be evaluated:
+                       \begin{equation}
+                               C(f) = \sum_{(\mu, \nu) \in V} f(\mu+1, \nu) - f(\mu, \nu) + f(\mu, \nu+1) - f(\mu, \nu)
+                       \end{equation}\\
+               \end{alphlist}
+               \end{itemlist}
+               \textbf{Could finish this proof off but I think it might take up too much space and isn't necessary for understanding the intuition of fermionic encoding}
+   \section{Relative performance}\label{comparision_section}
+   Each of these encodings offers various advantages and disadvantages when applied to real applications such as VQEs or phase estimation discussed in Section~\ref{applications_section}. As explained in Section~\ref{vqe_section}, the efficency of these techniques is broadly based on three factors: number of qubits required, average Pauli-weight and the number of distinct Pauli-strings in the Hamiltonian. All of the different mappings make different trade-offs between these factors.\\\\
+   There are some techniques \cite{reducequbits} which decrease the number of qubits required by increasing the number of distinct Pauli-strings, however we have not covered them here. All the techniques discussed in this essay leave the number of terms in the Hamiltonian unchanged.\\\\
+The main trade-off at play is between the Jordan-Wigner/Bravyi-Kitaev style mappings and the 'local' (Derby-Klassen style) mappings. 'Local' mappings sacrifice an increased qubit count for drastically more localised operations. Applying a local fermionic interaction on a Jordan-Wigner or Bravyi-Kitaev mapping will take $O(N)$ and $O(\log(N))$ gates respectively, whereas on the Derby-Klassen mapping it only takes 3. This significant reduction in gate count is coupled with an increase in qubit count with Derby-Klassen requiring 1.5 qubits per fermionic mode compared to the 1 qubit per mode that Jordan-Wigner and Bravyi-Kitaev need. However, the constant gate count only holds for local interactions and performing an operation involving two arbitrary modes would scale with the diameter of the graph of local interactions. Therefore, the Derby-Klassen design scheme is only useful for Hamiltonians with local interactions, and is most effective for interactions on a regular lattice for which a mapping is known \cite{derbyklassen2}. These include all uniform tilings of degree less than 4, and the cubic lattice.
+\\\\
+There is also an important discussion to be had about the relative merits of the Jordan-Wigner and Bravyi-Kitaev transformations. 
 Talk about how the long strings of Z increase the depth as it makes it hard to decompose in parallel
-
-
+\\
+There is a typo on page 18 Optimal fermion qubit mapping \cite{fermionicEncoding} "Because $i<j$ and $m>n$" not "Because $i<j$ and $m<n$".
 
         \pagebreak
-\section{Introduction}        
-The journal of {\it Quantum Information and Computation},
-for both on-line and in-print editions,
-will be produced by using the latex files of manuscripts
-provided by the authors. It is therefore essential that the manuscript 
-be in its final form, and in the format designed for the journal 
-because there will be no futher editing. The authors are strongly encouraged 
-to use Rinton latex template to prepare their manuscript. Or, the authors 
-should please follow the instructions given here if they prefer to use other 
-software. In the latter case, the authors ought to
-provide a postscript file of their paper for publication.
-
-\section{Text}
-\noindent
-Contributions are to be in English. Authors are encouraged to
-have their contribution checked for grammar.  
-Abbreviations are allowed but should be spelt
-out in full when first used. 
-
-\setcounter{footnote}{0}
-\renewcommand{\thefootnote}{\alph{footnote}}
-
-The text is to be typeset in 10 pt Times Roman, single spaced
-with baselineskip of 13 pt. Text area (excluding running title)
-is 5.6 inches across and 8.0 inches deep.
-Final pagination and insertion of running titles will be done by
-the editorial. Number each page of the manuscript lightly at the
-bottom with a blue pencil. Reading copies of the paper can be
-numbered using any legible means (typewritten or handwritten).
-
-\section{Headings}
-\noindent
-Major headings should be typeset in boldface with the first
-letter of important words capitalized.
-
-\subsection{Sub-headings}
-\noindent
-Sub-headings should be typeset in boldface italic and capitalize
-the first letter of the first word only. Section number to be in
-boldface roman.
-
-\subsubsection{Sub-subheadings}
-\noindent
-Typeset sub-subheadings in medium face italic and capitalize the
-first letter of the first word only. Section number to be in
-roman.
-
-\subsection{Numbering and Spacing}
-\noindent
-Sections, sub-sections and sub-subsections are numbered in
-Arabic.  Use double spacing before all section headings, and
-single spacing after section headings. Flush left all paragraphs
-that follow after section headings.
-
-\subsection{Lists of items}
-\noindent
-Lists may be laid out with each item marked by a dot:
-\begin{itemlist}
- \item item one,
- \item item two.
-\end{itemlist}
-Items may also be numbered in lowercase roman numerals:
-\begin{romanlist}
- \item item one
- \item item two
-          \begin{alphlist}
-          \item Lists within lists can be numbered with lowercase
-              roman letters,
-          \item second item.
-          \end{alphlist}
-\end{romanlist}
-
-\section{Equations}
-\noindent
-Displayed equations should be numbered consecutively in each
-section, with the number set flush right and enclosed in
-parentheses.
-
-\begin{equation}
-\mu(n, t) = {
-\sum^\infty_{i=1} 1(d_i < t, N(d_i) = n) \over \int^t_{\sigma=0} 1(N(\sigma) 
-= n)d\sigma}\,. \label{this}
-\end{equation}
-
-Equations should be referred to in abbreviated form,
-e.g.~``Eq.~(\ref{this})'' or ``(2)''. In multiple-line
-equations, the number should be given on the last line.
-
-Displayed equations are to be centered on the page width.
-Standard English letters like x are to appear as $x$
-(italicized) in the text if they are used as mathematical
-symbols. Punctuation marks are used at the end of equations as
-if they appeared directly in the text.
-
-\vspace*{12pt}
-\noindent
-{\bf Theorem~1:} Theorems, lemmas, etc. are to be numbered
-consecutively in the paper. Use double spacing before and after
-theorems, lemmas, etc.
-
-\vspace*{12pt}
-\noindent
-{\bf Proof:} Proofs should end with \square\,.
-
-\section{Illustrations and Photographs}
-\noindent
-Figures are to be inserted in the text nearest their first
-reference. The postscript files of figures can be imported by using
-the commends used in the examples here.
-
-\begin{figure} [htbp]
-%\vspace*{13pt}
-\centerline{\epsfig{file=fig1.eps, width=8.2cm}} %100 percent
-\vspace*{13pt}
-\fcaption{\label{motion}figure caption goes here.}
-\end{figure}
-
-Figures are to be sequentially numbered in Arabic numerals. The
-caption must be placed below the figure. Typeset in 8 pt Times
-Roman with baselineskip of 10~pt. Use double spacing between a
-caption and the text that follows immediately.
-
-Previously published material must be accompanied by written
-permission from the author and publisher.
-
-\section{Tables}
-\noindent
-Tables should be inserted in the text as close to the point of
-reference as possible. Some space should be left above and below
-the table.
-
-Tables should be numbered sequentially in the text in Arabic
-numerals. Captions are to be centralized above the tables.
-Typeset tables and captions in 8 pt Times Roman with
-baselineskip of 10 pt.
-
-\vspace*{4pt}   %only when needed
-\begin{table}[hb]
-\tcaption{Number of tests for WFF triple NA = 5, or NA = 8.}
-\centerline{\footnotesize NP}
-\centerline{\footnotesize\smalllineskip
-\begin{tabular}{l c c c c c}\\
-\hline
-{} &{} &3 &4 &8 &10\\
-\hline
-{} &\phantom03 &1200 &2000 &\phantom02500 &\phantom03000\\
-NC &\phantom05 &2000 &2200 &\phantom02700 &\phantom03400\\
-{} &\phantom08 &2500 &2700 &16000 &22000\\
-{} &10 &3000 &3400 &22000 &28000\\
-\hline\\
-\end{tabular}}
-\end{table}
-
-If tables need to extend over to a second page, the continuation
-of the table should be preceded by a caption, e.g.~``({\it Table
-2. Continued}).''
-
-\section{References Cross-citation}
-\noindent
-References cross-cited in the text are to be numbered consecutively in
-Arabic numerals, in the order of first appearance. They are to
-be typed in brackets such as \cite{first}  and \cite{cal, niel, mar}.
-%superscripts after punctuation marks,
-%e.g.~``$\ldots$ in the statement.$^5$''.
-
-\section{Sections Cross-citation}\label{sec:abc}
-\noindent
-Sections and subsctions can be cross-cited in the text by using the latex command
-shown here. In Section~\ref{sec:abc}, we discuss ....
-%\newpage
-
-\section{Footnotes}
-\noindent
-Footnotes should be numbered sequentially in superscript
-lowercase Roman letters.\fnm{a}\fnt{a}{Footnotes should be
-typeset in 8 pt Times Roman at the bottom of the page.}
-
-\nonumsection{Acknowledgements}
-\noindent
-We would thank ...
-
-\nonumsection{References}
-\noindent
-References are to be listed in the order cited in the text.
-For each cited work, include all the authors' names, year of the work, title,
-place where the work appears.
-Use the style shown in the following examples. For journal names,
-use the standard abbreviations. Typeset references in 9 pt Times
-Roman.
+        \section{References}\\
 \begin{thebibliography}{000}
         \bibitem{feynmann} Feynman, R.P.. {\it Simulating physics with computers}. International Journal of Theoretical Physics 1982;21(6-7):467–488. \url{doi:10.1007/bf02650179}.
         \bibitem{originalJordanWigner} Pascual Jordan and Eugene Wigner. {\it  {\"U}ber das Paulische {\"A}quivalenzverbot}. Zeitschrift fur Physik, 47(9-10):631{651, September 1928.
@@ -882,6 +741,9 @@ Roman.
 \bibitem{superfast} Setia, Kanav, Sergey Bravyi, Antonio Mezzacapo, and James D. Whitfield. {\it Superfast Encodings for Fermionic Quantum Simulation}. Physical Review Research 1, no. 3 (18 October 2019): 033033. \url{https://doi.org/10.1103/PhysRevResearch.1.033033}.
 \bibitem{derbyklassen} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping}. Physical Review B 104, no. 3 (8 July 2021): 035118. \url{https://doi.org/10.1103/PhysRevB.104.035118}.
 \bibitem{derbyklassen2} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping Part 2: Alternative Lattice Geometries}. ArXiv:2101.10735 [Quant-Ph], 26 January 2021. http://arxiv.org/abs/2101.10735.
+\bibitem{edgesum} Garey, M. R., D. S. Johnson, and L. Stockmeyer. {\it Some Simplified NP-Complete Graph Problems}. Theoretical Computer Science 1, no. 3 (1 February 1976): 237–67. \url{https://doi.org/10.1016/0304-3975(76)90059-1}.
+\bibitem{mitchisondurbin} Mitchison, Graeme, and Richard Durbin. {\it Optimal Numberings of an $N \times N$ Array}. SIAM Journal on Algebraic Discrete Methods 7, no. 4 (1 October 1986): 571–82. \url{https://doi.org/10.1137/0607063}.
+\bibitem{reducequbits} Moll, Nikolaj, Andreas Fuhrer, Peter Staar, and Ivano Tavernelli. {\it Optimizing Qubit Resources for Quantum Chemistry Simulations in Second Quantization on a Quantum Computer}. Journal of Physics A: Mathematical and Theoretical 49, no. 29 (22 July 2016): 295301. \url{https://doi.org/10.1088/1751-8113/49/29/295301}.
                 \bibitem{first}
 P. Horodecki and R. Horodecki (2001), {\it Distillation and bound entanglement},
 Quantum Inf. Comput., Vol.1, pp. 045-075.
@@ -900,17 +762,5 @@ A.W. Marshall and I. Olkin (1979), {\it Inequalities: theory of majorization and
 Academic Press (New York).
 \end{thebibliography}
 
-\appendix
-
-\noindent
-Appendices should be used only when absolutely necessary. They
-should come after the References. If there is more than one
-appendix, number them alphabetically. Number displayed equations
-occurring in the Appendix in this way, e.g.~(\ref{that}), (A.2),
-etc.
-\begin{equation}
-\langle\hat{O}\rangle=\int\psi^*(x)O(x)\psi(x)d^3x~. 
-\label{that}
-\end{equation}
 \end{document}
 
