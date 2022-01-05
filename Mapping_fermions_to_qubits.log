@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  5 JAN 2022 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  5 JAN 2022 16:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,6 +647,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package xypdf Info: Line width: 0.39998pt on input line 27.
 
+
+LaTeX Warning: Citation `feynmann' on page 1 undefined on input line 90.
+
+
+LaTeX Warning: Citation `originalJordanWigner' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Reference `jordan-wigner_section' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Reference `bravyi-kitaev_section' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Reference `derby-klassen_section' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Citation `fermionicEncoding' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Reference `fermionic-enumeration_section' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Reference `applications_section' on page 1 undefined on input line 94.
+
+
+LaTeX Warning: Reference `comparision_section' on page 1 undefined on input line 94.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 90--95
 
  []
@@ -669,6 +697,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--95
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `vqe' on page 2 undefined on input line 98.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 103--107
 
  []
@@ -678,23 +710,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--107
 
  []
 
-[2] <xymatrix 13x9 3274>
+[2]
+
+LaTeX Warning: Reference `QPECircuit' on page 3 undefined on input line 113.
+
+<xymatrix 13x9 3274>
+
+LaTeX Warning: Citation `chemistryReview' on page 3 undefined on input line 126.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 113--127
 
  []
 
 
+LaTeX Warning: Reference `QPECircuit' on page 3 undefined on input line 132.
+
+
 Underfull \vbox (badness 1484) has occurred while \output is active []
 
- [3] <xymatrix 11x4 2169>
+ [3]
+
+LaTeX Warning: Citation `nielsenChuang' on page 4 undefined on input line 143.
+
+
+LaTeX Warning: Reference `vqe_section' on page 4 undefined on input line 146.
+
+
+LaTeX Warning: Citation `suzuki' on page 4 undefined on input line 146.
+
+
+LaTeX Warning: Citation `chemistryReview' on page 4 undefined on input line 150.
+
+
+LaTeX Warning: Reference `comparision_section' on page 4 undefined on input line 150.
+
+
+LaTeX Warning: Citation `seeley' on page 4 undefined on input line 151.
+
+
+LaTeX Warning: Reference `trotterStepCircuit' on page 4 undefined on input line 151.
+
+<xymatrix 11x4 2169>
+
+LaTeX Warning: Citation `seeley' on page 4 undefined on input line 159.
+
+
+LaTeX Warning: Citation `seeley' on page 4 undefined on input line 159.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 149--161
 
  []
 
 [4]
+
+LaTeX Warning: Citation `chemistryReview' on page 5 undefined on input line 167.
+
+
+LaTeX Warning: Reference `slater' on page 5 undefined on input line 167.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 175--178
 
  []
+
+
+LaTeX Warning: Citation `chemistryReview' on page 5 undefined on input line 181.
 
 
 ./Mapping_fermions_to_qubits.tex:187: Package amsmath Error: Erroneous nesting of equation structures;
@@ -715,6 +797,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--191
  []
 
 [5]
+
+LaTeX Warning: Citation `fermionicEncoding' on page 6 undefined on input line 192.
+
 
 ./Mapping_fermions_to_qubits.tex:197: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -742,19 +827,55 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
+LaTeX Warning: Citation `seeley' on page 6 undefined on input line 208.
+
+
+LaTeX Warning: Citation `operatorLocality' on page 6 undefined on input line 209.
+
+
+LaTeX Warning: Citation `bravyikitaev' on page 6 undefined on input line 210.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
-[6] [7]
+
+LaTeX Warning: Citation `seeley' on page 6 undefined on input line 230.
+
+[6]
+
+LaTeX Warning: Citation `tranter2018' on page 7 undefined on input line 243.
+
+
+LaTeX Warning: Citation `bravyikitaev' on page 7 undefined on input line 279.
+
+
+LaTeX Warning: Reference `AL' on page 7 undefined on input line 311.
+
+[7]
+
+LaTeX Warning: Citation `bravyikitaev' on page 8 undefined on input line 319.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 353--358
 
  []
 
 [8]
+
+LaTeX Warning: Reference `secondQuant' on page 9 undefined on input line 359.
+
+
+LaTeX Warning: Reference `parityTable' on page 9 undefined on input line 359.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
+
+
+LaTeX Warning: Citation `seeley' on page 9 undefined on input line 382.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 381--384
@@ -804,6 +925,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--402
  []
 
 
+LaTeX Warning: Citation `superfast' on page 10 undefined on input line 408.
+
+
 ./Mapping_fermions_to_qubits.tex:413: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -815,6 +939,15 @@ l.413 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `edgecomm' on page 10 undefined on input line 415.
+
+
+LaTeX Warning: Citation `derbyklassen' on page 10 undefined on input line 415.
+
+
+LaTeX Warning: Reference `loopcond' on page 10 undefined on input line 415.
 
 [10]
 
@@ -834,6 +967,15 @@ If that doesn't work, type  X <return>  to quit.
 Underfull \hbox (badness 10000) in paragraph at lines 426--429
 
  []
+
+
+LaTeX Warning: Citation `derbyklassen2' on page 11 undefined on input line 437.
+
+
+LaTeX Warning: Citation `derbyklassen' on page 11 undefined on input line 437.
+
+
+LaTeX Warning: Reference `squareLattice' on page 11 undefined on input line 439.
 
 
 ./Mapping_fermions_to_qubits.tex:530: Package pgf Error: No shape named `2pt' is known.
@@ -1279,6 +1421,15 @@ l.530 }
 (That was another \errmessage.)
 
 
+LaTeX Warning: Reference `derbyklassenline' on page 11 undefined on input line 536.
+
+
+LaTeX Warning: Reference `squareLattice' on page 11 undefined on input line 552.
+
+
+LaTeX Warning: Citation `derbyklassen2' on page 11 undefined on input line 553.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 536--554
 
  []
@@ -1289,6 +1440,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 536--554
  []
 
 [11]
+
+LaTeX Warning: Reference `edgecomm' on page 12 undefined on input line 555.
+
 
 ./Mapping_fermions_to_qubits.tex:564: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -1302,7 +1456,22 @@ l.564                         \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+LaTeX Warning: Reference `edgecomm' on page 12 undefined on input line 570.
+
+
+LaTeX Warning: Reference `edgecomm' on page 12 undefined on input line 571.
+
 [12]
+
+LaTeX Warning: Reference `loopcond' on page 13 undefined on input line 572.
+
+
+LaTeX Warning: Reference `loopcond' on page 13 undefined on input line 576.
+
+
+LaTeX Warning: Citation `nielsenChuang' on page 13 undefined on input line 590.
+
 ./Mapping_fermions_to_qubits.tex:591: Undefined control sequence.
 l.591 ...igma(C_G)$ is abelian. So if $-I \in\xnot
                                                    \sigma(C_G)$, $\sigma(C_G...
@@ -1311,6 +1480,12 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `blackfaceloops' on page 13 undefined on input line 595.
+
+
+LaTeX Warning: Reference `whitefaceloops' on page 13 undefined on input line 625.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 594--658
@@ -1323,7 +1498,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 666--668
  []
 
 
+LaTeX Warning: Citation `fermionicEncoding' on page 14 undefined on input line 672.
+
+
+LaTeX Warning: Citation `fermionicEncoding' on page 14 undefined on input line 672.
+
+
 LaTeX Warning: Reference `SZpattern' on page 14 undefined on input line 673.
+
+
+LaTeX Warning: Reference `derby-klassen_section' on page 14 undefined on input line 673.
+
+
+LaTeX Warning: Citation `edgesum' on page 14 undefined on input line 673.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 672--675
@@ -1337,7 +1524,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 672--675
 
 [14]
 
+LaTeX Warning: Citation `edgesum' on page 15 undefined on input line 679.
+
+
 LaTeX Warning: Reference `mitchisondurbin' on page 15 undefined on input line 680.
+
+
+LaTeX Warning: Citation `fermionicEncoding' on page 15 undefined on input line 680.
+
+
+LaTeX Warning: Citation `mitchisondurbin' on page 15 undefined on input line 680.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 677--681
@@ -1378,61 +1574,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 710--711
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--723
+LaTeX Warning: Reference `applications_section' on page 16 undefined on input line 715.
+
+
+LaTeX Warning: Reference `vqe_section' on page 16 undefined on input line 715.
+
+
+LaTeX Warning: Citation `reducequbits' on page 16 undefined on input line 716.
+
+
+LaTeX Warning: Citation `derbyklassen2' on page 16 undefined on input line 717.
+
+
+LaTeX Warning: Citation `seeley' on page 16 undefined on input line 719.
+
+
+LaTeX Warning: Citation `tranter2018' on page 16 undefined on input line 720.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--721
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--723
+Underfull \hbox (badness 10000) in paragraph at lines 715--721
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--723
+Underfull \hbox (badness 10000) in paragraph at lines 715--721
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--721
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--721
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--721
 
  []
 
 [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2809) has occurred while \output is active []
 
  [17]
 
-./Mapping_fermions_to_qubits.tex:726: LaTeX Error: There's no line here to end.
+LaTeX Warning: Citation `fermionicEncoding' on page 18 undefined on input line 724.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+
+./Mapping_fermions_to_qubits.tex:728: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.726 \begin
+l.728 \begin
             {thebibliography}{000}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Mapping_fermions_to_qubits.tex:726: Package calc Error: `0' invalid at this point.
+./Mapping_fermions_to_qubits.tex:728: Package calc Error: `0' invalid at this point.
 
 See the calc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.726 \begin{thebibliography}{000}
+l.728 \begin{thebibliography}{000}
                                   
 I expected to see one of: + - * / )
 
-./Mapping_fermions_to_qubits.tex:726: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:728: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.726 \begin{thebibliography}{000}
+l.728 \begin{thebibliography}{000}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:726: Illegal unit of measure (pt inserted).
+./Mapping_fermions_to_qubits.tex:728: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.726 \begin{thebibliography}{000}
+l.728 \begin{thebibliography}{000}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1442,20 +1678,20 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 []\OT1/cmr/m/n/9 Derby, Charles, and Joel Klassen. \OT1/cmr/m/it/9 A Com-pact Fermion to Qubit Map-ping Part
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 \OT1/cmr/m/it/9 2: Al-ter-na-tive Lat-tice Ge-ome-tries\OT1/cmr/m/n/9 . ArXiv:2101.10735 [Quant-Ph], 26 Jan-uary 2021.
  []
 
-[18]
-./Mapping_fermions_to_qubits.tex:763: Missing } inserted.
+[19]
+./Mapping_fermions_to_qubits.tex:765: Missing } inserted.
 <inserted text> 
                 }
-l.763 \end{thebibliography}
+l.765 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1464,27 +1700,27 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Mapping_fermions_to_qubits.tex:763: LaTeX Error: \begin{list} on input line 726 ended by \end{thebibliography}.
+./Mapping_fermions_to_qubits.tex:765: LaTeX Error: \begin{list} on input line 728 ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.763 \end{thebibliography}
+l.765 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[19]
+[20]
 
-./Mapping_fermions_to_qubits.tex:765: LaTeX Error: \begin{thebibliography} on input line 726 ended by \end{document}.
+./Mapping_fermions_to_qubits.tex:767: LaTeX Error: \begin{thebibliography} on input line 728 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.765 \end{document}
+l.767 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1494,25 +1730,28 @@ or  <return>  to continue without it.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 726 (\begingroup)
+### semi simple group (level 1) entered at line 728 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  17941 strings out of 478599
  325543 string characters out of 5858101
- 741140 words of memory out of 5000000
+ 740912 words of memory out of 5000000
  35475 multiletter control sequences out of 15000+600000
  419811 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,26n,89p,1443b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (19 pages, 483239 bytes).
+ 84i,26n,89p,2009b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on Mapping_fermions_to_qubits.pdf (20 pages, 494633 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
