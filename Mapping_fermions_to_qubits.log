@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  6 JAN 2022 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  6 JAN 2022 11:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1378,79 +1378,104 @@ Underfull \hbox (badness 10000) in paragraph at lines 709--710
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--720
+Underfull \hbox (badness 10000) in paragraph at lines 714--716
 
  []
 
 [16]
-Underfull \vbox (badness 2809) has occurred while \output is active []
 
- [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 724.
 
- [18]
 
-./Mapping_fermions_to_qubits.tex:727: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 719--725
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--725
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--725
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--725
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 726--728
+
+ []
+
+[18] [19]
+
+./Mapping_fermions_to_qubits.tex:733: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.727 \begin
+l.733 \\\\
+          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./Mapping_fermions_to_qubits.tex:734: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.734 T
+       here is a typo on page 18 Optimal fermion qubit mapping \cite{fermion...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[20]
+
+./Mapping_fermions_to_qubits.tex:738: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.738 \begin
             {thebibliography}{000}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Mapping_fermions_to_qubits.tex:727: Package calc Error: `0' invalid at this point.
+./Mapping_fermions_to_qubits.tex:738: Package calc Error: `0' invalid at this point.
 
 See the calc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.727 \begin{thebibliography}{000}
+l.738 \begin{thebibliography}{000}
                                   
 I expected to see one of: + - * / )
 
-./Mapping_fermions_to_qubits.tex:727: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:738: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.727 \begin{thebibliography}{000}
+l.738 \begin{thebibliography}{000}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:727: Illegal unit of measure (pt inserted).
+./Mapping_fermions_to_qubits.tex:738: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.727 \begin{thebibliography}{000}
+l.738 \begin{thebibliography}{000}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1460,20 +1485,20 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 744--745
+Underfull \hbox (badness 10000) in paragraph at lines 755--756
 []\OT1/cmr/m/n/9 Derby, Charles, and Joel Klassen. \OT1/cmr/m/it/9 A Com-pact Fermion to Qubit Map-ping Part
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 744--745
+Underfull \hbox (badness 10000) in paragraph at lines 755--756
 \OT1/cmr/m/it/9 2: Al-ter-na-tive Lat-tice Ge-ome-tries\OT1/cmr/m/n/9 . ArXiv:2101.10735 [Quant-Ph], 26 Jan-uary 2021.
  []
 
-[19]
-./Mapping_fermions_to_qubits.tex:765: Missing } inserted.
+[21]
+./Mapping_fermions_to_qubits.tex:776: Missing } inserted.
 <inserted text> 
                 }
-l.765 \end{thebibliography}
+l.776 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1482,27 +1507,27 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Mapping_fermions_to_qubits.tex:765: LaTeX Error: \begin{list} on input line 727 ended by \end{thebibliography}.
+./Mapping_fermions_to_qubits.tex:776: LaTeX Error: \begin{list} on input line 738 ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.765 \end{thebibliography}
+l.776 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[20]
+[22]
 
-./Mapping_fermions_to_qubits.tex:767: LaTeX Error: \begin{thebibliography} on input line 727 ended by \end{document}.
+./Mapping_fermions_to_qubits.tex:778: LaTeX Error: \begin{thebibliography} on input line 738 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.767 \end{document}
+l.778 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1515,22 +1540,22 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 727 (\begingroup)
+### semi simple group (level 1) entered at line 738 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  17942 strings out of 478599
  325547 string characters out of 5858101
- 741143 words of memory out of 5000000
+ 741161 words of memory out of 5000000
  35476 multiletter control sequences out of 15000+600000
  419811 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,26n,89p,2707b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,26n,89p,1443b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (20 pages, 486260 bytes).
+Output written on Mapping_fermions_to_qubits.pdf (22 pages, 494097 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
+ 250 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
