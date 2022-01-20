@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{cancel}
+\title{Quantum Information, Foundations and Gravity}
+\author{oliverobrien111 }
+\date{July 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Lecture 1}
+Don't want to follow the route of considering the relationship between gravity and relativistic quantum field theory. It turns out that we can understand a lot and reach open questions by considering non-relativistic quantum mechanics (NRQM) relationship to special relativity. Using Newtonian gravity in "semi-relativistic models" that use NRQM in non-relativistic regime and allow for causal structure of special relativity.\\\\
+We want to analyse experiments proposed by Bose et. al. and Marletto and Vedral (BMV). A crude explanation of this is:\\\\
+Some small but not trival mass is placed into some superposition state on the left and independantly a second mass is placed into a seperate superposition on the right
+\begin{equation}                \frac{1}{\sqrt{2}}( \ket{L}_1 + \ket{R}_1) \> \> \> \> | \> \> \> \> \frac{1}{\sqrt{2}} ( \ket{L}_2 + \ket{R}_2)
+       \end{equation}
+       $\ket{L}$ and $\ket{R}$ have different mass distributions.Neglecting all other forces (which needs to be justified) these interact via gravity. We could use general relativity but the forces look like they will be fairly small so GR is probably overkill. More importantly GR doesn't tell us what to do with superposition of states as it requires a classical mass distribution. We could make a guess at what the right classical mass distribution is going to be? What would one guess?\\\\ Might try the average mass density calculated via quantum expectations (heavily questionable). In this case say the superpositions where between point positions then this averaged mass would give half the mass at each of the positions. Therefore you would get four contributions to the Newtonian potential. Might guess that we can apply the non relativistic schrodinger equation with this classical newtonian potential:
+       \begin{equation}
+               i \hbar \frac{\partial \psi(\bm x_1, \bm x_2)}{\partial t} = H \psi(\bm x_1, \bm x_2) = (\frac{-\hbar^2}{2m} + V(x)) \psi(\bm x_1, \bm x_2)
+       \end{equation}
+       This gives a gravitional self-interaction for both particles (e.g. the two half masses of each particle will be pulled towards their central point by themselves?). It suggests (if we apply non relativistic quantum mechancis naively), that the Newtonian potential $\bm V(x)$ changes discontinously and instantaneously if one particles position is measured. Discontinouity does not fit with our understanding from GR which requires continous mass distributions. The instaneous change would instaneously change the potential giving action at distance which fits poorly with special relativity (the newtonian potential is long range). This is not a proof that this line of thought is wrong but it means it needs work and thought if it has any chance of being right.\\\\
+       Now lets consider what standard textbook quantum mechanics tells us to say about this. Measurement alters wavefucntions instaneously and discontinously. Does NRQM + measurement imply non-local action at a distance? Naively it seems so. The obvious response is that if you consider non-relativistic quantum mechanics then you should expect non-relativistic results. However, we still get this issue in quantum field theory for a system which is approximately 1 particle. Not saying that this question is not answerable in relativistic field theory but the most sensible place to think about it is non-relativistic quantum mechanics. Simply observing that the schrodinger equation is non-relativistic  is an adequate explanation. \\\\
+       We will use printed lecture nots for the first part of the course, and then we will use selected research papers + discussion + summary and comments for much of the later part. \\\\
+       Lets go back to the schordinger equation itself:
+       \begin{equation}
+               H \psi(\bm x_1, \bm x_2,\ldots, \bm x_n, t) = ( - \sum \frac{\hbar^2}{2m_i} \nabla^2_i + V(\bm x_1,\ldots, \bm x_n) ) \psi(\bm x_1, \bm x_2,\ldots, \bm x_n, t) = - \frac{i \hbar \parital \psi}{\partial t}
+       \end{equation}
+       Clearly non-relativistic (the speed of light doesn't even appear and we treat $t,x$ differently). Note this gives an alternative treatment of BMV: \\\\
+       We could use $V(\bm x_1, \bm x_2) \sim \frac{m_1 m_2 G}{|\bm x_1 - \bm x_2|}$. THis gives 4 different terms $V_{LL}, V_{LR} V_{RL}, V_{RR}$ which implies that Eq. 1 evolves to $\ket{LL} e^{i \phi_1} + \ket{LR} e^{i \phi_2} + \ket{RL} e^{i \phi_3} + \ket{RR} e^{i \phi_4}$. We start out with a product state and then we end up with an entangled state. \\\\
+       Measurement postulate (general form): Any quantum measurement with outcomes $i \in I$ is described by a collection of operators $\{ A_i \}$ s.t. $\sum_i A^{\dagger}_iA_i = I$. The probability of outcome $p(i) = \bra{\psi} A_i^{\dagger} A_i \ket{\psi}$. The state after obtaining outcome $i$ is $\frac{A_i \ket{\psi}}{|| A_i \ket{\psi}||} =  \frac{A_i \ket{\psi}}{( \bra{\psi} A_i^{\dagger} A_i \ket{\psi})^{\frac{1}{2}}}$. A special case is $A_i = \rho_i$ with a projective map $\rho_i^2 = \rho_i$.\\\\
+       How general are these postulates (within the non-relativistic regime). We are assuming:\\
+\begin{enumerate}
+\item We know precisely the initial state $\ket{\psi(0)}$
+\item They require that the system is isolated (what if other systems are interacting or being observed)
+\item They require assumption that there is an initial state $\ket{\psi(0)}$
+\end{enumerate}
+1. and 2. can and do fail - we need to consider what to do in this case. 3. might also not be fundamentally correct (was there a pure initial state of the universe). We also want to ask could there be more general rules? Could there be more general ways to extract info from quantum states? Could there be nonlinear corrections to quantum theory?
+\end{document}

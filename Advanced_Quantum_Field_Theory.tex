@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{cancel}
+\title{Quantum Information Theory}
+\author{oliverobrien111 }
+\date{July 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Lecture 1}
+\subsection{Path Integrals in Quantum Mechanics}
+Goal is to reformulate Schrodingers equation as a path integral.
+$$
+\hat H(\hat x, \hat p) \text{ with } [\hat x , \hat p] = i \hbar
+$$
+Assuming $\hat H = \frac{\hat p^2}{2m} + V(\hat x)$. The schrodinger picture is:
+$$
+i \hbar \frac{d}{dt} \ket{\psi(t)} = \hat H \ket{\psi(t)}
+$$
+so
+$$
+\ket{\psi(t)} = e^{-i \hat H t/\hbar} \ket{\psi(t)}
+$$
+Wavefunction: $\Psi(x,t) = \bra{x} \ket{\psi(t)}$. We want to solve schordingers equation for this wavefucniton in a way that introduces the path integral:
+$$
+\Psi(x,t) = \bra{x} \ket{\psi(t)} = \bra{x} e^{- \hat H t/\hbar} \ket{\psi(0)}
+$$
+$$
+\Psi(x,t) = \int_{-\infty}^{\infty} K(x, x_0;t) \Psi(x_0, 0)
+$$
+where
+$$
+K(x, x_0;t) = \ket{x} e^{-i \hat Ht/ \hbar} \ket{x_0}
+$$
+is what we want a path integral expression for\\\\
+Lets consider $n$ intermediate times/positions. Let $0 =t_0 <t_1 < t_2 <\ldots < t_n < t_{n+1} = T$:
+$$
+e^{-i \hat H T/\hbar} = e^{-i \hat H(t_{n+1}-t_n)/\hbar}\cdotse^{-i \hat H(t_{1}-t_0)/\hbar}
+$$
+Insert identity: $I = \int dx_r \ket{x_r}\bra{x_r}$:
+$$
+K(x, x_0;t) = \int_{-\infty}^{\infty} \left( \prod_{r=1}^n dx_r \bra{x_{r+1}}e^{-i\hat H(t_{r+1}-t_r)/\hbar} \ket{x_r}\right) \bra{x_1} e^{-i\hat H(t_1 - t_0)/\hbar} \ket{x_0}
+$$
+Consider fixed $V(\hat x) =0$. $K_0(x, x'; t) = \bra{x} e^{-i \frac{ \hat p^2}{2m \hbar} t} \ket{x'}$. Insert the identity: $I = \int \frac{dp}{2\pi \hbar} \ket{p}\bra{p}$.
+$$
+K_0(x,x';t) = e^{\frac{im(x-x')^2}{2 \hbar t}} \sqrt{\frac{m}{2\pi i \hbar t}}
+$$
+For $V(\hat x) \neq 0$, we need very small time steps. Separate kinetic and potential parts (Suzuki-Trotter decomposition). Take $t_{r+1} - t_r = \delta t$ to be small and $n$ large so $n\delta t = T$ (constant).
+$$
+e^{-i \hat H \delta t / \hbar} = \exp( - \frac{i \hat p^2 \delta t}{2\pi \hbar}) \exp( - \frac{iV(\hat x) \delta t}{\hbar}) ( 1+ O((\delta t)^2))
+$$
+The last term here is vanishingly small under the Broker-Campbell-Henshorff thingy. Between any 2 position eigenstates:
+$$
+\bra{x_{r+1}} e^{-i \hat H \delta t/\hbar} \ket{x_r} = e^{-i V(x_r) \delta t/\hbar} K_0(x_{r+1}, x_r; \delta t)
+$$
+Putting all these pieces together:
+\begin{equation}
+        K(x,x_0;T) = \int [ \prod_r dx_r] (\frac{m}{2\pi i \hbar \delta t})^{\frac{n+1}{2}} \exp( i \sum_{r=0}^n [ \frac{m}{2\hbar}( \frac{x_{r+1} - x_r}{\delta t})^2  - \frac{1}{\hbar} V(x)] \delta t)
+\end{equation}
+In the limit $n\rightarrow a, \delta t \rightarrow 0$ the exponent becomes $\frac{1}{\hbar} \int_0^T dt [ \frac{1}{2} m \dot x^2 - V(x)] = \int_0^T dt \mathfrak{L}(x,\dot x)$. So this is classical action in the limit.\\\\
+We have no found a path integral (functional integral)
+$$
+K(x, x_0; T) = \bra{x} e^{- i \hat H T /\hbar} \ket{x} = \int \mathcal{D}x e^{i S/\hbar}
+$$
+where $$\mathcal{D}x = \lim_{\delta t \rightarrow 0, n \delta t = T} \sqrt{\frac{m}{2 \pi i \hbar \delta t}} \prod_{r=1}^n ( \sqrt{\frac{m}{2 \pi i \hbar \delta t}} dx_r)$$
+One way of considering the classic limit is taking $\hbar \rightarrow 0$. For $e^{iS/\hbar}$ thisincreases the phases/frequencies. The Riemann-Lebesque lemma implies tha thte smallest frequncy (i.e. the path whihc minimises $S$ dominates the integral). As smallest $S$ is the hamiltonians principle of least action so this is equivalent to the classical treatment. \\\\
+Another way is for $\hbar \neq 0$ the QM amplitude is the sum of all paths each weighted by phase $e^{iS/\hbar}$. This gives the interfence patterns we see in double slit etc.\\\\
+One trick we are going to play is dealing in imaginary time. You can analytically continue to imaginary time. Let $\tau = it$, then $\bra{x} e^{- \hat H t/\hbar} \ket{x_0} = \int \mathcal{D}x e^{-S/\hbar}$. Here the $\hbar \rightarrow 0$ argument is much more clear as the smallest value of $S$ will dominate in the limit. Analogy with statistical mechanics where $e^{-S /\hbar}$ is a botlzmann factor, and $\int \mathcal{D}x $ is the sum over microstates. These (with real exponentials) converge. Not all quantum questions can be answer in imaginary time. e.g. if there is a causality relationship between the initial and final space as we have convereted from mincovski to euclian. 
+\end{document}

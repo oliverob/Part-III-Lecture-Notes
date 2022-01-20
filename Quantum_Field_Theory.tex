@@ -503,7 +503,7 @@ This is essentially the equation for simple harmonic motion so solutions are:
 $$
 \tilde \phi(\bm p, t) = A_{\bm p} e^{i \omega_{\bm p} t} + B_{\bm p} e^{-i \omega_{\bm p} t} 
 $$
-for $\omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$. In reality $ A_{\bm p}^* =  A_{-\bm p}$ to give a real field. Also the action becomes:
+for $\omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$. In reality $ B_{\bm p}^* =  A_{-\bm p}$ to give a real field. Also the action becomes:
 $$
 S= \int dt \int d^3 x \mathfrak{L}(\bm x,t) = \frac{1}{2} \int dt \int d^3 p \tilde \phi^*(\bm p, t) (- \frac{\partial^2}{\partial t^2} - |\bm p|^2 - m^2)\tilde \phi(\bm p,t)
 $$
@@ -524,7 +524,7 @@ $$
 \hat a^{\dagger} = \sqrt{\frac{\omega}{2}} \hat q - \frac{i}{\sqrt{2\omega}} \hat p
 $$
 \begin{equation}
-[\hat a, \hat \a^{\dagger}] = \hbar
+[\hat a, \hat a^{\dagger}] = \hbar
 \end{equation}
 Rule of ordering always have annihalition operators on the right
 $$
@@ -534,7 +534,7 @@ $$
 [\hat H, \hat a ] = -\omega \hbar \hat a
 $$
 $$
-[\hat H, \hat a^{dagger} ] = \omega \hbar \hat a^{dagger}}
+[\hat H, \hat a^{\dagger} ] = \omega \hbar \hat a^{\dagger}}
 $$
 Consider:
 $$
@@ -542,7 +542,7 @@ $$
 $$
 Communation relations tell us
 $$
-\hat H(\hat a^{dagger} \ket{E} ) = (E+\hbar \omega) \hat a^{\dagger} \ket{E}
+\hat H(\hat a^{\dagger} \ket{E} ) = (E+\hbar \omega) \hat a^{\dagger} \ket{E}
 $$
 $$
 \hat H(\hat a \ket{E} ) = (E-\hbar \omega) \hat a \ket{E}
@@ -652,7 +652,7 @@ $$
 \epsilon_{0} = \lim_{L \rightarrow \frac{E_{(L)}_0}{V_L}
 $$
 $$
-E_0^{(L)} = \int_{-\frac{L}{2}}^{\frac{L}{2}} d^4 x \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p} \implies \epsilon_0 \int \frac{d^3p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p}
+E_0^{(L)} = \int_{-\frac{L}{2}}^{\frac{L}{2}} d^4 x \int \frac{d^3 p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p} \implies \epsilon_0 =\int \frac{d^3p}{(2\pi)^3} \frac{1}{2} \omega_{\bm p}
 $$
 with $\omega_{\bm p} = \sqrt{|\bm p|^2 + m^2}$. Infinity covers from large $|\bm p|$ with:
 $$
@@ -1142,13 +1142,13 @@ $$
 $$
 We have $[g] = +1$ and $g << m, M$. Mode expansions:
 $$
-\hat \phi(x) \int \frac{d^3 p}{(2\pi)^3 } \frac{1}{\sqrt{2 \epsilon_{\bm p}}} (\hat a_{\bm p} e^{- i p x} + \hat a^{\dagger}_{\bm p} e^{i p x})
+\hat \phi(x) = \int \frac{d^3 p}{(2\pi)^3 } \frac{1}{\sqrt{2 \epsilon_{\bm p}}} (\hat a_{\bm p} e^{- i p x} + \hat a^{\dagger}_{\bm p} e^{i p x})
 $$
 $$
-\hat \psi(x) \int \frac{d^3 p}{(2\pi)^3 } \frac{1}{\sqrt{2 E_{\bm p}}} (\hat b_{\bm p} e^{- i p x} + \hat c^{\dagger}_{\bm p} e^{i p x})
+\hat \psi(x)= \int \frac{d^3 p}{(2\pi)^3 } \frac{1}{\sqrt{2 E_{\bm p}}} (\hat b_{\bm p} e^{- i p x} + \hat c^{\dagger}_{\bm p} e^{i p x})
 $$
 $$
-\hat \psi^{\dagger}(x) \int \frac{d^3 p}{(2\pi)^3 } \frac{1}{\sqrt{2 E_{\bm p}}} (\hat b^{\dagger}_{\bm p} e^{- i p x} + \hat c_{\bm p} e^{i p x})
+\hat \psi^{\dagger}(x)= \int \frac{d^3 p}{(2\pi)^3 } \frac{1}{\sqrt{2 E_{\bm p}}} (\hat b^{\dagger}_{\bm p} e^{- i p x} + \hat c_{\bm p} e^{i p x})
 $$
 with $\epsilon = \sqrt{|\bm p|^2 + m^2}$ and $E = \sqrt{|\bm p|^2 + M^2}$. We also have $\hat a_{\bm p} \ket{0} = \hat b_{\bm p} \ket{0} = \hat c_{\bm p} \ket{0} = 0$ and the standard communation relations apply like $[\hat a_{\bm p}, \hat a^{\dagger}_{\bm p}] = (2\pi)^3 \delta^{(3)}(\bm p - \bm q)$. We will have $\hat a^{\dagger}$ creates a $\phi$ particle, $\hat b^{\dagger}$ creates a $\psi$ particle and $\hat c^{\dagger}$ creates a anti-$\psi$ particle. Going to try and consider:
 $$
@@ -1460,7 +1460,7 @@ Proof it is real: $\Sigma^*(x) = (\psi^{\dagger}(x) \gamma^0 \psi(x))^{\dagger} 
 Proof it is scalar: $\Sigma(x) \rightarrow \Sigma'(x) = \bar \psi(\Lambda^{-1} \cdot x) S(\Lambda)^{-1} S(\Lambda) \psi(\Lambda^{-1} \cdot x) = \bar \psi(\Lambda^{-1} \cdot x) \psi (\Lambda^{-1} \cdot x) = \Sigma (\Lambda^{-1} \cdot x)$\\\\
 Can also form a vector field: $V^{\mu}= \bar \psi(x) \gamma^{\mu} \psi(x)$ transforms as
 $$
-V^{\mu} (x) \rightarrow \Lambda^{\mu}_{\nu} V^{\nu} (\Lambda^{-1} \cdot x) = \Lambda^{\mu}_{\nu \bar \psi(\Lambda^{-1} \cdot x) \gamma^{\nu} \psi(\Lambda^{-1} \cdot x)
+V^{\mu} (x) \rightarrow \Lambda^{\mu}_{\nu} V^{\nu} (\Lambda^{-1} \cdot x) = \Lambda^{\mu}_{\nu }\bar \psi(\Lambda^{-1} \cdot x) \gamma^{\nu} \psi(\Lambda^{-1} \cdot x)
 $$
 Proof of above: 
 $$
@@ -1526,7 +1526,7 @@ act with $(-i \gamma^{nu}\partial_{\nu} - m \bm I_4)$:
 $$
 (\gamma^{\mu} \gamma^{\nu} \partial_{\nu} \partial_{\mu} + m^2 \bm I_4) \phi(x) = 0
 $$
-As $\frac{1}{2} \{ \gamma^{\mu}, \gamma^{\nu} \} = \eta^{\mu \nu} \bm I_4
+As $\frac{1}{2} \{ \gamma^{\mu}, \gamma^{\nu} \} = \eta^{\mu \nu} \bm I_4$
 $$
 (\partial_{\mu}\partial^{\mu} + m^2 ) \phi(x) = 0
 $$
@@ -1545,7 +1545,7 @@ $$
 Use the chiral representation for $\gamma$ then:
 $$
                                         \begin{pmatrix} - m \bm I_2 & p_{\mu}\sigma^{\mu}\\
-                                        p_{\mu} \bar \sigma^{\mu} ^ - m\bm I_2 \end{pmatrix} u = 0
+                                        p_{\mu} \bar \sigma^{\mu} & - m\bm I_2 \end{pmatrix} u = 0
 $$
 with $\sigma^{\mu} = (I_2, \sigma^i)$ and $\bar \sigma^{\mu} = (I_2, - \sigma^i)$. Show that the general solutino is:
 $$
@@ -1571,7 +1571,7 @@ $$
 with basis $\eta^s$ giving:
 $$
 v^{(s)} = \begin{pmatrix} \sqrt{p_{\mu} \sigma^{\mu}} \eta^s \\ 
--\sqrt{p_{\mu} \bar \sigma^{\mu} \eta^s\end{pmatrix}$
+-\sqrt{p_{\mu} \bar \sigma^{\mu} \eta^s\end{pmatrix}
 $$
 This gives a total of four linearlly independant solutions. \\\\
 We are going to need quite a few identities in order to do practical calculations, series of identities that are proved on example sheet 3 (useful to be able to derive these):
@@ -1602,7 +1602,7 @@ $$
 $$
 \subsection{Quantization of spinor field}
 $$
-\mathfrac{L} = i \bar \psi(x) \gamma^{\mu} \parital_{\mu} \psi(x) = m\bar \phi(x) \psi(x)
+\mathfrac{L} = i \bar \psi(x) \gamma^{\mu} \parital_{\mu} \psi(x) - m\bar \psi(x) \psi(x)
 $$
 Symmetry of dirac action:
 $$
