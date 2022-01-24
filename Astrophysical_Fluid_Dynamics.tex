@@ -176,9 +176,24 @@ gives the \textbf{isotropic magnetic pressure}:
         \bm F = \frac{(\bm B \cdot \nabla) \bm B}{4\pi} -  \nabla \cdot \frac{\bm B^2)}{8\pi}
 \end{equation}
 $$
-(\bm B \cdot \nabla) \bm B} =  B \frac{\partial \bm B}{\partial s} = B \frac{\partial B \bm s}{\partial s} =    B  \bm S \frac{\partial B}{\partial s} + B^2  \frac{\partial \bm s}{\partial s}  
+(\bm B \cdot \nabla) \bm B =  B \frac{\partial \bm B}{\partial s} = B \frac{\partial B \bm s}{\partial s} =    B  \bm s \frac{\partial B}{\partial s} + B^2  \frac{\partial \bm s}{\partial s}  
 $$
-Did not understand end of lecture 4 about finding the magnetic force in terms of the perpendicular and parallel gradients.\\\\
+To figure out change in $\bm s$ with respect to $s$ we look at the difference between the vectors as they turn an arc with radius $R_c$. Therefore, $\delta \bm s = \bm n \phi$ with $\bm n$ being a normal vector to the arc of radius $R_c$, and $\phi = \frac{ds}{R_c}$ as the angle is the distance divided by the radius. Therefore, $\delta \bm s = \bm n \frac{dS}{R_c}$:
+$$
+\frac{\partial \bm s}{\parital s} = \frac{\bm n}{R_c}
+$$
+Therefore:
+$$
+\frac{(\bm B \cdot \nabla) \bm B}{4\pi} = \bm s \frac{\partial}{\partial s} ( \frac{B^2}{8 \pi}) + \frac{B^2}{4\pi} \frac{\bm n}{R_c}  = \nabla_{||} (\frac{B^2}{8\pi} + \frac{B^2}{4\pi} \frac{\bm n}{R_c}
+        $$
+        $$
+        \bm F_m = \nabla_{||} (\frac{B^2}{8\pi}) + \frac{B^2}{4\pi} \frac{\bm n}{R_c} - \nabla_{||} (\frac{B^2}{8\pi}) - \nabla_{\perp} (\frac{B^2}{8\pi})  
+        $$
+        \begin{equation}
+                  \bm F_m = \frac{B^2}{4\pi} \frac{\bm n}{R_c}- \nabla_{\perp} (\frac{B^2}{8\pi})  
+
+        \end{equation}
+       \\
 As
 $$
 \nabla \times( \bm u \times \bm B)  = \bm u (\nabla \cdot \bm B) + (\bm B \cdot \nabla) \bm u - (\bm u \cdot \nabla) \bm B - \bm B (\nabla \cdot \bm u) 
@@ -288,7 +303,7 @@ So whenever $\beta <<1$ then thermal pressure is negligible, and if $\beta >>1$ 
 \subsection{Magnetic Buoyancy}
 If we have a magnetic structure in which the velocity is very small so we can set the magnetic structure to zero:
 $$
-0 = - \nabla p - \rho \nabla \phi + \frac{(\nabla \times \bm B) \times \bm B}{4 \pi} = -\nabla p - \rho \nabla \phi + \frac{1}{4\pi} B^2 \frac{\bm u}{R_c} - \nabla_{\perp}p_B
+0 = - \nabla p - \rho \nabla \phi + \frac{(\nabla \times \bm B) \times \bm B}{4 \pi} = -\nabla p - \rho \nabla \phi + \frac{1}{4\pi} B^2 \frac{\bm n}{R_c} - \nabla_{\perp}p_B
 $$
 Imagine a flux tube with considerably stronger flux density than the surrounding fluid which the magnetic field going in the $-x$ direction with graviational acceleration in $-z$ direction. Look $z$ in a plane. Assume $R_c \rightarrow \infty$ as magnetic field lines straight and parallel, also as $\nabla \phi$ is in $-z$ direction. The only contributions in the $x$ direction is: 
 $$
@@ -306,7 +321,7 @@ Assume that $\beta <<1$ meaning that $p_B >> p$, then we can neglect gravity, so
 $$
 \bm F_k = \frac{(\nabla \times \bm B) \times \bm B}{4 \pi} = \frac{\bm J \times \bm B}{c} = 0
 $$
-so when $\bm J || \bm B$ we are in the free force state. Therefore, $\bm J = \alpha(\bm u)\bm B$ so $\nabla \times \bm B = \frac{4\pi}{x} \bm J = \frac{4 \pi \alpha(\bm u) }{c} \bm B$.
+so when $\bm J || \bm B$ we are in the free force state. Therefore, $\bm J = \alpha(\bm u)\bm B$ so $\nabla \times \bm B = \frac{4\pi}{c} \bm J = \frac{4 \pi \alpha(\bm u) }{c} \bm B$.
 Take the divergence of this equation:
 $$
 0 = \frac{4\pi}{c}\left( ( \bm B \cdot \nabla) \alpha + \alpha (\nabla \cdot \bm B) \right) \implies (\bm B \cdot \nabla) \alpha = 0

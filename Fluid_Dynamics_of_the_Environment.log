@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 JAN 2022 14:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  21 JAN 2022 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Advanced_Quantum_Field_Theory.tex
-(./Advanced_Quantum_Field_Theory.tex
+**Fluid_Dynamics_of_the_Environment.tex
+(./Fluid_Dynamics_of_the_Environment.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27> (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
@@ -104,8 +104,8 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count268
 \l__pdf_internal_box=\box52
-) (./Advanced_Quantum_Field_Theory.aux)
-\openout1 = `Advanced_Quantum_Field_Theory.aux'.
+) (./Fluid_Dynamics_of_the_Environment.aux)
+\openout1 = `Fluid_Dynamics_of_the_Environment.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -129,109 +129,37 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
  []
-
-./Advanced_Quantum_Field_Theory.tex:44: Undefined control sequence.
-l.44 ... = e^{-i \hat H(t_{n+1}-t_n)/\hbar}\cdotse
-                                                  ^{-i \hat H(t_{1}-t_0)/\hbar}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Advanced_Quantum_Field_Theory.tex:44: Double superscript.
-l.44 ...= e^{-i \hat H(t_{n+1}-t_n)/\hbar}\cdotse^
-                                                  {-i \hat H(t_{1}-t_0)/\hbar}
-I treat `x^1^2' essentially like `x^1{}^2'.
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 66.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
+./Fluid_Dynamics_of_the_Environment.tex:50: Too many }'s.
+l.50 \subsubsection{More rigorous derivation}}
+                                              
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--75
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 98--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
-
- []
-
-
-Overfull \hbox (171.7846pt too wide) detected at line 121
-\OML/cmm/m/it/10 < ^^^[]^^^[] >\OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 d[]^^^^^^[]^^^[] []\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/10 ^^^[]m^^^ \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 J[]^^^\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 d[]^^^\OT1/cmr/m/n/10 (\U/msb/m/n/10 ~[]\OT1/cmr/m/n/10 )(\U/msb/m/n/10 ~[]\OT1/cmr/m/n/10 ) [](\OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/10 ^^^[]m^^^ \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 J[]^^^\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j[]
- []
-
-
-Overfull \hbox (30.89807pt too wide) detected at line 125
-\OML/cmm/m/it/10 < ^^^[]^^^[] >\OT1/cmr/m/n/10 = \U/msb/m/n/10 ~[][][]\OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = \U/msb/m/n/10 ~[][][]\OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 (0) []([]\OML/cmm/m/it/10 J[]m[]J\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = \U/msb/m/n/10 ~\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
-
- []
-
-[4] [5] (./Advanced_Quantum_Field_Theory.aux) ) 
+[2] (./Fluid_Dynamics_of_the_Environment.aux) ) 
 Here is how much of TeX's memory you used:
- 1796 strings out of 478599
- 23437 string characters out of 5858101
- 325258 words of memory out of 5000000
- 19676 multiletter control sequences out of 15000+600000
- 416912 words of font info for 77 fonts, out of 8000000 for 9000
+ 1781 strings out of 478599
+ 23221 string characters out of 5858101
+ 320266 words of memory out of 5000000
+ 19667 multiletter control sequences out of 15000+600000
+ 416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,66p,725b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Advanced_Quantum_Field_Theory.pdf (5 pages, 205490 bytes).
+ 56i,6n,66p,1173b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Fluid_Dynamics_of_the_Environment.pdf (2 pages, 149939 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

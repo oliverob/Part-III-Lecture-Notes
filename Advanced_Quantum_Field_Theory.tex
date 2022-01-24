@@ -71,5 +71,77 @@ $$
 where $$\mathcal{D}x = \lim_{\delta t \rightarrow 0, n \delta t = T} \sqrt{\frac{m}{2 \pi i \hbar \delta t}} \prod_{r=1}^n ( \sqrt{\frac{m}{2 \pi i \hbar \delta t}} dx_r)$$
 One way of considering the classic limit is taking $\hbar \rightarrow 0$. For $e^{iS/\hbar}$ thisincreases the phases/frequencies. The Riemann-Lebesque lemma implies tha thte smallest frequncy (i.e. the path whihc minimises $S$ dominates the integral). As smallest $S$ is the hamiltonians principle of least action so this is equivalent to the classical treatment. \\\\
 Another way is for $\hbar \neq 0$ the QM amplitude is the sum of all paths each weighted by phase $e^{iS/\hbar}$. This gives the interfence patterns we see in double slit etc.\\\\
-One trick we are going to play is dealing in imaginary time. You can analytically continue to imaginary time. Let $\tau = it$, then $\bra{x} e^{- \hat H t/\hbar} \ket{x_0} = \int \mathcal{D}x e^{-S/\hbar}$. Here the $\hbar \rightarrow 0$ argument is much more clear as the smallest value of $S$ will dominate in the limit. Analogy with statistical mechanics where $e^{-S /\hbar}$ is a botlzmann factor, and $\int \mathcal{D}x $ is the sum over microstates. These (with real exponentials) converge. Not all quantum questions can be answer in imaginary time. e.g. if there is a causality relationship between the initial and final space as we have convereted from mincovski to euclian. 
+One trick we are going to play is dealing in imaginary time. You can analytically continue to imaginary time. Let $\tau = it$, then $\bra{x} e^{- \hat H t/\hbar} \ket{x_0} = \int \mathcal{D}x e^{-S/\hbar}$. Here the $\hbar \rightarrow 0$ argument is much more clear as the smallest value of $S$ will dominate in the limit. Analogy with statistical mechanics where $e^{-S /\hbar}$ is a botlzmann factor, and $\int \mathcal{D}x $ is the sum over microstates. These (with real exponentials) converge. Not all quantum questions can be answer in imaginary time. e.g. if there is a causality relationship between the initial and final space as we have convereted from mincovski to euclian.
+\section{Lecture 2}
+We showed that in quantum mechanics a path integral over positions weighted by the classical action:
+$$
+\int \mathcal{D}x e^{i S[x]/ \pi}
+$$
+this came from non-relativisitic quantum mechanics whre the position is an operator. As we saw in quantum field theory this mixed treatment of space as an operator and time as a label is not appropriate for satisfying lorentz invariance, so we demote x to be a label so that space and time are treated the same. So we work with the appropriate fields. For much of this course we will work with scalar fields and then will generalise to fermionic fields and gauge fields. QM is 0+1 dimensional field theory.
+\subsection{Integrals and their diagram attic expansions}
+Goal of next couple lectures is to show mathematics and show that they generate the same diagrams as in QFT (have to take it on a little bit of faith will become clear towards the end of the course). We supress the interesting relationships between space and tiem for the this chapter and just treat them as labels.\\\\
+0-dimentsional field: $p: \{ \text{point} \} \rightarrow \mathbb{R}$ $q$ real variable\\\\
+Path integrals as if in imaginary time (which makes the integrals better behaved as we get expoentially decaying factors rather than complex integrands):
+$$
+Z = \int_{\mathbb{R}} d\phi e^{- S(\phi)/\hbar}
+$$
+For the purposes here just assume it is well-behaved. So assume it is an even polynomial so that as $\phi\rightarrow\pm \infty$ we have $S[\phi] \rightarrow \infty$. Also look at expectation values:
+$$
+< f(\phi) > = \frac{1}{Z} \int d\phi f(\phi) e^{-S(\phi)/\hbar}
+$$
+This are sometimes refeerred to as correlation functions. Assume that $f$ does not grow so much it overwhelms the expoential so this is well behaved. \\\\
+Now write down action corresponding to the free field theory which we can write down exactly and then we will do one that needs pertubation theory expansion.
+\subsubsection{Free theory}
+say we have $N$ real scalar fields (variables). Let $a, b \in [1,N]$:
+$$
+S[\phi] = \frac{1}{2} m_{ab} \phi_a \phi_b = \frac{1}{2} \phi^T m \phi
+$$
+with $m$ symmetric and positive definite ( $det m > 0$). If $m$ is diagonal it would obviously be a mass term, but it could also couple nearest neighbours and so could contain a discrete approximation to a derivate (so could represent difference operators on a discrte lattice but this isn't important today).\\\\
+We can diagonalise $m$ with orthogonal matrices $P$ as $m$ is symmetric and positive definite:
+$$
+m = P \Lambda P^T
+$$
+$\Lambda$ is diagonal with elements $\lambda_c$ with $c \in [1,N]$. Let $\chi = P^T Q$, then:
+$$
+Z_0 = \int d^N \phi \exp( - \frac{1}{2\pi} \phi^T m \phi) = \prod_{c} \sqrt{ \frac{2 \pi \hbar}{\lambda_c}} = \sqrt{ \frac{ (2\pi \hbar)^N}{det M}}
+$$
+We will need to play some tricks when we do fermionic fields as they are antisymmetric not symmetric so you end up with the detminant in the numerator rahter than the denominator. \\\\
+To go from the partition function $Z_0$ to correlation function $f^{\bm n}$ we introduce an external source $J$ (with N compononents) and replace the action $S_0(\phi)$ with $S_0(\phi) - J^T \phi$.
+$$
+Z_0(J) = \int d^N \phi \exp( -\frac{1}{2 \hbar} \phi^T m \phi + \frac{1}{\hbar} J^T \phi)
+$$
+Let $\tilde \phi = \phi - m^{-1} J$:
+$$
+Z_0(J) = \int d^N \phi \exp( - \frac{1}{2 \hbar} \tilde \phi^T m \tilde \phi) \exp( \frac{1}{2\hbar} J^T m^{-1} J)
+$$
+This is called the generating function or generating functional as it generates the correlation functions.\\\\
+\textbf{Example: Generate '2-point' function}:\\
+$$
+< \phi_a \phi_b> = \frac{1}{Z_0(0)} \int d^N \phi \phi_a \phi_b \exp( - \frac{1}{2\hbar} \phi^T m \phi + \frac{1}{\hbar} J^T \phi)|_{J=0} = \frac{1}{Z_0(0)} \int d^N \phi ( \hbar \frac{\partial}{\partial J_a}) (\hbar \frac{\partial}{\partial J_b}) \exp ( - \frac{1}{2\hbar} \phi^T m \phi + \frac{1}{\hbar} J^T \phi)|_{J=0}
+$$
+Now the $\phi$ depedance is only in the exponential so can bring out derivatives:
+$$
+< \phi_a \phi_b> = \hbar^2\frac{\partial}{\partial J_a} \frac{\partial}{\partial J_b} Z_0(J)|_{J=0} = \hbar^2\frac{\partial}{\partial J_a} \frac{\partial}{\partial J_b} Z_0(0) \exp( \frac{1}{2\hbar} J^T m^{-1} J)|_{J=0} = \hbar (m^{-1})_{ab} 
+$$
+We represent this as a line between two points $a$ and $b$ also called a propagator.\\
+\textbf{Example: '4-point' function}\\
+$$
+< \phi_b \phi_c \phi_d \phi_f > = \hbar^2[ (m^{-1})_{bc} (m^{-1})_{bc} 
+ + (m^{-1})_{bd} (m^{-1})_{cf} + (m^{-1})_{bf} (m^{-1})_{cd} ]
+$$
+These represent the three ways of linking up 4 points with 2 lines. For $2k$ field in <> then there should be $\frac{(2k)!}{2^k k!} = \frac{ \text{permutate all 2k points}}{\text{ (permutte all points inside pairs) (permute pairs)}}$ diagrams.
+\subsubsection{Interacting theory}
+We just want to go beyond the action we have written down to something a bit more complicated. In cases where exact intergration is not possible. So we seek an expansion about a classical point, with small $\hbar$. Integrals don't end up being convergent they are asymptotic. e.g.
+$$
+\int d^N \phi f(\phi) e^{-S/\hbar}
+$$
+wont have a Taylor expansion about $\hbar = 0$. All is not lost we can still make progress. The expansion we are going to look at in many cases is asymptotic which means that the various terms in the series get to be better and better approximations to the full results at least up to a point.
+$$
+I(\hbar) \sim \sum_{n=0}^{\infty} c_n \hbar^n
+$$
+iff
+$$
+\lim_{\hbar \rightarrow 0^+} \frac{1}{\hbar^N} | I(\hbar) - \sum_{n=0}^N c_n \hbar^n | = 0
+$$
+Series missed out some terms $e^{-\frac{1}{\hbar^2}}$ so there are non-perturbative effects. We won't cover it in this course but these terms do contribute effects in some gauge theories. In some weakly coupled thoeries like QED this is a very good expansions, as shown by how we can very accurate measure magnetic moment of an electron to $10^{-10}$ accuracy.
 \end{document}

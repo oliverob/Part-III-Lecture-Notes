@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  7 DEC 2021 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 JAN 2022 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,22 +403,78 @@ l.169 ...frac{1}{4\pi}  \epsilion_{ikj} \epsilion_
                                                   {jlm}  \frac{\partial B_m}...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./Astrophysical_Fluid_Dynamics.tex:179: Extra }, or forgotten $.
-l.179 (\bm B \cdot \nabla) \bm B}
-                                  =  B \frac{\partial \bm B}{\partial s} = B...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+./Astrophysical_Fluid_Dynamics.tex:183: Undefined control sequence.
+<argument> \parital 
+                    s
+l.183 \frac{\partial \bm s}{\parital s}
+                                        = \frac{\bm n}{R_c}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- []
+./Astrophysical_Fluid_Dynamics.tex:194: Missing $ inserted.
+<inserted text> 
+                $
+l.194 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-./Astrophysical_Fluid_Dynamics.tex:196: Extra }, or forgotten $.
-l.196 ...\rho}) = \frac{\bm B}{\rho} \cdot \nabla}
+./Astrophysical_Fluid_Dynamics.tex:194: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.194 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./Astrophysical_Fluid_Dynamics.tex:195: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195         \end{equation}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Astrophysical_Fluid_Dynamics.tex:195: You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.195         \end{equation}
+                            
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./Astrophysical_Fluid_Dynamics.tex:195: Missing $ inserted.
+<inserted text> 
+                $
+l.195         \end{equation}
+                            
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Astrophysical_Fluid_Dynamics.tex:195: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.195         \end{equation}
+                            
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Astrophysical_Fluid_Dynamics.tex:211: Extra }, or forgotten $.
+l.211 ...\rho}) = \frac{\bm B}{\rho} \cdot \nabla}
                                                    \bm u
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -427,34 +483,34 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--218
+Underfull \hbox (badness 10000) in paragraph at lines 212--215
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 227--232
+Underfull \hbox (badness 10000) in paragraph at lines 228--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 242--247
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:252: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:267: Undefined control sequence.
 <argument> \parital 
                     \psi 
-l.252 ...\frac{1}{R}\frac{\partial}{\parital \psi}
+l.267 ...\frac{1}{R}\frac{\partial}{\parital \psi}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -462,42 +518,41 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[7]
-Overfull \hbox (52.09337pt too wide) detected at line 258
+
+Overfull \hbox (52.09337pt too wide) detected at line 273
 \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/b/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[][] \OT1/cmr/m/n/10 + [][] = \OML/cmm/m/it/10 B[][]\OML/cmm/b/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[][]\OML/cmm/b/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 
 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/b/it/10 e[]\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 287--299
 
  []
 
 [8]
-./Astrophysical_Fluid_Dynamics.tex:302: Undefined control sequence.
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:317: Undefined control sequence.
 <recently read> \texbf 
                        
-l.302 \texbf
+l.317 \texbf
             {Sunspot}\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -506,25 +561,24 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--333
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
 
  []
 
 [11]
-./Astrophysical_Fluid_Dynamics.tex:404: Undefined control sequence.
+Underfull \hbox (badness 10000) in paragraph at lines 392--394
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:419: Undefined control sequence.
 <argument> \parital 
                     R
-l.404 \frac{1}{R} \frac{\partial R}{\parital R}
+l.419 \frac{1}{R} \frac{\partial R}{\parital R}
                                                 (R B_R) + \frac{\partial B_z...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -532,10 +586,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:407: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:422: Undefined control sequence.
 <argument> \partial z \parital 
                                R
-l.407 ...c{\partial^2 \psi}{\partial z \parital R}
+l.422 ...c{\partial^2 \psi}{\partial z \parital R}
                                                     = 0
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -543,8 +597,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:428: Extra }, or forgotten $.
-l.428 ...i R} +  \frac{2 I(\psi)}{Rc}\bm e_{\phi}}
+[12]
+./Astrophysical_Fluid_Dynamics.tex:443: Extra }, or forgotten $.
+l.443 ...i R} +  \frac{2 I(\psi)}{Rc}\bm e_{\phi}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -552,9 +607,9 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[12]
-./Astrophysical_Fluid_Dynamics.tex:460: Undefined control sequence.
-l.460 ...: $R^2 \nabla \cdot( \frac{1}{R^2} \nabal
+[13]
+./Astrophysical_Fluid_Dynamics.tex:475: Undefined control sequence.
+l.475 ...: $R^2 \nabla \cdot( \frac{1}{R^2} \nabal
                                                    \psi)$. What is interesti...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -563,19 +618,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
 
  []
 
-[13] [14]
-Overfull \hbox (70.60634pt too wide) detected at line 513
+[14]
+Overfull \hbox (70.60634pt too wide) detected at line 528
 [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[]\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^Z\OML/cmm/b/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + [] + [] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OML/cmm/b/it/10 u\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A r\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^A \OML/cmm/b/it/10 u\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^ZT[]
  []
 
-./Astrophysical_Fluid_Dynamics.tex:515: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:530: Undefined control sequence.
 <argument> c(\nabla \tims 
                           \bm ) \bm B \times \frac {\bm u}{c}
-l.515 ...\bm ) \bm B \times \frac{\bm u}{c}}{4\pi}
+l.530 ...\bm ) \bm B \times \frac{\bm u}{c}}{4\pi}
                                                    + \rho \frac{\partial \ph...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -584,36 +639,37 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (142.22112pt too wide) detected at line 516
+Overfull \hbox (142.22112pt too wide) detected at line 531
 [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[]\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 (\OMS/cmsy/b/n/10 ^^A\OMS/cmsy/m/n/10 r\OT1/cmr/m/n/10 )[]\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^Z\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^A \OML/cmm/b/it/10 u\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^ \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^B \OML/cmm/b/it/10 E\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^ZT[]
  []
 
 
-Overfull \hbox (4.6714pt too wide) detected at line 526
+Overfull \hbox (4.6714pt too wide) detected at line 541
 \OMS/cmsy/m/n/10 r ^^A \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 M \OMS/cmsy/m/n/10 ^^B \OML/cmm/b/it/10 N\OT1/cmr/m/n/10 ) = \OML/cmm/b/it/10 N \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^B \OML/cmm/b/it/10 M\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/b/it/10 M \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^B \OML/cmm/b/it/10 N\OT1/cmr/m/n/10 )  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^B \OML/cmm/b/it/10 E\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 r ^^B \OML/cmm/b/it/10 B\OT1/cmr/m/n/10 )\OML/cmm/b/it/10 E \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 r ^^A \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 E \OMS/cmsy/m/n/10 ^^B \OML/cmm/b/it/10 B\OT1/cmr/m/n/10 )
  []
 
 
-Overfull \hbox (140.5044pt too wide) detected at line 529
+Overfull \hbox (140.5044pt too wide) detected at line 544
 [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@r ^^A \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OML/cmm/b/it/10 u\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 p\OML/cmm/b/it/10 u\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ r ^^A \OT1/cmr/m/n/10 ([]\OML/cmm/b/it/10 E \OMS/cmsy/m/n/10 ^^B \OML/cmm/b/it/10 B\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^ZT[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@r ^^A \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OML/cmm/b/it/10 u\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e \OT1/cmr/m/n/10 + []) + []\OML/cmm/b/it/10 E \OMS/cmsy/m/n/10 ^^B \OML/cmm/b/it/10 B\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^ZT[]
  []
 
-./Astrophysical_Fluid_Dynamics.tex:546: Missing $ inserted.
+[15]
+./Astrophysical_Fluid_Dynamics.tex:561: Missing $ inserted.
 <inserted text> 
                 $
-l.546 so $\bm u \cdot \nabla ) B_B = 0, and $ B_
+l.561 so $\bm u \cdot \nabla ) B_B = 0, and $ B_
                                                 B = \frac{u^2}{2} + \phi + h...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 618--620
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 633--635
 
  []
 
 [17]
-./Astrophysical_Fluid_Dynamics.tex:675: Undefined control sequence.
-l.675 \nabla \codt
+./Astrophysical_Fluid_Dynamics.tex:690: Undefined control sequence.
+l.690 \nabla \codt
                    \bm T = \nabla \cdot (- p \bm I + \bm G + \bm M)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -621,20 +677,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (12.28961pt too wide) detected at line 699
+[18]
+Overfull \hbox (12.28961pt too wide) detected at line 714
 \OML/cmm/m/it/10 TrK[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Tr[] [] ^^Zu[]u[]dV \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 ^^Zu[]dV \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 K; TrT[] \OT1/cmr/m/n/10 = 3(\OML/cmm/m/it/10 ^^M \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 E[]
  []
 
-[18]
-Overfull \hbox (107.90565pt too wide) detected at line 713
+
+Overfull \hbox (107.90565pt too wide) detected at line 728
 \OML/cmm/m/it/10 de \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 TdS \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 pdV  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  r\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 T\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 S \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 V  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  r\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 T\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 S \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 V  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  r ^^B r\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 = 0 = \OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 ^^B r\OML/cmm/m/it/10 S \OMS/cmsy/m/n/10 ^^@ r\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 ^^B r\OML/cmm/m/it/10 V
  []
 
-./Astrophysical_Fluid_Dynamics.tex:722: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:737: Undefined control sequence.
 <recently read> \epilson 
                          
-l.722 ... remove them safely. As clearly $\epilson
+l.737 ... remove them safely. As clearly $\epilson
                                                   _{ijk}x_jx_k = 0$ but $\ep...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -643,25 +699,24 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--727
+Underfull \hbox (badness 10000) in paragraph at lines 740--742
 
  []
 
 [19]
-Overfull \hbox (2.0973pt too wide) detected at line 769
+Overfull \hbox (2.0973pt too wide) detected at line 784
 \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/b/it/10 u \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@r\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^Z\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + [] = \OMS/cmsy/m/n/10 ^^@r\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^Z\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 + []
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 773--776
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 788--791
 
  []
 
-[20]
-./Astrophysical_Fluid_Dynamics.tex:796: Argument of \bm has an extra }.
+./Astrophysical_Fluid_Dynamics.tex:811: Argument of \bm has an extra }.
 <inserted text> 
                 \par 
-l.796 ...satz. Assuming that $\bm \xi = \tilde \bm
+l.811 ...satz. Assuming that $\bm \xi = \tilde \bm
                                                    \xi e^{i(\bm k \cdot \bm ...
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -671,27 +726,27 @@ argument that might be the root of the problem. But if
 your `}' was spurious, just type `2' and it will go away.
 
 Runaway argument?
-./Astrophysical_Fluid_Dynamics.tex:796: Paragraph ended before \bm was complete.
+./Astrophysical_Fluid_Dynamics.tex:811: Paragraph ended before \bm was complete.
 <to be read again> 
                    \par 
-l.796 ...satz. Assuming that $\bm \xi = \tilde \bm
+l.811 ...satz. Assuming that $\bm \xi = \tilde \bm
                                                    \xi e^{i(\bm k \cdot \bm ...
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./Astrophysical_Fluid_Dynamics.tex:796: Missing $ inserted.
+./Astrophysical_Fluid_Dynamics.tex:811: Missing $ inserted.
 <inserted text> 
                 $
-l.796 ...satz. Assuming that $\bm \xi = \tilde \bm
+l.811 ...satz. Assuming that $\bm \xi = \tilde \bm
                                                    \xi e^{i(\bm k \cdot \bm ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Astrophysical_Fluid_Dynamics.tex:796: Missing } inserted.
+./Astrophysical_Fluid_Dynamics.tex:811: Missing } inserted.
 <inserted text> 
                 }
-l.796 ...satz. Assuming that $\bm \xi = \tilde \bm
+l.811 ...satz. Assuming that $\bm \xi = \tilde \bm
                                                    \xi e^{i(\bm k \cdot \bm ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -699,47 +754,48 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Astrophysical_Fluid_Dynamics.tex:796: Too many }'s.
+./Astrophysical_Fluid_Dynamics.tex:811: Too many }'s.
 <recently read> }
                  
-l.796 ...satz. Assuming that $\bm \xi = \tilde \bm
+l.811 ...satz. Assuming that $\bm \xi = \tilde \bm
                                                    \xi e^{i(\bm k \cdot \bm ...
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-./Astrophysical_Fluid_Dynamics.tex:796: Missing $ inserted.
+./Astrophysical_Fluid_Dynamics.tex:811: Missing $ inserted.
 <inserted text> 
                 $
-l.796 .... Assuming that $\bm \xi = \tilde \bm \xi
+l.811 .... Assuming that $\bm \xi = \tilde \bm \xi
                                                    e^{i(\bm k \cdot \bm x  -...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (2.2899pt too wide) detected at line 807
+Overfull \hbox (2.2899pt too wide) detected at line 822
 \OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 i!\OT1/cmr/m/n/10 )[]\OML/cmm/b/it/10 x\OML/cmm/m/it/10 i \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 i\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Mp \OT1/cmr/m/n/10 + [])\OML/cmm/m/it/10 i\OML/cmm/b/it/10 k \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X \OT1/cmr/m/n/10 + [](\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 K\OT1/cmr/m/n/10 )(\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 )) + [](\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 i\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 )(\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 i\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 )\OML/cmm/b/it/10 ^^X \OMS/cmsy/m/n/10 ^^@ \OML/cmm/b/it/10 B\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 )
  []
 
 
-Overfull \hbox (25.24002pt too wide) detected at line 814
+Overfull \hbox (25.24002pt too wide) detected at line 829
 \OML/cmm/m/it/10 ^^Z![]\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 ^^Mp \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k\OT1/cmr/m/n/10 )(\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + [](\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 ((\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k\OT1/cmr/m/n/10 )(\OML/cmm/b/it/10 k \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 B \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k\OT1/cmr/m/n/10 )(\OML/cmm/b/it/10 k \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 ^^X\OT1/cmr/m/n/10 ))
  []
 
+[21]
 
-./Astrophysical_Fluid_Dynamics.tex:823: LaTeX Error: Environment cmatrix undefined.
+./Astrophysical_Fluid_Dynamics.tex:838: LaTeX Error: Environment cmatrix undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.823 \begin{cmatrix}
+l.838 \begin{cmatrix}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./Astrophysical_Fluid_Dynamics.tex:824: Misplaced alignment tab character &.
-l.824 ...ega^2`-k^2(\gamma p + \frac{B^2}{4\pi}) &
+./Astrophysical_Fluid_Dynamics.tex:839: Misplaced alignment tab character &.
+l.839 ...ega^2`-k^2(\gamma p + \frac{B^2}{4\pi}) &
                                                    \frac{1}{4\pi} (\bm B \cd...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -748,8 +804,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Astrophysical_Fluid_Dynamics.tex:825: Misplaced alignment tab character &.
-l.825         \gamma p(\bm B \cdot \bm k) &
+./Astrophysical_Fluid_Dynamics.tex:840: Misplaced alignment tab character &.
+l.840         \gamma p(\bm B \cdot \bm k) &
                                            & - \rho \omega^2
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -758,8 +814,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Astrophysical_Fluid_Dynamics.tex:825: Misplaced alignment tab character &.
-l.825         \gamma p(\bm B \cdot \bm k) &&
+./Astrophysical_Fluid_Dynamics.tex:840: Misplaced alignment tab character &.
+l.840         \gamma p(\bm B \cdot \bm k) &&
                                              - \rho \omega^2
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -769,89 +825,88 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./Astrophysical_Fluid_Dynamics.tex:826: LaTeX Error: \begin{document} ended by \end{cmatrix}.
+./Astrophysical_Fluid_Dynamics.tex:841: LaTeX Error: \begin{document} ended by \end{cmatrix}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.826 \end{cmatrix}
+l.841 \end{cmatrix}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Astrophysical_Fluid_Dynamics.tex:827: LaTeX Error: Environment cmatrix undefined.
+./Astrophysical_Fluid_Dynamics.tex:842: LaTeX Error: Environment cmatrix undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.827 \begin{cmatrix}
+l.842 \begin{cmatrix}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Astrophysical_Fluid_Dynamics.tex:830: LaTeX Error: \begin{document} ended by \end{cmatrix}.
+./Astrophysical_Fluid_Dynamics.tex:845: LaTeX Error: \begin{document} ended by \end{cmatrix}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.830 \end{cmatrix}
+l.845 \end{cmatrix}
                     =0
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[21]
 
-LaTeX Warning: Command \b invalid in math mode on input line 836.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 835--838
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 840--843
-
- []
-
-./Astrophysical_Fluid_Dynamics.tex:851: Undefined control sequence.
-<argument> \parital 
-                    p
-l.851 ...$c_s^2 = \frac{\parital p}{\parital \rho}
-                                                   = \gamma p^{\gamma -1} k ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Astrophysical_Fluid_Dynamics.tex:851: Undefined control sequence.
-<argument> \parital 
-                    \rho 
-l.851 ...$c_s^2 = \frac{\parital p}{\parital \rho}
-                                                   = \gamma p^{\gamma -1} k ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Command \b invalid in math mode on input line 851.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 850--853
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:854: Undefined control sequence.
+
+Underfull \hbox (badness 10000) in paragraph at lines 855--858
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:866: Undefined control sequence.
+<argument> \parital 
+                    p
+l.866 ...$c_s^2 = \frac{\parital p}{\parital \rho}
+                                                   = \gamma p^{\gamma -1} k ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Astrophysical_Fluid_Dynamics.tex:866: Undefined control sequence.
+<argument> \parital 
+                    \rho 
+l.866 ...$c_s^2 = \frac{\parital p}{\parital \rho}
+                                                   = \gamma p^{\gamma -1} k ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--868
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:869: Undefined control sequence.
 <argument> 4\po 
                 \rho 
-l.854 ...c{\gamma p}{\rho} + \frac{B^2}{4\po \rho}
+l.869 ...c{\gamma p}{\rho} + \frac{B^2}{4\po \rho}
                                                   ) + \frac{\gamma P}{\rho}k...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -860,8 +915,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [22]
-./Astrophysical_Fluid_Dynamics.tex:868: Undefined control sequence.
-l.868 ...he limit as $\theta = 90^o$ ($\bm k \prep
+./Astrophysical_Fluid_Dynamics.tex:883: Undefined control sequence.
+l.883 ...he limit as $\theta = 90^o$ ($\bm k \prep
                                                    \bm B$). For the fast wav...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -870,20 +925,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--870
+Underfull \hbox (badness 10000) in paragraph at lines 881--885
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--883
+Underfull \hbox (badness 10000) in paragraph at lines 896--898
 
  []
 
 [23]
-./Astrophysical_Fluid_Dynamics.tex:902: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:917: Undefined control sequence.
 <argument> \parial 
                    \rho 
-l.902 ...tial t} + \frac{\parial \rho}{\partial x}
+l.917 ...tial t} + \frac{\parial \rho}{\partial x}
                                                    (\frac{\partial x}{\parti...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -891,10 +946,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:902: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:917: Undefined control sequence.
 <argument> \parital 
                     t
-l.902 ...tal t}}{\frac{\partial \rho}{\partial x}}
+l.917 ...tal t}}{\frac{\partial \rho}{\partial x}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -902,30 +957,30 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 936--940
-
- []
-
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 946--951
+Underfull \hbox (badness 10000) in paragraph at lines 951--955
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--951
+Underfull \hbox (badness 10000) in paragraph at lines 961--966
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--951
+Underfull \hbox (badness 10000) in paragraph at lines 961--966
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:951: Undefined control sequence.
+
+Underfull \hbox (badness 10000) in paragraph at lines 961--966
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:966: Undefined control sequence.
 <argument> \partal 
                    p
-l.951 ...ac{1}{c_s^2} \frac{\partal p}{\partial t}
+l.966 ...ac{1}{c_s^2} \frac{\partal p}{\partial t}
                                                   , \frac{\partial \rho}{\pa...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -933,14 +988,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--969
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 980--984
 
  []
 
-[25]
-./Astrophysical_Fluid_Dynamics.tex:996: Undefined control sequence.
-l.996 ...e of the "N"-wave decays with $A(t) \prop
+./Astrophysical_Fluid_Dynamics.tex:1011: Undefined control sequence.
+l.1011 ... of the "N"-wave decays with $A(t) \prop
                                                    t^{-\frac{1}{2}}$ and $w(...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -948,8 +1002,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:996: Undefined control sequence.
-l.996 ...) \prop t^{-\frac{1}{2}}$ and $w(t) \prop
+./Astrophysical_Fluid_Dynamics.tex:1011: Undefined control sequence.
+l.1011 ... \prop t^{-\frac{1}{2}}$ and $w(t) \prop
                                                    t^{\frac{1}{2}}$. As it i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -958,14 +1012,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 996--998
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1013
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:1000: Undefined control sequence.
+[26]
+./Astrophysical_Fluid_Dynamics.tex:1015: Undefined control sequence.
 <argument> \parital 
                     x
-l.1000 ...ial t} + u \frac{\partial u}{\parital x}
+l.1015 ...ial t} + u \frac{\partial u}{\parital x}
                                                    = - \frac{1}{\rho} \frac{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -973,128 +1028,68 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[26]
-Overfull \hbox (26.12996pt too wide) detected at line 1012
+
+Overfull \hbox (26.12996pt too wide) detected at line 1027
 [] \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 r ^^A \OT1/cmr/bx/n/10 ^^E \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ^^E[] = \OML/cmm/m/it/10 ^^Zv[]v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Zv[]v[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [])\OML/cmm/m/it/10 ^^N[] \OMS/cmsy/m/n/10 ^^@ []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ^^Zv[]v[] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ] = 0
  []
 
 
-Overfull \hbox (101.49693pt too wide) detected at line 1016
+Overfull \hbox (101.49693pt too wide) detected at line 1031
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ) + []) + \OMS/cmsy/m/n/10 r ^^A \OML/cmm/b/it/10 F[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 ; \OML/cmm/b/it/10 F[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Z\OML/cmm/b/it/10 v\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) + [](\OML/cmm/b/it/10 E \OMS/cmsy/m/n/10 ^^B \OML/cmm/b/it/10 B\OT1/cmr/m/n/10 )  =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ^^Zv[]\OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10 E[]B[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 E[]B[]\OT1/cmr/m/n/10 )] = 0
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
-
- []
-
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1040
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:1043: Missing $ inserted.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1057
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:1058: Missing $ inserted.
 <inserted text> 
                 $
-l.1043 ...}{2} M_{ej} v^2_{ej} \sim E \implies $v_
+l.1058 ...}{2} M_{ej} v^2_{ej} \sim E \implies $v_
                                                   {ej} = (\frac{2 E}{M_{ej}}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Astrophysical_Fluid_Dynamics.tex:1043: Missing $ inserted.
+./Astrophysical_Fluid_Dynamics.tex:1058: Missing $ inserted.
 <inserted text> 
                 $
-l.1043 ...nterstellar medium. THis occurs when $M_
+l.1058 ...nterstellar medium. THis occurs when $M_
                                                   {ej} \sim \frac{4\pi}{3} m...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (1679.91158pt too wide) in paragraph at lines 1043--1044
+Overfull \hbox (1679.91158pt too wide) in paragraph at lines 1058--1059
 \OT1/cmr/m/n/10 ve-loc-ity $\OML/cmm/m/it/10 v[]$ \OT1/cmr/m/n/10 (not the same as $\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :Intheframeoftheejectortheinterstellarmediumisrunningintoyousothatsendsareverseshockgoingbackwardsthroughthemedium:THerewillbeanothercontactdiscountuityinthemiddleseperatingthesemediums:Atsomepointtheejectawillaccumulateenoughmassinfrontofittoconsiderablyslowdown:Atthispointtheenergyoftheexplosionwillhavebeentransferredintotheshockthroughtheinterstellarmedium:THisoccurswhen$\OT1/cmr/m/n/10 M$[] \OMS/cmsy/m/n/10 ^^X
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1064
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1079
 
  []
 
 [29]
-Overfull \hbox (27.70804pt too wide) detected at line 1103
+Overfull \hbox (27.70804pt too wide) detected at line 1118
 \OML/cmm/m/it/10 E \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 ^^YR[]^^Z[][]t[]R[] [][] ^^X[]d^^X\OT1/cmr/m/n/10 ([][][] + []) = []\OML/cmm/m/it/10 ^^Z[][][]t[]t[] [][] ^^X[]d^^X\OT1/cmr/m/n/10 ([][][] + [])
  []
 
-./Astrophysical_Fluid_Dynamics.tex:1123: Undefined control sequence.
+[30]
+./Astrophysical_Fluid_Dynamics.tex:1138: Undefined control sequence.
 <argument> \parital 
                     \tilde F
-l.1123 ...ac{\parital \tilde F}{\partial \epsilon}
+l.1138 ...ac{\parital \tilde F}{\partial \epsilon}
                                                    = 0
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-[30]
-./Astrophysical_Fluid_Dynamics.tex:1135: Missing $ inserted.
-<inserted text> 
-                $
-l.1135 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Astrophysical_Fluid_Dynamics.tex:1135: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.1135 
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
-./Astrophysical_Fluid_Dynamics.tex:1137: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1137 \begin{equation}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Astrophysical_Fluid_Dynamics.tex:1139: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.1139                \end{equation}
-                                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./Astrophysical_Fluid_Dynamics.tex:1139: LaTeX Error: \begin{document} ended by \end{equation}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1139                \end{equation}
-                                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Astrophysical_Fluid_Dynamics.tex:1139: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.1139                \end{equation}
-                                    
-Things are pretty mixed up, but I think the worst is over.
 
 ./Astrophysical_Fluid_Dynamics.tex:1150: Missing $ inserted.
 <inserted text> 
@@ -1112,35 +1107,95 @@ l.1150
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Astrophysical_Fluid_Dynamics.tex:1152: Display math should end with $$.
+
+./Astrophysical_Fluid_Dynamics.tex:1152: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1152 \begin{equation}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Astrophysical_Fluid_Dynamics.tex:1154: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1154                \end{equation}
+                                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./Astrophysical_Fluid_Dynamics.tex:1154: LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1154                \end{equation}
+                                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Astrophysical_Fluid_Dynamics.tex:1154: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1154                \end{equation}
+                                    
+Things are pretty mixed up, but I think the worst is over.
+
+./Astrophysical_Fluid_Dynamics.tex:1165: Missing $ inserted.
+<inserted text> 
+                $
+l.1165 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Astrophysical_Fluid_Dynamics.tex:1165: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.1165 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Astrophysical_Fluid_Dynamics.tex:1167: Display math should end with $$.
 <to be read again> 
                    \xi 
-l.1152                $\xi
+l.1167                $\xi
                            \in (0,1)$ maps to $v \in (\frac{3}{5}, \frac{3}{...
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Astrophysical_Fluid_Dynamics.tex:1152: Missing $ inserted.
+./Astrophysical_Fluid_Dynamics.tex:1167: Missing $ inserted.
 <inserted text> 
                 $
-l.1152                $\xi
+l.1167                $\xi
                            \in (0,1)$ maps to $v \in (\frac{3}{5}, \frac{3}{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1158
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1158
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1173
 
  []
 
 [31]
-./Astrophysical_Fluid_Dynamics.tex:1167: Undefined control sequence.
-l.1167 ...per unit volume) goes like $\dot e \prop
+./Astrophysical_Fluid_Dynamics.tex:1182: Undefined control sequence.
+l.1182 ...per unit volume) goes like $\dot e \prop
                                                    T^{\frac{1}{2}} n^2$ then...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1148,8 +1203,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:1167: Undefined control sequence.
-l.1167 ...is $t_{cool} \sim \frac{e}{\dot e} \prop
+./Astrophysical_Fluid_Dynamics.tex:1182: Undefined control sequence.
+l.1182 ...is $t_{cool} \sim \frac{e}{\dot e} \prop
                                                    \frac{n T}{T^{\frac{1}{2}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1157,8 +1212,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:1167: Undefined control sequence.
-l.1167 ...onstant, but $T$ decreases with $T \prop
+./Astrophysical_Fluid_Dynamics.tex:1182: Undefined control sequence.
+l.1182 ...onstant, but $T$ decreases with $T \prop
                                                    t^{-\frac{6}{5}}$ so $t_{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1167,19 +1222,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1185
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:1183: Undefined control sequence.
+[32]
+./Astrophysical_Fluid_Dynamics.tex:1198: Undefined control sequence.
 <argument> \dr 
                
-l.1183 ...r} = -\frac{dp}{d\rho}\frac{d \rho}{\dr}
+l.1198 ...r} = -\frac{dp}{d\rho}\frac{d \rho}{\dr}
                                                    = - c_s^2 \frac{d \rho}{d...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1187,53 +1243,53 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[32]
-Overfull \hbox (13.06842pt too wide) detected at line 1200
+
+Overfull \hbox (13.06842pt too wide) detected at line 1215
 \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h \OT1/cmr/m/n/10 = []([] + []) \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = []([] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1) = [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1210
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1210
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1225
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1228
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1233
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1248
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1245
+Underfull \hbox (badness 10000) in paragraph at lines 1250--1252
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:1256: Undefined control sequence.
-l.1256 ...       This tells us that $\bm B_p \prep
+
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1260
+
+ []
+
+./Astrophysical_Fluid_Dynamics.tex:1271: Undefined control sequence.
+l.1271 ...       This tells us that $\bm B_p \prep
                                                    k$ and so $k$ is constant...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1242,8 +1298,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [35]
-./Astrophysical_Fluid_Dynamics.tex:1300: Undefined control sequence.
-l.1300 ...(\bm u_p \cdot \nabla ) u_{\phi} + \fraC
+./Astrophysical_Fluid_Dynamics.tex:1315: Undefined control sequence.
+l.1315 ...(\bm u_p \cdot \nabla ) u_{\phi} + \fraC
                                                   {u_{\phi}u_R}{R}) = \frac{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1251,10 +1307,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Astrophysical_Fluid_Dynamics.tex:1304: Undefined control sequence.
+./Astrophysical_Fluid_Dynamics.tex:1319: Undefined control sequence.
 <argument> \parital 
                     z
-l.1304 ...ac{1}{R} (u_z\frac{\partial}{\parital z}
+l.1319 ...ac{1}{R} (u_z\frac{\partial}{\parital z}
                                                    (R u_{\phi}) + u_R \frac{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1263,15 +1319,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1350
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1365
 
  []
 
 [37]
-./Astrophysical_Fluid_Dynamics.tex:1378: Argument of \frac  has an extra }.
+./Astrophysical_Fluid_Dynamics.tex:1393: Argument of \frac  has an extra }.
 <inserted text> 
                 \par 
-l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+l.1393 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
                                                   {4 \pi k} - \omega( Ru_{\p...
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1281,51 +1337,52 @@ argument that might be the root of the problem. But if
 your `}' was spurious, just type `2' and it will go away.
 
 Runaway argument?
-./Astrophysical_Fluid_Dynamics.tex:1378: Paragraph ended before \frac  was complete.
+./Astrophysical_Fluid_Dynamics.tex:1393: Paragraph ended before \frac  was complete.
 <to be read again> 
                    \par 
-l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+l.1393 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
                                                   {4 \pi k} - \omega( Ru_{\p...
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./Astrophysical_Fluid_Dynamics.tex:1378: Missing $ inserted.
+./Astrophysical_Fluid_Dynamics.tex:1393: Missing $ inserted.
 <inserted text> 
                 $
-l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+l.1393 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
                                                   {4 \pi k} - \omega( Ru_{\p...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1378
+Underfull \hbox (badness 10000) in paragraph at lines 1388--1393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1378
+Underfull \hbox (badness 10000) in paragraph at lines 1388--1393
 
  []
 
-./Astrophysical_Fluid_Dynamics.tex:1378: Too many }'s.
+[38]
+./Astrophysical_Fluid_Dynamics.tex:1393: Too many }'s.
 <recently read> }
                  
-l.1378 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
+l.1393 ...2 + \phi + h - \frac{\omega R B_{\phi}}}
                                                   {4 \pi k} - \omega( Ru_{\p...
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-./Astrophysical_Fluid_Dynamics.tex:1378: Missing $ inserted.
+./Astrophysical_Fluid_Dynamics.tex:1393: Missing $ inserted.
 <inserted text> 
                 $
-l.1378 ...hi + h - \frac{\omega R B_{\phi}}}{4 \pi
+l.1393 ...hi + h - \frac{\omega R B_{\phi}}}{4 \pi
                                                    k} - \omega( Ru_{\phi} - ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Astrophysical_Fluid_Dynamics.tex:1378: Extra }, or forgotten $.
-l.1378 ...+ h - \frac{\omega R B_{\phi}}}{4 \pi k}
+./Astrophysical_Fluid_Dynamics.tex:1393: Extra }, or forgotten $.
+l.1393 ...+ h - \frac{\omega R B_{\phi}}}{4 \pi k}
                                                    - \omega( Ru_{\phi} - \fr...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1334,28 +1391,28 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1381--1384
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1399
 
  []
 
-[38] [39] (./Astrophysical_Fluid_Dynamics.aux) )
+[39] [40] (./Astrophysical_Fluid_Dynamics.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 1378 ({)
+### simple group (level 1) entered at line 1393 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  1183 strings out of 478599
  16279 string characters out of 5858101
- 332230 words of memory out of 5000000
+ 334230 words of memory out of 5000000
  19100 multiletter control sequences out of 15000+600000
  413425 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,9n,66p,2200b,149s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Astrophysical_Fluid_Dynamics.pdf (39 pages, 386185 bytes).
+Output written on Astrophysical_Fluid_Dynamics.pdf (40 pages, 387575 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
+ 235 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

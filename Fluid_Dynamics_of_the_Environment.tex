@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{cancel}
+\title{Quantum Information Theory}
+\author{oliverobrien111 }
+\date{July 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Lecture 1}
+\subsection{Internal waves}
+\subsubsection{Minimal maths version}
+Imagine we have some sort of stratification that is given by density profile $\hat \rho$. We are going to require that this is smooth and as we will see later and it is only changing the gradient over a length scale that is large compared to the length scale of the waves. Consider a small volume $V$ of fluid of density $\rho_0$ and I will magically displaced it up by a distance of $\zeta$ (assuming it retains volume, density and shape). There will clearly be a buoyancy force $B$, and for small displacements:
+$$
+B = g V \zeta \frac{d\hat \rho}{d z}  $$
+Newton's second law gives
+$$
+\rho_0 V \ddot \zeta = B = g V \zeta \frac{d\hat \rho}{d z} 
+$$
+$$
+\ddot \zeta + (0 \frac{g}{\rho_0} \frac{d \hat \rho}{dz} ) \zeta = 0
+$$
+This will clearly have solutions:
+$$
+\zeta = A \cos Nt + B \sin Nt
+$$
+where $N$ is the buoyancy (or Brunt-Vaisala frequency) $N = \sqrt{-\frac{g}{\rho_0} \frac{d\hat \rho}{dz}}$\\\\
+There is a key ingredient that hasn't been taken into account in this treatment. There hasn't been anything about continuity e.g. how does the fluid get out the way when it falls back down. To highlight this if we displace a long slim slab of fluid instead of a sphere. If this long slim slab is vertical and we displace it upwards then we get exactly the same maths, but we can make it thin enough that we don't need to worry about continuity to the first order. Now what happens if we take a long thin slab of fluid at an angle and move it along itself. Would it fall vertically downards or slide back along itself. It is intuitively hard to fall downwards as this would cause a continuity issue of needing to compress all of the fluid below the line (in order to fall down a lot of fluid needs to be moved past the line which would make a big pressure difference resiting the motion). So the slab will slide back along itself. This will have only displaced each parcle of fluid by $\zeta \cos \theta$ upwards and it will only experience a force of $g \cos \theta$ back along its original path. Therefore this would give:
+$$
+\ddot \zeta + N^2 \cos^2 \theta \zeta = 0
+$$
+$$
+\ddot \zeta + \omega \zeta = 0
+$$
+This gives the dispersion relation for internal gravity waves:
+$$
+|\omega/N| = |\cos \theta|
+$$
+This logic works if we stack slabs on top of each other and as long as we only move each on by a small amount. They can all oscillate up and down along themselves but have no need to be in the same phase, so you could send a wave though them all perpendicular to the slabs. This would mean each slab is a line of constant phase with energy being transmitted along the slab.\\\\
+Now lets think about the $\cos \theta$. If $\bm k = (k,l,m)$ is a vector perpendicular to the slabs, then we have:
+$$
+\cos \theta = \frac{\sqrt{k^2 + l^2}}{\sqrt{k^2 + l^2 + m^2}}
+$$
+\subsubsection{More rigorous derivation}}
+$$
+\nabla \cdot \bm u = 0
+$$
+$$
+(\frac{\partial}{\partial t} + \bm u \cdot \nabla) \rho = \kappa \nabla^2 \rho
+$$
+For now $\kappa = 0$:
+$$
+\rho \frac{ \partial \bm u}{\partial t} + \rho (\bm u \cdot \nabla) \bm u = - \nabla p - \rho g \bm \hat z + \rho \nu \nabla^2 \bm u
+$$
+For now $\nu = 0$. Take $\rho = \rho_0 + \rho'$. Linearise with $\rho' << \rho_0$ and Boussinesq $|\frac{\nabla \bm u}{\nabla t} | << g$.
+\end{document}
