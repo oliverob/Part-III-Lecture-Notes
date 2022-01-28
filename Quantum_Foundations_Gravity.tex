@@ -22,6 +22,7 @@ Some small but not trival mass is placed into some superposition state on the le
        $\ket{L}$ and $\ket{R}$ have different mass distributions.Neglecting all other forces (which needs to be justified) these interact via gravity. We could use general relativity but the forces look like they will be fairly small so GR is probably overkill. More importantly GR doesn't tell us what to do with superposition of states as it requires a classical mass distribution. We could make a guess at what the right classical mass distribution is going to be? What would one guess?\\\\ Might try the average mass density calculated via quantum expectations (heavily questionable). In this case say the superpositions where between point positions then this averaged mass would give half the mass at each of the positions. Therefore you would get four contributions to the Newtonian potential. Might guess that we can apply the non relativistic schrodinger equation with this classical newtonian potential:
        \begin{equation}
                i \hbar \frac{\partial \psi(\bm x_1, \bm x_2)}{\partial t} = H \psi(\bm x_1, \bm x_2) = (\frac{-\hbar^2}{2m} + V(x)) \psi(\bm x_1, \bm x_2)
+  
        \end{equation}
        This gives a gravitional self-interaction for both particles (e.g. the two half masses of each particle will be pulled towards their central point by themselves?). It suggests (if we apply non relativistic quantum mechancis naively), that the Newtonian potential $\bm V(x)$ changes discontinously and instantaneously if one particles position is measured. Discontinouity does not fit with our understanding from GR which requires continous mass distributions. The instaneous change would instaneously change the potential giving action at distance which fits poorly with special relativity (the newtonian potential is long range). This is not a proof that this line of thought is wrong but it means it needs work and thought if it has any chance of being right.\\\\
        Now lets consider what standard textbook quantum mechanics tells us to say about this. Measurement alters wavefucntions instaneously and discontinously. Does NRQM + measurement imply non-local action at a distance? Naively it seems so. The obvious response is that if you consider non-relativistic quantum mechanics then you should expect non-relativistic results. However, we still get this issue in quantum field theory for a system which is approximately 1 particle. Not saying that this question is not answerable in relativistic field theory but the most sensible place to think about it is non-relativistic quantum mechanics. Simply observing that the schrodinger equation is non-relativistic  is an adequate explanation. \\\\
@@ -40,4 +41,50 @@ Some small but not trival mass is placed into some superposition state on the le
 \item They require assumption that there is an initial state $\ket{\psi(0)}$
 \end{enumerate}
 1. and 2. can and do fail - we need to consider what to do in this case. 3. might also not be fundamentally correct (was there a pure initial state of the universe). We also want to ask could there be more general rules? Could there be more general ways to extract info from quantum states? Could there be nonlinear corrections to quantum theory?
+\section{Lecture 2}
+We are thinking about the foundations of physics, where we don't necessarily know the answer. For instance last time when we talked about measurements in non-relativistic quantum mechanics. It seems like when you measure a very wide wavefunction it collapses to a delta function and it seems like it violates special relativity. So we are going to think about things like this that need to be thought about slightly harder. Lets non recapitulate what we know about various quantum measurements of mixed states:\\\\
+Given an ensemble of states $\ket{\psi}$ with given probability $p_i$, how do we keep track of what is going on. We could say that we apply the evolution to each state seperately and keep the probabilities the same ( segregating along the lines of the initial given states). This is the general treatment we are used to giving $\frac{P_i \ket{\psi_i}}{|p_j \ket{\psi_i}|}$ and probability.... . This is not ideal as it is quite combersome. Luckly we have a neater formulism in the formof the density operator:
+$$
+\rho = \sum_i p_i \ket{\psi_i(0)} \bra{ \psi_i(0)}
+$$
+This can be then evolved using:
+$$
+\rho(t) = e^{-i \hat H t/ \hbar} \rho(0) e^{i \hat H t/ \hbar}
+$$
+These are equivalent treatments you can first convert to density matrices and then apply time evolution or the other way round and you will get the same expression. This is covered in detail in the slides. An ensemble carries more information than a density matrix, as two different ensembles can have the same density matrix. However, this information is not extractable so you might as well just write down the density matrix.\\\\
+For the sake of argument lets consider a different measurement rule such as $p_i = |\bra{\psi}P_i \ket{\psi}| = |P_i \ket{\psi}|^2. There is no guarantee that this will satisfy the same algebra. As soon as we modify the Born rule we need a new treament of mixed states and ensembles. As density matrices are no longer equivalent. \\\\
+Defintion of density matrices: self adjoint, positive definite, ...\\\\
+The set of desnity matrices is a convex subset of the space of operators on $H$.\\\\
+Is there always a pure state we just don't know which one or was the initial sate of the universe mixed. Is it an improper or a proper mixture? Can proper mixed state ever objectively descirbe real physical states? It is a proper mixture if it is an ensemble of pure states, rather than a mixture of states that are partially entangled with each other. It is a question whether the probablistic mixture is always a reflection of our subjective ignorance of some objective facts. The desnity matrix evolution law and measurement postulate are self-contained and consistent, so it makes logical sesne to postulate an initially mixed state that (depending on measuremnts) may stay mixed forever. \\\\
+Composite systems and entanglement. \\\\
+we are interested in systems copmprising two or more identifible subsystems $S= S_1 + S_2$. Maybe separated, maybe occupying the same region; maybe different particle types, maybe same. Quantum theory tells us that observables correspond to hermitian operators on the corresponding factor. Observable $A$ on $S_1$ corresponds to $A \otimes I$ action of $H = H_1 \otimes H_2$. If we meausre $A$ on $S_1$ then this can clearly be seen in the mathematics (detailed in the slides). 
+\section{Lecture 3}
+\subsubsection{Partial Trace}
+We can define $Tr_{A_2}$ by its action on a basis of operators
+$$
+Tr_{A_2} (\ket{e_{i_1}} \otimes \ket{f_{j_1} \bra{ e_{i_2}} \otimes \bra{f_{j_2}}) = \delta_{j_1j_2} \ket{e_{i_1}} \bra{e_{i_2}}
+$$
+$$
+Tr_{A_2} A = \sum_j \bra{f_j} A \ket{f_j}
+$$
+$\rho_2 = Tr_{H_1} \ket{\psi} \bra{\psi}$ is a density matrix on $\mathcal{H}_2}$\\
+If $\ket{\psi} = \ket{\psi_1} \times \ket{\psi_2}$ is a product state then $\rho_2$ is a pure state. Similarly if $\rho_2$ is a pure state then $\ket{\psi}$ is a product state.\\
+\textbf{Schmidt decomposition}: Any $\psi$ can be written as $\ket{\psi} = \sum_{i=1}^n \lambda_i^{\frac{1}{2}} \ket{e_i} \times \ket{f_i}$.\\\\
+The goal of the above analysis is to determine the effect of measurements on two systems and whether they violate special relativity. So measuring observable $A$ on $S_1$ is measurement $A \otimes I$:
+$$
+<A>_{\psi} = \bra{\psi} A \otimes I \ket{\psi} = Tr_{\mathcal{H}_1} (A \rho_1)
+$$
+Suppose the systems are not interacting then they evolve with indepedent operators:
+$$
+\ket{\psi} \rightarrow e^{-i H_1 t/\hbar} \otimes e^{- i H_2 t / \hbar} \ket{\psi}
+$$
+$$
+Tr_{\mathcal{H}_2} (\ket{\psi_t} \bra{\psi_t}) = e^{- i H_1 t/ \hbar} \rho_1 e^{i H_2 t/\hbar}
+$$
+Suppose a meassuremnt was carreid out on $S_2$. Then one of the states $\ket{\psi_i}= \frac{I \otimes P_i \ket{\psi}}{|I\otimes P_i \ket{\psi}|}$ with probability $p_i = |I \otimes P_i \ket{\psi}|^2$. If we don't know what measurement it was the reduced density matrix will be unchanged:
+$$
+\rho_1' = Tr_{\mathcal{H}_2} (\sum p_i \ket{\psi_i} \bra{\psi_i}) = \rho_1
+$$
+If $S_1 + S_2$ are not isolated than this doesn't all work as we don't have simple evolutionary law, and the systems impact upon each other so we need to think more about this.\\\\
+Our systems could be non-isolated but physically seperated. For space like separated systems we can keep them isolated by performing the experiement before light can move between the systems. In this context the results we have just derived apply. This convinces us operatoionally of the peacful coexistance of QM and SR. 
 \end{document}

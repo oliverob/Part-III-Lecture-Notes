@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  20 JAN 2022 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  27 JAN 2022 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -143,28 +143,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
+./Quantum_Foundations_Gravity.tex:25: Missing $ inserted.
+<inserted text> 
+                $
+l.25 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+./Quantum_Foundations_Gravity.tex:25: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.25 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
- []
 
+./Quantum_Foundations_Gravity.tex:26: LaTeX Error: Bad math environment delimiter.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26        \end{equation}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
- []
+./Quantum_Foundations_Gravity.tex:26: You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.26        \end{equation}
+                          
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
+./Quantum_Foundations_Gravity.tex:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26        \end{equation}
+                          
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
-
- []
+./Quantum_Foundations_Gravity.tex:26: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.26        \end{equation}
+                          
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./Quantum_Foundations_Gravity.tex:31: Undefined control sequence.
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
+
+ []
+
+./Quantum_Foundations_Gravity.tex:32: Undefined control sequence.
 <argument> i \hbar \parital 
                             \psi 
-l.31 ...- \frac{i \hbar \parital \psi}{\partial t}
+l.32 ...- \frac{i \hbar \parital \psi}{\partial t}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -173,36 +230,124 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (18.4131pt too wide) detected at line 32
+Overfull \hbox (18.4131pt too wide) detected at line 33
 \OML/cmm/m/it/10 H \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; \OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; [] ; \OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; t\OT1/cmr/m/n/10 ) = (\OMS/cmsy/m/n/10 ^^@ [] []r[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; [] ; \OML/cmm/b/it/10 x[]\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; \OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; [] ; \OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; t\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
 
  []
 
 
-Overfull \hbox (6.77448pt too wide) in paragraph at lines 32--37
+Overfull \hbox (6.77448pt too wide) in paragraph at lines 33--38
 \OT1/cmr/m/n/10 We could use $\OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 x[]\OML/cmm/m/it/10 ; \OML/cmm/b/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^X []$\OT1/cmr/m/n/10 . THis gives 4 dif-fer-ent terms $\OML/cmm/m/it/10 V[]; V[]V[]; V[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
 
  []
 
-[2] [3] (./Quantum_Foundations_Gravity.aux) ) 
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+./Quantum_Foundations_Gravity.tex:60: Missing $ inserted.
+<inserted text> 
+                $
+l.60 ... two or more identifible subsystems $S= S_
+                                                  1 + S_2$. Maybe separated,...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--61
+
+ []
+
+
+Overfull \hbox (566.67815pt too wide) in paragraph at lines 53--61
+\OMS/cmsy/m/n/10 j [] \OML/cmm/m/it/10 P[] [] \OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 P[] [] \OMS/cmsy/m/n/10 j[]\OML/cmm/m/it/10 :Thereisnoguaranteethatthiswillsatisfythesamealgebra:AssoonaswemodifytheBornruleweneedanewtreamentofmixedstatesandensembles:Asdensitymatricesarenolongerequivalent:[] 
+ []
+
+
+Overfull \hbox (1853.10524pt too wide) in paragraph at lines 53--61
+\OML/cmm/m/it/10 Istherealwaysapurestatewejustdon[]tknowwhichoneorwastheinitialsateoftheuniversemixed:Isitanimproperorapropermixture\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 Canpropermixedstateeverobjectivelydescirberealphysicalstates\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 Itisapropermixtureifitisanensembleofpurestates; ratherthanamixtureofstatesthatarepartiallyentangledwitheachother:Itisaquestionwhethertheprobablisticmixtureisalwaysareflectionofoursubjectiveignoranceofsomeobjectivefacts:Thedesnitymatrixevolutionlawandmeasurementpostulateareself \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (257.0361pt too wide) in paragraph at lines 53--61
+\OML/cmm/m/it/10 containedandconsistent; soitmakeslogicalsesnetopostulateaninitiallymixedstatethat\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 dependingonmeasuremnts\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 maystaymixedforever:[] 
+ []
+
+
+Overfull \hbox (9.4281pt too wide) in paragraph at lines 53--61
+\OML/cmm/m/it/10 weareinterestedinsystemscopmprisingtwoormoreidentifiblesubsystems$\OT1/cmr/m/n/10 S= S$[] +
+ []
+
+[3]
+./Quantum_Foundations_Gravity.tex:70: Missing } inserted.
+<inserted text> 
+                }
+l.70 ...i}$ is a density matrix on $\mathcal{H}_2}
+                                                  $\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Foundations_Gravity.tex:70: Missing } inserted.
+<inserted text> 
+                }
+l.70 ...i}$ is a density matrix on $\mathcal{H}_2}
+                                                  $\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Foundations_Gravity.tex:70: Extra }, or forgotten $.
+\ket #1->\mathinner {|{#1}
+                          \rangle }
+l.70 ...i}$ is a density matrix on $\mathcal{H}_2}
+                                                  $\\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Quantum_Foundations_Gravity.tex:70: Extra }, or forgotten $.
+\ket #1->\mathinner {|{#1}\rangle }
+                                   
+l.70 ...i}$ is a density matrix on $\mathcal{H}_2}
+                                                  $\\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
+
+ []
+
+[4] (./Quantum_Foundations_Gravity.aux) ) 
 Here is how much of TeX's memory you used:
  1782 strings out of 478599
  23162 string characters out of 5858101
@@ -211,11 +356,11 @@ Here is how much of TeX's memory you used:
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,6n,66p,947b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Quantum_Foundations_Gravity.pdf (3 pages, 162774 bytes).
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Quantum_Foundations_Gravity.pdf (4 pages, 194391 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

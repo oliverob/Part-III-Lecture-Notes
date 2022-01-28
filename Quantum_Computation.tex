@@ -77,9 +77,188 @@ Shor's alogrithm takes $O(n^3)$\\
                         As $c$ and $M$ are known, and $k_0$ is unknown but random in the given range. We want to find $r$ and so we recall several classical facts.\\\\
                         \textbf{Co-primality Theorem}: The number of integers less than $r$ that are coprime to $r$ grows with $O(\frac{r}{\log \log r})$\\\\
                         Therefore, the probability of $k_0$ being coprime to $r$ is $O(\frac{1}{\log \log r})$.\\\\
-                        \textbf{Lemma}: If a single trial has success probability $p$ then if one repeats it $M^*$ times, for any $0<1-\epsilon<1$. We get probability of at least one success in $M^*$ trails is greater than $1-\epsilon$ if $M^* = \frac{- \log \epsilon}{p}$
+                        \textbf{Lemma}: If a single trial has success probability $p$ then if one repeats it $M^*$ times, for any $0<1-\epsilon<1$. We get probability of at least one success in $M^*$ trails is greater than $1-\epsilon$ if $M^* = \frac{- \log \epsilon}{p}$. i.e. roughly $O(1/p)$ trials suffice to achieve probability of success $> 1- \epsilon$
+                \item After step 4 cancel $\frac{c}{M}$ down to an irredicible algorithm $\frac{a}{b}$ there is an efficent algorithm ($O(poly n)$) for this. This will give us $r$ as denominator $b$ if $k_0$ is coprime to $r$ with probablity $O(\frac{1}{\log \log r})$. So check $b$ value by computing $f(0)$ and $f(b)$ and $b = r \iff f(0) = f(b)$.\\\\
+                        By repeating this process $M^* = O( \log \log r)$ times this will give us $r$ with any desired probability $1- \epsilon$. Since $r < M$ the whole algorithm takes $O(poly m)$ time!
                 \end{itemize}
                 
         \item From learning the period $r$ we can use number theory to find a factor of $N$
 \end{enumerate}
+\subsubsection{Further insights to QFT}
+Now lets think about the implications of $QFT$. What does applying quantum fourier transform really achieve?\\\\
+Lets consider a function: $f: \mathbb{Z}_M \rightarrow \mathbb{Z}_N$ with period $r \in \mathbb{Z}_M$, $A= \frac{M}{r}$. Define:
+$$
+R = \{ 0, r, 2r, 3r,..., (A-1)r\} < \mathbb{Z}_M
+$$
+$$
+\ket{R} = \frac{1}{\sqrt{A}} \sum_{k=0}^{A-1} \ket{kr}
+$$
+$$
+\ket{per} = \ket{x_0 + R} = \frac{1}{\sqrt{A}} \sum_{k=0}^{A-1} \ket{x_0 + rk}
+$$
+The problem was this random shift $x_0$ when measuring $\ket{per}$. For each $x_0 < \mathbb{Z}_M$ consider a mapping $k \rightarrow k+ x_0$. "Shift by $x_0$". It is a 1-1 invertible map, and can define a unitary version $U(x_0)$ on $\mathcal{H}_M$: $U(x_0) \ket{k} = \ket{k+x_0}$.
+$$
+\ket{x_0 + R} = U(x_0) \ket{R}
+$$
+Since $(\mathbb{Z}_M, +)$ is an abelian group $U(x_0)U(x_1) = U(x_0+x_1) = U(x_1)U(x_0)$. So all $U(x_i)$ commute as operators on $\mathcal{H}_M$. Therefore they have an orthonomal basis of common eigenvectors $\{ \ket{\chi_k}\}_{k \in \mathbb{Z}_M}$. These are called shift invariant states as $U(x_0) \ket{\chi_k} = \omega( x_0, k) \ket{\chi_k}$ for all $x_0, k \in \mathbb{Z}_M$ with the important caveat that $|\omega( x_0, k)| = 1$.\\\\
+Consider $\ket{R}$ written in $\{ \ket{\chi_r}\}$ basis:
+$$
+\ket{R} = \sum_{k=0}^{M-1} a_k \ket{\chi_k}
+$$
+$a_k$ only depend on $r$ not on $x_0$. Then:
+$$
+\ket{per} = U(x_0) \ket{R} = \sum_{k=0}^{M-1} a_k \omega(x_0, k) \ket{\chi_k}
+$$
+Here it can be seen that the probability of measuring $k$ is 
+$$
+prob(k) = |a_k \omega(x_0, k)|^2= |a_k|^2
+$$
+So this is all indepedant of $x_0$ and depends only on $r$. So measuring in this basis gives us some information about $r$. So one can think of QFT as the unitary mapping that rotates $\chi$ basis into the standard computational basis. So can define QFT as:
+$$
+QFT \ket{\chi_k} = \ket{k}
+$$
+How do these mysterious shift invariant states look?
+\subsubsection{Explicit form of shift invariant shapes}
+$$
+\ket{\chi_k} = \frac{1}{\sqrt{M}} \sum_{l=0}^{M-1} e^{-2\pi il \frac{k}{M}} \ket{l}
+$$
+$$
+U(x_0) \ket{\chi_k} = \fraC{1}{\sqrt{M}} \sum_{l=0}^{M-1} e^{-2\pi i l \frac{k}{M}} \ket{l + x_0} =  \fraC{1}{\sqrt{M}} \sum_{\tilde l=0}^{M-1} e^{-2\pi i (\tilde l - x_0) \frac{k}{M}} \ket{\tilde l}  = e^{2\pi i k \frac{x_0}{M}} \ket{\chi_k}
+$$
+giving eigenvalue: $\omega(x_0, k) = e^{2\pi i k \frac{x_0}{M}}$. From this we could reconstruct the basis of QFT:
+$$
+[QFT]_{kl} = \frac{1}{\sqrt{M}} e^{2\pi i \frac{kl}{M}}
+$$
+\section{Lecture 3}
+\subsection{Hidden Subgroup Problem}
+Let $G$ be a finite group of size $|G|$. We are given an oracle $f: G \rightarrow X$ with $X$ just some set. We are promised there is a subgroup $K<G$ s.t.
+\begin{itemise}
+\item $f$ is constant on (left) cosets of $K$ in $G$
+\item $f$ is distinct on distinct cosets
+\end{itemise}\\\\
+\textbf{Problem}: 'Determine' the 'hidden subgroup' $K$ (e.g. output a set of generators or sample uniformly from elements of $K$)\\\\
+We want to solve in time $O(poly ( \log |G|))$ (efficent algorithm) with anuy consitent probability $1-\epsilon$.
+\textbf{Examples of problems that can be cast as HSP}\\
+Periodicity finding $f: \mathbb{Z}_M \rightarrow X$ periodic, period r 1-1 in period
+$$
+G = \mathbb{Z}_M, K = \{ 0,r,2r,..., (A-1)r\} < G
+$$
+Discrete Logarithm Problem: $p$ - prime number, $\mathbb{Z}^*_p$ group of integers with multiplication mod $p$, $g \in \mathbb{Z}_p^*$ to be a generator (or primitive root mod p). If $\mathbb{Z}^*_p = \{ g^0, g^1, ..., g^{r-2} \}$ and we have $g^{p-1} = 1$ (mod p). Fact: These always exist for $p$ is prime. Any $x \in \mathbb{Z}_p^*$ can be written as $x = g^y$ for some $y \in \mathbb{Z}_{p-1}$, $y = \log_g x$ is called the discrete log of $x$ to base $g$. Discrete log problem is given a generator $g$, $x \in \mathbb{Z}^*_p$ we want to compute $y = \log_g x$. To express this as the HSP:
+$$
+f: \mathbb{Z}_{p-1} \times \mathbb{Z}_{p-1} \rightarrow \mathbb{Z}_p^*
+$$
+$$
+f(a,b) = g^a x^{-b} \mod p = g^{a-yb} \mod p
+$$
+Can check if $f(a_1, b_1) = f(a_2, b_2) \iff (a_1, b_1) = (a_2, b_2) + \lambda( y, 1), \lmbda \in \mathbb{Z}_{p-1}$:
+$$
+G = \mathbb{Z}_{p-1} \times \mathbb{Z}_{p-1}
+$$
+$$
+K = \{ \lambda(y,1): \lambda \in \mathbb{Z}_{p-1} \} < G
+$$
+Then $f$ is constant and distinct on cosets of $K$ and generator $(y,1)$ of $K$ gives $y = \log_g x$\\\\
+\textbf{Graph Problems}:\\
+So we can solve problems like those above where $G$ is abelian, but we can also solve graph problems.\\\\
+Consdier graph $A = (V,E)$, $|V| = n$ lets say that the graph is undirected and there is at most one edge between any two vertices. Vertices here are labelled by numbers from 1 to $n$.\\\\
+Lets define an adjacency matrix $M_A$: $[M_a]_{ij} = \begin{cases} 1 & \iff (i,j)\\ 0 & \text{otherwise} \end{cases}$. The permuation group of $[n]$, $|P_n| = n!, \log |P_n| \sim O(n \log n)$. Define a group of automorphisms of group $A$ which is a set of permuations with the following property: $\pi \in P_n$ s.t. $\forall i,j (i,j)$ is an edge in $A$ $\iff (\pi(i), \pi(j))$ is also an edge in $A$.\\\\
+An associated HSP (the case of non-abelian $G$):
+$$
+G = P_n, X = \text{set of all labelled graphs on }n\text{vertices}
+$$
+For any $A \in X$, define $f_A: G \rightarrow X$, $f_A(\pi) = $"A with vertex labels permuted by $\pi$"
+$$
+K = Aut(A)
+$$
+(Check $f(K)$ is constant and disctint on cosets of $Aut(A)$)\\\\
+\textbf{Applications}:\\
+If we can sample uniformly from $K$, then we can solve Graph Isomorphism problem (GI).This has a number of different applications in areas of computer science. Two labelled graphs $A$ and $B$ with $n$ vertices are isomorphic if there is a 1-1 map (i.e. permutation) $\pi[n] \rightarrow [n]$ s.t. $\forall i,j \in [n] (i,j)$ is an edge in $A$ $\iff$ $(\pi(i), \pi(j))$ is an edge in $B$. The GI problem is given to graphs $A$ and $B$ and deciding if they are isomorphic. This can be represented as a non-abealian HSP. There is no known poly(m) time classical algorithm to solve this problem, so $GI$ is clearly in $NP$ but not believed to be $NP$-complete (a class of problems such that every problem in NP can be reduced to an NP-complete problem these are the hardest NP problems).
+In 2017, L Babai presented a quasi-polynomial algorithm for GI runtime $n^O(\log n)^2)$. This ranks in between polynomial runtime and exponential algorithms.
+\section{Lecture 4}
+\textbf{Quantum algorithm for finite abelian HSPs}
+- Generalisation of period-finding algorithm\\
+Write our abelian group $(G, +)$ additively\\
+Construction of shift-invariant states and Fourier transform for $G$.\\
+Representations of abelian $G$:\\
+Consdier the mapping $\chi: G \rightarrow \mathbb{C}^* = \mathbb{C}- \{ 0\}$ with multiplication that satisfies:
+$$
+\chi( g_1 + g_2) = \chi(g_1) \chi(g_2), \forall g_1,g_2 \in G 
+$$
+$\chi$ is a group homomorphism from $G$ to $\mathbb{C}^*$. Such $\chi$'s are called irreducible representations of $G$. They have the following properties:
+\textbf{Theorem 1}:\\
+1) any value $\chi(g)$ is a $|G|$-th root of unity (\chi \in \rightarrow S^1$ the unit circle)\\
+2) Schur's lemma (orthogonality): If $\chi_i,\chi_j$ satisfy (HOM) then 
+$$
+\frac{1}{|G|} \sum_{g \in G} \chi_i (g) \bar {\chi_j} (g) = \delta_{ij}
+$$
+There are always exactly $|G|$ different functions $\chi$ satisfying (HOM).\\\\
+\textbf{Examples}: $\chi(g) = 1, \forall g \in G$ is an irrep/ called a trival irrep\\
+Label the trivial irrep as $\chi_0$, $0\in G$. Then for any other irrep $\chi \neq \chi_0$ orthonality to $\chi_0$ gives:
+$$
+\sum_{g \in G} \chi(g) = 0 \text{ if } \chi \neq \chi_0
+$$
+Going back to constructing shift-invariant states
+\subsubsection{Shift-invariant states}
+Consider a state space $\mathcal{H}_G, dim \mathcal{H}_G = |G|$ wtih basis $\{ \ket{g}\}_{g \in G}$. Now introduce shift operators $U(k)$ for $k \in G$ defined as follows:
+$$
+U(k): \ket{g} \rightarrow \ket{g+k}, g, k \in G
+$$
+All shift operators commute so there exists a simultaneous eigenbasis.\\
+For each $\chi_k, k \in G$:
+$$
+\ket{\chi_k} = \frac{1}{\sqrt{|G|}} \sum_{g \in G} \bar{\chi_k} (g) \ket{g}
+$$
+By thereom 1 $\{ \chi_k \}$ form an orthonormal basis.
+$$
+U(g) \ket{\chi_k} = \chi_k(g) \ket{\chi_k}
+$$
+\textbf{Proof}:$$U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|} \sum_{h \in G} \bar{\chi_k} (h) \ket{h + g}$$
+        $$
+        \{h' = h+ g\} = \frac{1}{\sqrt{|G|} \sum_{h' \in G} \bar{\chi_k} (h' - g) \ket{h'}
+        $$
+        using HOM $\chi_k(-g) = \chi_k(g)^{-1} = \bar \chi_k(g) \implies \bar{\chi_k(h'-g)} = \bar \chi_k(h') \bar \chi_k(-g) = \bar \chi_k(h') \chi_k(g)$. Therefore,
+        $$
+        U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|} \sum_{h' \in G} \chi_k(g) \bar \chi_k(h') \ket{h'} = \chi_k(g) \ket{\chi_k}
+        $$
+        So $\ket{\chi_k}$'s form a common eigenbasis\\\\
+        Introduce Fourier transform QFT for a group $G$\\
+- consider a unitary mapping on $\mathcal{H}_G$ mapping $\ket{\chi_k}$ basis to $\ket{g}$ basis
+$$
+QFT \ket{\chi_g} = \ket{g}, \forall g \in G
+$$
+$$
+QFT^{-1} \ket{g} =  \ket{\chi_g}
+$$
+k-th column of $QFT^{-1}$ in $\ket{g}$ basis is mode of compoents of $\ket{\chi_k}$:
+        $$
+        [QFT^{-1}]_{gk} = \frac{1}{\sqrt{|G|}} \bar{\chi_k}(g)
+        $$
+        \textbf{EXample}: $G = \mathbb{Z}_M$L\\
+        Check $\chi_a(b) = e^{\frac{2\pi i a b}{M}}, a, b \in \mathbb{Z}_M$ satsifies HOM and has its irreps labelled by $a \in \mathbb{Z}_M$ with $\chi_0(b) = 1 \forall b \in \mathbb{Z}_m$.
+        $$
+        G = \mathbb{Z}_{M_1} \times ... \times \mathbb{Z}_{M_r}
+        $$
+        $$
+        (a_1, ..., a_r ) = g_1, (b_1, ..., b_r) = g_2
+        $$
+        $$
+        \chi_{g_1} (g_2) = e^{2\pi i ( \frac{a_1 b_1}{M_1} +... + \frac{a_r b_r}{M_r}}
+        $$
+This satifies HOM and our $QFT_G = QFT_{M_1} \otimes ... \otimes QFT_{M_r}$ on $\mathcal{H}_G = \mathcal{H}_{M_1} \otimes ... \otimes \mathcal{H}_{M_r}$.\\\\
+This second example is exhaustive since we have a classification theroem:\\
+\textbf{Classification theorem}: Any fintie abelian group $G$ is isomorphic to a direct product of the form $G = \mathbb{Z}_{M_1} \otimes ... \otimes \mathbb{Z}_{M_r}$. So $M_1$ can be taken in a form $p_1^{s_1},... p_r^{s_r}$.
+\subsubsection{Quantum algorithm}
+$$
+f: G \rightarrow X
+$$
+with hidden subgroup $K$ and cosets $k = 0 + k, g_2 + k, ... g_m +k$, $m = \frac{|G|}{|K|}$. we will work on $\mathcal{H}_{|G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}\ket{x}\}_{g \in G, x \in X}$.\\
+\begin{itemlist}
+\item Create a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket{0}\\
+\item Apply $U_f$ and $\frac{1}{\sqrt{|G|} \sum_{g \in G} \ket{g} \ket{f(g)}\\
+        \item Measure the second register to get $f(g_0)$. The first register will not give the coset state:
+                $$
+                \ket{g_0 + k} = \frac{1}{\sqrt{|k|} \sum_{k \in K} \ket{g_0 + k} = U(g_0) \ket{K}
+                $$
+        \item apply QFT and measure to get a result $g \in G$
+\end{itemlist}
 \end{document}

@@ -144,4 +144,114 @@ $$
 \lim_{\hbar \rightarrow 0^+} \frac{1}{\hbar^N} | I(\hbar) - \sum_{n=0}^N c_n \hbar^n | = 0
 $$
 Series missed out some terms $e^{-\frac{1}{\hbar^2}}$ so there are non-perturbative effects. We won't cover it in this course but these terms do contribute effects in some gauge theories. In some weakly coupled thoeries like QED this is a very good expansions, as shown by how we can very accurate measure magnetic moment of an electron to $10^{-10}$ accuracy.
+\section{Lecture 3}
+Last time we looked at
+$$S(\phi) = \frac{1}{2} m^2 \phi^2 + \frac{\lambda}{4!} \phi^4 = S_0(\phi) + \frac{\lambda}{4!} \phi^4, m^2 > 0, \lambda >0$$
+Partition $f^1$ ( generating function with respect to $J=0$):
+$$
+Z = \int d\phi e^{- S/ \hbar}
+$$
+Seperate this action into the free part and the interaction part and then expand around classical fields
+$$
+Z = \int d \phi e^{- S_0 / \hbar} \sum_{v=0}^{\infty} \frac{1}{v!} [ (- \frac{\lambda}{4!\hbar}) \phi^4 ]^v
+$$
+Truncate, swap order of sum and integral to give an asymptotic expansion.\\\\
+In 0-dimensions we can integrate exactly. Let $x = \frac{1}{2\hbar} m^2 \phi^2$:
+$$
+Z = \frac{\sqrt{2\hbar}}{m} \sum_{v=0}^N \frac{\hbar}{V!} (- \frac{\hbar \lambda}{4! m^4})^v 2^v \int_0^{\infty} e^{-x} x^{2v + \frac{1}{2} -1} = \frac{\sqrt{2\hbar}}{m} \sum_{v=0}^N \frac{\hbar}{V!} (- \frac{\hbar \lambda}{4! m^4})^v 2^v \Gamma(2v + \frac{1}{2})
+$$
+$$
+Z =  \frac{\sqrt{2\hbar}}{m} \sum_{v=0}^N \frac{\hbar}{V!} (- \frac{\hbar \lambda}{ m^4})^v \frac{1}{(4!)^v v!} \frac{(4v)!}{2^{2v}(2v)!}$$
+Use stirlings approximation:
+$$
+V! \sim e^{V \log V}
+$$
+So this factorial growth is very fast and so will make this an asympotic expansion as it means the terms will not converge. We can see that $\frac{1}{(4!)^v v!} $ comes from expanding $\exp( - S_I / \hbar)$, whereas $\frac{(4v)!}{2^{2v}(2v)!}$ comes from the combinatoric ways of pairing the $4v$ fields.\\\\
+\subsubsection{Generating function}
+$$
+Z(J) = \int d\phi \exp( - \frac{1}{\hbar} [ S_0(\phi) + S_I(\phi) - J \phi] )
+$$
+Taylor expand $e^{-S_I/\hbar}$ then replace the $\phi$ with $\hbar \frac{\partial}{\partial J}$ then pull it out and sum that infinite series
+$$
+Z(J) = \exp( - \frac{1}{\hbar} S_I(\hbar \frac{\partial}{\partial_J}) )\int d\phi \exp ( - \frac{1}{\hbar} [S_0(\phi) - J \phi])
+$$
+Drop multiplicative factor $\exp( - \frac{\lambda}{4! \hbar}( \hbar \frac{\partial }{\partial J})^4) \exp ( \frac{1}{2\hbar} J^T M^{-1} J)$. Here $J$ is just a signle variable $M = m^2$.
+\begin{equation}
+Z(J) = \sum_{v= 0}^N \frac{1}{V!} [ - \frac{\lambda}{4!\hbar} (\hbar \frac{\partial}{\partial J})^4 ]^v \sum_{p=0} \frac{1}{p!} ( \frac{1}{2 \hbar} J^T M^{-1} J)^p
+\end{equation}
+We represent this double series by diagrams of propogators and vertices. A propogrator is a line connecting to field. The propogator is $M^{-1}$ which for the moment is just a boring $m^{-2}$. At each vertex we have: $- \frac{\lambda}{\hbar} ( \hbar \frac{\partial}{\partial J})^4$.\\\\
+Check $Z(0)$. In order for a term to survive to be nonzero we have to match up the derivatives with the $J$s. When $J=0$, need number of derivates to be equal to the number of sources. Generally, lets call these external sources. e.g. in the case of this field $E = 4 v - 2p$ and we want $E=0$. First nontrivial terms are $(v,p) = (1,2)$ and $(2,4)$. So:
+$$
+Z(0) = 1 + \text{figure eight} + ...
+$$
+Product rule in differentiation turns into symmetry factors or combinatorial factors associated with each diagram. Think about the "pre-diagram" with the half edges (corresponding to derivatives) and floating propogators (with ends corresponding to sources) and then we label the sources so there are $4!$ ways of assigning 4 derivates (or half edges) to 4 sources (at $a, a', b, b'$). \\\\
+The numerator $A$ is cancelled by denominator $F$. 
+$$
+F = (v!)(4!)^v (P!)2^p $$
+$F$ accounts for all the permuations of all vertices $V!$, and each vertex's legs and all propogators $P!$ and both ends of the propogators $2!$. After dividing $A$ by $F$ we get the symmetry factor. This is important to remove double counting. As some of the ways of assigning derivates to sources are equivalent. Looking for the number of distinct ways of mapping from the half edges to themselves whilst preserving the graph but creating a distigusible set of half edge assignations. Number of ways of changing the labels but keeping the same graph.
+\section{Lecture 4}
+Now we want to look at diagrams with external terms e.g. $E=2$ terms in the idagrammatic expansion. In the generating function:
+$$
+Z(J) > | + |o + | \infty + |^o_o + |oo ...
+$$
+We get both the vaccuum bubbles and the connected diagrams, so can factor out the vacuum bubbles:
+$$
+Z(J) > (| + 8 + ...)( | + |o + ...)
+$$
+When we go to calculate expectation values:
+$$
+< \phi^2 > = \frac{\hbar^2}{Z(0)} )\frac{\partial }{\partial J)^2 Z(J) |_{J=0} = \frac{1}{Z(0)} (| + |o + | 8 + ...) = (| + |0 + |oo)
+$$
+The generalization is straightforward
+$$
+< \phi^4 > = || + X + |o o| + ...
+$$
+\subsection{Effective actions}
+We will show that $W = - \frac{1}{\hbar} \log Z$ Wilson effective action is sum of connected vacuum diagrams. Any diagram $D$ as products of connected diagrams $ D= \frac{1}{S_D}\sum_I(c_I)^{n_I}$
+$$
+\frac{Z}{Z_0} = \sum_{\{ n_I\}} D = \prod_I \sum_{n_I} (c_I)^{n_I} = \exp ( \sum_I c_I ) = e^{- (W-W_0)/ \hbar}
+$$
+$$
+W= W_0 - \hbar \sum_I C_I
+$$
+Introduce external sources
+$$
+- \frac{1}{\hbar} W(J) = \log Z(J)
+$$
+$$
+- \frac{1}{\hbar} \frac{\partial ^2}{\partial J^"} W |_{J=0} = \frac{1}{Z(0)} \frac{\partial^2 Z}{\partial J^2} |_{J=0} - \frac{1}{(Z(0)^2} (\frac{\partial Z}{\partial J}_{J=0} )^2 = \frac{1}{\hbar} ( < \phi^2> -< \phi>^2)
+$$
+In our theory for even actions the second term is zero. Above you can see we are finding the two point functions and then subtracting off the disconnected one point functions.\\\\
+\textbf{Why is W "effective"}:\\
+Consider a theory with 2 scalars $\phi$ and $\chi$:
+$$
+S(\phi, \chi) = \frac{m^2}{2} \phi^2 + \frac{M^2}{2} \chi^2 + \frac{\lambda}{4} \phi^2 \chi^2
+$$
+Feynmann rules:\\
+Propogrators of $\frac{\hbar}{m^2}$ and $\frac{\hbar}{M^2}$, vertex rules of $- \frac{\lambda}{\hbar}$.
+Therefore, $- \frac{W}{\hbar} = $ sum of connected diagrams with two dashed lines and two solid lines in coming out of each vertex.
+$$
+< \phi^2> = | + |0 + (|) + ...
+$$
+Look in typed notes to see how this works it is too difficult to latex the diagrams. If we want to remove the $\chi$ field then. Define $W(\phi)$
+$$
+e^{- W(\phi) /\hbar} = \int d\chi e^{- S(\phi, \chi)/\hbar}
+$$
+Treat $\chi^2 \phi^2$ term as a source for $\chi^2$ ( $J = - \chi^2$) so the correlation funciton of the $\phi$ fields:
+$$
+< f( \phi)> = \frac{1}{Z} \int d\phi d\chi f(\phi) e^{- S(\phi, \chi)} = \frac{1}{Z} \int d\phi f(\phi) e^{- W(\phi) / \hbar}
+$$
+As this is simple theory we can use exact integration:
+$$
+\int d\chi e^{- S(\phi, \chi)/\hbar} = e^{- m^2 \phi^2 /2 \hbar} \sqrt{ \frac{ 2\pi \hbar}{ M^2 + \frac{\lambda \phi^2}{2}}
+$$
+$$
+W(\phi) = \frac{1}{2} m^2 \phi^2 + \frac{\hbar}{2} \log (1 + \frac{\lambda}{2 M^2} \phi^2) + \frac{\hbar}{2} \log \frac{M^2}{2\pi \hbar}
+$$
+$$
+W(\phi) = ( \frac{m^2}{2} + \frac{\hbar \lambda}{4M^2} )\phi^2 - \frac{\hbar \lambda^2}{16 m^4} \phi^4 + \frac{\hbar \lambda^3}{48 M^6} \phi^6 + ...
+$$
+ $$
+ W(\phi) = \frac{m^2_{eff}}{2} \phi^2 + \frac{\lambda_4}{4!} \phi^4 + .. + \frac{\lambda^6}{6!} \phi^6
+ $$
 \end{document}

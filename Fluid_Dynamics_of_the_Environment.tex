@@ -58,5 +58,224 @@ For now $\kappa = 0$:
 $$
 \rho \frac{ \partial \bm u}{\partial t} + \rho (\bm u \cdot \nabla) \bm u = - \nabla p - \rho g \bm \hat z + \rho \nu \nabla^2 \bm u
 $$
-For now $\nu = 0$. Take $\rho = \rho_0 + \rho'$. Linearise with $\rho' << \rho_0$ and Boussinesq $|\frac{\nabla \bm u}{\nabla t} | << g$.
+For now $\nu = 0$. Take $\rho = \rho_0 + \rho'$. Linearise with $\rho' << \rho_0$ and Boussinesq $|\frac{\nabla \bm u}{\nabla t} | << g$. The Boussieneq means that the $\rho'$ contrbutes to the gravity term but not to the interial term. We can rewrite the equations using reduced gravity to make this clear $g' = g \frac{\rho - \rho_0}{\rho} = g \frac{\rho'}{\rho}$:
+$$
+\\frac{ \partial \bm u}{\partial t} + (\bm u \cdot \nabla) \bm u = - \frac{1}{\rho_0} \nabla(p + \rho g z) - g' \hat{\bm z}
+$$
+To linearise we take$\rho = \hat \rho(z) + \rho'(x,t)$ and  $\bm u' \sim \eta \omega << \frac{\omega}{|k|} \implies |k| \eta << 1$. By combining this with our Boussineqs condition we have $|\nabla \rho'| << | \frac{d\hat \rho}{d z}|$. This gives the navier stokes equation:
+$$
+\frac{\partial \rho'}{\partial t} + w \frac{d\hat \rho}{dz} = \frac{\partial \rho'}{\partial t} - w \frac{\rho_0}{g} N^2 = 0
+$$
+$$
+\frac{\partial \bm u}{\partial t} = - \frac{1}{\rho_0} \nabla( p_0 + \hat p - p') - \frac{\hat \rho + \rho'}{\rho_0} \bm z =  - \frac{1}{\rho_0} \nabla (p_0 + \hat p) - g \frac{\hat \rho}{\rho_0} \hat{\bm z} - \frac{1}{\rho_0} \nabla p' - g \frac{\rho'}{\rho_0} \hat{\bm z}
+$$
+Unperturbed state gives the first two terms as they are much larger than the other terms
+$$
+0 = - \frac{1}{\rho_0} \nabla (p_0 + \hat p) - g \frac{\hat \rho}{\rho_0} \hat{\bm z}
+$$
+therefore
+$$
+p_0 + \hat p = - \int g \hat \rho dz
+$$
+Let
+$$
+b = - g \frac{\rho'}{\rho_0} 
+$$
+Therefore:
+\begin{equation}
+\frac{\partial b}{\partial t} = - w N^2
+\end{equation}
+\begin{equation}
+        \frac{\partial \bm u}{\partial t} = - \frac{1}{\rho_0} \nabla p' + b \hat{\bm z}
+\end{equation}
+\begin{equation}
+        \nabla \cdot \bm u = 0
+\end{equation}
+\subsection{Vorticity}: $\bm \zeta = \nabla \times \bm u$
+We are going to deal in 2D as it is easier. In 2-D vorictity can be expressed interms of the streamfunction:
+$$
+\zeta = - \nabla^2 \psi, \bm \psi = \psi \hat{\bm y}, \bm u = \nabla \times \bm \psi
+$$
+Take curl of momentum equation to remove pressure:
+$$
+\frac{\partial \bm \zeta}{\partial t} = - \hat{\bm z} \times \nabla b
+$$
+$$
+(\hat{\bm z} \times \nabla) \cdot (\hat{\bm z} \cdot \nabla w) = \nabla^2_H w
+$$
+so gives voriticity equation:
+\begin{equation}
+        (\nabla^2 \frac{\partial^2}{\partial t^2} + N^2 \nabla^2_H) w = 0
+\end{equation}
+Pose a plane wave type solution ansatz and see what happens. Let :
+$$
+w(\bm x, t) = Re( \hat w(z) e^{i(kx + ly - \omega t)})
+$$
+$$
+\frac{d^2 \hat w}{dz^2} + (k^2 + l^2) (\frac{N^2}{\omega^2} -1) \hat w = 0
+$$
+So if we let $m^2 = (k^2 + l^2) ( \frac{N^2}{\omega^2}-1)$ then:
+$$
+\hat w = Re( A e^{imz} + Be^{-imz}
+$$
+If $\omega > N$ then $m$ is imaginary let $\gamma = \sqrt{1- \frac{N^2}{\omega^2}}$:
+$$
+w = (\hat A e^{- \gamma k_h z + \hat B e^{\gamma k_h z})e^{i(k x + ly - \omega t)}
+$$
+This is sort of showing how the velocity field changes with depth away from a distribance on the surface. If we have $N=0$ then this is just a surface wave. If we have $0<N<\omega$ the $\gamma$ is just giving a vertical rescaling of the behaviour beneath the surface wave. This means if we produce a sinosidal distributance with a frequency bigger than the bouyancy frequency then the distrubance looks like potential flow, as we increase the stratification of a fluid it will decrease the decay rate of that motion as we move away from that boundary. The limiting case is when we reach $\omega = N$ the entire water depth is moving in phase and with the same magnitude as the surface.\\\\
+In the case $\omega<N$ we have $m$ is real so we get sinsoidal variations in the vertical direction:
+$$
+w = w_0 e^{i kx + ly + mz - \omega t} = w_0 e^{ i( \bm k \cdot \bm x - \omega t)}
+$$
+$$
+\phi = \bm k \cdot \bm x - \omega t
+$$
+so
+$$
+w = w_0 e^{i\phi}
+$$
+We want to get an idea of the relationships between the different parameters. To start with consider continuity:
+$$
+\nabla \cdot \bm u = 0 \implies \frac{\partial u}{\partial x} + \frac{\parital w}{\partial z} = 0
+$$
+So
+$$
+u = \int \frac{\partial w_0 e^{i \phi}}{\parital z}dx = - \frac{m}{k} w_0 e^{i \phi} = - \frac{\tan \theta}{ \cos \theta} w_0 e^{i \phi}
+$$
+Considering surface variation $\eta(x,t) = \tilde \eta(x,t) e^{i \phi}$ therefore by differentiing this and matching with $u$ and $w$ at the surface:
+$$
+\bm u = \frac{\partial \bm \eta}{\partial t} \implies w_0 = i \omega \cos \theta \tilde \eta
+$$
+Now considering the relationship arising form the bouyancy equation:
+$$
+\frac{\parital b}{\partial t} =  -w N^2 \implies i \omega \tilde b = - w N^2 
+$$
+$$
+b = - \eta \frac{\omega^2}{\cos \theta }e^{ i \phi} = - \eta \omega N e^{i \phi}
+$$
+Now consider the momentum equation:
+$$
+\frac{\partial u}{\partial t} = - \frac{1}{\rho_0} \frac{\partial p'}{\partial x} \implies \tilde p = i \frac{\omega N}{|\bm k|} \eta \sin \theta
+$$
+\subsection{Wave velocities}
+\textbf{Phase velocity}
+$$
+\phi = \bm k \cdot \bm x - \omega t = k_i x_i - \omega t
+$$
+The below identity is very obviously zero:
+$$
+\frac{\partial \phi}{\partial x_i} \frac{\partial \phi}{\partial t} - \frac{\partial \phi}{\partial t} \frac{\partial \phi}{\partial x_i} = 0
+$$
+$$
+k_i \frac{\partial \phi}{\partial t} + \omega \frac{\partial \phi}{\partial x_i} = 0
+$$
+Divide across by $k_i$:
+$$
+\frac{\partial \phi}{\partial t} + \frac{\omega}{|k|^2}k_i \frac{\partial \phi}{\partial x_i} = 0
+$$
+Therefore, $c_p = \frac{\omega}{|\bm k|^2}\bm k$ as:
+$$
+\frac{\partial \phi}{\partial t} + (\bm c_p \cdot \nabla) \phi = 0
+$$
+\section{Lecture 3}
+\textbf{Group velocity}:
+$$
+\frac{\partial^2 \phi}{\partial x_i \partial t} - \frac{\partial^2 \phi}{\partial t \partial x_i} = 0
+$$
+$$
+\frac{\partial k_i}{\partial t} + \frac{\partial \omega}{\partial x_i} = 0
+$$
+As $\omega = \omega(k)$ we have:
+$$
+\frac{\partial \omega}{\partial x_i} = \frac{\partial \omega}{\partial k_j} \frac{\partial k_j}{\partial x_i} 
+$$
+$$
+\frac{\partial k_j}{\partial x_i} = \frac{\partial ^2 \phi}{\partial x_j \partial x_j} = \frac{ \partial k_i}{\partial x_j}
+$$
+Therefore:
+$$
+\frac{\partial k_i}{\partial t} + \frac{\partial \omega}{\partial k_j} \frac{\partial k_i}{\partial x_j} = 0
+$$
+Therefore, $c_g = \frac{\partial \omega}{\partial k_i}$ as:
+$$
+\frac{\partial k_i}{\partial t} + \bm c_g \cdot \nabla k_i  = 0
+$$
+So the wavenumber vector is being advected outwards with the group velocity.\\
+\textbf{Surface waves}: $\omega = gk$, $c_g = \frac{ \partial}{\partial k} \sqrt{ gh} = \frac{1}{2} c_p$, $c_p = \frac{\omega}{k} = \sqrt{ \frac{g}{k}}$.
+\subsection{Superposition}
+$$
+\eta = \cos( (k+ \delta k) x - (\omgea + \delta \omega)t) + \cos ((k- \delta k) x - (\omega - \delta \omega)t)
+$$
+$$
+\eta = 2 \cos( \delta k x - \delta \omega t) \cos (kx - \omega t)
+$$
+As $\delta \omega = \frac{\partial \omega}{\partial k} \delta k$ for $|\delta k| << |k|$ then
+$$
+\eta = 2 \cos( (x- \frac{\partial \omega}{\partial k} t) \delta k) \cos (k x - \omega t)
+$$
+This is a wave and envelope speed of $\frac{\partial \omega}{\partial k}$.
+\subsection{Internal wave velocities}
+As $\frac{\omega^2}{N^2} = \frac{k^2 + l^2}{|k|^2} = \cos^2 \theta$
+$$
+\bm c_p = \frac{\omega}{|k|^2} \bm k = \frac{ N( k^2 + l^2)^{\frac{1}{2}}}{|k|^{\frac{3}{2}}} \bm k = \frac{N |\cos \theta|}{|k|^2} \bm k 
+$$
+This is the polar coordinate equation for two circles touching at the origin at every $\phi$ so they sort of form a torus.\\\\
+Now lets look at the group velocity:
+$$
+c_g = \frac{\partial \omega}{\partial k_i} = \frac{1}{2\omega} \frac{\partial \omega^2}{\partial k_i} = \frac{\omega}{|k|^2} ( \frac{N^2}{\omega^2}(\bm k - k_z \hat{\bm z}) - \bm k) = \frac{N|\sin \theta|}{|k|}\begin{pmatrix}\cos \phi \sin \theta\\ \sin \phi \sin \theta \\\ - \cos \theta \end{pmatrix}
+$$
+$$
+|c_g| = \frac{N}{|k|} |\sin \theta|
+$$
+This means that in the horizontal direction the phase velocity is always perpendicular to the group velocity. They form the same circle just one with $\sin \theta$ and one with $\cos \theta$ and as $\sin \theta = \cos (\pi/2 - \theta)$. As the angles on a semicircle subtend 90 degrees we can sum the two and we will get the opposite side of the circle always. Therefore,
+$$
+\bm c_p + \bm c_g = \frac{N}{|\bm k|} \begin{pmatrix} \cos \phi\\ \sin \phi \end{pmatrix}
+$$
+$$
+|\bm c_p + \bm c_g| = \frac{N}{|\bm k|}, c_{p,z} = - c_{g,z}, \bm c_p \cdot \bm c_g = 0
+$$
+\subsection{Equipartition of energy}
+$$
+\bm u \cdot (\rho_0 \frac{\partial \bm u}{\partial t} + \nabla p' + \rho' g \bm z) = 0
+$$
+Recalling that $\frac{\partial \rho'}{\partial t} - w \frac{\rho_0}{g} N^2 = 0 \implies w = \frac{g}{\rho_0 N^2} \frac{\partial \rho'}{\partial t}$, and the incompressibility condition to get:
+$$
+\frac{\partial}{\partial t}( \frac{1}{2} \rho_0 |\bm u |^2 + \frac{1}{2} \frac{g^2}{\rho_0 N^2} p'^2 ) + \nabla \cdot (p' \bm u) = 0
+$$
+If we go back to the start and consider the dispalcement of a packet of fluid by $\zeta$ we have change in potential energy of:
+$$
+\Delta PE = \int^{z_0 + \zeta}_{z_0} g \frac{d \hat \rho}{d z} (z - z_0) dz = \frac{1}{2} \rho_0 N^2 \zeta^2
+$$
+$$
+\rho' = - \frac{d \hat \rho}{dz} \zeta = \frac{\rho_0}{g} N^2 \zeta 
+$$
+$$
+PE = \frac{1}{2} N^2 \rho_0 \zeta^2 = \frac{1}{2} \rho_0 \frac{b^2}{N^2}
+$$
+If we want to consider the total energy equation:
+$$
+\int_V \frac{\partial}{\partial t} (KE + PE) dV + \int_S p' \bm u \cdot \bm n dS' = 0
+$$
+$\bm F_E = p'\bm u$ is the flux of energy.\\\\
+Lets consider 2D:
+$$
+u = \eta \omega \sin \theta \sin \phi, w = - \eta \omega \cos \theta \sin \phi, b = \eta \frac{\omega^2}{\cos \theta} \cos \phi, p' = \eta \rho_0 \frac{\omega^2}{|k|} \tan \theta \sin \phi
+$$
+Subsitute into kinetic energy:
+$$
+KE = \frac{1}{2} \rho_0 (u^2 + w^2) = \frac{1}{2} \rho_0 \omega \eta^2 \sin^2 \phi
+$$
+$$
+\bar{KE} = \frac{1}{4} \rho_0 \omega^2 \eta^2
+$$
+$$
+PE = \frac{1}{2} \rho_0 \omega^2 \eta^2 \cos^2\phi
+$$
+$$
+\bar{PE} = \frac{1}{4} \rho_0 \omega^2 \eta^2
+$$
+So you have equiparition of energy for linear waves $\bar{KE} = \bar{PE}$. We can also write down an expression for the flux of energy:
+$$
+\bm F_E = p' \bm u = \rho_0 \omega^2 \eta^2 \sin^2 \phi  \frac{N}{|k|} \sin \theta \begin{pmatrix} \sin \theta\\ - \cos \theta \end{pmatrix} = \frac{1}{2} \rho_0 \omega^2 \eta^2 \bm c_g = \bar{E} \bm c_g
+$$
 \end{document}
