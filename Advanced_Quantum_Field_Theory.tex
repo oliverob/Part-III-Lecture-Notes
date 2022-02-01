@@ -70,7 +70,7 @@ K(x, x_0; T) = \bra{x} e^{- i \hat H T /\hbar} \ket{x} = \int \mathcal{D}x e^{i 
 $$
 where $$\mathcal{D}x = \lim_{\delta t \rightarrow 0, n \delta t = T} \sqrt{\frac{m}{2 \pi i \hbar \delta t}} \prod_{r=1}^n ( \sqrt{\frac{m}{2 \pi i \hbar \delta t}} dx_r)$$
 One way of considering the classic limit is taking $\hbar \rightarrow 0$. For $e^{iS/\hbar}$ thisincreases the phases/frequencies. The Riemann-Lebesque lemma implies tha thte smallest frequncy (i.e. the path whihc minimises $S$ dominates the integral). As smallest $S$ is the hamiltonians principle of least action so this is equivalent to the classical treatment. \\\\
-Another way is for $\hbar \neq 0$ the QM amplitude is the sum of all paths each weighted by phase $e^{iS/\hbar}$. This gives the interfence patterns we see in double slit etc.\\\\
+Another way is for $\hbar \neq 0$ the QM amplitude is the sum of all paths each weighted by phase $e^{iS/\hbar}$. This gives the interfence patterns we see in double sli, which is just represented by some classical line with no further diagrams.etc.\\\\
 One trick we are going to play is dealing in imaginary time. You can analytically continue to imaginary time. Let $\tau = it$, then $\bra{x} e^{- \hat H t/\hbar} \ket{x_0} = \int \mathcal{D}x e^{-S/\hbar}$. Here the $\hbar \rightarrow 0$ argument is much more clear as the smallest value of $S$ will dominate in the limit. Analogy with statistical mechanics where $e^{-S /\hbar}$ is a botlzmann factor, and $\int \mathcal{D}x $ is the sum over microstates. These (with real exponentials) converge. Not all quantum questions can be answer in imaginary time. e.g. if there is a causality relationship between the initial and final space as we have convereted from mincovski to euclian.
 \section{Lecture 2}
 We showed that in quantum mechanics a path integral over positions weighted by the classical action:
@@ -200,13 +200,14 @@ Z(J) > (| + 8 + ...)( | + |o + ...)
 $$
 When we go to calculate expectation values:
 $$
-< \phi^2 > = \frac{\hbar^2}{Z(0)} )\frac{\partial }{\partial J)^2 Z(J) |_{J=0} = \frac{1}{Z(0)} (| + |o + | 8 + ...) = (| + |0 + |oo)
+< \phi^2 > = \frac{\hbar^2}{Z(0)} )\frac{\partial }{\partial J)^2} Z(J) |_{J=0} = \frac{1}{Z(0)} (| + |o + | 8 + ...) = (| + |0 + |oo)
 $$
 The generalization is straightforward
 $$
 < \phi^4 > = || + X + |o o| + ...
 $$
 \subsection{Effective actions}
+In this section we show that we only need to consider the connected vaccum bubbles as the action only deals in the sums of connected bubbles rather than $Z$ which is the sum of all vaccumm bubbles.\\\\
 We will show that $W = - \frac{1}{\hbar} \log Z$ Wilson effective action is sum of connected vacuum diagrams. Any diagram $D$ as products of connected diagrams $ D= \frac{1}{S_D}\sum_I(c_I)^{n_I}$
 $$
 \frac{Z}{Z_0} = \sum_{\{ n_I\}} D = \prod_I \sum_{n_I} (c_I)^{n_I} = \exp ( \sum_I c_I ) = e^{- (W-W_0)/ \hbar}
@@ -243,7 +244,7 @@ $$
 $$
 As this is simple theory we can use exact integration:
 $$
-\int d\chi e^{- S(\phi, \chi)/\hbar} = e^{- m^2 \phi^2 /2 \hbar} \sqrt{ \frac{ 2\pi \hbar}{ M^2 + \frac{\lambda \phi^2}{2}}
+\int d\chi e^{- S(\phi, \chi)/\hbar} = e^{- m^2 \phi^2 /2 \hbar} \sqrt{ \frac{ 2\pi \hbar}{ M^2 + \frac{\lambda \phi^2}{2}}}
 $$
 $$
 W(\phi) = \frac{1}{2} m^2 \phi^2 + \frac{\hbar}{2} \log (1 + \frac{\lambda}{2 M^2} \phi^2) + \frac{\hbar}{2} \log \frac{M^2}{2\pi \hbar}
@@ -254,4 +255,161 @@ $$
  $$
  W(\phi) = \frac{m^2_{eff}}{2} \phi^2 + \frac{\lambda_4}{4!} \phi^4 + .. + \frac{\lambda^6}{6!} \phi^6
  $$
-\end{document}
+ \section{Lecture 5}
+ Now we do it perturbatively using diagrams. Treat $\frac{\lambda}{4} \phi^2 \chi^2$ as a source term:
+ $$
+ Z = \int d \phi e^{- m^2 \phi^2/2\hbar} \int d\chi \exp ( - \frac{1}{\hbar}( \frac{M^2}{2} \chi^2 - J \chi^2))
+ $$
+ $J = - \frac{\lambda}{4} \phi^2$
+ This leads to the Feynman rules with the propogator of $\frac{\hbar}{M^2}$ and we have self interaction terms with $- \frac{\lambda \phi^2{2 \hbar}}$ from the $\chi^2$ source term. Now we can find the efffective action (given by the sum of the connected diagrams):
+ $$
+ W(\phi) =  - \hbar(....)
+ $$
+ (above is all the connected diagrams with more and more vertices each with two legs so effectively looks like the increasing roots of unity)
+ $$
+ W(\phi) = \frac{m^2}{\phi^2}{2} - \frac{1}{2} \frac{\hbar\lambda}{2 M^2} \phi^2 - \frac{1}{4} \frac{\hbar \lambda^2}{4 M^4} \phi^4 + \frac{1}{3!} \frac{\hbar \lambda^2}{8 M^6} \phi^6 + ..= \frac{m^2_{\eff}}{2} \phi^2 + \frac{\lambda_4}{4!} \phi^4 + ...
+ $$
+ This is the same result as before. Now we have a theory of how the $\phi$ interacts. Now lets do the calculation with the full theory where we keep the $\phi$ explictly. Using $W(\phi)$:
+ $$
+ <\phi^2> = \frac{1}{Z} \int d\phi \phi^2 e^{- W(\phi) / \hbar} = | + |o + ... = \frac{\hbar}{m^2_{eff} } - \frac{\lambda_4 \hbar^2}{2 m^6_{eff}} + ...
+ $$
+This agrees with the full caculation from earlier. We have shown that given a theory of two fields we can intergrate out one of them to get a theory in just one field, this changes the degrees of freedom which therefore changes the coefficent.\\\\
+Lets continue on with effective actions, now we want to introduce the quantum effective action\subsubsection{Quantum effective action}
+Define average field in the presence of an external source $ < \phi> = \Phi = - \frac{\partial W}{\partial J} = \frac{\hbar}{Z(J)} \frac{\partial}{\partial J} \int d\phi e^{-(S-J\phi)/\hbar}$.
+Legendre transform is a transformation from treating the source $J$ as the independant variable to treating the mean field $\Phi$ as the independant variable
+$$
+\Gamma (\Phi) = W(J_{\Phi}) + \Phi J_{\Phi}
+$$
+$J_{\Phi}$ is the $J$ which gives the correct expression $\frac{\partial W}{\partial J}|_{J_{\Phi}} = - \Phi$. Lets find the derivative:
+$$
+\frac{\partial \Gamma}{\partial \Phi} = \frac{\partial W}{\partial \Phi} + J_{\Phi} + \Phi \frac{\partial J_{\Phi}}{\partial \Phi} = - \frac{\partial W}{\partial J}_{J_{\Phi}} \frac{\partial J}{\partial \Phi} + J_{\Phi} + \Phi \frac{\parital J_{\Phi}}{\partial \Phi} 
+$$
+$$
+\frac{\partial \Gamma}{\partial \Phi} = J_{\Phi}
+$$
+\subsection{$\Gamma(\Phi)$ and Feynmann diagrams}
+External lines have one free end, whereas internal lines have no free ends. A bridge is any internal line of a connected graph which if cut would make the graph disconnected. A connected graph is said to be one-particle irreducible (1PI) iff it has no bridges. We are interested in these single particle irreducible graphs. Statement that we want to prove is that $\Gamma(\Phi)$ sums the 1PI graphs of the theory. We might expand about $\Phi = \Phi_0 (J = 0)$. Let $\varphi = \Phi$:
+$$
+\Gamma(\Phi) = \Gamma^{(0)} + \frac{1}{2} \Gamma^{(2)} \varphi^2 + ... + \frac{1}{n!} \Gamma^{(n)} \varphi^n
+$$
+Treat $\Phi$ as we did $\phi$ earlier. The quantum path integral for $\Phi$:
+$$
+e^{-W_{\Gamma}(J)/g}\int d\Phi e^{- (\Gamma(\Phi) - J \Phi)/g}
+$$
+$g$ is fictious planck constant.
+$$
+W_{\Gamma}(J) = \text{ sum of connected diagrams } =  \sum_{l=0} g^l W_{\Gamma}^{(l)}(J)
+$$
+In $g \rightarrrow 0$ limit $W_{\Gamma}(J) = W_{\Gamma}(J) = \Gamma(\Phi) - J \Phi$ "classical" action of the path integral ($W(J)$) which is the effective action of the original theory. $W(J) = -\hbar \log \int d \phi e^{- S(\phi)/\hbar}$
+$$
+W(J) = - \hbar \log (\int d\phi e^{-(S(\phi) - J\phi)/\hbar)}
+$$
+The sum of connected diagrams with rules derived from action $S(\phi) - J\phi$ can be obtained as the sum of tree diagrams (no loops only bridges) using $W_{\Gamma}(J)$ rules derived from action $\Gamma(\Phi) - J\Phi$. Therefore the diagrams in the original theory that don't contain any bridges have to be absorbed into the coefficents of the tree diagrams of $W_{\Gamma}(J)$.\\\\
+In a theory with several scalar fields: $\phi_a$ $a = 1,..., N$:
+$$
+<\phi_a \phi_b>_J^{conn} = < \phi_a \phi_b>_J - <\phi_a> <\phi_b> = - \hbar \frac{\partial^2 W}{\partial J_a \partial J_b} = - \hbar \frac{\partial}{\partial J_a}( \frac{\partial W}{\partial J_b}) = \hbar \frac{\partial}{\partial J_a} \phi_B = \hbar (\frac{\partial J_a}{\partial \Phi_b})^{-1} = \hbar (\frac{\partial^2 \Gamma}{\partial \Phi_a \partial \Phi_b})^{-1}
+$$
+The point is that the two point function which we know in the original thepry working with action $S(\phi)$ we have to sum the diagrams with two external legs so it starts of as just a single propogator plus the loop contributions. This tells us that if we know the quantum effective action then we can just read off the two point function, which is just represented by some classical line with no further diagrams.\\\\
+What is basically happening here is we can split every diagram into irreducible parts and each of them can be expressed as a single vertex with the correct them of external lines and will represent all the possible way it can be done like with loads of loops and stuff etc. so basically we can hugely simplify the number of diagrams. We have to figure out what the vertex is.
+\section{Lecture 6}
+Given $$\Gamma(\Phi) = \Gamma^{(0)} + \frac{1}{2} \Gamma^{(2)}( \Phi - \Phi_0)^2 + ... + \frac{1}{n!} \Gamma^{(n)}(\Phi- \Phi_0)^n +...$$ we have
+$$
+< \phi_a \phi_b>_J^{conn} = \hbar( \frac{\partial^2 \Gamma}{\partial \Phi_a \partial \Phi_b})^{-1} = \hbar ( \Gamma^{(0)})^{-1}
+$$
+in $\phi^4$ theory:
+$$
+< \phi_a \phi_b>_J^{conn} = -- \,+\, -o- \,+\, -o-o- \,+\, -8- \,+ \,- \theta - \,+ .. =  \,--\, +\, -IPI- \,+ \,-IPI-IPI- \,+ \,-IPI-IPI-IPI- =  \frac{1}{1- IPI}
+$$
+intuitively the last step comes from recognising the geometric series. On the example sheet we will do the same for three point function:
+$$
+< \phi_a \phi_b \phi_c >_J^{conn} = - \frac{1}{\hbar} ( \frac{\partial^3 \Gamma}{\partial \Phi_d \parital \Phi_e \partial_f})^{-1} <\Phi_a \Phi_d> <\Phi_b \Phi_e> <\Phi_c \Phi_f> 
+$$
+$$
+( \frac{\partial^3 \Gamma}{\partial \Phi_d \parital \Phi_e \partial_f})^{-1}  = \Gamma^{(3)} = - <\Phi_d \Phi_e \Phi_F> ^{IPI}
+$$
+This is still trivial as you cant imagine having a non trivial bridge so we go to one higher level . If we go to a four point function we could have a bridge within the internal interactions e.g. it could be two 2 particle interactions rather than a single 4 particle interaction. Remember every external line has a two point interaction 1PI on it as there is a particle coming in a one coming out. This section is not in the written notes. It is slightly discussed later on page 41.
+\subsection{Fermions}
+Now have anticommutation relations rather than commutation relations. We introduce the abstract conscept of Grassmann numbers which are anti-commuting variables.\\
+$n$ numbers $\{ \theta_a \} a = 1,..., n$ and they obey:
+$$
+\theta_a \theta_b = - \theta_b \theta_a \implies \theta_a^2 = 0
+$$
+for any scalar $\phi_b \in \mathbb{C}$
+$$
+\theta_a \phi_b = \phi_b \theta_a
+$$
+Functions can be expressed as finite sums:
+$$
+f(\theta) = f + \rho_a \theta_a + \frac{1}{2!} g_{ab} \theta_a \theta_b + ... + \frac{1}{n!}h_{a_1a_2...a_n} \theta_{a_1} \theta_{a_2} ... \theta_{a_n}
+$$
+where $g_{ab},..., h_{a_1...a_n}$ etc. are anti-symmetric in their indicies. This series is finite as adding any more $\theta$s would give a $\theta_a^2=0$ and vanish the term. Note
+$$
+(\theta_a \theta_b) (\theta_c \theta_d) = (\theta_c \theta_d) (\theta_a \theta_b)
+$$
+Differentiation is defined to anti commute:
+$$
+\frac{\partial}{\partial \theta_a} \theta_b + \theta_b \frac{\partial}{\partial \theta_a} = \delta_{ab}, \frac{\partial}{\partial \theta_a}( \theta_b F(\theta)) = \delta_{ab} F(\theta) - \theta_b \frac{\partial F}{\partial \theta_a}
+$$
+Integration: For a single grassamann $\theta$
+$$
+F(\theta) = f+ \rho \theta
+$$
+Define $\int d\theta$ and $\int \theta d\theta$. We want to require translational invariance and consider what it means to intergate over the whole range of $\theta$. So impose requirement that
+$$
+\int d \theta( \theta + \eta) = \int \theta d\theta 
+$$
+for constant grossman variable $\eta$. This implies that we want $\int d\theta = 0$ and we want $\int \theta d\theta = 1$ (this includes a choice of normalization). These are called the "Berezin rules". \\\\
+Integration by parts is simplified:
+$$
+\int d\theta \frac{\partial}{\partial \theta} F(\theta) = 0
+$$
+So we have intoduced the rules for one variable now lets consider $n$ Grassmann variables $\theta_a$. In this case the only non-vanishing integral have to have one and only one $\theta$:
+$$
+\int d^n \theta \theta_1 \theta_2... \theta_n = 1 \iff \int d \theta_n d\theta_{n-1} ... d\theta_1 \theta_1 \theta_2... \theta_n = 1
+$$
+A key point is in general if we start commuting these indicies we are going to start picking up signs so
+$$
+\int d^n \theta \theta_{a_1} \theta_{a_2} ... \theta_{a_n} = \epsilon_{a_1 a_2... a_n}
+$$
+Now let use consider a change of variables $\theta' = X_{ab} \theta_b$ then:
+$$
+\theta_a' = X_{ab} \theta_b, X_{ab} \in \mathbb{C}
+$$
+$$
+\int d^n \theta'_{a_1} ... \theta'_{a_n} = X_{a_1 b_1} ... X_{a_n b_n}  \int d^n \theta \theta_{b_1}... \theta_{b_n} = X_{a_1 b_1} ... X_{a_n b_n}   \epsilon^{b_1... b_n} = \det X \epsilon^{a_1...a_n} = \det X \int d^n \theta' \theta'_{a_1}... \theta'_{a_n}
+$$
+therefore $d^n \theta = det X d^n \theta'$ which compared to scalars where we have $\phi' = Y \phi \implies d^n \phi = \frac{1}{\det Y} d^n \phi'$. So fermions give the converse relationship here to what you would expect from scalars.
+\subsection{Free fermion field theory}
+$d = 0$, 2 fields $\theta_1, \theta_2$. Need a scalar action, only non-constant action
+$$
+S(\theta) = \frac{1}{2} A \theta_1 \theta_2, A \in \mathbb{R}
+$$
+$$
+Z_0 = \in d^2 \theta e^{-S(\theta)/\hbar} = \int d^2 \theta ( 1- \frac{A}{2\hbar} \theta_1 \theta_2) = - \frac{A}{2 \hbar}
+$$
+$n = 2m$ fields
+$$
+S= \frac{1}{2} A_{ab} \theta_a \theta_b
+$$
+$ A_{ab}$ is antisymmetric matrix
+$$
+Z_{0} = \int d\theta^{2m} e^{-S /\hbar} = \int d^{2m} \theta \sum_{j=0}^m \frac{(-1)^j}{(2\hbar)^j j!} ( A_{ab} \theta_a \theta_b)^j
+$$
+$$
+Z_0 = \frac{(-1)^m}{(2\hbar)^m m!} \epsilon^{a_1...a_n} A_{a_1a_2} ... A_{a_{2m-1} a_{2m}} = \frac{(-1)^m}{\hbar} Pf(A) = \pm \sqrt{\frac{\det A}{\hbar^n}}
+$$
+$Pf(A)$ is the Pfaffian.
+\subsubsection{External sources}
+Need to be grassman valued $\eta$:
+$$
+S(\theta, \eta) = \frac{1}{2} A_{ab} \theta_a \theta_b - \eta_a \theta_a
+$$
+Complete the square, using translation invariance to get the following integral that we can then do:
+$$
+Z_0(\eta) = \exp( - \frac{1}{2\hbar} \eta^{T} A^{-1} \eta) Z_0(0)
+$$
+Propogator
+$$
+< \theta_a \theta_b> = \frac{\hbar^2}{Z_0(0)} \frac{\partial^2 Z_0(\eta)}{\partial \eta_a \partial \eta_b}|_{\eta=0} = \hbar ( A^{-1})_{ab}
+$$
+ \end{document}

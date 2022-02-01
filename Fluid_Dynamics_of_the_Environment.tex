@@ -278,4 +278,192 @@ So you have equiparition of energy for linear waves $\bar{KE} = \bar{PE}$. We ca
 $$
 \bm F_E = p' \bm u = \rho_0 \omega^2 \eta^2 \sin^2 \phi  \frac{N}{|k|} \sin \theta \begin{pmatrix} \sin \theta\\ - \cos \theta \end{pmatrix} = \frac{1}{2} \rho_0 \omega^2 \eta^2 \bm c_g = \bar{E} \bm c_g
 $$
+\section{Lecture 4}
+\subsection{Oscillating cyclinder}
+We are interested in the case where the oscillation of the cylinder $a$ is much smaller than the diameter. You might think this is sufficent to make the waves linear, but it is not as we ahve these delta functions on the singularities on the tangent planes to the cylinder (so we will always have the amplitudes being large compared to the wave lengths here but we will ignore this). If everything is at rest to start with it will take a bit of time for the oscillations to propogate out into the whole space. As $|c_g| = \frac{N}{|\bm k|} \sin \theta$ the area of which is influenced by the oscillation will look like two causality envelopes (circles of increasing size touching at the centre). The waves form a st. andrews cross pattern with the waves being bi modal near the cyclinder and unimodal further way this is due to visocity
+\subsubsection{Decay along a beam}
+We are going to take it being 2D and the bouunancy frequency $N= 1$ and the mass dispersion $\kappa = 0$ but include visocity $\nu \neq 0$.
+$$
+\nabla \cdot \bm u = 0
+$$
+$$
+\frac{\partial u}{\partial t} + \frac{1}{\rho_0} \frac{\partial p}{\partial x} = \nu \nabla^2 u
+$$
+$$
+\frac{\partial w}{\partial t} + \frac{1}{\rho_0} \frac{\partial p}{\partial z} -b = \nu \nabla^2 w
+$$
+$$
+\frac{\partial b}{\partial t} + N^2 w = 0
+$$
+To make our lives easier we are going to use a streamfunction:
+$$
+\bm \psi = (0, \psi, 0), \bm u = (\nabla \times \psi) e^{- i \omega t} = \begin{pmatrix}-\frac{\partial \psi}{\partial z}\\0 \\ \frac{\partial \psi}{\partial x} \end{pmatrix}e^{-i \omega t}
+$$
+Take $\zeta$ and $\xi$ to be displacment in the wavevector $k$ direction and then group velocity $c_g$ direction. let $\theta$ be the angle of the group velocity from the vertical which is the asame as the angle of the cross. ThereforeL
+$$
+\zeta = x \cos \theta - z \sin \theta
+$$
+$$
+\xi = x \sin \theta + z \cos \theta
+$$
+Boynancy equation becomes:
+$$
+\frac{\partial b}{\partial t} + \frac{\partial \psi}{\partial \zeta}\cos \theta + \frac{\partial \psi}{\partial \xi} \sin \theta = 0
+$$
+\textbf{Vorticity}: $\nabla \times \bm u = - \nabla^2 \psi e^{-i \omega t}$
+$$
+-i \omega ( \frac{\partial ^2 \psi}{\partial \xi^2} + \frac{\partial ^2 \psi}{\partial \zeta^2}) - \frac{\partial b}{\partial \xi} \sin \theta - \frac{\partial b}{\partial \zeta} \cos \theta - \nu \nabla^2 \nabla^2 \psi = 0
+$$
+Let $b =  (b_0 + \epsilon b_1 +...) e^{-i\omega t}$ and $\psi = (\psi_0 + \epsilon \psi_1 + ...)$:
+We take small viscoity to make equations nice e.g. small $\nu = 2 \epsilon$ and $\epsilon = \frac{1}{2} \nu$ as this is dimensional it is not clear what we mean by small parameter. As this is dimensional it means the dimensions of $\psi_0$ and $\psi_1$ are going to be different. This is not the ideal way of doing this but it is going to allow us to see more clearly what is happening.
+$$
+\chi = \frac{\epsilon}{\sin \theta} \xi
+$$
+Here $\epsilon$ being small means we are interested in gradual changes in the direction of the group velcoity but fast changes in teh wave vector direction so we keep that sinosdiual behaviour. 
+$$
+\frac{\partial}{\partial \xi} = \frac{\partial \chi}{\partial \xi} \frac{\partial}{\partial \chi} = \frac{\epsilon}{\sin \theta} \frac{\partial }{\partial \chi}
+$$
+Plug these into the bouyancy  and vorticity equation and compare terms of the same order:
+$$
+\epsilon_0:  \frac{\partial \psi_0} {\partial \zeta} = - b_0, \frac{\partial^2 \psi_0}{\partial \zeta^2} = i \frac{\partial b_0}{\partial \zeta}
+$$
+$$
+\epsilon_1: \omega \frac{\psi_1}{\partial \zeta} - i \omega b_1 = - \frac{\partial \psi_0}{\partial \chi}, i \omega \frac{\partial^2 \psi_1}{\partial \zeta^2} + \omega \frac{\partial b_1}{\partial \zeta} = i \frac{\partial^2 \psi_0}{\partial \zeta \partial \chi} - 2 \frac{\partial^4 \psi_0}{\partial \zeta^4}
+$$
+Can eliminate the LHS of both of these to give:
+$$
+\frac{\partial^4 \psi_0}{\parital \zeta^4} = i \frac{\partial^2 \psi_0}{\partial \zeta \partial \chi}
+$$
+$$
+\frac{\partial ^3 \psi_0}{\partial \zeta^3} = i \frac{\partial \psi_0}{\partial \chi} + f(\chi)
+$$
+For a point sources as $|\zeta| \rightarrow \infty$ then we expect $\psi \rightarrow% const. then we expect $\psi \rightarrow $const so $f(\chi) = 0$. Now we can do seperation of variables:
+$$
+\psi_0 = F(\zeta) G(\chi)
+$$
+$$
+\frac{F''}{F} = i \frac{G'}{G} = - i k^3
+$$
+$$
+G(\chi) = e^{-k^3 \chi}
+$$
+$$
+F( \zeta) = e^{ik \zeta}
+$$
+$$
+\psi \approx \psi_0 e^{-i\omega t} = A e^{-k^3 \chi} e^{i(k \zeta - \omega t)}
+$$
+$\bm k = (k,0)$ in $(\zeta, \xi)$
+$$
+\chi= \frac{\epsilon}{\sin \theta} \xi = \frac{\nu }{2\sin \theta} \xi = \frac{\nu}{2N \sin \theta} \xi
+$$
+for any $N$.
+If we take a whole spectrum of linear superposition of waves $A(k)$:
+\begin{equation}
+\psi = e^{- i \omega t} \int_{- \infty}^{\infty} A(k) \exp( i k \zeta - \frac{\nu k^3}{2N \sin \theta} \xi) dk
+\end{equation}
+If we think about our cyclinder with the two delta functions at the edge of the cyclinder. As the fourier transform of the delta function is just a constant. So $A(k)$ would just be a constant so the higher wavenumber modes would decay more rapidly due to the $k^3$ in the exponential. We want it to be clear that the length scale over which the day is happening is small compared to the length scale of the oscillations. Lets imagine we are going to scale $\xi$:
+$$
+\frac{\nu k^2}{2N \sin \theta} k \xi
+$$
+Recall that $|c_g| = \frac{N}{|k|} \sin \theta$ so
+$$
+\frac{\nu k^2}{2N \sin \theta} k \xi
+ = \frac{ \nu k}{2} \frac{1}{|c_g|} k \xi = - \pi Re^{-1} k \xi
+$$
+With Reynolds number $Re= \frac{\lambda |c_g|}{\nu}$ with $\lambda = \frac{2\pi}{k}$. We we were requiring $\epsilon$ to be small we were really requiring the reynolds number to be large enough.\subsection{Mass difussivity}
+$$
+(\frac{\partial}{\partial t} + \bm u \cdot \nabla) \rho = \frac{D\rho}{Dt} = \kappa \nabla^2 \rho
+$$
+Lets think about what could cause a difference in the density in the fluid e.g. $S$ salt concentration, moisture content or temperature $T$. Carbon dioxide that we are breathing out is denser than the other air we are breathing out, which is more or less balanced by the humidity of the exhaled breath which is higher than the surroundings. Water vapour is less dense than air. The diffusivity of salt and the diffusivity of temperature are different so we can't write down an equation like above. What we can write down is equations of the diffusivity of these two:
+$$
+\frac{D S}{Dt} = \kappa_s \nabla^2 S, \frac{DT}{Dt} = \kappa_T \nabla^2 T
+$$
+For water $\frac{\kappa_T}{\kappa_s} \approx 100$. If you move hot salty water down into cold nonsalty water then it quickly becomes cold salty water so it rapidly becomes more dense than the fluid around it. Like wise if you took a parcel of cold fresh up into the hot area it will stay fresh but rapidly heat and so will be less dense than its surroundings and want to rise. THis is called salt fingering. Equally if you have cold fresh water above hot salty water. As tempearture diffuses relativitly quickly the gradient will be much steeper for the salt concentration than the temperature, this creates convection.  This is called double-diffusive convection. \\\\
+Prandtl number: $\frac{\nu}{\kappa_T}$\\
+Schmidt number: $\frac{\nu}{\kappa_S}$ with $\kappa_S$ is the diffusivity of some thing like salt
+\subsection{Reflections of waves}
+With light the angle of incidence is equal to the angle of reflection.
+\section{Lecture 6}
+The thing being conserved on relfection is the wavelength (in the case of light) and therefore the colour. If the speed of light in the medium is constant then the frequency is constant, then the wavelength must also be constant. However, in our internal wave system our frequency $\omega$ is not constant as $|\frac{\omega}{N} | = |\cos \theta|$. The angle to the vertical must be conserved not the angle of incidence and angle of reflection in order for the frequency to be the same at the wall. So only in the case of a horizontal wall is the angle of incidence equal to the angle of reflection.  This difference will mean that the wavelength will not be conserved in general.\\\\
+Let the displacement on the incident ray $\eta_i$ and reflected rays $\eta_r$. Therefore in example sheet we show that a slope of angle $\alpha$ to the vertical is: 
+$$
+|\eta_r| = \gamma |\eta_i|, \gamma = |\frac{\sin(\theta + \alpha)}{\sin(\theta - \alpha)}
+$$
+This comes about as the same volume of fluid must be displaced but the distance between neighbouring rays is smaller, so the dispalcement must be larger.
+\subsubsection{Energy density upon reflection}
+$$
+|\bm k_r|= \gamma |\bm k_i| \implies \lambda_r = \frac{1}{\gamma} \lambda_i
+$$
+$$
+|\tilde{\bm u}_r | = \gamma |\tilde{\bm u}_i|
+$$
+$$
+|\tilde{\bm \eta}_r | = \gamma |\tilde{\bm \eta}_i|
+$$
+Recall $|c_g|  = \frac{N}{|\bm k|} \sin \theta$:
+$$
+|c_{g,r}| = \frac{1}{\gamma} |c_{g,i}|
+$$
+Flux of energy per wavelength must be preserved on reflection. We have to be careful what we mean by flux of energy as we have two different wavelength so we can talk about flux of energy per wavelength or flux of energy per unit length:\\\\
+Energy density per wavelength:
+$$
+\tilde E = \int_0^{\lamba} PE + KE d \zeta
+$$
+$$
+\tilde {\bm F} = \tilde E \bm c_g
+$$
+Therefore:
+$$
+\tilde E_r = \gamma \tilde E_i
+$$
+As $\tilde E_r \sim \lambda( PE + KE) = \lambda ( \tilde{\eta} \tilde{\eta^*} + \tilde u \tilde u^*) \sim \lambda( |\tilde \eta|^2 + |\tilde u|^2)$ and as $\lambda \sim \frac{1}{\gamma}$ and $|\eta|^2 \sim \gamma^2$ so $\tilde E_r \sim \gamma \tilde E_i$.\\
+Energy density per unit length:
+$$
+\bar E = \frac{1}{\lambda} \int_0^{\lambda} PE + KE = \frac{1}{\lambda} \tilde E
+$$
+$$
+|\tilde F| = \tilde E | c_g | = \lambda \bar E | \bm c_g|
+$$
+Flux of energy per wavelength was conserved:
+$$
+|\tilde F_r| = \lambda_r \bar E_r|c_{g_r}| = \frac{1}{\gamma} \lambda_i \bar E_r \frac{1}{\gamma} |c_{g,i}| = |\tilde F_i| = \lambda_i \bar E_i |c_{g,i}|
+$$
+So 
+$$
+\bar E_r = \gamma^2 \bar E_i
+$$
+Again consisten with $\bar E \sim PE + KE \sim |\tilde \eta|^2 + | \tilde u|^2$. The typeset notes have hats for energy desnity and flux per wavelength.\\\\
+We also might want to think about the total energy of a whole broad region of a wave coming in and going out:
+$$
+TE_r = \int_{- \frac{L_r}{2}}^{\frac{L_r}{2}} PE_r + KE_r d \zeta = \gamma^2 \int_{- \frac{1}{\gamma} \frac{L_i}{2}}^{\frac{1}{\gamma}\frac{L_i}{2}} PE_i + KE_i = \gamma TE_i
+$$
+Spectral energy density $S(k)$ if we have a whole lot of waves of different wavenumbers and want to consider how that spectrum will change:
+$$
+S_r(k) = \gamma S_i(\frac{K}{\gamma})
+$$
+\subsubsection{Critical reflection}
+Under sub crictical reflection the vertical direction of the propogation reverses upon reflection.\\
+Under supercitical reflection the vertical direction of propogation is maintained.\\
+On the boundary between these modes is the critical reflection where the reflected wave is along the slope of the wall in both directions so we have $\alpha = \theta$. Shifting slightly one way would lead to the wave reflecting slightly above the upper portion of the wall and slightly the other would lead to the the wave reflection slightly above the lower poriton oft he wave.\\\\
+As we approach critical reflection, $\tilde \eta \rightarrow \infty$, $k_r \rightarrow \infty$, dissipation which scales like $k^3$ also tends to infinty. Viscosity becomes important and we get non-linearisties as $k\tilde \eta \rightarrow \infty$ as linear waves require $k \tilde \eta << 1$. Viscosity also plays a role away from critical conditions due to no-slip boundary.
+\subsection{Ray tracing}
+$$
+( \nabla^2 \frac{\partial^2}{\partial t^2} + N^2 \nabla_H^2) w = 0
+$$
+$$
+( \nabla^2 \frac{\partial^2}{\partial t^2} + N^2 \nabla_H^2) \psi = 0
+$$
+In 2D: $\psi = \tilde \psi(x,z) e^{-i \omega t}:
+$$
+(N^2 - \omega^2) \frac{\partial^2 \tilde \psi}{\partial x^2} - \omega^2 \frac{\partial^2}{\partial z^2} \tilde \psi = 0
+$$
+$$
+\Lambda^2 = \frac{\omega^2}{N^2- \omega^2}
+$$
+give this Poincare wave equation
+$$
+(\frac{\partial^2}{\partial x^2} - \Lambda^2 \frac{\partial^2}{\partial z^2}) \tilde \psi=0
+$$
+If domain bounded with $\tilde \psi = 0$ on boundary this is an ill-posed problem and we will use ray tracing instead.
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  27 JAN 2022 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  1 FEB 2022 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -248,31 +248,139 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-)
-Runaway argument?
-{\partial J)^2 Z(J) |_{J=0} = \frac {1}{Z(0)} (| + |o + | 8 + ...) = \ETC.
-! File ended while scanning use of \frac .
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
+
+ []
+
+[8]
+./Advanced_Quantum_Field_Theory.tex:264: Missing } inserted.
 <inserted text> 
-                \par 
-<*> Advanced_Quantum_Field_Theory.tex
-                                     
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+                }
+l.264 ...s with $- \frac{\lambda \phi^2{2 \hbar}}$
+                                                   from the $\chi^2$ source ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Emergency stop.
-<*> Advanced_Quantum_Field_Theory.tex
-                                     
-*** (job aborted, no legal \end found)
+./Advanced_Quantum_Field_Theory.tex:264: Too many }'s.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.264 ...s with $- \frac{\lambda \phi^2{2 \hbar}}$
+                                                   from the $\chi^2$ source ...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
 
- 
+./Advanced_Quantum_Field_Theory.tex:270: Undefined control sequence.
+<argument> m^2_{\eff 
+                     }
+l.270 ...{8 M^6} \phi^6 + ..= \frac{m^2_{\eff}}{2}
+                                                   \phi^2 + \frac{\lambda_4}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
+
+ []
+
+[9]
+./Advanced_Quantum_Field_Theory.tex:285: Undefined control sequence.
+<argument> \parital 
+                    J_{\Phi }
+l.285 ...i \frac{\parital J_{\Phi}}{\partial \Phi}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:303: Undefined control sequence.
+l.303 In $g \rightarrrow
+                         0$ limit $W_{\Gamma}(J) = W_{\Gamma}(J) = \Gamma(\P...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+
+Overfull \hbox (157.86322pt too wide) detected at line 311
+\OML/cmm/m/it/10 < ^^^[]^^^[] >[]\OT1/cmr/m/n/10 =\OML/cmm/m/it/10 < ^^^[]^^^[] >[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 < ^^^[] >< ^^^[] >\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\U/msb/m/n/10 ~[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\U/msb/m/n/10 ~[]\OT1/cmr/m/n/10 ([]) = \U/msb/m/n/10 ~[]\OML/cmm/m/it/10 ^^^[] \OT1/cmr/m/n/10 = \U/msb/m/n/10 ~\OT1/cmr/m/n/10 ([])[] = \U/msb/m/n/10 ~\OT1/cmr/m/n/10 ([])[]
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
+
+ []
+
+
+Overfull \hbox (188.89415pt too wide) detected at line 322
+\OML/cmm/m/it/10 < ^^^[]^^^[] >[]\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 o \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 o \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 o \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 8 \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +\OML/cmm/m/it/10 :: \OT1/cmr/m/n/10 =  \OMS/cmsy/m/n/10 ^^@ ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 = []
+ []
+
+./Advanced_Quantum_Field_Theory.tex:325: Undefined control sequence.
+<argument> \partial \Phi _d \parital 
+                                     \Phi _e \partial _f
+l.325 ...artial \Phi_d \parital \Phi_e \partial_f}
+                                                  )^{-1} <\Phi_a \Phi_d> <\P...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:328: Undefined control sequence.
+<argument> \partial \Phi _d \parital 
+                                     \Phi _e \partial _f
+l.328 ...artial \Phi_d \parital \Phi_e \partial_f}
+                                                  )^{-1}  = \Gamma^{(3)} = -...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 360--363
+
+ []
+
+[12]
+Overfull \hbox (122.72221pt too wide) detected at line 380
+[] \OML/cmm/m/it/10 d[]^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[] [] d[]^^R^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[]^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X [] d[]^^R[]^^R[]:::^^R[]
+ []
+
+[13] (./Advanced_Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 1794 strings out of 478599
- 23369 string characters out of 5858101
+ 1801 strings out of 478599
+ 23481 string characters out of 5858101
  326258 words of memory out of 5000000
- 19676 multiletter control sequences out of 15000+600000
- 416912 words of font info for 77 fonts, out of 8000000 for 9000
+ 19681 multiletter control sequences out of 15000+600000
+ 417620 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,6n,66p,725b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Advanced_Quantum_Field_Theory.pdf (13 pages, 252095 bytes).
+PDF statistics:
+ 142 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

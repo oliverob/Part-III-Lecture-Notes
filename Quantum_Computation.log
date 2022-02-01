@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  28 JAN 2022 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  31 JAN 2022 12:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -304,44 +304,228 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--177
  []
 
 [6]
-./Quantum_Computation.tex:189: Missing $ inserted.
-<inserted text> 
-                $
-l.189 ...chi(g)$ is a $|G|$-th root of unity (\chi
-                                                   \in \rightarrow S^1$ the ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 193--197
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--226
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 254.
+(c:/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Runaway argument?
-{\sqrt {|G|} \sum _{h \in G} \bar {\chi _k} (h) \ket {h + g}$$ $$ \{h\ETC.
-! File ended while scanning use of \frac .
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
+
+./Quantum_Computation.tex:254: Missing $ inserted.
 <inserted text> 
-                \par 
-<*> Quantum_Computation.tex
-                           
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+                $
+l.254 ...G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}
+                                                  \ket{x}\}_{g \in G, x \in ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! Emergency stop.
-<*> Quantum_Computation.tex
-                           
-*** (job aborted, no legal \end found)
 
- 
+./Quantum_Computation.tex:255: LaTeX Error: Environment itemlist undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.255 \begin{itemlist}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+
+ []
+
+
+./Quantum_Computation.tex:256: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.256 \item C
+             reate a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:257: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \item
+            Apply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:257: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:257: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:257: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:257: Missing $ inserted.
+<inserted text> 
+                $
+l.257 \item Apply $U_
+                     f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Computation.tex:258: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258         \item
+                    Measure the second register to get $f(g_0)$. The first r...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:258: Missing $ inserted.
+<inserted text> 
+                $
+l.258         \item M
+                     easure the second register to get $f(g_0)$. The first r...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Computation.tex:258: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258         \item M
+                     easure the second register to get $f(g_0)$. The first r...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:262: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262         \item a
+                     pply QFT and measure to get a result $g \in G$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:263: LaTeX Error: \begin{document} ended by \end{itemlist}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.263 \end{itemlist}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[8]
+./Quantum_Computation.tex:289: Missing } inserted.
+<inserted text> 
+                }
+l.289 ..._1 b_1}{M_1} + ... + \frac{l_q b_q}{M_q}$
+                                                  \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--291
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 295--305
+
+ []
+
+./Quantum_Computation.tex:308: Extra }, or forgotten $.
+l.308 ... these irreps $\chi_{i,jk} = \sum_g\in G}
+                                                   \bar{\chi}_{i,jk} (g) \ke...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[10] (./Quantum_Computation.aux) ) 
 Here is how much of TeX's memory you used:
- 1783 strings out of 478599
- 23065 string characters out of 5858101
+ 1805 strings out of 478599
+ 23443 string characters out of 5858101
  326231 words of memory out of 5000000
- 19670 multiletter control sequences out of 15000+600000
+ 19687 multiletter control sequences out of 15000+600000
  416539 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,10n,66p,808b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Quantum_Computation.pdf (10 pages, 224560 bytes).
+PDF statistics:
+ 123 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

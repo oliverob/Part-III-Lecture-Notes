@@ -186,12 +186,12 @@ $$
 $$
 $\chi$ is a group homomorphism from $G$ to $\mathbb{C}^*$. Such $\chi$'s are called irreducible representations of $G$. They have the following properties:
 \textbf{Theorem 1}:\\
-1) any value $\chi(g)$ is a $|G|$-th root of unity (\chi \in \rightarrow S^1$ the unit circle)\\
+1) any value $\chi(g)$ is a $|G|$-th root of unity ($\chi \in \rightarrow S^1$ the unit circle)\\
 2) Schur's lemma (orthogonality): If $\chi_i,\chi_j$ satisfy (HOM) then 
 $$
 \frac{1}{|G|} \sum_{g \in G} \chi_i (g) \bar {\chi_j} (g) = \delta_{ij}
 $$
-There are always exactly $|G|$ different functions $\chi$ satisfying (HOM).\\\\
+3) There are always exactly $|G|$ different functions $\chi$ satisfying (HOM).\\\\
 \textbf{Examples}: $\chi(g) = 1, \forall g \in G$ is an irrep/ called a trival irrep\\
 Label the trivial irrep as $\chi_0$, $0\in G$. Then for any other irrep $\chi \neq \chi_0$ orthonality to $\chi_0$ gives:
 $$
@@ -212,13 +212,13 @@ By thereom 1 $\{ \chi_k \}$ form an orthonormal basis.
 $$
 U(g) \ket{\chi_k} = \chi_k(g) \ket{\chi_k}
 $$
-\textbf{Proof}:$$U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|} \sum_{h \in G} \bar{\chi_k} (h) \ket{h + g}$$
+\textbf{Proof}:$$U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|}} \sum_{h \in G} \bar{\chi_k} (h) \ket{h + g}$$
         $$
-        \{h' = h+ g\} = \frac{1}{\sqrt{|G|} \sum_{h' \in G} \bar{\chi_k} (h' - g) \ket{h'}
+        \{h' = h+ g\} = \frac{1}{\sqrt{|G|}} \sum_{h' \in G} \bar{\chi_k} (h' - g) \ket{h'}
         $$
         using HOM $\chi_k(-g) = \chi_k(g)^{-1} = \bar \chi_k(g) \implies \bar{\chi_k(h'-g)} = \bar \chi_k(h') \bar \chi_k(-g) = \bar \chi_k(h') \chi_k(g)$. Therefore,
         $$
-        U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|} \sum_{h' \in G} \chi_k(g) \bar \chi_k(h') \ket{h'} = \chi_k(g) \ket{\chi_k}
+        U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|}}\sum_{h' \in G} \chi_k(g) \bar \chi_k(h') \ket{h'} = \chi_k(g) \ket{\chi_k}
         $$
         So $\ket{\chi_k}$'s form a common eigenbasis\\\\
         Introduce Fourier transform QFT for a group $G$\\
@@ -229,11 +229,11 @@ $$
 $$
 QFT^{-1} \ket{g} =  \ket{\chi_g}
 $$
-k-th column of $QFT^{-1}$ in $\ket{g}$ basis is mode of compoents of $\ket{\chi_k}$:
+k-th column of $QFT^{-1}$ in $\ket{g}$ basis is mode of components of $\ket{\chi_k}$:
         $$
         [QFT^{-1}]_{gk} = \frac{1}{\sqrt{|G|}} \bar{\chi_k}(g)
         $$
-        \textbf{EXample}: $G = \mathbb{Z}_M$L\\
+        \textbf{Example}: $G = \mathbb{Z}_M$L\\
         Check $\chi_a(b) = e^{\frac{2\pi i a b}{M}}, a, b \in \mathbb{Z}_M$ satsifies HOM and has its irreps labelled by $a \in \mathbb{Z}_M$ with $\chi_0(b) = 1 \forall b \in \mathbb{Z}_m$.
         $$
         G = \mathbb{Z}_{M_1} \times ... \times \mathbb{Z}_{M_r}
@@ -254,11 +254,69 @@ $$
 with hidden subgroup $K$ and cosets $k = 0 + k, g_2 + k, ... g_m +k$, $m = \frac{|G|}{|K|}$. we will work on $\mathcal{H}_{|G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}\ket{x}\}_{g \in G, x \in X}$.\\
 \begin{itemlist}
 \item Create a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket{0}\\
-\item Apply $U_f$ and $\frac{1}{\sqrt{|G|} \sum_{g \in G} \ket{g} \ket{f(g)}\\
+\item Apply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket{f(g)}\\
         \item Measure the second register to get $f(g_0)$. The first register will not give the coset state:
                 $$
-                \ket{g_0 + k} = \frac{1}{\sqrt{|k|} \sum_{k \in K} \ket{g_0 + k} = U(g_0) \ket{K}
+                \ket{g_0 + k} = \frac{1}{\sqrt{|k|}} \sum_{k \in K} \ket{g_0 + k} = U(g_0) \ket{K}
                 $$
         \item apply QFT and measure to get a result $g \in G$
 \end{itemlist}
+\section{Lecture 6}
+We can write $\ket{K}$ in the shift-invariant basis $\{ \chi_g \}_{g \in G}$
+$$
+\ket{K} = \sum_g a_g \ket{\chi_g}
+$$
+$$
+\ket{g_0+K} = U(g_0) \ket{K} = \sum_g a_g \chi_g(g_0) \ket{\chi_g}
+$$
+as $QFT \ket{\chi_g} = \ket{g}$ so after we apply QFT
+$$
+prob(g) = |a_g \chi_g(g_0)|^2 = |a_g|^2, |\chi_g(g_0) | = 1
+$$
+$$
+QFT \ket{K} = \frac{1}{\sqrt{|G|}} \frac{1}{\sqrt{|K|}} \sum_{l \in G} ( \sum_{k \in K} \chi_l (k) \ket{l})$$
+$\sum_{k \in K} \chi_l (k) \ket{l}$ involves irreps $\chi_l$ of $G$ restricted to subgroup $K < G$, and each such object is itself an irrep in $K$. Hence we have the following relation:
+$$
+\sum_{k \in K} \chi_l(k) = \begin{cases} |k| & if \chi_l \text{ restricts to the trival irrep of K}\\ 0 & \text{otherwise} \end{cases}
+$$
+$$
+QFT \ket{K} = \sqrt{\frac{|K|}{|G|}} \sum_{l \in G} \ket{l}
+$$
+Then a measurement gives a uniformly random choice of $l$ s.t. $\chi_l(k) = 1$.\\
+If $k$ has generators $k_1, ..., k_n$ where $M = O(\log(K)) = O(\log |G|)$. Then the output of a measurement gives us $\chi_l(k) = 1 \forall i$.\\\\
+It can be shown that if $O(\log(|G|)$ values of $l$ chosen uniformly at random then with probability $>\frac{2}{3}$ they will suffice to determine a generating set for $k$ via the equations $\chi_l(k) = 1$.\\\\
+\textbf{Example}: $G = \mathbb{Z}_{M_1} \times ... \times \mathbb{Z}_{M_l}$\\
+$l = (l_1, ..., l_q) \in G$, $g = (b_1, ..., b_q) \in G$ gives $\chi_l(g) = e^{2\pi i( \frac{l_1 b_1}{M_1} + ... + \frac{l_q b_q}{M_q}$\\
+        For $k = (k_1, ..., k_q) \in K$ with $\chi_l(k) =1 \implies \frac{l_1 k_1}{M_1} + ... + \frac{l_q k_q}{M_q} = 0 mod 1$. This is a homogenous linear equation on $k$ and $O(\log(k))$ such equations determine $k$ as null space.
+        \subsubsection{Remarks on HSP for non-abelian groups $G$}
+        Now we will consider multiplicative shifts. As before we can generate a bunch of coset states but it is curious to investigate what breaks down. 
+        $$
+        \ket{g_0 K} = \frac{1}{\sqrt{|K|}} \sum_{k \in K} \ket{g_0 k}, g_0 \in G\text{ is chosen randomly}
+        $$
+        The real problem with QFT construction is that there is no good basis of shift invariant states. This is because $U(g_0)$ don't commute. \\\\
+        \textbf{Construction of non-abelian QFT}\\
+        Consider a $d$-dimensional representation of $G$ and a group homomorphism $\chi: G \rightarrow U(d)$\\
+        $\chi$ is irreducible if no subset of $\mathbb{C}^d$ is left invariant by all matrices $\chi(g), g \in G$. (i.e. we cannot simulatenoulsy block-diagonalize all of $\chi(g)$'s by a simple basis change)\\
+        Let's define a complete set of irreps. It is a set $\chi_1,..., \chi_m$ s.t. that any irrep is unitarily equivalent to one of them. e.g. $\chi \sim \chi' = V \chi CV^{-1}, V \in U(d)$\\
+        \textbf{Example}:  $G$ is abelian , all irreps have $d=1$, since all $\chi(g)$ commute. Theorem( non-abelian analogue of Theorem 1) (consullt Fulton and Hardes "Representation Theory" fo more information)\\
+        If $d_1,...,d_m$ are the dimensions of a complete set of irreps $\chi_1, ..., \chi_M$ then:\\
+        1) $d_1^2 +... + d_m^2 = |G|$\\
+        2) $\chi_{i,jk} (g) $ is $(j,k)$ th matrix entry of $\chi_i(g)$ then by Schur orthogonality:
+        $$
+        \sum_g \chi_{i,jk}(g) \bar{\chi}_{i',j'k'}(g) = |G|\delta{ii'}\delta_{jj'}\delta{kk'}
+        $$
+Now if we look at the states that correspond to these irreps $\chi_{i,jk} = \sum_g\in G} \bar{\chi}_{i,jk} (g) \ket{g}$ they form an orthonormal basis.\\
+QFT on $G$ is defined to be a unitary rotation between two basis of $\{ \chi_{i,jk} \}$ basis $\rightarrow \{ \ket{g} \}_{g \in G}$.\\
+These takes $\ket{\chi_{i,jk}}$ are not shift-invariant for all $U(g_0)$ so this implies that measuring coset state $\ket{g_0 k}$ in the $\{ \ket{\chi}\}$ basis results in an output distribution that is not independant of $g_0$.\\
+A "partial" shift-invariance survives. Consider a measuremnt $M_{rep}$ on $\ket{g_0 k}$ this measurement will only distinguish the irreps ($i$ values) and not all $(i,j,k)$'s. the outcome $i$ will be associated with $d_i^2$ dimensional orthogonal subspaces that are spanned by $\{\chi_{i,jk}\}_{j,k = 1}^{d_i}$.\\
+Then $\chi_i(g_1 g_2) = \chi_i(g_1) \chi_i(g_2) \implies$ the output distribution of $i$ values is indeed independant of $g_0$.\\
+So this gives us direct (but incomplete) information about $k$. For instance, conjugate subgroups $k$ and $L = g_0 K g_0', g_0 \in G$. This measurement will give us the same statistics.\\
+$M_{rep}$ will result in the same output statistics\\
+Not everything is lost there are some cases when this information is enough.\\\\
+The reason HSP is good in the abelian case is we have an efficent $QFT$ transform. In other words QFT can be implemented in $poly(\log(|G|)$ times. This is true for abelian groups and some non-abelian groups (e.g. $P_n$).\\
+\texbtf{Some partial results}:\\
+For normal subgroups $gk = kg \for g \in G$ we have a theorem proven by Hall green, russel Ta shma in 2003 SIAM J Comp 32, p 916-934:\\
+Suppose $G$ has QFT that is efficently implementable. Then if a hideen subgroup $k$ is a normal subgroup, then there is an efficent quantum HSP\\\\
+Theorem( Edinsguin, Hoyer, Knill, 2004)\\
+For general non-abelian HSP, $M = O(poly \log(|G|))$ then random coset states $\ket{g_1k}$,..., $\ket{g_nk}$ suffice to determine $k$ . But it is not known how to efficently determine $k$ from the $M$ coset states. 
 \end{document}
