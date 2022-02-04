@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  1 FEB 2022 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  3 FEB 2022 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,7 +367,129 @@ Overfull \hbox (122.72221pt too wide) detected at line 380
 [] \OML/cmm/m/it/10 d[]^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[] [] d[]^^R^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[]^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X [] d[]^^R[]^^R[]:::^^R[]
  []
 
-[13] (./Advanced_Quantum_Field_Theory.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--419
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--450
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--461
+
+ []
+
+[14]
+Overfull \hbox (70.42863pt too wide) detected at line 466
+\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@1\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 i [] d[]kF[]\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 d[]xe[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 i [] d[]kf[]\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 d[]xe[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^
+ []
+
+./Advanced_Quantum_Field_Theory.tex:471: Extra }, or forgotten $.
+l.471 ...\dagger}(-\infty) = a_j^{\dagger}(\infty}
+                                                   + i \int d^3 k f_j \int d...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Advanced_Quantum_Field_Theory.tex:473: Extra }, or forgotten $.
+l.473 ...gger}(\infty) = a_{j'}^{\dagger}(-\infty}
+                                                   + i \int d^3 k f_{j'} \in...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Advanced_Quantum_Field_Theory.tex:477: Display math should end with $$.
+<to be read again> 
+                   e
+l.477 ...-i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e
+                                                  ^{i k'_3 \cdot x'_3} $e^{-...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Advanced_Quantum_Field_Theory.tex:477: Missing $ inserted.
+<inserted text> 
+                $
+l.477 ...i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e^
+                                                  {i k'_3 \cdot x'_3} $e^{-i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:477: Missing $ inserted.
+<inserted text> 
+                $
+l.477 ...k_2 \cdot x_2} $e^{i k'_3 \cdot x'_3} $e^
+                                                  {-i k'_4 \cdot x'_4} ( \pa...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:480: Missing $ inserted.
+<inserted text> 
+                $
+l.480 having taken $\sigma
+                           \rightarrow 0$ limit of $f_j(k) \rightarrow \delt...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (86.23668pt too wide) in paragraph at lines 477--482
+\OT1/cmr/m/n/10 e$[]$e$[](\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 T^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) []$$\OML/cmm/m/it/10 havingtaken$$^^[ \OMS/cmsy/m/n/10 !
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--482
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:485: Too many }'s.
+l.485 so}
+         }
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Advanced_Quantum_Field_Theory.tex:485: Too many }'s.
+l.485 so}}
+          
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Advanced_Quantum_Field_Theory.tex:487: Double superscript.
+l.487 ...m ( - k_j^2 + m^2) \prod_{j=1}^n (- k'_j^
+                                                  2 + m^2) \bra{\Omega} T \t...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+
+Overfull \hbox (90.91495pt too wide) detected at line 488
+[] [] \OT1/cmr/m/n/10 = [] [] = (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )[] [](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) [](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :::[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :::[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 ) []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--491
+
+ []
+
+[15] [16] (./Advanced_Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
  1801 strings out of 478599
  23481 string characters out of 5858101
@@ -375,12 +497,12 @@ Here is how much of TeX's memory you used:
  19681 multiletter control sequences out of 15000+600000
  417620 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,66p,725b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Advanced_Quantum_Field_Theory.pdf (13 pages, 252095 bytes).
+ 56i,6n,66p,901b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Advanced_Quantum_Field_Theory.pdf (16 pages, 273775 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 156 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

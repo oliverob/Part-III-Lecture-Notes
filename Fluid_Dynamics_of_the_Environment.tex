@@ -274,6 +274,10 @@ $$
 $$
 \bar{PE} = \frac{1}{4} \rho_0 \omega^2 \eta^2
 $$
+Also have:
+$$
+PE = \frac{1}{2} \rho_0 \frac{b^2}{N^2}
+$$
 So you have equiparition of energy for linear waves $\bar{KE} = \bar{PE}$. We can also write down an expression for the flux of energy:
 $$
 \bm F_E = p' \bm u = \rho_0 \omega^2 \eta^2 \sin^2 \phi  \frac{N}{|k|} \sin \theta \begin{pmatrix} \sin \theta\\ - \cos \theta \end{pmatrix} = \frac{1}{2} \rho_0 \omega^2 \eta^2 \bm c_g = \bar{E} \bm c_g
@@ -466,4 +470,41 @@ $$
 (\frac{\partial^2}{\partial x^2} - \Lambda^2 \frac{\partial^2}{\partial z^2}) \tilde \psi=0
 $$
 If domain bounded with $\tilde \psi = 0$ on boundary this is an ill-posed problem and we will use ray tracing instead.
+\section{Lecture 6}
+Lets consider a constant slope at the edge of the ocean with free surface with constant bounancy frequncy. Imagine we have some waves entering the systemm in the body of the fluid 1 wavelength apart. These reflect off the free surface and here they remain exactly the same except for a change of vertical orientation. The reflection off the slope shorterns the wavelength as we considered in the previous section. Therefore, the energy reflection goes up, group vecolity is going down, wavenumber goes down and the velocity gets steeper on each reflection off the slope. In this case the energy is trapped into the courner by a sequence of focusing reflections.\\\\
+For large Reynolds number $Re = \frac{|c_g|}{|k| \nu}$ nonlinearities will end up dominating leading to wave breaking, mixing and other frequencies and wave numbers coming out of the system.\\\\
+Energy density increases:
+$$
+\tilde E_{n+1} = \gamma \tilde E_{n} = \gamma^{n+1} \tilde E_0
+$$
+Steepness increases
+$$
+|k_{n+1}| \tilde \eta_{n+1} = \gamma^{n+1} k_0 \eta_{0}
+$$
+\subsection{Reflections from rough topography}
+How well do we actually know what is down at the bottom of the ocean?\\\\
+Lets imagine we have some idealised rough topography, a sine wave of amplitude $h_0$ and wavelength $\lambda_T = \frac{2 \pi}{k_T}$. We can make use of our ray tracing.\\\\
+Draw rays one wavelength apart and you can visually see that the reflected wavelength varies depending on which part of the sine wave they reflect off. This means the spectrum has changed so we can no longer just talk about the wavenumber vector. If we going to try and analyse this we can try some sort of linearisation by considering small amplitude variations in topography with $k_T h_0 <<1$.\\\\
+Now lets zoom in and consider what is happening at a close scale (here we aren't actually assuming it is small), we have a wave coming in towards $x_i$, then reflects at $x_0$ and then appears to be leaving from $x_r$. We define $\delta x = x_0 - x_r = x_i - x_0$ as the angle of the reflected and incident wave from the vertical are identical. Take the height of the boundary to be $z = h_0 \sin k_T x$. Define $\beta = \cot \theta$. Now geometrically, $h_0 \sin k_T x_0 = \beta \delta x$. Now consider the amplitude of an incident ray 
+$$
+\eta_i(x,t) = \tilde \eta_i \sin (k_i x - \omega t), \eta_r(x,t) = -\tilde \eta_i \sin (k_i (x + \frac{2 h_0}{\beta} \sin k_T x ) - \omega t)
+$$
+For small amplitude $\frac{k_i h_0}{\beta} << 1$:
+$$
+\eta_r(x,t) = - \tilde \eta_i ( \sin (k_i x - \omega ) +k_i (\frac{2h_0}{\beta}) \sin(k_T x) \cos(k_i x - \omega t)) = - \tilde \eta_i \sin (k_i x - \omega ) - \tilde \eta_i \frac{k_i k_0}{\beta}(-\sin ( (k_i - k_T) x - \omega t) + \sin( (k_i + k_T) x - \omega t))
+$$
+So we have three different wave numbers in the reflection:$k_i = k_R, k_i - k_T = k_B, k_i + k_T = k_F$.\\\\
+If $k_B = k_i - k_T < 0$ then we need to start being quite careful as in order to match the boundary condition it seems like the group velocity seems to be moving backwards from the right. This violates causality and the reason for this is we were making an assumption about the direction of the wavenumber vector assoicated with the reflection. What we actually have is two waves reflected in the forwards direction with group velcoity $c_{gR}, c_{gF}$ and a backwards refelcted one with $c_{gB}$. \\\\
+In general, for subcritical reflectino we will end up with a backscatter from rough topography.\\\\
+What happens if we have super critical reflection when the topography is steeper than the angle of the incident waves. This leads to a very complex spectrum as neighbouring rays could end up with very different end points as the waves can reflect multiple times off the topography before escaping. This problem is not very analytically tractable.
+\subsection{Wave attractors}
+Now lets look at smooth boundaries but make it a bit more complex by considering a bounded domain.
+\subsubsection{Rectangular basin}
+With width $X$ and height $Y$\\\\
+If we have an eigenmode, then
+$$
+\frac{X}{Y} \frac{n}{m} = \tan \theta
+$$
+$m$ is the number of reflection from top boundary, $n$ is the number of reflections of the left-hand boundary.\\\\
+The simplest possible case is take $n=m=X=Y=1$ gives $\tan \theta = 1 \implies \theta = \frac{\pi}{4}$ so you get a rectangle reflecting around the inside of the rectangle.
 \end{document}

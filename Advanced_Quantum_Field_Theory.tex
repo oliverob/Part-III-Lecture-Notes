@@ -412,4 +412,86 @@ Propogator
 $$
 < \theta_a \theta_b> = \frac{\hbar^2}{Z_0(0)} \frac{\partial^2 Z_0(\eta)}{\partial \eta_a \partial \eta_b}|_{\eta=0} = \hbar ( A^{-1})_{ab}
 $$
+\section{Lecture 7}
+\subsection{LSZ reduction formula}
+This discussion is quite general and not very connected to the earlier section.\\\\
+We are going to work through 2-2 scatting of $\phi$ particles. From last term:
+$$
+\phi(x) = \int \frac{d^3k}{(2\pi)^3 2 E_b} ( a(\bm k) e^{-i k \cdot  x} + a^{\dagger}(\bm k) e^{i  k \cdot x})
+$$
+We are using the Minkowski metric $(+, -, - ,- )$ so $k \cdot x = E_0 t - \bm k \cdot \bm x$. There is also a convention for the normalisation. We are taking the realtivistic normalisation for $a(\bm k)$. It depends on whether you want the inner product of two functions to be the delta funcitno or the dealt function times $E$.\\\\
+We invert to find $a(\bm k)$:
+$$
+\int d^3 x e^{ik \cdot x} \phi(x) = \frac{1}{2E} a(\bm k) + \frac{1}{2E} e^{2 i Et} a^{\dagger} ( - \bm k)
+$$
+$$
+\int d^3 x e^{ik\cdot x} \partial_a \phi(x) = \frac{-i}{2} a(\bm k) + \frac{i}{2} e^{2 i Et} a^{\dagger} (- \bm k)
+$$
+These imply:
+$$
+a(\bm k) = \int d^3 x e^{i k\cdot x} ( i \partial _a \phi(x) + E\phi(x))
+$$
+$$
+a^{\dagger}(\bm k) = \int d^3 x e^{-i k\cdot x} ( -i \partial _a \phi(x) + E\phi(x))
+$$
+In free theory: the 1 particle state  is given by
+$$
+\ket{k } = a^{\dagger} (\bm k) \ket{0} , \bra{0} \ket{0} =1, a(\bm k) \ket{0} = 0 \forall \bm kk
+$$
+Norm:
+$$
+\bra{k}\ket{k'} = (2\pi)^3 (2E) \delta^{(3)}(\bm k - \bm k')
+$$
+$$
+E^2= \bm k^2 + m^2
+$$
+We are going to assume that the interacting theory is  close to the free theory.\\\\
+Introduce a gaussian wave packet:
+$$
+a_1^{\dagger} = \int d^3 k f_1( \bm k ) a^{\dagger}(k)
+$$
+with $f_1(k) \sim \exp( - \frac{(\bm k - \bm k_1)^2}{4 \sigma^2})$ and similary
+$$
+a_2^{\dagger} = \int d^3 k f_2( \bm k ) a^{\dagger}(k)
+$$
+with $\bm k_2 \neq \bm k_1$. \\\\
+Now we evolve the gaussians backward in time until a time where the particles had no overlap in space and can be consider free. THere is a complication as due to the interaction $a_1^{\dagger}(t)$ and $a_2^{\dagger}(t)$ depend on t. However,  the point is that as $t \rightarrow \pm \infty$ $a_1^{\dagger}$ and $a_2^{\dagger}$ coincide with free theory expressions.\\\\
+Consdiring 2-2 scattering the initial state is $\ket{i} = \lim_{t\rightarrow -\infty} a_1^{\dagger}(t) a_2^{\dagger} (t) \ket{\Omega}$ and the final state is $\ket{f} = \lim_{t\rightarrow \infty} a_1^{\dagger}(t) a_2^{\dagger}(t) \ket{\Omega}$. We also have $\bra{i} \ket{i} =  \bra{f} \ket{f} = 1$ and $\bm k_1 \neq \bm k_2, \bm k'_1 \neq \bm k'_2$.\\\\
+We want to calculate the scattering amplitude $\bra{f} \ket{i}$. First note that 
+$$
+a_1^{\dagger}( \infty) - a_1^{\dagger}(- \infty) = \int_{\infty}^{\infty} \partial_0 a_1^{\dagger} (t) = \int d^3 f_1(\bm k) \int d^4 x \partial_0 ( e^{-k \cdot x} ( - i \partial_0 \phi + c \phi)
+$$
+$$
+a_1^{\dagger}( \infty) - a_1^{\dagger}(- \infty) = i \int d^3 k F_1(\bm k) \int d^4 x e^{-ik \cdot x} ( \partial _0^2 + E^2 ) \phi = - i \int d^3 k f_1( \bm k) \int d^4 x e^{-ik \cdot x}( \partial^2 + m^2 ) \phi
+$$
+In free theory we have $(\partial^2 + m^2)\phi = 0$ (klein gordon equation) so the creation operator doesn't change.
+$$
+\bra{f} \ket{i} = \bra{\Omega}T  a_{1'}(\infty) a_{2'} (\infty) a_1^{\dagger}(-\infty) a_2^{\dagger}(\infty) \ket{\Omega}
+$$
+We can relate $$a_j^{\dagger}(-\infty) = a_j^{\dagger}(\infty} + i \int d^3 k f_j \int d^4 x e^{-ikx} (\partial^2 + m^2) \phi
+$$
+$$a_{j'}^{\dagger}(\infty) = a_{j'}^{\dagger}(-\infty} + i \int d^3 k f_{j'} \int d^4 x e^{ikx} (\partial^2 + m^2) \phi
+$$
+Time ordering moves $a_j(- \infty)$ right and $a^{\dagger}_j(\infty)$ left. Therefore the t only nonzero term is the \textbf{LSZ reduction formula}:
+$$
+\bra{f} \ket{i} = (i)^4 \int d^4 x_1 d^4 x_2 d^4 x'_1 d^4 x'_2 e^{-i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e^{i k'_3 \cdot x'_3} $e^{-i k'_4 \cdot x'_4} ( \partial_1^2 + m^2 )  ( \partial_2^2 + m^2 )  
+( \partial_{1'}^2 + m^2 )  
+( \partial_{2'}^2 + m^2 )  \bra{\Omega} T \phi(x_1) \phi(x_2) \phi(x'_1) \phi(x'_2) \ket{\Omega}$$
+having taken $\sigma \rightarrow 0$ limit of $f_j(k) \rightarrow \delta^{(3)}(\bm k - \bm k_j)$.\\\\
+Generalisatoin to $m\rightarrow n$ scattering is straightforward. You performa a fourier transform to get:
+$$
+\phi(y) = \int \frac{d^4 q}{(2\pi)^4} \tilde \phi(q) e^{-i q \cdot y}
+$$
+so}}
+$$
+\bra{f} \ket{i} = \bra{k'_1 ... k'_n} \ket{ k_1... k_n} = (i)^{m+n} \prod_{j=1}^m ( - k_j^2 + m^2) \prod_{j=1}^n (- k'_j^2 + m^2) \bra{\Omega} T \tilde \phi( k_1) ... \tilde \phi(k_m) \tilde \phi(k'_1)... \tilde \phi(k'_n) \ket{\Omega}
+$$
+momentum satisfy $k^2 = m^2$ propogators $\frac{k}{k^2 +m^2}$. The $(-k^2 +m^2)$ factors cancel the poles form the external propogators.\\\\
+\textbf{LSZ in momentum space}:
+$$
+\bra{k'_1 .. k'_n}\bra{k_1...k_n} = \bra{\Omega} T \tilde \phi( k_1)...\tilde (k'_n) \ket{\Omega}_{amputated}
+$$
+Usually we are interested in all momentum being unequal, so all the particles are involved in the scattering. This implies we want connected diagrams.
+\section{Example sheet 1}
+When calculating symmetry factors you are genuinely looking for symmetries. Rather than trying to think about automorphisms first count the number of symmetries, then consider if any of them are already acounted for by exchange of particles and ignore them. If you get confused remember how it works with a single particle we don't say how many ways of picking which two to connect up is 6 but rather say we can slip those loops or exchange those loops (think a bit like polymod though in some instances this does not hold e.g. if the diagram is symmetric under exchange of two propogators which end on different particles this is a symmetry just like if they ended on the same particle). Try question 3 on ES1 it is a very good test of if you have got it cracked. It might be worth just memorising the symmetry factors of everything less than 3. 
  \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  31 JAN 2022 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  4 FEB 2022 09:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -98,96 +98,175 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-) (c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
+) (c:/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2021/texmf-dist/tex/latex/qcircuit/qcircuit.sty
+Package: qcircuit 2018/08/14
+ (c:/texlive/2021/texmf-dist/tex/generic/xypic/xy.sty (c:/texlive/2021/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode, (c:/texlive/2021/texmf-dist/tex/generic/xypic/xyrecat.tex) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen148
+\Y@c=\dimen149
+\U@c=\dimen150
+\D@c=\dimen151
+\L@c=\dimen152
+\R@c=\dimen153
+\Edge@c=\toks24
+\X@p=\dimen154
+\Y@p=\dimen155
+\U@p=\dimen156
+\D@p=\dimen157
+\L@p=\dimen158
+\R@p=\dimen159
+\Edge@p=\toks25
+\X@origin=\dimen160
+\Y@origin=\dimen161
+\X@xbase=\dimen162
+\Y@xbase=\dimen163
+\X@ybase=\dimen164
+\Y@ybase=\dimen165
+\X@min=\dimen166
+\Y@min=\dimen167
+\X@max=\dimen168
+\Y@max=\dimen169
+\lastobjectbox@=\box52
+\zerodotbox@=\box53
+\almostz@=\dimen170
+ direction,
+\d@X=\dimen171
+\d@Y=\dimen172
+\K@=\count268
+\KK@=\count269
+\Direction=\count270
+\K@dXdY=\dimen173
+\K@dYdX=\dimen174
+\xyread@=\read2
+\xywrite@=\write3
+\csp@=\count271
+\quotPTK@=\dimen175
+ utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks26
+\connectobjectbox@@=\box54
+ objects,
+\styletoks@=\toks27
+ decorations; kernel objects: directionals, circles, text; options; algorithms: directions, edges, connections;  Xy-pic loaded) (c:/texlive/2021/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+ (c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+ (c:/texlive/2021/texmf-dist/tex/generic/xypic/xypdf.tex  Xy-pic option: PDF driver v.1.7 loaded)) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xymatrix.tex  Xy-pic option: Matrix feature v.3.14
+\Row=\count272
+\Col=\count273
+\queue@=\toks28
+\queue@@=\toks29
+\qcount@=\count274
+\qcount@@=\count275
+\matrixsize@=\count276
+ loaded) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xyframe.tex  Xy-pic option: Frame and Bracket extension v.3.14 loaded) Xy-pic pdf driver: `frame' extension support (c:/texlive/2021/texmf-dist/tex/generic/xypic/xypdf-fr.tex (c:/texlive/2021/texmf-dist/tex/generic/xypic/xycurve.tex  Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count277
+\crvpts@=\toks30
+\splinebox@=\box55
+\splineval@=\dimen176
+\splinedepth@=\dimen177
+\splinetol@=\dimen178
+\splinelength@=\dimen179
+ circles,
+\L@=\dimen180
+ loaded) Xy-pic pdf driver: `curve' extension support (c:/texlive/2021/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded) loaded) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xyarrow.tex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xyarc.tex  Xy-pic option: Circle, Ellipse, Arc feature v.3.8 circles, ellipses, elliptical arcs, loaded)) (c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count268
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box56
 ) (./Quantum_Computation.aux)
 \openout1 = `Quantum_Computation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
+Package xypdf Info: Line width: 0.39998pt on input line 13.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
+Underfull \hbox (badness 10000) in paragraph at lines 18--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
+Underfull \hbox (badness 10000) in paragraph at lines 18--24
 
  []
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Overfull \hbox (33.11705pt too wide) detected at line 61
+Overfull \hbox (33.11705pt too wide) detected at line 62
 \OML/cmm/m/it/10 QFT [] \OT1/cmr/m/n/10 = [] [] [] \OML/cmm/m/it/10 ![] [] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 ![] []
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 76--81
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--81
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--81
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
  []
 
 [4]
-./Quantum_Computation.tex:126: Undefined control sequence.
-l.126 U(x_0) \ket{\chi_k} = \fraC
+./Quantum_Computation.tex:127: Undefined control sequence.
+l.127 U(x_0) \ket{\chi_k} = \fraC
                                  {1}{\sqrt{M}} \sum_{l=0}^{M-1} e^{-2\pi i l...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -195,8 +274,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:126: Undefined control sequence.
-l.126 ...i i l \frac{k}{M}} \ket{l + x_0} =  \fraC
+./Quantum_Computation.tex:127: Undefined control sequence.
+l.127 ...i i l \frac{k}{M}} \ket{l + x_0} =  \fraC
                                                   {1}{\sqrt{M}} \sum_{\tilde...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -205,34 +284,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.19667pt too wide) detected at line 127
+Overfull \hbox (20.19667pt too wide) detected at line 128
 \OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] = 1[] [] \OML/cmm/m/it/10 e[] [] \OT1/cmr/m/n/10 = 1[] [] \OML/cmm/m/it/10 e[] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[] []
  []
 
 
-./Quantum_Computation.tex:135: LaTeX Error: Environment itemise undefined.
+./Quantum_Computation.tex:136: LaTeX Error: Environment itemise undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 \begin{itemise}
+l.136 \begin{itemise}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-
-./Quantum_Computation.tex:136: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 \item $
-             f$ is constant on (left) cosets of $K$ in $G$
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 ./Quantum_Computation.tex:137: LaTeX Error: Lonely \item--perhaps a missing list environment.
@@ -242,35 +309,47 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.137 \item $
-             f$ is distinct on distinct cosets
+             f$ is constant on (left) cosets of $K$ in $G$
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Quantum_Computation.tex:138: LaTeX Error: \begin{document} ended by \end{itemise}.
+./Quantum_Computation.tex:138: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138 \end{itemise}
+l.138 \item $
+             f$ is distinct on distinct cosets
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:139: LaTeX Error: \begin{document} ended by \end{itemise}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 \end{itemise}
                    \\\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--143
+Underfull \hbox (badness 10000) in paragraph at lines 138--144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--143
+Underfull \hbox (badness 10000) in paragraph at lines 138--144
 
  []
 
-./Quantum_Computation.tex:153: Undefined control sequence.
-l.153 ..._1) = (a_2, b_2) + \lambda( y, 1), \lmbda
+./Quantum_Computation.tex:154: Undefined control sequence.
+l.154 ..._1) = (a_2, b_2) + \lambda( y, 1), \lmbda
                                                    \in \mathbb{Z}_{p-1}$:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -279,125 +358,77 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--166
+Underfull \hbox (badness 10000) in paragraph at lines 160--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--166
+Underfull \hbox (badness 10000) in paragraph at lines 160--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--166
+Underfull \hbox (badness 10000) in paragraph at lines 160--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--166
+Underfull \hbox (badness 10000) in paragraph at lines 160--167
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 172--177
+Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+Underfull \hbox (badness 10000) in paragraph at lines 194--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--226
+Underfull \hbox (badness 10000) in paragraph at lines 223--227
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 246--250
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 254.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 255.
 (c:/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 255.
 
-./Quantum_Computation.tex:254: Missing $ inserted.
+./Quantum_Computation.tex:255: Missing $ inserted.
 <inserted text> 
                 $
-l.254 ...G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}
+l.255 ...G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}
                                                   \ket{x}\}_{g \in G, x \in ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-./Quantum_Computation.tex:255: LaTeX Error: Environment itemlist undefined.
+./Quantum_Computation.tex:256: LaTeX Error: Environment itemlist undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.255 \begin{itemlist}
+l.256 \begin{itemlist}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--256
+Underfull \hbox (badness 10000) in paragraph at lines 254--257
 
  []
-
-
-./Quantum_Computation.tex:256: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.256 \item C
-             reate a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:257: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 \item
-            Apply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:257: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 \item A
-             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:257: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 \item A
-             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 ./Quantum_Computation.tex:257: LaTeX Error: Lonely \item--perhaps a missing list environment.
@@ -406,18 +437,10 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.257 \item A
-             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+l.257 \item C
+             reate a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-./Quantum_Computation.tex:257: Missing $ inserted.
-<inserted text> 
-                $
-l.257 \item Apply $U_
-                     f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
 
 ./Quantum_Computation.tex:258: LaTeX Error: Command \item invalid in math mode.
@@ -426,18 +449,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.258         \item
-                    Measure the second register to get $f(g_0)$. The first r...
+l.258 \item
+            Apply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Computation.tex:258: Missing $ inserted.
-<inserted text> 
-                $
-l.258         \item M
-                     easure the second register to get $f(g_0)$. The first r...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:258: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:258: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 ./Quantum_Computation.tex:258: LaTeX Error: Lonely \item--perhaps a missing list environment.
@@ -446,41 +485,81 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.258         \item M
+l.258 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:258: Missing $ inserted.
+<inserted text> 
+                $
+l.258 \item Apply $U_
+                     f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Computation.tex:259: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259         \item
+                    Measure the second register to get $f(g_0)$. The first r...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:259: Missing $ inserted.
+<inserted text> 
+                $
+l.259         \item M
+                     easure the second register to get $f(g_0)$. The first r...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Computation.tex:259: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259         \item M
                      easure the second register to get $f(g_0)$. The first r...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Quantum_Computation.tex:262: LaTeX Error: Lonely \item--perhaps a missing list environment.
+./Quantum_Computation.tex:263: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.262         \item a
+l.263         \item a
                      pply QFT and measure to get a result $g \in G$
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Quantum_Computation.tex:263: LaTeX Error: \begin{document} ended by \end{itemlist}.
+./Quantum_Computation.tex:264: LaTeX Error: \begin{document} ended by \end{itemlist}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.263 \end{itemlist}
+l.264 \end{itemlist}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [8]
-./Quantum_Computation.tex:289: Missing } inserted.
+./Quantum_Computation.tex:290: Missing } inserted.
 <inserted text> 
                 }
-l.289 ..._1 b_1}{M_1} + ... + \frac{l_q b_q}{M_q}$
+l.290 ..._1 b_1}{M_1} + ... + \frac{l_q b_q}{M_q}$
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -489,22 +568,22 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--291
+Underfull \hbox (badness 10000) in paragraph at lines 285--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--291
+Underfull \hbox (badness 10000) in paragraph at lines 285--292
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 295--305
+Underfull \hbox (badness 10000) in paragraph at lines 296--306
 
  []
 
-./Quantum_Computation.tex:308: Extra }, or forgotten $.
-l.308 ... these irreps $\chi_{i,jk} = \sum_g\in G}
+./Quantum_Computation.tex:309: Extra }, or forgotten $.
+l.309 ... these irreps $\chi_{i,jk} = \sum_g\in G}
                                                    \bar{\chi}_{i,jk} (g) \ke...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -512,20 +591,149 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[10] (./Quantum_Computation.aux) ) 
+./Quantum_Computation.tex:318: Undefined control sequence.
+<recently read> \texbtf 
+                        
+l.318 \texbtf
+             {Some partial results}:\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:319: Undefined control sequence.
+l.319 For normal subgroups $gk = kg \for
+                                         g \in G$ we have a theorem proven b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--323
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 337--340
+
+ []
+
+<xymatrix 8x3 1192> [11] <xymatrix 5x5 795>
+Underfull \hbox (badness 10000) in paragraph at lines 360--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--387
+
+ []
+
+[12]
+Overfull \hbox (16.29697pt too wide) detected at line 401
+\OML/cmm/m/it/10 Prob\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 see y\OT1/cmr/m/n/10 ) = []\OMS/cmsy/m/n/10 j [] \OML/cmm/m/it/10 e[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = [][] = [][]
+ []
+
+./Quantum_Computation.tex:410: Missing } inserted.
+<inserted text> 
+                }
+l.410 ... $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$
+                                                  \\\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Computation.tex:410: Too many }'s.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.410 ... $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$
+                                                  \\\\
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--412
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--412
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--419
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 425--429
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--429
+
+ []
+
+[14] (./Quantum_Computation.aux) ) 
 Here is how much of TeX's memory you used:
- 1805 strings out of 478599
- 23443 string characters out of 5858101
- 326231 words of memory out of 5000000
- 19687 multiletter control sequences out of 15000+600000
- 416539 words of font info for 75 fonts, out of 8000000 for 9000
+ 4405 strings out of 478599
+ 53873 string characters out of 5858101
+ 427328 words of memory out of 5000000
+ 22236 multiletter control sequences out of 15000+600000
+ 417412 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,10n,66p,808b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,14n,80p,1433b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Quantum_Computation.pdf (10 pages, 224560 bytes).
+Output written on Quantum_Computation.pdf (14 pages, 249256 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

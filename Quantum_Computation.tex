@@ -4,6 +4,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{braket}
+\usepackage{qcircuit}
 \usepackage{cancel}
 \title{Quantum Computation}
 \author{oliverobrien111 }
@@ -318,5 +319,119 @@ The reason HSP is good in the abelian case is we have an efficent $QFT$ transfor
 For normal subgroups $gk = kg \for g \in G$ we have a theorem proven by Hall green, russel Ta shma in 2003 SIAM J Comp 32, p 916-934:\\
 Suppose $G$ has QFT that is efficently implementable. Then if a hideen subgroup $k$ is a normal subgroup, then there is an efficent quantum HSP\\\\
 Theorem( Edinsguin, Hoyer, Knill, 2004)\\
-For general non-abelian HSP, $M = O(poly \log(|G|))$ then random coset states $\ket{g_1k}$,..., $\ket{g_nk}$ suffice to determine $k$ . But it is not known how to efficently determine $k$ from the $M$ coset states. 
+For general non-abelian HSP, $M = O(poly \log(|G|))$ then random coset states $\ket{g_1k}$,..., $\ket{g_nk}$ suffice to determine $k$ . But it is not known how to efficently determine $k$ from the $M$ coset states.
+\section{Lecture 6}
+\subsection{Phase estimation Algorithm}
+- Unifying principle for quantum algorithms based on QFT\\
+- also gives an alternative way of factoring (orginally discovered  by Kitaev)\\
+The fact the phase estimation algorithm became so wide spread and you can cast every algorithm that is tangenetially ralted to QFt in QPE\\
+Givem a unitary operator $U$. and eigenstates $\ket{v_{\phi}} = U\ket{v_{\phi}} = e^{2\pi i \phi} \ket{v_{\phi}}$\\
+Want to estiamte the phase $\phi$ $0< \phi< 1$  ( up to $n$ bits of precision $\phi = 0. i_1 i_2,...i_n = i_1/2 + i_2/4 + ...$ for any given $n$)\\
+We will have to implement controlled unitary opearotrs and in particular we will need Controlled-$U^k$ for integers $k$
+$$
+C-U^k \ket{0} \ket{\xi} = \ket{0}\ket{\xi}, C-U^k \ket{1}\ket{\xi} = \ket{1} U^k \ket{\xi}
+$$
+$\ket{\xi}$ has a general dimension $d$:
+$$
+U^k \ket{v_{\phi}} e^{2\pi i k \phi} \ket{v \phi}, C-U^k = (C-U)^k
+$$
+If we are given $U$ as a circuit description, we can easily implement $C-U$ by controlling each gate in $U$'s circuit. However, if $U$ is given as black box (e.g. a physical operation in the lab) we need further information as there is an inherent ambiguity as we have to account for local phase $e^{i\theta U}$ as it has no effect normally unless you use a controlled operation. \\\\
+        If the unitary is specified in this ambiguous way we need to figure out what to do. It suffices to have an eigenstate $\ket{l}$ with a known eigenvalue $U\ket{l} = e^{i \alpha} \ket{l}$ then $e^{i \theta} U$ will map $\alpha \rightarrow \alpha + \theta$. Consider the following circuit:
+       
+\centerline{ \Qcircuit @C=1em @R=.7em {
+\lstick{\ket{a}} & \qw & \ctrl{1} & \qw & \ctrl{1} & \gate{X} & \gate{P(-l)} & \gate{X}\\
+\lstick{\ket{\xi}} & \qw & \qswap & \qw & \qswap & \qw & \qw & \qw \\
+\lstick{\ket{\alpha}} & \qw & \qswap \qwx & \gate{U} & \qswap \qwx & \qw & \qw & \qw
+               }}
+               with $P(-l) = \begin{pmatrix}1 & 0 \\ 0 & e^{-il} \end{pmatrix}$. This correctly gives $C-U$. We'll want a "generalised controlled-U" that gives:
+               $$
+               \ket{x} \ket{\xi} \rightarrow \ket{x} U^x \ket{\xi} x \in \mathbb{Z}_{2^n}
+               $$
+               For $x= x_{n-1}...x_1x_0 = 2^0 x_0 + 2^1 x_1 + 2^2 x_2 ... + 2^{n-1} x_{n-1}$:\\
+              \centerline{ 
+             \Qcircuit @C=1em @R=.7em { 
+               \lstick{\ket{x_{n-1}}} & \qw & \qw & \cdots & \ctrl{4} \\
+                & \cdots & \cdots & \cdots & \cdots \\
+               \lstick{\ket{x_{1}}} & \qw & \ctrl{2} & \cdots & \qw \\
+               \lstick{\ket{x_{0}}} & \ctrl{1} & \qw & \cdots & \qw \\
+       \lstick{\ket{\xi}} & \gate{U^{2^0}} & \gate{U^{2^1}} & \cdots & \gate{U^{2^{n-1}}} 
+               }}
+       
+               If we input $\ket{\xi} = \ket{ V_{\phi}}$ then we get $e^{2\pi i \phi x} \ket{x} \ket{v_{\phi}}$. Now superpose over all $x = 0,1,2,..., 2^{n-1}$ by applying hadamards to all the qubits before applying the circuit, take $\ket{\xi} = \ket{v_{\phi}}$:
+\\\\
+This gives output $\ket{A} = \frac{1}{\sqrt{2^n}} \sum_x e^{2\pi i \phi x} \ket{x}$. Applying $QFT^{-1}$ to $\ket{A}$ and measure. We get $y_0 y_1 ... y_{n-1}$. Then output the number $0.y_1y_2...y_{n-1} = \frac{y_0}{2} + \frac{y_1}{4} + ... + \frac{y_{n-1}}{2^{n}}$ as an estimate of $\phi$.\\\\ Now lets assume an idealised situtation where $\phi$ has only $n$ binary digits:
+$$
+\phi = 0.z_1...z_{n-1}
+$$
+Then $\phi = \frac{z}{2^n}$ where $z$ is an n-bit integer in $\mathbb{Z}_{2^n}$:
+$$
+\ket{A} = \frac{1}{\sqrt{2^n}} \sum_2 e^{2\pi i 2^n z/2^n} \ket{x} 
+$$
+is a QFT of $\ket{z}$. Applying $QFT^{-1} \ket{A} = \ket{z}$ and we get $\phi$ exactly with certainity.\\\\
+Note the algorithm up to the final measurements is a unitary operation mapping:
+$$
+\ket{0} \ket{0} ... \ket{0} \ket{ v_{\phi}} \rightarrow \ket{z_0} \ket{z_1} ... \ket{z_{n-1}} \ket{v_{\phi}}
+$$
+If $\phi$ has more than $n$ bits $\phi = 0.z_0 z_1... z_{n-1}| z_{n} z_{n+1}$.\\
+\textbf{Theorem (PE)}: If measurements in the algorithm give $y_0y_1...y_n$ and the aoutput $\Theta = 0. y_0y_1...y_{n-1}$ then :\\
+a) Prob ( $\Theta$ is closeset $n$-binary digit approx to $\phi$) $\geq \frac{4}{\pi^2} = 0.4$\\
+b) Prob( $|\Theta - \phi| \geq \epsilon$) $\leq O(\frac{1}{2^n \epsilon}$\\\\
+We will show that  Prob( $|\Theta - \phi| \geq \epsilon$) $\leq \frac{1}{2^{n+1} \epsilon})$
+\section{Lecture 8}
+Today we will prove the Phase estimation theorem. We need to change the defintion of distance as we need a distance on a circle.\\\\
+Define $d(\theta, \phi) = \min \{ |\theta -\phi|, |1 + \phi - \theta|, |1+ \theta - \phi|\}$ which is the distance on the circle. Lets consider the normal binary expansion 0.999999 the closest string should be 1.\\\\
+\textbf{Theorem (Phase Estimation)}: If the output of PE algorithm with $n$ lines (initited in as zeros) is $\theta = 0.y_0y_1...y_{m-1}$, then:\\
+a) Prob ( $\theta$ is closeset $n$-binary digit approx to $\phi$, $d(\theta, \phi) \leq \frac{1}{2^{n+1}}$) $\geq \frac{4}{\pi^2} = 0.4$\\
+b) Prob( $|\theta - \phi| \geq \epsilon$) $\leq O(\frac{1}{2^n \epsilon})$ for $\epsilon$ fixed\\\\
+Recall: the output is obtained by measuring an $n$-qubit state $QFT^{-1} \ket{A}$ where $\ket{A} = \frac{1}{\sqrt{2^n}} \sum_{x = 0}^{2^n-1} e^{2\pi i l x} \ket{x}$
+$$
+QFT^{-1} \ket{x} = \frac{1}{\sqrt{2^n}} \sum_{y= 0}^{2^n-1} e^{-2\pi i \frac{y x}{2^n} \ket{y}}
+$$
+Soon we will change the notation to make sure it is not overloaded with these powers of $2^n$
+$$
+QFT^{-1} \ket{A} = \frac{1}{2^n}\sum_{y=0} \sum_{x=0} e^{2 \pi i ( \psi - \frac{y}{2^n})x} \ket{y}
+$$
+Let $\{ \phi = 2^n \psi \}$:
+$$
+QFT^{-1} \ket{A} = \frac{1}{2^n}\sum_{y=0} \sum_{x=0} e^{2 \pi i  \frac{\phi - y}{2^n})x} \ket{y} = \frac{1}{2^n}  \sum_y \frac{ 1 - e^{2\pi i (\phi - y)}}{ 1 - e^{2\pi i \frac{\phi - y}{2^n}}} \ket{y}
+$$
+In the case $\phi - y \neq 0$:
+$$
+Prob( see\> y) =  \frac{1}{2^n} |\sum_{x=0}^{2^n-1} e^{2\pi i\frac{(\phi - y)}{2^n} x}|^2 = \frac{1}{2^{2n}} \frac{ |1 - e^{2\pi i (\phi - y)}|^2}{ | 1 - e^{2\pi i \frac{\phi - y}{2^n}}|^2} = \frac{1}{2^{2n}} \frac{| 1 - e^{2\pi i (\psi - \frac{y}{2^n}} 2^n|^2}{| 1 - e^{2\pi i (\psi - \frac{y}{2^n}}|^2}
+$$
+As $\theta_y = \frac{y}{2^n}$ and observe that $|1- e^{2\pi i(\psi - \theta_y})|^2 = |1 - e^{2\pi i d(\psi, \theta_y)}|^2$ therefore:
+        $$
+Prob( see\> y) =  \frac{1}{2^{2n}} \frac{|1 - e^{2\pi i 2^n d(\psi, \theta_y)}|^2}{|1 - e^{2 \pi i d(\psi, \theta_y}|^2}
+        $$
+As $0<d(\psi, \theta_y)\leq \frac{1}{2}$ we will ise the following bounds:\\
+               i) $|1-e^{i \alpha}| \leq 2|$\\
+               ii) $|1-e^{i \alpha}| \leq |alpha|$\\
+               iii) For $|alpha| \leq \phi$ $|1- e^{i \alpha}|= 2|sin( \frac{\alpha}{2})| \geq \frac{2|alpha|}{\pi}$\\\\
+               The last of thse comes from the fact that for positive $\alpha$ we hae $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$\\\\
+               When $d(\psi, \theta) \leq \frac{1}{2^{n+1}}$ implies that $y$ is the best approxiamtion for $\psi$ and $2\pi d(\psi, \theta_y) 2^n \leq \frac{2^{n+1}}{2^{n+1}} \pi$ so:
+               $$
+               Prob( y is best approximation) \geq \frac{1}{2^{2n}} | \frac{2}{\pi} \frac{2 \pi d(\psi, \theta_y)}{2 \pi d(\psi, \theta)}|^2 = \frac{4}{\pi^2}
+               $$
+               The calculations for the above will be on the moodle\\\\
+               \textbf{Further remarks}:\\\\
+               If $C-U^{2^n}$ is implement as $(C-U)^{2^{\alpha}}$, then PE algorithm needs exponential time ($ 1+ 2+... + 2^{n-1} = 2^{n}-1$). But for some some $U$ implementing $C-U^{2^k}$ requries only polynomial time so we get a poly-time PE algorithm. Harks back to the algorithm for finding powers by repeated squaring, expressing the exponent in binary and then doing repeated squaring. The number of applications of controlled unitaries does not depend on $d$ the dimension of the space. This can be used to rpovide an alternative factoring algorithm ( due to A.Kitaev) ( see example sheet).\\\\
+               In many applications we feed an arbitary state to the last register rather than an eigenstate. If instead of $\ket{v_{\phi}}$ we input general state $\ket{\xi}$, expand in eigenbasis of $U$:
+               $$
+               \ket{\xi} = \sum_j c_j \ket{v_{\phi_j}}, U \ket{v_{\phi_j}} = e^{2 \pi i \phi_j} \ket{v_{\phi_j}}
+               $$
+               Then we get (before the final measuremnt) a unitary process $U_{PE}$:
+               $$
+               \ket{00..00} \ket{\xi} \rightarrow^{U_{PE}} \sum_j c_j \ket{\psi_j} \ket{v_{\phi_j}}
+               $$
+               The Born rule implies that the final measurement will give a choice of $\phi_j$'s (or an approximation) it can be choosen with probability $|c_j|^2$. This is not some average of the $\phi_j$ values.\\\\
+               Will be elaborated more in the notes on moodle on the following:\\\\
+               If you want to have $n$-qubits and want to get $m$-bits correctly probablility of success $1- \eta$, then must have :
+               $$
+               n \geq m + \log \frac{1}{\eta}
+               $$
+               \subsection{Amplitude amplification}
+Much like when we multiple up to HSP we revisited shors alogrithm, in this case we revisit grovers algorithm. This is an apotheosis of technique in Grover's algorithm.
+\subsubsection{Background}
+\textbf{Reflection Operators}:
+
 \end{document}

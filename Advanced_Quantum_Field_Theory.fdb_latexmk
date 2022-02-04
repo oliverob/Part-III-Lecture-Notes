@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1643720035 "Advanced_Quantum_Field_Theory.tex" "Advanced_Quantum_Field_Theory.pdf" "Advanced_Quantum_Field_Theory" 1643720035
-  "Advanced_Quantum_Field_Theory.aux" 1643719925 1924 7da496ac4ac86a375f3f8b9c5fd1a925 "pdflatex"
-  "Advanced_Quantum_Field_Theory.tex" 1643720034 28573 ff9614bc19bebb1f5f51a0e26689aad0 ""
+["pdflatex"] 1643903170 "Advanced_Quantum_Field_Theory.tex" "Advanced_Quantum_Field_Theory.pdf" "Advanced_Quantum_Field_Theory" 1643903170
+  "Advanced_Quantum_Field_Theory.aux" 1643896905 2137 1c4e66b88b162224ccb35c45f8c43780 "pdflatex"
+  "Advanced_Quantum_Field_Theory.tex" 1643903168 34343 6c396b64bbc767368df3a24b6816cce6 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630409836 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630409836 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -47,6 +47,7 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1630409836 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1630409836 37912 07513ec114ac737ab54cea0152f4424b ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1630409836 36281 c355509802a035cadc5f15869451dcee ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1630409836 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1630409836 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1630409836 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1630409836 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
@@ -83,5 +84,5 @@
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
   "Advanced_Quantum_Field_Theory.pdf"
-  "Advanced_Quantum_Field_Theory.aux"
   "Advanced_Quantum_Field_Theory.log"
+  "Advanced_Quantum_Field_Theory.aux"
