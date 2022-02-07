@@ -433,5 +433,123 @@ As $0<d(\psi, \theta_y)\leq \frac{1}{2}$ we will ise the following bounds:\\
 Much like when we multiple up to HSP we revisited shors alogrithm, in this case we revisit grovers algorithm. This is an apotheosis of technique in Grover's algorithm.
 \subsubsection{Background}
 \textbf{Reflection Operators}:
+State $\ket{\alpha}$ in $\mathcal{H}_{d}$ , $n$-dim subspace $L_{\alpha}$ with $(d-1)$ dim orthogonal $l_{\alpha}^{\alpha}$
+$$
+I_{\ket{\alpha}} = I - 2 \ket{\alpha} \bra{\alpha}
+$$
+$$
+I_{\ket{\alpha}} = - \ket{\alpha}
+$$
+$$
+I_{\ket{\alpha}} \ket{\beta} = \ket{\beta}
+$$
+for any $\ket{\beta} \prep \ket{\alpha}$\\\\
+For any unitary $U$: $UI_{\ket{\alpha}} U^{\dagger} = I_{U\ket{\alpha}}$, $U \ket{\alpha} \bra{\alpha} U^{\dagger} = \ket{\beta} \bra{\beta}$ for $\ket{\beta} = U\ket{\alpha}$.\\\\
+Consider a $k$-dimensional subspace $A < \mathcal{H}_d$, any orthonormal basis $\ket{a_1}, ..., \ket{a_k}$. Lets consider a projection operator on to this subspace:
+$$
+P_A = \sum_{i=1}^k \ket{a_i} \bra{a_i} 
+$$
+Define a generalised projeciton operator:
+$$
+I_A = I - 2 P_A
+$$
+$$
+               I_A \ket{\xi} = \begin{cases} \ket{\xi} & \ket{\xi} \in A^{\dagger}\\
+               - \ket{\xi} & \ket{\xi} \in A\end{cases}
+$$
+Now lets recall what grover does very briefly (have a look at Part II course):\\\\
+Search for a unique "goal" item  in unstructured database of $N = 2^n$ items.\\\\
+Write $B_n =$ set of all n-bit strings. Given an oracle for $f: B_n \rightarrow B_n$ with the promise that there is a unique element $x_0 \in B_1$ with $f(\x_0) = 1$. Problem is to find $x_0$.\\\\
+Closely related to class NP and Boolean satisfiability problem. This is explained in part II lecture notes.
+\section{Lecture 8}
+\textbf{Recap of grovers algorithm}
+We are searching for a unique "good" element in an unstructured database, $N= 2^n$ items\\
+We are given an oracle $f$ that maps from $B_n \rightarrow B_1$\\
+Promise: There is a unique $x_0 \in B_n$ with $f(x_0) = 1$\\
+Problem: Find $x_0$\\\\
+Consider Grover iteration operator on $n$ qubits
+$$
+Q = - H_n I_{\ket{0}} H_n I_{\ket{x_0}} = - I_{\ket{\psi_0}} I_{\ket{x_0}}
+$$
+where $H_n = H\otimes ... \otimes H$ , $\ket{\psi_0} = H_n \ket{00.000} = \frac{1}{\sqrt{2^n}} \sum_{x \in B_n} \ket{x}$\\\\
+One application of $Q$ uses 1 query of $U_f$\\\\
+\textbf{Thereom (Grover '96)}: In 2-dim span of $\ket{\psi_0}$ and (unknown) $\ket{x_0}$ the action of $Q$ is rotation by angle $2 \alpha$ where $\sin \alpha = \frac{1}{\sqrt{N}}$. Hence grover's algorithm to find $x_0$ given $U_f$ is:
+\begin{itemlist}
+\item Make $\ket{\psi_0}$\\
+\item Apply $Q$ $m$ times where $m = \frac{\arccos \frac{1}{\sqrt{N}}}{2} \arcsin \frac{1}{\sqrt{N}}$ to rotate $\psi_0$ very close to $x_0$ (within the angle $\pm \alpha$\\
+\item Measure to see $x_0$ with high probability $1- \frac{1}{N}$
+\end{itemlist}
+For large $N$ $\arccos \frac{1}{\sqrt{N}} = \frac{\pi}{2}$ and $\arcsin \frac{1}{\sqrt{N}} = \frac{1}{\sqrt{N}}$ so $m = \frac{\pi}{4} \sqrt{N}$ iteractions or queries to $U_f$ needed.\\\\
+Classically we need $O(N)$ quereies to find $x_0$ with any constant probability that does not depend on $N$, so this achieves a quadratic speed-up.
+\subsection{Amplitude Amplification}
+Let $G$ be any subspace ('good subspace') of state space $\mathcal{H}$ $G^{\prep}$ be its orthogonal complement ('bad subspace') $\mathcal{H} = G \oplus G^{\prep}$\\\\
+Given any $\ket{\psi} \in \mathcal{H}$, we have unique decomposition with real positive coefficentt $\ket{\psi} = \sin \theta \ket{g} + \cos \theta \ket{b}, \ket{g} \in G, \ket{b} \in G^{\prep}$\\
+Introduce reflection operators that flip $\ket{\psi}$ and good vectors:
+$$
+I_{\ket{\psi}} = I - 2 \ket{\psi} \bra{\psi}, I_G = I - 2 P_G
+$$
+$\sin \theta  = ||P_G\ket{\psi}|| = $length of good projection of $\ket{\psi}$\\
+Introduce $Q = -I_{\ket{\psi}} I_G$
+\subsubsection{Amplitude Amplification Theorem}
+In the 2-dim space spanned by $\ket{g}$ and $\ket{\psi}$ $Q$ is roation by $2 \theta$ where\\
+$\sin \theta = $length of good projection of $\ket{\psi}$\\
+\textbf{Proof}: We have $I_G \ket{g} = - \ket{g}, I_G \ket{b} = \ket{b}$:
+$$
+Q \ket{g} = I_{\ket{\psi}} \ket{g}, Q\ket{b} = - I_{\ket{\psi}} \ket{b}
+$$
+$$
+I_{\ket{\psi}} = I - 2( \sin \theta \ket{g} + \cos \theta \ket{b}) (\sin \theta \bra{g} + \cos \theta \bra{b})
+$$
+using the fact that $\bra{b}\ket{g} = 0, \bra{g} \ket{g} = \bra{b} \ket{b} = 1$:
+$$
+Q\ket{b} = \cos 2 \theta \ket{b} + \sin 2 \theta \ket{g}
+$$
+$$
+Q \ket{G} = - \sin 2 \theta \ket{b} + \cos 2 \theta \ket{g}
+$$
+So
+$$
+Q \ket{g} = I\ket{g} - 2 \sin^2 \theta \ket{g} - 2 \sin \theta \cos \theta \ket{b} = \cos 2 \theta \ket{g} - \sin 2 \theta \ket{b}
+$$
+In the $\{ \ket{b}, \ket{g}\}$ basis, the $Q$ matrix is a rotation matrix by $2 \theta$:
+$$
+                       Q  = \begin{pmatrix} \cos 2 \theta & \sin 2 \theta \\ - \sin 2 \theta & \cos 2 \theta \end{pmatrix}
+$$
+As we apply $Q$ n $times we get $Q^{n} \ket{\psi} = \sin (2n+1) \theta \ket{g} + \cos (2n+1) \theta \ket{b}. If we measure $Q^{n}$ in $\{ \ket{b}, \ket{g} \}$ basis we have probabiliyt of seeing a good element of $\sin^2 (2n+1) \theta$ so this is maximised when $(2n+1) \theta = \frac{\pi}{2}. So for the nearest integer to $n = \frac{\pi}{4 \theta} - \frac{1}{2}$ we will be within $\theta$ of the element.\\\\
+\textbf{Example}: If we have $\theta = \frac{\pi}{6}, n =1$ we can seee that $Q^1$ rotates $\ket{\psi}$ exactly onto $\ket{g}$.\\\\
+Generally, for a given $\theta$ $n$ is not an integer, so we use $n=$ nearest integer to $ \frac{4\pi}{\theta} - 1 \approx \frac{4\pi}{\theta} = O(\frac{1}{\theta}) = O(\frac{1}{\sin \theta}) = O(\frac{1}{\text{length of good projection of } \ket{\psi}}$ and then $Q\ket{\psi}$ will be witin angle $\theta$ of $\ket{g}$ so the probability of seeing a good value is: $P \geq \cos \theta = 1 - O(\theta^2)$.\\\\
+All this can implement if $I_{\ket{\psi}}I_G$ can be impmeneted efficently. see ES2.\\\\
+For $I_G$ is suffices for $G$ to be spanned by computational basis states and have an indicator funciton $f$.
+$$
+f(x) = 1, x \text{if} x\text{ is good}, f(x) = 0 \text{ if} x \text{is bad}
+$$
+For $I_{\ket{\psi}}$ we usually have $\ket{\psi} = H_n \ket{00..000}$, then $\ket{\psi}$ can be implemented in $O(n)$ time where $n$ is the number of qubits.\\\\
+In the amplitude amplification algorithm the relative amplitudes of good elements remain the same as they were in $\ket{\psi} = \sin \theta \ket{g} + \cos \theta \ket{b}$ so $\ket{g}$ remains the same just the amplitude varies. So AA amplifies overall $\ket{g}$ amplitude at the expense of reducing the amplitude of $\ket{b}$.\\\\
+Second remark: Final state is generally not exactly $\ket{g}$, however, if $\sin \theta$ is known then there is a modification of this algorithm that uses a modest amount of resources t omake it exact.\\\\
+The rotuine is useful for state prepation e.g.
+$$
+\sum_{x < N, \text{x is coprime to N}} \ket{x}
+$$
+\section{Examples Class 1}
+Try to prove the same thing in 1(ii) in shors algorithm and it will be slightly nicer language than group theory.\\\\
+For $\mathbb{Z}_2$ the irreps are $\chi_a(x) = (-1)^{ax}$ for $a, x \in \mathbb{Z}_2$ therefore $\mathbb{Z}_2^n$ has irreps $\chi_a(x) = (-1)^{a_1 x_1 + a_2 x_2 +...+ a_n x_n}$ so
+$$
+\ket{\chi} = \frac{1}{\sqrt{|G|}} \sum_g \bar \chi( g) \ket{g} = \frac{1}{\sqrt{|G|}} \sum_{b \in \mathbb{Z}_2^n} (-1)^{a b} \ket{b}
+$$
+and
+$$
+[QFT]_{ab} = \frac{1}{\sqrt{|G|}} (-1)^{ab} = \frac{1}{\sqrt{2^n}} (-1)^{a_1 b_1} (-1)^{a_2 b_2} ... (-1)^{a_n b_n}
+$$
+                       could be written using Hadmards with $QFT = H \otimes H \otimes... \otimes H$ as $H = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1\\ 1& -1 \end{pmatrix}$ with the columns being $a$ and the rows being $b$ so it is only $-1$ if they are both $1$ as otherwise it will have a zero in the exponent.
+\\\\
+First part of HSP problems is generate coset states and the second part is repeation (how many times you need to repeat the process). In standard HSP we make one query to $f$ to make the following state:
+$$
+\ket{y \oplus k} = \frac{1}{2^k} \sum_{x \in K} \ket{y \oplus x}, y \in \mathbb{Z}_2^n
+$$
+Apply $QFT =  H^{\otimes n}$ and measure. This gives an uniformly random output $c \in \mathbb{Z}_2^n$ which is such that the irrep $\chi_c$ of $G$ that is restricted to $K$ is the trivial irrep of $K$. In other words $\chi_c(a) = 1$ for all $a \in K$. In other word, $(-1)^{ac} = 1 \implies c a = 0$ mod 2. We know that this $k$ viewed as a subspace of $\mathbb{Z}_2^n$ has dimension $k$. So we need $(n-k)$ linearly indepdendant $c_i$ with $c_i a = 0$ to determine $K$.\\\\
+In order to succeed with probability $1- \epsilon$ when given a constant probability $p$ we run the process some $M$ times. Then you calculate the probablity of $M$ runs failing to determine $k$ and show that for a constant overhead we can get any accuracy. $1- (1-p)^M > 1- \epsilon$.\\\\
+Phase gates act with $P(\alpha) : \ket{0} \rightarrow \ket{0}, \ket{1} \rightarrow e^{i \alpha}\ket{1}$. Therefore can apply a fractional phase by first preparing a register with $i_1,...,i_n$ s.t. $y= 0.i_1...i_n$ and then by applying phase gates $P(\frac{1}{2}...P(\frac{1}{2^n}$to get the state $e^{iy}\ket{y}$.\\\\
+When inventing algorithms whilst it is useful to think about eigenstates to start with make sure to run it through with a general state as you might need to uncompute at the end. e.g. need to apply an inverse controlled unitary in question 5 after computing the correct eigenvalue.\\\\
+\textbf{We can't just discard additoinal registers like $\sum_j\lambda_j \ket{u_j} \ket{c_j}$ to $\sum_j \lambda_j \ket{u_j}$ we need to uncompute to remove these extra stuff.}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  3 FEB 2022 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  5 FEB 2022 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -330,15 +330,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--314
 
  []
 
-
-Overfull \hbox (188.89415pt too wide) detected at line 322
-\OML/cmm/m/it/10 < ^^^[]^^^[] >[]\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 o \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 o \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 o \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 8 \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +\OML/cmm/m/it/10 :: \OT1/cmr/m/n/10 =  \OMS/cmsy/m/n/10 ^^@ ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@  \OT1/cmr/m/n/10 +  \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 IPI\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 = []
- []
-
-./Advanced_Quantum_Field_Theory.tex:325: Undefined control sequence.
+./Advanced_Quantum_Field_Theory.tex:327: Undefined control sequence.
 <argument> \partial \Phi _d \parital 
                                      \Phi _e \partial _f
-l.325 ...artial \Phi_d \parital \Phi_e \partial_f}
+l.327 ...artial \Phi_d \parital \Phi_e \partial_f}
                                                   )^{-1} <\Phi_a \Phi_d> <\P...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -346,10 +341,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Advanced_Quantum_Field_Theory.tex:328: Undefined control sequence.
+./Advanced_Quantum_Field_Theory.tex:330: Undefined control sequence.
 <argument> \partial \Phi _d \parital 
                                      \Phi _e \partial _f
-l.328 ...artial \Phi_d \parital \Phi_e \partial_f}
+l.330 ...artial \Phi_d \parital \Phi_e \partial_f}
                                                   )^{-1}  = \Gamma^{(3)} = -...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -358,52 +353,52 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 360--363
+Underfull \hbox (badness 10000) in paragraph at lines 362--365
 
  []
 
 [12]
-Overfull \hbox (122.72221pt too wide) detected at line 380
-[] \OML/cmm/m/it/10 d[]^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[] [] d[]^^R^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[]^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X [] d[]^^R[]^^R[]:::^^R[]
+Overfull \hbox (127.69444pt too wide) detected at line 382
+[] \OML/cmm/m/it/10 d[]^^R[]^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[] [] d[]^^R^^R[]:::^^R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 X[]:::X[]^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X^^O[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 X [] d[]^^R^^R[]:::^^R[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+Underfull \hbox (badness 10000) in paragraph at lines 419--421
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 423--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--450
+Underfull \hbox (badness 10000) in paragraph at lines 449--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+Underfull \hbox (badness 10000) in paragraph at lines 458--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+Underfull \hbox (badness 10000) in paragraph at lines 458--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--461
+Underfull \hbox (badness 10000) in paragraph at lines 458--463
 
  []
 
 [14]
-Overfull \hbox (70.42863pt too wide) detected at line 466
+Overfull \hbox (70.42863pt too wide) detected at line 468
 \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@1\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 i [] d[]kF[]\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 d[]xe[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 i [] d[]kf[]\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 k\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 d[]xe[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^
  []
 
-./Advanced_Quantum_Field_Theory.tex:471: Extra }, or forgotten $.
-l.471 ...\dagger}(-\infty) = a_j^{\dagger}(\infty}
+./Advanced_Quantum_Field_Theory.tex:473: Extra }, or forgotten $.
+l.473 ...\dagger}(-\infty) = a_j^{\dagger}(\infty}
                                                    + i \int d^3 k f_j \int d...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -411,8 +406,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./Advanced_Quantum_Field_Theory.tex:473: Extra }, or forgotten $.
-l.473 ...gger}(\infty) = a_{j'}^{\dagger}(-\infty}
+./Advanced_Quantum_Field_Theory.tex:475: Extra }, or forgotten $.
+l.475 ...gger}(\infty) = a_{j'}^{\dagger}(-\infty}
                                                    + i \int d^3 k f_{j'} \in...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -420,86 +415,128 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./Advanced_Quantum_Field_Theory.tex:477: Display math should end with $$.
+./Advanced_Quantum_Field_Theory.tex:479: Display math should end with $$.
 <to be read again> 
                    e
-l.477 ...-i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e
+l.479 ...-i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e
                                                   ^{i k'_3 \cdot x'_3} $e^{-...
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Advanced_Quantum_Field_Theory.tex:477: Missing $ inserted.
+./Advanced_Quantum_Field_Theory.tex:479: Missing $ inserted.
 <inserted text> 
                 $
-l.477 ...i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e^
+l.479 ...i k_1 \cdot x_1} e^{-i k_2 \cdot x_2} $e^
                                                   {i k'_3 \cdot x'_3} $e^{-i...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Advanced_Quantum_Field_Theory.tex:477: Missing $ inserted.
+./Advanced_Quantum_Field_Theory.tex:479: Missing $ inserted.
 <inserted text> 
                 $
-l.477 ...k_2 \cdot x_2} $e^{i k'_3 \cdot x'_3} $e^
+l.479 ...k_2 \cdot x_2} $e^{i k'_3 \cdot x'_3} $e^
                                                   {-i k'_4 \cdot x'_4} ( \pa...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Advanced_Quantum_Field_Theory.tex:480: Missing $ inserted.
+./Advanced_Quantum_Field_Theory.tex:482: Missing $ inserted.
 <inserted text> 
                 $
-l.480 having taken $\sigma
+l.482 having taken $\sigma
                            \rightarrow 0$ limit of $f_j(k) \rightarrow \delt...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (86.23668pt too wide) in paragraph at lines 477--482
+Overfull \hbox (86.23668pt too wide) in paragraph at lines 479--484
 \OT1/cmr/m/n/10 e$[]$e$[](\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 T^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) []$$\OML/cmm/m/it/10 havingtaken$$^^[ \OMS/cmsy/m/n/10 !
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--482
+Underfull \hbox (badness 10000) in paragraph at lines 479--484
 
  []
 
-./Advanced_Quantum_Field_Theory.tex:485: Too many }'s.
-l.485 so}
+./Advanced_Quantum_Field_Theory.tex:487: Too many }'s.
+l.487 so}
          }
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-./Advanced_Quantum_Field_Theory.tex:485: Too many }'s.
-l.485 so}}
+./Advanced_Quantum_Field_Theory.tex:487: Too many }'s.
+l.487 so}}
           
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-./Advanced_Quantum_Field_Theory.tex:487: Double superscript.
-l.487 ...m ( - k_j^2 + m^2) \prod_{j=1}^n (- k'_j^
+./Advanced_Quantum_Field_Theory.tex:489: Double superscript.
+l.489 ...m ( - k_j^2 + m^2) \prod_{j=1}^n (- k'_j^
                                                   2 + m^2) \bra{\Omega} T \t...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 
-Overfull \hbox (90.91495pt too wide) detected at line 488
+Overfull \hbox (90.91495pt too wide) detected at line 490
 [] [] \OT1/cmr/m/n/10 = [] [] = (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )[] [](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) [](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :::[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :::[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 ) []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--491
+Underfull \hbox (badness 10000) in paragraph at lines 490--493
 
  []
 
-[15] [16] (./Advanced_Quantum_Field_Theory.aux) ) 
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:503: Undefined control sequence.
+<recently read> \parital 
+                         
+l.503 ...t differentiated as well as the $\parital
+                                                   Z/ \partial J$\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:505: Undefined control sequence.
+<recently read> \lamba 
+                       
+l.505 ...nd that for antisymmetric tensors $\lamba
+                                                  _{abcd} =\lambda \epsilon_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--507
+
+ []
+
+[16] (./Advanced_Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 1801 strings out of 478599
- 23481 string characters out of 5858101
+ 1802 strings out of 478599
+ 23486 string characters out of 5858101
  326258 words of memory out of 5000000
- 19681 multiletter control sequences out of 15000+600000
+ 19682 multiletter control sequences out of 15000+600000
  417620 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,66p,901b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,66p,905b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Advanced_Quantum_Field_Theory.pdf (16 pages, 273775 bytes).
+Output written on Advanced_Quantum_Field_Theory.pdf (16 pages, 275317 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream

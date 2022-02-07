@@ -318,7 +318,9 @@ $$
 $$
 in $\phi^4$ theory:
 $$
-< \phi_a \phi_b>_J^{conn} = -- \,+\, -o- \,+\, -o-o- \,+\, -8- \,+ \,- \theta - \,+ .. =  \,--\, +\, -IPI- \,+ \,-IPI-IPI- \,+ \,-IPI-IPI-IPI- =  \frac{1}{1- IPI}
+< \phi_a \phi_b>_J^{conn} = -- \,+\, -o- \,+\, -o-o- \,+\, -8- \,+ \,- \theta - \,+ ..
+$$
+$$=  \,--\, +\, -IPI- \,+ \,-IPI-IPI- \,+ \,-IPI-IPI-IPI- =  \frac{1}{1- IPI}
 $$
 intuitively the last step comes from recognising the geometric series. On the example sheet we will do the same for three point function:
 $$
@@ -376,7 +378,7 @@ $$
 \theta_a' = X_{ab} \theta_b, X_{ab} \in \mathbb{C}
 $$
 $$
-\int d^n \theta'_{a_1} ... \theta'_{a_n} = X_{a_1 b_1} ... X_{a_n b_n}  \int d^n \theta \theta_{b_1}... \theta_{b_n} = X_{a_1 b_1} ... X_{a_n b_n}   \epsilon^{b_1... b_n} = \det X \epsilon^{a_1...a_n} = \det X \int d^n \theta' \theta'_{a_1}... \theta'_{a_n}
+\int d^n \theta' \theta_{a_1} ... \theta_{a_n} = X_{a_1 b_1} ... X_{a_n b_n}  \int d^n \theta \theta_{b_1}... \theta_{b_n} = X_{a_1 b_1} ... X_{a_n b_n}   \epsilon^{b_1... b_n} = \det X \epsilon^{a_1...a_n} = \det X \int d^n \theta \theta_{a_1}... \theta_{a_n}
 $$
 therefore $d^n \theta = det X d^n \theta'$ which compared to scalars where we have $\phi' = Y \phi \implies d^n \phi = \frac{1}{\det Y} d^n \phi'$. So fermions give the converse relationship here to what you would expect from scalars.
 \subsection{Free fermion field theory}
@@ -493,5 +495,13 @@ $$
 $$
 Usually we are interested in all momentum being unequal, so all the particles are involved in the scattering. This implies we want connected diagrams.
 \section{Example sheet 1}
-When calculating symmetry factors you are genuinely looking for symmetries. Rather than trying to think about automorphisms first count the number of symmetries, then consider if any of them are already acounted for by exchange of particles and ignore them. If you get confused remember how it works with a single particle we don't say how many ways of picking which two to connect up is 6 but rather say we can slip those loops or exchange those loops (think a bit like polymod though in some instances this does not hold e.g. if the diagram is symmetric under exchange of two propogators which end on different particles this is a symmetry just like if they ended on the same particle). Try question 3 on ES1 it is a very good test of if you have got it cracked. It might be worth just memorising the symmetry factors of everything less than 3. 
+When calculating symmetry factors you are genuinely looking for symmetries. Rather than trying to think about automorphisms first count the number of symmetries, then consider if any of them are already acounted for by exchange of particles and ignore them. If you get confused remember how it works with a single particle we don't say how many ways of picking which two to connect up is 6 but rather say we can slip those loops or exchange those loops (think a bit like polymod though in some instances this does not hold e.g. if the diagram is symmetric under exchange of two propogators which end on different particles this is a symmetry just like if they ended on the same particle). Try question 3 on ES1 it is a very good test of if you have got it cracked. It might be worth just memorising the symmetry factors of everything less than 3.\\\\
+In order to show that 
+$$
+- \hbar^2 \frac{\partial^3 W}{\partial J_a \partial J_b \partial J_c}|_{J=0} = < \phi_a\phi_b \phi_c> ^{conn}
+$$
+we need to express in terms of $Z$ and take each derivative at a time and only take J =0 at the end. This will give extra terms because the 1/Z will get differentiated as well as the $\parital Z/ \partial J$\\\\
+If you are asked to find the feynmann rules, remember that the propogator is $<\phi_1 \phi_2>$ and the vertex rule you can get by adding the source term and then extracting the interaction term as derivatives and the vertex term is what connects the derivatives. You need to extract the interaction term first leaving the derivatives in the exponential outside the integral, then inside the intgeral you sometimes need to complete the square and then perform a translation.\\\\
+For fermionic case remembder that $A_{ij}$ and $\lambda_{abcd}$ are antisymmetric and that for antisymmetric tensors $\lamba_{abcd} =\lambda \epsilon_{abcd}$ and $\epsilon_{abc...n}\epsilon_{abc...n} = n!$.\\\\
+For grassman variables feynmann diagrams you cannot have more half edges than variables as $\theta_i^2 = 0$. Remember forumula for $Pf(A)$
  \end{document}

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1643903170 "Advanced_Quantum_Field_Theory.tex" "Advanced_Quantum_Field_Theory.pdf" "Advanced_Quantum_Field_Theory" 1643903170
-  "Advanced_Quantum_Field_Theory.aux" 1643896905 2137 1c4e66b88b162224ccb35c45f8c43780 "pdflatex"
-  "Advanced_Quantum_Field_Theory.tex" 1643903168 34343 6c396b64bbc767368df3a24b6816cce6 ""
+["pdflatex"] 1644060999 "Advanced_Quantum_Field_Theory.tex" "Advanced_Quantum_Field_Theory.pdf" "Advanced_Quantum_Field_Theory" 1644060999
+  "Advanced_Quantum_Field_Theory.aux" 1643991439 2241 19ee817d31ad2a7817c9c34f42e1fc97 "pdflatex"
+  "Advanced_Quantum_Field_Theory.tex" 1644060994 35533 5c6d69168ce57d8d897a686ad83e6dca ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630409836 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630409836 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -83,6 +83,6 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1630422739 2797772 235209822cc2568e25123ecf25b284e7 ""
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
+  "Advanced_Quantum_Field_Theory.aux"
   "Advanced_Quantum_Field_Theory.pdf"
   "Advanced_Quantum_Field_Theory.log"
-  "Advanced_Quantum_Field_Theory.aux"

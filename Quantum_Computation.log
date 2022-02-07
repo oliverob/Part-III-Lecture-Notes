@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  4 FEB 2022 09:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  7 FEB 2022 17:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -720,7 +720,310 @@ Underfull \hbox (badness 10000) in paragraph at lines 425--429
 
  []
 
-[14] (./Quantum_Computation.aux) ) 
+[14]
+./Quantum_Computation.tex:446: Undefined control sequence.
+l.446 for any $\ket{\beta} \prep
+                                 \ket{\alpha}$\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--449
+
+ []
+
+./Quantum_Computation.tex:462: Undefined control sequence.
+l.462 ...a unique element $x_0 \in B_1$ with $f(\x
+                                                  _0) = 1$. Problem is to fi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--471
+
+ []
+
+
+./Quantum_Computation.tex:477: LaTeX Error: Environment itemlist undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.477 \begin{itemlist}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--478
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--478
+
+ []
+
+[15]
+
+./Quantum_Computation.tex:478: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.478 \item M
+             ake $\ket{\psi_0}$\\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
+./Quantum_Computation.tex:479: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.479 \item A
+             pply $Q$ $m$ times where $m = \frac{\arccos \frac{1}{\sqrt{N}}}...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+
+ []
+
+
+./Quantum_Computation.tex:480: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.480 \item M
+             easure to see $x_0$ with high probability $1- \frac{1}{N}$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:481: LaTeX Error: \begin{document} ended by \end{itemlist}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.481 \end{itemlist}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+
+ []
+
+./Quantum_Computation.tex:485: Undefined control sequence.
+l.485 ...') of state space $\mathcal{H}$ $G^{\prep
+                                                  }$ be its orthogonal compl...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:485: Undefined control sequence.
+l.485 ...bspace') $\mathcal{H} = G \oplus G^{\prep
+                                                  }$\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:486: Undefined control sequence.
+l.486 ...t{b}, \ket{g} \in G, \ket{b} \in G^{\prep
+                                                  }$\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--488
+
+ []
+
+[16]
+./Quantum_Computation.tex:518: Missing $ inserted.
+<inserted text> 
+                $
+l.518 As we apply $Q$ n $times we get $Q^
+                                         {n} \ket{\psi} = \sin (2n+1) \theta...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:518: Missing $ inserted.
+<inserted text> 
+                $
+l.518 ... (2n+1) \theta \ket{b}. If we measure $Q^
+                                                  {n}$ in $\{ \ket{b}, \ket{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:518: Missing $ inserted.
+<inserted text> 
+                $
+l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+                                                   - \frac{1}{2}$ we will be...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:518: Missing $ inserted.
+<inserted text> 
+                $
+l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+                                                   - \frac{1}{2}$ we will be...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Computation.tex:518: Missing $ inserted.
+<inserted text> 
+                $
+l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+                                                   - \frac{1}{2}$ we will be...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:518: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+                                                   - \frac{1}{2}$ we will be...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (31.06769pt too wide) in paragraph at lines 517--523
+\OT1/cmr/m/n/10 As we ap-ply $\OML/cmm/m/it/10 Q$ \OT1/cmr/m/n/10 n $\OML/cmm/m/it/10 timesweget$\OT1/cmr/m/n/10 Q$[] [] = [](2\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OML/cmm/m/it/10 ^^R [] \OT1/cmr/m/n/10 + [](2\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OML/cmm/m/it/10 ^^R [] :Ifwemeasure$\OT1/cmr/m/n/10 Q$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--536
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 542--546
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--554
+
+ []
+
+
+Overfull \hbox (0.48416pt too wide) in paragraph at lines 548--554
+\OT1/cmr/bx/n/10 We can't just dis-card ad-di-toinal reg-is-ters like $[][] \OML/cmm/m/it/10 ^^U[] [] []$ \OT1/cmr/bx/n/10 to $[][] \OML/cmm/m/it/10 ^^U[] []$
+ []
+
+[18] (./Quantum_Computation.aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 518 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
  4405 strings out of 478599
  53873 string characters out of 5858101
@@ -730,10 +1033,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  72i,14n,80p,1433b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Quantum_Computation.pdf (14 pages, 249256 bytes).
+Output written on Quantum_Computation.pdf (18 pages, 271489 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 148 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
