@@ -507,4 +507,45 @@ $$
 $$
 $m$ is the number of reflection from top boundary, $n$ is the number of reflections of the left-hand boundary.\\\\
 The simplest possible case is take $n=m=X=Y=1$ gives $\tan \theta = 1 \implies \theta = \frac{\pi}{4}$ so you get a rectangle reflecting around the inside of the rectangle.
+\section{Lecture 7}
+One of the questions that came up in the background on the chat on wednesday is imagine we have this undular boundary to our domain and it is close to having critical slopes to our domain. A critical slope will lead to a massive increase in wavenumber and in steepnesss of the wave. If we have a near horizontal surface with near critical surfaces then we will end up filling the gaps between the undulations with denser fluid than above due to the mixing so a lot of the wave energy won't end up geting into the valleys as it will reflect off the changing stratificaiton. To some approximaiton if the water can pool in it then we can ignore the fluxuations in the surface, however if the slope is at a gradient and so the water in the pools can flow away then they remain important. \\\\
+Returning the immediate discussion, if we don't have an eigenmode ( $\frac{X}{Y} \frac{n}{m} \neq \tan \theta$ then reflections were space-filling. Remember we defined $m = \frac{1}{2}$ number of subcritical reflections, and $n = \frac{1}{2}$ number of supercritical reflections (reflection from a vertical rule will always be a supercritical refleciton but if there is an angle it will depend on $\theta$\\\
+\textbf{Trapezoidal basin}:
+Length of one side of 2, length of other side of 1 and width of 2. At 45 degrees, we converge to a corner to corner attractor. At 40 degrees we saw roughly diamonded shaped stuff. (the trick of drawing attractors is to draw the attractor and then draw the boundary on, this method allows us to easily see the other possible domains that would give the same attractor.  $\theta = \tan^{-1} \frac{1}{2}$ gives the attractor between the other two corners. Any angles between 45 degrees and $\theta = \tan^{-1} \frac{1}{2}$ will give nice diamond shapes, and outside this range we will get more complex shapes like figure of 8s. Eventually as we get higher and higher modes we have more different directions of waves in the same space so get lots more disspation, we also start to see viscoity having an impact as the scale of the waves gets smaller.\\\\
+Define a trapezium with bottom length $X$ and height $Z$ and define the bottom left to the the origin and the angle of the left hand side to be $\alpha$ to the vertical. Define the starting point of the attractor as $(x_0, z_0)$ and let every point of reflection thereafter be labeled $(x_i, z_i)$. Lets label $a = \cot \alpha$ and $b = \cot \theta$ to clean up algebra. First off we can see that $z_0 = a x_0$, $z_1 = Z$ and $x_1 = \frac{Z + (b-a)x_0}{b}$, $x_2 =2$, $z_2 = 2 Z - bX -(b-a) x_0$ ... $x_4 = \frac{2(bX - Z) + (a-b) x_0}{a+b}$, $y_4 = a x_4$ simply from basis trigonometry. So we can now follow the packet of energy as it goes round once and we can repeat this as it goes around a second time until we find where it converges. Alternatively to find the attractor we just set $x_4 = x_0$ which gives $x_0 =  X - \frac{Z}{b}$. This looks a bit like a general iteration where you are trying to find the roots of $f(x) = 0$. One of these techniques is to rewrite this as $x- g(x) = 0$ and then take $x_n = g(x_{n-1})$ which is like what we have done here. This technique only converges under the right circumstances when $|g'(x)| <1$. Here once we get close enough to the attracotr this is equivalent to $\frac{| a-b|}{|a+b|}<1 \iff |\frac{ \sin(\theta - \alpha)}{\sin(\theta + \alpha)} = \frac{1}{\gamma} <1 \iff \gamma > 1$. Possible typo here check with typed version.\\\\
+One of the things we have seen here is that viscoity will play a role here as the wave number goes up and up as we go round and dissaption grows with the cube of the wavenumber. So we can start thinking about what the equilibrium energy spectrum looks like:
+\subsubsection{Energy spectrum for attractor}
+$$
+\gamma = \frac{\sin (\theta + \alpha)}{\sin(\theta - \alpha)}
+$$
+Therefore with each reflection 
+$$
+k_n = \gamma k_{n-1}
+$$
+$$
+\tilde E_n = \gamma \tilde E_{n-1} = \gamma^n \tilde E_0 = \frac{k_n}{k_0} \tilde E_0
+$$
+provided there is no dissipation.
+$$
+|\tilde \eta_n|\sim \frac{k_n}{k_0} |\tilde \eta_0|
+$$
+The wave steepness is $|k_n \tilde \eta_n| = \frac{k_n^2}{k_0} |\tilde \eta_n|$.\\\\
+Recall:
+$$
+|\bm u| \sim e^{- \frac{k^2 \nu \zeta}{2 N \sin \theta}, \tilde E \sim |\tilde \bm u|^2 \sim e^{- k^3 \nu \zeta }{N \sin \theta}
+$$
+$L$ - length once around one circuit of the attractor\\
+$$
+\frac{\tilde E_n^{(end)}}{\tilde E_n^{(start)}} = e^{- \frac{k^3 \nu L}{N\sin \theta}}
+$$
+$$
+\tilde E_n^{(end)} = \frac{k_n}{k_0} e^{- \Gamma ( ( \frac{k_n}{k_0})^3 - 1) }\tilde E_0
+$$
+with $\Gamma = \frac{\nu k_0^3 L}{(\gamma^3 - 1) N \sin \theta}$.
+\section{Examples Class 1}
+Does $\nabla \cdot \bm u = 0$ always hold?
+\section{Example sheet 1}
+$$
+\frac{\partial u}{\partial t} = - \frac{1}{\rho_0} \frac{\partial p'}{\partial x}
+$$
 \end{document}

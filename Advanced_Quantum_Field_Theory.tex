@@ -504,4 +504,113 @@ we need to express in terms of $Z$ and take each derivative at a time and only t
 If you are asked to find the feynmann rules, remember that the propogator is $<\phi_1 \phi_2>$ and the vertex rule you can get by adding the source term and then extracting the interaction term as derivatives and the vertex term is what connects the derivatives. You need to extract the interaction term first leaving the derivatives in the exponential outside the integral, then inside the intgeral you sometimes need to complete the square and then perform a translation.\\\\
 For fermionic case remembder that $A_{ij}$ and $\lambda_{abcd}$ are antisymmetric and that for antisymmetric tensors $\lamba_{abcd} =\lambda \epsilon_{abcd}$ and $\epsilon_{abc...n}\epsilon_{abc...n} = n!$.\\\\
 For grassman variables feynmann diagrams you cannot have more half edges than variables as $\theta_i^2 = 0$. Remember forumula for $Pf(A)$
- \end{document}
+\section{Lecture 8}
+$$
+\bra{k_1'...k_n'}\ket{k_1...k_n} = \bra{\Omega} \tilde \phi(k_1')... \tilde \phi(k'_n) \tilde \phi(- k_1) ...\tilde \phi(-k_n) \ket{\Omega}
+$$
+All positive signs means all particles coming out of the interaction so above we flipped the signs of the incoming particles so they are actually incoming.\\\\
+In fact only weaker assumptions are needed for an LSZ formula\\
+\begin{itemlist}
+\item Unique ground state $\ket{\Omega}$ and the 1st excited state is a single particle\\
+\item We want $\phi \ket{\Omega}$ to be a single-particle state (Generally $\phi$ could represent a composite operator) - i.e. $\bra{\Omega} \phi \ket{\Omega} = 0$ ( If $\bra{\Omega} \phi \ket{\Omega} = v \neq 0$ then let $\tilde \phi = \phi - v$.\\
+\item We whant $\phi$ to be properly normalised so that when it is far away it is nroamlised like a plane wave: $\bra{k} \phi \ket{\Omega} = e^{ik \cdot x}$ as in the free case\\
+\item Interactions mean we will probably need to rescale the $phi$ to some scaled field $Z_{\phi}^{\frac{1}{2}} \phi$.\\
+\end{itemlist}
+With these assumptions + a few more -> LSZ formula still applies. 
+We may need to "renormalise" the field from
+$$
+\mathfrak{L} = \frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi - \frac{1}{2} m^2 \phi^2 - \frac{\lambda}{4!} \phi^4
+$$
+to
+$$
+\mathfrak{L} = \frac{1}{2}  Z_{\phi} \partial^{\mu} \phi \partial_{\mu} \phi - \frac{Z_{\phi}}{2} m^2 \phi^2 - \frac{\lambda Z_{\phi}^2}{4!} \phi^4
+$$
+\subsection{Scalar Field Theory}
+\subsubsection{Wick rotation}
+We will would in Minkowski space-time with signature (+---)
+$$
+\mathfrak{L} = \frac{1}{2} \partial_{\mu} \phi \partial^{\mu} \phi - V(\phi)
+$$
+$$
+Z = \int \mathfrak{D}\phi e^{i \int dx^n L}, L = \int d^3 x \mathfrak{L}
+$$
+Propogator:
+$$
+\frac{i}{k^2 -m^2 + i \epsilon} = \frac{i}{(k^0)^2 - |\bm k|^2 - m^2 + i\epsilon}
+$$
+Let $ix^0 = x_4$ metric (++++), and arrange signs s.t.:
+$$
+\mathfrak{L} = \frac{1}{2} \partial_{\mu}\phi \partial^{\mu} \phi + V(\phi)
+$$
+$$
+Z = \int \mathfrak{D}\phi e^{- \int d_{x_4} L}
+$$
+Propogator:
+$$
+\frac{1}{k^2 + m^2} = \frac{1}{k^2_4 + |\bm k|^2 + m^2}
+$$
+This change to euclidean space time can be thought of as a rotation from the real axis to the imaginary axis and is called Wicks rotation. There are some situtaitons where we can't do this rotation but we are interested in times when we can.\\\\
+\subsubsection{Feynmann Rules}
+In the free case:
+$$
+S_0(\phi, J) = \int d^4x( \frac{1}{2} \partial_{\mu} \phi \partial^{\mu} \phi + \frac{1}{2} m^2 \phi^2 - J(x) \phi(x)
+$$
+Fourier transform $\phi(x) = \int \frac{d^4 k}{(2\pi)^4} e^{ik\cdot x} \tilde \phi(k)$
+$$
+S_0[\tilde \phi, \tilde J] = \frac{1}{2} \int \frac{d^4k}{(2\pi)^4} \left( \tilde \phi(-k) (k^2 +m^2) \tilde \phi(k) - \tilde J(-k) \tilde \phi(k) - \tilde J(k) \tilde \phi(-k) \right)
+$$
+$$
+S_0[\tilde \phi, \tilde J] = \frac{1}{2} \int \frac{d^4k}{(2\pi)^4} \left( \tilde \chi(-k) (k^2 + m^2) \chi(x) - \frac{\tilde J(-k) \tilde J(k)}{k^2 +m^2} \right)
+$$
+where $\tilde \chi = \tilde \phi - \frac{\tilde J}{k^2 + m^2}$ so:
+$$
+Z_0[J] = Z_0[0] \exp ( \frac{1}{2} \int \frac{d^4 k}{(2\pi)^4} \frac{\tilde J(-k) \tilde J(k)}{k^2 +m^2}
+$$
+We can ignore the premultiplier constant.\\
+The free propogator is:
+$$
+\tilde \Delta_0(q) = \frac{\delta^2 Z_0 [\tilde J]}{ \delta \tilde J(-qq) \delta \tilde J(q)} = \frac{1}{q^2 +m^2}
+$$
+Functional derivatives:
+$$
+\frac{\delta}{\delta f(x_1)} f(x_2) = \delta^{(4)}(x_1-x_2)
+$$
+$$
+\frac{\delta}{\delta \tilde f(k_1)} \tilde f(k_2) = (2\pi)^4 \delta^{(4)}(k_1-k_2)
+$$
+Now lets fourier transform back:
+$$
+\Delta_0 (x-x') = \int \frac{d^4 k}{(2\pi)^4} \frac{e^{ik \cdot (x-x')}}{k^2 + m^2}
+$$
+So we can write the partition funciton as:
+$$
+Z_c[J] = \exp \left( \frac{1}{2} \int d^4 x d^4 x' J(x) \Delta(x-x') J(x')\right)
+$$
+Interactions come about as before:
+$$
+\mathfrak{L} = \mathfrak{L}_0 + \mathfrak{L}_I
+$$
+As in $D=0$
+$$
+Z[J] = \int \mathfrak{D} \phi \exp( - \int d^4 x (\mathfrak{L}_0 + \mathfrak{L}_I - J \phi)) = \exp ( - \int d^4 y \mathfrak{L}_1 ( \frac{\delta}{\delta J(y)}) )  \exp \left( \frac{1}{2} \int d^4 x d^4 x' J(x) \Delta(x-x') J(x')\right)
+$$
+$$
+Z[J] \sim \sum_{v=0}^N \frac{1}{v!} \left( - \int d^4 y \mathfrak{L}_1 ( \frac{\delta}{\delta J(y)})\right)^v \sum_{p=0} \frac{1}{p!}  \left( \frac{1}{2} \int d^4 x d^4 x' J(x) \Delta(x-x') J(x')\right)^p
+$$
+For each term in $Z[J]$ there is a graph made up of a Propogator $\Delta_0(x-x')$ and verticles with $n$ lines from $\phi^n > \mathfrak{L}_I$ and at each vertex we add $- \mathfrak{L}_I (\frac{\delta}{\delta J(y)})$. Then we integrate over internal positions and apply symmetry factors.
+\section{Examples Class 1}
+In general in order to find the $n$-th order perturbative expression for the partition function add a source term and then remove the derivatives and then set the source to zero. Ocassionally you don't need the source tterm and can compute it exactly.\\\\
+Pay attention to the notation sometiems $Z_J(\lambda)$ so $Z_0(0)$ means $Z_{J=0}(\lambda = 0)$ where $\lambda$ is the coupling constant and $J$ is the invented source term. but sometimes $Z_{\lambda}(J)$. Nice way of thinking about which terms survive from expansion is that you need terms with the same number of $\frac{\partial}{\partial J}$ and $J$.\\\\
+A nice way of writing effective actions are:
+$$
+< \phi_a \phi_b > = \hbar^2 e^{W/\hbar} \frac{\partial}{\partial J_a} \frac{\partial}{\partial J_b} e^{-W/ \hbar} = - \hbar \frac{\partial^2 W}{\partial J_a \partial J_b} + \frac{\partial W}{\partial J_a} \frac{\partial W}{\partial J_b} = < \phi_a \phi_b>^{conn} + < \phi_a>^{conn} < \phi_b>^{conn}
+$$
+as $Z(J) = e^{-W/\hbar}$
+$$
+\frac{\partial}{\partial \phi_d} ( \frac{\partial^2 \Gamma}{\partial \phi_b \partial \phi_c})^{-1} = (\frac{\partial^2 \Gamma}{\partial \phi_b \partial \phi_e})^{-1}  \frac{\partial^3 \Gamma}{\partial \phi_d \partial \phi_e \partial \phi_f}( \frac{\partial^2 \Gamma}{\partial \phi_d \partial \phi_c})^{-1} 
+
+$$
+The reason for the action of grassmann variables always being antisymmetric prefactors is that the symmetric part of the matrix will cancel so can be ignored.\\\\
+If say the vertex term is $-\lambda \epsilon_{abcd}$ what this means for the diagram is that if we switch the order of two half edges then the sign needs to change. He is going to check exactly how this works and get back to us.
+\section{Lecture 9}
+\end{document}
