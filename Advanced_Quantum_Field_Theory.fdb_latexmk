@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1644340952 "Advanced_Quantum_Field_Theory.tex" "Advanced_Quantum_Field_Theory.pdf" "Advanced_Quantum_Field_Theory" 1644340952
-  "Advanced_Quantum_Field_Theory.aux" 1644340507 2783 755cf5f2de63b17c5ca2edca380dd693 "pdflatex"
-  "Advanced_Quantum_Field_Theory.tex" 1644340950 41865 b9c281b1c590c9de9b9b016b2f63fce0 ""
+["pdflatex"] 1644926445 "Advanced_Quantum_Field_Theory.tex" "Advanced_Quantum_Field_Theory.pdf" "Advanced_Quantum_Field_Theory" 1644926464
+  "Advanced_Quantum_Field_Theory.aux" 1644926448 3836 8a0fb53692f21bca5c1a677f318d6689 "pdflatex"
+  "Advanced_Quantum_Field_Theory.tex" 1644926443 58138 e63e64cb1d45ca1cd8fc7fe69e9ed94f ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630409836 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630409836 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -59,6 +59,8 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1630409836 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb" 1630409836 39386 0d30f65251ad09eae5335149fa8e6f76 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1630409836 21098 d4aee7c0aac232caac5688b586b9363c ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb" 1630409836 21251 56705123063d7b34002d6b6e7142345e ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1630409837 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1630409837 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb" 1630409837 35457 884c5a936fbb3fae6a4c18058662d654 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1630409837 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
@@ -84,6 +86,6 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1630422739 2797772 235209822cc2568e25123ecf25b284e7 ""
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "Advanced_Quantum_Field_Theory.pdf"
-  "Advanced_Quantum_Field_Theory.log"
   "Advanced_Quantum_Field_Theory.aux"
+  "Advanced_Quantum_Field_Theory.log"
+  "Advanced_Quantum_Field_Theory.pdf"

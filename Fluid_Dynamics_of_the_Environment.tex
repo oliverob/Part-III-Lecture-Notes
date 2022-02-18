@@ -544,8 +544,130 @@ $$
 with $\Gamma = \frac{\nu k_0^3 L}{(\gamma^3 - 1) N \sin \theta}$.
 \section{Examples Class 1}
 Does $\nabla \cdot \bm u = 0$ always hold?
-\section{Example sheet 1}
 $$
 \frac{\partial u}{\partial t} = - \frac{1}{\rho_0} \frac{\partial p'}{\partial x}
 $$
+\section{Lecture 8}
+\subsection{Non-linear stratification}
+If we have a stratification that changes slowly compared to the wavelength, then we can treat the bouyancy frequency as being almost constant using the WKB approximation were we keep $N$ constant locally and vary it along a ray:
+$$
+\frac{\omega}{N}= \cos \theta \rightarrow \frac{\omega}{N(z)} = \cos \theta(z)
+$$
+For example if:
+$$
+N(z) = N_0 e^{-\frac{z}{H}}, \cos \theta(z) = \frac{\omega}{N_0} e^{z/H}
+$$
+If we take some rays form a source at $z=0$ wtih $x= X(z)$ then:
+$$
+X(z) = \int_0^z \frac{dX}{dz} dz = \int^z_0 \tan \theta dz
+$$
+use substitution $\cos \theta = \frac{\omega}{N_0} e^{z/H}$ to get
+$$
+X(z) = H( \theta - \theta \tan \theta - (\theta_0 - \tan \theta_0)) = H ( \cos^{-1} ( e^{z/H} \cos \theta_0) - \frac{\sqrt{1 - e^{2 z/H} \cos^2 \theta}}{e^{z/H} \cos \theta_0})
+$$
+\subsection{Lee waves}
+\subsubsection{Extended range of hills}
+Imagine we have a sinsuodial topography with a wavelength of $\lambda_T$ and amplitude $\eta_0$ and we have a uniform wind of speed $U$ moving past.\\\\
+First we change the frame of reference so the fluid is stationary, which effectively means the mountain range is moving the opposite direction with speed $U$. We know $\omega = k_T U = N \cos \theta \leq 1$ then we have waves. If $\frac{k_T U }{N} >1$ then we have no internal waves just forced oscillations with exponentially decaying distubrances. For $\frac{k_T U}{N} \leq 1$ we will have internal waves.\\\\
+Firstly, if these hills are making the waves then the vertical component of the waves must be upwards so $c_{gz} > 0$. A point of constant phase on a hill that moves to the left with speed $-U$ so the phase velocity will also be moving to the left so $c_{px} <0$. We also know that $\bm c_g \cdot \bm c_p = 0$. So we can combine these two facts to tell us which quadrant the group velocity must be in. So the phase velocity will point down to the left and and the group velocity will point up to the left. \\\\
+Now consider how this works with the frame with mountains at rest. It will look the same. We will still have lines of constant phase coming from the mountains but now the directions of the velocity will change. The change of direction of speed will change the direction of the horizontal component of the velocities. As the lines of constant phase do not move the phase velocity must be parallel to the line of constant phase, therefore the group velocity must be perpendicular to the lines of constant phase. we have transformed the velocities by adding $U$ like:
+$$
+\bm c_p = \bm c_p' - \bm U, \bm c_g = \bm c_g - \bm U
+$$
+\subsection{Kelvin ship waves}
+$$
+\phi = \bm k \cdot \bm x - \omega t
+$$
+$$
+d \phi = \frac{\partial \phi}{\partial k_i} dk_i + \frac{\partial \phi}{\partial x_i} dx_i + \frac{\partial \phi}{\partial \omega} d\omega + \frac{\partial \phi}{\partial t} dt
+$$
+Principle of stationary phase: $d\phi = 0, d\bm k =0, \omega = \omega(\bm k) \implies d \omega = 0$
+$$
+\frac{\partial \phi}{\partial t} + (\bm u \cdot \nabla) \phi = 0
+$$
+If $\bm u = \bm U$ then $\frac{\partial \phi}{\partial t} + ( \bm U \cdot \nabla ) \phi$\\
+Kelvin ship waves: surface waves $\bm U = (U,0,0)$
+$$
+- \omega + U \frac{\partial \phi}{\partial x} = 0 = - \omega + k U = 0
+$$
+We need $\omega = k U$ for stationary phase:\\
+Deep water waves $\omega^2 = |\bm k| g$ $\bm k = (k,l,0)$ and we also have $|\bm c_g| = \frac{1}{2} |\bm c_p| = \frac{1}{2} \frac{\omega}{|\bm k|}$ but $\omega = k W = U |\bm k | \cos \theta = \frac{1}{2} U \cos \theta$\\\\
+Therefore for a ship moving on the surface of the water we get a angle of $\tan \alpha = \frac{\cos \theta \sin \theta}{2 - \cos^2 \theta}$ between the point the wave has propogated from and the ship for waves transmitted with angle $\theta$.
+\section{Lecture 9}
+This is calculated by knowing that the group velocity is $\frac{1}{2} U \cos \theta$ so the waves make a circle of radius $\frac{1}{2} U \cos \theta$ with its centre $UT$ behind the ship. We have a whole lot of these circles for waves produced at different times and we want to figure out the envolope that contains them all so we want to look for the maximium angle by differentiaing this value to get $\theta_{max} = \frac{1}{2} \cos^{-1} \frac{1}{3}$. \\\\
+Something very similar happens in the case of internal waves
+\subsection{Stationary phase for internal waves}
+Imagine you stand on top of an isolated mountain with wind going past at speed $U$. As before:
+$$
+(\frac{\partial}{\partial t} + U \frac{\partial}{\partial x}) \phi = 0
+$$
+$$
+\omega = k U
+$$
+This time $\omega = N \cos \theta = N\frac{k}{|\bm k|}$ in 2D so we have
+$$
+|\bm k| = \frac{N}{U}
+$$
+for the phase to be stationary. We can also remember that we have 
+$$
+|\bm c_g| = \frac{N}{|\bm k|} \sin \theta, |\bm c_p| = \frac{N}{|\bm k|} \cos \theta
+$$
+Won't be an exam question on 3D stationary waves.
+\subsection{Shear Flows}
+\subsubsection{Sheared base state}
+$$
+\bm u = U \hat{\bm x} + \bm u'
+$$
+Linearise about $U\hat{\bm x}$:
+$$
+\frac{\partial b}{\partial t} + U \frac{\partial b}{\partial x}  = - w' N^2
+$$
+$$
+\frac{\partial u'}{\partial t} + U \frac{\partial u'}{\partial x} + \frac{dU}{dz} w' = - \frac{1}{\rho_0} \frac{\partial p'}{\partial x}
+$$
+$$
+\nabla \cdot \bm u'=0
+$$
+Combining all this gives:
+$$
+\left( ( \frac{\partial}{\partial t} + U \frac{\partial}{\partial x}) ( \frac{\partial^2}{\partial x^2} \frac{\partial ^2}{\partial z^2}) + N^2 \frac{\partial^2}{\partial x^2} - U'' ( \frac{\partial}{\partial t} + U \frac{\partial}{\partial x}) \frac{\partial }{\partial x} \right) w' = 0
+$$
+In the limit $U = 0$:
+$$
+( \frac{\partial^2}{\partial t^2} \nabla^2 + N^2 \nabla_H^2 ) w' = 0
+$$
+as before. \\
+If we choose a frame where the flow is steady with $\frac{\partial}{\partial t} = 0$ then
+$$
+(\frac{\partial^2}{\partial x^2} \nabla^2 + ( \frac{N^2}{U^2} - \frac{U''}{U}) \frac{\partial ^2}{\partial x^2} ) w' = 0
+$$
+Provided $w'$ is bounded at infinity:
+$$
+(\nabla^2 + \frac{N^2}{U^2} - \frac{U''}{U}) w' = 0
+$$
+Consider the case:
+$$
+w' = \tilde w e^{i(kx + mz)}
+$$
+Consider easier case with no curvature $U'' = 0$ then
+$$
+( - (k^2 + m^2) + \frac{N^2}{U^2}) w' = 0
+$$
+For non-trivial solution $|\bm k| = \frac{N}{U}$ \\\\
+Let's return to ray tracing to show how we can use this. In the simple case we have already looked at with a single mountain with a constant speed wind. We know that this gives quarter circles enclosed in semicircular casuality envolopes. Lets consider a steady state so when the wind has been blowing forever. The phase velocity is along the lines of constant phase which is necessary for them to be stationary as then you cannot see the phase move.\\\\
+If we want to know how the position of one of these rays is moving with time we need to consider
+$$
+\frac{dZ}{dx} = \frac{c'_{gz}}{c'_{gx}} = \frac{c_{gz}}{c_{gx} + U} = \frac{m}{k}
+$$
+and as $|\bm k|^2 = k^2 + m^2 = \frac{N^2}{U^2}$.\\
+We take the assumption that $k$ is preserved as we move alon a ray. However, if $U \neq $constant or $N \neq $const then we must have $m \neq$ const. Therefore, the orientation of $\bm k$ changes and $|\bm k|$ changes:
+$$
+m^2 = \frac{N^2}{U^2} - k^2
+$$
+Need to take negative square root as the phase velocity is perpendicular to the group velocity which has positive vertical motion. So
+$$
+\frac{dZ}{dx} = \frac{m}{k} = \frac{ ( \frac{N^2}{U^2} - k^2)^{\frac{1}{2}}}{|\bm k|} =  ( (\frac{N}{k U})^2 - 1)^{\frac{1}{2}}
+$$
+as $k$ is also negative.\\\\
+If $\frac{N}{kU} = 1$ then the ray stops propogating vertically upwards and so cannot propogate through height at which $\frac{N}{k U} =1$. Consider $N= $ const and $U$ increases with height. Clearly at the level of the mountain we produce waves as we can always find some $k$ that works as $\frac{N}{k U}> 0$. So waves will always be produced for an isolated mountain. So the rays will slowly bend round until at a certain height they are horizontal. 
 \end{document}

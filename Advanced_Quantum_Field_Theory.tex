@@ -613,4 +613,367 @@ $$
 The reason for the action of grassmann variables always being antisymmetric prefactors is that the symmetric part of the matrix will cancel so can be ignored.\\\\
 If say the vertex term is $-\lambda \epsilon_{abcd}$ what this means for the diagram is that if we switch the order of two half edges then the sign needs to change. He is going to check exactly how this works and get back to us.
 \section{Lecture 9}
+Let's begin by looking at some examples, starting with the 1-loop function.
+$$
+< \phi(x_2) \phi(x_1)> = - (\frac{\delta}{\delta J(x_2)} \frac{\delta}{\delta J(x_1)} W[J]
+$$
+where $W[J] = - \log Z[J]$. Take $\mathcal{L}_1 = \frac{\lambda}{3!} \phi^3$:
+$$
+< \phi(x_2) \phi(x_1) > = x_2 - x_1 + x_2-y_2oy_1-x_1 + ...
+$$
+Let's consider the first one loop diagram $D$ here in more detail.\\\\
+$$
+D = \frac{(- \lambda)^2}{2}\int d^{4}y_1 \int d^4 y_2 \Delta_0(x_2-y_2) \Delta_0(y_1- x_1) (\Delta_0( y_2-y_1))^2
+$$
+Now take fourier transform
+$$
+< \tilde \phi(p_2) \tild \phi (p_1) > = \int d^4 x_1 \int d^4 x_2 e^{-i(p_1 x_1 + p_2 x_2)}< \phi(x_2) \phi (x_1)> = -^{p_1} O -^{p_2}
+$$
+Focus on $\tilde D$:
+$$
+\tilde D = \frac{\lambda^2}{2} \int d^4 x_1 d^4 x_2 e^{-i(p_1 x_1 + p_2 x_2)} \int d^4 y_1 \int d^4 y_2 \int (\prod_{j=1}^4 \frac{d^4 k_j}{(2\pi)^4}) e^{ik_2(x_2-y_1)} e^{ik_1(y_1 - x_2)} e^{i(k_3 + k_4) - (y_2 - y_1)} \tilde \Delta_0(k_1) \tilde \Delta_0(k_2) \tilde \Delta_0(k_3) \tilde \Delta_0(k_4)
+$$
+The integrals over $x_1$ and $x_2$ give: $(2\pi)^4 \delta^{(4)} (p_1 + k_1)$ and $(2\pi)^4 \delta^{(4)} (p_2 - k_2)$
+$$
+\tilde D \int d^4 y_1 \int d^4 y_2 \int \frac{d^4 k_3 d^4 k_4}{(2\pi)^8} e^{-i(p_1 + k_3 + k_4) - y_1 } e^{-i( p_2 - k_3 - k_4) y_2} \tilde \Delta_0(-p_1) \tilde \Delta_0(p_2) \tilde \Delta_0(k_3) \tilde \Delta_0(k_4)
+$$
+$$
+\tilde D \int \frac{d^4 k}{(2\pi)^4} (2 \pi)^4 \delta^{(4)}(p_1 + p_2) \tilde \Delta_0(-p_1) \Delta_0(p_2) \tilde \Delta_0 ( -(k-p_2)) \tilde \Delta_0 (k)
+$$
+So the loop has momentum $p$ coming in and coming out and then we have loop momentum $k$ with one side of the loop having $k-p$ momentum and the other having $k$. \\\\
+Another example in $\frac{\lambda}{3!} \phi^3$:
+$$
+< \phi(x_1) \phi(x_2) \phi(x_3) \phi(x_4)>^{conn} = \frac{\partial^4 W}{\partial J(x_1) \partial J(x_2) \partial J(x_3) \partial J(x_4)}|_{J=0}
+$$
+This can be represented by three diagrams in the typed up lecture notes.\\\\\\\
+Using the LSZ in Euclidean spacetime to consider 2-2 scattering:
+$$
+\bra{f}\ket{i} = \int d^4 x_1 d^4 x_2 d^4 x_3 d^4 x_4 e^{ik_1 x_1} e^{ik_2 x_2} e^{-ik_3 x_3} e^{-ik_4 x_4} (- \partial_1^2 + m^2)...(-\partial_4^2 + m^2) < \phi(x_1) \phi(x_2 \phi(x_3) \phi(x_4) >^{conn}
+$$
+Klein-Gordon $(- \partial_i^2 + m^2) \Delta_0 ( x_i -y) = \delta^{(4)}(x_i - y)$\\
+Integrals over $x_i$'s collapse:
+$$
+\bra{f} \ket{i} = \lambda^2 \int d^4 y \int d^4 z \int \frac{d^4 q}{(2pi)^4} \frac{e^{iq (y-z)}}{q^2 + m^2} ( e^{ik_y y}e^{ik_2y} e^{-ik_3 z} e^{-ik_4z} +...)
+$$
+Could intergate $y$ and $z$ to get delta functions and in this case there are no loops so there shouldn't be any loops left over so we are left with the following:
+$$
+\bra{f} \ket{i} \lambad^2 (2 \pi)^4 \delta^{(4)} (k_1 + k_2 - k_3 - k_4) ( \frac{1}{(k_1 + k_2)(^2 + m^2} + \frac{1}{(k_1-k_3)^2 + m^2} + \frac{1}{(k_1 + k_4)^2 + m^2})
+$$
+\subsubsection{Momentum space Feynmann rules}
+\begin{itemlist}
+\item Draw external lines for each incoming/outgoing particle\\
+\item Leave one end of external line free other connected to a vector from $\mathfrak{L}_I$. Invlude internal lines to do this. Include topologically distinct diagrams\\
+\item Incoming lines means you draw the momentum cominginto the vertex, whereas outocmming lines have momentum away from the vertex\\
+\item Conserve momentum at each vertex\\
+\item External lines get a factor of $1$\\
+\item Internal lines get propogation of $\frac{1}{q^2 + m^2}$\\
+\item For each vertex add the interaction coupling term $- \lambda_i$ for $\mathfrak{L}_I = \frac{\lambda_n}{n!} \phi^n$\\
+\item A diagram with $L$ loops will have $L$ momenta $l_i$ not fixed by momentum conservation so we integrate over these $\int \frac{d^4 l_i}{(2\pi)^4}$ (these can lead to divergences that we will come to soon.\\
+\item Divide by symmetry factors to account for different ways of arranging internal propogators
+\end{itemlist}
+\section{Lecture 10}
+\subsection{Quantum Effective Action and Vertex Functions}
+Same as before but now we have functionals rather than functions:
+$$
+W[J] = - \log Z[J]
+$$
+$$
+\Gamma[\Phi] = W[J] + \int d^4 x J(x) \Phi(x)
+$$
+The same steps as we have carried out before led us to conclude that 
+$$
+\frac{\delta W[J]}{\delta J(x)} = - \Phi(x), \frac{\delta \Gamma}{\delta \Phi(x)} = J(x)
+
+$$
+Again when we are working with $W$ we think of the soruce $J$ as the independant field, then wen we move to $\Gamma$ we think of $\Phi$ has the independant field. So we have:\\
+$J(x)$ is independant and then correseponds to $\Phi(x)$ mean field by $<\phi(x)>_J$ whereas after the Lagrange transform we get $\Phi(x)$ is independant with a corresponding source $J(x)$ obtained by $<\phi(x)>_J = \Phi(x)$.\\
+In momentum space, consider the sets of amputated 1PI diagrams with $n$ external legswhere $n\geq 2$.\\
+For $n=2$ the summ of all such IP1 diagrams is called the self-energy which will be labelled as:
+$$
+\Pi(k^2) = -_k (1PI) -_k 
+$$
+lorentz invariance and momentum conservation give us that $k^2$ is the parameter.\\
+For $n\geq 3$ these vertex functions are lablled as:
+$$
+V^{(n)} (k_1,...,k_n) = \text{mass of n legs coming into 1PI}
+$$
+Now lets think further in the momentum space field with $\tilde \Phi = \int d^4 x e^{-ik x} \Phi(x)$
+$$
+\Gamma[\tilde \Phi] = \frac{1}{2} \int \frac{d^4 k}{(2 \pi)^4} \tilde \Phi( - k) [ k^2 + m^2 - \Pi(k')]\tilde \Phi(k) - \sum_{n=3} \frac{1}{n!} [\int \hat \prod_{i,j = 1}^n \frac{d^4 k_j}{(2\pi)^j}] (2 \pi)^4 \delta(k_1 + k_2 + ... + k_n) V^{(n)} (k_1,...,k_n) \tilde \Phi(k_1) ... \tilde \Phi(k_n)
+$$
+This minus sign before the higher order terms is because want to think of this vertex as starting out as the classic vertex e.g. if we had $\mathfrak{L}_I = \frac{\lambda}{n!} \phi^n \implies V_0^{(n)} = - \lambda$ (corresponding to tree-level).\\\\
+It is unusal that here the momentum has an impact on the interaction, as up until now we haven't been considering interaction terms with derivates that would bring in momentum dependance.\\
+Note if $v^{(n)}$ has non-trivial momentum dependance then derivatives acting on $\Phi$ in coordinate space. Lets fourier tansform back
+$$
+\Gamma[\Phi] = \int d^4 x \{ U[\Phi(x)] + Q[ \Phi(x)] \partial_{\mu} \Phi \partial^{\mu} \Phi + ... \}
+$$
+The first term here $U$ is often called the effective potential.\\
+\subsubsection{(Quantum) Effective Potential}
+Generalising the earlier derivation we want to define:
+$$
+< \phi(x_1) ... \phi(x_n)>^{conn} = G^{(n)} (x_1,... x_n) = - \prod_{i=1}^n \frac{\delta}{\delta J(x_i)} W[J]|_{J=0}
+$$
+And we have:
+$$
+\Gamma^{(n)} = \prod_{i=1}^n \frac{\delta}{\delta \Phi(x_i)} \Gamma[\Phi]|_{\Phi = \Phi_0}
+$$
+We know that the quadratic parts are inverses of each other but now we need to integrate over :
+$$
+\int d^4 y G^{(2)}(x,y) \Gamma^{(2)} (y,z) = \delta^{(4)}(x-z)
+$$
+\subsection{Renormalisation}
+We will begin by picking a particular aciton and doing our first calculations in quantum higher dimensions. Lets chose the classical action:
+$$
+S[\phi_0] = \int d^4 x ( \frac{1}{2} (\partial \phi_0)^2 + \frac{1}{2} m_0 \phi_0^2 + \frac{\lambda_0}{4!} \phi_0^4)
+$$
+this example is not great as we don't have to change the field but we do have to in the $\phi^3$ theory on the example sheet. Subscripts hint that these "original" or "bare" fields and parameters will need to be "renomarlised".\\
+Consider quantum effects at 1-loop level. Take the 2-point function $$\tilde G^{(2)} (p) =  -0- = - + -1PI- + -1PI-1PI- + ... = \frac{1}{p^2 + m_0^2} + \frac{1}{p^2 + m_0^2} \Pi( p^2) \frac{1}{p^2 + m_0^2} + ... $$
+$$
+\tilde G^{(2)}(p) = \frac{1}{p^2+m_0^2 - \Pi(p^2)}
+$$
+So
+$$
+\tilde \Gamma^{(2)} (p) = [\tilde G^{(2)}(p)]^{-1} = p^2 + m_0^2 - \Pi(p^2)
+$$
+Now we need to calculate the $\Pi(p^2)$ function.\\
+In $\phi^4$ theory we can calculate the one-loop contribution. In this theory there is only one diagram:
+$$
+\Pi_1(p^2) = -_p^o-_p
+$$
+we have developed the feynmann rules so this gives:
+$$
+\Pi_1(p^2) = - \frac{\lambda_0}{2} \int \frac{d^4k}{(2\pi)^4} \frac{1}{k^2 + m_0^2}
+$$
+This will diverge for large $k$ which we can show by introducing a cut off $|k| < \Lambda$. As the integrand only depends on the magnitude of $k$ so
+$$
+\Pi_1(p^2) = - \frac{\lambda_0}{2} \int^{\Lambda}_0 \frac{dk}{(2\pi)^4} k^3 dk d\Omega_3 \frac{1}{k^2 + m_0^2} = - \frac{\lambda_0 S_3}{2(2\pi)^4} \int^{\Lamdba}_0 \frac{k^3}{k^2_m_0^2} dk, S_3 = 2 \pi^2
+$$
+So let $n = \frac{k^2}{m_0^2}$
+$$
+\Pi_1 (p^2) = - \frac{\lambda_0}{32 \pi^2} (\Lambda^2 - m_0^2 \log ( 1 + \frac{\Lambda^2}{m_0^2}))
+$$
+This diverges quadaracticall as $\Lambda$ goes to infinity. \\\\
+Now lets look at the four point function $f^n$ at 1-loop:
+$$
+V_0^{(n)} = - \lambda_0
+$$
+$$
+V_1^{(n)} (p_1,p_2,p_3,p_4) =  >o< + =o= + 
+$$
+basically you need three different diagrams to allow for every combination of the external lines meeting so first is 1-2, 3-4 then 1-3, 2-4 and the 1-4 2-3 and every diagram has two internal momenta between thsee verteces. Using the feynmann ruels this gives:
+$$
+V_1^{(n)} = \frac{\lambda_0^2}{2} \int^{\Lamdba} \frac{dk^4}{(2\pi)^4} \frac{1}{k^2 + m_0^2} \sum_{p = \{ p_1 + p_2, p_1-p_3, p_1- p_4\}} \frac{1}{(p+k)^2 + m_0^2} 
+$$
+This is a mess to integrate as you have external momentum dependance. However, there is really just one source of diverengence, as $k$ gets large whatever these external momentum are they will be fixed so we only really have the one divergence which is important as we only have one parameter with which to fix the divergence. Now lets examine this divergence.\\
+As $k \rightarrow \infty$, the external momenta become negligible. Examine
+$$
+V_1^{(4)} (0,0,0,0) = \frac{3 \lambda_0^2}{2} \int^{\Lambda} \frac{d^4k}{(2\pi)^4} \frac{1}{(k^2 + m_0^2)^2} = \frac{3}{\lambda_0^2}{32\pi^2} ( \log ( 1+ \frac{\Lambda^2}{m_0^2}) - \frac{\Lambda^2}{\Lambda^2+ m_0^2})
+$$
+so we have a logarithmic divergence.
+\section{Lecture 11}
+First we will find a shortcut for figuring out if a loop integral will diverge.\\\\
+More generally in $d$ dimensions we can write down the form of the integrals we were writing before (without factors of $2\pi$ as he was being schematic?)
+$$
+(\int^{\Lambda} d^d k)^l ( \frac{1}{k^2 + \Delta})^I
+$$
+$\Delta$ may contain external parameters such as mass and external momenta. For the purposes of investigating a large $k$ we can drop the $\Delta$s are they are fixed.
+$$
+\int^{\Lambda} \frac{(d^d k)^l}{k^{2I}}
+$$
+The "superficial degree of divergence is $D= dL - 2I$. If $D>0$ then the integral diverges like $\sim \Lambda^D$. If $D=0$ then it diverges but logarithmically $\sim \log \Lambda$. If $D<0$ then it is possibly finite but we cannot guarantee that. In this course we are only looking at one loop diagrams so if $D<0$ then they will be finite.
+\subsubsection{Lohmann-Kollen propogator}
+$$
+\tilde G^{(2)}(p) = \int d^4 x d^4 y e^{-ip(x-y)} < \phi_0 (x) \phi_0 (y)> = \sum_n \frac{|\bra{\Omega} \phi_0(0) \ket{x} |^2}{p^2 + m_n^2}
+$$
+with $\ket{\Omega}$ is the vaccum state of the full theory, and $\ket{n}$ eigenstate of Hamiltonian with rest mass $m_n$. Look at Peskin and Schorder. \\\\
+Focus on lowest energy, single particle excitation\\
+$$\tilde G^{(2)}(p) \im \frac{|\bra{\Omega} \phi_0(0) \ket{1} |^2}{p^2 + m^2_{phys}} + [\text{finte at } p^2 = - m^2_{phys}$$
+So basically saying there is a pole at $p^2 = - m^2_{phys}$ with residue given above.\\\\
+Last time we found for $\phi^4$ theory that:
+$$
+\tilde G^{(2)}(p) = \frac{1}{p^2 - m_0^2 - \Pi(p^2)}
+$$
+with $\Pi(p^2) = - \frac{\lambda_0}{32 \pi^2} ( \Lambda^2 - m_0^2 \log ( 1 + \frac{\Lambda}{m_0^2}))$
+This is constant in $p^2$ but in general is it not. e.g. in $\phi^3$ theory the free energy depends on the momenta.\\\\
+To deal with divergences we do the following:\\
+We have the original Lagrangian: $\mathfrak{L}_0 = \frac{1}{2} (\partial \phi_0)^2 + \frac{1}{2} m_0^2 \phi_0^2 + \frac{\lambda_0}{4!} \phi_0^4$\\
+Rescale $\phi_0 = Z_{\phi}^{\frac{1}{2}} \phi$ where $Z_p^{\frac{1}{2}}$ determined s.t. $\tilde G^{(2)} (p)$ has unit residue at pole.\\
+Separate out 2 sets of terms, write $\mathfrak{L}_0$ as follows:
+$$
+\mathfrak{L}_0 = \mathfrak{L_{rln}} + \mathfrak{L_{ct}} = ( \frac{1}{2} (\partial phi)^2 + \frac{1}{2} m^2 \phi^2 + \frac{\lambda}{4!} \phi^4) _ ( \frac{\delta Z_{\phi}}{2} (\partial \phi)^2 + \frac{\delta m^2}{2} \phi^2 + \frac{\delta \lambda}{4!} \phi^4)
+$$
+equate coefficents to get: $\delta Z_{\phi} = Z_{\phi} - 1$ and $\delta m^2 = Z_{\phi} m_0^2 - m^2$ and $\delta \lambda = Z_{\phi}^2 \lambda_0 - \lambda$.\\
+We now use this way of writing the lagrangian in perturbative calcualtions so the Feynmann rules need to be alterated a bit. The rules for $\mathfrak{L}_{rln}$ are the same as for $\mathfrak{L}_0$. Additionally, for $\mathfrak{L}_{ct}$ we have new rules given by two new interaction terms:
+$$
+-\square^{-p^2 \Omega}-, -x^{-\delta m^2}-, X^{-\delta \lamdba}
+$$
+The diagramatics of these aren't imporatnt but it is useful to think of these terms as additional interaction terms at the one loop level. The tree diagrams containing $\mathfrak{L}_{ct}$ vertices are the same order as 1-loop diagrams containing $\mathfrak{L}_{rlm}$ vertices. Lets revisit:
+$$
+\tilde \Gamma_{rlm}^{(2)}(p) = [\tilde G_{rlm}]^{-1} = p^2 + m^2 - \Pi_{rlm}(p^2)
+$$
+From $\mathfrak{L}_{rlm}$, $\hat \Pi_1(p^2)$ is the same equation as for $\Pi_1(p^2)$ with $m_0$,$\lambda_0$, $\phi_0 \rightarrow m, \lambda, \phi$.\\
+From $\mathfrak{L}_{ct}: \Pi_{1,ct} = -x- + -\square -= - \delta m^2 - \delta Z_{\phi} p^2$ these are additoinal diagrams that contribute to the two point function. Result for $\Pi_{rlm}(p^2) = \hat \Pi_1(p^2) + \Pi_{1,ct} (p^2)$. We know there is a divergence in $\hat \Pi(p^2)$ but we can make it finite by chosing specific $\delta m^2$ and $\delta \lambda^2$:
+$$\delta m^2 = - \frac{\lambda}{32 \pi^2}( \Lamdba^2 - m^2 \log ( 1 + \frac{\Lambda^2}{m^2}) + \text{finite}, \delta Z_{\phi} = 0
+$$
+There is freedom in how we chose the finite part which goes by the naem of the "renormaliszation scheme" or "condition". This is a choice. e.g. we are using the "on-shell" scheme by imposing the following conditions:
+$$
+\Pi_{rlm}(- m^2_{phys}) = m^2 - m^2_{phys}
+$$
+Additionally, choose $m^2 - m^2_{phys} = 0$ this sets the renoramlised mass $m = m_{phys}$. The other "on shell" condition we could use is:
+$$
+\frac{\partial \Pi_{rln}}{\partial p^2}|_{p^2 = - m^2_{phys}} = 0
+$$
+These two conditions together give the propogator: 
+$$
+\tilde G^{(2)}(p) = \frac{1}{p^2 + m^2 - \Pi_{rlm}(p^2)} = \frac{1}{p^2 + m^2_{phys}}
+$$
+To finish up we need to look at $\delta \lambda$, now lets look at corrections to the four point correlation function:
+$$
+V^{(4)}_{rln}(0,0,0,0) = - \lambda + \hat V^{(4)}(0,0,0,0) + V_{1,ct}^{(4)}
+$$
+$$
+V_{1,ct}^{(4)} = - \delta \lambda
+$$
+Choosing $\delta \lambda = \frac{3 \lamdba^2}{32 \pi^2} ( \log \frac{\Lambda}{m^2} - 1)$
+gives a finite vertex term as the divergence is cancelled by the second term
+$$
+V_{rln}^{(4)}(0,0,0,0) = - \lambda + \frac{32 \lambda^2}{32 \pi} ( \log ( 1+ \frac{\Lambda^2}{m^2}) + \frac{m^2}{m^2 + \Lambda^2}) = - \lambda_{eff}
+$$
+where $\lambda_{eff}$ is coefficient of $\frac{1}{4!}\Phi^4$  in $\Gamma[\Phi]$. Note we did make a decision about the finite piece which is that $\lambda_{eff} \rightarrow \lambda$ as $\Lamdba \rightarrow \infty$ which is another renormalisation choice or condition that we have decided to impose.
+\subsection{Dimensional regularization}
+This idea of momentum cutoff is fine for a scalar field theory but is no good for guage theory. In the context of perturbation theory we can regulate divergences by moving away from integer dimensions. Here $d= 4 - \epsilon$ for $0<\epsilon <<1. in the case of $\phi^3$ we are often interested in close to $6$ dimensions. Take $S = \int d^4 x ( \frac{1}{2} ( \partial \phi)^2 + \frac{m^2}{2} \phi^2 + \frac{\lambda}{4!} \phi^4)$\\\\
+Dimensional analysis $[.]$ = mass dimension $\hbar = c = 1$. Given $[S] = 0$, $[\partial ] = [m] = -[x] = 1$
+$$
+[m^2 \phi^2] = 2[m] + 2[\phi] = d \implies [\phi] = \frac{d}{2} -1
+$$
+$$
+[\lambda \phi^4] = d \implies [\lambda] = 4 -d = \epsilon
+$$
+This means that away from 4 dimensions the formerly dimensionless coupling $\lamdba$ now has dimensions $\epsilon$. This introduces a new mass scale $\mu$ s.t. $\lambda = \mu^{\epsilon} g(\mu)$ with a new dimensionless coupling $g$.
+\section{Lecture 12}
+We analytically continue things away from 4 dimensions to $d= 4-\epsilons$, so the previously dimensionless coupling gains a dimension $\lambda = \mu^{\epsilon} g(\mu)$ with $g$ dimensionless.\\\\
+Now lets return to the one-loop diagrams that we looked at before. The one-loop self energy becomes:
+$$
+\hat \Pi_1 = - \frac{1}{2} g(\mu) \mu^{\epsilon} \int \frac{d^d k}{(2\pi)^d} \frac{1}{k^2 + m^2}
+$$
+As before we can see that the integrand can be written as:
+$$
+\hat \Pi_1 = - \frac{1}{2} g(\mu) \mu^{\epsilon} \frac{S_{d-1}}{(2 \pi)^d} \int_0^{\infty} \frac{(k^2)^{d/2 - 1}}{2( k^2 + m^2) } dk^2
+$$
+This is done in more general sense in the appendix of the written notes (including Feynmann's trick with Parametrization).\\
+Can show that for $d \in \mathbb{Z}^+$, we have $S_{d-1} = \frac{2 \pi^{d/2}}{\Gamma (d/2)}$. Analaytically continue this to $d \in \mathbb{R}^+$. We will also find the Schwinger trick useful which is two rewrite the denominator:
+$$
+\frac{1}{A^n} = \frac{1}{A^n} \frac{1}{\Gamma(n)} \int_0^{\infty} dx e^{-x} x^{n-1} 
+$$
+Let $s = \frac{x}{A}$ then 
+$$
+\frac{1}{A^n} = \frac{1}{\Gamma(n)} \int^{\infty}_0 ds e^{-As} s^{n-1}
+$$
+So
+$$
+\hat \Pi = - \frac{1}{2} g(\mu) \mu^{\epsilon} \frac{1}{(4\pi)^{d/2} \Gamma(d/2)} \int_0^{\infty} dk^2 (k^2)^{d/2-1} \int_0^{\infty} ds e^{-(k^2+m^2)s}
+$$
+Let $u = sk^2$:
+$$
+\hat \Pi_1 = - \frac{1}{2} g( \mu) \mu^{\epsilon} \frac{1}{(4\pi)^{d/2} \Gamma(d/2)} \int_0^{\infty} ds e^{-m^2 s} s^{-d/2} \int^{\infty}_0 du u^{\frac{d}{2} - 1} e^{-u}
+$$
+We can identify this two terms:
+$$
+\hat \Pi_1 = - \frac{1}{2} g(\mu) \mu^{\epsilon} \frac{1}{(4\pi)^{d/2} \Gamma(d/2)} \Gamma( 1- \frac{d}{2}) m^{d-2} \Gamma(d/2)
+$$
+\textbf{This is definitelly better just recognise Euler Beta fucntions B(s,t) like in notes)}:
+        $$
+        B(s,t) = \int^1_0 du u^{s-1} (1-u)^{t-1} = \frac{\Gamma(s) \Gamma(t)}{\Gamma(s+t)}
+        $$
+        Continying the maths:
+        $$
+        \hat \Pi_1 = - \frac{g(\mu) m^2}{2 (4 \pi)^2} ( \frac{4\pi \mu^2}{ m^2} )^{\epsilon/2}\Gamma( \frac{\epsilon}{2} - 1)
+        $$
+        We want to consider $\epsilon \rightarrow 0$. so need to expand about small $\epsilon$. First term is straight forawrd:
+        $$
+        ( \frac{4\pi \mu^2}{ m^2} )^{\epsilon/2} = 1 + \epsilon/2 \log ( \frac{4\pi \mu^2}{ m^2} ) + O(\epsilon^2)
+        $$
+        Expanding the gamma function needs to be analytically continued to think about what it means for negative arguments using $\alpha \Gamma( \alpha) = \Gamma( \alpha + 1)$. There must be a pole at $\alpha = 0, -1, -2$ as $0 \Gamma(0) =\Gamma(1)$ so near these poles there is a Laurent series with $\Gamma(\alpha) = \frac{1}{\alpha} - \gamma + O(\alpha)$ where $\gamma \approx 0.577216..$ so:
+        $$
+        \Gamma ( \frac{\epsilon}{2} - 1) = - \frac{1}{1- \frac{\epsilon}{2}} \Gamma( \epsilon/2) = - \frac{2}{\epsilon} + \gamma -1  + O(\epsilon)
+        $$
+        therfore:
+        $$
+        \hat \Pi_1 = \frac{g(\mu) m^2}{32 \pi^2} ( \frac{2}{\epsilon} - \gamma +1 + \log ( \frac{4 \pi \mu^2}{m^2}) ) + O(\epsilon)
+        $$
+        We have the same divergence with $\Lambda \rightarrow \infinity$ equivalent to $\frac{1}{\epsilon} = \frac{1}{4 - d}$ pole.
+        Add a counterterm $\frac{1}{2} \delta m^2 \phi^2$.\\\\
+        Choice of scheme (finite term):\\
+        - On-shell such that $m^2 + \delta m^2 = m^2_{phys}$\\
+        - Minimal subtraction (MS) where the counter term just subtracts the divergence and adds no finite term.\\
+        - Modified minimal subtraction scheme ($\bar {MS}$) when you subtract the pole and also any constants that come along from the expansion e.g.
+        $$
+        \delta^2 m = - \frac{g(\mu) m^2}{32 \pi^2} ( \frac{2}{\epsilon} - \gamma + \log ( 4\pi))
+        $$
+        Then in $\bar{MS}$ we have:
+        $$
+        \Pi^{\bar{MS}}_{rln} = \frac{g(\mu) m^2}{32 \pi^2} ( \log \frac{\mu^2}{m^2} -1)
+        $$
+        \\\\
+        Now lets look at the one-loop corrections to the four-point function.
+        $$
+        \hat V^{(4)} (0,0,0,0) = \frac{3 g^2 \mu^{2\epsilon}}{2} \int \frac{d^d k}{(2\pi)^4} \frac{1}{(k^2+m^2)^2} = 3 g^2 \mu^{\epsilon} \frac{1}{(4\pi)^{d/2}} ( \frac{\mu}{m})^{\epsilon} \Gamma( 2- \frac{d}{2}) 
+        $$
+        $$
+        \hat V^{(4)} (0,0,0,0) =  \frac{3 g^2 \mu^{\epsilon}{32 \pi^2} ( \frac{2}{\epsilon} - \gamma + \log ( \frac{4 \pi \mu^2}{m^2}) + O(\epsilon)
+        $$
+        Introduce a counter-term $- \delta g$ which is a four point vertex with $\delta g = \frac{3 g^2}{32 \pi^2} \frac{2}{\epsilon}$ in MS and $\delta g =  \frac{3 g^2}{32 \pi^2}( \frac{2}{\epsilon} + \log ( \frac{4 \pi \mu^2}{m^2}) )$ in $\bar{MS}$.\\\\
+        \textbf{Explore the consequences of the new scale $\mu$}\\\\
+        Old fashioned approach (the next chapter will do the new approach).\\\\
+        Look at $$\mathfrak{L}_0 = \frac{1}{2} (\partial \phi_0)^2 + \frac{1}{2} m_0 \phi_0^2 + \frac{\lambda_0}{4!} \phi_0^4$$
+        and rescale with $\phi_0 = Z_{\phi}^{1/2} \phi$ to get:
+        $$
+        mathfrak{L}_0 = \frac{Z_{\phi}}{2} (\partial \phi_0)^2 + \frac{Z_{\phi}}{2} m_0 \phi_0^2 + \frac{\lambda_0 Z_{\phi}^2}{4!} \phi_0^4 =   \mathfrak{L}_{rln} + \mathfrak{L}_{ct}
+        $$
+        $$
+\mathfrak{L}_{rln} + \mathfrak{L}_{ct} = \frac{(1+ \delta Z_{\phi})}{2} ( \partial \phi)^2 + \frac{m^2 + \delta m^2}{2} \phi^2 + \frac{(g+ \delta g) \mu^{\epsilon}}{4!} \phi^4
+        $$
+        Now we need to equate teh coeeficents between these two to give:
+        $$
+        Z_{\phi} = 1 + \delta Z_{\phi}, m_0^2 = Z^{-1}_{\phi} ( m^2 + \delta m^2), \lambda_0 = Z_{\phi}^{-2} ( g + \delta g) \mu^{\epsilon}
+        $$
+        Recall each loop brings in an additonal $\hbar$. For the vertex funciton we started off with the term:
+        $$
+V_{rln}^{(4)} (0,0,0,0) = \frac{1}{\hbar} ( - \lambda + O(\hbar) - \delta g \sim O(\hbar)}
+        $$
+        Basically as we have been ignoring the $\hbar$s we need to remember that the counterwieght term needs an extra $\hbar$ so it cancels with the loop terms.\\
+        Have $\lambda_0 = Z_{\phi}^{-2} ( g + \delta g) \mu^{\epsilon}$ though in $\phi^4$ $Z_{\phi} = 1$ so ignore it.\\
+        We define $\beta(g) = \frac{d}{d\log \mu} g(\mu) = \mu \frac{d}{d\mu} (g(\mu))$. This is an old fashioned attitude as there was nothing special about $\lambda_0$ (though it definitely doesn't depend on $\mu$ as it was introduced before we introduced $\mu$):
+        $$
+        0 = \frac{d}{d\log u} \lambda = \frac{d}{d \log u} ( ( g+ \delta g) \mu^{\epsilon}) 
+        $$
+        as $\delta g = \frac{3 g^2 \hbar}{16 \pi^2 \epsilon}$:
+        $$
+        0 = \beta(g) ( 1 + \frac{3 g \hbar}{8 \phi^2 \epsilon}) + g ( 1+ \frac{4 g \hbar}{16 \pi^2 \epsilon})
+        $$
+        we find that:
+        $$
+        \beta(g) = ( - \epsilon g - \frac{3 g^2 \hbar}{16 \pi^2} ( 1 + \frac{3 g \hbar}{8 \pi^2 \epsilon})^{-1} = - \epsilon g + frac{3 g^2 \hbar}{8 \pi^2} - \frac{3 g^2 \hbar}{16 \pi^2 + O(\hbar^2}
+        $$
+        There is a $O(\frac{1}{\epsilon}$ here but it is multipled by $O(\hbar^2)$ but that would be canceled by a 2 loop or three loop divergence so we ignore it as it is a higher order in pertrubation theory. so we get
+        $$
+        \beta(g) = - \epsilon g + \frac{3 g^2 \hbar}{16 \pi^2 } \rightarrow \frac{3 g^2 \hbar}{16 \pi^2} = \mu \frac{d g}{d\mu}
+        $$
+        $$
+        \int_{g(\mu)}^{g(\mu')} \frac{dg}{g^2} = \frac{3\hbar}{16 \pi^2} \int_{\mu}^{\mu'} \frac{d\tilde \mu}{\tilde \mu} \implies \frac{1}{g(\mu')} = \frac{1}{g(\mu)} - \frac{3 \hbar}{16 \pi^2} \log \frac{u'}{u}
+        $$
+        so
+        $$
+        g(u') = \frac{g(\mu)}{1- \frac{3 g \hbar}{16 \pi^2} \log \frac{\mu'}{\mu}} \sim g(\mu) ( 1- \frac{3 g(\mu) \hbar}{16 \pi^2} \log \frac{\mu'}{\mu})
+        $$
+        For $\mu'> \mu \implies g(\mu') > g(\mu)$ so the coupling "runs" to larger values as $\mu$ increases. \\\\
+        We see that is maybe possible that the denomiator may vanish so we coul dhave a landau pole. A Landau pole occurs if $\mu' \rightarrow \Lambda_{\phi^4}$ where 
+        $$
+        \frac{3 g \hbar}{16 \pi^2} \log \frac{\Lambda_{\phi^4}}{\mu} = 1
+        $$
+        (at 1-loop order) as $\mu' \rightarrow \Lambda_{\phi^4}$ we have $g(\mu') \rightarrow \infty$. So $\Lambda_{\phi^4}$ can be a referecne scale:
+        $$
+g(\mu) = \frac{16 \pi^2}{3 \hbar^2} \frac{1}{\log(\frac{\Lambda_{\phi^4}}{\mu}
+        $$
+        So now we are comparing our running coupling to our reference scale. So we have gone from talking about dimensionless couplings to having a reference scale or mass scale ("dimensionfull") this is sometimes called a "Dimensional transmutation". This is not useful in theories with couplings that run like this that get weaker at higher energy scales like QED, but it is very important for strongly coupled theories.
 \end{document}

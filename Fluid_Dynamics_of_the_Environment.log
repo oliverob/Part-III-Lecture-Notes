@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  3 FEB 2022 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  9 FEB 2022 14:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -361,20 +361,124 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
-[14] (./Fluid_Dynamics_of_the_Environment.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--517
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 531--534
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Argument of \bm has an extra }.
+<inserted text> 
+                \par 
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./Fluid_Dynamics_of_the_Environment.tex:535: Paragraph ended before \bm was complete.
+<to be read again> 
+                   \par 
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Missing $ inserted.
+<inserted text> 
+                $
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Missing } inserted.
+<inserted text> 
+                }
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Missing } inserted.
+<inserted text> 
+                }
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Too many }'s.
+<recently read> }
+                 
+l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
+                                                   u|^2 \sim e^{- k^3 \nu \z...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Fluid_Dynamics_of_the_Environment.tex:535: Missing $ inserted.
+<inserted text> 
+                $
+l.535 ...in \theta}, \tilde E \sim |\tilde \bm u|^
+                                                  2 \sim e^{- k^3 \nu \zeta ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Fluid_Dynamics_of_the_Environment.tex:544: Missing $ inserted.
+<inserted text> 
+                $
+l.544 with $\Gamma
+                   = \frac{\nu k_0^3 L}{(\gamma^3 - 1) N \sin \theta}$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[16] (./Fluid_Dynamics_of_the_Environment.aux) ) 
 Here is how much of TeX's memory you used:
  1782 strings out of 478599
  23228 string characters out of 5858101
- 326266 words of memory out of 5000000
+ 329266 words of memory out of 5000000
  19668 multiletter control sequences out of 15000+600000
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,7n,66p,1173b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,7n,66p,1436b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Fluid_Dynamics_of_the_Environment.pdf (14 pages, 247217 bytes).
+Output written on Fluid_Dynamics_of_the_Environment.pdf (16 pages, 260881 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

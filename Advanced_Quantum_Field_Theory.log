@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  8 FEB 2022 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  15 FEB 2022 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -698,20 +698,441 @@ l.614 If say the vertex term is $-\lambda
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[19] (./Advanced_Quantum_Field_Theory.aux) ) 
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 623--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--625
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:630: Undefined control sequence.
+l.630 < \tilde \phi(p_2) \tild
+                               \phi (p_1) > = \int d^4 x_1 \int d^4 x_2 e^{-...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (210.35526pt too wide) detected at line 635
+[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 d[]x[]d[]x[]e[] [] d[]y[] [] d[]y[] []\OT1/cmr/m/n/10 ([] [])\OML/cmm/m/it/10 e[]e[]e[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )
+ []
+
+
+Overfull \hbox (48.05136pt too wide) detected at line 639
+[] [] \OML/cmm/m/it/10 d[]y[] [] d[]y[] [] []e[]e[][]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--645
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--650
+
+ []
+
+
+Overfull \hbox (130.68715pt too wide) detected at line 652
+[] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 d[]x[]d[]x[]d[]x[]d[]x[]e[]e[]e[]e[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :::\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 @[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 < ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 >[]
+ []
+
+[20]
+./Advanced_Quantum_Field_Theory.tex:660: Undefined control sequence.
+l.660 \bra{f} \ket{i} \lambad
+                             ^2 (2 \pi)^4 \delta^{(4)} (k_1 + k_2 - k_3 - k_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (32.38647pt too wide) detected at line 661
+[] [][] \OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 ^^N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )([] + [] + [])
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:663: LaTeX Error: Environment itemlist undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.663 \begin{itemlist}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./Advanced_Quantum_Field_Theory.tex:664: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.664 \item D
+             raw external lines for each incoming/outgoing particle\\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:665: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.665 \item L
+             eave one end of external line free other connected to a vector ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:666: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.666 \item I
+             ncoming lines means you draw the momentum cominginto the vertex...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:667: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.667 \item C
+             onserve momentum at each vertex\\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--668
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:668: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.668 \item E
+             xternal lines get a factor of $1$\\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--669
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:669: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.669 \item I
+             nternal lines get propogation of $\frac{1}{q^2 + m^2}$\\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:670: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.670 \item F
+             or each vertex add the interaction coupling term $- \lambda_i$ ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--671
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:671: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.671 \item A
+              diagram with $L$ loops will have $L$ momenta $l_i$ not fixed b...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+
+ []
+
+
+./Advanced_Quantum_Field_Theory.tex:672: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.672 \item D
+             ivide by symmetry factors to account for different ways of arra...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Advanced_Quantum_Field_Theory.tex:673: LaTeX Error: \begin{document} ended by \end{itemlist}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.673 \end{itemlist}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Advanced_Quantum_Field_Theory.tex:686: Missing $ inserted.
+<inserted text> 
+                $
+l.686 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:686: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.686 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[21]
+./Advanced_Quantum_Field_Theory.tex:688: Display math should end with $$.
+<to be read again> 
+                   W
+l.688 Again when we are working with $W
+                                       $ we think of the soruce $J$ as the i...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Advanced_Quantum_Field_Theory.tex:688: Missing $ inserted.
+<inserted text> 
+                $
+l.688 ...endant field, then wen we move to $\Gamma
+                                                  $ we think of $\Phi$ has t...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (182.70132pt too wide) detected at line 703
+\OT1/cmr/m/n/10 ^^@[[]] = [] [] [][](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 ^^E(\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )][](\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ [] []\OT1/cmr/m/n/10 [[] [][][]](2\OML/cmm/m/it/10 ^^Y\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]; :::; k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :::[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--707
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--711
+
+ []
+
+[22]
+Overfull \hbox (40.16682pt too wide) detected at line 730
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 PI \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 PI \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 PI \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 +\OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 = [] + []^^E(\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )[] + \OML/cmm/m/it/10 :::
+ []
+
+./Advanced_Quantum_Field_Theory.tex:749: Undefined control sequence.
+l.749 ...c{\lambda_0 S_3}{2(2\pi)^4} \int^{\Lamdba
+                                                  }_0 \frac{k^3}{k^2_m_0^2} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:749: Double subscript.
+<argument> k^2_m_
+                 0^2
+l.749 ...4} \int^{\Lamdba}_0 \frac{k^3}{k^2_m_0^2}
+                                                   dk, S_3 = 2 \pi^2
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 754--757
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:765: Undefined control sequence.
+l.765 ...n)} = \frac{\lambda_0^2}{2} \int^{\Lamdba
+                                                  } \frac{dk^4}{(2\pi)^4} \f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 774--776
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 787--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 787--790
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:790: Undefined control sequence.
+l.790 $$\tilde G^{(2)}(p) \im
+                              \frac{|\bra{\Omega} \phi_0(0) \ket{1} |^2}{p^2...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--793
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 795--802
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:808: Undefined control sequence.
+l.808 ...}-, -x^{-\delta m^2}-, X^{-\delta \lamdba
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[25]
+./Advanced_Quantum_Field_Theory.tex:816: Undefined control sequence.
+l.816 ...m^2 = - \frac{\lambda}{32 \pi^2}( \Lamdba
+                                                  ^2 - m^2 \log ( 1 + \frac{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:837: Undefined control sequence.
+<argument> 3 \lamdba 
+                     ^2
+l.837 ...ta \lambda = \frac{3 \lamdba^2}{32 \pi^2}
+                                                   ( \log \frac{\Lambda}{m^2...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:842: Undefined control sequence.
+<recently read> \Lamdba 
+                        
+l.842 ...da_{eff} \rightarrow \lambda$ as $\Lamdba
+                                                   \rightarrow \infty$ which...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:844: Missing $ inserted.
+<inserted text> 
+                $
+l.844 ...for $0<\epsilon <<1. in the case of $\phi
+                                                  ^3$ we are often intereste...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
+
+ []
+
+[26]
+./Advanced_Quantum_Field_Theory.tex:852: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.852 ... formerly dimensionless coupling $\lamdba
+                                                  $ now has dimensions $\eps...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[27] (./Advanced_Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
- 1803 strings out of 478599
- 23497 string characters out of 5858101
+ 1805 strings out of 478599
+ 23509 string characters out of 5858101
  326258 words of memory out of 5000000
- 19683 multiletter control sequences out of 15000+600000
+ 19685 multiletter control sequences out of 15000+600000
  417620 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,6n,66p,905b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Advanced_Quantum_Field_Theory.pdf (19 pages, 296597 bytes).
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Advanced_Quantum_Field_Theory.pdf (27 pages, 340356 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 207 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
