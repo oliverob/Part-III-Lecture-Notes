@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  15 FEB 2022 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  18 FEB 2022 12:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1119,7 +1119,133 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[27] (./Advanced_Quantum_Field_Theory.aux) ) 
+./Advanced_Quantum_Field_Theory.tex:854: Undefined control sequence.
+l.854 ...away from 4 dimensions to $d= 4-\epsilons
+                                                  $, so the previously dimen...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
+
+ []
+
+[27]
+./Advanced_Quantum_Field_Theory.tex:904: Undefined control sequence.
+l.904 ...gence with $\Lambda \rightarrow \infinity
+                                                  $ equivalent to $\frac{1}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--910
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 916--919
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:943: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.943         $
+               $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Advanced_Quantum_Field_Theory.tex:943: Missing } inserted.
+<inserted text> 
+                }
+l.943         $
+               $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:943: Missing $ inserted.
+<inserted text> 
+                $
+l.943         $
+               $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Advanced_Quantum_Field_Theory.tex:943: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.943         $
+               $
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Advanced_Quantum_Field_Theory.tex:943: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.943         $
+               $
+Things are pretty mixed up, but I think the worst is over.
+
+./Advanced_Quantum_Field_Theory.tex:943: Missing $ inserted.
+<inserted text> 
+                $
+l.943         $
+               $
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:943: Too many }'s.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.943         $
+               $
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Advanced_Quantum_Field_Theory.tex:944: Missing $ inserted.
+<inserted text> 
+                $
+l.944 ...cally as we have been ignoring the $\hbar
+                                                  $s we need to remember tha...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 968--971
+
+ []
+
+[30] (./Advanced_Quantum_Field_Theory.aux) ) 
 Here is how much of TeX's memory you used:
  1805 strings out of 478599
  23509 string characters out of 5858101
@@ -1129,10 +1255,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  56i,6n,66p,905b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Advanced_Quantum_Field_Theory.pdf (27 pages, 340356 bytes).
+Output written on Advanced_Quantum_Field_Theory.pdf (30 pages, 357128 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

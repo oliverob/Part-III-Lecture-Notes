@@ -761,4 +761,53 @@ Fix $k=3$. Consider a claus $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satsif
                        Each assignment $x \in \{0,1\}^n$ generates the "energy"\\
                        $\bra{x} H_{\phi} \ket{x} = \sum_{j=1}^n \bra{x} H_{C_j} \ket{x}$ this counts the number of unsatisfied clauses under $x$.\\\\
                        We want to find the minimal energy of this hamiltonain which will correspond to the lowest eigenvalue $\lambda_n$ ( the smallest number of unsatsified clauses).
-\end{document}
+                       \section{Lecture 12}
+                       \textbf{The k-local Hamiltonian problem} (LH): Given a classical description of a Hamiltonian of an $n$ qubit Hamiltonian:
+                       $$
+                       H = \sum_{j=1}^m H_j
+                       $$
+                       where each $H_j$ is $k$-local and is positive semi-definite. Also given two parameters $a,b \in [0,m]$ with $b-a \geq \frac{1}{poly(n)}$ with a promise that $\lambda_{min}$- minimal eigenvalue of $H$ is either $\leq a$ or $\geq b$. Decide which is the case.
+                       $\lambda_{min}$ is often called the ground state energy. Determining $\lambda_{min}$ ($\leq a$ or $\geq b$) is tantemount to approximating the ground state energy $\lambda_{min}$ up to an additive error $O(b-a)$. Further studied on ES.\\\\
+                       We would like to prove that $LH$ is $QMA$-complete\\\\
+                       We first need to obtain that $LH$ is in $QMA$: Given the corresponding witness states $\ket{\psi}$ for $x \in L_1$, we can efficently approximate the energy to check if it is $\leq a$ or $\geq b$.\\
+                       Note: LH is a promise problem, which means that $H$ with $\lambda \in (a,b)$ won't satsify the condition.\\
+                       Next step, is we want to show that LH is QMA-hard (any other problem in QMA can be reduced to it)\\\\
+                       Take any $L= (L_1, L_0, L_*)$ in QMA and fix $x \in L_1 \cup L_0$ which will be our $n$ bit string.\\
+                       Plan: Consider a circuit $C_n$ and convert it to Hamiltonian $H$ s.t. $\lambda_{min}$ is small iff $C_n$ has high acceptance probability on some state $\ket{\psi}$. We have $C_n = U_T...U_1$, each $U_i$ is a 1 or 2 qubit gate. We'll take error probability to be $\frac{1}{4T}$. \\
+                       The circuit $C_n$ take $n+s+ p(n)$ qubits as inputs. $n$ qubits encode the classical input $x$. $s$ qubits is the workspace of clean qubits in state $0$. $p(n)$ is a witness state $\ket{\psi}$.\\\\
+                       Given $\ket{\psi}$, define $\ket{\psi_0} = \ket{0}^{\otimes S}\ket{\psi}$, $\ket{\psi_t} = U_t \ket{\psi_{t-1}}$ for $i = 1...T$. \\\\
+                       We will define the following Hamiltonian which has three parts. $$H_{init} = \sum_{i=1}^s \ket{1} \bra{1}_i \otimes \ket{0} \bra{0}_C$$
+                       with $i = 1, ..., s+p(n)$
+                       $$
+                       H_t = \frac{1}{2} [ I \otimes ( \ket{t-1} \bra{t-1}_C + \ket{t}\bra{t}_C) - U_t \otimes \ket{t} \bra{t-1}_C - U_t^{\dagger} \otimes \ket{t-1} \bra{t}_C]
+                       $$
+                       $$
+                       H_{final} = \ket{0} \bra{0} \otimes \ket{T} \bra{T}_C
+                       $$
+                       $$H= H_{init} + \sum_{i=1}^T H_i + H_{final}$$
+                       We should note that $H$ "follows" the state $\ket{\psi}$ and percribes penalties when deviating form $\ket{\psi_0}, \ket{\psi_1},..., \ket{\psi_T}$\\
+                       $H$ also penalizes the zero output in the final measurement\\
+                       $C$-is an extra "clock$ register of $\log (T+1)$ qubits\\
+                       Check locality of $H$ is $k= \log (T+1) + 2 = O(\log (n))$. We will further reduce $k$ to a constant $k = 5$.\\
+                       We need to check that we can distinguish $x\in L_1$ and $x \in L_0$ by looking at $\lambda_{min}$. \\\\
+                       Consider first case when $x \in L_1$ this means that there exists a $p(n)$ qubit witness state $\ket{\psi}$ that makes $C_n$ accept with probability $1- \frac{1}{4T}$. Lets consider another state $\ket{\psi'} = \frac{1}{\sqrt{T+1}} \sum_{t = 0}^T \ket{\psi_t} \ket{t}$ this is a "History state". When we look at this state we want to evaluate the energy.
+                       State $\ket{\psi'}$ gets no contribution to penalty from $H_{int}$ and $H_t$ terms. Since the probability of measuring the (incorrect) outocme is $\frac{1}{4T}$ we have $\lambda_{min} = \bra{\psi'} H \ket{\psi'} = \frac{1}{T+1} \bra{\psi_T} \bra{T} H_{final} \ket{T} \ket{\psi_T} \leq \frac{1}{T+1} \frac{1}{4T} = a$.\\
+                       This will show us completeness.\\\\
+                       Now take $x \in L_0$. We want to show that $\lambda_{min}$ is at least $b=2a$. Consider any witness state $\ket{\psi'}= \sum_{t=0}^T \alpha_t \ket{\phi_t} \ket{t}$ with $\alpha_t \geq 0$ and $\{ \ket{\phi_t}\}$ is normalised. Then evaluate $$\bra{\psi'} H \ket{\psi'} = \frac{1}{2} ( \alpha^2_{t-1} + \alpha_t^2 - \alpha_{t-1} \alpha_t \bra{\phi_t} U_t \ket{\phi_{t-1}} - \alpha_t \alpha_{t-1} \bra{\phi_{t-1}} H \ket{\phi_t})$$
+                       $$
+                       \bra{\psi'} H \ket{\psi'} = \frac{1}{2} || \alpha_t \ket{\phi_t} - \alpha_{t-1} U_t \ket{\phi_{t-1} ||^2
+                       $$
+                       We will be making several simplifying assumptions:\\
+                       1) All $\alpha_t$s are $\frac{1}{\sqrt{T-1}}$\\
+                       2) $\ket{\phi} = \ket{0}^{\otimes s} \ket{\psi}$ for some $p(n)$ qubit state $\ket{\psi}$\\
+                       3) $\ket{\phi_T}$ has accept probability close to 1.\\\\
+                       Using these and the fact that $x \in L_0$, $C_n \ket{\phi_0}$ must have accept probability near 0.\\
+                       From 3 we have $\ket{\phi_T}$ and $C_n \ket{\phi_0}$ must be nearly orthogonal:
+                       $$
+                       1 \leq || \ket{\phi_T} - C_n \ket{\phi_0} || = || sum_{t=1}^T U_T - U_{t-1} \ket{\phi_t} - U_T...U_t\ket{\phi_{t-1}}|| \leq \sum_{t=1}^T || U_T...U_t \ket{\phi_t} - U_T...U_t \ket{\phi_{t-1}}|| = \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||
+                       $$
+                       Using the evaulation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}$:
+                               $$
+                               \bra{\psi'} H \ket{\psi'} = \sum_{t=1}^T \bra{\psi'} H_t \ket{\psi'} = \frac{1}{2} \frac{1}{T+1} \sum_{t=1}^T ||\ket{\phi_t} - U_t \ket{\phi_{t-1}} ||^2 \geq \frac{1}{2T(T+1)} ( \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||^2 ) \geq \frac{1}{2T(T+1)} = b
+                               $$
+                       \end{document}
