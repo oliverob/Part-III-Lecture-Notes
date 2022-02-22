@@ -976,4 +976,144 @@ V_{rln}^{(4)} (0,0,0,0) = \frac{1}{\hbar} ( - \lambda + O(\hbar) - \delta g \sim
         g(\mu) = \frac{16 \pi^2}{3 \hbar^2} \frac{1}{\log(\frac{\Lambda_{\phi^4}}{\mu}}
         $$
         So now we are comparing our running coupling to our reference scale. So we have gone from talking about dimensionless couplings to having a reference scale or mass scale ("dimensionfull") this is sometimes called a "Dimensional transmutation". This is not useful in theories with couplings that run like this that get weaker at higher energy scales like QED, but it is very important for strongly coupled theories.
+        \section{Lecture 13}
+We are now going to recast this technique in terms of the Quantum Effective Action.
+\subsubsection{Renormilisation and Quantum Effective action}
+Recall $\Phi_{orig} = - \frac{\delta W}{\delta J} = < \phi_0>$\\
+After caluculating quantum corrections we want to rescale using $\phi_0 = Z_{\phi}^{\frac{1}{2}} \phi$ so we should have:
+$$
+\Phi_{orig} = Z^{\frac{1}{2}}_{\phi} < \phi> = Z_{\phi}^{\frac{1}{2}} \Phi
+$$
+$$
+\Gamma_0^{(n)} (x_1,..,x_n) = \frac{\delta^{(n)}\Gamma [\Phi_{orig} ]}{\delta \Phi_{orig} (x_1) ...\delta \Phi_{orig} (x_n)} = Z_{\phi}^{-\frac{n}{2}} \frac{\delta^{(n)}\Gamma[\Phi]}{\delta \Phi(x_1) ... \delta \Phi( x_n)} = Z_{\phi}^{- \frac{n}{2}} \Gamma^{(n)}_{ren}(x_1, ..., x_n)
+$$
+$\Gamma_0^{(n)}$ is independant of scale $\mu$ and $\mu \frac{d}{d\mu} \Gamma_0^{(n)} = 0$\\
+Define the "anomalous dimension" of $\phi$ as 
+$$\gamma_{\phi} = \frac{\mu}{2} \frac{d}{d\mu} \log Z_{\phi}$$
+such that
+$$
+\mu \frac{d}{d\mu} Z_{\phi}^{-\frac{n}{2}} = - \frac{n}{2} Z_{\phi}^{-\frac{n}{2}} \mu \frac{d}{d \mu} \log Z_{\phi} = - n \gamma_{\phi} Z_{\phi}^{-\frac{n}{2}}
+$$
+Then
+$$
+0 = ( \mu \frac{\partial}{\partial \mu} + \mu \frac{d m^2}{d \mu} \frac{\partial}{\partial m^2} + \beta(g) \frac{\partial}{\partial g} - n \gamma_{\phi}) \Gamma_{ren}^{(n)} (x_1,..., x_n)
+$$
+Equations of this type are called Callen-Symanzik equations.\\\\
+This is an argument made in position space which is useful as many actions are written in sums of local operators, but as we go into the LSZ expression we are normally  in momentum space.\\\\
+In momentum space, the C-s equation implies a renormalised vertex $f^{\bm n}$ independant of scale:
+$$
+\Gamma[ \tilde \Phi] = \frac{1}{2} \int \frac{d^d k}{(2\pi)^d} Z_{\phi} \tilde \Phi(-k) ( k^2+ m^2 - \Pi(k^2)) \tilde \Phi(k) - \sum_{n \geq 3} \frac{Z_{\phi}^{\frac{n}{2}}}{n!} \int \prod_{j=1}^n ( \frac{d^d k_j}{(2\pi)^d}) (2 \pi)^d \delta^{(d)}(k_1 + ... + k_n) V_{rem}^{(n)}(k_1,..,k_n) \tilde \Phi(k_1)... \tilde \Phi(k_n)
+$$
+In $\phi^4$ theory, found $\Pi_1^{\bar{MS}} = \frac{gm^2}{32 \pi^2} (\log \frac{\mu^2}{m^2} - 1)$. Here we have:
+$$
+\tilde \Gamma^{(2)} (k^2= 0) = [ \tilde G^{(2)} (k^2 = 0) ]^{-1} = m^2 - \Pi_{1}^{\bar{MS}} =  m^2 - \frac{g m^2}{32 \pi^2} ( \log \frac{\mu^2}{m^2} - 1) 
+$$
+taking $Z_{\phi} = 1$  and as $\mu \frac{d}{d\mu} \tilde \Gamma^{(2)} (k^2 = 0) = 0$:
+$$
+\mu \frac{d m^2}{d\mu} = \frac{g m^2}{16 \pi^2} + O(g^2)
+$$
+We need to restore $\hbar$ by doing $\phi = \frac{\hbar \phi}{\sqrt{\hbar}}$ and $g = \hat g \hbar$. This is also covered in the typed notes.\\\\
+$\bar{MS}$ earlier found:
+$$
+V_{ren}^{(4)} (0,0,0,0) = - g \mu^{\epsilon} + \frac{3 g^2 \mu^{\epsilon}{32 \pi^2} \log \frac{\mu}{m^2}
+$$
+So by taking $\mu \frac{d }{d\mu} V_{ren}^{(0)} = 0 \implies \beta(g) = \frac{3 g^2}{16 \pi^2} + O(g^2)$ as before.
+\subsection{Renormalization group}
+The problem that we have been trying to solve is that we were assuming we could intergrate down all the way to $0$. The renormalisation group allows us to do physics at large length scales without knowing what is going on at a small length scale. \\\\$QFT$ is not defined without a regulator. So we have to regulate the theory with a cutoff or some sort of dimensional regulaisation. We also have to impose renormalisation conditions using some external information. A useful theory has a small number of renormalisation conditions. Then you can made predictions. These predictions should be independant of our artificial choices. \\\\
+$RG$ (Renormalisation Group) studies how theories of different microscopic details can give the same long distance physics.\\
+"Universality" is key to this. The long distance physics should remain the same.\\
+Real scalar theory gives a generic action with momentum cutoff $\Lambda_0$  in $d \in \mathbb{Z}^+$ dimensions;
+$$
+S_{\Lambda_0}[p] = \int d^d x (\frac{Z_{\Lambda_0}}{2} (\partial \phi)^2 + \sum_i \frac{ Z_{\Lambda_0}^{\frac{n_i}{2}}}{\Lambda_{0}^{d_i - d}} g_i( \Lambda_0) O_i(x))
+$$
+with $O_i(x)$ are local operators $O_i = ( \partial \phi)^n \phi^{s_i}$ with $n_i + r_i + s_i$ fields and with diemsnions $[O_i] = d_i= r_i [ \partial \phi] + s_i [\phi]$. So $g_i( \Lambda_0)$ are dimensionless and the mass is include $m^2 ( \Lambda_0) = g_i (\Lambda_0) \Lambda_0^2$.
+\subsubsection{Effective actions}
+$$
+Z_{\Lambda_0} (\{ g_i (\Lambda_0)\}) = \int^{\Lambda_0} \mathfrak{D} \phi e^{- S_{\Lambda_0}[\phi]}
+$$
+integrate over fields $\tilde \phi(p)$ with $|p| \leq \Lambda_0$. Split low and igh momentum modes along lines $\Lambda < \Lambda_0$ and integrate out the high ones:
+$$
+\phi(x) = \int_{|p| < \Lambda_0} \frac{d^d p}{(2\pi)^d} e^{i p x} \tilde \phi(p) = \int_{|p| < \Lambda}...  +  \int_{\Lambda < p < \Lambda_0} ...) = \phi^-(x) + \phi^+ (x)
+$$
+These are disjoint with $\mathfrak{D} \phi = \mathfrak{D} \phi^+ \mathfrak{D} \phi^-$\\
+Integrate over $\phi^+$ to get an effective action (instead of $w$ use $S^{eff}$):
+$$
+S_{\Lambda}^{eff} ( \phi^-) = - \log \int_{\Lambda}^{\Lamdba_0} \mathfrak{D} \phi^+ e^{- S_{\Lambda_0} (\phi^+ + \phi^-)}
+$$
+\section{Lecture 12}
+$\phi^+(x)$ are UV and $\phi_-(x)$ are IR modes. We want to split up the action into:
+$$
+ S_{\Lambda_0} [ \phi^- + \phi^+] = S^{free} [ \phi-] + S^{free}[\phi^+] + S_{\Lambda_0} ^{int} [\phi^-, \phi^+]
+$$
+where 
+$$
+S^{free}[\phi] = \frac{Z_{\Lambda_0}}{2} \int d^4 x ( (\partial \phi)^2 + m^2 \phi^2)
+$$
+There are no quadratic terms $\phi^+ \phi^-$ as they have disjoint support on momentum space. $\tilde \phi^-(k) \tilde \phi^+(k') \delta( k+k') vanishes due to "disjoint support" as $\tilde \phi^-(k)$ contains modes less than $\Lamdba$ and $\tilde \phi^+(k)$ contians modes greater than $\Lambda$. Either $k> \Lamdab$ and then $\tilde \phi^- = 0$ and if $k< \Lambda$ then $\phi^+ = 0$. \\\\
+We want to write:
+$$
+S_{\Lambda}^{eff} ( \phi^-) = - \log \int_{\Lambda}^{\Lamdba_0} \mathfrak{D} \phi^+ e^{- S_{\Lambda_0} (\phi^+ + \phi^-)} = S^{free} [ \phi^-] - \log \int_{\Lamdba}^{\Lambda_0} \mathfrak{d} \phi^+ \exp ( - S^{free} [ \phi^+]  - S^{int}_{\Lamdba_0} [\phi^-, \phi^+]) = S^{free} [ \phi^-} + S_{\Lambda}^{int} [\phi^-}
+$$
+We wrote $S_{\Lambda_0}$ generically so we should be able to drop (-) superscript:
+$$
+S_{\Lambda}^{eff} [\phi] = \int d^d x ( \frac{Z_{\Lambda}}{2} (\partial \phi)^2 + \sum_i \frac{Z_n^{ \frac{n_i}{2}}}{\Lambda^{d_i-d}} g_i (\Lambda) O_i( x))
+$$
+The upshot is the integration can be thought of as changing the couplings at normalisation of $\Lambda$\\\\
+First lets focuse on the couplings themselves:
+\subsubsection{Running couplings}
+The partition functions 
+$$
+ Z_{\Lambda_0} (g_i(\Lambda_0)) = \int^{\Lamdba_0} \mathfrak{D} \phi e^{- S_{\Lambda_0}[\phi]} = Z_{\Lamdba}( g_i (\Lambda)) = \int^{\Lamdba} \mathfrak{D} \phi e^{- S_{\Lamdba}^{eff} [\phi]}
+$$
+The LHS $$\Lambda \frac{d}{d\Lambda} Z_{\Lambda_0} = 0 \implies \Lamdba \frac{d}{d\Lamdba} Z_{\Lambda} =0 = ( \Lambda \frac{\partial}{\partial \Lamdba} |_{g_i} + \Lambda \frac{dg_i}{d\Lambda} \frac{\partial }{\partial g_i}) Z_{\Lamdba}$$
+So we get $\beta_i =Lambda \frac{dg_i}{d\Lambda} $. So now we have a set of $\beta$ functions:
+$$
+\beta_i = \frac{d g_i}{d \Lambda}
+$$
+may depend on all $\{ g_j\}$.
+$$
+\beta_i ( \{ g_j(\Lambda) \}) = ( d_i - d) g_i (\Lamdba)  + \beta^{qu}_i( \{g_j\})
+$$
+the first term on RHs is refered to as the "clasical" part due to the explicit $\Lambda$ in $S^{eff}$ and the second term refres to "quantum" part due to integrating out the UV modes.\\\\
+This discussion implies there is a flow in coupling "constant" space. So we might imagine there is some coupling space and our initial value $\Lamdba_0$ is a particular point in this space and then integrating out the UV modes causes it to flow to someother coupling $\Lamdba$. \\\\
+Now lets look at coupling constants.
+\subsubsection{Correlation functions}
+At the momentum the typed notes are a bit of the mess they are currently awful have a look after wednesday when he should have fixed them. \\\\
+Quantum effective action (which somehow contained the result of suming those connected diagrams) should give physical results independant of cutoff, up to field renormalization. This amounts to saying $\Gamma[\Phi_{orig} = \Gamma[ \Phi_{\Lambda_0}] = \Gamma[ \Phi_{\Lambda}]$ 
+$$
+Z_{\Lambda_0}^{-n/2} \Gamma^{(n)}_{\Lambda_0} ( x_1,..., x_n) = Z_{\Lambda}^{-n/2} \Gamma_{\Lambda}^{(n)}(x_1,...,x_n)
+$$
+so $Z_{\Lambda_0}^{-n/2} \Phi_{\Lambda_0} = Z_{\Lambda}^{-n/2} \Phi_{\Lamdba}$ and as the LHS is independant of $\Lamdba$ we get:
+$$
+0 = ( \Lambda \frac{\partial}{\partial \Lambda} + \beta_i \frac{\partial }{\partial g_i} - n \gamma_{\phi}) \Gamma^{(n)}(x_1, x_2,...,x_n)
+$$
+with $\gamma_{\phi} = \frac{1}{2} \Lambda \frac{d}{d\Lambda} \log Z_{\Lambda}$. With the Legendre transform $W[J]$ we get:
+$$
+ W_{\Lamdba_0}[ J_{\Lamdba_0}] = \Gamma[ \Phi_{\Lamdba_0}] - J_{\Lambda_0} \Phi_{\Lmabda_0} = W_{\Lambda}[ J_{\Lambda}] = \Gamma[ \Phi_{\Lamdba}] - J_{\Lamdba} \Phi_{\Lambda}
+$$
+So we ahve $Z_{\Lambda_0}^{-n/2} J_{\Lambda_0} = Z^{-n/2} _{\Lamdba} \Phi_{\Lamdba}$. So 
+$$
+Z_{\Lambda_0} ^{n/2} G_{\Lambda_0} ^{(n)} (x_1,...,x_n) = Z_{\Lambda_0}^{n/2} \frac{\delta ^{(n)} W_{\Lambda_0} [ J_{\Lamdba_0}]}{ \delta J_{\Lamdba_0}(x_1)... \delta J_{\Lamdba_0}(x_n)} = Z_{\Lambda} ^{n/2} \frac{\delta^{(n)} W_{\Lamdba} ( J_{\Lamdba)}}{ \delta J_{\Lambda}(x_1)... \delta J_{\Lambda}(x_n)} = Z_{\Lamdba}^{n/2} G_{\Lambda}^{n/2} (x_1,...,x_n)
+$$
+ so gives C-S equation
+ $$
+ 0 = ( \Lamdba \frac{\partial}{\partial \Lamdba} + \beta_i \frac{\partial}{\partial g_i} + n \gamma_{\phi} ) G_{\Lambda}^{(n)} (x_1,...x_n)
+ $$\\\\
+ Let us integrate a few more modes $p$ with $s \Lamdba < p < \Lamdba $ with $0< s< 1$ with $1-s$ small. Then:
+ $$
+  Z_{\Lambda}^{n/2} G_{\Lamdba}^{(n)} (x_1, ..., x_n; g(\Lamdba)) = Z_{s \Lamdba}^{n/2} G_{s\Lambda}^{(n)} ( x_1,...,x_n;g(s\Lamdba))
+ $$
+ Looking at the RHS $G_{s\Lambda}^{(n)} ( x_1,...,x_n;g(s\Lamdba))$ from $W_{s\Lamdba}[J]$ with $$S^{eff}_{s\Lambda} - J \phi = \int d^d x [ Z_{s\phi} ( \partial \phi)^2 + \sum_i \frac{g_i(s \Lambda)}{(s\Lambda)^{d_i-d}} O_i(x) - J(x) \phi(x)]$$
+  We wantt o rescale from $x \rightarrow x' = sx$ so $\Lambda \rightarow \Lamdba' = \frac{\Lamdba}{s}$, $\partial \rightarrow \partial' = \frac{1}{s} \partial$. Field has massi dimension $\frac{d}{2} -1 $ so $\phi \rightarrow \phi' = s^{1- \frac{d}{2}} \phi$ and similarly $O_i \rightarrow O'_i = O_is^{-d}$ and $J\rightarrow J' = J s^{d/2 -1}$. So after rescaling we get:
+  $$
+  W_{s\Lambda} [ J] = W_{\Lambda} [J']
+  $$
+  So RHS of equation is equal to:
+  $$
+   G_{s\Lamdba}^{(n)} (x_1,...,x_n; g(s\Lamdba)) = s^{n ( \frac{d}{2} -1)} \frac{\delta^{(n))} W_d[ J']} {\delta J'(x_i} - \delta J'(x'_n)} = s^{n (\frac{d}{2} -1)} G_{\Lamdba}^{(n)} (sx_1, ..., sx_n; g(s\Lamdba))
+  $$
+  so if we let $y_i = sx_i$ we get:
+  $$
+  G_{\Lambda}^{(n)} ( \frac{y_1}{s},..., \frac{y_n}{s}; g(\Lamdba)) = ( \frac{Z_{s\Lambda}{Z_{\Lambda}} s^{d-2} )^{n/2} G_{\Lambda}^{(n)}(y_1,..,y_n; g(s\Lambda))
+  $$
 \end{document}

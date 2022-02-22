@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  9 FEB 2022 14:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 FEB 2022 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -465,20 +465,279 @@ l.544 with $\Gamma
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[16] (./Fluid_Dynamics_of_the_Environment.aux) ) 
+[16]
+Overfull \hbox (0.28474pt too wide) detected at line 567
+\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R [] ^^R \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )) = \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 ([][](\OML/cmm/m/it/10 e[] [] ^^R[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--574
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 592--596
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--599
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 655--657
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--657
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 658--660
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 671--674
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--674
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--674
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
+
+ []
+
+[20]
+./Fluid_Dynamics_of_the_Environment.tex:687: Undefined control sequence.
+<recently read> \fra 
+                     
+l.687 ...e of energy per wavelength) will be $\fra
+                                                  {d \tilde E}{d \zeta} = e^...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--689
+
+ []
+
+[21]
+Overfull \hbox (179.86322pt too wide) detected at line 708
+\OT1/cmr/m/n/10 (\OML/cmm/b/it/10 u \OMS/cmsy/m/n/10 ^^A r\OT1/cmr/m/n/10 )\OML/cmm/b/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 (([] \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k[]\OT1/cmr/m/n/10 )[] + ([] \OMS/cmsy/m/n/10 ^^A \OML/cmm/b/it/10 k[]\OT1/cmr/m/n/10 )[])\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 :::e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 :::e[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--713
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--713
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--736
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 742--747
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--747
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:755: Undefined control sequence.
+l.755 \subseection
+                  {Triadic resoncance transfer term}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--762
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 768--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--801
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 819--822
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--827
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 829--832
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--837
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 841--843
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:859: Undefined control sequence.
+l.859 ...l p}{\partial x} \approx - \rho g \implie
+                                                   p = p_0  - \rho g z
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 872--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 882--885
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 907--910
+
+ []
+
+[28]
+Overfull \hbox (89.1943pt too wide) detected at line 940
+[] \OT1/cmr/m/n/10 + [][] + \OML/cmm/m/it/10 g[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^W[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^W\OT1/cmr/m/n/10 [[]([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) + []([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 u[][] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 v[][] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 w[][]\OT1/cmr/m/n/10 )
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:943: Undefined control sequence.
+l.943 ...nu \bar u}{h^2}$ and $\frac{\nu}{b} \fraC
+                                                  {\partial u'}{\partial y} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 940--944
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--959
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 977--980
+
+ []
+
+[30] (./Fluid_Dynamics_of_the_Environment.aux) ) 
 Here is how much of TeX's memory you used:
- 1782 strings out of 478599
- 23228 string characters out of 5858101
- 329266 words of memory out of 5000000
- 19668 multiletter control sequences out of 15000+600000
+ 1783 strings out of 478599
+ 23231 string characters out of 5858101
+ 331266 words of memory out of 5000000
+ 19669 multiletter control sequences out of 15000+600000
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,7n,66p,1436b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Fluid_Dynamics_of_the_Environment.pdf (16 pages, 260881 bytes).
+Output written on Fluid_Dynamics_of_the_Environment.pdf (30 pages, 321392 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 181 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

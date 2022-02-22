@@ -654,6 +654,7 @@ $$
 ( - (k^2 + m^2) + \frac{N^2}{U^2}) w' = 0
 $$
 For non-trivial solution $|\bm k| = \frac{N}{U}$ \\\\
+\subsubsection{Critical layer reflection}
 Let's return to ray tracing to show how we can use this. In the simple case we have already looked at with a single mountain with a constant speed wind. We know that this gives quarter circles enclosed in semicircular casuality envolopes. Lets consider a steady state so when the wind has been blowing forever. The phase velocity is along the lines of constant phase which is necessary for them to be stationary as then you cannot see the phase move.\\\\
 If we want to know how the position of one of these rays is moving with time we need to consider
 $$
@@ -669,5 +670,322 @@ $$
 \frac{dZ}{dx} = \frac{m}{k} = \frac{ ( \frac{N^2}{U^2} - k^2)^{\frac{1}{2}}}{|\bm k|} =  ( (\frac{N}{k U})^2 - 1)^{\frac{1}{2}}
 $$
 as $k$ is also negative.\\\\
-If $\frac{N}{kU} = 1$ then the ray stops propogating vertically upwards and so cannot propogate through height at which $\frac{N}{k U} =1$. Consider $N= $ const and $U$ increases with height. Clearly at the level of the mountain we produce waves as we can always find some $k$ that works as $\frac{N}{k U}> 0$. So waves will always be produced for an isolated mountain. So the rays will slowly bend round until at a certain height they are horizontal. 
-\end{document}
+If $\frac{N}{kU} = 1$ then the ray stops propogating vertically upwards and so cannot propogate through height at which $\frac{N}{k U} =1$. Consider $N= $ const and $U$ increases with height. Clearly at the level of the mountain we produce waves as we can always find some $k$ that works as $\frac{N}{k U}> 0$. So waves will always be produced for an isolated mountain. So the rays will slowly bend round until at a certain height $z_c$ (where $\frac{N}{kU} =1$) they are horizontal.\\\\
+\section{Lecture 10}
+Near this critical height $z_c$ we can do a taylor series expansion to find out what happens if it isn't quite attained.\\
+$$
+\frac{dZ}{dx} = ( ( Z- z_c ) \frac{d}{dz}( \frac{N^2}{k^2 U^2}))^{\frac{1}{2}}
+$$
+So:
+$$
+Z = z_c + \frac{1}{4} \frac{d}{dz} ( \frac{N^2}{k^2 U^2})|_{z=z_c} ( x- x_c)^2
+$$
+This will give us a quadratic behaviour where the waves rise up to $z_c$ then the reflect back down in a parabolic curve. The lines of constant phase are prependicular to this parabolic $c_g$. So the waves go from having almost horizontal phase lines and then completely vertical phase lines. We have been a bit naughty here as we have made use of the WKB approximation but we need to ask if this is a valid approximation.\\\\
+While $U(z)$ may change over a length scale that is large comapred with $\lambda = \frac{ 2 \pi}{|k|}$, the vertical extent of the wave is going towards infinity as $m \rightarrow 0$ as $z \rightarrow z_c$. So at the top we are saying the wave crests are vertical so at the top there must be some variation in velocity across the wave crest. Luckily whilst it is not clear that WKB is valid it works well in practice. Approximations often work well even when they have no right to do so. \\\\
+Important to note that the height at which this reflection occurs depends on the wavenumber of the waves, so a spectrum of waves will reflect at differing heights.
+\subsubsection{Critical layer absorption}
+This is the opposite case to the above. What happens if $\frac{U}{N}$ reduces with height and at some point reduces to zero. This time we can think about $\frac{dz}{dx} = \frac{(\frac{N^2}{U^2} - k^2)^{\frac{1}{2}}}{|\bm k|} = \frac{m}{k}$ so as $U \rightarrow 0$, we get $m \rightarrow \infty$ and $|\bm k|\rightarrow \infty$. This means that this time the ray is going to bend upwards and become vertical at $U = 0$, and also as we become more and more vertical the wave number increases and so the wave crests get closer and closer together (this is because $k$ remains the same as $m$ increases). As $|\bm k| \rightarrow \infty$, $|c_g| = \frac{N}{|\bm k|} \sin \theta \rightarrow 0$ and $|c_p| = \frac{N}{|\bm k|} \cos \theta \rightarrow 0$. We also remember that the dissapation of the waves ( the change of energy per wavelength) will be $\fra{d \tilde E}{d \zeta} = e^{- k^3 \nu \zeta}{N \sin \theta}$ so the energy will be dissapating out very quickly which is refered to as critical layer absorption. Critical layer absorption occurs when $U$ changes sign.\\\\
+We aren't covering 3D stuff this year or columnar wave modes which were focused on in previous year. Part of the reason for this is it is more or less impossible to ask exam questions on as it is too algebraically messy.
+\subsection{Resonant triads}
+\subsubsection{Weakly nonlinear internal waves}
+Q1 on Example Sheet 1 goes part of the wave towards getting the background for this. Here we should that the Linear wave solution satisfies the nonlinear equations but you cannot use linear superposition as addition of linear wave solutions does not solve non-linear equations.
+$$
+\bm u = \tilde{\bm u}_1 e^{i \phi_1} + \tilde{\bm u}_2 e^{i \phi_2} + \tilde{\bm u}_3 e^{i \phi_3}
+$$
+$$
+\phi_1 = \bm k_1 \cdot \bm x - \omega t, ... 
+$$
+$$
+b = \tilde b_1 e^{i \phi_1} + \tilde b_2 e^{i \phi_2 } + \tilde b_3 e^{i \phi_3}
+$$
+Linear terms in equations, we are going to allow $\tilde{\bm u}_i = \tilde{\bm u}_i(t)$ to be a slowly varying function allowing time dependance in phase and amplitude:
+$$
+\frac{\partial}{\partial t} ( \bm u) = ( \dot{\tilde{\bm u}_1} - i \omega_1 \tilde{\bm u}_1 ) e^{i \phi_1} + \dot{\tilde{\bm u}_2} - i \omega_2 \tilde{\bm u}_2 ) e^{i \phi_2} + \dot{\tilde{\bm u}_3} - i \omega_3 \tilde{\bm u}_3 ) e^{i \phi_3} 
+$$
+We are going to take the case with no viscosity and no mass diffusivity $\nu = \kappa = 0$. So in the linear equations this would end up with $\dot{\tilde{\bm u}}$ would vanish but because we have the non-linear terms this time they might not.
+$$
+(\bm u \cdot \nabla) \bm u = i (\tilde{\bm u}_1 \cdot \bm k_1 ) \tilde{\bm u_1} e^{2 i \phi_1} +i (\tilde{\bm u}_2 \cdot \bm k_2 ) \tilde{\bm u_2} e^{2 i \phi_2} + i (\tilde{\bm u}_3 \cdot \bm k_3 ) \tilde{\bm u_3} e^{2 i \phi_3} + i ( ( \tilde{\bm u_1} \cdot \bm k_2) \tilde{\bm u_2} + ( \tilde{\bm u_2} \cdot \bm k_1) \tilde{\bm u_2}) e^{i(\phi_1 \pm \phi_2)} + ... e^{i (\phi_2 \pm \phi_3)} + ... e^{i (\phi_3 \pm \phi_1)} 
+$$
+The first self interactions just reperesent sort of local forcing but the cross over terms are much more interesting as they show how three different waves interact.\\\\
+Triadic resonance condition to allow a sustatined interaction between $\tilde{\bm u_1},\tilde{\bm u_2},\tilde{\bm u_3}$ over sustained time and space. Order for this to happen the cross over terms must feedback into the part of the interaction not included in themselves so must have $\pm \phi_4 = \pm \phi_1 \pm \phi_2$. So if we put two waves into the system they will produce a third waves in additoin to the forcing waves. As there are two waves you could produce a new wave we need to further consideration to descern which of the potential waves are sustained.\\\\
+The two waves generated have: $\pm \phi_3 = \pm \phi_1 \pm \phi_2$ so $\pm \bm k_3 = \pm \bm k_1 \pm \bm k_2$ and $\omega_3 = \pm \omega_1 \pm \omega_2$\\
+For sustained interaction need:
+$$
+\frac{\omega_1}{N} = \frac{k_1}{|\bm k_1|} = \cos \theta_1
+$$
+$$
+\frac{\omega_2}{N} = \frac{k_2}{|\bm k_2|} = \cos \theta_2
+$$
+$$
+\frac{\omega_3}{N} = \frac{k_3}{|\bm k_3|} = \cos \theta_3
+$$
+This means if we are going to draw things on wavenumber diagram only part of the space is going to marry up.
+\section{Example sheet 1}
+Linerised equation of motion with non zero visocity and mass diffusion:
+$$
+( \frac{\partial}{\partial t} = \kappa \nabla^2) ( \frac{\partial }{\partial t} - \nu \nabla^2) \nabla^2 \psi = - N^2 \frac{\partial^2 \psi}{\partial x^2}
+$$
+which is derived by straight away combining:
+$$
+\frac{\partial u}{\partial t} = \frac{\partial b}{\partial x} + \nu \nabla^2 u, \frac{\partial b}{\partial t} = -N^2w - \kappa \nabla^2 b
+$$
+In general $\frac{D}{Dt}$ and $\frac{\partial }{\partial x}$ do not commute in general.\\\\
+If it doesn't say derive the dispersion relation you can just write it down. So worth memorising some dispersion relationships like the deep water one $\omega^2 = gh \tanh k H$. I made mistake of thinking the dipersion relation did not change so need to practice deriving this dispersion relation.\\\\
+Marks questions out of 40.\\\\
+Define potential energy for deep water as:
+$$
+\bar{PE} = PE_0 + \int_{-H}^{\eta}  \rho g z dz
+$$
+we can define reference state to be $PE_0 = - \int_{-H}^0 \rho g z dz$ so
+$$
+\bar{PE} = \int_0^{\eta} \rho g z dz = \frac{1}{4} \rho_0 g \eta_0^2
+$$
+When determining the structure of a decaying wave we can take the integration constant to be zero, as we want solutions oscillating around zero?? Email the guys about this.\\
+Won't set anything as algebraically messy as question 5 in the exam again. Try quesiton 5 again i completely didn't get it at all!\\\\
+He uses a completely different technique to me for figuring out the reflection of waves. His is a geometric appoarch where you consider the continuity at the boundary.\\\\
+Question 8 is also bizarre, seems to be using techniques from fluids II to do with boundary layers. You are meant to assume the form $\eta = \eta_0 e^{i\omega t} e^{- (1+i) \epsilon/ \delta}$ try it again with this.
+\section{Lecture 11}
+We force wtih $\phi_1$, $\phi_2$ and nonlinearly generate $\phi_3$:
+$$
+\phi_3 = \pm \phi_1 \pm \phi_2
+$$
+$$
+\omega_3 = N \frac{k_3}{|\bm k_3|}
+$$
+\subseection{Triadic resoncance transfer term}
+Take $\psi = \tilde \psi_1 e^{i\phi_1} + \tilde \psi_2 e^{i \phi_2} + \tilde \psi_3 e^{i \phi_3}$. Also take $\kappa = 0$ and $\nu$ is small. Assume $\tilde \psi_j$ are functions of $t$. Now lets just look at the non linear $\bm u \cdot \nabla \bm u$ terms and relate them to the linear terms $\frac{\partial \bm u}{\partial t}$ then we find:
+$$
+\dot{\tilde \psi_1} = I_1 \tilde \psi_2 \tilde \psi_3 - \frac{1}{2} \nu |\bm k_1 |^2 \tilde \psi_1
+$$
+$I_1$ is in the typeset version of the notes but he doesn't want us to memorise it just have an idea that it exists. We are going to take this body and use the euler equations for this body, this gives a mecahnical analogy:\\\\
+Euler equations for a rigid body:
+$$
+J \dot{ \bm \omega} + \bm \omega \times ( J \bm \omega) = \bm M
+$$
+wtih $\bm J$ is the Inertia tensor and $\bm M$ is the applied torques. Take 
+$$
+J = \begin{pmatrix} J_{11} & 0 & 0\\ 0& J_{22} & 0 \\ 0 & 0 & J_{33} \end{pmatrix}
+$$
+with $J_{11} < J_{22} < J_{3}$.\\\\
+If $\bm M = 0$ then conserve energy and we have:
+$$
+ \bm \omega \cdot J \dot{\bm \omega} + \bm \omega \cdot ( \bm \omega \times (J \bm \omega)) = 0
+$$
+$$
+J_{11} \dot{\omega_1} + (J_{33} - J_{22} ) \omega_2 \omega_3 = 0
+$$
+$$
+J_{22} \dot{\omega_2} + (J_{11} - J_{33}) \omega_3 \omega_1 = 0
+$$
+$$
+J_{33} \dot{\omega_3} + (J_{22} - J_{11}) \omega_1 \omega_2 = 0
+$$
+If $| \omega_1 | >> | \omega_2| , |\omega_3|$ then $J_{11} \dot{\omega_1} = 0$ and $J_{22} \dot \omega_2 + ( J_{11} - J_{33} ) \omega_3 \omega_1 = 0$ ...\\
+Elminate $\omega_3$ to get:
+$$
+J_{22} J_{33} \ddot{\omega_2} - (J_{11} - J_{33} ) (J_{22} - J_{11}) \omega_1^2 \omega_2 = 0
+$$
+There is a similar result for $\ddot{\omega_3}$, the RHS coefficent can be easily seen to be less than 0 so this gives harmonic oscillation so if pertubred it will oscillate slightly but be pretty stable. Similarly if $|\omega_3| >> |\omega_1|, |\omega_2|$ we get harmonic osciallation. However, for $|\omega_2| >> |\omega_1| |\omega_3|$ we get:
+$$
+J_{11} J_{33} \ddot{\omega_1} - (J_{33} - J_{22} ) ( J_{22} - J_{11}) \omega_2^2 \omega_1 = 0
+$$
+so $\omega_2$ will grow (and decay) exponentially if perturbed so this is an instability.
+\subsubsection{Triadic resonance instability}
+$$
+|\tilde \psi_1| >> |\tilde \psi_2 | | \tilde \psi_3|
+$$
+We have oscillatory behaviours in the central regions of the sustained graph of solutions, and exponentially growing solutions on the top and bottom.
+The TRI is a linear instability of internal waves when we consider weakly non-linear behaviour.\\\\
+It would be too hard to write an exam question on this area, he tried to write an exam question on this last year and it was too algebraically nasty to do any more than we just covered.\\\\
+We want to figure out what the growth rate actually looks like for a plane wave on the expoentially growing portion of the curve. We can do this analytically to figure out:
+$$
+\sigma_{\pm} = - \frac{1}{4} \nu( |\bm k_2 |^2 + |\bm k_3|^2) \pm \sqrt{ \frac{1}{16} \nu^2 ( |\bm k_2|^2 + |\bm k_3|^2 + I_2 I_3 |\tilde \psi_1|^2}
+$$
+we have $\sigma_+ \geq 0$ if $|\tilde \psi_1| > 0$. We actually find that the maximium of the growth rate occurs when $\omega_2 = - \omega_3 = \frac{1}{2} \omega_1$. THis has been known for a while and is known as the parametric subharmonic instability (PSI). In practice we don't tend to see this as in practice we are consdiering beams of waves rather than plane waves.
+\section{Lecture 12}
+\subsection{Shallow water}
+There is a strong analogy between shallow water flow and flows in incompressible fluids. We can write down the rules for incompressible fluid flow:
+$$
+\nabla \cdot \bm u = 0, \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0
+$$
+If we throw away a dimension we get the shallow water flow:
+$$
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} \neq 0
+$$
+though in the shallow water flow the flow is still 3D.\\
+In the examples sheet 1 we derived the dispersion of interfacial waves to be:
+$$
+\omega^2 = (\rho_1 - \rho_2) g k ( \frac{\rho_1}{\tanh kH_1} + \frac{\rho_2}{\tanh kH_2})^{-1}
+$$
+We are going to be interested in one specific limit of this dispersion relation but first lets consdier a different limit. The short wave limit $kH_1 , kH_2 >>1$ so $\tanh kH_i \rightarrow 1$ this gives $\omega^2 = \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2} g k = A gk$. Therefore in the limit $ A \rightarrow 1$ we recover the deep water dispersion relation $\omega^2 = gk$.\\\\
+Introduce the 'reduced gravity' $ g' = \frac{\Delta \rho}{\bar \rho} g = 2 A g$ so we get:
+$$
+\omega^2 = \frac{1}{2} g' k, c_p = \sqrt{ \frac{Ag}{k}} = \sqrt{ \frac{g'}{2k}}, c_g = \frac{1}{2} c_p
+$$
+We can clearly see from graphs of height against phase velocity and frequency that there are two clear limits. One for short waves (where the frequency depends strongly on the wavelength) and one for when one hiehgt is much bigger than the other for long waves ( the long wave limit).\\\\
+$kH_1, kH_2 << 1$ so $\tanh kH_i \rightarrow kH_i$ so 
+$$
+c_p = c_g = \sqrt{ \frac{ H_1H_2}{H_1 + H_2} g'}
+$$
+can think of $H_E = \frac{H_1 H_2}{H_1 + H_2}$ as an effective depth. We only need one of $kH_1 $ or $kH_2$ to be small for waves to become non-dispersive. Let $H_s$ be the depth of the shallow layer and $H_d$ be the depth of the deep layer with $\frac{H_s}{\rho_s} << \frac{H_d}{\rho_d}$ so we get $c_p = c_g = \sqrt{ H_s g'}$ with $g' = \frac{\rho_1 - \rho_2}{\rho_s} g$. \\\\
+In a lot of what we are going to be doing we are going to be taking the BOussinesq limit of $\Delta \rho << \bar \rho$ so $g' = \frac{\Delta \rho}{\bar \rho} g$ therefore:
+$$
+\omega^" = \frac{g' k}{\coth kH_1 + \coth k H_2} 
+$$
+with $\coth kH_i \rightarrow \frac{1}{kH_i}$ for $kH_i <<1$ and $\coth kH_i \rightarrow 1 $ for $kH_i>>1$. To start with mainly consider one shallow layer to make the mathematics easier.\\\\
+\textbf{Equipartion of energy}
+$$
+\bar E = \bar{KE} + \bar{PE}, \bar{F_E} = c_g \bar E
+$$
+\subsubsection{Shallow water equations}
+We have just considered linear waves but we need to think of non-linear waves to be useful so need to derive the shallow ater equations.\\\\
+Consider a shallow body of water with height $h$ and horizontal scale $X$ with $h << X$.
+$$
+\nabla \cdot \bm u = 0
+$$
+$$
+ \frac{\partial \bm u}{\partial t} + ( \bm u \cdot \nabla) \bm u = - \frac{1}{\rho} \nabla ( p + \rho g z) + \nu \nabla^2 \bm u
+$$
+for homogenous fluid. Take scales $U, W, X, Z, P, T$ with:
+$$
+ \frac{U}{X} + \frac{W}{Z} = 0
+$$
+ in shallow water $\frac{X}{Z} \rightarrow \infty$ and so $\frac{W}{U} \rightarrow 0$
+ $$
+ \frac{W}{T} + \frac{UW}{X} + \frac{W^2}{Z} = \frac{1}{\rho}\frac{P}{Z} + g + \nu ( \frac{W}{X^2} \frac{W}{Z^2})
+ $$
+ as the vertical pressure gradient is predominantly hydrostatic so the other terms become small and $\frac{1}{\rho} \frac{P}{Z} \sim g$ so:
+ $$ 
+ \frac{\partial p}{\partial x} \approx - \rho g \implie p = p_0  - \rho g z
+ $$
+ and 
+ $$
+  \frac{\partial w}{\partial z} << g
+ $$
+ now look at horizontal momentum equation:
+ $$
+  \frac{U}{T} + \frac{U^2}{X} + \frac{ WU}{Z} = \frac{\rho g Z}{\rho X} + \nu ( \frac{U}{X^2} + \frac{U}{Z^2})
+ $$
+ can neglect the viscoity term as we are dealing with high reyonlods number. Physcailly insight allows us to neglect the $\frac{WU}{Z}$ term as we can see that $W$ should be small as it is a shallow flow so what would be generating a large velocity up or down. this gives:
+ $$
+  \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = - \frac{1}{\rho} \frac{\partial}{\partial x} ( p + \rho gz) + \nu \frac{\partial^2 u}{\partial z^2}
+ $$
+ \textbf{From first prinicples}:\\
+ We now cover how to do this from first principles as often we will be asked to derive the shallow water equations for bizarre channels like triangluar tubes or something and this gives us an insight into how to do that.\\\\
+ Take a flat bottom, unit width, slowly varying depth of water with $u(x,t)$ under the hydrostatic limit and $Re >>1$.\\\\
+ The volume flux is given by $Q = uh$ so $2 \delta x \frac{\delta h}{\delta t} = Q_{x- \delta x} - Q_{x+ \delta x}$. So as $\delta t \rightarrow 0$ we get:
+ $$
+ \frac{\partial h}{\partial t} + \frac{\partial Q}{\partial x} = 0
+ $$
+ $$
+  \frac{\partial h}{\partial t} + u \frac{\partial h}{\partial x} + h \frac{\partial u}{\partial x} = 0
+ $$
+ If cross-section of channel is not rectangular, then this expression changes.Here the cross-sectional area is just $h$ times unit width but if say a triangular channel then the cross-sectional area would be scaling with $h^2$ instead.\\\\
+  We can also consider the momentum flux and the pressure forces. So the pressure force towards the right on the right hand face
+  $$
+\int_0^{h- \frac{\partial h}{\partial x} \delta x} \rho g( h - \frac{\partial h}{\partial x} \delta x - z) dz  = \rho ( \frac{h^2}{2} - h \frac{\partial h}{\partial x} \delta x) + O( \delta x^2)
+  $$
+   we also get:
+   $$
+   \frac{\partial}{\partial t} ( uh) + \frac{\partial}{\partial x} ( u^2 h + \frac{1}{2} gh^2) = 0
+   $$
+    with $F_M = u(uh) = uM$ for 1D shallow water. Note the simularityes with 
+    $$
+     \frac{\partial}{\partial t} ( \rho u) + \frac{\partial}{\partial x} ( \rho u^2 + p) = 0
+    $$
+    which is 1 D compressible. So you can sse that $h$ and $\rho$ play similar roles.\\\\
+    In Example sheet 2, we vary $b(x,z)$ as the wdith of the channel. THis is still a 1D shallow awter flow provided $\frac{u^2}{b} \frac{ d^2 b}{dx^2} <<g$\\\\
+    \textbf{ Boussineq vs non-Boussinesq}:\\
+    $$
+    g' = \frac{\rho_1- \rho_2}{\frac{1}{2}(\rho_1 + \rho_2)}= \frac{\Delta \rho}{\bar \rho} g
+    $$
+    $$ 
+    \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + g' \frac{\partial h}{\partial x} = 0
+    $$
+     For most things a single-layer shallow ater flow ( Boussinesq flow) and a single-layer free surface flow, the equations are the same except for $g' <-> g$. This will not be the case where the shallow water assumptions are violated - we will look at some of these.
+     \section{Lecture 13}
+     One instance of this not working is if the lower layer is deep as then we could plausibly have much lower velocities in the lower layer than the upper layer. If we were to take the pressure being lower in the lower layer then we would end up having lhigher pressure where the upper layer is larger which would force the pressure to be funnneled in the direction of the narrowest upper layer. If the upper layer has a free surface or a surface with say air then it can rise up slightly allowing the pressure to be unifrom along the boundary with the deep layer below.\\\\
+     \textbf{Averaging}\\
+     $\bm u = \bar{\bm u} + \bm u', \bm u = \bm u(x,y,z,t)$ with $\bar{\bm u} = \bar{\bm u})(x,t)$ and $h = h(x,t)$ with:
+     $$
+     \bar{\bm u} = \frac{1}{A} \int^{b/2}_{-b/2} \int_0^h \bm u dz dy
+     $$
+     wtih $A= bh = A(x,t)$. If we take the diveregence equation:
+     $$
+      \int^{b/2}_{-b/2} \nabla \cdot \bm u dz dy = 0
+     $$
+     Consider:
+     $$
+      \int^{b/2}_{-b/2} \frac{\partial w}{\partial z} dz dy = \int_{-b/2}^{b/2} w|_{z=h} - w_{z=0} dy
+     $$
+     using the kinematic boundary condition
+     $$
+      w(z=h) = \frac{\partial h}{\partial t} + u|_{z=h} \frac{\partial h}{\partial x}
+     $$
+     gives
+     $$
+     b \frac{\partial h}{\partial t}  + \frac{\partial h}{\partial x} \int^{b/2}_{-b/2} u|_{z=h} dy = 0
+     $$
+     similar result holds for $\frac{\partial v}{\partial y}$ so these together gives:
+     $$
+      \int^{b/2}_{-b/2} \nabla \cdot \bm u dz dy = b h \frac{\partial \bar u}{\partial x} + \bar u( b \frac{\partial h}{\partial x} + h \frac{db}{dx} ) + b \frac{\partial h}{\partial x} = 0
+     $$
+     If we do the same for the momentum equation:
+     $$
+     \int \int_A \frac{\partial u}{\partial t} + (\bm u \cdot \nabla) u dA 
+     $$
+     which gives:
+     $$
+     \frac{\partial \bar b}{\partial t} + \bar u \frac{\partial u}{\partial x} +g \frac{\partial h}{\partial x} - \nu \frac{\partial^2 \bar u}{\partial x^2} = \nu[ \frac{1}{b} ( \bar{\frac{\partial u'}{\partial y}|_{y = \frac{b}{2}}} - \bar{\frac{\partial u'}{\partial y} |_{y=- \frac{b}{2}}}) + \frac{1}{h} ( \bar{ \frac{\partial u'}{\partial z}|_{z=h} } - \bar{ \frac{\partial u'}{\partial z}|_{z=0}} )]- ( \bar{\bar{ u' \frac{\partial u'}{\partial x}}} + \bar{\bar{ v' \frac{\partial u'}{\partial y}}} + \bar{\bar{w' \frac{\partial u'}{\partial z}}})
+     $$
+     The equations for $\bar u$ requre a knowledge of the equations for $\bar{u'^2}$. This is generally referred to as the closure problem.\\\\
+     At high Re, then $\nu$ may be negligible but $\bar{\bar{u'_i u_j'}}$ may not be.\\
+     We can try to model the unknown terms on the RHS by consdiering the scaling of the different terms with $\frac{\nu}{h} \frac{\partial u'}{\partial z} \sim \frac{\nu \bar u}{h^2}$ and $\frac{\nu}{b} \fraC{\partial u'}{\partial y} \sim \frac{2\nu \bar u}{b^2}$. So could model the RHS as:
+     $$
+     \nu[ \frac{1}{b} ( \bar{\frac{\partial u'}{\partial y}|_{y = \frac{b}{2}}} - \bar{\frac{\partial u'}{\partial y} |_{y=- \frac{b}{2}}}) + \frac{1}{h} ( \bar{ \frac{\partial u'}{\partial z}|_{z=h} } - \bar{ \frac{\partial u'}{\partial z}|_{z=0}} )] = C_L \nu \frac{\bar u}{h^2} (1 + 2 \frac{h^2}{b^2})
+     $$
+     where $C_L$ is an O(1) laminar drag coefficent. In the slow viscous flow course we could find that $C_L= \frac{2}{3}$ for Re <<1 and $b>>h$. However for high Re, $\nu$ is neglible and we can think about the other terms:
+     $$
+     - ( \bar{\bar{ u' \frac{\partial u'}{\partial x}}} + \bar{\bar{ v' \frac{\partial u'}{\partial y}}} + \bar{\bar{w' \frac{\partial u'}{\partial z}}}) \approx C_t \frac{\bar u | \bar u|}{h} ( 1+ 2 \frac{h}{b})
+     $$
+     The reason for this form instead of just $\bar u^2$ is we want it to retrarding the flow so we need to retain the sign. The simplest way we can model this is is with $C_T$ is an O(1) turbulent drag coefficent that dependson roughness of boundaries. For smooth boundaries it can be small $ C_T \approx 0.03$ for rough boundaries it is roughly 0.1. Often $h << b$ so $C_t \frac{\bar u |\bar u|}{h}$. Dropping overbars.
+     $$
+      \frac{\partial h}{\partial t} + b^{-1} \frac{\partial}{\partial x} ( bhu) = 0
+     $$
+     $$
+      \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + g \frac{\partial h}{\partial x} = - C_L \nu \frac{u}{h^2} - C_T \frac{u |u|}{h}
+     $$
+     Do Q13 and 17  on ES2.\\
+     \subsection{Hyperbolic system}
+     These equations support wavelike solutions of the form: 
+     $$
+     F_i(x-c_it)
+     $$
+     where $c_i$ is the wave speed and $F(..)$ expresses the evolution following a wave. The equations we are looking at are quasi linear.\\
+     \textbf{Recap linearity}:\\ LInear equations: $a(x,t) \frac{\partial u}{\partial x} + b (x,t) \frac{\partial u}{\partial t} = c(x,t) u + d(x,t)$\\
+     Semi-linear equations: $ a(x,t) \frac{\partial u}{\partial x} + b(x,t) \frac{\partial u}{\partial t} = c(x,t,u)$\\
+      Quasi-linear equations: $a(x,t,u) \frac{\partial u}{\partial x} + b(x,t,y) \frac{\partial u}{\partial t} = c(x,t,u)$
+      \subsubsection{A model for traffic flow}
+      We have a road with speed depending only on the local traffic density $u = u(\rho)$. So can easily write down continuity equation:
+      $$
+       \frac{\partial \rho}{\partial t} + \frac{\partial}{\partial x} (u \rho) = 0
+      $$
+Now lets just imagine we have got helicopters flying over the traffic proving traffic reports with some speed $\lambda$ so:
+$x = x_0 + \lambda s$, $t = t_0 + s$. The helicopter will see:
+$$
+ \frac{df}{ds} = \frac{dt}{ds} \frac{\partial f}{\partial t} + \frac{dx}{ds} \frac{\partial f}{\partial x}
+$$
+as $ \frac{d}{ds} = \frac{\partial}{\partial t} + \lambda \frac{\partial }{\partial x}$ and so $\frac{d \rho}{ds} = \frac{\partial \rho}{\partial t} +\lambda \frac{\partial \rho}{\partial x}$.\\\\
+Imagine $u(\rho) = 1 -\rho$ then we will get a quadratic flux. Also our continuity equation would give us:
+$$
+\frac{\partial \rho}{\partial t} + \frac{\partial}{\partial x} ( (1- \rho) \rho) = 0 = \frac{\partial \rho}{\partial t} + ( 1- 2 \rho) \frac{\partial \rho}{\partial x} = 0
+$$
+If the pilot flies at speed $\lambda = 1- 2 \rho$ then $\frac{d \rho}{ds} =0$ and so $\rho =$ const. So $\lambda $ is the characteristic speed of the problem. We have reduced the pde to ode by choosing this moving view point. When characteristics intersect we get a shock. These two different traffic densities are producing the same flux as we still must have continuity so we have:
+$$
+ \rho_l ( u_l - u_s) = \rho_r( u_r - u_s)
+$$
+ so in this particular case of constant traffic desnities on each side of the shock we get:
+ $$
+ u_s = 1 - (\rho_r + \rho_l) = \frac{1}{2} (\lambda_r + \lambda_l)
+ $$
+\end{document} 
