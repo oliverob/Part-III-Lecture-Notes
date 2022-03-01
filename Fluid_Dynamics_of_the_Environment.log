@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 FEB 2022 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  24 FEB 2022 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -724,20 +724,264 @@ Underfull \hbox (badness 10000) in paragraph at lines 977--980
 
  []
 
-[30] (./Fluid_Dynamics_of_the_Environment.aux) ) 
+./Fluid_Dynamics_of_the_Environment.tex:994: Undefined control sequence.
+<argument> \partail 
+                    x
+l.994 ...tial t} + u \frac{\partial h}{\partail x}
+                                                   + h \frac{\partial u}{\pa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[30]
+./Fluid_Dynamics_of_the_Environment.tex:1004: Undefined control sequence.
+l.1004   x= x_0 + \zeta, t = t_0 + \lamdba
+                                          ^{-1} \zeta
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1012: Undefined control sequence.
+l.1012   \frac{du}{ds} + (u- \lamdba
+                                    ) \frac{\partial u}{\partial x} + g \fra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1014: Undefined control sequence.
+l.1014  multiply the first by $u - \lamdba
+                                          $ and the second by $h$ and add th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1018: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.1018 ...)^2 - gh = 0$ which occurs when $\lamdba
+                                                   = u \pm \sqrt{gh} = u \pm...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1020
+
+ []
+
+
+./Fluid_Dynamics_of_the_Environment.tex:1021: LaTeX Error: \begin{pmatrix} on input line 1021 ended by \end{matrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1021 ...gin{pmatrix} 1 & 0 \\ 0 & 1 \end{matrix}
+                                                   \begin{pmatrix} h \\ u \e...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Fluid_Dynamics_of_the_Environment.tex:1021: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.1021 ...gin{pmatrix} 1 & 0 \\ 0 & 1 \end{matrix}
+                                                   \begin{pmatrix} h \\ u \e...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Undefined control sequence.
+l.1028 ...rix} u & h \\ g & u \end{pmatrix} \being
+                                                  {pmatrix} h \\ u\end{pmatr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup 
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Extra }, or forgotten $.
+\endarray ->\crcr \egroup 
+                          \egroup 
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Extra }, or forgotten $.
+\endarray ->\crcr \egroup \egroup 
+                                  
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Extra \right.
+\endpmatrix -> \endmatrix \right )
+                                  
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+I'm ignoring a \right that had no matching \left.
+
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: LaTeX Error: \begin{document} ended by \end{pmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Missing $ inserted.
+<inserted text> 
+                $
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
+                                                   _x - \lambda \begin{pmatr...
+Things are pretty mixed up, but I think the worst is over.
+
+./Fluid_Dynamics_of_the_Environment.tex:1028: Missing $ inserted.
+<inserted text> 
+                $
+l.1028 ...x} \being{pmatrix} h \\ u\end{pmatrix} _
+                                                  x - \lambda \begin{pmatrix...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Fluid_Dynamics_of_the_Environment.tex:1030: Missing $ inserted.
+<inserted text> 
+                $
+l.1030  We then premultiply by $\bm q
+                                     ^T$ and we want to chose $\bm q$ so it ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[31]
+./Fluid_Dynamics_of_the_Environment.tex:1052: Undefined control sequence.
+l.1052   \bm q^T A = \lamdba
+                             \bm q^T B \iff \bm q^T ( A - \lamdba B) = \bm 0^T
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1052: Undefined control sequence.
+l.1052 ...dba \bm q^T B \iff \bm q^T ( A - \lamdba
+                                                   B) = \bm 0^T
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1072: Undefined control sequence.
+l.1072 ...matrix} u-\lambda & h \\ g & u - \lamdba
+                                                   \end{pmatrix} = \bm 0^T
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1076: Undefined control sequence.
+l.1076   | A - \lamdba
+                       B| = ( u- \lambda)^2 - g h = 0 \implies \lambda = u \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1089: Undefined control sequence.
+l.1089    (u-c) \frac{d}{ds} ( 2  c- i) & \lamdba
+                                                  = u -c\end{cases}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1093
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1123
+
+ []
+
+[33] [34] (./Fluid_Dynamics_of_the_Environment.aux) ) 
 Here is how much of TeX's memory you used:
- 1783 strings out of 478599
- 23231 string characters out of 5858101
+ 1785 strings out of 478599
+ 23244 string characters out of 5858101
  331266 words of memory out of 5000000
- 19669 multiletter control sequences out of 15000+600000
+ 19671 multiletter control sequences out of 15000+600000
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,7n,66p,1436b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,8n,66p,1436b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Fluid_Dynamics_of_the_Environment.pdf (30 pages, 321392 bytes).
+Output written on Fluid_Dynamics_of_the_Environment.pdf (34 pages, 332697 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 194 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

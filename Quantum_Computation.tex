@@ -813,4 +813,102 @@ Fix $k=3$. Consider a claus $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satsif
                                \section{Example Sheet 2}
 For Grover's search algorithm, if the indicator function is classically efficently computation then $I_G$ is implementable.\\\\
 Look at Part II course to recap coprimality conditions. They also show that to factor $N$ with constant probability it suffices to find an approximations $\xi$ to $\frac{s}{r}$ for random $s$ in range $[1,r)$ to $2m+1$ binary digits of accuracy with $m= O(\log N)$ s.t. $| \xi - \frac{s}{r} | < \frac{1}{2N^2}$\\\\
+\section{Lecture 13}
+The Hamiltonian is not $k$-local for $k$ constant it is of $\log N$ we will fix this today.
+\subsubsection{Making Hamiltonian $k$-local}
+What is responsibile for this non-locality effect is the clock-register. So we can reduce locality from $O(\log n)$ to 5 by making the clock unary. For $t=0$ we will write $\ket{0}^{\otimes T}$ for $t=1$ we write $\ket{1} \ket{0}^{\otimes T-1}$ for $t=3$ we write $\ket{11} \ket{0}^{\otimes T}$. When we had a binary format we used $\log(T)$ qubits in the unary format we will use $T$ qubits. This construction will require an extra bit that we will see shortly. Let's crite $C_t$ to denote the $t$-th qubit of the clock register. Now our hamiltonian $H$ has the following terms:
+$$
+H_{init} = \sum_{i=1}^s \ket{1} \bra{1}_i \otimes \ket{0} \bra{ 0}_{C_i}
+$$
+$$
+H_t = \frac{1}{2} ( I \otimes \ket{100} \bra{100}_{C_{t-1} C_t C_{t+1}} + I \otimes \ket{110} \bra{110}_{C_{t-1} C_t C_{t+1}} - U_t \otimes \ket{110} \bra{100}_{C_{t-1} C_t C_{t+1}} _ U^{\dagger}_t \otimes \ket{100} \bra{110}_{C_{t-1} C_t C_{t+1}})
+$$
+$$
+H_{final} = \ket{0} \bra{0}_T \otimes \ket{1} \bra{1}_{C_T}
+$$
+Need an extra term to penalise clock registers that do not confrom to the unary format:
+$$
+H_{clock} = \sum_{t=1}^{T-1} \ket{01} \bra{01} _{C_t C_{t+1}}
+$$
+$$
+H = H_{init} + \sum_{t=1}^T H_t + H_{final} + H_{clock}
+$$
+So each term accesses at most 5 qubits, so this is a 5 local hamiltonian. What is the smallest $k$ and still retain $QMA$ completeness. $k$-local Hamiltonian is $QMA$-complete for $k=2$.
+\subsubsection{QMA-complete problems}
+Fairly exhaustive list in a paper by A Bookatz arxiv 1292.6312. We won't really look through many of them but we will think about a few interesting problems.\\\\
+\textbf{Non-identity check}: Given a poly(n)-sized quantum circuit $U$ on n qubits. We want to determine whether $U$ is not close to the identity up to some global phase:\\
+1) accept if $\forall \phi \in [0,2\pi]$ $||U - e^{i \phi} I|| \geq b$ or\\
+2) reject if there exists $\phi in [0, 2\pi]$ s.t. $|| U - e^{i \phi} I|| \leq a$.\\
+This comes with a promise that one of the above options holds and $b- a \geq \frac{1}{poly(n)}$\\\\
+\textbf{Excited k-local hamiltonian}: For some fixed constant $c$ and given a $k$-local Hamiltonian $H$ on n qubits. We want to determine whether:\\
+1) ACCEPT: The $c$-th eigenvalue of $H$ is $\leq a$\\
+2) REJECT: the $c$-th eigenvalue of $H$ is $\geq b$\\
+Have promise that one of these cases hold and $b-a \geq \frac{1}{\poly(n)}$.\\\\
+Many Hamiltonians that correspond to real physical systems are QMA-complete so studying the behavoiur of these systems is also hard on a quantum computer. An example of this is a 2-local Ising model $H_{zzxx} = \sum_{i=1}^n h_i Z_i + \sum_{i=1}^n \Delta_i X_i + \sum_{i,j=1}^n J_{ij} Z_i Z_j  + \sum_{i,j =1}^n K_{ij} X_i X_j$ for real $h_i, \Delta_i, J, K$. Also true for 2D Heisenberg model or the Rose-Hubbard model.\\\\
+\textbf{Group non-membership: Problem that is in QMA, but not known to be QMA-complete}:\\
+Given a finite group $G$, subgroup $H < G$, an element $g \in G$ and determine whether:
+1) $g \cancel \in H$\\
+2) $g \in H$\\
+\subsection{Harrow-Hassidian-Lloyd (HHL)}
+Quantum algorithm for solving linear systems of equations. We want to solve the linear system of equations: $A\bm x = \bm b$, $\bm b, \bm x \in \mathbb{C}^N$ where dimensions $N$ is potentially very large $N=2^n$ or let $2^n$ be the least power of 2 that is greater than $N$. Rather than outputting the full solution $\bm x$ itself whihc would take at least $O(N)$ time we want to compute suitable approximations to the value of properties of the solution $x$ such as quadractic expression $\bm x^TM \bm x$ (e.g. the total weight of some subset of components).\\\\
+Very large systems becoming increasingly important in applications:\\
+- data mining/machine learning on datasets that are very large (petabytes...) to discover pattern properties within the data\\
+- numerical solutions to PDEs. Use discretisation techniques (finite element methods). These techniques lead to systems that have the size for larger than the original problem description. \\\\
+The best known classical techniques take poly(N) times to solve such problems - in general even to compute the properties of the solutions, no better method is known than computing solutions itself. \\\\
+Important parameters/for both classical and quantum algorithms\\
+- the system size $N$\\
+- the desire approximation tolerance $\epsilon$\\
+- the condition number $\kappa$ of the matrix $A$ is defined as $\kappa = | \frac{\lamdba_{max}}{\lambda_{min}}|$ (this tells us how close $A$ is to being non-invertible)\\\\
+If we renormalise $A$ to have $\lambda_{max} =1$ then $\lamdbda_{min} = \frac{1}{\kappa}$. This is important as the numerical comptation of $A^{-1}$ becomes less stable with increasing $\kappa$. This means we need more significant digits of computation.
+\section{Lecture 15}
+This algorithm has been improved a lot of times, including as recently as last year. So the exponential improvement in error scaling from $\frac{1}{\epsilon}$ to $\log \frac{1}{\epsilon}$ was shown in Childs, Kothan, Smomann in 2015.\\\\
+We have an $N$-dimensional space of $n = \log N$ qubits. Let $\{\ket{i} : i = 0,..., N-1\}$ be the computational basis. Let eigenvectors and corresponding eigenvalues of $A$ be: $\ket{u_j} $ and $\lambda_j$ for $j = 0,...,N-1$. We being by implementing RHS $\ket{b}$ and consider it in the eigenbasis of $A$, $\ket{b} = \sum_{i=0}^{N-1} b_i \ket{i} = \sum_{i=0}^{N-1} \beta_j \ket{u_j}$. Then $\ket{x} = A^{-1} \ket{b} = \sum_{j=0}^{N-1} \beta_j \frac{1}{\lamdba_j} \ket{u_i}$. THis transformation of $\ket{b}$ is linear  but not unitary so it cannot be implemented as a quantum operation. To achieve it probabilitistic we will use the phase estimation alogirhtm for $U= e^{iA}$ with the exponential (and all its powers need for PE) implemented by Hamiltonain simuluation. Then a post-selected measurement process will achieve the descired unitary transformation.\begin{itemlist}\item  PE with hamiltonian simulation (both assumed to work perfectly) give $$\ket{b} \ket{0} \rightarrow \sum_j \ket{\beta_j} \ket{u_j} \ket{\lambda_j}$$\\
+                \item Next we will adjoin an extra ancilla qubit $\ket{0}$ and apply the controlled rotation ( controlled by $\ket{\lamdba_j}$ register)\\
+                \item C-rotation does 
+                        $$
+                        \ket{\lambda_j} \ket{0} \rightarrow \sqrt{1 - \frac{c^2}{\lambda^2_j}} \ket{\lambda_j} \ket{0} + \frac{c}{\lambda_j} \ket{\lambda_j} \ket{1} = \ket{\lamdba_j}( \cos \theta_j \ket{0} + \sin \theta_j \ket{1})
+                        $$
+                        here $c$ is chosen to have $c \leq \min_j |\lambda_j|$  ($c = \frac{1}{k}$ for definteness).\\\\ $\theta_i \in (- \frac{\pi}{2}, \frac{\pi}{2})$ and $\theta_i = \arcsin \frac{c}{\lambda_i}$ which is determined by the content of the $\ket{\lambda_j}$ register\\\\Controlled roation is a fixed operation on $n+1$ qubits (independent of $A$ or $b$) that can be implemented by a poly(n) circuit of 1 and 2 qubit gates.\\
+                \item Apply controlled rotation:
+                        $$
+                        \sum_{j=0}^{N-1} \beta_j \sqrt{1- \frac{c^2}{\lambda_j^2}} \ket{u_j} \ket{u_j} \ket{0} + \beta_j \frac{c}{\lambda_j} \ket{u_j} \ket{\lambda_j}\ket{1}
+                        $$
+                        We want the part associated with ancilla in state $\ket{1}$. This step is the post-selection step.\\
+                \item We measure the ancilla (hoping to get the result 1) with probability $$p = || \sum_j \beta_j \frac{c}{\lambda_j} \ket{u_j} \ket{ \lamdba_j} ||^2 = \sum_j |\beta_j \frac{c}{\lamdba_j}|^2 = \frac{1}{k^2} \sum_j |\frac{\beta_j}{\lambda_j}|^2 \geq \frac{1}{k^2}$$ as $\sum_j |\beta_j|^2 =1$ and $\frac{1}{\lambda_j} \geq 1$. In this case the post-measurment state is:
+                        $$
+                         \ket{\gamma} = \frac{1}{\sqrt{p}} c \sum_{j=1}^{N-1} \frac{\beta_j}{\lamdba_j} \ket{u_j} \ket{\lambda_j}
+                        $$
+                        To mitigate the probabilsitic nature of this process and obtain the state with any fixed proability with $1-\eta$ for $\eta >0$ and $\eta$ small. We can repeat the whole process $\frac{\log \frac{1}{\eta}}{p} = O(k^2)$ times and the outcome 1 will occur at least once with probability $1- \eta$.\\\\
+               \textbf{Fact}: If a signle trial has success probability $p$ and we repeat the trial $M$ times independantly then for any $0 < 1- \epsilon< 1$  Prob( at least on trial in M succeeds) $> 1- \epsilon$ if $M \geq \frac{- \log \epsilon}{p}$.\\\\
+        Remark (amplitude amplification): the $O(k^2)$ repetitions needed to generate $\ket{\gamma}$ can be improve to $O(k)$ by using AA instead of repreated measurements.\\
+\item Having obtained $\ket{\gamma}$ we run the inverse phase estimation process to "uncompute" or "erase" the $\ket{\lambda_j}$ register resetting it to $\ket{0}$ and get $\ket{\hat x} = \frac{c}{\sqrt{p}} \sum_{j=0}^{N-1} \frac{\beta_j}{\lamdba_j} \ket{u_j} = \frac{c}{\sqrt{p}}\ket{x}\\
+\item Finally, we will perform a measuremnt of observable $M$ on $\ket{\hat x}$ to estimate its mean value $\frac{c^2}{p} \bra{x} M \ket{x}$.\\\\
+        According to Chernofl-Hopffling bound (look this up in lecture notes) $O(\frac{\log \frac{1}{\eta}}{\xi^2}$ measurements will suffice to estimate the meant to any desired accuracy $\xi$ with any probability of success $1- \eta$. Similarly we can estiamte the prob $p$ in the post-selection step to any accuarcy $\xi$ by applying C-H bound to the ancilla measurment outcome. As the ancilla measuremnt outcome is a random variable with two outomces 0 and 1, so finding the mean of this variable gives p. Using these values of $\frac{c^2}{p} \bra{x} M \ket{x}$ and $p, c= \frac{1}{k}$ we get out our value $M= \bra{x} M \ket{x}$.
+ \end{itemlist}
+ \section{Lecture 15}
+ Let's stop and think about HHL a little bit more. We have considered the ideal situation but we now want to consider how it is effected by approxiamtion errors
+ \subsubsection{Summary analysis of approxiamtion erros and runtime in HHL (non-examinable)}
+ A full analysis of runtime and approximation errors can be found in Physical Review Letters vol 103.150502 (2005).\\
+ We assume we can make $\ket{b}$ correctly (the reason we don't want to focus on this is the issue of creating $\ket{b}$ is an orthongonal process to HHL and should be considered separately so introduces no errors). Similarly, the controlled rotation C-ROT is a final unitary (it can be efficently implemented using some universal gate set by Solovay-Kitaev theorem)\\
+ We will assume that C-rotations can be done exactly\\
+ Convsider the phase estimation part. PE for a unitary $U$ and $n$ qubit lines gives an estimate of $\lambda$ up to $n$ bits of precision. Denote this estimate $\lambda'$ and assume that it is the closest n-bit approximation $\lambda'$ is $\lamdba$ up to additive error $\eta = \frac{1}{2^n}$\\
+                       The PE process uses Hamalitonian simulation that requires execution of controlled $U$, $U^2$, $U^4$,...,$U^{2^{n-1}}$ If $U = e^{iA}$ then $C-U = e^{i \tilde A}$ with $\tilde A = \begin{pmatrix} 0 &|& 0 \\ -& & - \\ 0 & |& A \end{pmatrix}$. $\tilde A$ remains $s$-sparse and row-computbale if $A$ was. \\\\
+                       Thus we need to implement the following $e^{i \tilde A t}$ for $t = 1,2,4,..., 2^{n-1}$ which is done using hamiltonian simualtion for s-spare matrices with circuit size $O(\log N t s^2)$. So the total circuit size $O(\log N t_0 s^2)$ where $t_0 = 1 + 2 + ... + 2^{n-1} \sim 2^n = \frac{1}{\eta}$. \\\\
+                       After the controlled rotation $C_{rot}$ using the $\lambda$'s produced and the corresponding measuremtn in post-selction step the final state is:
+                       $$
+                        \ket{\hat x'} = \frac{1}{D'} \sum_j \frac{c}{\lambda'_j} \ket{u_j}, D' = \sqrt{p'} = \sqrt{ \sum_j |\beta_j|^2 \frac{c^2}{\lamdba_j}}
+                       $$
+                       $\ket{\hat x}$, $D$, $p$ - will denote the expressions with $\lambda'$s replaced by true $\lambda$ values. Our requirement is that $\ket{\hat x}$ should be wihtin $\epsilon$ of $\ket{\hat x}$ so we need to choose a suitably large $t_0 = \frac{1}{\eta}$ ( number of qubit lines). To establish dependenace of $t_0$ on $\epsilons$ we need the following facts:\\
+                       a) If $\lambda$ has additive error $\delta(\lamdba) = \eta$ then $\frac{1}{\lambda}$ has $\delta( \frac{1}{\lambda}) \sim \frac{1}{\lambda} \delta(\lambda)$ so $\frac{1}{\lambda}$ has relative error $\frac{\delta( \frac{1}{\lambda})}{\frac{1}{\lamdba}} = \frac{\eta}{\lamdba}$\\
+                       b) If $A'$ and $B'$ approximate $A$ and $B$ to relative error $\xi$ then $\frac{A'}{B'} $ approximates $\frac{A}{B}$ to relative error $\xi$ too $\frac{A'}{B'} = \frac{A( 1+ O(\epsilon))}{B( 1+ O(\epsilon))} = \frac{A}{B}( 1+ O(\epsilon))$\\\\
+                       By $(a)$ $\frac{1}{\lambda'_j}$ approximates $\frac{1}{\lambda_j}$ to relative error $O(\frac{q}{\lambda_j})= O(Kq)$. Similarly $D'$ approximates $D$ to relative error $O(Kq)$. Then by $(b)$ $A' = \frac{\beta_j c}{\lambda'_j}$, $\beta' = D'$ the ampltitudes of $\ket{\hat x'}$ approximate those of $\ket{\hat x}$ up to multiplicative error $O(Kq)$.
+                       $$
+                        || \ket{\hat x'} - \ket{\hat x}|| = || ( 1+ O(k\eta)\ket{\hat x} - \ket{\hat x}|| = O(kq) = \epsilon
+                       $$
+                        for a given $\epsilon$ we choose $kq = \epsilon, t_0 = \frac{1}{\eta}$ we gget $t_0 = \frac{k}{\epsilon}$ and the PE step (run once) has runtime $O(\log N t_0 s^2) = O(\log N \frac{k}{q} s^2)$ for $k = poly \log N$ so runtime is $O(poly \log N) \frac{1}{\epsilon})$.\\\\
+                        \textbf{Further comments on erros and runtime}:\\
+                        In the above analysis we assumed that the PE process (with $n$ qubits outputs the closest n-bit approximation $\lambda'$ to $\lambda$ whereas it outputs a superposition of all $\lambda_k$ = \lambda' \pm \frac{k}{2^n}$ (peaked around $k=0$) which is another source of error. TO mitigate this we use PE(b), use more qubit lines to get clsoer approxiamtion with anu high probability. \\\\
+                        In the HHL paper they use a slighly improved PE which uses non-uniform superposition state at the start. It may be shown that an optimal choice of this non-uniform superposition can lead to a quadratic reduciton in the variance of the $k$-value outcomes. In other works $\delta(\lambda)$ is more concentrated on smaller vlaues.\\\\
+                        In the HHL paper, the authors present an algorithm that can handle all conditioned matrices A by introducing a further qubit "flag" and filtering functions to separate well and ill conditioned parts of $A$ and processing the former. \\\\
+                        In the HHL algorithm the PE step is the soruce of the worst accuracy depdnance $O(\frac{1}{\epsilon}$. This was ubsequently improved  by Berry et all arXiv 1212.1414 from $O(\frac{1}{\epsilon} \rightarrow O(\log( \frac{1}{\epsilon})$ this technique invovles rpelacing PE process by an entirely different method for implementing $A^{-1}$ . This new method is called "linear combinations of unitaries" (LCU). Implementing $A^{-1}$ as a linear combination of unitaries each of which is individually implmented. Then we represent the linear sum in terms of another unitary $V$ on a larger space with extra ancilla qubits. 
                        \end{document}

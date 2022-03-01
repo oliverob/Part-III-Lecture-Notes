@@ -1114,6 +1114,237 @@ $$
   $$
   so if we let $y_i = sx_i$ we get:
   $$
-  G_{\Lambda}^{(n)} ( \frac{y_1}{s},..., \frac{y_n}{s}; g(\Lamdba)) = ( \frac{Z_{s\Lambda}{Z_{\Lambda}} s^{d-2} )^{n/2} G_{\Lambda}^{(n)}(y_1,..,y_n; g(s\Lambda))
+  G_{\Lambda}^{(n)} ( \frac{y_1}{s},..., \frac{y_n}{s}; g(\Lamdba)) = ( \frac{Z_{s\Lambda}}{Z_{\Lambda}} s^{d-2} )^{n/2} G_{\Lambda}^{(n)}(y_1,..,y_n; g(s\Lambda))
   $$
+  \section{Example Sheet 2}
+  We know that $S[\phi]$ is a phase so it must be dimensionless and as $[d^d x] = -d$ we must have $[\frac{1}{2} (\partial \phi)^2 + ..] =d$ and as $\partial$ has length dimension -1 it must have mass dimension 1 so $[\phi] = \frac{d}{2} -1$.\\\\
+  The argument of $\log$ or $\exp$ must always be dimensionless which is important when expanding out things like $(\frac{\Delta^2}{4 \pi \mu^2})^{- \epsilon}{2}$.\textbf{ So you need to bring the $\mu^{\epsilon}$ inside the integral before you expand out anything so you only ever expand dimesnionless quantities.}\\\\
+  Super useful forumula!:
+  $$
+   \int \frac{d^d l}{(2\pi)^d} \frac{l^{2a}}{(l^2+ \Delta)^b} = \frac{ \Gamma( b - a -\frac{d}{2}) \Gamma ( a + \frac{d}{2})}{ ( 4 \pi)^{d/2} \Gamma(b) \Gamma( d/2)} \Delta^{-(b-a - \frac{d}{2}}
+  $$\\\\
+  \textbf{Finally figured out how to think of symmetry factors!!!}: First label the half edges leaving a vertex and then draw the directions of the propogators. If you can swap propogators and half edges at the same time to create a diagram that looks exactly the same (by the same we mean the same edge maps to the same leg and they are topologically equivalent (no twists or knots)). For an example look at the back of the first pad of paper in blue folder.
+  \section{Lecture 14}
+  $$
+  G_{\Lambda}^{(n)} ( \frac{y_1}{s},..., \frac{y_n}{s}; g(\Lamdba)) = ( \frac{Z_{s\Lambda}}{Z_{\Lambda}} s^{d-2} )^{n/2} G_{\Lambda}^{(n)}(y_1,..,y_n; g(s\Lambda))
+  $$
+  On the LHS external points get further apart as $s$ decreses from 1, whereas the coupling is fixed. On the RHS, the external points are fixed and the coupling runs to lower momentum scale. This us whether interactions appear stronger or weaker at longer distances. Forces like QED have couplings get weaker at longer distances whereas QCD gets stronger at longer distances. So QCD is a strong theory, but at short distances it becomes weakly coupled and perturbation theory starts to work.\\\\
+  Now lets investigate the prefactor a bit more. If we know that the mass dimension of $G^{(n)}$ in $n ( \frac{d}{2} -1) = < \phi(x_1)... \phi(x_n) >^{conn}$. We want to expand this prefactor about small $\delta s = 1-s$:
+  $$
+   f(s) = ( \frac{Z_{s\Lamdba}}{Z_{\Lamdba}} s^{d-2} )^{\frac{1}{2}} = f(1) - f'(1) \delta s 
+  $$
+  can write 
+  $$
+   f'(s) = f(s) \frac{d}{ds} \log f(s) = f(s) ( \frac{d+2}{2s} + \fra{1}{2s} s \frac{d}{ds} \log Z_{s\Lambda})
+  $$
+  $$
+   \gamma_{\phi} = \frac{1}{2} \Lambda' \frac{d}{d\Lambda'} \log Z_{\Lambda'} = \frac{s}{2} \frac{d}{ds} \log Z_{s \Lambda}
+  $$
+  Then 
+  $$
+   ( \frac{Z_{s \Lambda}}{Z_{\Lambda}} s^{d-2})^{\frac{1}{2}} = 1 - \delta s( \frac{d-2}{2} + \gamma_{\phi})
+  $$
+  So our scaling dimension is defined as : $\Delta_{\phi} = ( \frac{d}{2} - 1) + \gamma_{\phi}$ which is the mass dimension of the field plus a correction (anomalous dimension of $\phi$.
+  \subsection{RG flow}
+  Now consider the different types of behaviour of this coupling flow, and we will see that things are connected to the scaling dimensions. We want to consider RG trajectories from $\Lambda_0$ to $\Lambda$ in coupling constant space governed by the $\beta$ functions.When we flow from one point in coupling constant space to another is by integrating out modes with the condition that low energy physics remains the same, so we can pick different initial positions but they will give the same family of flows with different laws of low energy physics. So theories lying on the same trajectory describe equivalent long distance physics (by construction).\\\\
+  Interestingly you can have fixed points of this flow, which are points in coupling constant space where all $\beta_i|_{\{g^*_j\}} = 0 \forall i$ vanish. \\
+  Recall:
+  $$
+   \beta_i ( \{ g_j\}) = (d_i - d) g_i + \beta^{qu}( \{ g_i\})
+  $$
+  There is always the trival ("Gaussian") fixed point with $g_i^* = 0 \forall i$. Free theory with no interactions. To have a non-trival fixed point we need some cancellation between the classical and quantum parts of the beta function. These will probably be a non-peturbative theory which means it is strongly interacting. We are going to look at behaviour near the trivial fixed point. A theory sitting at a fixed point has scale invariance as the $\beta$ functions don't move so the couplings don't run $g_i^*$ are independant of scale. So all functions of these couplings are also independant of scale $\Lambda$ (e.g. $\gamma_{\phi} ( g_i^*) = \gamma_{\phi}^*$. The Callum Sysm equation simplifies for e.g. $G^{(n)}$ so the explict scale dependance of $G$:
+  $$
+   \Lambda \frac{\partial}{\partial \Lambda} G_{\Lambda}^{(2)} (x,y) = - 2 \gamma_{\phi}^* G_n^{(2)} (x,y)
+  $$
+Assume we are working in a theory with translational invariance so the two point function only depends on the distance between two points:
+$$
+ G^{(2)} (x,y) = G^{(2)} (|x-y|)
+$$
+Like $<\phi(x) \phi(y)>$ $G^{(2)}$ has mass dimension of $d-2$, so we have to have:
+$$
+G^{(2)}_{\Lambda} (x,y; g_i^*) = \frac{\Lambda^{d-2}}{ \Lambda^{2 \Delta_{\phi}}} \frac{1}{|x-y|^{2 \Delta_{\phi}}}
+$$
+where $\Delta_{\phi} = \frac{1}{2} (d-2) - \gamma_{\phi}^*$. The above is constructed to satisfy the C-S equation with the correct mass dimension. We see that:
+$$
+ G^{(2)}_{\Lambda} \sim \frac{1}{|x-y|^{2 \Delta_{\phi}}}
+$$
+ power-law decay which is very slow compared to exponential decay and this is characterisic of a scale invariant theory.\\\\
+ If we have a scale like a mass gap (some other scale in the problem) then this introduces some correlation length that gives us some exponential decay.\\
+ Note that in the theory with a mass scale $m$ then generically we expect that scale to come into correlation fucntions as:
+ $$
+ G^{(2)} \sim \frac{e^{-m |x-y|}}{|x-y|^{2 \Delta_{\phi}}}, m \sim \frac{1}{\zeta}$
+ $$
+ For correlation length $\zeta$.\\\\
+ Whilst we say power law for long distance QED or low energy gravity at short distances quantum corrections ruin that.\\\\
+ We now consider theories that have RG flows that go near fixed points (especially the guassian fixed point where the couplings are vanishing). We can linearise the RG equations near a fixed point:\\
+ Let $\delta g_j = g_j - g_j^*$ and then the equations become:
+ $$
+ \Lambda \frac{d g_i}{d\Lambda}|_{g_i^{\dagger} \delta g_j^*} = B_{ij} \delta g_j + O(( \delta g_j)^2
+ $$
+ Eigenvectors of $B$ are $\sigma_i$ with eigenvalues $\Delta_i - d$. $\Delta_i$ is the scaling dimension of $\simga_i$ which is a linear combination of $\{O_i\}$.\\
+ Now let's write down the linearised RG equations:
+ $$
+ \Lambda \frac{d \sigma_i}{d \Lambda} = ( \Delta_i - d) \sigma_i
+ $$
+ so the magnitude of our eigenvector is
+ $$
+ \sigma_i(\Lamdab ) = ( \frac{ \Lamdba}{\Lambda_0})^{ \Delta_i -d}\sigma_i( \Lambda_0)
+ $$
+ for some intitial $\Lamdba_0$ with $\Lambda < \Lamdba_0$. So we classify behaviour based on the signs of these exponents. First we will take the case $\Delta_i > d \implies \sigma_i ( \Lamdba) < \sigma_i( \Lamdba_0)$ so the flow is towards the fixed point where they don't effect things as they don't contribute any scales. Therefore this is called the irrelevant direction in coupling constant space.  In the case $\Delta_i < d \implies \sigma(\Lambda) > \sigma_i (\Lambda_0)$ then you flow away from that fixed point which we called relevant. Finally we have $\Delta_i = d \implies $ marginal so we must go to a higher order. \\\\
+ If we think about coupling constant space there will be a very large subspace of irrelevant couplings that is called the critical surface (this is infinite dimensional). It should contain the fixed points and is the surface that contains all the irrelevant couplings that flow to the fixed point.
+ \section{Lecture 15}
+ Corrections to previous lecture:
+ $$
+ \phi'(x') = s^{1 - \frac{d}{2}} \phi(x)
+ $$
+ $$
+J'(x')= s^{- \frac{d}{2} -1} J(x)
+ $$
+ Also from 
+ $$
+  \frac{\delta W}{\delta J} = - \Phi, \frac{\delta}{\delta J'(x')} = s^{1-\frac{d}{2}} \frac{\delta }{\delta J(x)}
+ $$
+\\\\
+Relevant couplings are ones that flow away form fixed points as we integrate out more modes, whereas irrelevant couplies flow towards fixed points. In theory we have many couplings that are relevant and irrelevant. If we imagine a critical surface in coupling constant space with a fixed point on it. On the surface the flow is all into the fixed point, however if we draw the renormalised trajectory perpendicular to the critical surface then flows near the cirtical surface will flow towards the fixed point and then away along parallel to the renormalised trajectory. 
+\subsubsection{Continiuum limit and renormalizability}
+Continium limit is considering if the theory is fine as $\Lambda_0 \rightarrow \infty$. The question of renormalizability is linked to the sensitivity of our initial couplings. There are three cases to consider:
+\begin{itemlist}
+\item Only irrelevant couplings. Then $g_i(\Lambda_0)$ lies on a critical surface. Flow to fixed point as $\frac{\Lambda_0}{\Lambda} \rightarrow \infty$. In this case the limit $\lim_{\Lambda_0} \rightarrow S_{\Lambda}^{eff}$ exists but it describes a scale invariant theory $g_i(\Lambda) = g_i^*$ so non renormalization conditions are needed to fix the couplings. These theories are called super renormalisable.\\
+        \item 'There is at least one relevant couplings'. Flow away from fixed point in a relevant direction but for generic intiial  $g_i(\Lambda_0)$ we flow away from fixed point so we lose control of the calculation, as we think the physics is described by somthing close to the fixed point. The solution to this is to careffully chose the intitial couplings $g_i(\Lamdba_0)$ closer to critical surface as $\Lambda_0 \rightarrow \infty$. Flowis slower near fixed point so $\frac{\Lambda_0}{\Lamdba}$ can become larger and yet $g(\lambda)$ is still clsoe to fixed point. We have to impose renormalisation conditions which are initial conditions that tune $g_i(\Lambda_0)$ closer to the critical surface. Usually we have a finite number of relevenat couplings so have a finite number of renormalisation conditions, and theories that behave like this we call renormalisable.\\
+        \item Irrelevant operators need to be tuned for correct description of physics ( Fermi theory with a neutron change into  a proton and a positron and an electron) Here we cannot allow flow into fixed point as $\Lambda_0 \rightarrow \infty$ does not give correct physics so non continumm limit exists. This is called a "nonrenormalizable" theory. There is normally a reason why. In pricniple, an infinite number of renoamlization conditions are needed, in practice using an expansion around small momenta or some other trick you can work with just a few operators up to some finite level of precision. 
+\end{itemlist}
+\subsection{Path integral quantization and symmetries}
+Symmetries led us to useful identities involving correlation functions. use schwinger-dyson equation to link to canonical quantization.
+\subsubsection{Schwinger-Dyson equations}
+\textbf{Free massless scalar field theory}
+$$
+ S[\phi] = \frac{1}{2} \int d^4 y \partial_{\mu} \phi \partial^{\mu} \phi = - \frac{1}{2} \int d^4 y \phi \partial^2 \phi
+$$
+Consider $< \phi(x)> = \frac{1}{Z} \int \mathfrak{D} \phi \phi(x) e^{-S[\phi]}$ and shift $\phi(x) \rightarrow \phi(x) + \epsilon(x)$. As we are integrating over the whole space this should be invariant:
+$$
+<\phi(x)> = \frac{1}{Z} \int \mathfrak{D} \phi ( \phi(x) + \epsilon(x)) \frac{1}{2} \int d^4 y ( \phi(x) + \epsilon(x)) \partial^2 ( \phi(x) + \epsilon(x))
+$$
+ Expand the exponential:
+ $$
+ e^{\frac{1}{2} \int d^4 y \phi  \partial^2 \phi} ( 1 + \frac{1}{2} \int d^4 z ( \phi \partial^2 \epsilon + \epsilon \partial^2 \phi))  = e^{\frac{1}{2} \int d^4 \phi \partial^2 \phi}( 1+ \int d^4 z \epsilon \partial^2 \phi)
+ $$
+ Then
+ $$
+  < \phi(x)> = \frac{1}{Z} \int \mathfrak{D} \phi e^{ - S[\phi]} ( \phi(x) + \epsilon(x) + \phi(x) \int d^4 z epsilon(z) \partial_z^2 \phi(z))
+ $$
+  so
+  $$
+\frac{1}{Z} \int \mathfrak{D} \phi e^{ - S[\phi]} (  \epsilon(x) + \phi(x) \int d^4 z epsilon(z) \partial_z^2 \phi(z)) = 0
+  $$
+  so as
+  $$
+   \epsilon(x) = \int d^4 z \epsilon(z) \delta^{(4)}(z-x)
+  $$
+  $$
+  \frac{1}{Z} \int \epsilon(z) \int \mathfrak{D} \phi e^{ - S[\phi]} ( \phi(x) \partial_z^2 phi(z) +\delta^{(4)}(z-z)) = 0
+  $$
+  therefore, we get the Schwinger-Dyson equation:
+  $$
+   \parital_z^2 < \phi(z) \phi(x)> = - \delta^{(4)} (z-x)
+  $$
+  Previous steps also work for larger $n$-point functions. e.g.
+  $$
+   \partial^2_z < \phi(z) \phi(x) \phi( y)> = - \delta^{(4)} (z-x) < \phi(y)> - \delta^{(4)} (z-y) < \phi(x)>
+  $$
+  Interactions 
+  $$
+  S= \int d^4 y ( - \frac{1}{2} \phi \partial^2 \phi + \mathfrak{L}_{int} [\phi])
+  $$
+  expand $\mathfrak{L}_{int} ( \phi+ \epsilon) = \mathfrak{L}_{int} [\phi] + \epsilon \mathfrak{L}'( \phi) + O(\epsilon^2)$ with $\frac{\delta \mathfrak{L}}{\delta \phi}$ so
+   $$
+    \partial_z^2 < \phi(z) \phi(x) > = < \mathfrak{L}'(\phi(z)) \phi(x) > - \delta^{(4)} (z-x)
+   $$
+   \section{Lecture 15}
+   \subsubsection{Schwinger-Dyson + generating functional}
+   $$
+    Z[J] = \int \mathfrak{D} \phi \exp \int d^4 y ( \frac{1}{2} (\phi+ \epsilon) \partial^2 ( \phi + \epsilon) - \mathfrak{L}_{int} (\phi + \epsilon) + J( \phi - \epsilon)) = \int \mathfrak{D} \phi \exp ( - \int d^4 y ( \mathfrak{L} - J \phi)) ( 1 + \int d^4 z \epsilon(z) ( \partial_z^2 \phi - \mathfrak{L}'_{int} + J) _ ...)
+   $$
+   so as $O(\epsilon)$ vanishes:
+   $$
+   \partial_z^2 \int \mathfrak{D} \phi \phi(z) e^{- \int d^4 y ( \mathfrak{L} - J \phi)} =\int \mathfrak{D} \phi ( \mathfrak{L}'_{int} - J) e^{- \int d^4 y ( \mathfrak{L} - J\phi)}
+   $$
+   $$
+    \partial_z^2 \frac{\delta Z [J]}{\delta J(z)} = \{ \mathfrak{L}'_{int} ( \frac{\delta}{\delta J(z)} - J(z) \} Z[J]
+   $$
+   Diffrentiatial equation for $Z[J]$.\\\\
+   Previously we did $\phi(x) \rightarrow \phi(x) + \epsilon(x)$ with completely general $\epsilon(x)$. In the next section we want to think of specific transformations that leave the action invariant:
+   \subsection{Symmetries and Wandi-Takashi identities}
+   Often $\epsilon(x) = \eta f(\phi, \partial \phi)$ with $\eta$ small. Under $\phi \rightarrow \phi + \epsilon$ we have $\mathfrak{L} \rightarrow \mathfrak{L} + \delta \mathfrak{L}$
+   with $\delta \mathfrak{L} = \frac{\delta \mathfrak{L}(y)}{\delta \phi(y)} \epsilon(y) + \frac{\delta \mathfrak{L}}{\delta ( \partial_a \phi(y))} \partial_a \epsilon (y)$\\\\
+   If we look at the variation of the aciton
+   $$
+   S = \int d^4 y \mathfrak{L}
+   $$
+   $$ 
+   \frac{\delta S}{\delta \epsilon(z)} = \int d^4 y \{ \frac{\delta \mathfrak{L}(y)}{\delta \phi(y)}  \delta^{(4)}(z-y) - \partial_{\mu} ( \frac{\delta \mathfrak{L}}{\delta ( \partial_{\mu} \phi) (y)} \delta^{(4)}(z-y)) = \frac{\delta \mathfrak{L}}{\delta \phi(z)} - \partial_{\mu} (\frac{\delta \mathfrak{L}}{\delta ( \partial_{\mu} \phi) (z)})
+   $$
+   $$
+    \delta \mathfrak{L}(y) = \parital_{\mu} ( \frac{\delta \mathfrak{L}}{\delta ( \parital_{\mu} \phi)}\epsilon(y)) + \frac{\delta S}{\delta \epsilon(y)} \epsilon(y) =  j^{\mu} (y)
+   $$
+    wiht $j^{\mu}(y)$ the Noether current of transformation. this all implies that:
+    $$
+     \partial_{\mu} j^{\mu} = \delta \mathfrak{L}(y) - \frac{\delta S}{\delta \epsilon(y) }\epsilon(y)
+    $$
+    Classically if field equation is satisfied then $\partial_{\mu} j^{\mu} = 0$\\\\
+    If we take our action and seperate out the interacting part as before:
+    $$
+     S= \int d^4 y ( - \frac{1}{2} \phi \partial^2 \phi + \mathfrak{L}_{int} (\phi))
+    $$
+    $$
+     \frac{\delta S}{\delta \epsilon(z)} = \frac{\delta \mathfrak{L}}{\delta \phi(z)} - \partial_{\mu} ( \frac{\delta \mathfrak{L}(z)}{\delta ( \partial_{\mu} \phi(z))} = \mathfrak{L}_{int}'(\phi) - \delta^2 \phi
+    $$
+    Look at S-D equation
+    $$
+     \partial_z^2 < \phi(z) \phi(x) > - < \mathfrak{L}_{int}' (\phi(z))> = - \delta^{(4)} (z-x)
+    $$
+    $$
+     < \frac{ \delta S}{\delta \epsilon(z)} \phi(x)> = \delta^{(4)} (z-x)
+    $$
+    If $\delta \mathfrak{L} = 0$ ( transformation is a symmetry of $\mathfrak{L}$):
+    $$
+    \partial_{\mu} j^{\mu} =  - \frac{\delta S}{\delta \epsilon} \epsilon 
+    $$
+    $$
+     \frac{\partial}{\partial Z^{\mu}}< j^{\mu}(z) \phi(x) < = - \delta^{(4)} (z-x) <\epsilon(x) >
+    $$
+    whic is hte Wadi-takahashi identity.\\\\
+    \subsubsection{Symmetry and effective actions}
+    Assume $\phi \rightarrow \phi'(x) = \phi(x) + \epsilon(x)$, $\epsilon(x) = \eta f( \phi, \partial \phi)$ leaves $\mathfrak{D} \phi e^{- S(\phi)}$ invariant. (in most cases these are also separately invariant but they don't need to be).
+    $$
+    Z[J] = \int \mathfrak{D} \phi' \exp ( - S[ \phi'] + \int d^4 x J(x) \phi'(x)) = \int \mathfrak{D} \phi e^{- S[ \phi] + \int d^4 x J \phi} ( 1 + \int d^4 x J(x) \epsilon(x) + ... ) = Z[J] ( 1 + ... ] \implies \int d^4 x J(x) < \epsilon(x)>_J = 0
+    $$
+    Now we have gone from a symmetry inside the path integral to now a relation involving expecation values. We turn this into the quatnum effective action\\
+    \textbf{Quantum effective action}
+    $$
+     \frac{\delta \Gamma[\phi]}{\delta \Phi(y)} = J_{\Phi}(y) \implies \int d^4 x \frac{\delta \Gamma[\Phi] }{\delta \Phi(x)} < \epsilon(x)>_{\Phi} = 0
+    $$
+    This imples that $\Gamma(\Phi)$ is invariant under $\Phi(x) \rightarrow \Phi(x) + < \epsilon(x)>_{\partial \Phi}$ which is the Slavnonv-Taylor identities. \\\\
+    If the transformation is actually lienar in the fields $\epsilon = \eta f( \phi, \partial \phi)$ is linear then we can bring the expecation value insdie
+    $$
+    < \epsilon(x)> _{\partial \Phi} = \eta < f( \phi, \partial \phi)>_{\partial \Phi}> = \eta f( \Phi, \partial \Phi)
+    $$
+    so $\phi \rightarrow \phi + \eta f( \phi, \partial \phi$ is a symmetry of S implies that $\Phi \rightarrow \Phi + \eta f(\Phi, \partial \Phi)$ is symmetry of $\Gamma$.
+    \subsection{Quantum Electrodynamics}
+    In Euclidian spacetime we have a classical action $S[\psi, \bar \psi, A] = \int d^4 x ( \frac{1}{4} F_{\mu \nu} F^{\mu \nu} + \bar \psi ( \cancel D + m) \psi$ with $\cancel D = \gamma^{\mu}( \partial_{\mu} - ie A_{\mu})$ and $F_{\mu \nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu}$
+    $$
+    Z = \int \mathfrak{D} \psi \mathfrak{D} \bar \psi \mathfrak{D} A e^{- S[ \psi, \bar \psi, A]}
+    $$
+     Gauge transform: $\psi(x) \rightarrow e^{i \alpha(x)} \psi(x)$, $\bar \psi \rightarrow e^{-i \alpha(x)} \bar \psi$ and $A_{\mu} \rightarrow A_{\mu} + \frac{1}{e} \partial_{\mu} \alpha(x)$
+     \\\\
+     Some stuff that is specific to eulcian spacetime:
+     $$
+      \{ \gamma_{\mu}, \gamma_{\nu} \} = 2 \delta_{\mu \nu}
+     $$
+      Choose convention such that $\gamma_{\mu}^{\dagger} = \gamma_{\mu}$ and they are expressed interm sof the Pauli matrices:
+      $$
+       \gamma_j = \begin{pmatrix} 0 & - i \simga_j \\ i \sigma_j & 0 \end{pmatrix}, \gamma_4 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} or \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+      $$
 \end{document}
+
+
+

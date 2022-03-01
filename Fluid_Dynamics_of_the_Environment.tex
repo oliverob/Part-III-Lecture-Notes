@@ -988,4 +988,192 @@ $$
  $$
  u_s = 1 - (\rho_r + \rho_l) = \frac{1}{2} (\lambda_r + \lambda_l)
  $$
-\end{document} 
+ \section{Lecture 14}
+ \subsection{Shallow water characteristic treatment}
+ $$
+  \frac{\partial h}{\partial t} + u \frac{\partial h}{\partail x} + h \frac{\partial u}{\partial x} = 0
+ $$
+ $$
+  \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + g \frac{\partial h}{\partial x} =0
+ $$
+ $$
+ x = x_0 + \lambda s, t = t_0 + s
+ $$
+ with stopwatch time $s$
+ $$
+  x= x_0 + \zeta, t = t_0 + \lamdba^{-1} \zeta
+ $$
+ with tape-measure distance $\zeta$.
+ As we have $\frac{\partial}{\partial t} = \frac{d}{ds} - \lambda \frac{\partial }{\partial x}$ so our equations transform to:
+ $$
+  \frac{dh}{ds} + ( u - \lambda) \frac{\partial h}{\partial x} + h \frac{\partial u}{\partial x} = 0
+ $$
+ $$
+  \frac{du}{ds} + (u- \lamdba) \frac{\partial u}{\partial x} + g \frac{\partial h}{\partial x} = 0
+ $$
+ multiply the first by $u - \lamdba$ and the second by $h$ and add them together to get:
+ $$
+ (u-\lambda) \frac{dh}{ds} - h \frac{du}{ds} + ( (u- \lambda)^2 - gh) \frac{\partial h}{\partial x} = 0
+ $$
+ To make into ODE set $(u- \lambda)^2 - gh = 0$ which occurs when $\lamdba = u \pm \sqrt{gh} = u \pm c$ as $\sqrt{gh} = c_p = c_g = c$ for long waves on stationary fluid.\\\\
+ Now lets do the same manipulations a bit differently using matrix formulism:
+ $$
+\begin{pmatrix} u & h \\ g & u \end{pmatrix} \begin{pmatrix} h \\ u \end{pmatrix}_x + \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{matrix} \begin{pmatrix} h \\ u \end{pmatrix}_t = 0
+ $$
+ $$
+  A \bm v _x + B \bm v_t = \bm f
+ $$
+ Using transformation $\frac{\partial}{\partial t} = \frac{d}{ds} - \lambda \frac{\partial}{\partial x}$:
+ $$
+\begin{pmatrix} h \\ u\end{pmatrix}_s + \begin{pmatrix} u & h \\ g & u \end{pmatrix} \being{pmatrix} h \\ u\end{pmatrix} _x - \lambda \begin{pmatrix} 1 &0 \\ 0 & 1\end{pmatrix} \begin{pmatrix} h \\ u \end{pmatrix}_x = 0
+ $$
+ We then premultiply by $\bm q^T$ and we want to chose $\bm q$ so it eliminates the RHS quantitiy
+ $$
+  \bm q^T ( A - \lambda B) = \bm 0^T
+ $$
+ Therefore we can think about the \textbf{general approach}. In general we have:
+ $$
+ A \bm v_x + B \bm v_t = \bm f
+ $$
+ These are quasi linear as $A = A(x,t, \bm v), B = B( x,t, \bm v), f = f(x,t \bm v)$. Consider a linear combination of equations:
+ $$
+  \bm q^T A \bm v_x + \bm q^T B \bm v_t = \bm q^T \bm f
+ $$
+ The observer $\bm v_s = \lambda \bm v_x + \bm v_t$. Take a linear combination of these as well:
+ $$
+ \bm m^T \bm v_s = \bm m^T ( \lambda \bm v_x + \bm v_t) = ?
+ $$
+ Compare these two equations it would make sense to equate the following:
+ $$
+\lambda \bm m^T = \bm q^T A, \bm m^T = \bm q^T B
+ $$
+ Then we can eliminate $\bm m$ from these coupled equations to give;
+ $$
+  \bm q^T A = \lamdba \bm q^T B \iff \bm q^T ( A - \lamdba B) = \bm 0^T
+ $$
+ This is our generalised left-hand eigenvalue problem. For a non-trial solution we need:
+ $$
+  |A- \lambda B| = 0
+ $$
+This is how we chose $\lambda$. We can now go back in the other direction as we also know that :
+$$
+ \bm  m^T \bm v_s = \bm q^T \bm f
+$$
+and
+$$
+ \bm m^T = \frac{1}{\lambda} \bm q^T A = \bm q^T B
+$$
+so
+$$
+ \bm q^T( A \bm v_s - \lambda f) = 0, \bm q^T ( B \bm v_s - \bm f) = 0
+$$
+If we very simply sketch what was happening to our simple shallow water, our eigenvalue problem is:
+$$
+ \bm q^T \begin{pmatrix} u-\lambda & h \\ g & u - \lamdba \end{pmatrix} = \bm 0^T
+$$
+ So need
+ $$
+  | A - \lamdba B| = ( u- \lambda)^2 - g h = 0 \implies \lambda = u \pm c, c = \sqrt{gh}
+ $$
+ We also have:
+ $$
+  \begin{pmatrix} 1 & q \end{pmatrix} \begin{pmatrix} \pm c & h \\ g & \pm c \end{pmatrix} = \bm 0 ^T
+ $$
+  so $\bm q^T = \begin{pmatrix} 1 & \pm \frac{c}{g} \end{pmatrix}$
+  $$
+   \bm q^T ( A\bm u_s - \lambda \bm f) = ( 1 \pm \frac{c}{g}) ( A \bm u_s - \lambda \bm 0) = 0
+  $$
+  Use $h = \frac{c^2}{g}$ and solving this gives:
+  $$
+   0= \begin{cases} (u +c ) \frac{d}{ds} ( 2c + u) & \lambda = u + c\\
+   (u-c) \frac{d}{ds} ( 2  c- i) & \lamdba = u -c\end{cases}
+  $$
+  $u \pm 2c$ = const on $\lambda = u \pm c$\\\\
+  \textbf{Higher-order equations}:
+  $$
+  \frac{\partial^2 \eta}{\partial t^2} + \gamma \frac{\partial^2 \eta}{\partial x^2} = 0
+  $$
+  Let $v = \frac{\partial \eta}{\partial x}$ and $w = \frac{\partial \eta}{\partial t}$ then:
+  $$
+   \frac{\partial v}{\partial t} - \frac{\partial w}{\partial x} = 0
+  $$
+  $$
+   \frac{\partial w}{\partial t} - \gamma \frac{\partial v}{\partial x} = 0
+  $$
+  for $\lambda = \pm \gamma^{\frac{1}{2}}$.
+  \subsubsection{Implications of being hyperbolic}
+  What makes things hyperbolic? Well we required that $|A- \lambda B| = 0$ and it is hopefully obvious that if $\lambda$ is representing a trajectory in space time then we need real eigenvalues.
+  $$
+  \bm q^T ( B \bm u_s - \bm f ) = 0
+  $$
+  If we want to form the ODE along these characteristics we need to know the eigenvectors so we can form two ODEs. So we need a complete set of eigenvectors. There will be some ocassions with repeated eigenvalues but still have a full set of eigenvectors. If we cannot find a full set of eigenvalues the problem is not hyperbolic. The eigen values (velocity) are telling us how the information is propogating. There is an anaolgy between shallow water and compressible gas:\\
+  For compressible gas we ahve the Mach number:
+  $$
+  M = \frac{\text{velocity}}{\text{speed of sound}}
+  $$
+In the case of shallow water the equivalent is the Froude number :
+$$
+ F_r = \frac{\text{fluid velocity}}{\text{wave speed}} = \frac{u}{c} = \frac{u}{\sqrt{gh}}
+$$
+We are cosndiering if the information can propogate in two directions or just one direction. If the fluid is moving fast enough then the waves will only every propogate in the direction of the flow.\\\\
+If $|F_r| <1$ then waves can propogate in both directions (subcritical flow)\\
+If $|F_r|>1$ the waves can only propogate in one direction ( supercritical flow)\\
+If $|F_r| =1$ then flow is critical so either $\lambda^+ = u + c$ or $\lambda_ = u -c$ are zero. One ( or both) of the the waves do not propogate relative to the observer.\\\\
+Imagine we know the initial speed and depth at two points then we can follow the characteristics leaving these points and meeting at a point. We can find the new speed and depth by considering the conservation along these characteristics :
+$$
+ u_1 + 2 c_1 = u_a + 2 c_a, u_1 - 2c_1 = u_b - 2c_b
+$$
+so 
+$$
+ u_1 = \frac{1}{2} ( u_a + u_b) + (c_a - c_b)
+$$
+$$
+ c_1 = \frac{1}{4} ( u_a - u)b + \frac{1}{2} (c_a + c_b)
+$$
+Zone of dependance fo $u_1,c_1$ is everything between $u_a, c_a$ and $u_b, c_b$. The zone of influce is future times between $\lambda_+ = u+c$ and $\lambda_- = u-c$ characteristics.
+\subsubsection{The Saint-Verant dam-break problem}
+This is an example of the Riemann problem. If we have a dam of depth $H$ and length $L$ if we move one of the walls away at an accelerating rate $V$, at what point does the water not keep up with the dam.
+On $C^+$ we have $\lambda_+ = u+c$ and at initial time $u + 2c = 2 c'$. So as $c= \sqrt{gH} >0$ so the maximium value that $u$ can have is $2c'$ when we ahve $c=0$ and therefore $h=0$. So when $V = 2c'$ the water will no longer be able to keep up. Everywhere before that point the $C^+$ characteristics will be able to reach the dam, so we will be able to figure out the depth of the water at the dam by using $u= V$ and $u+c = 2c'$. Therefore, we can figure out the value of $\lamdba_-$ at every point on the dam, and therefore as $u+2c$ is constant everywhere and $u-2c$ is constant along $C^-$ we have $u$ and $c$ are constant along $C^-$ so the line is straight. It is nice to think of $C^-$ as $C^+$ characteristics reflected off the dam.\\\\
+If we shrink this accelerating movement down to nothing to model an instaneous removal of the dam. Then the information about the removal of the dam will move backwards along characteristic $\lamdba_- = - c'$. We will have squeezed every point on the exapnsion fan to originate from the same point and as they are all straight this means the characteristics are $\lambda_- = \frac{x}{t}$. We can start to build up the solution as along $\lambda_- = u-c$ we have $u-2c = -2c'$ in the quiecent region and along $\lambda_+ = u+c$ we have $u+2c = 2c'$ everywhere in the fluid. The fastest moving fluid is at the front with $u = 2 c'$ form limit $h \rightarrow 0, c \rightarrow 0$ so on $\lambda_+ = u + 2c = 2c'$ so $u \rightarrow 2 c'$. In the expansion fan $\lambda_- = \frac{x}{t}$ along which $u-c = \lambda_- = \frac{x}{t}$. So as $u -c = \frac{x}{t}$ and $u+ 2c = 2c'$ we have $3c = 2 c' - \frac{x}{t} \implies h = \frac{1}{9g} ( 2c' - \frac{x}{t})^2$.\\\\
+But do we see this for shallow water. We predicited its maximium velocity at the thinnest point. We have also violated shallow water. At $t=0$ we have violated the assumption that $h$ and $u$ change only over length scales large compared to $H$. We have also ignored the desnity of the fluid above and ignored viscosity. \\
+What would be the effect of drag on the boundary. We have been assuming that $u \rightarrow 2 c'$  as $h \rightarrow 0$ with the st. vennant solution. In any real solution this is going to cause a problem, as soon as this causes a problem we are going to break shallowater as shallow ater requires tat the front goes smoothly to zero and $w$ is asymptotically small. If we actually have the velocity going to zero because of any drag what so ever at the front we will end up with a stagnation point forming at the front. This means a discountity in slope must be forming at the front then this requires vertical acceleration of the fluid and this violates the shallow ater assumptions. If we did an expirment of water into air you would find that you don't get an infintely thin film travelling on, though it is a thin front due to the large density difference.\\\\
+\textbf{Moving dam problem}\\
+Lets have the speed of the dam being less than $2 c'$. Now in this case when the charcteristics make it to the dam they are still going to have a non-zero height so the reflected ones can propogate backwards relative to the dam, and as everythign is propogating at constant speed, then all of these will be reflected with the same speed and same depth. So we get three areas the undisturbed fluid, the rarefaction wave travelling back and a region of constant depth at the front.\\\\
+Because of the constant depth region the Froude number of rthe dam is constant $Fr_f = \frac{u_f}{c_f}$. This can be used to characterise the problem.\\\\
+What if we were using a finite volume of fluid rather than the fluid behind the dame extending forever? Then you have the reflected rarefaction wave coming back towards the dam.
+\subsection{Gravity Currents}
+Brief description: They have some common features, they have a well defined front with large density gradients and there is often mixing behind the front at $Re >>1$. The no-slip boundary condition causes the ambinent fluid to be over run. THe no-slip condition means the fluid has to roll over the ground so it ends up over running some lighter fluid which sets up a static instability. THis means it ends up convecting and forming 'lobes and clefts'. So if we look from the front we start seeing wave like lobes and clefts. This is caused by the lighter fluid trying to rise up through the front. This part of the current is often refered to as the head, and in this region shallow water odes not strictly apply but it does work well in the 'tail'.\\\\
+Frontogensis - the formation of the front. Let's consider what would happen if we had a fluid that started dense on the left and as we moved to the right it gets less dense iwth $\frac{\partial \rho}{\partial x}|_{t=0} \neq 0$. If we make our lives simple and make it 2D then in the Bousseqs case the vroticity equation gives:
+$$
+ \frac{\partial \omega}{\partial t} + ( \bm u \dot \nabla) \omega = - \frac{g}{\rho_0}\frac{\partial \rho}{\partial x}
+$$
+           \section{Example sheet 1&2}
+           Can just state the vorticity equation in 2D and bousinesq case:
+           $$
+            \frac{\partial \zeta}{\partial t} + (\bm u \cdot \nabla) \zeta = - \frac{g}{\rho_0} \frac{\partial \rho}{\partial x} + \nu \nabla^2 \zeta
+           $$
+           with $\zeta = - \nabla^2 \psi$. If we wasn't bousinesq we have to worry about how we are doing the derivaties as we are taking teh curl of $\rho \frac{\partial u}{\partial t}$ and we will also get a $\nabla \rho \times \nabla p$. If it was 3D we would also have a $(\bm \zeta \cdot \nabla) \bm u$ term. It is worth actually doing this computation as it looks quite straight forward but unless you remember the write order it turns out to be a bit more of a can of worms.\\\\
+           $$
+           KE = \int_{-H}^{\eta} \frac{1}{2} \rho ( u^2 + v^2 + w^2)
+           $$
+           $$
+           PE = \int_{-H}^{\eta} \rho g z dz - \int_{-H}^{0} \rho g z dz
+           $$
+           $$
+            \bm F = \int_{-H}^{\eta} u(p + \rho gz) dz
+           $$
+           but what we really want is $KE = \int_{-H}^0 \frac{1}{2} \rho (u^2 + v^2 + w^2) dz$ as the $u, v, w$ already have $\eta$ baked in so the contribution from the bit at the top is another order of $\eta$ further down. No need to remember the results of these integrals as the book work parts of the question will almost always end in book work to make his marking easier.\\\\
+           $$
+            ( 2 \frac{\partial}{\partial \chi} + i \frac{\partial^2}{\partial \xi^2}) \psi_0 = f(\chi)
+           $$
+           The reason we can discard the $f(\chi)$ with $\zeta, \chi$ in direction of group velocity and $\xi$ in the prependicular direction. Is because we assume a plane solution in the $\zeta$ direction and so the integrating up from $( 2 \frac{\partial}{\partial \chi} + i \frac{\partial^2}{\partial \xi^2}) \frac{\partial \psi_0}{\partial \xi} = 0$ would average to zero.\\\\
+           For reflection questions draw a diagram with two incoming waves, and draw on all the wavevectors, wavelengths and group velcoity. Then resolve velocities so you have zero normal velocity at the surface. Express the distance between the points of impact interms of both wavelengths to get the relationship between the two of them. This is some standard exam question book work so make sure you can do this. Can quote:
+           $$
+            | \bm F| = \bar E |\bm c_g|
+           $$
+           We also know that the flux of energy is conserved per wavelength. \\\\
+           When thinking about attractors we can often simplify the algebra by noticing a symmetry, also standard practice to define $\beta = \frac{1}{\tan \theta}$ and therefore the line though a point has equation: $z= z_0 + \beta (x- x_0)$. In order to figure out the magnification factor either you figure out the slopes at the positions of the reflections and then use the $\gamma$ expressions or you could use the iterative forumla for getting back to the same position.\\\\
+           Make sure to always draw on wavevector to diagrams remembering it is prependicular to the group velocity, and it is often tidier to write $\bm k = |\bm k| (\cos \theta, - \sin \theta)$ than $\bm k = (k,m)$.\\\\
+           Refamilarise with stokes boundary layer condition from Fluids II. Remember form of solution.\\\\
+           When finding expressions for $|\bm k|$ to find envelopes remember that we need $|\bm k|$ so there are some values of $\theta$ that aren't possible. Equally remember to think about the direction of phase velocity of stationary waves, it must be in the same direction as the observer in order for them to exist.
+           \end{document} 
