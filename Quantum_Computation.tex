@@ -787,7 +787,7 @@ Fix $k=3$. Consider a claus $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satsif
                        $$H= H_{init} + \sum_{i=1}^T H_i + H_{final}$$
                        We should note that $H$ "follows" the state $\ket{\psi}$ and percribes penalties when deviating form $\ket{\psi_0}, \ket{\psi_1},..., \ket{\psi_T}$\\
                        $H$ also penalizes the zero output in the final measurement\\
-                       $C$-is an extra "clock$ register of $\log (T+1)$ qubits\\
+                       $C$-is an extra "clock" register of $\log (T+1)$ qubits\\
                        Check locality of $H$ is $k= \log (T+1) + 2 = O(\log (n))$. We will further reduce $k$ to a constant $k = 5$.\\
                        We need to check that we can distinguish $x\in L_1$ and $x \in L_0$ by looking at $\lambda_{min}$. \\\\
                        Consider first case when $x \in L_1$ this means that there exists a $p(n)$ qubit witness state $\ket{\psi}$ that makes $C_n$ accept with probability $1- \frac{1}{4T}$. Lets consider another state $\ket{\psi'} = \frac{1}{\sqrt{T+1}} \sum_{t = 0}^T \ket{\psi_t} \ket{t}$ this is a "History state". When we look at this state we want to evaluate the energy.
@@ -795,7 +795,7 @@ Fix $k=3$. Consider a claus $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satsif
                        This will show us completeness.\\\\
                        Now take $x \in L_0$. We want to show that $\lambda_{min}$ is at least $b=2a$. Consider any witness state $\ket{\psi'}= \sum_{t=0}^T \alpha_t \ket{\phi_t} \ket{t}$ with $\alpha_t \geq 0$ and $\{ \ket{\phi_t}\}$ is normalised. Then evaluate $$\bra{\psi'} H \ket{\psi'} = \frac{1}{2} ( \alpha^2_{t-1} + \alpha_t^2 - \alpha_{t-1} \alpha_t \bra{\phi_t} U_t \ket{\phi_{t-1}} - \alpha_t \alpha_{t-1} \bra{\phi_{t-1}} H \ket{\phi_t})$$
                        $$
-                       \bra{\psi'} H \ket{\psi'} = \frac{1}{2} || \alpha_t \ket{\phi_t} - \alpha_{t-1} U_t \ket{\phi_{t-1} ||^2
+                       \bra{\psi'} H \ket{\psi'} = \frac{1}{2} || \alpha_t \ket{\phi_t} - \alpha_{t-1} U_t \ket{\phi_{t-1}} ||^2
                        $$
                        We will be making several simplifying assumptions:\\
                        1) All $\alpha_t$s are $\frac{1}{\sqrt{T-1}}$\\
@@ -806,7 +806,7 @@ Fix $k=3$. Consider a claus $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satsif
                        $$
                        1 \leq || \ket{\phi_T} - C_n \ket{\phi_0} || = || sum_{t=1}^T U_T - U_{t-1} \ket{\phi_t} - U_T...U_t\ket{\phi_{t-1}}|| \leq \sum_{t=1}^T || U_T...U_t \ket{\phi_t} - U_T...U_t \ket{\phi_{t-1}}|| = \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||
                        $$
-                       Using the evaulation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}$:
+                       Using the evaulation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}}$:
                                $$
                                \bra{\psi'} H \ket{\psi'} = \sum_{t=1}^T \bra{\psi'} H_t \ket{\psi'} = \frac{1}{2} \frac{1}{T+1} \sum_{t=1}^T ||\ket{\phi_t} - U_t \ket{\phi_{t-1}} ||^2 \geq \frac{1}{2T(T+1)} ( \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||^2 ) \geq \frac{1}{2T(T+1)} = b
                                $$
@@ -862,7 +862,7 @@ Important parameters/for both classical and quantum algorithms\\
 If we renormalise $A$ to have $\lambda_{max} =1$ then $\lamdbda_{min} = \frac{1}{\kappa}$. This is important as the numerical comptation of $A^{-1}$ becomes less stable with increasing $\kappa$. This means we need more significant digits of computation.
 \section{Lecture 15}
 This algorithm has been improved a lot of times, including as recently as last year. So the exponential improvement in error scaling from $\frac{1}{\epsilon}$ to $\log \frac{1}{\epsilon}$ was shown in Childs, Kothan, Smomann in 2015.\\\\
-We have an $N$-dimensional space of $n = \log N$ qubits. Let $\{\ket{i} : i = 0,..., N-1\}$ be the computational basis. Let eigenvectors and corresponding eigenvalues of $A$ be: $\ket{u_j} $ and $\lambda_j$ for $j = 0,...,N-1$. We being by implementing RHS $\ket{b}$ and consider it in the eigenbasis of $A$, $\ket{b} = \sum_{i=0}^{N-1} b_i \ket{i} = \sum_{i=0}^{N-1} \beta_j \ket{u_j}$. Then $\ket{x} = A^{-1} \ket{b} = \sum_{j=0}^{N-1} \beta_j \frac{1}{\lamdba_j} \ket{u_i}$. THis transformation of $\ket{b}$ is linear  but not unitary so it cannot be implemented as a quantum operation. To achieve it probabilitistic we will use the phase estimation alogirhtm for $U= e^{iA}$ with the exponential (and all its powers need for PE) implemented by Hamiltonain simuluation. Then a post-selected measurement process will achieve the descired unitary transformation.\begin{itemlist}\item  PE with hamiltonian simulation (both assumed to work perfectly) give $$\ket{b} \ket{0} \rightarrow \sum_j \ket{\beta_j} \ket{u_j} \ket{\lambda_j}$$\\
+We have an $N$-dimensional space of $n = \log N$ qubits. Let $\{\ket{i} : i = 0,..., N-1\}$ be the computational basis. Let eigenvectors and corresponding eigenvalues of $A$ be: $\ket{u_j} $ and $\lambda_j$ for $j = 0,...,N-1$. We being by implementing RHS $\ket{b}$ and consider it in the eigenbasis of $A$, $\ket{b} = \sum_{i=0}^{N-1} b_i \ket{i} = \sum_{i=0}^{N-1} \beta_j \ket{u_j}$. Then $\ket{x} = A^{-1} \ket{b} = \sum_{j=0}^{N-1} \beta_j \frac{1}{\lamdba_j} \ket{u_i}$. THis transformation of $\ket{b}$ is linear  but not unitary so it cannot be implemented as a quantum operation. To achieve it probabilitistic we will use the phase estimation alogirhtm for $U= e^{iA}$ with the exponential (and all its powers need for PE) implemented by Hamiltonain simuluation. Then a post-selected measurement process will achieve the descired unitary transformation.\begin{itemlist}\item  PE with hamiltonian simulation (both assumed to work perfectly) give $$\ket{b} \ket{0} \rightarrow \sum_j \beta_j \ket{u_j} \ket{\lambda_j}$$\\
                 \item Next we will adjoin an extra ancilla qubit $\ket{0}$ and apply the controlled rotation ( controlled by $\ket{\lamdba_j}$ register)\\
                 \item C-rotation does 
                         $$
@@ -910,5 +910,146 @@ We have an $N$-dimensional space of $n = \log N$ qubits. Let $\{\ket{i} : i = 0,
                         In the above analysis we assumed that the PE process (with $n$ qubits outputs the closest n-bit approximation $\lambda'$ to $\lambda$ whereas it outputs a superposition of all $\lambda_k$ = \lambda' \pm \frac{k}{2^n}$ (peaked around $k=0$) which is another source of error. TO mitigate this we use PE(b), use more qubit lines to get clsoer approxiamtion with anu high probability. \\\\
                         In the HHL paper they use a slighly improved PE which uses non-uniform superposition state at the start. It may be shown that an optimal choice of this non-uniform superposition can lead to a quadratic reduciton in the variance of the $k$-value outcomes. In other works $\delta(\lambda)$ is more concentrated on smaller vlaues.\\\\
                         In the HHL paper, the authors present an algorithm that can handle all conditioned matrices A by introducing a further qubit "flag" and filtering functions to separate well and ill conditioned parts of $A$ and processing the former. \\\\
-                        In the HHL algorithm the PE step is the soruce of the worst accuracy depdnance $O(\frac{1}{\epsilon}$. This was ubsequently improved  by Berry et all arXiv 1212.1414 from $O(\frac{1}{\epsilon} \rightarrow O(\log( \frac{1}{\epsilon})$ this technique invovles rpelacing PE process by an entirely different method for implementing $A^{-1}$ . This new method is called "linear combinations of unitaries" (LCU). Implementing $A^{-1}$ as a linear combination of unitaries each of which is individually implmented. Then we represent the linear sum in terms of another unitary $V$ on a larger space with extra ancilla qubits. 
-                       \end{document}
+                        In the HHL algorithm the PE step is the soruce of the worst accuracy depdnance $O(\frac{1}{\epsilon}$. This was ubsequently improved  by Berry et all arXiv 1212.1414 from $O(\frac{1}{\epsilon} \rightarrow O(\log( \frac{1}{\epsilon})$ this technique invovles rpelacing PE process by an entirely different method for implementing $A^{-1}$ . This new method is called "linear combinations of unitaries" (LCU). Implementing $A^{-1}$ as a linear combination of unitaries each of which is individually implmented. Then we represent the linear sum in terms of another unitary $V$ on a larger space with extra ancilla qubits.
+                        \section{Lecture 16}
+                        \subsection{Clifford computations (and classical simualtion of QC)}
+                        Vague question, what is the key "quantum effect/resource/ingredient" giving quantum computing its benefits or advantage over classical computation.
+                        \subsubsection{Classical simulation of quantum computation}
+                        We are given classical description of the following:\\
+                        1) description of a quantum circuit $C$ which is just a collection of 1 or 2 qubit gates on $n$ qubits with size $N =$ poly(n).\\
+                        2) description of the input (e.g. $\ket{l_1...l_n}, l_k \in \{0,1\}$ or $\ket{\alpha_1} ... \ket{\alpha_n}$ a general product state)\\
+                        3) cominated output lliines ( e.g. 1st line to read off the answer)\\\\
+                        We want to by classical means only:\\
+                        \textbf{Weak} simulation: sample the output distribution (using classical computer with access to calssical randomness)\\
+                        \textbf{Strong} simulation: calculate the output probabilities of $p_0$ and $p_1$ (probability of getting 0 or 1 on the first line).\\\\
+                        We want to do it efficently in classical poly(n) time known as "efficent classical simulation".\\
+                        Note, the quantum process itself gives only a weak simulation "self-simulation" as it only gives a sample of the output distribution.\\
+                        "Direct" strong classical simulation is always possible but not efficent in general. \\\\However, if we are promised that our state is a product state at every stage then we can give an efficent simulation. Each step we only involve 1 or 2 qubits in known state $\ket{\alpha_i} \ket{\alpha_j}$. Consider the 2-qubit case: $U$ acting on 2 qubits with $\ket{\psi} = \sum_{i_1..i_n} C_{i_1...i_n} \ket{l_1...l_n}$ then in general you get $U \ket{\psi} = \sum_{i_1}^n V^{k_1 k_2}_{l_1 l_2} C_{k_1 k_2 l_3...l_n} \ket{ \beta_{k_1} \beta_{k_2} l'_3... l'_n}$ (let $\tilde C_{i_1... i_n} =  V^{k_1 k_2}_{l_1 l_2} C_{k_1 k_2 l_3...l_n} $ . When $\ket{\psi}$ is a product state we have $C_{i_1 ... i_n} = a_{i_1} b_{i_2} c_{i_3} ... c_{i_n}$ so $\tilde C_{i_1 .. i_n} = ( \sum U_{i_1 i_2}^{k_1 k_2} a_{k_1} b_{k_2} ) c_{i_3} ... c_{i_n}$. so we can factorise back into the form $f_1... f_n$. Sometimes it was claimed that entanglement was the secret ingredient as it looks like if you take away entanglement then you can classically simulate the system. However, this argument shows that if we have no entanglement then we get no quantum advantage. This shows that entangelment is necessary but not sufficent for quantum advantage. "Most entangled states are too entnagled to be useful as quantum computatoinal resources" Fross, Flanimma, Eisert Phys Rev Letter 107 1905 01 '99. Universal quantum compuation with little entanglement Physical Rev Letter  110 060504 '13. So the story with entanglement is complicated. so we are going to consider something else called Clifford computations.
+                                        \subsubsection{Clifford Compuation}
+                                        Prelminary defintions:
+                                        $n$-qubit Pauli group $\mathcal{P}_n = \{ \pm 1, \pm i P_1 \otimes... \otimes P_n\}$ with each $P_i \in \{ I, X,Y,Z\}$.\\
+                                        Define a Clifford operation $C$ on $n$ qubits as such that conjugates Paulis to paulis. $\forall P \in \mathcal{P}_n C P C^{\dagger} \in \mathcal{P_n}$. So the Clifford group is the normalizer of subgroup $\mathcal{P}_n$ in $U(2^n)$.\\
+                                        Clifford circuits found many applications:\\
+                                        1) the theory of quantum error correction ('stabilizer codes')\\
+                                        2) insights into quantum compuational power\\
+                                        3) verification of quantum computations\\\\
+                                        \textbf{Examples}:
+                                        All Paulis are clifford\\
+                       $H$, $S = \begin{pmatrix} 1 & 0 \\0 & i \end{pmatrix} $ phase ($\frac{\pi}{2}$) gate\\
+                       $CX$ 2 qubit gate\\
+                       $Z= S^2$ and $X = HZH$\\
+                       $SWAP_{12} = CX_{12} CX_{21} CX_{12}$\\
+                       Full explict characterisation of Clifford gates:\\
+                       \textbf{Theorem}: $C$ on $n$ qubits is Clifford iff $C$ is a circuit of $H$, $S$, $CX$ gates\\
+                       Clifford computation circuits that only involve clifford gates.\\
+                       Note: Generating entanglement $\ket{0} \ket{0} \rightarrow^{H} \frac{1}{\sqrt{2}} ( \ket{0} + \ket{1}) \ket{0} \rightarrow^{CX_{12}} \frac{1}{\sqrt{2}} ( \ket{0} \ket{0} + \ket{1} \ket{1})$\\
+               \textbf{Grottesman-Knull Theorem}: Let $C$ be any Clifford circuit on $n$ qubits, $N = poly(n)$ with input any product state $\ket{a_1} ... \ket{a_n}$ and output a measurment on the 1st line. Then the output can always be classically strongly efficently simulated.
+               \section{Lecture 17}
+               \textbf{Proof}: The idea is that instead of evolving the input state $\ket{\psi_{in}}$ to a final state $\ket{\psi_{final}}$ for measurement we will back propagate the final $Z$ measurement. \\\\
+               Let's write the measurement $Z_1 = Z \otimes B \otimes ... \otimes B$ and recall that $Z = \ket{0} \bra{0} - \ket{1} \bra{1} = \Pi_0 - \Pi_1$. So we can write the difference of the probabilities as $p_0 - p_1 = \bra{\psi_{final}} Z_1 \ket{\psi_{final}} = \bra{\psi_{in}} C^{\dagger} Z_1 C \ket{\psi_{in}}$. Let $C = C_NC_{N-1} ... C_1$ with $C_i \in \{ H, S, CX\}$ so :
+               $$
+               p_0 - p_1 = \bra{\psi_{in}} C_1^{\dagger} ... C_{N}^{\dagger} Z_1 C_N ... C_1 \ket{\psi_{in}}
+               $$
+               Each conjugation gives us a Pauli, and thus we get:
+               $$
+               p_0 - p_1 = \bra{\psi_{in}} \tilde P_n \otimes ... \otimes \tilde P_n \ket{\psi_{in}}
+               $$
+               All update rules for Pauli products by H, S, CX conjugations are easy to compute ( we have only 1 and 2 gate computations so it is a constant size computation)\\\\
+               Finally we make use of the fact that our input state is a product state. Therefore:
+               $$
+                p_0 - p_1 = \prod_{i=1}^n \bra{a_i} \tilde P_i \ket{a_i}
+               $$
+               Each of these terms is a product of $n 2x2$ matrix calculations so is efficently computable. We just need to remember that they are normalised so $p_0 + p_1 =1$ so we get $p_0, p_1$ values via efficent classical computation. So Cliffords are easy.\\\\
+               Let us extend unitary Clifford circuits to allow the inclusion of intermediate measurements (1-qubit) measurements\\\\
+               Distinguish two scenarios, non-adaptive or adaptive (if we change future gates or measurements depending on the outcome of measurements). Non-adaptive: Gates cannot depend on earlier measurement outcomes. Adaptive: Gates can depend on earlier measurement outcomes.\\\\
+               \textbf{Theorem} Let $C$ be any Clifford circuit with intermediate measurements with an arbitary product state input and a single line output. Then:\\
+               a) If $C$ is non-adaptive then the output is classically efficiently strongly simulatable\\
+               b) If $C$ is adaptive then full universal quantum computation is possible\\\\
+                       Note: if input is restricted to the compuatational basis states then $(b)$ remains classically weakly efficently simulatable (so b) relies on the arbitary product state input for its universality). R. Sazsen & M van den Nest arXic 1305.6190 (2013).\\\\
+                       Proof: for a) we observe that non-adaptive Clifford circuits are reducible to the full unitary case, and then use GK. To see how this reduction works consider a measurement between $C_1$ and $C_2$ on one of the qubit lines with $C_2$ independant of measurement outcome. This is equivalent to introducing an extra qubit ancilla which the measurement is swap for a CX on the ancilla, as then measuring the ancilla at any point would give the original circuit but you don't even need to measure it you can just discard it.\\\\
+                       for b) we will use a Bravyi-Kitaev idea of so called magic states. Fact: Clifford gates with 1-qubit (non-Clifford) T gate with 
+                       $$
+                        T= \begin{pmatrix} 1 & 0 \\ 0 & e^{- \frac{\pi}{4}} \end{pmatrix} = \sqrt{s} = \text{phase } \frac{\pi}{4} \text{gates}
+                       $$
+                       is universal. In fact if you add anything to the Clifford group that is non clifford you regain universal quantum computation. Let $\ket{A}$ denote 1-qubit state $\ket{A} = \frac{1}{\sqrt{2}} (\ket{0} + e^{i \frac{\pi}{4}} \ket{1})$. \\We will implement a $T$ gate using $\ket{A}$ ancilla and an adaptive Clifford circuit (T-gadget).\\\\
+                       If we state with any n-qubit state plus the ancilla $\ket{A}$. If we apply a $CX$ from any line to the ancilla and then measure and discard the ancilla. If we get 1 in this measurement we apply an $S$ gate to the line we applied the $CX$ from. This generates a $T$ gate ( up to overall phase). Easy to check (ES3) this gives an adaptive Clifford circuit that always implements T gate (up to overall phase that depends on $m$) on line $k$ and probabilities are $\frac{1}{2}, \frac{1}{2}$ regardless of output $\ket{\psi}$\\\\
+                       Remark: To give increase in compuational power we could:\\
+                       1) allow inclusion of new gates (T-gate)\\
+                       2) add extra "magic" states as extra inputs\\\\
+                       For Clifford circuits with product state inputs, single line outputs and intermediate measurements\\
+                       a) non-adaptive -> classicaly strongly efficently simulatable\\
+                       b) adaptive -> full universal quantum computing power\\\\
+                       a) $C_0 M(i_1, y_1) C_1 M( i_2, y_2) C_2$...\\
+                       b) $C_0 M(i_1, y_1) C_1(y_1) M(i_2, y_2) C_2(y_1, y_2)$ ...
+                       \section{Lecture 17}
+                       \subsection{Quantum Error Correction/Stabilizer formalism}
+                       Classical computers are incredibly reliable about $10^{-9}$ accuracy. This is not the case for quantum hardware, the gate fidelities are about 99.9\% nowhere near classical computers. So if you ran a thousand gates in a row then as the errors are multiplicative the final state gets very perturbed, so we need to think about error correction. Our go to place is classical intituion, how is this done classically?\\\\
+                       Consider a single classical bit $x$ that we want to store. Let's assume that it gets flipped with probability $p$. One way to improve the probability of reading the correct value is instead of storing $x$ we store $xxx$. Readout $y = y_1 y_2 y_3$. The wrong answer will be returned wih probability $3p^2(1-p) + p^3 = p^2(3-2p) \sim O(p^2)$ so for $p \in (0,\frac{1}{2})$ $p^2(3-2p) < p$. So this map $x \rightarrow x_1 x_2 x_3$ is an error correcting code.\\\\
+                       Now let's talk about quantum errors. Not talking about a classical value but rather a state. We want to preserve a qubit $\ket{\psi}$. So the process of error correction can be described as:
+                       $$
+               \ket{\psi'} = DNE\ket{\psi} \ket{0}^{\otimes n} 
+                       $$
+                       with $E$ is the unitary encoding, $N$ is the noise operation, and $D$ is decoding operation. The aim is to obtain $\ket{\psi'} \approx \ket{\psi}$ for a given set of noise operations.\\\\
+                       \textbf{Attempt #1}: Measure $\ket{\psi}$ in the computational basis to get 0 or 1. Then encode using classical repetition code. This is not a good ida as we destroy superposiiton/entanglement\\
+                       \textbf{Attempt #2}: Engineer a map $\ket{\psi} \rightarrow \ket{\psi} \ket{\psi} \ket{\psi}$ this violates the no-cloning so isn't possible\\\\
+                       Different approach (that works!). This is a 2-step process:\\
+                       1. Encode $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$ as $\ket{E(\psi)} = \alpha \ket{000} + \beta \ket{111}$. This is NOT the same as cloning. Encoding: $$
+                      \Qcircuit @C=1em @R=.7em {
+                        \lstick{\alpha \ket{0} + \beta \ket{1}} & \ctrl{1} & \ctrl{2}\\
+\lstick{\ket{0}} & \targ & \qw \\
+\lstick{\ket{0}} & \qw & \targ} $$           
+Decoding:
+$$
+                      \Qcircuit @C=1em @R=.7em {
+\lstick{\ket{x_1}} & \ctrl{3} & \qw & \ctrl{4} & \qw\\
+\lstick{\ket{x_2}} & \qw & \ctrl{2} & \qw & \qw \\
+\lstick{\ket{x_3}} & \qw & \qw & \qw & \ctrl{2}\\
+\lstick{\ket{0}} & \targ & \targ & \qw & \qw \\
+\lstick{\ket{0}} & \qw & \qw & \targ & \targ
+}
+$$
+For any input superposition of the form $\alpha \ket{x_1 x_2 x_3} + \beta \ket{x_1 x_2 x_3 \oplus 111}$ the decoding circuit performs the map $( \alpha \ket{x_1 x_2 x_3} + \beta \ket{x_1 x_2 x_3 \oplus 111}) \ket{0} \ket{0} \rightarrow ( \alpha \ket{x_1 x_2 x_3} + \beta ( x_1 x_2 x_3 \oplus \ket{11}) \ket{x_1 \oplus x_2} \ket{x_2 \oplus x_3}$\\
+If we measure two output qubits we learn $x_1 \oplus x_2$, $x_1 \oplus x_3$ without disturbing the original state. The result of measuring these output qubits is called the syndrome.
+\begin{table}{|c|c|}
+        N & Syndrome\\
+        $I \otimes I \otimes I$ & 00\\
+        $ I \otimes I \otimes X$ & 01\\
+        $ I \otimes X \otimes I$ & 10\\
+        $I \otimes X \otimes X$ & 11\\
+        $ X \otimes I \otimes I$ & 11\\
+        $ X \otimes I \otimes X$ & 10\\
+        $ X \otimes X \otimes I$ & 01\\
+        $ X \otimes X \otimes X$ & 00\\
+        \end{table}
+        If we assume only one bit has been flipped the syndrome tells us which one as they have all distinct syndromes. After we dectect a bit-flip error (on a single qubit) we apply the same bit-flip operation to that qubit and restor the original encode state $\alpha\ket{000} + \beta{111} \rightarrow \alpha \ket{0} + \beta \ket{1}$ by reverse the original encoding circuit.\\\\
+        Consider the effect of a $Z$ (or "phase") error. It maps the encoded state on a single qubit:
+        $$
+        \alpha \ket{000} + \beta{111} \rightarrow \alpha \ket{000} - \beta\ket{111}
+        $$
+        would have Syndrome measurement 00, so we cant even detect a $Z$ error. However, they can be detected using a different code. If we notice that $Z = HXH$, so $Z$ is effectively $X$ but in a different basis the $\ket{+}$ $\ket{-}$ basis. We can use a different code $\ket{\psi} = \alpha \ket{+++} + \beta{---}$ so what is our new encoding circuit:
+        $$
+         $$
+                      \Qcircuit @C=1em @R=.7em {
+                              \lstick{\alpha \ket{0} + \beta \ket{1}} & \ctrl{1} & \ctrl{2} & \gate{H}\\
+                        \lstick{\ket{0}} & \targ & \qw & \gate{H} \\
+\lstick{\ket{0}} & \qw & \targ & \gate{H}} $$  
+        $$
+        Decoding:
+$$
+                      \Qcircuit @C=1em @R=.7em {
+\lstick{\ket{x_1}} & \gate{H} & \ctrl{3} & \qw & \ctrl{4} & \qw\\
+\lstick{\ket{x_2}} & \gate{H} & \qw & \ctrl{2} & \qw & \qw \\
+\lstick{\ket{x_3}}& \gate{H}  & \qw & \qw & \qw & \ctrl{2}\\
+\lstick{\ket{0}} & \targ & \targ & \qw & \qw \\
+\lstick{\ket{0}} & \qw & \qw & \targ & \targ
+}
+$$
+A code of this kind can protect against $Z$ errors. But there is a problem as this code can no longer protect against $X$ errors.:
+$$
+\alpha \ket{0} + \beta \ket{1} \rightarrow \frac{1}{2 \sqrt{2}} \alpha( \ket{0} + \beta \ket{1}) ( \ket{0} + \ket{1}) )(\ket{0} + \ket{1}) + \beta ( \ket{0} - \ket{1}) (\ket{0} - \ket{1}) (\ket{0} - \ket{1}) \rightarrow \frac{1}{2\sqrt{2}} \alpha ( \ket{000} + \ket{111}) ( \ket{000} + \ket{111}) ( \ket{000} + \ket{111}) + \beta ( \ket{000} - \ket{111}) (\ket{000} - \ket{111}) (\ket{000} - \ket{111})
+$$
+This is a 9-qubit code.\\\\
+To decode, we first apply the decoding circuit for bit-flip error to each block. Assuming that at most one bit flip error has occured in each block the resulting state will be $\alpha \ket{+++} + \beta \ket{---}$ (with at most one phase flip error). We map this state to $\alpha \ket{0} + \beta \ket{1}$ using the decoding algorithm for the phase flip code.\\\\
+So with a great amount of effort we managed to protect against only two types of errors. It turns out this approach works for all errors, this is because the matrices $\{ I, X,Y, Z\}$ with $Y = i XZ$ form a basis for the complex vector space of $2x2$ matrices, so an arbitary error acting on a single qubit can be written as a linear combination of $I$, $X$, $Z$ and $iXZ$.\\\\
+\textbf{Theorem: Quantum error correcting criteria}
+\end{document} 

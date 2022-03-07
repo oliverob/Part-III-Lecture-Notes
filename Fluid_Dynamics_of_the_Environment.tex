@@ -1176,4 +1176,147 @@ $$
            Make sure to always draw on wavevector to diagrams remembering it is prependicular to the group velocity, and it is often tidier to write $\bm k = |\bm k| (\cos \theta, - \sin \theta)$ than $\bm k = (k,m)$.\\\\
            Refamilarise with stokes boundary layer condition from Fluids II. Remember form of solution.\\\\
            When finding expressions for $|\bm k|$ to find envelopes remember that we need $|\bm k|$ so there are some values of $\theta$ that aren't possible. Equally remember to think about the direction of phase velocity of stationary waves, it must be in the same direction as the observer in order for them to exist.
-           \end{document} 
+           \section{Lecture 16}
+           \subsection{Early models for gravity currents}
+           The starting point for a lot of this is dimensional analysis. At high Reynolds number we will ahve $u_f^2 \sim gH$ and as we found with the St. Venant solution we found that $u_f^2 = 2 gH$ but this require $h \rightarrow 0$ smoothly. Generally we find this is not the case as at the boundary we have factors like drag or surface tension, so the region close to the boundary will be non-hydrostatic as we need to have a vertical velocoity so we violate shallow ater at the front (doesn't mean it cant be applied elsewhere). Experiementally it has been found that $F_r = \frac{u_f}{\sqrt{g h_f}} = f(\frac{h}{H})$.
+           \subsection{Cavity Flows}
+           First understood in 1960s by Benjamin. He said lets imagine we have a duct with a height $H$ and high Reynolds number. We assume that out at infinty we have velocity zero and we assume we have a cavity extending into the duct with height $h$ and density of 0 and moving left with velocity $U$. Therefore, the volume flux of the fluid must be equal to the volume dispalced by the cavity in the opposite direction. It is easier to think about this in frame of reference of the front of the cavity. We pick a control volume with boundaries far enough from the front in either direction that we can assume the velocity is parallel to the duct. By continuity of volume flux we must have $u_2 = \frac{UH}{H-h}$ with $u_2$ being the speed under the cavity. Let us assume it is inviscid, irrotational and energy conserving and steady. This means we can use Bernoulli:
+           $$
+            \frac{1}{2} |\bm u|^2 + \rho g z + p = const
+           $$
+           consider pressure at the top of the fluid before the cavity and under the cavity on the same steamline.           $$
+            p_1 = p_0 - \frac{1}{2} \rho U^2
+           $$
+           $$
+           p_2 = p_0  = p_0 + \rho g h - \frac{1}{2} \rho u_2^2
+           $$
+           The first of these is the pressure of the cavity and the second is given by the Bernoulli constant \\
+           $$
+            u_2^ = 2 gh
+           $$
+           "Flow force" on the upsteam side is:
+           $$
+           \int_0^H p dz + \rho U^2 H = p_0 H + \frac{1}{2} \rho U^2 H + \frac{1}{2} \rho g H^2
+           $$
+           "Flow force" on the downstream is:
+           $$
+            2\rho g h( H-h) + p_0 H + \frac{1}{2} \rho g( H-h)^2
+           $$
+           So these balancing gives: $h^3 = \frac{1}{2} Hh^2$. This clearly gives two energy-conserving solutions $h=0$ and $h = \frac{1}{2} H$.\\\\
+        If we allow some turbulence to develop then we can get an adverse pressure gradient at the back of the head. We want to draw our control volume far enough downstream of these turblence that all the flow is parrallel again. Now the height is $h - \Delta$ which is effectively the loss of pressure caused by the energy loss. This adverse pressure gradient often leads to instabilies, potentially to rotational flow and dissipation of energy. Provided we make the box long enough we can ignore all that and just think of the head loss ( loss of height of the cavity). Now
+        $$
+         u_2^2 = 2g(h- \Delta))
+        $$
+        This is our energy loss represented as a reduction in hydrostatic head. Unless there is an internal source of energy we must have $\Delta \geq 0$. Now work through the same maths as before to find:
+        $$
+         \Delta = \frac{(H- 2h)h^2}{2(H-h) (H+h)}
+        $$
+        Note $h \rightarrow \frac{1}{2}H \implies \Delta 0$ and as $\frac{h}{H} \rightarrow 0 \implies \Delta \rightarrow \frac{h}{2H} \rightarrow 0$\\\\
+        We can write the Frude number as:
+        $$
+         F_f = \frac{u_f}{ \sqrt{g h_f}} = ( \frac{(1- \frac{h}{H})(2- \frac{h}{H})}{1 + \frac{h}{H}})^{\frac{1}{2}}
+        $$
+        \subsection{Bonden and Meiburg (2013)}
+        They said we don't need to worry about a lot of these things (e.g. things being hydrostatic) we just need to take a control volume and a current. In the current we have density $\rho_0 + \rho'$ and in the ambinent fluid we have desnity $\rho_0$. We have height $h$ of our cavity and then a boundary layer of height $\delta$ and then we will let $\delta$ shrink to zero. We want to think about the circulation
+        $$
+         \Gamma = \int_V \omega dV = \int_S \bm u \cdot d \bm x
+        $$
+        This time we have a Baroclinic torque associated with the density difference across the boundary:
+        $$
+         G_{\omega} = - \int_V \frac{g}{\rho_0} \frac{\partial \rho'}{\partial x} dV = g' h
+        $$
+        The flux of vorticity:
+        $$
+         F_{\omega} = \int_{h- \frac{\delta}{2}}^{h + \frac{\delta}{2}} \omega u dz
+        $$
+         we have $\omega \sim - \frac{u_2}{\delta}$ and $\bar u \sim \frac{1}{2} u_2$ so therefore:
+         $$
+          F_{\omega} = - \frac{1}{2} u_2^2 \text{as} \delta \rightarrow 0
+         $$
+         We have continuity $u_1 H = u_2 (H- h)$ which leads to a different Froud number:
+         $$
+         F_H = \frac{u_f}{\sqrt{g' H}} = ( 2 \frac{h}{H})^{\frac{1}{2}}( 1- \frac{h}{H})
+         $$
+         $$
+          F_f = \frac{u_f}{\sqrt{g'h}} = 2^{\frac{1}{2}} ( 1- \frac{h}{H})
+         $$
+         In exam questions we can get a long way by saying the Froude number is some fucntion of the final depth and this works really really well for predicting the overall behaviour of the gravity current.
+         \subsection{Simplified models of gravity currents}
+         \subsubsection{Integral model}
+         This is simply a series of rectangles with conserved volumes. Sometimes we go a step further and pick another shape that more accurately approximates the shape. We will be using this plus a boundary condition on the front based on a constant Froude number.\\\\
+         So we will start off with a region $L(t)h(t) = L_0  h_0$. If we now apply a Froude number for the front:
+         $$
+          u_f = F_f \sqrt{g' h} = \dot L
+         $$
+         then 
+         $$
+          \dot L = F_f \sqrt{ g' \frac{h_0 L_0}{L}} \sim t^{\frac{2}{3}}
+         $$
+         Can do similar calculation for channel with width $b(x)$.\\\\
+         We will have the front moving linearly with time $L \sim t$ until the initial rarefaction catches back up with the front after reflecting off the back wall when it will move with $L \sim t^{\frac{2}{3}}$
+         \subsubsection{Entrainment into shallow water}
+         What is all this mixing doing and how is it changing the shallow water equations. At high Re it is often turbulent which may be from the roughness of the lower boundary and/or shear instability at the interface. \\\\
+         Let us imagine we have a shallow water layer, a control volume and densities $\rho_0$ and $\rho_1$ and some process that is causing mixing across the interface. This process is entraining fluid with $\omega_e$ into the lower layer and detraining fluid with $\omega_d$ into the upper layer. We will assume the mizing within layers keeps density constant over the depth of the layer so $\frac{\partial \rho}{\partial z} = 0$ and $\rho = \rho(x)$ within a layer. We will asume the upper layer is very deep so $\rho_2 = $const.\\\\
+         Momentum equation with no drag:
+         $$
+          \frac{\partial}{\partial t} ( \rho_1 h_1 u_1) + \frac{\partial }{\partial x} ( u_1 \rho_1 h_1 u_1 + \frac{1}{2} (\rho_1 - \rho_2) g h_1^2) = \oemga_e \rho_2 u_2 - \omega_d \rho_1 u_1
+         $$
+         We can ignore $\oemga_e \rho_2 u_2$ as $u_2 = 0$.\\
+         Volume conservation gives:
+         $$
+          \frac{\partial h_1}{\partial t} + \frac{\partial}{\partial x} (u_1 h_1) = \omega_e - \omega_d
+         $$
+         If we assume 'linear mixing'
+         \section{Lecture 17}
+         Note the following
+         $$
+          \frac{\partial}{\partial t} ( \rho_1 h) = \rho_1 \frac{\partial h}{\partial t} + h \frac{\partial \rho_1}{\partial t}
+         $$
+         $$
+         \frac{\partial}{\partial t}( \rho_1 h_1 u_1) = \rho _1 u_1 \frac{\partial h}{\partial t} + \rho_1 h_1 \frac{\partial u_1}{\partial t} + h_1 u_1 \frac{\partial \rho_1}{\partial t} 
+         $$
+         define:
+         $$
+          B = \begin{pmatrix} h & \rho_1 & 0\\
+                  0 & 1 & 0 \\
+          h_1u_1 & \rho_1 u_1 & \rho_1 h_1 \end{pmatrix}
+         $$
+         $$
+         \bm v =
+         \begin{pmatrix}
+                 \rho_1 h_1 u_1
+         \end{pmatrix}
+         $$
+         so we can simplify:
+         $$
+          \frac{\partial h_1}{\partial t} + u_1 \frac{\partial h_1}{\partial x} + h_1 \frac{\partial u_1}{\partial x} = \omega_e - \omega_d
+         $$
+         $$
+          g' = g'(x,t) = \frac{\rho_1 - \rho_2}{\bar \rho} g
+         $$
+         $$
+          \frac{\partial g'}{\partial t} + u_1 \frac{\partial g'}{\partial x} = -g' \frac{\omega_e}{h_1}
+         $$
+         $$
+          \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + g' \frac{\partial h}{\partial x} + \frac{1}{2} h \frac{\partial g'}{\partial x} = - \omega_e \frac{u_1 - u_2}{h}
+         $$
+         $$
+          \begin{pmatrix}
+                  u_1 & 0 & 0\\
+                  0 & u_1 & h_1 \\ \frac{1}{2} h_1 & g' & u_1 \end{pmatrix} \begin{pmatrix} g'\\ h_1 \\ u_1 \end{pmatrix}_x + \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} g' \\ h_1 \\ u_1 \end{pmatrix}_t = \begin{pmatrix} - g' \frac{\omega_e}{h}\\ \oemga_e - \omega_d \\ - \omega_e \frac{u_1}{h} \end{pmatrix}
+         $$
+If we define a characteristic $s = x - \lambda t$ this reduces to an ode when:
+$$
+ | \begin{pmatrix} u_1 - \lamdba & 0 & 0 \\
+         0 & u_1 - \lambda & h_1 \\
+ \frac{1}{2} h_1 & g' & u_1 - \lambda \end{pmatrix} | = (u_1 - \lambda)((u_1 - \lambda)^2 - g' h) = 0
+$$
+So we get three characteristics $\lambda_{\pm} = u_1 \pm c$ and $\lambda_{g'} = u_1$ and $c = \sqrt{g' h}$ with ODE $$
+\frac{d g'}{ds} = - g \frac{\omega_e}{h_1}
+$$
+for charactersitics $\lambda_{g'} = u_1$ (left as an excerise for the rest).\\\\
+It is very easy to incorperate this into integral models, one of the questions we might ask is what sets our entrainment velocity ($\omega_e$ or $\omega_d$) ( possible exam question). We are only going to worry about $\omega_e$ and not $\omega_d$ (this second one is left for exam questions).\\\\ Using the Buckingham Pie theorem. This quanity will be governed by some number of dimensionless parameters e.g. Froude number $\frac{u}{\sqrt{g' h}}$, Reynolds number $\frac{uh}{\nu}$, schmidt number $\frac{\nu}{\kappa}$, \textbf{Richardson number} $ \frac{g' l}{u'^2}$. Make assumption that $l \sim h$ (depth) and that $u' \sim u$  not tha they are equal but that they scale with them - the exact ratio of these will be to do with things like how rough is the channel which is encapsulated by the drag coefficent $C_T$. We find that provided $Re >>1$ it doesn't matter that we have replaced the Froude number with the drag coefficent and we can also hope that the schmidt number is not important (which is how we used to think but now we know it is more important) so we take the assumption that for sufficently large $S_c$ (schmidt number) we can ignore it. So maybe:
+$$ \alpha = \frac{\omega_e}{u} = f( R_i , C_T)
+$$
+Luckly we are only dealing with a small range of richardson numbers in a shallow flow. We find that for small richarson number it increases linearly and then it sort of asymptotes and it isin the asymptotic region that we have gravity currents. So we have an almost constant entraining coefficent.
+                    \end{document} 

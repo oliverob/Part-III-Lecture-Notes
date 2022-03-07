@@ -1344,6 +1344,199 @@ $$
       $$
        \gamma_j = \begin{pmatrix} 0 & - i \simga_j \\ i \sigma_j & 0 \end{pmatrix}, \gamma_4 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} or \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
       $$
+      \section{Lecture 17}
+      \subsection{Feynman rules of QED}
+      \subsubsection{Photon propagator}
+      Introduce source $J^{\mu}(x)$ so our free propogator:
+      $$
+       Z_0[J] = \int \mathfrak{D} A \exp ( - \int d^4 x ( \frac{1}{4} F^2 - J^{\mu} A_{\mu}))
+      $$
+      Gauge action:
+      $$
+       S_g[A] - \int d^4 x J^{\mu} A_{\mu} = - \int d^4 x ( \frac{1}{2} A_{\mu} ( \delta^{\mu \nu} \partial^2 - k^{\mu} k^{\nu}) A_{\nu} + J^{\mu} A_{\mu})
+      $$
+      (after integrating by parts)\\\\
+      Classical EOM is given by $\delta S = 0$ under $A_{\mu} \rightarrow A_{\mu} + \detla A_{\mu}$ which gives:
+      $$
+       J^{\mu} = ( \partial^{\mu} \partial^{\nu} - \delta^{\mu \nu} \partial^2) A_{\nu} = \partial_{\nu} ( \partial ^{\mu} A^{\nu} - \partial ^{\nu} A^{\mu}) = \partial_{\nu} F^{\mu \nu}
+      $$
+      $$
+       \partial_{\mu} J^{\mu} = \partial_{\mu} \partial_{\nu} F^{\mu \nu} = 0
+      $$
+      therefore $F^{\mu \nu} = - F^{\nu \mu}$.\\\\
+      Fourier transform:
+      $$
+      A_{\mu} (x) = \int \frac{d^4 k}{(2\pi)^4} e^{i k \cdot x} \tilde A_{\mu} ( k) 
+      $$
+      $$
+      S_g - \int J^{\mu} A_{\mu} = \frac{1}{2} \int \frac{d^4 k}{(2\pi)^4} ( \tilde A_{\mu} (-k) ( k^2 \delta^{\mu \nu} - k^{\mu} k^{\nu} ) \tilde A_{\nu} (k) - \tilde J^{\mu} (-k) \tilde A_{\mu} (k) - \tilde J^{\mu} (k) \tilde A_{\mu}(-k))
+      $$
+      Problem is the coeffficent of $A^2$ is proportional to :
+      $$
+       P^{\mu \nu} (k) = \delta^{\mu \nu} - \frac{k^{\mu} k^{\nu}}{k^2}
+      $$
+      This is a projection operator $P^{\mu}_{\nu} P^{\nu \sigma} = P^{\mu \sigma}$ so the eigenvalues are wither 0 or 1 as 
+      $$
+       \lambda v = Pv = P^2 v = P(Pv) = \lambda^2 v
+      $$
+      In this case $k_{\nu}$ is the zero eginevector $P^{\mu \nu}(k) k_{\nu} = 0$. Therefore, we find that for certain classes of $A$ fields this operator acting on $A$ gives us zero:
+      $$
+      \frac{1}{2} \int d^4 x \tilde A_{\mu}(-k) k^2 P^{\mu \nu} \tilde A_{\nu} (k) = 0
+      $$
+      for fields satisfying $\tilde A_{\mu} (k) = k_{\mu} \tilde \alpha(t)$ or in position space $A_{\mu} (x) = \partial_{\mu} \alpha(x)$ that is for fields that gauge equivalent to $A_{\mu}(x) = 0$. Also from momentum space have $k_{\mu} J^{\mu} = 0$. \\\\
+      We will come up with a fix for today that works for QED and then later we will need to come up with a fix for more general gauge theories:\\\\
+       Since trace of $P^{\mu \nu} (k)$ is:
+       $$
+        \delta^{\mu \nu} P^{\mu \nu} (k) = 3 = \sum \text{eigenvalues}
+       $$
+       Restrict our path integral to fields which are transverse (with $\tilde A_{\mu}(k) = k_{\mu} \tilde \alpha(k)$ being longitudal) so we want:
+       $$
+        k^{\mu} \tilde A_{\mu} = 0 \implies \parital^{\mu} A_{\mu} = 0
+       $$
+       this is the Lorentz gauge,( or Landau gauge). In this subspace, $P^{\mu \nu}$ is the identity so the inverse is easy to take so:
+       $$
+       ( k^2 P^{\mu \nu} )^{-1} = \frac{1}{k^2} P^{\mu \nu}
+       $$
+       Usual steps lead to:
+       $$
+       Z_0(J) = \exp( \frac{1}{2} \int \frac{d^4 k}{(2 \pi)^4} \tilde J_{\mu} (-k) \frac{P^{\mu \nu}}{k^2}\tilde J_{\nu} (k))
+       $$
+       This is the Landau gauge propogator $\frac{1}{k^2}$. So canc include $k^{\mu} k^{\nu}$ with any coefficent, say $1- \xi$ so we can write the propogator as:
+       $$
+       \tilde D^{\mu \nu} (k) = \frac{1}{k^2} ( \delta^{\mu \nu} - (1- \xi) \frac{k^{\mu} k^{\nu}}{k^2})
+       $$
+       with $\xi = 0$ is landau gauage and $\xi =1$ is Feynman gauage. So we can reverse engineer the action that would have given this propagator. This is the Gauge-fixed action:
+       $$
+       S_g = \int d^4 ( \frac{1}{4} F^2 + \frac{1}{2\xi} ( \partial^{\mu} A_{\mu})^2)
+       $$
+       That was the interesting feynmann rule the rest just are the same as in zero dimensions\\\\
+       Femion (electron) propogator form $\bar \psi( \cancel \partial + m) \psi$ with:
+       $$
+       \psi(x) = \int \frac{d^4 p}{(2\pi)^4} e^{i p \cdot x} \tilde \psi(p), \bar \psi = \int \frac{d^4 p}{(2\pi)^4} e^{i p\cdot x} \tilde{\bar \psi}(P)
+       $$
+       so action is:
+       $$
+       S_f ( \tilde \psi, \tilde{\bar \psi}) = \int \frac{d^4 p}{(2\pi)^4} \tilde{\bar \psi} (-p) ( i \cancel p + m ) \tilde \psi (p)
+       $$
+       $$
+        Z[ \eta, \bar \eta] = \int \mathfrak{D} \tilde \psi \mathfrak{D} \tilde{\bar \psi} \exp ( - \int_p ( \tilde{\bar \psi} ( i \cancel p + m) \tilde \psi - \tilde{\bar \eta} \tilde \psi + \tilde{\bar \psi} \tilde \eta) = Z[ 0,0] \exp( - \tilde{\bar \eta} ( i \cancel p + m)^{-1} \tidle \eta)
+       $$
+       So we get Fermion propogator:
+       $$
+        \tilde S_F (p) = \frac{1}{i \cancel p + m}
+       $$
+       $$
+        S^{\alpha \beta}_F = ( \frac{1}{i \cancel p + m})^{\alpha \beta} = \frac{- i \cancel p^{\alpha \beta} + m \delta^{\alpha \beta}}{p^2 + m^"}
+       $$
+        Interactions from $\bar \psi \cancel D \psi$ gives 
+        $$
+        ie A_{\mu}(x) \bar \psi^{\alpha}( x) ( \gamma^{\mu})^{\alpha \beta} \psi^{\beta}( x)
+        $$
+        this gives interaction term $- ie \gamma^{\mu}$.\\\\
+        We also need to include a factor of -1 for every fermion loop. We will do this in canconical quantisation as in path integrals is it is tedious, and you have to use the generating funcitonal:
+        $$
+         Z[\eta, \bar \eta, J] \sim \exp ( i e\int d^4 x ( \frac{\delta}{\delta J(x)} ( \frac{\delta}{\delta \eta^{\alpha}(x)}) ( \gamma^{\mu})^{\alpha \beta} ( \frac{\delta}{\delta \bar \eta(x)} Z_0 (\eta, \bar \eta) Z_0[J]
+        $$
+        exercise to show that need a factor of -1 for every fermion loops.
+        \subsubsection{Vacuum polarization}
+We want to calculate the sum of the amputated 1PI diagrams
+$$
+\Pi^{\mu \nu} (q) = ~O~ + 2-loop + ...
+$$
+In $d$-dimensions, we can go through the same sort of dimensional analysis to write $e^2 = \mu^{\epsilon} g^2(\mu)$, $\epsilon = 4 -d$:
+$$
+ \Pi_1^{\mu \nu} = - \mu^{\epsilon} (i g)^2 \int \frac{d^dp}{(2\pi)^d} tr( \frac{1}{i \cancel p+ m} \gamma^{\mu} \frac{1}{i( \cancel p - \cancel q) +m} - \gamma^{\nu})
+$$
+$$
+\Pi_1^{\mu \nu} = \mu^{\epsilon} g^2 \int \frac{d^d p}{(2\pi)^d} tr \frac{ (-i \cancel p + m) \gamma^{\mu} ( - i ( \cancel p - \cancel q) + m) \gamma^{\nu}}{( p^2 + m^2) ( (p-q)^2 + m^2)}
+$$
+ We want the demoninator in the form $(l^2 + \Delta)^b$ so we use Feynmanns trick:
+ $$ 
+ \frac{1}{AB} = \int^1_0 dx \int^1_0 dy \delta(x+y-1) \frac{1}{(Ay+Bx)^2}
+ $$
+ to write:
+ $$
+ \Pi_1^{\mu \nu} = \mu^{\epsilon} g^2 \int \frac{d^d l}{(2\pi)^d} \int^1_0 dx \frac{ tr ((-i \cancel p + m) \gamma^{\mu} ( - i ( \cancel p - \cancel q) + m) \gamma^{\nu})}{(p-qx)^2 + m^2 + q^2(x(1-x))}
+ $$
+ shift the loop momentum $l = p - qx$ and define $\Delta = m^2 + q^2x(1-x)$
+ $$
+ \Pi_1^{\mu \nu} = \mu^{\epsilon} g^2 \int \frac{d^d l}{(2\pi)^d} \int^1_0 dx \frac{ tr ((-i (\cancel l + \cancel qx) + m) \gamma^{\mu} ( - i ( \cancel l - \cancel q(1-x)) + m) \gamma^{\nu})}{l^2+ \Delta}
+ $$
+ As the spin traces in the Euclidean case:
+ $$
+  tr \gamma^{\mu} \gamma^{\nu} = 4 \delta^{\mu \nu}
+ $$
+ $$
+  tr ( \gamma^{\mu} \gamma^{\phi} \gamma^{\nu} \gamma^{\sigma}) = 4 (\delta^{\mu \phi} \delta^{\nu \sigma} - \delta^{\mu \nu} \delta^{\phi \sigma}+ \delta^{\mu \sigma} \delta^{\nu \phi}
+ $$
+ so we get
+ $$
+ tr (-i (\cancel l + \cancel qx) + m) \gamma^{\mu} ( - i ( \cancel l - \cancel q(1-x)) + m) = 4 ( - (l + qx)^{\mu} ( l- q(1-x))^{\nu} + (l + qx)(l-q(1-x))\delta^{\mu \nu} - ( l + qx)^{\nu} ( l- q(1-x))^{\mu} + m^2 \delta^{\mu \nu}
+ $$
+ As $d >4$ we have superfical degree of divergence $0, (1), 2$. Integrals over odd powers of $l$ vanish and similarly only the diagonal parts of $l^{\mu} l^{\nu}$ will give nonvanishing integrals. As integrating over even space, so replace $l^{\mu} l^{\nu} \rightarrow \frac{1}{d} \delta^{\mu \nu} l^2$. So then use the master integral:
+ $$
+ \int \frac{d^d x}{(2\pi)^d} \frac{(l^2)^a}{(l^2 + \Delta)^b} = \frac{1}{(4\pi)^{d/2}} \frac{\Gamma( b-a- \frac{d}{2}) \Gamma( a + frac{d}{2})}{\Gamma(\frac{d}{2} ) \Gamma( b)} \frac{1}{\Delta ^{b-a- \frac{d}{2}}}
+ $$
+ So altogether we get:
+ $$
+ \Pi_1^{\mu \nu} (g) = \frac{4 \mu^{\epsilon g^2}{(4 \pi)^{\frac{d}{2}}\Gamma(\frac{d}{2})} \int^1_0 dx \int^{\infty}_0 \frac{dl^2 ( l^2)^{\frac{d}{2}}}{ (l^2 + \Delta)^2}( l^2 ( 1- \frac{2}{d}) \delta^{\mu \nu} + ( 2q^{\mu \nu} - q^2 \delta^{\mu \nu}) x(1-x) + m^2 \delta^{\mu \nu}) 
+ $$
+ $$
+ \Pi_1^{\mu \nu} (g) = \frac{8 g^2 \mu ^{\epsilon}}{(4\pi)^{\frac{d}{2}}} \Gamma( \frac{\epsilon}{2}) \int^1_0 dx \frac{1}{\Delta^{\frac{\epsilon}{2}}} ( - q^2 \delta^{\mu n\u} + q^{\mu} q^{\nu}) x(1-x) = (q^2 \delta^{\mu \nu} - q^{\mu} q^{\nu} ) \pi_1(q^2)
+ $$
+ where
+ $$
+  \pi_1(q^2) = - \frac{8 g^2 \Gamma(\frac{d}{2})}{(4\pi)^{\frac{d}{2}}} \int^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta})^{\epsilon/2}
+ $$
+ as $\epilson \rightarrow 0$;
+ $$
+ \pi_1(q^2) = - \frac{g^2}{(2 \pi^2} \int^1_0 dx x(1-x) ( \frac{2}{\epislon} - \gamma + \log ( \frac{4 \pi \mu^2}{\Delta})) + \O(\epsilon)
+ $$
+ Renormalise by writing $S_0 + S + S^{ct}$ with $e_0 = Z_e e, m_0 = Z_m m, \psi_0 = Z_2^{\frac{1}{2}} \psi, A_0 = Z_0^{\frac{1}{2}}A$
+ $$
+  S+S^{ct}= \int d^4 x ( \frac{1}{4} Z_3 F^2 + Z_2 \bar \psi \gamma \psi + Z_m Z_2 m \bar \psi \psi - ie Z_1 \bar \psi \cancel A \psi)
+ $$
+ where $Z_1 = Z_e Z_2 \sqrt{Z_3}$. Gauge invariance requires that $Z_1 = Z_2$ in order to form a gauge covariant derivative $D_{\mu}$. Let $Z_k =1+ \delta Z_k$ so 
+ $$
+  \delta Z_e = \delta Z_1 - \delta Z_2 - \frac{1}{2} \delta Z_3 = - \frac{1}{2} \delta Z_3 
+ $$
+ Counterterm to cancel divergence in $\pi_1(q^2)$
+ $$
+  \int d^4 x \frac{\delta Z_3}{4} F^2
+ $$
+ which gives $-( q^2 \delta^{\mu \nu} - q^{\mu} q^{\nu} ) \delta Z_3$. We want to chose $\delta Z_3 $ so it cancels the divergent portion of $\Pi_1^{\mu \nu}$. so In $\bar{MS}$ we have:
+ $$
+ \delta Z_3 = - \frac{g^2(\mu)}{2\pi^2} ( \frac{2}{\epsilon} - \gamma + \log 4\pi) 
+ $$
+ so
+ $$
+ \Pi_1^{ren} (q^2) = \frac{g^2(\mu)}{2 \pi^2} \int^1_0 dx x(1-x) \log ( \frac{\Delta}{m^2})
+ $$
+ with $\Delta = m^2 + x(1-x) q^2$. Let's look at what is happening with this log:
+ $$
+ \log \Delta = \log ( m^2 + x(1-x)q)
+ $$
+so we have a branch cut along $\Delta <0$. As for $x \in [0,1]$ we have $0 \leq x(1-x) \leq \frac{1}{4}$ with Minkowski signature $g_0 = iE$ and the cut corresponds to $x(1-x) ( E^2 - |\bm q|^2) \geq m^2$. So the smallest $E$ on the cut is $E=2m$ so this corresponds to the thershold for creating real electron positron pairs.\\\\
+We can now connect this to the $\beta$ function. 
+\subsubsection{QED $\beta$ function}
+$$g_0 = Z_e g\mu^{\epsilon/2} =  Z_3^{- \frac{1}{2}} g \mu^{\epsilon/2}$$
+so
+$$
+ \mu \frac{d g_0}{ d\mu} = 0 = ( \mu \frac{\partial}{\partial \mu} + \beta(\beta) \frac{\partial }{\partial g} ) ( 1 + \frac{g^2}{24 \pi^2 ( \frac{2}{\epsilon} - \gamma + \log 4 \pi))
+$$
+
+$$
+ \beta(g) = - ( \frac{\epsilon g}{2} + \frac{g^3}{24 \pi^2}) ( 1+ \frac{g^2}{(4 \pi^2 \epsilon})^{-1} = \frac{\epsilon g}{2} + \frac{g^3 }{12 \pi^2} + H.O.
+$$
+We get a positive $\beta$ function as if you consider the usual integration:
+$$
+ \frac{1}{g^2(\mu')} = \frac{1}{g^2( \mu)} + \frac{1}{6 \pi^2} \log \frac{\mu}{\mu'}
+$$
+Let $\Lamdba_{QED}$ be the scale where $g^2( \mu)$ diverges:
+ $$
+  g^2(\mu) = \frac{6 \pi^2}{\log \frac{\Lamdba_{QED}}{\mu}}
+ $$
+ Given $m_e = 0.5111 Mev$ we have $\alpha = \frac{g^2(m_e)}{4 \pi} = \frac{1}{137}$ implies $\Lambda_{QED} = 10^{286} GeV$. So despite the coupling running up and diverging it does so slow enough it isn't important until very high energy scales. So QED is irrelevant but it runs so slowly it does describe low energy dynamics.
 \end{document}
 
 

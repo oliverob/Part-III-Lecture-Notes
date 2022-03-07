@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  1 MAR 2022 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  5 MAR 2022 14:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2310,20 +2310,291 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[43] (./Advanced_Quantum_Field_Theory.aux) ) 
+./Advanced_Quantum_Field_Theory.tex:1359: Undefined control sequence.
+l.1359 ...er $A_{\mu} \rightarrow A_{\mu} + \detla
+                                                   A_{\mu}$ which gives:
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1357--1360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1368
+
+ []
+
+
+Overfull \hbox (32.61313pt too wide) detected at line 1373
+\OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 J[]A[] \OT1/cmr/m/n/10 = [] [] []([](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 k[]^^N[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 k[]k[]\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )[](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ))
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1389
+
+ []
+
+./Advanced_Quantum_Field_Theory.tex:1394: Undefined control sequence.
+l.1394 ...mu} \tilde A_{\mu} = 0 \implies \parital
+                                                  ^{\mu} A_{\mu} = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1411--1414
+
+ []
+
+[44]
+./Advanced_Quantum_Field_Theory.tex:1422: Undefined control sequence.
+l.1422 ...bar \eta} ( i \cancel p + m)^{-1} \tidle
+                                                   \eta)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (0.87817pt too wide) detected at line 1423
+\OML/cmm/m/it/10 Z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ^^Q; []\OT1/cmr/m/n/10 ] = [] \U/euf/m/n/10 D[]D[]\OML/cmm/m/it/10   []\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@ [][]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 ^^Q[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10  []\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Z\OT1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0] [](\OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/10 ^^Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 ^^Q\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1437
+
+ []
+
+[45]
+Overfull \hbox (178.62788pt too wide) detected at line 1475
+\OML/cmm/m/it/10 tr\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ([] + []\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^M[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )) + \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 ) = 4(\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 qx\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 l \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))[] + (\OML/cmm/m/it/10 l \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 qx\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 l \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10 ^^N[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 qx\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 l \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))[] + \OML/cmm/m/it/10 m[]^^N[]
+ []
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing } inserted.
+<inserted text> 
+                }
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (77.13368pt too wide) detected at line 1489
+\OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 ) = []
+ []
+
+
+LaTeX Warning: Command \u invalid in math mode on input line 1489.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Argument of \add@accent has an extra }.
+<inserted text> 
+                \par 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./Advanced_Quantum_Field_Theory.tex:1489: Paragraph ended before \add@accent was complete.
+<to be read again> 
+                   \par 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing } inserted.
+<inserted text> 
+                }
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Too many }'s.
+<recently read> }
+                 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing } inserted.
+<inserted text> 
+                }
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+Things are pretty mixed up, but I think the worst is over.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Too many }'s.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Missing $ inserted.
+<inserted text> 
+                $
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:1489: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.1489 ...nt^1_0 dx x(1-x) ( \frac{\mu^2}}{\Delta}
+                                                  )^{\epsilon/2}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Advanced_Quantum_Field_Theory.tex:1491: Undefined control sequence.
+l.1491  as $\epilson
+                     \rightarrow 0$;
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Advanced_Quantum_Field_Theory.tex:1491: Missing $ inserted.
+<inserted text> 
+                $
+l.1491  as $\epilson \rightarrow
+                                 0$;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Advanced_Quantum_Field_Theory.tex:1493: Undefined control sequence.
+<argument> \epislon 
+                    
+l.1493 ... \int^1_0 dx x(1-x) ( \frac{2}{\epislon}
+                                                   - \gamma + \log ( \frac{4...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 1493.
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1518--1521
+
+ []
+
+)
+Runaway argument?
+{24 \pi ^2 ( \frac {2}{\epsilon } - \gamma + \log 4 \pi )) $$ \par $$\ETC.
+! File ended while scanning use of \frac .
+<inserted text> 
+                \par 
+<*> Advanced_Quantum_Field_Theory.tex
+                                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> Advanced_Quantum_Field_Theory.tex
+                                     
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 1807 strings out of 478599
- 23520 string characters out of 5858101
- 327258 words of memory out of 5000000
- 19687 multiletter control sequences out of 15000+600000
+ 1806 strings out of 478599
+ 23459 string characters out of 5858101
+ 333258 words of memory out of 5000000
+ 19688 multiletter control sequences out of 15000+600000
  417620 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,66p,931b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Advanced_Quantum_Field_Theory.pdf (43 pages, 406551 bytes).
-PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!
