@@ -1673,41 +1673,4 @@ Buoyancy flux:
 $$
  \frac{dF}{dz} = 
 $$
-\subsubsection{Steady non-Boussinesq plume}
-                 Clearly the Boussinesq assumption is violated by a point source since $g' \rightarrow \infty$ so $\frac{ \rho - \rho_0}{\rho_0}$ is not small.\\\\
-                 For the entrainment velocity:
-                 $$
-                  u_e = \alpha ( \frac{\rho}{\rho_0})^{\frac{1}{2}} W
-                 $$
-                 $$
-                  b = \frac{Q}{(\rho M)^{\frac{1}{2}}}
-                 $$
-                 This generates the same equations as in the Boussinesq case with $b = \frac{Q}{(\rho_0 M)^{\frac{1}{2}}}$ so the solution is the same, however $b$ has changed:
-                 $$
-                 b= \frac{Q}{(\rho M)^{\frac{1}{2}} }= \frac{6 \alpha}{5} ( \frac{\rho_0}{\rho})^{\frac{1}{2}} z = \frac{6 \alpha}{5} ( 1 + ( \frac{z_b}{z})^{\frac{5}{3}} )^{\frac{1}{2}} z
-                 $$
-                 so
-                 $$
-                 z_b = \frac{5}{3} ( \frac{F_0^2}{20 \alpha^4 \rho_0^2 g^3})^{\frac{1}{3}}
-                 $$
-                 For large $z$, $b \rightarrow \frac{6\alpha}{5} z$. But this will be different for small $z$ near the plume source. So for $z << z_b$:
-                 $$
-                 b = \frac{6 \alpha}{5} ( \frac{z_b}{z})^{\frac{5}{6}} z =  \frac{6 \alpha}{5} z_b^{\frac{5}{6}} z^{\frac{1}{6}}
-                 $$
-                 So near the source, there will be a very rapid adjustment of the plume
-                 \subsubsection{Plume in stably stratified environment}
-                 We have some buoyancy source with $F_0$ and as the plume rises it will entrain in fluid, this increases the desnity and decreases the byoyancy force. At some height $z_f$, $F(z_f) = 0$. But as $M(z_f) \neq 0$ then the plume will overshoot $z_f$ and there will be some further mixing and the plume desnity will reduce a little below $\hat \rho ( z_F)$. Above $z=z_f$, the bouyancy force is reversed decelerating the plume. Evanutally it will come to rest. \\\\It is easy to figure out how high it can go from dimensional terms but very hard otherwise. The only things that matter are $F_0$, $N$, $\alpha$. $[ F_0] = L^4 T^{-3}$, $[N] = T^{-1}$. Predict that $z_{max} = c ( \frac{F_0}{\rho_0}_^{\frac{1}{4}} N^{- \frac{3}{4}}$ experiementally we can verify that $c \sim 5$.\\\\
-                 We can't do this fully analytically but we can numerically solve the plume equations to get:
-                 $$
-                  z_{max} = 2.572 ( \frac{F_0}{4 \alpha^2 \rho_0 N^3})^{\frac{1}{4}}
-                 $$
-                 There is a series solution to the plume equations in the notes that we won't be covering this year.
-                 \subsubsection{Thermal in a homogeneous environment}
-                 A thermal is a discrete parcel of fluid with buoyancy released far form a boundary\\\\
-                 First we think about the Buoyancy which is given by: $(\rho - \rho_0) g V$. Then we have the drag force for a rigid body $\frac{1}{2} \rho_0 c_D A W^2$ and $Re >>1$. If we pretned we can apply this rigid body drag then we will eventaully get that the drag will balance the buoyancy at some velocity $W$:
-                 $$
-                  W= ( \frac{2}{c_D} \frac{\rho- \rho_0}{\rho_0} g \frac{V}{A})^{\frac{1}{2}} = ( g' L)^{\frac{1}{2}} F
-                 $$
-                 $L = \frac{V}{A}$ with Froude number now given by $F = \frac{W}{\sqrt{g' L}$ then we predict that the Froude number is ascending with constant velocity. This not a Froude number talking about waves. For a rigid body we would expect $F \approx 1$. If we had a sphere then $V = \frac{4}{3} \pi R^3$ and $A = \pi R^"$ and $c_D = 0.4$ then we owuld get $F \approx 1.8$.
-
                     \end{document} 

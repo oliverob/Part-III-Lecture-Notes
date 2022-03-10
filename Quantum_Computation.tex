@@ -1052,4 +1052,27 @@ This is a 9-qubit code.\\\\
 To decode, we first apply the decoding circuit for bit-flip error to each block. Assuming that at most one bit flip error has occured in each block the resulting state will be $\alpha \ket{+++} + \beta \ket{---}$ (with at most one phase flip error). We map this state to $\alpha \ket{0} + \beta \ket{1}$ using the decoding algorithm for the phase flip code.\\\\
 So with a great amount of effort we managed to protect against only two types of errors. It turns out this approach works for all errors, this is because the matrices $\{ I, X,Y, Z\}$ with $Y = i XZ$ form a basis for the complex vector space of $2x2$ matrices, so an arbitary error acting on a single qubit can be written as a linear combination of $I$, $X$, $Z$ and $iXZ$.\\\\
 \textbf{Theorem: Quantum error correcting criteria}
+\section{Example sheet 3}
+$$
+ || A || = \max_{\ket{\psi}} |A \ket{\psi}|
+$$
+Here $|A \ket{\psi}|$ is not $\bar{\psi} A \ket{\psi}$ but just the magnitude of the vector created.
+So try $\ket{\psi} = \begin{pmatrix} x \\ y \end{pmatrix}$ with $|x|^2 + |y|^2 = 1$ so:$$
+|| A || = \max_{x^2 + y^2 =1} |A \begin{pmatrix} x\\ y \end{pmatrix}|
+$$\\\\
+$A$ can be expressed as a linear combination of unitary matrices of the form $U_{ab} = X^{d-b} Z^{d-a}$ with $X \ket{k} = \ket{ k + 1 mod d}$ and $Z = e^{ \frac{2\pi i k}{d}} \ket{k}$, as these are linearly independant and unitary.\\\\
+There is a different method for finding a linear combination of unitaries to represent a non-unitary matrix (elaborated on in the solutions). Use SVD:
+$$
+A = UDV
+$$
+with $D$ real and diagonal. It suffices to make any such $D$ as $D = \sum_i c_i U_i$.\\\\
+Need to check $A$ is well conditioned when performing HHL on $A\bm x = b$ as we need to take its inverse (so need to check it has no zero eigenvalues). In example sheet this is shown by knowing $||C|| \leq \frac{1}{2}$ and $A = I - C$ so eigenvalues must lie in $[\frac{1}{2}, \frac{3}{2}]$. For HHL we also require $A$ to be row-spares and row computable, and for $\ket{b}$ to be implemented able in poly(log N) time.\\\\
+\textbf{If you ever need to find out how close to states are,  you use the swap test!!!}\\\\
+\textbf{Chernofl-Hoelfing bound}\\
+If we westimate $Pr(0)$ as frequency $f$ of 0's seen in $k$ samples of a 0/1 distribution, then:
+$$
+ |f - Pr(0)| < \xi, \text{with probability} \geq 1 - \epsilon
+$$
+if $k \geq \frac{\log \frac{1}{\epsilon}}{2 \xi^2}$\\\\
+
 \end{document} 

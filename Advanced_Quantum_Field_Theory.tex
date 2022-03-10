@@ -1522,7 +1522,7 @@ We can now connect this to the $\beta$ function.
 $$g_0 = Z_e g\mu^{\epsilon/2} =  Z_3^{- \frac{1}{2}} g \mu^{\epsilon/2}$$
 so
 $$
- \mu \frac{d g_0}{ d\mu} = 0 = ( \mu \frac{\partial}{\partial \mu} + \beta(\beta) \frac{\partial }{\partial g} ) ( 1 + \frac{g^2}{24 \pi^2 ( \frac{2}{\epsilon} - \gamma + \log 4 \pi))
+\mu \frac{d g_0}{ d\mu} = 0 = ( \mu \frac{\partial}{\partial \mu} + \beta(\beta) \frac{\partial }{\partial g} ) ( 1 + \frac{g^2}{24 \pi^2} ( \frac{2}{\epsilon} - \gamma + \log 4 \pi))
 $$
 
 $$
@@ -1537,6 +1537,154 @@ Let $\Lamdba_{QED}$ be the scale where $g^2( \mu)$ diverges:
   g^2(\mu) = \frac{6 \pi^2}{\log \frac{\Lamdba_{QED}}{\mu}}
  $$
  Given $m_e = 0.5111 Mev$ we have $\alpha = \frac{g^2(m_e)}{4 \pi} = \frac{1}{137}$ implies $\Lambda_{QED} = 10^{286} GeV$. So despite the coupling running up and diverging it does so slow enough it isn't important until very high energy scales. So QED is irrelevant but it runs so slowly it does describe low energy dynamics.
+ \section{Lecture 19}
+ Let's see if we can obtain the $\beta$ function from the quantum effective action.\\
+ Write the free propagator $D_{\mu \nu} (q)$ = ....
+ $$
+  G_{\mu \nu}^{(2)} = - + -1PI- + - 1PI - 1PI - + ... = D_{\mu \nu} + D_{\mu \rho} \Pi^{\pi \sigma} D_{\sigma \nu} + ...
+ $$
+ with $D_{\mu \nu} = \frac{P_{\mu \nu}}{q^2}$ and $\Pi^{\mu \nu} = q^2 P^{\mu \nu} \pi( q^2)$ so we get:
+ $$
+ G^{\mu \nu}^{(2)} = D_{\mu \nu} ( 1 +  \pi(q^2) + \pi^2(q^2) + ... ) = \frac{D_{\mu \nu}}{1 - \pi(q^2)}
+ $$
+ $G^{(2)}(q)$ is obtained from $\Gamma$ with:
+ $$
+ \Gamma [ \tilde{\Psi}, \tilde{\bar \Psi}, A] > \int \frac{d^dp }{ (2\pi)^d} \{ ( 1- \pi(p^2))(p^2 \delta^{\mu \nu} - p^{\mu} p^{\nu} ) \frac{1}{2} \tilde A_{\mu} (p) \tilde A_{\nu} (p) \}
+ $$
+ To get the $\beta$ function we need to make the coupling more explcity by rescaling the guage field ($A_{\mu} \rightarrow \frac{1}{e} A_{\mu}$) to move the coupling from the covariant derivative to the kinetic term to give:
+ $$
+ \Gamma [ \Psi, \bar \Psi, A] > \int d^d x \{ \frac{1- \pi(0)}{4 e^2} F_{\mu \nu} F^{\mu n\u} + "\partial^2 F^2 " \text{other terms etc.}\}
+ $$
+ We use the arguement that the coeffficent of terms in $\Gamma$ should be $\mu$ independant so we should have $\frac{1 - \pi(0)}{e^2} = \frac{1}{\mu^{\epsilon} g^2} ( 1 - \frac{g^2}{2\pi} \int dx x(1-x) \log \frac{\Delta}{\mu^2}$. We could say that this is our physical coupling $\frac{1}{e_{phys}}$, but it doesn't have to be, it just needs to be independant of $\mu$ so can take $\mu \frac{d}{d\mu}$ of both sides to get $\beta(g)$.\\\\
+ \subsection{Full one-loop renormalisation of QED}
+ First lets look at the fermion self-energy. So we need to look at the terms $\delta Z_2$ and $\delta Z_m$ from electron self-energy.
+ $$
+  F( \cancel p) = \int d^4 x e^{i p(x-y)} < \psi(x) \bar \psi(y)> = ->- + ->-1PI->- +... = \frac{1}{i \cancel p + m - \Sigma (\cancel p)}
+ $$
+ where $\Sigma( \cancel p)$ is the ->-1PI->- part. 
+ $$
+ \Sigma_1(\cancel p) = ->-^n->- = (ie)^2 \int \frac{d^d k}{(2 \pi)^d} \gamma^{\mu} \frac{1}{i (\cancel p + \cancel k) + m} \gamma^{\nu} \frac{\delta_{\mu \nu}}{k^2}
+ $$
+ $$
+ \Sigma_1(\cancel p) = - \frac{g^2}{16 \pi^2} \int^1_0 dx ( (2- \epsilon) x (i \cancel p) + (4- \epsilon)m)( \frac{2}{\epsilon} - \gamma + \log \frac{4 \pi \mu^2}{\Delta})
+ $$
+ So we have to add conterterms $-( \delta Z_2(i \cancel p) + (\delta Z_2 + \delta Z_m)m$. We need some renormalisation condition e.g. $MS$ or $\bar{MS}$, or on shell scheme.The renormalised propagator with physical mass $m_{phys}$ and unit residue implies:
+ $$
+  \Simga(\cancel p) |_{\cancel p = i m_{phys}} = 0 \text{ fixes} \delta Z_m
+ $$
+ and
+ $$
+  \frac{ d \Sigam}{d \cancel p} |_{\cancel p = i m_{phys}} = 0 \text{fixes} \delta Z_2
+ $$\\\\
+ We asserted that $\delta Z_1 = \delta Z_2$ and one can check explictly that this is true at one-loop e.g.:
+ $$
+  V^{\mu} ( p,p') = ie \gamma^{\mu} + 
+ $$
+ We want to sandwich the vertex between spinors $\bar u(p) V^{\mu} ( p, p') u( p') = i e \bar u(p) ( F_1(q^2)\gamma^{\mu} + \frac{1}{4m} [ \gamma^{\mu}, \gamma^{\nu}] q_{\nu} F_2(q^2))$ and $F_1$ and $F_2$ are form factors. They can be calculated in perturbation theory. \\\\
+         At Tree level it is apparent that $F_1(q^2) = 1$, $F_2(q^2) = 0$ but beyond it turns out that the loop integral you get at beyond tree level gives a finite $F_2(q^2)$ so needs no renormalisation. However, $F_1(q^2)$ is divergent and requires a conterterm that is $\sim \delta Z_1$. We can show that the on-shell renormalisation condition is to choose $\delta Z_1$ such that $F_1(0) = 1$.
+         \subsection{Schwinger-Dysonn for fermions}
+         Transform $$\psi(x) \rightarrow e^{i \alpha(x)} \psi(x)$$ $$\bar \psi \rightarrow e^{- i \alpha(x)} \bar \psi(x)$$\\
+         Kinetic term $$\bar \psi \cancel \partial \psi \rightarrow \bar \psi \cancel \partial \psi + i \bar \psi \gamma^{\mu} \psi \partial_{\mu} \alpha$$. So if we have small alpha we have:
+         $$
+          \psi \rightarrow \psi + i \alpha \psi, \bar \psi \rightarrow - i \alpha \psi
+         $$
+         Consider $< \psi(x_1) \bar \psi(x_2)>$ before and after variation then the leading order is the correlation number by itself with $O(\alpha)$ terms sum to zero. 
+         $$
+         0 = \int \mathfrak{D} \psi \mathfrak{D} \bar \psi \{ e^{-S} ( i \int d^4 x \bar \psi(x) \gamma^{\mu} \psi(x) \partial_{\mu} \alpha(x)) \psi( x_1) \bar \psi(x_2) + \int \mathfrak{D}\psi \mathfrak{D} \bar \psi e^{-S} ( i \alpha (x_1) - i \alpha(x_2)) \psi(x_1) \bar \psi(x_2)
+         $$
+         So on the LHS we integrate by parts to move the derivative:
+        $$
+         \int d^4 x \alpha(x) \partial_{\mu} ( \int \mathfrak{D} \psi \mathfrak{D} \bar \psi e^{-S} \bar \psi \gamma^{\mu} \psi )(x) \psi(x_1) \bar \psi(x_2)) = - \int d^4 x \alpha(x) ( \delta( x-x_1) - \delta(x-x_2)) \int \mathfrak{D} \psi \mathfrak{D} \bar \psi e^{-S} \psi( x_1) \bar \psi( x_2)
+        $$
+        Holds for all $\alpha(x)$ so we get the Schwinger-Dyson equation:
+        $$
+         \partial_{\mu} < j^{\mu} (x) \psi(x_1) \psi(x_2) > = - ( \delta (x-x_1) \delta (x-x_2)) < \psi(x_1) \bar \psi( x_2)> 
+        $$
+        where $j^{\mu} = \bar \psi(x) \gamma^{\mu} \psi(x)$ which is the Noether current of transformation. So let's consider the fourier transform of this identity.
+        $$
+        m_3^{\mu} ( p, q_1, q_2) = \int d^4 x d^4 x_1 d^4 x_2 e^{i px} e^{-i q_1 x_1} e^{i q_2 x_2} < j^{\mu} (x) \psi( x_1) \bar \psi(x_2)>
+        $$
+        $$
+m_2(q_1, q_2) = \int d^4 x_1 d^4 x_2 e^{- i q_1 x_1} e^{i q_1 x_1} < \psi(x_1) \bar \psi(x_2)> 
+        $$
+        here we don't stick to the convention of everything being directed outwards as when we have fermions they are directed so we know we must have one in and one out. \\\\
+        The Schwinger-Dyson equation becomes the following in momentum space:
+        $$
+        i p_{\mu} m^{\mu}_3 (p, q_1, q_2) = - ( m_2 ( q_1 -p, q_2) - m_2( q_1, q_2 + p))
+        $$
+        \section{Lecture 20}
+        $$
+         i p_{\mu} m_3^{\mu} ( p ,q_1, q_2) = - ( m_2( q_1 - p, q_2) = m_2( q_1, q_2 + p))
+        $$
+        \subsection{Wandi-Takahashi identity}
+        The variation $\psi \rightarrow ( 1 + i \alpha(x)) \psi(x)$ along with $A_{\mu} (x) \rightarrow A_{\mu} (x) + \frac{1}{2} \partial_{\mu} \alpha(x)$. We need to make a connection between these $m$'s that are just a fourier transform of the correlation functions to the 1-loop functions in QED. \\\\
+        define:
+        $$
+         < \psi(x) \bar \psi(y) > = \int \frac{d^4 q}{(2\pi)^4} e^{i q ( x-y) } G( \cancel q)
+        $$
+        Looking back at the defintion of $m_2$ in the last lecture we can read off the fact that:
+        $$
+         m_2 (q_1, q_2) = (2\pi)^4 \delta^{(4)} ( q_1 - q_2) G( \cancel q_1)
+        $$
+        This will feed into the right hand side of our schwinger dyson equaiton. For the LHS we want to show at the 3 point function $m_3^{\nu}$ is the fourier transform of $< \psi(x_1) A_{\mu}(x) \bar \psi(x_2)> $ with the external propagators amputated. Recall:
+        $$
+         \mathfrak{L}_{int} =-ie\bar \psi \gamma^{\mu} A_{\mu} \psi = - ie j^{\mu} A_{\mu} 
+        $$
+        Earlier in this chapter we had a source term $j^{\mu} = ie j^{\mu} = ( \partial^{\mu} \partial^{\nu} - \partial^2 \delta^{\mu \nu} ) A_{\mu}$. This differential operator is the inverse of the propogator so in order to amputate the photon that comes out of the vertex up here, it is sufficent to replace the $A_{\mu}$ by the current $j_{\mu}$. So to tamputate external $\gamma$- propagator replace $A_{\mu} \rightarrow ie j^{\mu}$. So our vertex function:
+        $$
+        V_3^{\mu} ( p, q_1, q_2)  (2\pi)^4 \delta^{(4)} ( q_1 - q_2 - p) = ie \int d^4 x d^4 x_1 d^4 x_2 e^{i p x} e^{-iq_1 x_1} e^{i q_2 x_2} G^{-1}( \cancel q_1) < j^{\mu}(x) \psi(x_1) \bar \psi(x_2) > G^{-1} ( \cancel q_2)
+        $$
+        this is schematic the typed notes do it in more details, but the punch line is:
+        $$
+         V_3^{\mu} ( p, q_1, q_2) (2 \pi)^4 \delta^{(4)} (q_1 - q_2 - p) = G^{-1} ( \cancel q_1) m_3^{\m} ( p, q_1, q_2) G^{-1}(\cancel q_2)
+        $$
+If we combine this result with the Schwinger-dyson equation we get:
+$$
+ i p_{\mu} m_3^{\mu}( p, q_1, q_2) = - (2\pi)^4 \delta^{(4)} ( q_1 - q_2 - p) ( G( \cancel q_1 - \cancel p) - G( \cancel q_1))
+$$
+So we get the Wandi-takasashi identity:
+$$
+i p_{\mu} V^{\mu} ( p, q_1, q_2) = ie ( G^{-1}( \cancel q_1) - G^{-1} ( \cancel q_1 - p) )
+$$
+Using the fact that the inverse propogator is related to the self-energy: $G^{-1}( \cancel q) = i \cancel q + m - \Sigma (\cancel q)$ so
+$$
+i p_{\mu} V^{\mu} ( p, q_1, q_2) =  e ( i \cancel p + \Sigma( \cancel q_1 - p) - \Sigma( \cancel q_1))
+$$
+Recalling $V_3^{\mu} = ie ( F_1( p^2) \gamma^{\mu} + \frac{1}{4m} F_2(p^2) [ \gamma^{\mu}, \gamma^{\nu}]p_{\nu})$ and chosing the renormalisation condition at $p^2 = 0$, and in the on-shell scheme:
+$$
+1 = F_1(0)
+$$
+Look at $p_{\mu} V^{\mu}_3 = ie F_1 (p^2) \cancel p + 0$ so $$F_1(0) = \lim{\cancel p \rightarrow 0} \lim_{\cancel q_1 \rightarrow m_{phys}} ( \frac{ \Sigma( \cancel q_1 - p) - \Sigma(\cancel q_1)}{ i \cancel p} + 1) = i\Sigma' ( i m_{phys}) + 1$$ so $\Sigma(i m_{phys}) = 0$\\\\
+On-shell condition for $F_1(0)$ gives condition for $\Sigma' ( i m_{phys})$ which gives $\delta Z_1 = \delta Z_2$ and so $Z_1 = Z_2$.
+\subsection{Nonabelian gauge theories}
+\subsubsection{Lie Groups}
+       Group element $U = \exp ( i \theta^a T^a) I$ with $T^a$ are hermitiant generators, and $\theta^a$ are continously numbers parametirsing U, and use $a$ to index over generators.\\\\
+       These $T^a$s form an algebra ( we are simplifying the algebra down to suitable for gorups of SU(n)), so have in mind $SU(2)$ with $U \in SU(2)$ and $T^a = \frac{1}{2} \sigma^a$ with $a = 1,2,3$. So the Lie algebra of $T^a$ is defined by:
+       $$
+        [T^a, T^b] = i f^{abc} T^c
+       $$
+       and jacobi idnenity:
+       $$
+       [ A, [B,C] + [ B, [C,A] + [ C, [A, B] = 0 \implies f^{abd} f^{dc e} + pems = 0
+       $$
+       We can have different classes of Lie groups: unitary groups, orthogonal groups , sympletic groups and some exceptional groups.\\\\
+       For unitary $U^{\dagger} U = I$ for $U \in G = SU(n)$. and $n$ will turn out to be the number of components in our matter field that we care about. $SU(n)$ has $\det U = 1$ and has $n^2 -1$ generators  ($dim d(G) = n^2 -1$)\\\\
+       \textbf{Representations}:\\
+       Fundemantal represnetaion: smallest non-trivial representation of the algebra. For $SU(n)$ it would be the $n \times n$ traceless hermitian matrices. Under $SU(n)$ scalar field would transform as:
+       $$
+       \phi \rightarrow e^{i \alpha^a T^a} \phi = \phi_i + i \alpha^a (T^a_{fund})_{ij} \phi_j
+       $$
+       $i,j$ are the representation indicies and $a,b$ are generator indicies.\\\\
+       Anti-fundamental representation: $T_{afund}^a = - ( T_{fund}^a)^*$ so:
+       $$
+        \phi^*_i \rightarrow \phi_i^* + i \alpha^a(T^a_{afund})_{ij} \phi_j^* = \phi_i^* - i \alpha^a \phi_j^* ( T_{fund}^a)_{ji}
+       $$
+       then we can drop the fundamental subscript as we are keeping $T$ to mean $T_{fund}$.\\
+       Adjoint: acts on a vecotr space spanned by generators:
+       $$
+        ( T_{adj}^a) _{ij} =- if^{aij}
+       $$
+        can see that Gauge fields transform in adjoint representation.
 \end{document}
 
 
