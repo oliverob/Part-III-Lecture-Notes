@@ -1074,5 +1074,58 @@ $$
  |f - Pr(0)| < \xi, \text{with probability} \geq 1 - \epsilon
 $$
 if $k \geq \frac{\log \frac{1}{\epsilon}}{2 \xi^2}$\\\\
-
+\section{Lecture 21}
+\subsection{Alternative approach to proving GK theorem}
+We will discuss unitary part in lectures. The part that deals with measurements will be discussed in ES4.\\\\
+We will start with the stabiliser state and update the list of generators for each Clifford gate applied to it.\\\\
+Let;s start with something concrete. Starting with the list of zero states $\ket{0}^{\otimes n}$ we can write the list of generators of this state as $\bra{Z} I$,$I Z I I$,..., $I \ket{Z}$.\\\\
+We will introduce the stabilizer tableau, giving two $n\times n$ matrices + extra space
+$$
+\ket{0}^{\otimes 4} \begin{pmatrix} 0 & 0& 0 & 0 & 1 & 0  & 0 & 0\\
+0 & 0& 0 & 0 & 0 & 1  & 0 & 0\\
+0 & 0& 0 & 0 & 0 & 0  & 1 & 0\\
+0 & 0& 0 & 0 & 0 & 0  & 0 & 1\\
+$$
+Each row represents one generator of the stabilizer group. The first block which in this case is all zeros has 1 if $X$ or $Y$ and the second block has 1 if $Z$ or $Y$.\\\\
+\textbf{Rules}:\\
+1)How to apply a Hadamard gate to the $i$-th qubit: \\
+We swap the $i$-th column of the $X$ matrix with the $i$-th column of the $Z$ matrix\\\\
+2) Apply $S$ gate to the $i$-th qubit:\\
+Bitwise $XOR$ the $i$-th column of the $X$ matrix into the $i$-th column of the $Z$ matrix\\\\
+3) Apply $CNOT$ ( $i$-th qubit-control, $j$-th qubit target):\\
+Bitwise $XOR$ the $i$-th column of the X matrix into the $j$-th column of the $X$ matrix, and then bitwise $XOR$ the $j$-th column of the $Z$ matrix to the $i$-th column of the $Z$ matrix.
+\subsection{Hybrid Quantum-Classical computation}
+Let's define a model:\\
+Input: a) Classical part description of a quantum circuit, input state and measurement lines, b)  Quantum part input $\ket{0}^{\otimes n}$\\
+Computation described as:
+$$
+ M_2C_2M_1C_1\ket{0}^{\otimes n}
+$$
+$M_1$ gives a classical string $x_1, ..., x_n$ that we feed into classical processing, and the output of the classical processing affect the block of gates $C_2$. This is repeated again and again for $C_3$, $M_3$ etc. etc.\\\\
+$C_1$, $C_2$ ,... are just sequences of 1 and 2 qubit gates.\\
+We will distinguish intermediate states after each measurement $M_n$ as $\ket{\psi_n}$ with input state as $\ket{\psi_0}$.\\
+We will distinguish two flavours of this type of computation, which essentially depends on what happens with the intermediate states.\\
+Type 1: The input state is carried through the computation. In other words we have $\ket{\psi_{out}} = M_N C_N ... M_1 C_1 \ket{\psi_0}$\\
+Type 2: Every round (consisting of application of $C_i$ followed by M_i) we make use of $\ket{\psi_{i-1}} = \ket{0}^{\otimes n}$.\\\\
+Example of hybrid quantum-classical computation of type 1) Pauli-based computation ( Bravyi-smith, smoh '16) covered this lecture, type 2) variational quantum eigensolver ( last lecture of this course).
+\subsubsection{Pauli-based computation}
+Start with an input state $\ket{\psi_{in}}$ on $t$ qubits\\
+Apply a sequence of pairwise commuting Pauli-measurements $P_1...P_s \in \mathcal{P}_t$ sequentially to the input state\\
+The choice of each $P_i$ can in general depend on previous measurement outcomes. When there is no such dependancy we say that PBC is non-adaptive.\\\\
+Considering the adaptive case. There is a nice tree diagram in the notes that I can't replicate in latex. \\\\
+\textbf{Theorem}: Let circuit $C$ be any generally adaptive quantum circuit on $n+t$ qubits with input state $\ket{\psi} = \ket{\sigma } \otimes \ket{\rho}$ where $\ket{\sigma}$ is a stabilizer state on $n$ qubits, $\ket{\rho}$ is any state on $t$ qubits. Suppose that the unitary steps of $C$ are all Clifford gates. Then:\\
+i) $C$ may be weakly simulated by a generally adaptive PBC circuit $\tilde P_1 ... \tilde P_s$ on $t$ qubits and with $s \leq t$ steps.\\
+ii) If $C$ is non-adaptive (with final measurement outputs) then the corresponding PBC circuit $\tilde P_1, ... \tilde P_S$ can be chosen to be non-adaptive \\
+iii) If some $Z$ measurement in $C$ are postselcted to outcome +1, then this circuit can be weakly simulated by a PBC circui in which some of the Pauli measurements are postselected to outcome +1\\
+\textbf{Lemma A}: Let $P, Q \in \mathcal{P}_n$ be anti-commuting Pauli operators. let $\ket{\psi}$ be an eigenstate of $P$ with $P\ket{\psi} = \lamdba_p \ket{\psi}$, $\lambda_p = \pm 1$. Then 1) a measurement of $Q$ on $\ket{\psi}$ yields $\lambda_a = \pm 1$ with equal probabilities.\\
+2) The operator $V( \lambda_P, \lambda_Q) = \frac{\lambda_p P + \lamdba_q Q}{\sqrt{2}}$ is always a unitary Clifford operation.\\
+3) $V(\lambda_p, \lambda_q)$ is the normalised projection of $\ket{\psi}$ onto the $\lamdba_Q$ eigenspace of $Q$.\\\\
+Remark: Hence measurement of $Q$ on $\ket{\psi}$ is equivalent to classically chossing a uniformly random $\lamdba \in \{ \pm 1\}$ and applying clifford unitary.
+\section{Lecture 23}
+\textbf{Lemma B}: For any $$P = \pm A_1 \otimes ... \otimes A-n \otimes B_1 \otimes... \otimes B_t \in \mathcal{P}_{n+t}$$,  with$A_1, B_1 \in \{ X,Y,Z, I\}$ write :
+$$
+ \tilde P = \pm B_1 \otimes... \otimes B_t \in P_t
+$$
+(with the same oeveral sign as $P$).\\
+If $P$ commutes with $Z_1...Z_n \in \mathcal{P}_{n+t}$, then each $A_i$ is either $Z$ or $I$. If for all $i$, each $A_i$ is either $Z$ or $I$, then for any $t$-qubit state $\ket{\psi}$ the measurement of $P$ on $\ket{0}^{\otimes n} \otiems \ket{\psi}$ and the measurement $\tilde P $ on $\ket{\psi}$ give the same output distribution, and corresponding post-measurement states: $\ket{0}^{\otimes n} \ket{\psi'}, $\ket{\psi'}$ respectively, witht he same $t$-qubit state $\ket{\psi'}$.
 \end{document} 

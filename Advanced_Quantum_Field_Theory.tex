@@ -1685,6 +1685,125 @@ On-shell condition for $F_1(0)$ gives condition for $\Sigma' ( i m_{phys})$ whic
         ( T_{adj}^a) _{ij} =- if^{aij}
        $$
         can see that Gauge fields transform in adjoint representation.
+        \section{Lecture 22}
+        Index of a representation $R$, $T(R)$ is defined as the inner product 
+        $$T(R) \delta^{ab} = tr( T_r^a T_r^b) = (T_R^a)_{ij} (T_R^b)_{ji}$$
+        For the fundamental:
+        $$
+         T_{ij}^a T_{ji}^b = \frac{1}{2} \delta^{ab}, T(fund) \neq T_F = \frac{1}{2}
+        $$
+        For the adjoint: 
+        $$
+         f^{acd} f^{bcd} = N \delta^{ab}, T(adj) = T_A = N
+        $$
+        Quadratic Asmir of $R$, $C_i(R)$ is given by:
+        $$
+         T_R^a T_R^a = C_2(R) I
+        $$
+        In defintion of index, set $a=b$ so:
+        $$
+         T(R) d(G) = C_2(R) d(R)
+        $$
+        so
+        $$
+         C_2(fund) = C_F = \frac{N^2-1}{2N}, C_2(adj) = C_A = N
+        $$
+        \subsection{Gauge invariance and Wilson lines}
+In typed notes we do this in QED, here we are going to skip ahead.
+Consider transformation of $N$-component fermions:
+$$
+ \psi(x) \rightarrow V(x) \psi(x), V(x) \in G (=SU(N))
+$$
+$$
+ \bar \psi(x) \rightarrow \bar \psi(x) V^{\dagger} (x)
+$$
+$\bar \psi \cancel \partial \psi$ is not invariant due to $\partial_{\mu} V(x)$ term. OCnsider derivative in direction of unit vector $n^{\mu}$:
+$$
+ n^{\mu} \partial_{\mu} \psi = \lim_{a \rightarrow b} \frac{1}{a} ( \psi(x+ an) - \psi(x))
+$$
+We have:
+$$
+ \psi(x + an) - \psi(x) \rightarrow V(x+an) \psi(x+ an) - V(x) \psi(x)
+$$
+We want to define a gauge invariant derivative $D_{\mu}$ s.t.:
+$$
+ D_{\mu} \psi(x) \rightarrow V(x) D_{\mu} \psi(x)
+$$
+Solution is to introduce Wilson line:
+$$
+ W(y,x) \rightarrow V(y) W(y,x) V^{\dagger}(x)
+$$
+with $W(x,x) = I$ of $G$. If we define $D_{\mu}$ as:
+$$
+n^{\mu} D_{\mu} \psi = \lim_{a \rightarrow 0} \frac{1}{a} ( \psi( x+ an) - W( x+ an, x) \psi(x))
+$$
+In the infintesimal limit, relate group element to algebra element $A_{\mu} (x+ \frac{a}{2}n)$ where $A_{\mu} (x) = A_{\mu}^a (x) T^a$:
+$$
+ W( x+an, x) = e^{i g an^{\mu} A_{\mu} ( x+ \frac{a}{2} n)} \approx 1 + i g a n^{\mu} A_{\mu}^a ( x+ \frac{a}{2} n) T^a + O ( g^2)
+$$
+We want to work with the $A_{\mu}$ field so using how we know $W$ transforms and incisting $D_{\mu} \psi(x) \rightarrow V(x) D_{\mu} \psi(x)$:
+$$
+ ( \parital_{\mu} - i g A'_{\mu}) V \psi = V(x) ( \partial_{\mu} -ig A_{\mu}) \psi
+$$
+$$
+ \partial_{\mu} V - i g A_{\mu}' V = - i g V A_{\mu}
+$$
+Solve for $A_{\mu}' = V A_{\mu} V^{-1} - \frac{i}{g} ( \partial_{\mu} V) V^{-1}$. \\Infinitesimal gauge transformations:
+$$
+V(x) = e^{i \alpha^a(x) T^a} \approx 1 + i \alpha^a (x) T^a
+$$
+so
+$$
+ \psi \rightarrow (1+ i \alpha^a T^a) \psi(x)
+$$
+$$
+ A_{\mu}^a (x) \rightarrow A_{\mu}^a(x) + \frac{1}{g} \partial_{\mu} \alpha^a(x) + f^{abc} A_{\mu}^b(x) \alpha^c(x) = A_{\mu}^a(x) - \frac{1}{g} ( \partial_{\mu} \delta^{ac} - ig A_{\mu}^b(x) ( -if^{bac}) ) \alpha^c(x)
+$$
+$$
+ A_{\mu}^a = A_{\mu} ^a(x) + \frac{1}{g} D_{\mu}^{ac} \alpha^c(x)
+$$
+where
+$$
+ D_{\mu}^{ac} = \partial_{\mu} \delta^{ac} - ig A_{\mu}^b( T^b_{adj})^{ac}
+$$
+$D_{\mu} \psi$ transforms line $\psi$ and $D_{\mu} D_{\nu} \psi$ also does so:
+$$
+ [ D_{\mu} , D_{\nu} ] \psi \rightarrow V [ D_{\mu}, D_{\nu}] \psi
+$$
+Insert $D_{\mu} = \partial_{\mu} - i g A_{\mu}$ so:
+$$
+ [D_{\mu}, D_{\nu}] \psi = - ig F_{\mu \nu}^a T^a \psi 
+$$
+       where $F_{\mu \nu}^a = \partial_{\mu} A_{\nu}^a - \partial_{\nu} A_{\mu}^a + g f^{abc} A_{\mu}^b A_{\nu}^c$ which is not a differential operator.  Under gauge transformation:
+       $$
+        F_{\mu \nu}^a \rightarrow F_{\mu \nu}^a - f^{abc} \alpha^b F^c_{\mu \nu}
+       $$
+       so $F^a_{\mu \nu} F^{a, \mu \nu}$ is gauge invariant so the Yang-Mills aciton is given by:
+       $$
+       S_{YM} [A] = \int d^4 x \frac{1}{4} F_{\mu \nu}^a F^{a \mu \nu}
+       $$
+       Gauge theory wiht DIrac fermions:
+       $$
+        \mathfrak{L} = \frac{1}{4} ( F^a)^2 + \bar \psi_i ( \cancel \partial \delta_{ij} - i g \cancel A^a T^a_{ij} + m \delta_{ij}) \psi_j = \frac{1}{2} Tr ( F_{\mu \nu} F^{\mu \nu}) + \bar \psi( \cancel D + m ) \psi
+       $$
+       \subsection{Fadeev-Popov Gauge-fixing}
+       Analogy: go back to zero dimensions with integral:
+       $$
+       Z \sim \int da db e^{-S(a)}
+       $$
+       There are some modes here $b$ that do not affect the action so we just ignored them and didn't integrate over the modes. In non-abelian gauge theory we cant be so caviler so need to be more formal:
+       $$
+       Z = \int da db \delta(b) e^{- S(a)} = \int da db \delta (b - f(a)) e^{- S(a)}
+       $$
+       Fix $b$ s.t. it is solution to some equation $G(a,b) = 0$ this is our gauge fixing cndition and then use:
+       $$ 
+       \delta( G(a,b)) = | \frac{\partial G}{\parital b}|^{-1} \delta (b - f(a))
+       $$
+       so:
+       $$
+        Z = \int da db \frac{\parital G}{\partial b} \delta( G(a,b)) e^{- S(a)}
+       $$
+       Assumed that $\frac{\partial G}{\partial b} > 0$  and there exists a unique solution ( Actually "Eribov copies" can exits). This was warm up exercise next time we do this with parth integrals.
 \end{document}
 
 

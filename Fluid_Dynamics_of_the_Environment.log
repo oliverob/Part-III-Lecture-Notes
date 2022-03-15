@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  10 MAR 2022 13:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  15 MAR 2022 13:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1487,20 +1487,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 1627--1630
 
  []
 
-[51] [52] (./Fluid_Dynamics_of_the_Environment.aux) ) 
+[51]
+./Fluid_Dynamics_of_the_Environment.tex:1641: Undefined control sequence.
+l.1641 ... b^2) + \frac{\partial}{\partial z} ( \p
+                                                   \rho b^2 W) = 2 \pi \rho_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Fluid_Dynamics_of_the_Environment.tex:1648: Undefined control sequence.
+l.1648 \subsubection
+                    {Plumes in homogeneous environment}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1646--1653
+
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1690
+
+ []
+
+
+Overfull \hbox (0.69754pt too wide) in paragraph at lines 1685--1690
+\OT1/cmr/bx/n/10 Plume in a ho-moge-nous en-vi-ronemnt\OT1/cmr/m/n/10 : $[\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 RL[]T[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 RL[]T[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 ] =
+ []
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1728
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:1748: Missing { inserted.
+<to be read again> 
+                   ^
+l.1748 ...that $z_{max} = c ( \frac{F_0}{\rho_0}_^
+                                                  {\frac{1}{4}} N^{- \frac{3...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./Fluid_Dynamics_of_the_Environment.tex:1748: Missing } inserted.
+<inserted text> 
+                }
+l.1748 ...rho_0}_^{\frac{1}{4}} N^{- \frac{3}{4}}$
+                                                   experiementally we can ve...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1748--1750
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1748--1750
+
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1757
+
+ []
+
+)
+Runaway argument?
+{\sqrt {g' L}$ then we predict that the Froude number is ascending wi\ETC.
+! File ended while scanning use of \frac .
+<inserted text> 
+                \par 
+<*> Fluid_Dynamics_of_the_Environment.tex
+                                         
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> Fluid_Dynamics_of_the_Environment.tex
+                                         
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
  1787 strings out of 478599
- 23255 string characters out of 5858101
+ 23189 string characters out of 5858101
  335266 words of memory out of 5000000
- 19673 multiletter control sequences out of 15000+600000
+ 19675 multiletter control sequences out of 15000+600000
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,9n,66p,1436b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Fluid_Dynamics_of_the_Environment.pdf (52 pages, 392209 bytes).
-PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 56i,9n,66p,1658b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

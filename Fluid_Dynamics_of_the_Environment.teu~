@@ -1761,7 +1761,7 @@ $$
                          \section{Lecture 22}
                          \subsection{Vortex rings}
                          There is a lot more in the printed notes than in the lectures. A vortex ring in an annular ring of vorticity with fluid spinning around a ring with fluid moving down inside the ring and up just outside the ring. In the frame of refrence of the ring it has a cross section with two sets of closed trajectory loops with a stagnation point at the top and bottom of the set.\\\\
-                         What happens if we add density. The first thing to note is that at the top of the circular region of closed tajectories the density inside the region containing the ring is greater than the density outside the ring so we get Rayleigh-Taylor instability. We have $\omega^2 = \frac{1}{2} g' k$ as $g' <0$ we have $\omega = \pm i \sqrt{ \frac{1}{2} |g'| k}$ so $e^{i \omega}$ leads to expnentially growing or decaying solutions. At the bottom we get wave like solutions to the perturbations at the bottom of the region, so disturbances here don't decay. So small perturbations that start at the top grow and then as they are accelerated (which decreases the amplitude a bit),around to the bottom of the region, as they get squeezed into the bottom of the region the wavelength reduces and so they become larger perturbations. This ends up drawing some of the ambient fluid into the vortex ring like structure at the top and expelling some of the fluid in the vortex ring like structure. We can consider the time to advect the fluid around as being roughly $t_A = \frac{a}{w}$ and the growth rate is roughly $\sqrt{ |g'|h}$so in this time the amount things grow is : $\simga t_A = \sqrt{ g k} \frac{a}{w}$. These become of similar order to the vortex ring when $\lamdba \sim a$ so $k \sim \frac{1}{a}$ so $\sigma t_A = \frac{\sqrt{g' a}{w} = \frac{1}{F}$. This says that once the Froude number of the vortex ring becomes of order 1 we start to see these rayleigh taylor instabilities start to have a big impact, this is when it stops behaving like a vortex ring and starts behaving like a thermal.
+                         What happens if we add density. The first thing to note is that at the bottom of the circular region of closed tajectories the density inside the region containing the ring is greater than the density outside the ring so we get Rayleigh-Taylor instability. We have $\omega^2 = \frac{1}{2} g' k$ as $g' <0$ we have $\omega = \pm i \sqrt{ \frac{1}{2} |g'| k}$ so $e^{i \omega}$ leads to expnentially growing or decaying solutions. At the top we get wave like solutions to the perturbations at the top of the region, so disturbances here don't decay. So small perturbations that start at the bottom grow and then as they are accelerated (which decreases the amplitude a bit),around to the top of the region, as they get squeezed into the top of the region the wavelength reduces and so they become larger perturbations. This ends up drawing some of the ambient fluid into the vortex ring like structure at the top and expelling some of the fluid in the vortex ring like structure. We can consider the time to advect the fluid around as being roughly $t_A = \frac{a}{w}$ and the growth rate is roughly $\sqrt{ |g'|h}$so in this time the amount things grow is : $\simga t_A = \sqrt{ g k} \frac{a}{w}$. These become of similar order to the vortex ring when $\lamdba \sim a$ so $k \sim \frac{1}{a}$ so $\sigma t_A = \frac{\sqrt{g' a}{w} = \frac{1}{F}$. This says that once the Froude number of the vortex ring becomes of order 1 we start to see these rayleigh taylor instabilities start to have a big impact, this is when it stops behaving like a vortex ring and starts behaving like a thermal.
                                  \subsubsection{Entraining thermal}
                                  We are going to release a volume $V_0$ and it is going to have a reduced gravity $g'_0$. This produces a buoyancy $B= V_0 g'_0$ (not the buoyancy flux). This will be conserved in a homogeneous environment. \\
                                  Consider a thermal arising from a point source ten the only length scale is the distance from the point source (in this situtation you could potentially use the length scale $V_0^{\frac{1}{3}}$ but we are not going to make use of this for now) so as $[B] = L^4 T^{-2}$ and $[w] = \frac{L}{T}$ as we have:
@@ -1813,45 +1813,4 @@ we need to think about the momentum of the mass around the thermal which we have
 $$
  \frac{d w^2}{dz} = 2 ( \frac{g'}{1 + C_a} - \alpha w^2 \frac{S^1}{V}) = 2 ( \frac{g'}{1+ C_A} - \lapha w^2 \frac{s}{vR})
 $$
-We have already seen that $[B] = L^4 T^{-2}$  so could try $w^2 = k \frac{B}{z^2}$ as a solution. If we do this we find that:
-$$
-w = ( \frac{27 v^2}{2 \alpha^2 s^2 ( 1+ C_A)})^{\frac{1}{2}} B^{\frac{1}{2}} ( z- z_0)^{-1} = \frac{dz}{dt}
-$$
-$$
-z = ( \frac{ 54 v^2}{\alpha^3 s^3 ( 1+ C_A)})^{\frac{1}{4}} B^{\frac{1}{4}} (t - t_0)^{\frac{1}{2}}
-$$
-So this corresponds to a point source at $z=z_0$ when $t=t_0$. The Froude number $F= \frac{w}{\sqrt{g' R}} $. So we will start with a high Froude number and a vortex ring that gradually decreases and then platouts to a constant when it becomes a thermal.\\\\
-Thermals are really efficent at entraining fluid as the Rayleigh-Talor instability is very effient and leads thermal to mix in all of the fluid it encounters.
-\subsection{Thermal in stratified environment}
-$$
- \frac{dV}{dt} = \alpha S^1 w
-$$
-Not changed by stable straigication provided shape remains self-similar. As the fluid rises up it will be entraining fluid denser than it so it will eventually reach a height at which the buoyancy force disappears.\\\\
-If we have a constant buoyancy frequency for the environemnt $N = \sqrt{ - \frac{g}{\rho_0} \frac{d \hat \rho}{dz}}$ which has $[N] = T^{-1}$ so 
-$$
- ( \frac{B}{N^2})^{\frac{1}{4}} \sim z_{max}
-$$
-Of course we won't actually have a self-similar solution as we won't have a large spherical mass at this height, the buoyancy force will want it to spread out. However, until it reaches that height we will still have rayleigh-taylor on the front. A solution based on a self-similar thermal will over-predict the rise in height.
-$$
- \frac{d \bar \rho V}{dt} = \alpha \hat \rho S^1 w \implies \frac{d g'}{dt} = - ( \alpha g' \frac{S^1}{V} + N^2) w
-$$
-if we assume $C_A = 0$ then the momentum change is:
-$$
- \frac{d \rho V w}{dt} = \rho_0 g' V
-$$
-From all this we can bring it together to get an equation for the thermal if we assume a constant Froude number:
-$$
-\frac{dz}{dt} = F ( 2 \alpha ( z+ z_0) g')^{\frac{1}{2}}
-$$
-which we are going to need to solve numerically.
-\section{Example Sheet 3}
-The momentum equation never cares about geometry so can always just quote the following (even if it says find the momentum equation!):
-$$
-\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + g \frac{\partial }{\partial x}( H +h) = 0
-$$
-A bousinesq case is when $\Delta \rho$ is small enough we can ignore variation of $\rho$ in the inertial term compared to gravity ( so occurs in large gravity or small variation. Non-bousinesq case is when there is big variaiton in $\rho$ e.g. one is negillbible or zero. \\\\
-Hydrostatic is when pressure is the same at every level. Occurs in any fluid at rest. $\frac{\partial p}{\partial z} = - \rho g$. Can cause a pressure gradient in the fluid below if the fluid below has a variable height as then the pressure along the surface of the lower fluid will vary (unless the fluid above has negillible density).\\\\
-If you have a constriction and so the flow crosses from the subcritical to the supercritical branch then you must have $Fr =1$ at the narrowest or shallowest point. If you have both variations in depth and width that aren't coincident then it could happen somewhere.\\\\
-If you are considering a steady state solutoin and your answer doesn't make sense think about whether your boundary conditions are too strict and whether information may have been gained from somewhere else that changes them. E.g. in question 17 we overspecified the start height and froude number, in reality we needed to takeinto account what happened further down the channel at some sort of hydralic control that would have $Fr =1$.\\\\
-Momentum equation includes $\frac{\partial}{\partial x}( P + \rho_1 g z)$ and here the $\rho_1 g z$ is not part of the pressure but rather just another term in the momentum equation due to the acceleration of gravity. Think about the vertical momentum equation which has $0 = \frac{\partial}{\partial z} ( p + \rho_1 g z) \implies \frac{\partial p}{\partial z} = - \rho_1 g$.
                     \end{document} 
