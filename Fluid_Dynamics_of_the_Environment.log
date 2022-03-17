@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  15 MAR 2022 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  15 MAR 2022 13:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1562,31 +1562,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 1755--1757
 
  []
 
-)
-Runaway argument?
-{\sqrt {g' L}$ then we predict that the Froude number is ascending wi\ETC.
-! File ended while scanning use of \frac .
-<inserted text> 
-                \par 
-<*> Fluid_Dynamics_of_the_Environment.tex
-                                         
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+./Fluid_Dynamics_of_the_Environment.tex:1764: Undefined control sequence.
+<recently read> \simga 
+                       
+l.1764 ...time the amount things grow is : $\simga
+                                                   t_A = \sqrt{ g k} \frac{a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! Emergency stop.
-<*> Fluid_Dynamics_of_the_Environment.tex
-                                         
-*** (job aborted, no legal \end found)
+./Fluid_Dynamics_of_the_Environment.tex:1764: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.1764 ...r order to the vortex ring when $\lamdba
+                                                   \sim a$ so $k \sim \frac{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1763--1765
+
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1781
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1806--1809
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:1814: Undefined control sequence.
+l.1814 ...^1}{V}) = 2 ( \frac{g'}{1+ C_A} - \lapha
+                                                   w^2 \frac{s}{vR})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1822--1825
+
+ []
+
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 1828--1831
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+
+ []
+
+[58] [59] (./Fluid_Dynamics_of_the_Environment.aux) ) 
 Here is how much of TeX's memory you used:
- 1787 strings out of 478599
- 23189 string characters out of 5858101
+ 1788 strings out of 478599
+ 23260 string characters out of 5858101
  335266 words of memory out of 5000000
- 19675 multiletter control sequences out of 15000+600000
+ 19674 multiletter control sequences out of 15000+600000
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,9n,66p,1658b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 56i,9n,66p,1659b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Fluid_Dynamics_of_the_Environment.pdf (59 pages, 417202 bytes).
+PDF statistics:
+ 275 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

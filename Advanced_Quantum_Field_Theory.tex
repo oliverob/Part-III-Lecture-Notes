@@ -850,6 +850,19 @@ $$
 [\lambda \phi^4] = d \implies [\lambda] = 4 -d = \epsilon
 $$
 This means that away from 4 dimensions the formerly dimensionless coupling $\lamdba$ now has dimensions $\epsilon$. This introduces a new mass scale $\mu$ s.t. $\lambda = \mu^{\epsilon} g(\mu)$ with a new dimensionless coupling $g$.
+\section{Summary of renormalisation}
+We can separate out the high energy modes as the integral is additive. Then if you define an effective action $S_{\Lambda}^{eff} = - \hbar \log ( \int_{Lambda}^{\Lambda_0} D \chi exp( - S_{\Lambda_0} (\phi + \chi)/\hbar))$. This will give identical correlation functions for all energy scales less than $\Lambda$ so we have:
+$$
+ Z_{\Lamdba}( g_i (\Lambda)) = \int^{\Lambda} D \phi e^{ - S^{eff}_{\Lambda}[\phi]/\hbar}
+$$
+which is the same for any $\Lambda$, so as we change the scale by integrating out modes the couplinhgs in the effective action vary exactly to account for as described by the Callan-Symanzik equation:
+$$
+ \Lambda \frac{d Z_{\Lambda}(g)}{d\Lambda} = ( \Lambda \frac{\partial}{\partial \Lambda}|_{g_i} + \Lambda \frac{\partial g_i ( \Lambda)}{\partial \Lambda} \frac{\partial}{\partial g_i}|_{\Lambda}) Z_{\Lambda}(g) = 0
+$$
+We want to think about how these couplings change as we integrate out more modes as it tells us how the validity of the perturbation method varies depending on energy scale. We define the $\beta_i$ function as $\beta_i = \Lambda \frac{\partial g_i}{\partial \Lambda}$ to describe this.\\\\
+Conformal field theories are points $g^*_i$ where $\beta_i = 0$ as at this point the couplings are independant of the scale. We care about couplings that run close to these critical points but not to them. To find them we first consider irrelevant couplings which are ones with operators of dimension less than the scaling dimension $\Delta_{\phi} = (d-2) /2 + \gamma_{\phi}$, these all run into the critical point ( the surface constructed of them is called the critical surface). Relevant couplings are ones with $d > \Delta_{\phi}$ and they run away from the critical point/surface (the relevant coupling starting right at the critical point is known as the renormalized trajectory). We also have marginally relevant, or irrelevant couplings that have $\Delta_{\phi} = d$ that will have a weaker dependance but ultimately run to or away form the critical point. The whole point of this is that the renormalized trajectory will either go on forwever or meet another critical point. A generic QFT will have a selection of relevant and irrelevant couplings. As we integrate out modes the irrelevant couplings will dissapear (as they tend to the gaussian critical point with $g_i = 0$) and the relevant couplings will tend to the renormalized trajectory, which in the IR limit will flow to a second critical point with a conformal QFT. This is why renormalisation works, we can do physics in this IR limit at this conformal QFT without knowing which set of initial couplings is actually valid as long as they flow here. Theories whose RG flows all focus onto the same trajectory emanating form a given critical point are in the same universality class, and will end up looking the same at large distances/low energy scales.\\\\
+Often we want to know if a low energy theory at a fixed scale $\Lambda$ is dependant on the initial cut-off $\Lamdba_0$, and if we remove the limit will this affect the predictions for low-energy. This is called taking the continuum limit. \\If the initial couplings of this theory lie on the critical surface then it is happy days as we can send $\Lambda_0$ to infinity and the irrelevant operators are suppresed by position powers of $\Lamdba/\Lamdba_0$ so the theory is driven to the critical point which is scale invariant, so the resulting scale-$\Lamdba$ effective theory will be a CFT and independant of $\Lambda$, such theories are called superrenormalizable. \\
+If the theory has relevant or marginally relevant operators then consider a theory with initial conditions near but not on the critical surface. This flow will pass close to the critical point and then follow the renormlised trajectory as we send $\Lambda_0$ to infinity. Therefore, we tune the initial conditions using counterterms dependant on $\Lambda_0$ so that the scale-$\Lambda$ QFT has finite couplings as we take $\Lamdba_0$ to infinity.
 \section{Lecture 12}
 We analytically continue things away from 4 dimensions to $d= 4-\epsilons$, so the previously dimensionless coupling gains a dimension $\lambda = \mu^{\epsilon} g(\mu)$ with $g$ dimensionless.\\\\
 Now lets return to the one-loop diagrams that we looked at before. The one-loop self energy becomes:
@@ -1804,7 +1817,46 @@ $$
         Z = \int da db \frac{\parital G}{\partial b} \delta( G(a,b)) e^{- S(a)}
        $$
        Assumed that $\frac{\partial G}{\partial b} > 0$  and there exists a unique solution ( Actually "Eribov copies" can exits). This was warm up exercise next time we do this with parth integrals.
-\end{document}
+       \section{Example sheet 3}
+       Remember when transforming to momentum space remember that $\partial_{\mu} \phi \rightarrow i p_{\mu} \phi$. I keep forgetting the $i$.\\\\
+       When in euclidean space we have $\int D \phi e^{-S}$ so there is an extra minus sign added to each interaction term that you read off the langrangian.\\\\
+       If a diagram has no momentum depedeance than it is sort of like a mass correction term,however if this is in a theory with gauge invariant mass then this is probably cancelling some masslike terms generated in another diagram to make the sum gauge invariant.\\\\
+       The reason $\delta Z_1 = \delta Z_2$ when rescaling a scalar QED, is that the renormalised lagrangian after scaling must still be gauge invariant so it must be constructed of gauge invariant things which we only have a limited number including teh covariant derivative and mass terms. So it is useful to figure out how the gauge symmetry restricts the counterterms so you know which terms must renormalise together. Any symmetry of the original lagrangian needs to be preserved under renormalisation (e.g. parity). \\\\\\
+       We want to make $g$ small as this is pertrubation method so we want the second order stuff to dissapear. So for $\beta >0$ we have $g$ increases with $\mu$ increasing, so for small energy the theory becomes free. However, this does not always give us the whole picture as sometimes there is a $\mu$ dependance in the self energy terms (the first order and second order etc. terms) can explode dispite $g$ running down. This only occurs in MS or $\bar{MS}$ schemes. in the on shell scheme the corrections vanish so we get a physical renormalised parameter so the coupling won't run as the renormalised lagrangian has no dependance on $\mu$.\\\\
+       When asked for 1-loop corrections remember to think about $<\phi>,<\phi^3>, <\phi^4>$ as well as $<\phi \phi>$ terms e.g. in $\phi^3$ theory can have 1-loop 1 particle correction. It is only the $<\phi \phi>$ terms that form the infinite series of $-1PI-1PI-1PI-...$, and the rest have the full $<\phi \phi>$ terms on each incoming propogator. However, not all of these will diverge even if they exist (as we only need counterterms for ones that diverge) .so we need to think about a circle which is a series of sections of scalar and fermion lines and a whole load  of random external lines added which gives in general dimension of $4L$ from the integral measure, $-2$ for every internal scalar propogator ($\frac{1}{p^2}$) and $-1$ for every internal fermion propogator ($\frac{1}{\cancel p}$). So this divergences if $4 -2I_S - I_F \geq 0$. There are only a finite number of potential number of propogators that satisfy this condiiton namely (I_S, I_F): (0,4), (1,2), (0,2), (2,0), (1,0), (1,1) which correspond to diagrams.\\\\
+       The defintion of the on-shell scheme is we want to make the correction vanish for a physical particle so $\Pi( p^2 = - m^2)= \frac{\partial \Pi( p^2 = -m^2)}{\partial p^2} = 0$, so when it appears on an external leg it will have a zero contribution (\textbf{don't forget the $\Pi'(p^2 =-m^2) = 0$ condition}. Sometimes this is not possible as setting $p^2 = -m^2$ introduces an imagineary part that cannot be cancels by a counterterm as the counterterm should be real. In this case we use the general on-shell condition $Re \Pi(p^2 = -m^2) = 0$. If you have an onshell condition that does not restrict anything, think about whether th symmetries of the original terms prevents a finite term renormalisation anyway.
+       \section{Lecture 22}
+       In gauge theory, $b$ variables represent redundant degrees of freedom. We will fix the gauge with some function such as $G^a( x) = \partial^{\mu} A_{\mu} (x)$ so:
+       $$
+       Z= \int DA \det ( \frac{\delta G}{\delta }) ( \Prod_{x,z} \delta^{(4)}(G^a)) e^{ - S_{YM} [A]}
+       $$
+       with $S_{YM} = \frac{1}{4} F_{\mu \nu} \cdot F^{\mu \nu}$ with the dot meaning sum over the generator indices.\\\\
+       How does $G$ change under change of gauge parameter. Given $A_{\mu}^a \rightarrow A_{\mu}^a + \frac{1}{g} D_{\mu}^{ab} \alpha^b$ we get $G^{(a)} \rightarrow G^{(a)} + \frac{1}{g} \partial^{\mu} D_{\mu}^{ab} \alpha^b$. So we ahve:
+       $$
+        \frac{\delta G^a (x)}{\delta \alpha^b (y)} = \frac{1}{g} \delta^{(4)}(x-y) \partial^{\mu} D_{\mu}^{ab} 
+       $$
+       this is a differential operator and it is important to note that the covariant derivate contains $A_{\mu}$ the gauge field.
+       \subsubsection{Fadeev-Popov determinant}
+       $$
+        det \frac{\delta G^a (x)}{\delta \alpha^b(y)} \sim \int D c D \bar c e^{- S_{gh}}
+       $$
+       where $c, \bar c$ are spinless, Grassmann field with action $S_{gh} = \int d^4 x \mathfrak{L}_{gh}$ for:
+       $$
+        \mathfrak{L}_{gh} = - \bar c^a \partial^{\mu} D_{\mu}^{ab} c^b = \partial^{\m} \bar c^a D_{\mu}^{ab} c^b = \partial^{\mu} \bar c \cdot D_{\mu} c
+       $$
+       $$
+        \mathfrak{L}_{gh} = \partial^{\mu} \bar c^a \partial_{\mu} c^a - i g \partial^{\mu} \bar c^a A_{\mu}^c ( T_{adj}^c)^{ab} c^b = \partial^{\mu} \bar c \partial_{\mu} c^a - g f^{abc} A_{\mu}^c \partial^{\mu} \bar c^a c^b
+       $$
+       The first term here is the kinetic temr and the second is the interaction term with ghost, anti-ghost and gauge boson.\\
+       Put $\delta-f^n$ into the action via a Lagrange multiplier. Introduce a scalar (commuting) field $B^a(x)$ (auxillary, Nakansihi-Lautrap).
+       $$
+       \mathfrak{L} = \frac{1}{4} (F^a)^2 + \bar \psi( \cancel D + m ) \psi - \bar c \partial^{\mu} D_{\mu} x + B^a \partial^{\mu} A_{\mu}^a - frac{\xi}{2} ( B^a)^2
+       $$
+       The last two terms taken together are the gauge-fixing lagrangian. An analogy is:
+       $$
+        \int dx \delta(f(x)) e^{-S(x)} = \int dx d \lambda e^{-S(
+       $$
+       \end{document}
 
 
-
+:
