@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  7 MAR 2022 10:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  18 MAR 2022 16:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -254,12 +254,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
-[3]
+
 Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
  []
@@ -339,17 +339,23 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--144
+Underfull \hbox (badness 10000) in paragraph at lines 138--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--144
+Underfull \hbox (badness 10000) in paragraph at lines 138--145
 
  []
 
-./Quantum_Computation.tex:154: Undefined control sequence.
-l.154 ..._1) = (a_2, b_2) + \lambda( y, 1), \lmbda
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--145
+
+ []
+
+[5]
+./Quantum_Computation.tex:155: Undefined control sequence.
+l.155 ..._1) = (a_2, b_2) + \lambda( y, 1), \lmbda
                                                    \in \mathbb{Z}_{p-1}$:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -358,126 +364,79 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--167
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--167
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--167
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--167
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 173--178
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--179
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 194--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
+Underfull \hbox (badness 10000) in paragraph at lines 195--199
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 247--251
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 255.
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--252
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 256.
 (c:/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 255.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 256.
 
-./Quantum_Computation.tex:255: Missing $ inserted.
+./Quantum_Computation.tex:256: Missing $ inserted.
 <inserted text> 
                 $
-l.255 ...G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}
+l.256 ...G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}
                                                   \ket{x}\}_{g \in G, x \in ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-./Quantum_Computation.tex:256: LaTeX Error: Environment itemlist undefined.
+./Quantum_Computation.tex:257: LaTeX Error: Environment itemlist undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.256 \begin{itemlist}
+l.257 \begin{itemlist}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 255--258
 
  []
 
-
-./Quantum_Computation.tex:257: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 \item C
-             reate a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:258: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.258 \item
-            Apply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:258: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.258 \item A
-             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:258: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.258 \item A
-             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[8]
 
 ./Quantum_Computation.tex:258: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
@@ -485,38 +444,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.258 \item A
-             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+l.258 \item C
+             reate a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Computation.tex:258: Missing $ inserted.
-<inserted text> 
-                $
-l.258 \item Apply $U_
-                     f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
-./Quantum_Computation.tex:259: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259         \item
-                    Measure the second register to get $f(g_0)$. The first r...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./Quantum_Computation.tex:259: Missing $ inserted.
-<inserted text> 
-                $
-l.259         \item M
-                     easure the second register to get $f(g_0)$. The first r...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ []
 
 
 ./Quantum_Computation.tex:259: LaTeX Error: Lonely \item--perhaps a missing list environment.
@@ -525,41 +461,96 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.259         \item M
+l.259 \item A
+             pply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:260: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260         \item
+                    Measure the second register to get $f(g_0)$. The first r...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:260: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260         \item M
                      easure the second register to get $f(g_0)$. The first r...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Quantum_Computation.tex:263: LaTeX Error: Lonely \item--perhaps a missing list environment.
+./Quantum_Computation.tex:260: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.263         \item a
+l.260         \item M
+                     easure the second register to get $f(g_0)$. The first r...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:260: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260         \item M
+                     easure the second register to get $f(g_0)$. The first r...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:260: Missing $ inserted.
+<inserted text> 
+                $
+l.260 ... Measure the second register to get $f(g_
+                                                  0)$. The first register wi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Computation.tex:264: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.264         \item a
                      pply QFT and measure to get a result $g \in G$
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Quantum_Computation.tex:264: LaTeX Error: \begin{document} ended by \end{itemlist}.
+./Quantum_Computation.tex:265: LaTeX Error: \begin{document} ended by \end{itemlist}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264 \end{itemlist}
+l.265 \end{itemlist}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[8]
-./Quantum_Computation.tex:290: Missing } inserted.
+./Quantum_Computation.tex:291: Missing } inserted.
 <inserted text> 
                 }
-l.290 ..._1 b_1}{M_1} + ... + \frac{l_q b_q}{M_q}$
+l.291 ..._1 b_1}{M_1} + ... + \frac{l_q b_q}{M_q}$
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -568,22 +559,22 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--292
+Underfull \hbox (badness 10000) in paragraph at lines 286--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--292
+Underfull \hbox (badness 10000) in paragraph at lines 286--293
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 296--306
+Underfull \hbox (badness 10000) in paragraph at lines 297--307
 
  []
 
-./Quantum_Computation.tex:309: Extra }, or forgotten $.
-l.309 ... these irreps $\chi_{i,jk} = \sum_g\in G}
+./Quantum_Computation.tex:310: Extra }, or forgotten $.
+l.310 ... these irreps $\chi_{i,jk} = \sum_g\in G}
                                                    \bar{\chi}_{i,jk} (g) \ke...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -591,10 +582,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./Quantum_Computation.tex:318: Undefined control sequence.
+./Quantum_Computation.tex:319: Undefined control sequence.
 <recently read> \texbtf 
                         
-l.318 \texbtf
+l.319 \texbtf
              {Some partial results}:\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -602,8 +593,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:319: Undefined control sequence.
-l.319 For normal subgroups $gk = kg \for
+./Quantum_Computation.tex:320: Undefined control sequence.
+l.320 For normal subgroups $gk = kg \for
                                          g \in G$ we have a theorem proven b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -612,64 +603,64 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--323
+Underfull \hbox (badness 10000) in paragraph at lines 309--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--323
+Underfull \hbox (badness 10000) in paragraph at lines 309--324
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 337--340
+Underfull \hbox (badness 10000) in paragraph at lines 338--341
 
  []
 
-<xymatrix 8x3 1192> [11] <xymatrix 5x5 795>
-Underfull \hbox (badness 10000) in paragraph at lines 360--363
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--363
+[11] <xymatrix 8x3 1192> <xymatrix 5x5 795>
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--372
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--380
+Underfull \hbox (badness 10000) in paragraph at lines 370--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--387
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--387
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--387
+Underfull \hbox (badness 10000) in paragraph at lines 375--381
 
  []
 
 [12]
-Overfull \hbox (16.29697pt too wide) detected at line 401
+Underfull \hbox (badness 10000) in paragraph at lines 382--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--388
+
+ []
+
+
+Overfull \hbox (16.29697pt too wide) detected at line 402
 \OML/cmm/m/it/10 Prob\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 see y\OT1/cmr/m/n/10 ) = []\OMS/cmsy/m/n/10 j [] \OML/cmm/m/it/10 e[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = [][] = [][]
  []
 
-./Quantum_Computation.tex:410: Missing } inserted.
+./Quantum_Computation.tex:411: Missing } inserted.
 <inserted text> 
                 }
-l.410 ... $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$
+l.411 ... $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$
                                                   \\\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -677,52 +668,52 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Quantum_Computation.tex:410: Too many }'s.
+./Quantum_Computation.tex:411: Too many }'s.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.410 ... $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$
+l.411 ... $\sin(\alpha/2) \geq \frac{\alpha/ \pi}$
                                                   \\\\
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--412
+Underfull \hbox (badness 10000) in paragraph at lines 406--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--419
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--419
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--419
+Underfull \hbox (badness 10000) in paragraph at lines 406--413
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 425--429
+Underfull \hbox (badness 10000) in paragraph at lines 415--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--429
+Underfull \hbox (badness 10000) in paragraph at lines 415--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--430
 
  []
 
 [14]
-./Quantum_Computation.tex:446: Undefined control sequence.
-l.446 for any $\ket{\beta} \prep
+./Quantum_Computation.tex:447: Undefined control sequence.
+l.447 for any $\ket{\beta} \prep
                                  \ket{\alpha}$\\\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -731,17 +722,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--449
+Underfull \hbox (badness 10000) in paragraph at lines 446--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--449
+Underfull \hbox (badness 10000) in paragraph at lines 446--450
 
  []
 
-./Quantum_Computation.tex:462: Undefined control sequence.
-l.462 ...a unique element $x_0 \in B_1$ with $f(\x
+./Quantum_Computation.tex:463: Undefined control sequence.
+l.463 ...a unique element $x_0 \in B_1$ with $f(\x
                                                   _0) = 1$. Problem is to fi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -750,63 +741,46 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--464
+Underfull \hbox (badness 10000) in paragraph at lines 460--465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--464
+Underfull \hbox (badness 10000) in paragraph at lines 460--465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--464
+Underfull \hbox (badness 10000) in paragraph at lines 460--465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--471
+Underfull \hbox (badness 10000) in paragraph at lines 466--472
 
  []
 
+[15]
 
-./Quantum_Computation.tex:477: LaTeX Error: Environment itemlist undefined.
+./Quantum_Computation.tex:478: LaTeX Error: Environment itemlist undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.477 \begin{itemlist}
+l.478 \begin{itemlist}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--478
+Underfull \hbox (badness 10000) in paragraph at lines 474--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--478
-
- []
-
-[15]
-
-./Quantum_Computation.tex:478: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.478 \item M
-             ake $\ket{\psi_0}$\\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 474--479
 
  []
 
@@ -817,8 +791,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.479 \item A
-             pply $Q$ $m$ times where $m = \frac{\arccos \frac{1}{\sqrt{N}}}...
+l.479 \item M
+             ake $\ket{\psi_0}$\\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -834,31 +808,48 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.480 \item M
-             easure to see $x_0$ with high probability $1- \frac{1}{N}$
+l.480 \item A
+             pply $Q$ $m$ times where $m = \frac{\arccos \frac{1}{\sqrt{N}}}...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Quantum_Computation.tex:481: LaTeX Error: \begin{document} ended by \end{itemlist}.
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+
+./Quantum_Computation.tex:481: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.481 \end{itemlist}
+l.481 \item M
+             easure to see $x_0$ with high probability $1- \frac{1}{N}$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:482: LaTeX Error: \begin{document} ended by \end{itemlist}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.482 \end{itemlist}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--484
+Underfull \hbox (badness 10000) in paragraph at lines 481--485
 
  []
 
-./Quantum_Computation.tex:485: Undefined control sequence.
-l.485 ...') of state space $\mathcal{H}$ $G^{\prep
+./Quantum_Computation.tex:486: Undefined control sequence.
+l.486 ...') of state space $\mathcal{H}$ $G^{\prep
                                                   }$ be its orthogonal compl...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -866,8 +857,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:485: Undefined control sequence.
-l.485 ...bspace') $\mathcal{H} = G \oplus G^{\prep
+./Quantum_Computation.tex:486: Undefined control sequence.
+l.486 ...bspace') $\mathcal{H} = G \oplus G^{\prep
                                                   }$\\\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -875,8 +866,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:486: Undefined control sequence.
-l.486 ...t{b}, \ket{g} \in G, \ket{b} \in G^{\prep
+./Quantum_Computation.tex:487: Undefined control sequence.
+l.487 ...t{b}, \ket{g} \in G, \ket{b} \in G^{\prep
                                                   }$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -885,39 +876,39 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--488
+Underfull \hbox (badness 10000) in paragraph at lines 486--489
 
  []
 
 [16]
-./Quantum_Computation.tex:518: Missing $ inserted.
+./Quantum_Computation.tex:519: Missing $ inserted.
 <inserted text> 
                 $
-l.518 As we apply $Q$ n $times we get $Q^
+l.519 As we apply $Q$ n $times we get $Q^
                                          {n} \ket{\psi} = \sin (2n+1) \theta...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Computation.tex:518: Missing $ inserted.
+./Quantum_Computation.tex:519: Missing $ inserted.
 <inserted text> 
                 $
-l.518 ... (2n+1) \theta \ket{b}. If we measure $Q^
+l.519 ... (2n+1) \theta \ket{b}. If we measure $Q^
                                                   {n}$ in $\{ \ket{b}, \ket{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Computation.tex:518: Missing $ inserted.
+./Quantum_Computation.tex:519: Missing $ inserted.
 <inserted text> 
                 $
-l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+l.519 ...rest integer to $n = \frac{\pi}{4 \theta}
                                                    - \frac{1}{2}$ we will be...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Computation.tex:518: Missing $ inserted.
+./Quantum_Computation.tex:519: Missing $ inserted.
 <inserted text> 
                 $
-l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+l.519 ...rest integer to $n = \frac{\pi}{4 \theta}
                                                    - \frac{1}{2}$ we will be...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -925,18 +916,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Quantum_Computation.tex:518: Missing $ inserted.
+./Quantum_Computation.tex:519: Missing $ inserted.
 <inserted text> 
                 $
-l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+l.519 ...rest integer to $n = \frac{\pi}{4 \theta}
                                                    - \frac{1}{2}$ we will be...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Computation.tex:518: Extra }, or forgotten $.
+./Quantum_Computation.tex:519: Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.518 ...rest integer to $n = \frac{\pi}{4 \theta}
+l.519 ...rest integer to $n = \frac{\pi}{4 \theta}
                                                    - \frac{1}{2}$ we will be...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -945,87 +936,87 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \hbox (31.06769pt too wide) in paragraph at lines 517--523
+Overfull \hbox (31.06769pt too wide) in paragraph at lines 518--524
 \OT1/cmr/m/n/10 As we ap-ply $\OML/cmm/m/it/10 Q$ \OT1/cmr/m/n/10 n $\OML/cmm/m/it/10 timesweget$\OT1/cmr/m/n/10 Q$[] [] = [](2\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OML/cmm/m/it/10 ^^R [] \OT1/cmr/m/n/10 + [](2\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OML/cmm/m/it/10 ^^R [] :Ifwemeasure$\OT1/cmr/m/n/10 Q$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--523
+Underfull \hbox (badness 10000) in paragraph at lines 518--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--523
+Underfull \hbox (badness 10000) in paragraph at lines 518--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--523
+Underfull \hbox (badness 10000) in paragraph at lines 518--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--523
+Underfull \hbox (badness 10000) in paragraph at lines 518--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--530
+Underfull \hbox (badness 10000) in paragraph at lines 526--531
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--530
+Underfull \hbox (badness 10000) in paragraph at lines 526--531
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--530
+Underfull \hbox (badness 10000) in paragraph at lines 526--531
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--536
+Underfull \hbox (badness 10000) in paragraph at lines 535--537
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 542--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--554
+Underfull \hbox (badness 10000) in paragraph at lines 549--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--554
+Underfull \hbox (badness 10000) in paragraph at lines 549--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--554
+Underfull \hbox (badness 10000) in paragraph at lines 549--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--554
+Underfull \hbox (badness 10000) in paragraph at lines 549--555
 
  []
 
 
-Overfull \hbox (0.48416pt too wide) in paragraph at lines 548--554
+Overfull \hbox (0.48416pt too wide) in paragraph at lines 549--555
 \OT1/cmr/bx/n/10 We can't just dis-card ad-di-toinal reg-is-ters like $[][] \OML/cmm/m/it/10 ^^U[] [] []$ \OT1/cmr/bx/n/10 to $[][] \OML/cmm/m/it/10 ^^U[] []$
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 559--562
+Underfull \hbox (badness 10000) in paragraph at lines 560--563
 
  []
 
-./Quantum_Computation.tex:569: Undefined control sequence.
-l.569 ...t $\theta = \arcsin \frac{1}{2} = \frfrac
+./Quantum_Computation.tex:570: Undefined control sequence.
+l.570 ...t $\theta = \arcsin \frac{1}{2} = \frfrac
                                                   {\pi}{6}$ and one applicat...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1033,69 +1024,68 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:572: Missing $ inserted.
+./Quantum_Computation.tex:573: Missing $ inserted.
 <inserted text> 
                 $
-l.572 \ket{00.00}
+l.573 \ket{00.00}
                  . The final state is $A \ket{00...000}$.\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Computation.tex:572: Missing $ inserted.
+./Quantum_Computation.tex:573: Missing $ inserted.
 <inserted text> 
                 $
-l.572 ...00}. The final state is $A \ket{00...000}
+l.573 ...00}. The final state is $A \ket{00...000}
                                                   $.\\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--580
+Underfull \hbox (badness 10000) in paragraph at lines 568--581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--580
+Underfull \hbox (badness 10000) in paragraph at lines 568--581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--580
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--592
+Underfull \hbox (badness 10000) in paragraph at lines 568--581
 
  []
 
 [19]
-./Quantum_Computation.tex:608: Missing $ inserted.
+Underfull \hbox (badness 10000) in paragraph at lines 583--593
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--593
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--593
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--593
+
+ []
+
+./Quantum_Computation.tex:609: Missing $ inserted.
 <inserted text> 
                 $
-l.608 
+l.609 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 [20]
-./Quantum_Computation.tex:624: Extra }, or forgotten $.
-l.624 ...{\theta}{\pi}$ or $1- \frac{\theta}{\pi}}
+./Quantum_Computation.tex:625: Extra }, or forgotten $.
+l.625 ...{\theta}{\pi}$ or $1- \frac{\theta}{\pi}}
                                                   $ with probability $\frac{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1104,80 +1094,80 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 623--627
+Underfull \hbox (badness 10000) in paragraph at lines 624--628
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--631
+Underfull \hbox (badness 10000) in paragraph at lines 629--632
 
  []
 
 [21]
-Overfull \hbox (15.99045pt too wide) in paragraph at lines 642--646
+Overfull \hbox (15.99045pt too wide) in paragraph at lines 643--647
 \OT1/cmr/m/n/10 norm) $\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 A\OMS/cmsy/m/n/10 jj \OT1/cmr/m/n/10 = [][] \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 A [] \OMS/cmsy/m/n/10 jj \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j$\OT1/cmr/m/n/10 maximium eigenvalue|$(\OML/cmm/m/it/10 if$\OT1/cmr/m/n/10 A$\OML/cmm/m/it/10 isdiagonalisable\OT1/cmr/m/n/10 )$. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--653
+Underfull \hbox (badness 10000) in paragraph at lines 649--654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--653
+Underfull \hbox (badness 10000) in paragraph at lines 649--654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--659
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 667--671
+Underfull \hbox (badness 10000) in paragraph at lines 656--660
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 672--677
+Underfull \hbox (badness 10000) in paragraph at lines 668--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--677
+Underfull \hbox (badness 10000) in paragraph at lines 673--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--677
+Underfull \hbox (badness 10000) in paragraph at lines 673--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--687
+Underfull \hbox (badness 10000) in paragraph at lines 673--678
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 680--688
 
  []
 
 [23]
-Overfull \hbox (35.00684pt too wide) detected at line 693
+Overfull \hbox (35.00684pt too wide) detected at line 694
 \OML/cmm/m/it/10 e[]e[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 iA \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 ))(\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 iB \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 )) = \OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 i\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 )
  []
 
 
-Overfull \hbox (110.89072pt too wide) detected at line 708
+Overfull \hbox (110.89072pt too wide) detected at line 709
 \OML/cmm/m/it/10 e[]e[]:::e[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 ((2\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )[])) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (((\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )[]) = \OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]k[]\OT1/cmr/m/n/10 )
  []
 
-./Quantum_Computation.tex:717: Missing $ inserted.
+./Quantum_Computation.tex:718: Missing $ inserted.
 <inserted text> 
                 $
-l.717 Then || e^
+l.718 Then || e^
                 {-i \frac{H_1t}{N}} ... e^{- i\frac{H_nt}{N}} - e^{-i(H_1 t ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Quantum_Computation.tex:723: Undefined control sequence.
-l.723 \sections
+./Quantum_Computation.tex:724: Undefined control sequence.
+l.724 \sections
                {Lecture 12}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1186,132 +1176,132 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 720--724
+Underfull \hbox (badness 10000) in paragraph at lines 721--725
 
  []
 
 [24]
-./Quantum_Computation.tex:738: Missing $ inserted.
+./Quantum_Computation.tex:739: Missing $ inserted.
 <inserted text> 
                 $
-l.738 \textbf{QMA}: A prmise problem $L = (L_
+l.739 \textbf{QMA}: A prmise problem $L = (L_
                                              0,L_1,L_*)$ is in the class $QM...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--745
+Underfull \hbox (badness 10000) in paragraph at lines 729--746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--745
+Underfull \hbox (badness 10000) in paragraph at lines 729--746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--745
+Underfull \hbox (badness 10000) in paragraph at lines 729--746
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 752--764
+Underfull \hbox (badness 10000) in paragraph at lines 753--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 752--764
+Underfull \hbox (badness 10000) in paragraph at lines 753--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 752--764
+Underfull \hbox (badness 10000) in paragraph at lines 753--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 752--764
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--779
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--779
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--779
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--779
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--779
+Underfull \hbox (badness 10000) in paragraph at lines 753--765
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 787--796
+Underfull \hbox (badness 10000) in paragraph at lines 769--780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--796
+Underfull \hbox (badness 10000) in paragraph at lines 769--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--780
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 799--806
+Underfull \hbox (badness 10000) in paragraph at lines 788--797
 
  []
 
 
-Overfull \hbox (197.42538pt too wide) detected at line 808
+Underfull \hbox (badness 10000) in paragraph at lines 788--797
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 800--807
+
+ []
+
+
+Overfull \hbox (197.42538pt too wide) detected at line 809
 \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^T jj [] ^^@ \OML/cmm/m/it/10 C[] [] \OMS/cmsy/m/n/10 jj \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 sum[]U[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 U[] [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 U[]:::U[] [] \OMS/cmsy/m/n/10 jj ^^T [] jj\OML/cmm/m/it/10 U[]:::U[] [] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 U[]:::U[] [] \OMS/cmsy/m/n/10 jj \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 jj [] ^^@ \OML/cmm/m/it/10 U[] [] \OMS/cmsy/m/n/10 jj
  []
 
 
-Overfull \hbox (167.22833pt too wide) detected at line 812
+Overfull \hbox (167.22833pt too wide) detected at line 813
 [] \OML/cmm/m/it/10 H [] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 H[] [] \OT1/cmr/m/n/10 = [][] [] \OMS/cmsy/m/n/10 jj [] ^^@ \OML/cmm/m/it/10 U[] [] \OMS/cmsy/m/n/10 jj[] ^^U []\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 jj [] ^^@ \OML/cmm/m/it/10 U[] [] \OMS/cmsy/m/n/10 jj[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^U [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 b
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--816
+Underfull \hbox (badness 10000) in paragraph at lines 815--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--816
+Underfull \hbox (badness 10000) in paragraph at lines 815--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--816
+Underfull \hbox (badness 10000) in paragraph at lines 815--817
 
  []
 
 [28]
-./Quantum_Computation.tex:824: Double subscript.
-l.824 ...et{110} \bra{100}_{C_{t-1} C_t C_{t+1}} _
+./Quantum_Computation.tex:825: Double subscript.
+l.825 ...et{110} \bra{100}_{C_{t-1} C_t C_{t+1}} _
                                                    U^{\dagger}_t \otimes \ke...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./Quantum_Computation.tex:824: Double subscript.
-l.824 ...100}_{C_{t-1} C_t C_{t+1}} _ U^{\dagger}_
+./Quantum_Computation.tex:825: Double subscript.
+l.825 ...100}_{C_{t-1} C_t C_{t+1}} _ U^{\dagger}_
                                                   t \otimes \ket{100} \bra{1...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Overfull \hbox (134.70079pt too wide) detected at line 825
+Overfull \hbox (134.70079pt too wide) detected at line 826
 \OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 
  [] [][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 
  [] [][] ^^@ \OML/cmm/m/it/10 U[] \OMS/cmsy/m/n/10 
@@ -1319,10 +1309,10 @@ Overfull \hbox (134.70079pt too wide) detected at line 825
  [] [][]\OT1/cmr/m/n/10 )
  []
 
-./Quantum_Computation.tex:846: Undefined control sequence.
+./Quantum_Computation.tex:847: Undefined control sequence.
 <argument> \poly 
                  (n)
-l.846 ...ses hold and $b-a \geq \frac{1}{\poly(n)}
+l.847 ...ses hold and $b-a \geq \frac{1}{\poly(n)}
                                                   $.\\\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1331,35 +1321,35 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--852
+Underfull \hbox (badness 10000) in paragraph at lines 839--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--852
+Underfull \hbox (badness 10000) in paragraph at lines 839--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--852
+Underfull \hbox (badness 10000) in paragraph at lines 839--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--852
+Underfull \hbox (badness 10000) in paragraph at lines 839--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--852
+Underfull \hbox (badness 10000) in paragraph at lines 839--853
 
  []
 
 [29]
-./Quantum_Computation.tex:861: Undefined control sequence.
+./Quantum_Computation.tex:862: Undefined control sequence.
 <argument> \lamdba 
                    _{max}
-l.861 ...a = | \frac{\lamdba_{max}}{\lambda_{min}}
+l.862 ...a = | \frac{\lamdba_{max}}{\lambda_{min}}
                                                   |$ (this tells us how clos...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1367,10 +1357,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:862: Undefined control sequence.
+./Quantum_Computation.tex:863: Undefined control sequence.
 <recently read> \lamdbda 
                          
-l.862 ...to have $\lambda_{max} =1$ then $\lamdbda
+l.863 ...to have $\lambda_{max} =1$ then $\lamdbda
                                                   _{min} = \frac{1}{\kappa}$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1379,30 +1369,30 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--863
+Underfull \hbox (badness 10000) in paragraph at lines 854--864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--863
+Underfull \hbox (badness 10000) in paragraph at lines 854--864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--863
+Underfull \hbox (badness 10000) in paragraph at lines 854--864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--863
+Underfull \hbox (badness 10000) in paragraph at lines 854--864
 
  []
 
 [30]
-./Quantum_Computation.tex:865: Undefined control sequence.
+./Quantum_Computation.tex:866: Undefined control sequence.
 <argument> \lamdba 
                    _j
-l.865 ...m_{j=0}^{N-1} \beta_j \frac{1}{\lamdba_j}
+l.866 ...m_{j=0}^{N-1} \beta_j \frac{1}{\lamdba_j}
                                                    \ket{u_i}$. THis transfor...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1411,34 +1401,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./Quantum_Computation.tex:865: LaTeX Error: Environment itemlist undefined.
+./Quantum_Computation.tex:866: LaTeX Error: Environment itemlist undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.865 ...d unitary transformation.\begin{itemlist}
+l.866 ...d unitary transformation.\begin{itemlist}
                                                   \item  PE with hamiltonian...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 864--865
-
- []
-
-
-./Quantum_Computation.tex:865: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.865 ...y transformation.\begin{itemlist}\item  P
-                                                  E with hamiltonian simulat...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 865--866
@@ -1452,21 +1425,10 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.866                 \item N
-                             ext we will adjoin an extra ancilla qubit $\ket...
+l.866 ...y transformation.\begin{itemlist}\item  P
+                                                  E with hamiltonian simulat...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-./Quantum_Computation.tex:866: Undefined control sequence.
-<argument> \lamdba 
-                   _j
-l.866 ...rotation ( controlled by $\ket{\lamdba_j}
-                                                  $ register)\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 866--867
@@ -1480,15 +1442,43 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.867                 \item C
+l.867                 \item N
+                             ext we will adjoin an extra ancilla qubit $\ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:867: Undefined control sequence.
+<argument> \lamdba 
+                   _j
+l.867 ...rotation ( controlled by $\ket{\lamdba_j}
+                                                  $ register)\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 867--868
+
+ []
+
+
+./Quantum_Computation.tex:868: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.868                 \item C
                              -rotation does
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Computation.tex:869: Undefined control sequence.
+./Quantum_Computation.tex:870: Undefined control sequence.
 <argument> \lamdba 
                    _j
-l.869 ...\ket{\lambda_j} \ket{1} = \ket{\lamdba_j}
+l.870 ...\ket{\lambda_j} \ket{1} = \ket{\lamdba_j}
                                                   ( \cos \theta_j \ket{0} + ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1497,54 +1487,54 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--872
+Underfull \hbox (badness 10000) in paragraph at lines 871--873
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--872
+Underfull \hbox (badness 10000) in paragraph at lines 871--873
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--872
+Underfull \hbox (badness 10000) in paragraph at lines 871--873
 
  []
 
 [31]
 
-./Quantum_Computation.tex:872: LaTeX Error: Lonely \item--perhaps a missing list environment.
+./Quantum_Computation.tex:873: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.872                 \item A
+l.873                 \item A
                              pply controlled rotation:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 875--877
+Underfull \hbox (badness 10000) in paragraph at lines 876--878
 
  []
 
 
-./Quantum_Computation.tex:877: LaTeX Error: Lonely \item--perhaps a missing list environment.
+./Quantum_Computation.tex:878: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.877                 \item W
+l.878                 \item W
                              e measure the ancilla (hoping to get the result...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Computation.tex:877: Undefined control sequence.
+./Quantum_Computation.tex:878: Undefined control sequence.
 <argument>  \lamdba 
                     _j
-l.877 ...{c}{\lambda_j} \ket{u_j} \ket{ \lamdba_j}
+l.878 ...{c}{\lambda_j} \ket{u_j} \ket{ \lamdba_j}
                                                    ||^2 = \sum_j |\beta_j \f...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1552,10 +1542,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:877: Undefined control sequence.
+./Quantum_Computation.tex:878: Undefined control sequence.
 <argument> \lamdba 
                    _j
-l.877 ...|^2 = \sum_j |\beta_j \frac{c}{\lamdba_j}
+l.878 ...|^2 = \sum_j |\beta_j \frac{c}{\lamdba_j}
                                                   |^2 = \frac{1}{k^2} \sum_j...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1563,10 +1553,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:879: Undefined control sequence.
+./Quantum_Computation.tex:880: Undefined control sequence.
 <argument> \lamdba 
                    _j
-l.879 ...sum_{j=1}^{N-1} \frac{\beta_j}{\lamdba_j}
+l.880 ...sum_{j=1}^{N-1} \frac{\beta_j}{\lamdba_j}
                                                    \ket{u_j} \ket{\lambda_j}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1575,78 +1565,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--884
+Underfull \hbox (badness 10000) in paragraph at lines 881--885
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--884
+Underfull \hbox (badness 10000) in paragraph at lines 881--885
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--884
+Underfull \hbox (badness 10000) in paragraph at lines 881--885
 
  []
-
-
-./Quantum_Computation.tex:884: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.884 \item H
-             aving obtained $\ket{\gamma}$ we run the inverse phase estimati...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./Quantum_Computation.tex:884: Undefined control sequence.
-<argument> \lamdba 
-                   _j
-l.884 ...sum_{j=0}^{N-1} \frac{\beta_j}{\lamdba_j}
-                                                   \ket{u_j} = \frac{c}{\sqr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./Quantum_Computation.tex:885: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.885 \item
-            Finally, we will perform a measuremnt of observable $M$ on $\ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:885: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.885 \item F
-             inally, we will perform a measuremnt of observable $M$ on $\ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:885: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.885 \item F
-             inally, we will perform a measuremnt of observable $M$ on $\ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 ./Quantum_Computation.tex:885: LaTeX Error: Lonely \item--perhaps a missing list environment.
@@ -1655,47 +1586,106 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.885 \item F
-             inally, we will perform a measuremnt of observable $M$ on $\ket...
+l.885 \item H
+             aving obtained $\ket{\gamma}$ we run the inverse phase estimati...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Quantum_Computation.tex:885: Missing $ inserted.
-<inserted text> 
-                $
-l.885 ...uremnt of observable $M$ on $\ket{\hat x}
-                                                  $ to estimate its mean val...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+./Quantum_Computation.tex:885: Undefined control sequence.
+<argument> \lamdba 
+                   _j
+l.885 ...sum_{j=0}^{N-1} \frac{\beta_j}{\lamdba_j}
+                                                   \ket{u_j} = \frac{c}{\sqr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-./Quantum_Computation.tex:887: LaTeX Error: \begin{document} ended by \end{itemlist}.
+./Quantum_Computation.tex:886: LaTeX Error: Command \item invalid in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.887  \end{itemlist}
+l.886 \item
+            Finally, we will perform a measuremnt of observable $M$ on $\ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:886: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.886 \item F
+             inally, we will perform a measuremnt of observable $M$ on $\ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:886: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.886 \item F
+             inally, we will perform a measuremnt of observable $M$ on $\ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:886: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.886 \item F
+             inally, we will perform a measuremnt of observable $M$ on $\ket...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Quantum_Computation.tex:886: Missing $ inserted.
+<inserted text> 
+                $
+l.886 ...uremnt of observable $M$ on $\ket{\hat x}
+                                                  $ to estimate its mean val...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./Quantum_Computation.tex:888: LaTeX Error: \begin{document} ended by \end{itemlist}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.888  \end{itemlist}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (1.6191pt too wide) in paragraph at lines 884--888
+Overfull \hbox (1.6191pt too wide) in paragraph at lines 885--889
 \OML/cmm/m/it/10 Finally; wewillperformameasuremntofobservable$\OT1/cmr/m/n/10 M$\OML/cmm/m/it/10 on$$[]$ \OT1/cmr/m/n/10 to es-ti-mate its mean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--888
+Underfull \hbox (badness 10000) in paragraph at lines 885--889
 
  []
 
 [32]
-./Quantum_Computation.tex:894: Undefined control sequence.
+./Quantum_Computation.tex:895: Undefined control sequence.
 <recently read> \lamdba 
                         
-l.894 ...-bit approximation $\lambda'$ is $\lamdba
+l.895 ...-bit approximation $\lambda'$ is $\lamdba
                                                   $ up to additive error $\e...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1704,24 +1694,24 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--898
+Underfull \hbox (badness 10000) in paragraph at lines 892--899
 
  []
 
 
-Overfull \hbox (14.84357pt too wide) in paragraph at lines 891--898
+Overfull \hbox (14.84357pt too wide) in paragraph at lines 892--899
 \OT1/cmr/m/n/10 done us-ing hamil-to-nian simual-tion for s-spare ma-tri-ces with cir-cuit size $\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 Nts[]\OT1/cmr/m/n/10 )$.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--898
+Underfull \hbox (badness 10000) in paragraph at lines 892--899
 
  []
 
-./Quantum_Computation.tex:899: Undefined control sequence.
+./Quantum_Computation.tex:900: Undefined control sequence.
 <argument> \lamdba 
                    _j
-l.899 ... \sum_j |\beta_j|^2 \frac{c^2}{\lamdba_j}
+l.900 ... \sum_j |\beta_j|^2 \frac{c^2}{\lamdba_j}
                                                   }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1729,10 +1719,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:901: Undefined control sequence.
+./Quantum_Computation.tex:902: Undefined control sequence.
 <recently read> \epsilons 
                           
-l.901 ...ablish dependenace of $t_0$ on $\epsilons
+l.902 ...ablish dependenace of $t_0$ on $\epsilons
                                                   $ we need the following fa...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1740,8 +1730,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:902: Undefined control sequence.
-l.902 ...ambda$ has additive error $\delta(\lamdba
+./Quantum_Computation.tex:903: Undefined control sequence.
+l.903 ...ambda$ has additive error $\delta(\lamdba
                                                   ) = \eta$ then $\frac{1}{\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1749,10 +1739,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:902: Undefined control sequence.
+./Quantum_Computation.tex:903: Undefined control sequence.
 <argument> \lamdba 
                    
-l.902 ...a( \frac{1}{\lambda})}{\frac{1}{\lamdba}}
+l.903 ...a( \frac{1}{\lambda})}{\frac{1}{\lamdba}}
                                                    = \frac{\eta}{\lamdba}$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1760,10 +1750,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Quantum_Computation.tex:902: Undefined control sequence.
+./Quantum_Computation.tex:903: Undefined control sequence.
 <argument> \lamdba 
                    
-l.902 ...\frac{1}{\lamdba}} = \frac{\eta}{\lamdba}
+l.903 ...\frac{1}{\lamdba}} = \frac{\eta}{\lamdba}
                                                   $\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1772,82 +1762,82 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 900--905
+Underfull \hbox (badness 10000) in paragraph at lines 901--906
 
  []
 
 [33]
-./Quantum_Computation.tex:910: Missing $ inserted.
+./Quantum_Computation.tex:911: Missing $ inserted.
 <inserted text> 
                 $
-l.910 ...uperposition of all $\lambda_k$ = \lambda
+l.911 ...uperposition of all $\lambda_k$ = \lambda
                                                   ' \pm \frac{k}{2^n}$ (peak...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--914
+Underfull \hbox (badness 10000) in paragraph at lines 908--915
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--914
+Underfull \hbox (badness 10000) in paragraph at lines 908--915
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--914
+Underfull \hbox (badness 10000) in paragraph at lines 908--915
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--914
+Underfull \hbox (badness 10000) in paragraph at lines 908--915
 
  []
 
 
-Overfull \hbox (5.64032pt too wide) in paragraph at lines 915--915
+Overfull \hbox (5.64032pt too wide) in paragraph at lines 916--916
 []\OT1/cmr/bx/n/12 Clifford com-pu-ta-tions (and clas-si-cal simual-tion of QC) 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 918--928
+Underfull \hbox (badness 10000) in paragraph at lines 919--929
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--928
+Underfull \hbox (badness 10000) in paragraph at lines 919--929
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--928
+Underfull \hbox (badness 10000) in paragraph at lines 919--929
 
  []
 
 
-Overfull \hbox (63.65498pt too wide) in paragraph at lines 918--928
+Overfull \hbox (63.65498pt too wide) in paragraph at lines 919--929
 [] \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 C[] []$ \OT1/cmr/m/n/10 then in gen-eral you get $\OML/cmm/m/it/10 U [] \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 V[]C[] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--947
+Underfull \hbox (badness 10000) in paragraph at lines 930--948
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 948--950
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--959
+Underfull \hbox (badness 10000) in paragraph at lines 957--960
 
  []
 
 [36]
-./Quantum_Computation.tex:968: Misplaced alignment tab character &.
-l.968 ... input for its universality). R. Sazsen &
+./Quantum_Computation.tex:969: Misplaced alignment tab character &.
+l.969 ... input for its universality). R. Sazsen &
                                                    M van den Nest arXic 1305...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1857,97 +1847,97 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--984
+Underfull \hbox (badness 10000) in paragraph at lines 974--985
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--984
+Underfull \hbox (badness 10000) in paragraph at lines 974--985
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--984
+Underfull \hbox (badness 10000) in paragraph at lines 974--985
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--984
+Underfull \hbox (badness 10000) in paragraph at lines 974--985
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 986--989
+Underfull \hbox (badness 10000) in paragraph at lines 987--990
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 986--989
+Underfull \hbox (badness 10000) in paragraph at lines 987--990
 
  []
-
-./Quantum_Computation.tex:993: Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   1
-l.993                        \textbf{Attempt #1}
-                                                : Measure $\ket{\psi}$ in th...
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-./Quantum_Computation.tex:993: You can't use `macro parameter character #' in horizontal mode.
-<argument> Attempt ##
-                     1
-l.993                        \textbf{Attempt #1}
-                                                : Measure $\ket{\psi}$ in th...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
 
 ./Quantum_Computation.tex:994: Illegal parameter number in definition of \reserved@a.
 <to be read again> 
-                   2
-l.994                        \textbf{Attempt #2}
-                                                : Engineer a map $\ket{\psi}...
+                   1
+l.994                        \textbf{Attempt #1}
+                                                : Measure $\ket{\psi}$ in th...
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 ./Quantum_Computation.tex:994: You can't use `macro parameter character #' in horizontal mode.
 <argument> Attempt ##
+                     1
+l.994                        \textbf{Attempt #1}
+                                                : Measure $\ket{\psi}$ in th...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./Quantum_Computation.tex:995: Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   2
+l.995                        \textbf{Attempt #2}
+                                                : Engineer a map $\ket{\psi}...
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+./Quantum_Computation.tex:995: You can't use `macro parameter character #' in horizontal mode.
+<argument> Attempt ##
                      2
-l.994                        \textbf{Attempt #2}
+l.995                        \textbf{Attempt #2}
                                                 : Engineer a map $\ket{\psi}...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1955,18 +1945,18 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 991--996
+Underfull \hbox (badness 10000) in paragraph at lines 992--997
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 991--996
+Underfull \hbox (badness 10000) in paragraph at lines 992--997
 
  []
 
 [38] <xymatrix 3x3 310> <xymatrix 5x5 918>
-./Quantum_Computation.tex:1014: Misplaced alignment tab character &.
-l.1014         N &
+./Quantum_Computation.tex:1015: Misplaced alignment tab character &.
+l.1015         N &
                    Syndrome\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1975,8 +1965,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Quantum_Computation.tex:1015: Misplaced alignment tab character &.
-l.1015         $I \otimes I \otimes I$ &
+./Quantum_Computation.tex:1016: Misplaced alignment tab character &.
+l.1016         $I \otimes I \otimes I$ &
                                          00\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1985,19 +1975,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Quantum_Computation.tex:1016: Misplaced alignment tab character &.
-l.1016         $ I \otimes I \otimes X$ &
-                                          01\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 ./Quantum_Computation.tex:1017: Misplaced alignment tab character &.
-l.1017         $ I \otimes X \otimes I$ &
-                                          10\\
+l.1017         $ I \otimes I \otimes X$ &
+                                          01\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2006,27 +1986,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ./Quantum_Computation.tex:1018: Misplaced alignment tab character &.
-l.1018         $I \otimes X \otimes X$ &
-                                         11\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1019: Misplaced alignment tab character &.
-l.1019         $ X \otimes I \otimes I$ &
-                                          11\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1020: Misplaced alignment tab character &.
-l.1020         $ X \otimes I \otimes X$ &
+l.1018         $ I \otimes X \otimes I$ &
                                           10\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2035,9 +1995,29 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+./Quantum_Computation.tex:1019: Misplaced alignment tab character &.
+l.1019         $I \otimes X \otimes X$ &
+                                         11\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Quantum_Computation.tex:1020: Misplaced alignment tab character &.
+l.1020         $ X \otimes I \otimes I$ &
+                                          11\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ./Quantum_Computation.tex:1021: Misplaced alignment tab character &.
-l.1021         $ X \otimes X \otimes I$ &
-                                          01\\
+l.1021         $ X \otimes I \otimes X$ &
+                                          10\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -2046,7 +2026,17 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ./Quantum_Computation.tex:1022: Misplaced alignment tab character &.
-l.1022         $ X \otimes X \otimes X$ &
+l.1022         $ X \otimes X \otimes I$ &
+                                          01\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Quantum_Computation.tex:1023: Misplaced alignment tab character &.
+l.1023         $ X \otimes X \otimes X$ &
                                           00\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2056,66 +2046,349 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1023
+Underfull \hbox (badness 10000) in paragraph at lines 1014--1024
 
  []
 
 
-Overfull \hbox (11.00366pt too wide) in paragraph at lines 1010--1026
+Overfull \hbox (11.00366pt too wide) in paragraph at lines 1011--1027
 \OT1/cmr/m/n/10 ing cir-cuit per-forms the map $(\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^L []\OT1/cmr/m/n/10 ) [] [] \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 (\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1027
 
  []
 
 [39] <xymatrix 4x3 607> <xymatrix 6x5
-./Quantum_Computation.tex:1045: Xy-pic error: in entry "3,6": No [2,0] (is "5,6") from here.
+./Quantum_Computation.tex:1046: Xy-pic error: in entry "3,6": No [2,0] (is "5,6") from here.
 \xyerror@ ...#2}\fi \errmessage {Xy-pic error: #1}
                                                   }
-l.1045 }
+l.1046 }
         
 See the Xy-pic manual for further information.
 
 1215>
-Overfull \hbox (413.83987pt too wide) detected at line 1050
+Overfull \hbox (413.83987pt too wide) detected at line 1051
 \OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^L [] \OMS/cmsy/m/n/10 ! []\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 ^^L []\OT1/cmr/m/n/10 )([] + []))([] + []) + \OML/cmm/m/it/10 ^^L\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! []\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([] + [])([] + [])([] + []) + \OML/cmm/m/it/10 ^^L\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1055
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1056
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1055
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1056
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1055
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1056
 
  []
 
-[40] (./Quantum_Computation.aux) )
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1074
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1074
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1074
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1084
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1084
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1084
+
+ []
+
+[41]
+
+./Quantum_Computation.tex:1098: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1098 \subsection
+                  {Hybrid Quantum-Classical computation}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Quantum_Computation.tex:1098: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1098 \subsection
+                  {Hybrid Quantum-Classical computation}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 1098.
+
+
+./Quantum_Computation.tex:1098: LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+./Quantum_Computation.tex:1098: Missing $ inserted.
+<inserted text> 
+                $
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:1098: Missing } inserted.
+<inserted text> 
+                }
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Computation.tex:1098: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Computation.tex:1098: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I'm guessing that you meant to end an alignment here.
+
+./Quantum_Computation.tex:1098: Missing $ inserted.
+<inserted text> 
+                $
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:1098: Missing } inserted.
+<inserted text> 
+                }
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Computation.tex:1098: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Quantum_Computation.tex:1098: Missing $ inserted.
+<inserted text> 
+                $
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:1098: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.1098 ...on{Hybrid Quantum-Classical computation}
+                                                  
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Overfull \hbox (725.63586pt too wide) detected at line 1098
+[][] [][]
+ []
+
+./Quantum_Computation.tex:1110: Missing $ inserted.
+<inserted text> 
+                $
+l.1110 ...g of application of $C_i$ followed by M_
+                                                  i) we make use of $\ket{\p...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Quantum_Computation.tex:1110: Missing $ inserted.
+<inserted text> 
+                $
+l.1110 ...by M_i) we make use of $\ket{\psi_{i-1}}
+                                                   = \ket{0}^{\otimes n}$.\\\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1104--1112
+
+ []
+
+
+Overfull \hbox (45.85114pt too wide) in paragraph at lines 1104--1112
+\OT1/cmr/m/n/10 Type 2: Ev-ery round (con-sist-ing of ap-pli-ca-tion of $\OML/cmm/m/it/10 C[]$ \OT1/cmr/m/n/10 fol-lowed by M$[])\OML/cmm/m/it/10 wemakeuseof$$[] \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1104--1112
+
+ []
+
+./Quantum_Computation.tex:1121: Undefined control sequence.
+l.1121 ...state of $P$ with $P\ket{\psi} = \lamdba
+                                                  _p \ket{\psi}$, $\lambda_p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:1122: Undefined control sequence.
+<argument> \lambda _p P + \lamdba 
+                                  _q Q
+l.1122 ...rac{\lambda_p P + \lamdba_q Q}{\sqrt{2}}
+                                                  $ is always a unitary Clif...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:1123: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.1123 ...ection of $\ket{\psi}$ onto the $\lamdba
+                                                  _Q$ eigenspace of $Q$.\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:1124: Undefined control sequence.
+<recently read> \lamdba 
+                        
+l.1124 ...lly chossing a uniformly random $\lamdba
+                                                   \in \{ \pm 1\}$ and apply...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1125
+
+ []
+
+[42]
+./Quantum_Computation.tex:1131: Undefined control sequence.
+l.1131 ...t of $P$ on $\ket{0}^{\otimes n} \otiems
+                                                   \ket{\psi}$ and the measu...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Quantum_Computation.tex:1131: Missing $ inserted.
+<inserted text> 
+                $
+l.1131 ...0}^{\otimes n} \ket{\psi'}, $\ket{\psi'}
+                                                  $ respectively, witht he s...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[43] (./Quantum_Computation.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 518 ({)
+### simple group (level 1) entered at line 519 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4433 strings out of 478599
- 54012 string characters out of 5858101
- 434603 words of memory out of 5000000
- 22264 multiletter control sequences out of 15000+600000
- 417412 words of font info for 80 fonts, out of 8000000 for 9000
+ 4435 strings out of 478599
+ 54033 string characters out of 5858101
+ 435603 words of memory out of 5000000
+ 22265 multiletter control sequences out of 15000+600000
+ 417765 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,23n,80p,1630b,942s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Quantum_Computation.pdf (40 pages, 382651 bytes).
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Quantum_Computation.pdf (43 pages, 406353 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
+ 251 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,7 +15,7 @@
 \maketitle
 \section{Lecture 1}
 \subsection{Review of Shor's algoirthm/quantum period finding algorithm}
-\textbf{Polynomial time hierarchy}://
+\textbf{Polynomial time hierarchy}:\\
 Computation with input of size $n$, and we are interested in the number of steps/gates (classical or quantum). When we say $O(poly(n))$ steps we regard this as an "efficent computation".\\\\
 Shor's algorithm solves the factoring problem:\\
 Given an integer $N$ needing $O(log N)$ bits, we want to find a non-trival factor in $O(poly n)$ time.\\\\
@@ -23,21 +23,21 @@ The best known classical algorithm (number sieve): $e^{O(n^{\frac{1}{3}} (\log n
 Shor's alogrithm takes $O(n^3)$\\
 \subsubsection{Quantum factoring algorithm (summary)}
 \begin{enumerate}
-        \item First, convert factoring into periodicity determination. Given $N$, choose $a< N$ s.t. $a$ is coprime (this is easy classically can be seen in part II lecture notes). Consider $f: \mathbb{Z} \rightarrow \mathbb{Z}_N$ $f(x) = a^x \mod N$. \textbf{Euler's Theorem}: if $f$ is periodic with period $r$, then it is called 'order of $a \mod N$'. 
-        \item In order to find $r$ we need a quantum implementation of $f$. We are always workingon finite size registers so restricting $x \in \mathbb{Z}$ to $x \in \mathbb{Z}_M$ (for some large enough $M$): $f: \mathbb{Z}_M \rightarrow \mathbb{Z}_N$. $f$ will no longer be exactly preriodic but this would have neglible effect if $M$ is sufficently large e.g. $M=O(N^2)$
+        \item First, convert factoring into periodicity determination. Given $N$, choose $a< N$ s.t. $a$ is coprime (this is done by picking $a$ at random and then using Euclids algorithm to compute the greatest common divisor $b= gcd(a,N)$, if $b>1$ we have found a factor else they are coprime). Consider $f: \mathbb{Z} \rightarrow \mathbb{Z}_N$ $f(x) = a^x \mod N$.\\
+                \textbf{Euler's Theorem}: \textsl{If $a$ and $N$ are coprime then there is a least power $1 < r < N$ such that $a^r = 1$ mod $N$. We call $r$ the order $a$ mod $N$.}\\ So $f(r) =1$ so $f(k+r) = f(k)$ so $f$ is periodic with period $r$, with $f$ one-to-one within each period.
+        \item In order to find $r$ we need a quantum implementation of $f$. We are always working on finite size registers so restricting $x \in \mathbb{Z}$ to $x \in \mathbb{Z}_M$ (for some large enough $M$): $f: \mathbb{Z}_M \rightarrow \mathbb{Z}_N$. $f$ will no longer be exactly periodic but this would have negligible effect if $M$ is sufficiently large e.g. $M=O(N^2)$
         \item Using the classical theory of continued fractions. Define Hilbert spaces $\mathcal{H}_M \rightarrow \{\ket{i}\}_{i \in \mathbb{Z}_M}, \mathcal{H}_N\rightarrow \{\ket{i}\}_{i \in \mathbb{Z}_N}$.
         \item $\ket{x} \rightarrow \ket{f(x)}$ is not generally a valid quantum operator, so we make it a unitary operation which can be implemented:
                 $$
-                U_f: \mathcal{H}_M \otimes \mathcal{H}_N \rightarrow \mathbb{H}_M \otimes \mathbb{H}_N
+                U_f: \mathcal{H}_M \otimes \mathcal{H}_N \rightarrow \mathcal{H}_M \otimes \mathcal{H}_N
                 $$
                 $$
                 U_f: \ket{i} \ket{k} \rightarrow \ket{i} \ket{k + f(i)}
                 $$
-        \item if $x \rightarrow f(x)$ can be classically computed in $O(poly(m))$ time ($m = \log M$)), then $U_f$ can be implemented in poly($m$) time quantumly too
+        \item If $x \rightarrow f(x)$ can be classically computed in $O(poly(m))$ time ($m = \log M$)), then $U_f$ can be implemented in poly($m$) time quantumly too
         \item We will sometimes view $U_f$ as a black box/oracle and we will count the number of times the algorithm invokes the oracle.
-        \item Back to facotoring to get $r$ we'll use the quantum algorithm for periodicity determination:
-        \item Given an oracle $U_f$ with the promise that $f$ is periodic of some unknown period $r \in \mathbb{Z}_N$ so that $f(x+r) = f(x)$ and $f$ is one-to-one in this period (for all $0 \leq x_1 < x_2<r f(x_1) \neq f(x_2)$)
-        \item To find $r$ in $O(poly n)$ with any persecribed success probability $1-\epsilon$ we use the following alogirthm:
+        \item Back to factoring to get $r$ we'll use the quantum algorithm for periodicity determination:
+        \item Given an oracle $U_f$ with the promise that $f$ is periodic of some unknown period $r \in \mathbb{Z}_N$ so that $f(x+r) = f(x)$ and $f$ is one-to-one in this period (for all $0 \leq x_1 < x_2<r f(x_1) \neq f(x_2)$). To find $r$ in $O($poly $n)$ with any prescribed success probability $1-\epsilon$ we use the following algorithm:
                 \begin{itemize}
                         \item Step 1: Create the state 
                                 $$
@@ -47,7 +47,7 @@ Shor's alogrithm takes $O(n^3)$\\
                                 $$
                                 \frac{1}{\sqrt{M}} \sum_{i=0}^{M-1} \ket{i} \ket{f(i)}
                                 $$
-                        \item Step 3: Measure the 2nd register to get $y$. By the born rule the first register collapses to all those $i$: $f(i) =y$ i.e. $i = x_0, x_0 + r, x_o + 2r,..., x_0 + (A-1)r$, $0 \leq x_0 <r$.\\\\Discard the second register to get the following state:
+                        \item Step 3: Measure the 2nd register to get $y$. By the Born rule the first register collapses to all those $i$: $f(i) =y$ i.e. $i = x_0, x_0 + r, x_o + 2r,..., x_0 + (A-1)r$, $0 \leq x_0 <r$.\\\\Discard the second register to get the following state:
                                 $$
                                 \ket{per} = \frac{1}{\sqrt{A}} \sum_{j=0}^{A-1} \ket{x_0 + jr}
                                 $$
@@ -71,7 +71,7 @@ Shor's alogrithm takes $O(n^3)$\\
                         $$
                         QFT \ket{per} = \sqrt{\frac{A}{M}} \sum_{k=0}^{A-1} \omega^{x_0 k \frac{N}{r}} \ket{k \frac{M}{r}}
                         $$
-                        Now the random shift $x_0$ only appears in the phase not in the ket labels. So now the measurement probabilities will be indepedant of $x_0$. When we measure this we get some value $c = \frac{k_0M}{r}$ with $k_0$ uniformly random in range $0 \leq k_0 < r$
+                        Now the random shift $x_0$ only appears in the phase not in the ket labels. So now the measurement probabilities will be independent of $x_0$. When we measure this we get some value $c = \frac{k_0M}{r}$ with $k_0$ uniformly random in range $0 \leq k_0 < r$
                         $$
                         \frac{k_0}{r} = \frac{c}{M}
                         $$
@@ -79,8 +79,8 @@ Shor's alogrithm takes $O(n^3)$\\
                         \textbf{Co-primality Theorem}: The number of integers less than $r$ that are coprime to $r$ grows with $O(\frac{r}{\log \log r})$\\\\
                         Therefore, the probability of $k_0$ being coprime to $r$ is $O(\frac{1}{\log \log r})$.\\\\
                         \textbf{Lemma}: If a single trial has success probability $p$ then if one repeats it $M^*$ times, for any $0<1-\epsilon<1$. We get probability of at least one success in $M^*$ trails is greater than $1-\epsilon$ if $M^* = \frac{- \log \epsilon}{p}$. i.e. roughly $O(1/p)$ trials suffice to achieve probability of success $> 1- \epsilon$
-                \item After step 4 cancel $\frac{c}{M}$ down to an irredicible algorithm $\frac{a}{b}$ there is an efficent algorithm ($O(poly n)$) for this. This will give us $r$ as denominator $b$ if $k_0$ is coprime to $r$ with probablity $O(\frac{1}{\log \log r})$. So check $b$ value by computing $f(0)$ and $f(b)$ and $b = r \iff f(0) = f(b)$.\\\\
-                        By repeating this process $M^* = O( \log \log r)$ times this will give us $r$ with any desired probability $1- \epsilon$. Since $r < M$ the whole algorithm takes $O(poly m)$ time!
+                \item After step 4 cancel $\frac{c}{M}$ down to an irreducible algorithm $\frac{a}{b}$ there is an efficient algorithm ($O($poly $n)$) for this. This will give us $r$ as denominator $b$ if $k_0$ is coprime to $r$ with probability $O(\frac{1}{\log \log r})$. So check $b$ value by computing $f(0)$ and $f(b)$ and $b = r \iff f(0) = f(b)$.\\\\
+                        By repeating this process $M^* = O( \log \log r)$ times this will give us $r$ with any desired probability $1- \epsilon$. Since $r < M$ the whole algorithm takes $O($poly $m)$ time!
                 \end{itemize}
                 
         \item From learning the period $r$ we can use number theory to find a factor of $N$
@@ -138,7 +138,8 @@ Let $G$ be a finite group of size $|G|$. We are given an oracle $f: G \rightarro
 \item $f$ is distinct on distinct cosets
 \end{itemise}\\\\
 \textbf{Problem}: 'Determine' the 'hidden subgroup' $K$ (e.g. output a set of generators or sample uniformly from elements of $K$)\\\\
-We want to solve in time $O(poly ( \log |G|))$ (efficent algorithm) with anuy consitent probability $1-\epsilon$.
+We want to solve in time $O(poly ( \log |G|))$ (efficient algorithm) with any consistent probability $1-\epsilon$.
+\\\\
 \textbf{Examples of problems that can be cast as HSP}\\
 Periodicity finding $f: \mathbb{Z}_M \rightarrow X$ periodic, period r 1-1 in period
 $$
@@ -160,9 +161,9 @@ K = \{ \lambda(y,1): \lambda \in \mathbb{Z}_{p-1} \} < G
 $$
 Then $f$ is constant and distinct on cosets of $K$ and generator $(y,1)$ of $K$ gives $y = \log_g x$\\\\
 \textbf{Graph Problems}:\\
-So we can solve problems like those above where $G$ is abelian, but we can also solve graph problems.\\\\
-Consdier graph $A = (V,E)$, $|V| = n$ lets say that the graph is undirected and there is at most one edge between any two vertices. Vertices here are labelled by numbers from 1 to $n$.\\\\
-Lets define an adjacency matrix $M_A$: $[M_a]_{ij} = \begin{cases} 1 & \iff (i,j)\\ 0 & \text{otherwise} \end{cases}$. The permuation group of $[n]$, $|P_n| = n!, \log |P_n| \sim O(n \log n)$. Define a group of automorphisms of group $A$ which is a set of permuations with the following property: $\pi \in P_n$ s.t. $\forall i,j (i,j)$ is an edge in $A$ $\iff (\pi(i), \pi(j))$ is also an edge in $A$.\\\\
+So we can solve problems like those above were $G$ is abelian, but we can also solve graph problems.\\\\
+Consider graph $A = (V,E)$, $|V| = n$ lets say that the graph is undirected and there is at most one edge between any two vertices. Vertices here are labelled by numbers from 1 to $n$.\\\\
+Lets define an adjacency matrix $M_A$: $[M_a]_{ij} = \begin{cases} 1 & \iff (i,j)\\ 0 & \text{otherwise} \end{cases}$. The permutation group of $[n]$, $|P_n| = n!, \log |P_n| \sim O(n \log n)$. Define a group of automorphisms of group $A$ which is a set of permutations with the following property: $\pi \in P_n$ s.t. $\forall i,j (i,j)$ is an edge in $A$ $\iff (\pi(i), \pi(j))$ is also an edge in $A$.\\\\
 An associated HSP (the case of non-abelian $G$):
 $$
 G = P_n, X = \text{set of all labelled graphs on }n\text{vertices}
@@ -174,14 +175,14 @@ $$
 (Check $f(K)$ is constant and disctint on cosets of $Aut(A)$)\\\\
 \textbf{Applications}:\\
 If we can sample uniformly from $K$, then we can solve Graph Isomorphism problem (GI).This has a number of different applications in areas of computer science. Two labelled graphs $A$ and $B$ with $n$ vertices are isomorphic if there is a 1-1 map (i.e. permutation) $\pi[n] \rightarrow [n]$ s.t. $\forall i,j \in [n] (i,j)$ is an edge in $A$ $\iff$ $(\pi(i), \pi(j))$ is an edge in $B$. The GI problem is given to graphs $A$ and $B$ and deciding if they are isomorphic. This can be represented as a non-abealian HSP. There is no known poly(m) time classical algorithm to solve this problem, so $GI$ is clearly in $NP$ but not believed to be $NP$-complete (a class of problems such that every problem in NP can be reduced to an NP-complete problem these are the hardest NP problems).
-In 2017, L Babai presented a quasi-polynomial algorithm for GI runtime $n^O(\log n)^2)$. This ranks in between polynomial runtime and exponential algorithms.
+In 2017, L Babai presented a quasi-polynomial algorithm for GI runtime $n^{O((\log n)^2)}$. This ranks in between polynomial runtime and exponential algorithms.
 \section{Lecture 4}
 \textbf{Quantum algorithm for finite abelian HSPs}
 - Generalisation of period-finding algorithm\\
 Write our abelian group $(G, +)$ additively\\
 Construction of shift-invariant states and Fourier transform for $G$.\\
 Representations of abelian $G$:\\
-Consdier the mapping $\chi: G \rightarrow \mathbb{C}^* = \mathbb{C}- \{ 0\}$ with multiplication that satisfies:
+Consider the mapping $\chi: G \rightarrow \mathbb{C}^* = \mathbb{C}- \{ 0\}$ with multiplication that satisfies:
 $$
 \chi( g_1 + g_2) = \chi(g_1) \chi(g_2), \forall g_1,g_2 \in G 
 $$
@@ -193,14 +194,14 @@ $$
 \frac{1}{|G|} \sum_{g \in G} \chi_i (g) \bar {\chi_j} (g) = \delta_{ij}
 $$
 3) There are always exactly $|G|$ different functions $\chi$ satisfying (HOM).\\\\
-\textbf{Examples}: $\chi(g) = 1, \forall g \in G$ is an irrep/ called a trival irrep\\
-Label the trivial irrep as $\chi_0$, $0\in G$. Then for any other irrep $\chi \neq \chi_0$ orthonality to $\chi_0$ gives:
+\textbf{Examples}: $\chi(g) = 1, \forall g \in G$ is an irrep/ called a trivial irrep\\
+Label the trivial irrep as $\chi_0$, $0\in G$. Then for any other irrep $\chi \neq \chi_0$ orthogonality to $\chi_0$ gives:
 $$
 \sum_{g \in G} \chi(g) = 0 \text{ if } \chi \neq \chi_0
 $$
 Going back to constructing shift-invariant states
 \subsubsection{Shift-invariant states}
-Consider a state space $\mathcal{H}_G, dim \mathcal{H}_G = |G|$ wtih basis $\{ \ket{g}\}_{g \in G}$. Now introduce shift operators $U(k)$ for $k \in G$ defined as follows:
+Consider a state space $\mathcal{H}_G, dim \mathcal{H}_G = |G|$ with basis $\{ \ket{g}\}_{g \in G}$. Now introduce shift operators $U(k)$ for $k \in G$ defined as follows:
 $$
 U(k): \ket{g} \rightarrow \ket{g+k}, g, k \in G
 $$
@@ -209,7 +210,7 @@ For each $\chi_k, k \in G$:
 $$
 \ket{\chi_k} = \frac{1}{\sqrt{|G|}} \sum_{g \in G} \bar{\chi_k} (g) \ket{g}
 $$
-By thereom 1 $\{ \chi_k \}$ form an orthonormal basis.
+By theorem 1 $\{ \chi_k \}$ form an orthonormal basis.
 $$
 U(g) \ket{\chi_k} = \chi_k(g) \ket{\chi_k}
 $$
@@ -217,7 +218,7 @@ $$
         $$
         \{h' = h+ g\} = \frac{1}{\sqrt{|G|}} \sum_{h' \in G} \bar{\chi_k} (h' - g) \ket{h'}
         $$
-        using HOM $\chi_k(-g) = \chi_k(g)^{-1} = \bar \chi_k(g) \implies \bar{\chi_k(h'-g)} = \bar \chi_k(h') \bar \chi_k(-g) = \bar \chi_k(h') \chi_k(g)$. Therefore,
+        using HOM $\chi_k(-g) = \chi_k(g)^{-1} = \bar \chi_k(g) \implies \overline{\chi_k(h'-g)} = \bar \chi_k(h') \bar \chi_k(-g) = \bar \chi_k(h') \chi_k(g)$. Therefore,
         $$
         U(g) \ket{\chi_k} = \frac{1}{\sqrt{|G|}}\sum_{h' \in G} \chi_k(g) \bar \chi_k(h') \ket{h'} = \chi_k(g) \ket{\chi_k}
         $$
@@ -235,7 +236,7 @@ k-th column of $QFT^{-1}$ in $\ket{g}$ basis is mode of components of $\ket{\chi
         [QFT^{-1}]_{gk} = \frac{1}{\sqrt{|G|}} \bar{\chi_k}(g)
         $$
         \textbf{Example}: $G = \mathbb{Z}_M$L\\
-        Check $\chi_a(b) = e^{\frac{2\pi i a b}{M}}, a, b \in \mathbb{Z}_M$ satsifies HOM and has its irreps labelled by $a \in \mathbb{Z}_M$ with $\chi_0(b) = 1 \forall b \in \mathbb{Z}_m$.
+        Check $\chi_a(b) = e^{\frac{2\pi i a b}{M}}, a, b \in \mathbb{Z}_M$ satisfies HOM and has its irreps labelled by $a \in \mathbb{Z}_M$ with $\chi_0(b) = 1 \forall b \in \mathbb{Z}_m$.
         $$
         G = \mathbb{Z}_{M_1} \times ... \times \mathbb{Z}_{M_r}
         $$
@@ -245,16 +246,16 @@ k-th column of $QFT^{-1}$ in $\ket{g}$ basis is mode of components of $\ket{\chi
         $$
         \chi_{g_1} (g_2) = e^{2\pi i ( \frac{a_1 b_1}{M_1} +... + \frac{a_r b_r}{M_r}}
         $$
-This satifies HOM and our $QFT_G = QFT_{M_1} \otimes ... \otimes QFT_{M_r}$ on $\mathcal{H}_G = \mathcal{H}_{M_1} \otimes ... \otimes \mathcal{H}_{M_r}$.\\\\
-This second example is exhaustive since we have a classification theroem:\\
-\textbf{Classification theorem}: Any fintie abelian group $G$ is isomorphic to a direct product of the form $G = \mathbb{Z}_{M_1} \otimes ... \otimes \mathbb{Z}_{M_r}$. So $M_1$ can be taken in a form $p_1^{s_1},... p_r^{s_r}$.
+This satisfies HOM and our $QFT_G = QFT_{M_1} \otimes ... \otimes QFT_{M_r}$ on $\mathcal{H}_G = \mathcal{H}_{M_1} \otimes ... \otimes \mathcal{H}_{M_r}$.\\\\
+This second example is exhaustive since we have a classification theorem:\\
+\textbf{Classification theorem}: Any finite abelian group $G$ is isomorphic to a direct product of the form $G = \mathbb{Z}_{M_1} \otimes ... \otimes \mathbb{Z}_{M_r}$. So $M_1$ can be taken in a form $p_1^{s_1},... p_r^{s_r}$.
 \subsubsection{Quantum algorithm}
 $$
 f: G \rightarrow X
 $$
 with hidden subgroup $K$ and cosets $k = 0 + k, g_2 + k, ... g_m +k$, $m = \frac{|G|}{|K|}$. we will work on $\mathcal{H}_{|G|} \otimes \mathcal{H}_{|X|}, $\{\ket{g}\ket{x}\}_{g \in G, x \in X}$.\\
 \begin{itemlist}
-\item Create a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket{0}\\
+\item Create a state $\frac{1}{\sqrt{|G|}} \sum_{g \in G} \ket{g} \ket{0}$\\
 \item Apply $U_f$ and $\frac{1}{\sqrt{|G|}}\sum_{g \in G} \ket{g} \ket{f(g)}\\
         \item Measure the second register to get $f(g_0)$. The first register will not give the coset state:
                 $$
