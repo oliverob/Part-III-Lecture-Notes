@@ -784,13 +784,13 @@ Fix $k=3$. Consider a clause $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satis
                        H_{final} = \ket{0} \bra{0} \otimes \ket{T} \bra{T}_C
                        $$
                        $$H= H_{init} + \sum_{i=1}^T H_i + H_{final}$$
-                       We should note that $H$ "follows" the state $\ket{\psi}$ and prescribes penalties when deviating form $\ket{\psi_0}, \ket{\psi_1},..., \ket{\psi_T}$\\
+                       We should note that $H$ "follows" the state $\ket{\psi}$ and percribes penalties when deviating form $\ket{\psi_0}, \ket{\psi_1},..., \ket{\psi_T}$\\
                        $H$ also penalizes the zero output in the final measurement\\
                        $C$-is an extra "clock" register of $\log (T+1)$ qubits\\
                        Check locality of $H$ is $k= \log (T+1) + 2 = O(\log (n))$. We will further reduce $k$ to a constant $k = 5$.\\
                        We need to check that we can distinguish $x\in L_1$ and $x \in L_0$ by looking at $\lambda_{min}$. \\\\
                        Consider first case when $x \in L_1$ this means that there exists a $p(n)$ qubit witness state $\ket{\psi}$ that makes $C_n$ accept with probability $1- \frac{1}{4T}$. Lets consider another state $\ket{\psi'} = \frac{1}{\sqrt{T+1}} \sum_{t = 0}^T \ket{\psi_t} \ket{t}$ this is a "History state". When we look at this state we want to evaluate the energy.
-                       State $\ket{\psi'}$ gets no contribution to penalty from $H_{int}$ and $H_t$ terms. Since the probability of measuring the (incorrect) outcome is $\frac{1}{4T}$ we have $\lambda_{min} = \bra{\psi'} H \ket{\psi'} = \frac{1}{T+1} \bra{\psi_T} \bra{T} H_{final} \ket{T} \ket{\psi_T} \leq \frac{1}{T+1} \frac{1}{4T} = a$.\\
+                       State $\ket{\psi'}$ gets no contribution to penalty from $H_{int}$ and $H_t$ terms. Since the probability of measuring the (incorrect) outocme is $\frac{1}{4T}$ we have $\lambda_{min} = \bra{\psi'} H \ket{\psi'} = \frac{1}{T+1} \bra{\psi_T} \bra{T} H_{final} \ket{T} \ket{\psi_T} \leq \frac{1}{T+1} \frac{1}{4T} = a$.\\
                        This will show us completeness.\\\\
                        Now take $x \in L_0$. We want to show that $\lambda_{min}$ is at least $b=2a$. Consider any witness state $\ket{\psi'}= \sum_{t=0}^T \alpha_t \ket{\phi_t} \ket{t}$ with $\alpha_t \geq 0$ and $\{ \ket{\phi_t}\}$ is normalised. Then evaluate $$\bra{\psi'} H \ket{\psi'} = \frac{1}{2} ( \alpha^2_{t-1} + \alpha_t^2 - \alpha_{t-1} \alpha_t \bra{\phi_t} U_t \ket{\phi_{t-1}} - \alpha_t \alpha_{t-1} \bra{\phi_{t-1}} H \ket{\phi_t})$$
                        $$
@@ -805,17 +805,17 @@ Fix $k=3$. Consider a clause $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satis
                        $$
                        1 \leq || \ket{\phi_T} - C_n \ket{\phi_0} || = || sum_{t=1}^T U_T - U_{t-1} \ket{\phi_t} - U_T...U_t\ket{\phi_{t-1}}|| \leq \sum_{t=1}^T || U_T...U_t \ket{\phi_t} - U_T...U_t \ket{\phi_{t-1}}|| = \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||
                        $$
-                       Using the evaluation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}}$:
+                       Using the evaulation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}}$:
                                $$
                                \bra{\psi'} H \ket{\psi'} = \sum_{t=1}^T \bra{\psi'} H_t \ket{\psi'} = \frac{1}{2} \frac{1}{T+1} \sum_{t=1}^T ||\ket{\phi_t} - U_t \ket{\phi_{t-1}} ||^2 \geq \frac{1}{2T(T+1)} ( \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||^2 ) \geq \frac{1}{2T(T+1)} = b
                                $$
                                \section{Example Sheet 2}
-For Grover's search algorithm, if the indicator function is classically efficiently computation then $I_G$ is implementable.\\\\
+For Grover's search algorithm, if the indicator function is classically efficently computation then $I_G$ is implementable.\\\\
 Look at Part II course to recap coprimality conditions. They also show that to factor $N$ with constant probability it suffices to find an approximations $\xi$ to $\frac{s}{r}$ for random $s$ in range $[1,r)$ to $2m+1$ binary digits of accuracy with $m= O(\log N)$ s.t. $| \xi - \frac{s}{r} | < \frac{1}{2N^2}$\\\\
-\section{Lecture 14}
+\section{Lecture 13}
 The Hamiltonian is not $k$-local for $k$ constant it is of $\log N$ we will fix this today.
 \subsubsection{Making Hamiltonian $k$-local}
-What is responsible for this non-locality effect is the clock-register. So we can reduce locality from $O(\log n)$ to 5 by making the clock unary. For $t=0$ we will write $\ket{0}^{\otimes T}$ for $t=1$ we write $\ket{1} \ket{0}^{\otimes T-1}$ for $t=3$ we write $\ket{11} \ket{0}^{\otimes T}$. When we had a binary format we used $\log(T)$ qubits in the unary format we will use $T$ qubits. This construction will require an extra bit that we will see shortly. Let's crite $C_t$ to denote the $t$-th qubit of the clock register. Now our hamiltonian $H$ has the following terms:
+What is responsibile for this non-locality effect is the clock-register. So we can reduce locality from $O(\log n)$ to 5 by making the clock unary. For $t=0$ we will write $\ket{0}^{\otimes T}$ for $t=1$ we write $\ket{1} \ket{0}^{\otimes T-1}$ for $t=3$ we write $\ket{11} \ket{0}^{\otimes T}$. When we had a binary format we used $\log(T)$ qubits in the unary format we will use $T$ qubits. This construction will require an extra bit that we will see shortly. Let's crite $C_t$ to denote the $t$-th qubit of the clock register. Now our hamiltonian $H$ has the following terms:
 $$
 H_{init} = \sum_{i=1}^s \ket{1} \bra{1}_i \otimes \ket{0} \bra{ 0}_{C_i}
 $$

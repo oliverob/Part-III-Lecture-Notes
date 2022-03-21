@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1647622012 "Quantum_Computation.tex" "Quantum_Computation.pdf" "Quantum_Computation" 1647622011
-  "Quantum_Computation.aux" 1647621193 6114 37c16f92e46f7f8b15fce1e9d7dd1e5b "pdflatex"
-  "Quantum_Computation.tex" 1647622010 110230 2a4846bfac48c6aebe512afa7fee887b ""
+["pdflatex"] 1647883018 "Quantum_Computation.tex" "Quantum_Computation.pdf" "Quantum_Computation" 1647883018
+  "Quantum_Computation.aux" 1647878503 6110 fd21ba75762ce27920e38b6fbde2e837 "pdflatex"
+  "Quantum_Computation.tex" 1647883016 109987 4bfc3014b422e8b3b4e68e442dfe7a98 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1630412158 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630414951 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1630413782 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -104,6 +104,6 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1630422739 2797772 235209822cc2568e25123ecf25b284e7 ""
   "c:/texlive/2021/texmf.cnf" 1630422482 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "Quantum_Computation.aux"
-  "Quantum_Computation.pdf"
   "Quantum_Computation.log"
+  "Quantum_Computation.pdf"
+  "Quantum_Computation.aux"

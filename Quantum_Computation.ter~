@@ -516,7 +516,7 @@ In the $\{ \ket{b}, \ket{g}\}$ basis, the $Q$ matrix is a rotation matrix by $2 
 $$
                        Q  = \begin{pmatrix} \cos 2 \theta & \sin 2 \theta \\ - \sin 2 \theta & \cos 2 \theta \end{pmatrix}
 $$
-As we apply $Q$  $n$ times we get $Q^{n} \ket{\psi} = \sin (2n+1) \theta \ket{g} + \cos (2n+1) \theta \ket{b}$. If we measure $Q^{n}$ in $\{ \ket{b}, \ket{g} \}$ basis we have probability of seeing a good element of $\sin^2 (2n+1) \theta$ so this is maximised when $(2n+1) \theta = \frac{\pi}{2}$. So for the nearest integer to $n = \frac{\pi}{4 \theta} - \frac{1}{2}$ we will be within $\theta$ of the element.\\\\
+As we apply $Q$  $n$ times we get $Q^{n} \ket{\psi} = \sin (2n+1) \theta \ket{g} + \cos (2n+1) \theta \ket{b}$. If we measure $Q^{n}$ in $\{ \ket{b}, \ket{g} \}$ basis we have probabiliyt of seeing a good element of $\sin^2 (2n+1) \theta$ so this is maximised when $(2n+1) \theta = \frac{\pi}{2}. So for the nearest integer to $n = \frac{\pi}{4 \theta} - \frac{1}{2}$ we will be within $\theta$ of the element.\\\\
 \textbf{Example}: If we have $\theta = \frac{\pi}{6}, n =1$ we can seee that $Q^1$ rotates $\ket{\psi}$ exactly onto $\ket{g}$.\\\\
 Generally, for a given $\theta$ $n$ is not an integer, so we use $n=$ nearest integer to $ \frac{4\pi}{\theta} - 1 \approx \frac{4\pi}{\theta} = O(\frac{1}{\theta}) = O(\frac{1}{\sin \theta}) = O(\frac{1}{\text{length of good projection of } \ket{\psi}}$ and then $Q\ket{\psi}$ will be witin angle $\theta$ of $\ket{g}$ so the probability of seeing a good value is: $P \geq \cos \theta = 1 - O(\theta^2)$.\\\\
 All this can implement if $I_{\ket{\psi}}I_G$ can be impmeneted efficently. see ES2.\\\\
@@ -526,7 +526,7 @@ f(x) = 1, x \text{if} x\text{ is good}, f(x) = 0 \text{ if} x \text{is bad}
 $$
 For $I_{\ket{\psi}}$ we usually have $\ket{\psi} = H_n \ket{00..000}$, then $\ket{\psi}$ can be implemented in $O(n)$ time where $n$ is the number of qubits.\\\\
 In the amplitude amplification algorithm the relative amplitudes of good elements remain the same as they were in $\ket{\psi} = \sin \theta \ket{g} + \cos \theta \ket{b}$ so $\ket{g}$ remains the same just the amplitude varies. So AA amplifies overall $\ket{g}$ amplitude at the expense of reducing the amplitude of $\ket{b}$.\\\\
-Second remark: Final state is generally not exactly $\ket{g}$, however, if $\sin \theta$ is known then there is a modification of this algorithm that uses a modest amount of resources to make it exact.\\\\
+Second remark: Final state is generally not exactly $\ket{g}$, however, if $\sin \theta$ is known then there is a modification of this algorithm that uses a modest amount of resources t omake it exact.\\\\
 The rotuine is useful for state prepation e.g.
 $$
 \sum_{x < N, \text{x is coprime to N}} \ket{x}
@@ -570,11 +570,11 @@ G is spanned by $k$ good $\ket{x}$'s, $\sin \theta = \sqrt{\frac{k}{N}}$ so Q is
 Note that for 2-bit case $N=4$ and $k=1$ good element we get $\theta = \arcsin \frac{1}{2} = \frfrac{\pi}{6}$ and one application of Q rotates $\ket{\psi_0}$ exactly onto $\ket{g}$\\\\
 \textbf{Square-root speedy of general quantum algorithms}:\\
 Let $A$ be a quantum algorithm/circuit(sequence of 'basic' unitary gates) on input states 
-\ket{00.00}$. The final state is $A \ket{00...000}$.\\
+\ket{00.00}. The final state is $A \ket{00...000}$.\\
 Good labels = desired computation outcomes.\\
-$A\ket{0...0} = \alpha \ket{a} + \beta \ket{b}, \alpha = \sin \theta$  with $\ket{a}$ normalised but generally unequal superposition $\sum_{good x} c_x \ket{x}$.\\
-So probability of success in 1 run is $|\alpha|^2$ so need to do $O(\frac{1}{|\alpha|^2})$ repetitions of A to succeed with any given const probability $1- \epsilon$.\\\\
-Now lets try amplitude amplification instead of repeated measurement. We need to check we satisfy some assumptions.\\
+$A\ket{0...0} = \alpha \ket{a} + \beta \ket{b}, \alpha = \sin \theta$  with $\ket{a}$ normalised but generally unequa superposition $\sum_{good x} c_x \ket{x}$.\\
+So probability of success in 1 run is $|\alpha|^2$ so need to do $O(\frac{1}{|\alpha|^2})$ repetitionsof A to succeed with any given const probablity $1- \epsilon$.\\\\
+Now lets try amplitude amplification instead of repeated measurement. We need to check we satissify some assumptions.\\
 Assume we can check if the answer is good or bad.\\
                        So that we can implement $I_G \ket{x} \rightarrow \begin{cases} - \ket{x} & \text{x is good}\\ \ket{x} & \text{x is bad} \end{cases}$\\
                        Consider $\ket{\psi} = A \ket{0.00}$
@@ -582,14 +582,14 @@ Assume we can check if the answer is good or bad.\\
                        Q = - I_{A\ket{00.000}} I_G = - A I_{\ket{0..00}} A^{\dagger} I_G
                        $$
                        so all parts are implementable\\\\
-                       By the amplitude amplification theorem $Q$ is a rotation by $2 \theta$ with $\sin \theta = |\alpha|$. So after $n = \frac{\pi}{4 \theta} = O(\frac{1}{|\theta|}) = O(\frac{1}{\sin \theta}) = O(\frac{1}{|\alpha|}$ repetitions $A\ket{0..0}$ will be rotated very near $\ket{g}$ and the final measurement will succeed with high probability. So we get a square root time speed up over a discrete repetition method.\\\\
+                       By the amplitude amplifacation theorem $Q$ is a rotation by $2 \theta$ with $\sin \theta = |\alpha|$. So after $n = \frac{\pi}{4 \theta} = O(\frac{1}{|\theta|}) = O(\frac{1}{\sin \theta}) = O(\frac{1}{|\alpha|}$ repetitions $A\ket{0..0}$ will be rotated very near $\ket{g}$ and the final measuremnt will succeed with high probability. So we get a square root time speed up over a discrete repetition method.\\\\
                        Each application of $Q$ need one $A$ and one $A^{\dagger}$. and can think of $A^{\dagger}$ as inverse gates in reverse order so it has a similar complexity to $A$.\\\\
                        If success probability of $A$ is known then we can do even better and we can cook up the rotation so exactly get to $\ket{g}$ (this exact method will be covered in ES2). This will convert the probabilistic algorithm $A$ into a deterministic one.\\\\
                        \textbf{Quantum counting}:\\
                        Here we apply amplitude amplification and phase estimation.\\
-                       Given $f: B_n \rightarrow B_1$ with $k$ good $x$'s we want to estimate $k$ (instead of finding a good $x$).\\
-                       Let's recall the grover operator: $Q_G$ for $f$ is a rotation by $2\theta$ in this 2D plane spanned by $\ket{\psi_0} = \frac{1}{\sqrt{2^n}} \sum_{x \in B_n}$ and its good projection $\ket{g} = \frac{1}{\sqrt{k}} \sum_{good x} \ket{x}$ with $\sin \theta = \sqrt{\frac{k}{N}} \approx \theta$\\
-                       Recall that rotations in $\{ \ket{b}, \ket{g} \}$ plane have eigenvalues and eigenvectors:
+                       Given $f: B_n \rightarrow B_1$ with $k$ good $x$'s we want to estiamte $k$  with (instead of finding a good $x$).\\
+                       Let's recall the grover operator: $Q_G$ for $f$ is a rotation by $2\theta$ in this 2D plane spanned by $\ket{\psi_0} = \frac{1}{\sqrt{2^n}} \sum_{x \in B_n}$ and its good projeciton $\ket{g} = \frac{1}{\sqrt{k}} \sum_{good x} \ket{x}$ with $\sin \theta = \sqrt{\frac{k}{N}} \approx \theta$\\
+                       Recall that rotations in $\{ \ket{b}, \ket{g} \}$ palne have eigenvaleus and eigenvectors:
                        $$
                        \ket{e_{\pm}} = \frac{1}{\sqrt{2}} (\ket{b} \pm i \ket{g})
                        $$
@@ -623,7 +623,7 @@ Assume we can check if the answer is good or bad.\\
                \ket{\psi_0} =  \sin \theta \ket{g} + \cos \theta \ket{b} = \frac{1}{\sqrt{2}} (e^{i\theta} \ket{e_+} + e^{-i \theta} \ket{e_-})
                $$
        Run QPE -> $\frac{\theta}{\pi}$ or $1- \frac{\theta}{\pi}}$ with probability $\frac{1}{2}$. We can get approximately $\theta$ in either case. For any $m$, running $QPE$ with $m$ qubit lines will give an $m$-bit approximation to $\sqrt{\frac{k}{N}}$ this uses $2^n$ C-Q gates.\\
-       By Theroem PE we learn $\sqrt{\frac{k}{N}}$ to an additive error with constant probability $\frac{4}{\pi^2}$ using $O(2^m)$ queries. Write $\frac{1}{2^n}$ as $\frac{\delta}{\sqrt{N}}$ $\delta >0$. Thus we can learn $\sqrt{k}$ to additive error $O(\delta)$ using $O(2^n) = O(\frac{\sqrt{N}}{\delta})$ queries.\\\\
+       By Theroem PE we learn $\sqrt{\frac{k}{N}}$ to an additive error with constant probability $\frac{4}{\pi^2}$ using $O(2^m)$ queries. Write $\frac{1}{2^n}$ as $\frac{\delta}{\sqrt{N}}$ $\delta >0$. Thus we can learn $\sqrt{k}$ to additive error $O(\delta)$ using $O(2^n) = O(\frac{\sqrt{N}{\delta}})$ queries.\\\\
        Classically the same approximation (obtained with constant probability) requires $O(\frac{N}{\delta^2})$ so requires quadratically more effort.
        \subsection{Hamiltonian simulation}
        One of the most promising applications of qunatum computers is simulating quantum systems. This is difficult for classical computers as these physical systems have so many degrees of freedom. We won't do the nitty gritty but cover some of the core fundamental ideas and talk about the complexitiy of it.\\\\
@@ -722,18 +722,21 @@ $$
 So the total circuit size is $O(m^4 \frac{(Kt)^2}{\epsilon})$ we are dealing with Hamiltonians that are $k$-local. So for $n$ qubits and $k$-local terms $m = O(n^k)$. Therefore, the total circuit size is $O( n^{4k} \frac{(Kt)^2}{\epsilon})$. You can actually refine this method to get order $t^{1+ \delta}$ but they are much more technical and would need many more lectures to explain.\\\\
 We have a circuit of size $|C| = O( \frac{m^4 (kT)^2}{\epsilon})$ and if we want to use gates from the universal set
 \sections{Lecture 12}
-\subsection{The Local Hamiltonian Problem and QMA}
-Recap: Definition of NP. There is no known way to solve it in polynomial time but it is easy to verify the solution in polynomial time.\\
-We will adopt the language of the part II lecture course. A language is in NP if it has an efficient (poly-time) verifier $V$. A verifier $V$ for a language $L$ is a computation with two inputs $w$, $c$ s.t. if $w \in L$ then for some $c$ $V(w,c)$ halts with "accept". such $c$ is called a certificate/proof (of membership) for $w$. If $w \cancel{\in} L$, then for all $C$, $V(w,c)$ halts outputting "reject". V is a poly-time verifier for all pairs $(w,c)$. V runs in poly(n) time $n = |w|$.
-\subsubsection{The satisfiability problem (SAT)}
-Boolean formulas $\phi(x_1...x_n): \{ 0,1\}^n \rightarrow \{0,1\}$ and every $(b_1...b_n), b_i \in \{0,1\}$ s.t. $\phi(b_1...b_n) = 1$ is called a satisfying assignment. $V(\phi,c)$ evaluates $\phi(c)$. Finding a satisfying assignment is not known to be in $P$, and is $NP$-complete by Cook-Levin theorem.\\\\
+\subsection{The Local Hamiltonaian Problem and QMA}
+Recap: Defintion of NP. There is no known way to solve it in polynomial time but it is easy to verify the solution in polynomial time.\\
+We will adopt the language of the part II lecture course. A language is in NP if it has an efficent (poly-time) verifier $V$. A verifier $V$ for a language $L$ is a computation with two inputs $w$, $c$ s.t. if $w \in L$ then for some $c$ $V(w,c)$ halts with "accept". such $c$ is called a certificate/proof (of membership) for $w$. If $w \cancel{\in} L$, then for all $C$, $V(w,c)$ halts outputing "reject". V is a poly-time verifier for all pairs $(w,c)$. V runs in poly(n) time $n = |w|$.
+\subsubsection{The satisficatibility problem (SAT)}
+Boolean forumlas $\phi(x_1...x_n): \{ 0,1\}^n \rightarrow \{0,1\}$ and every $(b_1...b_n), b_i \in \{0,1\}$ s.t. $\phi(b_1...b_n) = 1$ is called a satisfying assignment. $V(\phi,c)$ evaluates $\phi(c)$. SAT is not known to be in $P$.\\\\
 Theory of NP-completeness shows that many different problems that look very different (SAT, Travelling Salesman Problem,  integer linear programming) are essentially the same problem. We can translate instances of one to another in deterministic poly time.\\\\
 Now lets try to relax some of the requirements on $NP$. Consider a setting where the prover and verifier may use randomness and sometimes make errors ( allowing for some probability of error say $\frac{1}{3}$). In other words when $w \in L$ a prover shoul dbe able to prepare a certificate/proof s.t. Prob$(V(w,c)$ accepts) $\geq \frac{2}{3}$ and Prob$(V(w,c)$ rejects) $\leq \frac{1}{3}$. This defines complexity class $MA$ (Merlin-Arthur). Merlin is regarded as the omniscient prover and Arthur is a randomised poly time verifier. \\\\
 \textbf{Quantum Merlin Arthur class}\\
 The direct analgoue of $NP$.\\
 It is a class of promise problems. A promise problem $L$ partitions $\{0,1\}^k$ of all binary strings into $L_0, L_1, L_*$.\\
 An algorithm is promised that it never recieves inputs from $L_*$. However, if the input is from $L_0/L_1$ then it has to determine $0/1$.\\
-\textbf{QMA}: A promise problem $L = (L_0,L_1,L_*)$ is in the class $QMA$ if there exists a uniform family of circuits $\{C_n\}$ with two input registers and one output qubit and a polynomial $p()$ s.t. $\forall w \in \{0,1\}^k$\\
+\textbf{QMA}: A prmise problem $L = (L_0,L_1,L_*)$ is in the class $QMA$ if there exists a uniform family of circuits $\{C_n\}$ with two input registers and one output qubit and a prolynomial $p()$ s.t. $\forall w \in \{0,1\}^k$\\
+Completeness: If $w \in L_1 \cap \{0,1\}^n$ then there exists a $p(n)$- qubit state $\ket{\psi}$ (a proof/witness state) such that $C_n$ outputs 1 with probability $\geq \frac{2}{3}$ when run on $w$ and $\ket{\psi}$\\
+Soundness: If $w \in L_0 \cap \{0,1\}^n$ then for every $p(n)$ qubit state $\ket{\psi}$ the circuit $C_n$ outputs 1 with probability $\leq \frac{1}{3}$ when run on $w$ and $\ket{\psi}\\
+\textbf{QMA}: A prmise problem $L = (L_0,L_1,L_*)$ is in the class $QMA$ if there exists a uniform family of circuits $\{C_n\}$ with two input registers and one output qubit and a prolynomial $p()$ s.t. $\forall w \in \{0,1\}^k$\\
 Completeness: If $w \in L_1 \cap \{0,1\}^n$ then there exists a $p(n)$- qubit state $\ket{\psi}$ (a proof/witness state) such that $C_n$ outputs 1 with probability $\geq \frac{2}{3}$ when run on $w$ and $\ket{\psi}$\\
 Soundness: If $w \in L_0 \cap \{0,1\}^n$ then for every $p(n)$ qubit state $\ket{\psi}$ the circuit $C_n$ outputs 1 with probability $\leq \frac{1}{3}$ when run on $w$ and $\ket{\psi}$\\
 \textbf{Remarks}:\\
@@ -749,26 +752,25 @@ $$
 ( x_1 \cup \bar x_2 \cup x_3) \cap ( \bar x_1 \cup x_2 \cup x_4) \cap (x_1 \cup \bar x_4 \cup x_5)
 $$
 k-SAT is NP-complete for $x \geq 3$ and k-SAT is in $P$ when $k=2$.\\\\
-We will reformulate $k-SAT$ and relate it to a minimal eigenvalue of a certain Hamiltonian which is diagonal in computational basis.\\
-Fix $k=3$. Consider a clause $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satisfying assignment 010).\\\\
-               Lets associate a particular diagonal Hamiltonian with 0 everywhere but a 1 at location indexed by the bit string above.\\
+We will reformulate $k-SAT$ and relate it to a minimal eigenvalue of a certain hamiltonian which is diagonal in compuational basis.\\
+Fix $k=3$. Consider a claus $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satsifiy assignment 010).\\\\
+               Lets associate a particular diagonal hamiltonian with 0 everywhere but a 1 at localation indexed by the bit string above.\\
                $H_c$ gives "penalty" of 1 to the bitstring of $x_1...x_n$ if $x$ does not satisfy clause $C$.\\
-               We will regard $H_c$ as part of $n$-qubit Hamiltonian as $H_c = H_c \otimes I$.\\
-               When we evaluate this term: $\bra{x} H \ket{x} = 0$ if clause $C$ is satisfied or $1$ otherwise.\\\\
-               Suppose we have a 3-SAT formula $\phi = C_1 \cap ... \cap C_n \implies H_{\phi} = \sum_{j=1}^m H_{c_j}$. The eigenvalues of $H_{\phi}$ lie in the interval $[0,m]$ and $H_{\phi}$ is 3-local.\\
+               We will regard $H_c$ as part of $n$-qubit Hamiltoanin as $H_c = H_c \otimes I$.\\
+               When we evaluate this term: $\bra{x} H \ket{x} = 0$ if clause $C$ is satsified or $1$ otherwise.\\\\
+               Suppose we have a 3-SAT forumla $\phi = C_1 \cap ... \cap C_n \implies H_{\phi} = \sum_{j=1}^m H_{c_j}$. The eigenvalues of $H_{\phi}$ lie in the interval $[0,m]$ and $H_{\phi}$ is 3-local.\\
                        Each assignment $x \in \{0,1\}^n$ generates the "energy"\\
                        $\bra{x} H_{\phi} \ket{x} = \sum_{j=1}^n \bra{x} H_{C_j} \ket{x}$ this counts the number of unsatisfied clauses under $x$.\\\\
-                       We want to find the minimal energy of this Hamiltonian which will correspond to the lowest eigenvalue $\lambda_n$ ( the smallest number of unsatisfied clauses). $\phi$ is satisfyable only iff $\lambda_{min} = 0$.
-                       \section{Lecture 13}
-                       \url{$http://theory.caltech.edu/~preskill/ph219/20_local_Hamiltonian_problem.pdf$}\\
+                       We want to find the minimal energy of this hamiltonain which will correspond to the lowest eigenvalue $\lambda_n$ ( the smallest number of unsatsified clauses).
+                       \section{Lecture 12}
                        \textbf{The k-local Hamiltonian problem} (LH): Given a classical description of a Hamiltonian of an $n$ qubit Hamiltonian:
                        $$
                        H = \sum_{j=1}^m H_j
                        $$
                        where each $H_j$ is $k$-local and is positive semi-definite. Also given two parameters $a,b \in [0,m]$ with $b-a \geq \frac{1}{poly(n)}$ with a promise that $\lambda_{min}$- minimal eigenvalue of $H$ is either $\leq a$ or $\geq b$. Decide which is the case.
-                       $\lambda_{min}$ is often called the ground state energy. Determining $\lambda_{min}$ ($\leq a$ or $\geq b$) is tantamount to approximating the ground state energy $\lambda_{min}$ up to an additive error $O(b-a)$. Further studied on ES.\\\\
+                       $\lambda_{min}$ is often called the ground state energy. Determining $\lambda_{min}$ ($\leq a$ or $\geq b$) is tantemount to approximating the ground state energy $\lambda_{min}$ up to an additive error $O(b-a)$. Further studied on ES.\\\\
                        We would like to prove that $LH$ is $QMA$-complete\\\\
-                       We first need to obtain that $LH$ is in $QMA$: Given the corresponding witness states $\ket{\psi}$ for $x \in L_1$, we can efficiently approximate the energy to check if it is $\leq a$ or $\geq b$.\\
+                       We first need to obtain that $LH$ is in $QMA$: Given the corresponding witness states $\ket{\psi}$ for $x \in L_1$, we can efficently approximate the energy to check if it is $\leq a$ or $\geq b$.\\
                        Note: LH is a promise problem, which means that $H$ with $\lambda \in (a,b)$ won't satsify the condition.\\
                        Next step, is we want to show that LH is QMA-hard (any other problem in QMA can be reduced to it)\\\\
                        Take any $L= (L_1, L_0, L_*)$ in QMA and fix $x \in L_1 \cup L_0$ which will be our $n$ bit string.\\
@@ -784,13 +786,13 @@ Fix $k=3$. Consider a clause $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satis
                        H_{final} = \ket{0} \bra{0} \otimes \ket{T} \bra{T}_C
                        $$
                        $$H= H_{init} + \sum_{i=1}^T H_i + H_{final}$$
-                       We should note that $H$ "follows" the state $\ket{\psi}$ and prescribes penalties when deviating form $\ket{\psi_0}, \ket{\psi_1},..., \ket{\psi_T}$\\
+                       We should note that $H$ "follows" the state $\ket{\psi}$ and percribes penalties when deviating form $\ket{\psi_0}, \ket{\psi_1},..., \ket{\psi_T}$\\
                        $H$ also penalizes the zero output in the final measurement\\
                        $C$-is an extra "clock" register of $\log (T+1)$ qubits\\
                        Check locality of $H$ is $k= \log (T+1) + 2 = O(\log (n))$. We will further reduce $k$ to a constant $k = 5$.\\
                        We need to check that we can distinguish $x\in L_1$ and $x \in L_0$ by looking at $\lambda_{min}$. \\\\
                        Consider first case when $x \in L_1$ this means that there exists a $p(n)$ qubit witness state $\ket{\psi}$ that makes $C_n$ accept with probability $1- \frac{1}{4T}$. Lets consider another state $\ket{\psi'} = \frac{1}{\sqrt{T+1}} \sum_{t = 0}^T \ket{\psi_t} \ket{t}$ this is a "History state". When we look at this state we want to evaluate the energy.
-                       State $\ket{\psi'}$ gets no contribution to penalty from $H_{int}$ and $H_t$ terms. Since the probability of measuring the (incorrect) outcome is $\frac{1}{4T}$ we have $\lambda_{min} = \bra{\psi'} H \ket{\psi'} = \frac{1}{T+1} \bra{\psi_T} \bra{T} H_{final} \ket{T} \ket{\psi_T} \leq \frac{1}{T+1} \frac{1}{4T} = a$.\\
+                       State $\ket{\psi'}$ gets no contribution to penalty from $H_{int}$ and $H_t$ terms. Since the probability of measuring the (incorrect) outocme is $\frac{1}{4T}$ we have $\lambda_{min} = \bra{\psi'} H \ket{\psi'} = \frac{1}{T+1} \bra{\psi_T} \bra{T} H_{final} \ket{T} \ket{\psi_T} \leq \frac{1}{T+1} \frac{1}{4T} = a$.\\
                        This will show us completeness.\\\\
                        Now take $x \in L_0$. We want to show that $\lambda_{min}$ is at least $b=2a$. Consider any witness state $\ket{\psi'}= \sum_{t=0}^T \alpha_t \ket{\phi_t} \ket{t}$ with $\alpha_t \geq 0$ and $\{ \ket{\phi_t}\}$ is normalised. Then evaluate $$\bra{\psi'} H \ket{\psi'} = \frac{1}{2} ( \alpha^2_{t-1} + \alpha_t^2 - \alpha_{t-1} \alpha_t \bra{\phi_t} U_t \ket{\phi_{t-1}} - \alpha_t \alpha_{t-1} \bra{\phi_{t-1}} H \ket{\phi_t})$$
                        $$
@@ -805,17 +807,17 @@ Fix $k=3$. Consider a clause $C = x_1 \cup \bar x_2 \cup x_3$ (has one non-satis
                        $$
                        1 \leq || \ket{\phi_T} - C_n \ket{\phi_0} || = || sum_{t=1}^T U_T - U_{t-1} \ket{\phi_t} - U_T...U_t\ket{\phi_{t-1}}|| \leq \sum_{t=1}^T || U_T...U_t \ket{\phi_t} - U_T...U_t \ket{\phi_{t-1}}|| = \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||
                        $$
-                       Using the evaluation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}}$:
+                       Using the evaulation of $\bra{\psi'} H \ket{\psi}$ assumptions and setting $\alpha_t = \alpha_{t-1} = \frac{1}{\sqrt{T+1}}$:
                                $$
                                \bra{\psi'} H \ket{\psi'} = \sum_{t=1}^T \bra{\psi'} H_t \ket{\psi'} = \frac{1}{2} \frac{1}{T+1} \sum_{t=1}^T ||\ket{\phi_t} - U_t \ket{\phi_{t-1}} ||^2 \geq \frac{1}{2T(T+1)} ( \sum_{t=1}^T || \ket{\phi_t} - U_t \ket{\phi_{t-1}}||^2 ) \geq \frac{1}{2T(T+1)} = b
                                $$
                                \section{Example Sheet 2}
-For Grover's search algorithm, if the indicator function is classically efficiently computation then $I_G$ is implementable.\\\\
+For Grover's search algorithm, if the indicator function is classically efficently computation then $I_G$ is implementable.\\\\
 Look at Part II course to recap coprimality conditions. They also show that to factor $N$ with constant probability it suffices to find an approximations $\xi$ to $\frac{s}{r}$ for random $s$ in range $[1,r)$ to $2m+1$ binary digits of accuracy with $m= O(\log N)$ s.t. $| \xi - \frac{s}{r} | < \frac{1}{2N^2}$\\\\
-\section{Lecture 14}
+\section{Lecture 13}
 The Hamiltonian is not $k$-local for $k$ constant it is of $\log N$ we will fix this today.
 \subsubsection{Making Hamiltonian $k$-local}
-What is responsible for this non-locality effect is the clock-register. So we can reduce locality from $O(\log n)$ to 5 by making the clock unary. For $t=0$ we will write $\ket{0}^{\otimes T}$ for $t=1$ we write $\ket{1} \ket{0}^{\otimes T-1}$ for $t=3$ we write $\ket{11} \ket{0}^{\otimes T}$. When we had a binary format we used $\log(T)$ qubits in the unary format we will use $T$ qubits. This construction will require an extra bit that we will see shortly. Let's crite $C_t$ to denote the $t$-th qubit of the clock register. Now our hamiltonian $H$ has the following terms:
+What is responsibile for this non-locality effect is the clock-register. So we can reduce locality from $O(\log n)$ to 5 by making the clock unary. For $t=0$ we will write $\ket{0}^{\otimes T}$ for $t=1$ we write $\ket{1} \ket{0}^{\otimes T-1}$ for $t=3$ we write $\ket{11} \ket{0}^{\otimes T}$. When we had a binary format we used $\log(T)$ qubits in the unary format we will use $T$ qubits. This construction will require an extra bit that we will see shortly. Let's crite $C_t$ to denote the $t$-th qubit of the clock register. Now our hamiltonian $H$ has the following terms:
 $$
 H_{init} = \sum_{i=1}^s \ket{1} \bra{1}_i \otimes \ket{0} \bra{ 0}_{C_i}
 $$
@@ -1127,6 +1129,4 @@ $$
 $$
 (with the same oeveral sign as $P$).\\
 If $P$ commutes with $Z_1...Z_n \in \mathcal{P}_{n+t}$, then each $A_i$ is either $Z$ or $I$. If for all $i$, each $A_i$ is either $Z$ or $I$, then for any $t$-qubit state $\ket{\psi}$ the measurement of $P$ on $\ket{0}^{\otimes n} \otiems \ket{\psi}$ and the measurement $\tilde P $ on $\ket{\psi}$ give the same output distribution, and corresponding post-measurement states: $\ket{0}^{\otimes n} \ket{\psi'}, $\ket{\psi'}$ respectively, witht he same $t$-qubit state $\ket{\psi'}$.
-\\\\\\\\\
-Not revising non-abelian HSP, and NP
 \end{document} 
