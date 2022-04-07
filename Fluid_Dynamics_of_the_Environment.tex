@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{braket}
 \usepackage{cancel}
-\title{Quantum Information Theory}
+\title{Fluids of the Environment}
 \author{oliverobrien111 }
 \date{July 2021}
 
@@ -60,7 +60,7 @@ $$
 $$
 For now $\nu = 0$. Take $\rho = \rho_0 + \rho'$. Linearise with $\rho' << \rho_0$ and Boussinesq $|\frac{\nabla \bm u}{\nabla t} | << g$. The Boussieneq means that the $\rho'$ contrbutes to the gravity term but not to the interial term. We can rewrite the equations using reduced gravity to make this clear $g' = g \frac{\rho - \rho_0}{\rho} = g \frac{\rho'}{\rho}$:
 $$
-\\frac{ \partial \bm u}{\partial t} + (\bm u \cdot \nabla) \bm u = - \frac{1}{\rho_0} \nabla(p + \rho g z) - g' \hat{\bm z}
+\frac{ \partial \bm u}{\partial t} + (\bm u \cdot \nabla) \bm u = - \frac{1}{\rho_0} \nabla(p + \rho g z) - g' \hat{\bm z}
 $$
 To linearise we take$\rho = \hat \rho(z) + \rho'(x,t)$ and  $\bm u' \sim \eta \omega << \frac{\omega}{|k|} \implies |k| \eta << 1$. By combining this with our Boussineqs condition we have $|\nabla \rho'| << | \frac{d\hat \rho}{d z}|$. This gives the navier stokes equation:
 $$
@@ -92,7 +92,7 @@ Therefore:
         \nabla \cdot \bm u = 0
 \end{equation}
 \subsection{Vorticity}: $\bm \zeta = \nabla \times \bm u$
-We are going to deal in 2D as it is easier. In 2-D vorictity can be expressed interms of the streamfunction:
+We are going to deal in 2D as it is easier. In 2-D vorticity can be expressed in terms of the stream function:
 $$
 \zeta = - \nabla^2 \psi, \bm \psi = \psi \hat{\bm y}, \bm u = \nabla \times \bm \psi
 $$
@@ -103,7 +103,7 @@ $$
 $$
 (\hat{\bm z} \times \nabla) \cdot (\hat{\bm z} \cdot \nabla w) = \nabla^2_H w
 $$
-so gives voriticity equation:
+so gives vorticity equation:
 \begin{equation}
         (\nabla^2 \frac{\partial^2}{\partial t^2} + N^2 \nabla^2_H) w = 0
 \end{equation}
@@ -122,8 +122,8 @@ If $\omega > N$ then $m$ is imaginary let $\gamma = \sqrt{1- \frac{N^2}{\omega^2
 $$
 w = (\hat A e^{- \gamma k_h z + \hat B e^{\gamma k_h z})e^{i(k x + ly - \omega t)}
 $$
-This is sort of showing how the velocity field changes with depth away from a distribance on the surface. If we have $N=0$ then this is just a surface wave. If we have $0<N<\omega$ the $\gamma$ is just giving a vertical rescaling of the behaviour beneath the surface wave. This means if we produce a sinosidal distributance with a frequency bigger than the bouyancy frequency then the distrubance looks like potential flow, as we increase the stratification of a fluid it will decrease the decay rate of that motion as we move away from that boundary. The limiting case is when we reach $\omega = N$ the entire water depth is moving in phase and with the same magnitude as the surface.\\\\
-In the case $\omega<N$ we have $m$ is real so we get sinsoidal variations in the vertical direction:
+This is sort of showing how the velocity field changes with depth away from a disturbance on the surface. If we have $N=0$ then this is just a surface wave. If we have $0<N<\omega$ the $\gamma$ is just giving a vertical rescaling of the behaviour beneath the surface wave. This means if we produce a sinusoidal disturbance with a frequency bigger than the buoyancy frequency then the disturbance looks like potential flow, as we increase the stratification of a fluid it will decrease the decay rate of that motion as we move away from that boundary. The limiting case is when we reach $\omega = N$ the entire water depth is moving in phase and with the same magnitude as the surface.\\\\
+In the case $\omega<N$ we have $m$ is real so we get sinusoidal variations in the vertical direction:
 $$
 w = w_0 e^{i kx + ly + mz - \omega t} = w_0 e^{ i( \bm k \cdot \bm x - \omega t)}
 $$
@@ -142,11 +142,11 @@ So
 $$
 u = \int \frac{\partial w_0 e^{i \phi}}{\parital z}dx = - \frac{m}{k} w_0 e^{i \phi} = - \frac{\tan \theta}{ \cos \theta} w_0 e^{i \phi}
 $$
-Considering surface variation $\eta(x,t) = \tilde \eta(x,t) e^{i \phi}$ therefore by differentiing this and matching with $u$ and $w$ at the surface:
+Considering surface variation $\eta(x,t) = \tilde \eta(x,t) e^{i \phi}$ therefore by differentiating this and matching with $u$ and $w$ at the surface:
 $$
 \bm u = \frac{\partial \bm \eta}{\partial t} \implies w_0 = i \omega \cos \theta \tilde \eta
 $$
-Now considering the relationship arising form the bouyancy equation:
+Now considering the relationship arising form the buoyancy equation:
 $$
 \frac{\parital b}{\partial t} =  -w N^2 \implies i \omega \tilde b = - w N^2 
 $$
@@ -242,7 +242,7 @@ Recalling that $\frac{\partial \rho'}{\partial t} - w \frac{\rho_0}{g} N^2 = 0 \
 $$
 \frac{\partial}{\partial t}( \frac{1}{2} \rho_0 |\bm u |^2 + \frac{1}{2} \frac{g^2}{\rho_0 N^2} p'^2 ) + \nabla \cdot (p' \bm u) = 0
 $$
-If we go back to the start and consider the dispalcement of a packet of fluid by $\zeta$ we have change in potential energy of:
+If we go back to the start and consider the displacement of a packet of fluid by $\zeta$ we have change in potential energy of:
 $$
 \Delta PE = \int^{z_0 + \zeta}_{z_0} g \frac{d \hat \rho}{d z} (z - z_0) dz = \frac{1}{2} \rho_0 N^2 \zeta^2
 $$
@@ -261,7 +261,7 @@ Lets consider 2D:
 $$
 u = \eta \omega \sin \theta \sin \phi, w = - \eta \omega \cos \theta \sin \phi, b = \eta \frac{\omega^2}{\cos \theta} \cos \phi, p' = \eta \rho_0 \frac{\omega^2}{|k|} \tan \theta \sin \phi
 $$
-Subsitute into kinetic energy:
+Substitute into kinetic energy:
 $$
 KE = \frac{1}{2} \rho_0 (u^2 + w^2) = \frac{1}{2} \rho_0 \omega \eta^2 \sin^2 \phi
 $$
@@ -278,13 +278,13 @@ Also have:
 $$
 PE = \frac{1}{2} \rho_0 \frac{b^2}{N^2}
 $$
-So you have equiparition of energy for linear waves $\bar{KE} = \bar{PE}$. We can also write down an expression for the flux of energy:
+So you have equipartition of energy for linear waves $\bar{KE} = \bar{PE}$. We can also write down an expression for the flux of energy:
 $$
 \bm F_E = p' \bm u = \rho_0 \omega^2 \eta^2 \sin^2 \phi  \frac{N}{|k|} \sin \theta \begin{pmatrix} \sin \theta\\ - \cos \theta \end{pmatrix} = \frac{1}{2} \rho_0 \omega^2 \eta^2 \bm c_g = \bar{E} \bm c_g
 $$
 \section{Lecture 4}
 \subsection{Oscillating cyclinder}
-We are interested in the case where the oscillation of the cylinder $a$ is much smaller than the diameter. You might think this is sufficent to make the waves linear, but it is not as we ahve these delta functions on the singularities on the tangent planes to the cylinder (so we will always have the amplitudes being large compared to the wave lengths here but we will ignore this). If everything is at rest to start with it will take a bit of time for the oscillations to propogate out into the whole space. As $|c_g| = \frac{N}{|\bm k|} \sin \theta$ the area of which is influenced by the oscillation will look like two causality envelopes (circles of increasing size touching at the centre). The waves form a st. andrews cross pattern with the waves being bi modal near the cyclinder and unimodal further way this is due to visocity
+We are interested in the case where the oscillation of the cylinder $a$ is much smaller than the diameter. You might think this is sufficient to make the waves linear, but it is not as we have these delta functions on the singularities on the tangent planes to the cylinder (so we will always have the amplitudes being large compared to the wave lengths here but we will ignore this). If everything is at rest to start with it will take a bit of time for the oscillations to propogate out into the whole space. As $|c_g| = \frac{N}{|\bm k|} \sin \theta$ the area of which is influenced by the oscillation will look like two causality envelopes (circles of increasing size touching at the centre). The waves form a st. andrews cross pattern with the waves being bi modal near the cylinder and unimodal further way this is due to viscosity
 \subsubsection{Decay along a beam}
 We are going to take it being 2D and the bouunancy frequency $N= 1$ and the mass dispersion $\kappa = 0$ but include visocity $\nu \neq 0$.
 $$
@@ -458,7 +458,7 @@ $$
 $$
 ( \nabla^2 \frac{\partial^2}{\partial t^2} + N^2 \nabla_H^2) \psi = 0
 $$
-In 2D: $\psi = \tilde \psi(x,z) e^{-i \omega t}:
+In 2D: $\psi = \tilde \psi(x,z) e^{-i \omega t}$:
 $$
 (N^2 - \omega^2) \frac{\partial^2 \tilde \psi}{\partial x^2} - \omega^2 \frac{\partial^2}{\partial z^2} \tilde \psi = 0
 $$
@@ -532,7 +532,7 @@ $$
 The wave steepness is $|k_n \tilde \eta_n| = \frac{k_n^2}{k_0} |\tilde \eta_n|$.\\\\
 Recall:
 $$
-|\bm u| \sim e^{- \frac{k^2 \nu \zeta}{2 N \sin \theta}, \tilde E \sim |\tilde \bm u|^2 \sim e^{- k^3 \nu \zeta }{N \sin \theta}
+|\bm u| \sim e^{- \frac{k^2 \nu \zeta}{2 N \sin \theta}}, \tilde{E} \sim |\tilde{\bm u}|^2 \sim e^{\frac{- k^3 \nu \zeta }{N \sin \theta}}
 $$
 $L$ - length once around one circuit of the attractor\\
 $$
@@ -830,7 +830,7 @@ $$
 can think of $H_E = \frac{H_1 H_2}{H_1 + H_2}$ as an effective depth. We only need one of $kH_1 $ or $kH_2$ to be small for waves to become non-dispersive. Let $H_s$ be the depth of the shallow layer and $H_d$ be the depth of the deep layer with $\frac{H_s}{\rho_s} << \frac{H_d}{\rho_d}$ so we get $c_p = c_g = \sqrt{ H_s g'}$ with $g' = \frac{\rho_1 - \rho_2}{\rho_s} g$. \\\\
 In a lot of what we are going to be doing we are going to be taking the BOussinesq limit of $\Delta \rho << \bar \rho$ so $g' = \frac{\Delta \rho}{\bar \rho} g$ therefore:
 $$
-\omega^" = \frac{g' k}{\coth kH_1 + \coth k H_2} 
+\omega^2 = \frac{g' k}{\coth kH_1 + \coth k H_2} 
 $$
 with $\coth kH_i \rightarrow \frac{1}{kH_i}$ for $kH_i <<1$ and $\coth kH_i \rightarrow 1 $ for $kH_i>>1$. To start with mainly consider one shallow layer to make the mathematics easier.\\\\
 \textbf{Equipartion of energy}
@@ -856,7 +856,7 @@ $$
  $$
  as the vertical pressure gradient is predominantly hydrostatic so the other terms become small and $\frac{1}{\rho} \frac{P}{Z} \sim g$ so:
  $$ 
- \frac{\partial p}{\partial x} \approx - \rho g \implie p = p_0  - \rho g z
+ \frac{\partial p}{\partial z} \approx - \rho g \implies p = p_0  - \rho g z
  $$
  and 
  $$
@@ -1009,7 +1009,7 @@ $$
   \frac{dh}{ds} + ( u - \lambda) \frac{\partial h}{\partial x} + h \frac{\partial u}{\partial x} = 0
  $$
  $$
-  \frac{du}{ds} + (u- \lamdba) \frac{\partial u}{\partial x} + g \frac{\partial h}{\partial x} = 0
+  \frac{du}{ds} + (u- \lambda) \frac{\partial u}{\partial x} + g \frac{\partial h}{\partial x} = 0
  $$
  multiply the first by $u - \lamdba$ and the second by $h$ and add them together to get:
  $$
@@ -1025,7 +1025,7 @@ $$
  $$
  Using transformation $\frac{\partial}{\partial t} = \frac{d}{ds} - \lambda \frac{\partial}{\partial x}$:
  $$
-\begin{pmatrix} h \\ u\end{pmatrix}_s + \begin{pmatrix} u & h \\ g & u \end{pmatrix} \being{pmatrix} h \\ u\end{pmatrix} _x - \lambda \begin{pmatrix} 1 &0 \\ 0 & 1\end{pmatrix} \begin{pmatrix} h \\ u \end{pmatrix}_x = 0
+\begin{pmatrix} h \\ u\end{pmatrix}_s + \begin{pmatrix} u & h \\ g & u \end{pmatrix} \begin{pmatrix} h \\ u\end{pmatrix} _x - \lambda \begin{pmatrix} 1 &0 \\ 0 & 1\end{pmatrix} \begin{pmatrix} h \\ u \end{pmatrix}_x = 0
  $$
  We then premultiply by $\bm q^T$ and we want to chose $\bm q$ so it eliminates the RHS quantitiy
  $$
@@ -1145,7 +1145,7 @@ What if we were using a finite volume of fluid rather than the fluid behind the 
 Brief description: They have some common features, they have a well defined front with large density gradients and there is often mixing behind the front at $Re >>1$. The no-slip boundary condition causes the ambinent fluid to be over run. THe no-slip condition means the fluid has to roll over the ground so it ends up over running some lighter fluid which sets up a static instability. THis means it ends up convecting and forming 'lobes and clefts'. So if we look from the front we start seeing wave like lobes and clefts. This is caused by the lighter fluid trying to rise up through the front. This part of the current is often refered to as the head, and in this region shallow water odes not strictly apply but it does work well in the 'tail'.\\\\
 Frontogensis - the formation of the front. Let's consider what would happen if we had a fluid that started dense on the left and as we moved to the right it gets less dense iwth $\frac{\partial \rho}{\partial x}|_{t=0} \neq 0$. If we make our lives simple and make it 2D then in the Bousseqs case the vroticity equation gives:
 $$
- \frac{\partial \omega}{\partial t} + ( \bm u \dot \nabla) \omega = - \frac{g}{\rho_0}\frac{\partial \rho}{\partial x}
+ \frac{\partial \omega}{\partial t} + ( \bm u \cdot \nabla) \omega = - \frac{g}{\rho_0}\frac{\partial \rho}{\partial x}
 $$
            \section{Example sheet 1&2}
            Can just state the vorticity equation in 2D and bousinesq case:
@@ -1182,7 +1182,7 @@ $$
            \subsection{Cavity Flows}
            First understood in 1960s by Benjamin. He said lets imagine we have a duct with a height $H$ and high Reynolds number. We assume that out at infinty we have velocity zero and we assume we have a cavity extending into the duct with height $h$ and density of 0 and moving left with velocity $U$. Therefore, the volume flux of the fluid must be equal to the volume dispalced by the cavity in the opposite direction. It is easier to think about this in frame of reference of the front of the cavity. We pick a control volume with boundaries far enough from the front in either direction that we can assume the velocity is parallel to the duct. By continuity of volume flux we must have $u_2 = \frac{UH}{H-h}$ with $u_2$ being the speed under the cavity. Let us assume it is inviscid, irrotational and energy conserving and steady. This means we can use Bernoulli:
            $$
-            \frac{1}{2} |\bm u|^2 + \rho g z + p = const
+            \frac{1}{2} \rho|\bm u|^2 + \rho g z + p = const
            $$
            consider pressure at the top of the fluid before the cavity and under the cavity on the same steamline.           $$
             p_1 = p_0 - \frac{1}{2} \rho U^2
@@ -1190,9 +1190,10 @@ $$
            $$
            p_2 = p_0  = p_0 + \rho g h - \frac{1}{2} \rho u_2^2
            $$
+           \textbf{THIS REALLY DOESN'T MAKE SENSE HOW DO WE KNOW THAT P2 = P0 AND IF IT DOES THEN HOW DO WE KNOW THE RELATIONSHIP BETWEEN P1 and P0}
            The first of these is the pressure of the cavity and the second is given by the Bernoulli constant \\
            $$
-            u_2^ = 2 gh
+            u_2^2 = 2 gh
            $$
            "Flow force" on the upsteam side is:
            $$
@@ -1259,9 +1260,12 @@ $$
          Let us imagine we have a shallow water layer, a control volume and densities $\rho_0$ and $\rho_1$ and some process that is causing mixing across the interface. This process is entraining fluid with $\omega_e$ into the lower layer and detraining fluid with $\omega_d$ into the upper layer. We will assume the mizing within layers keeps density constant over the depth of the layer so $\frac{\partial \rho}{\partial z} = 0$ and $\rho = \rho(x)$ within a layer. We will asume the upper layer is very deep so $\rho_2 = $const.\\\\
          Momentum equation with no drag:
          $$
-          \frac{\partial}{\partial t} ( \rho_1 h_1 u_1) + \frac{\partial }{\partial x} ( u_1 \rho_1 h_1 u_1 + \frac{1}{2} (\rho_1 - \rho_2) g h_1^2) = \oemga_e \rho_2 u_2 - \omega_d \rho_1 u_1
+          \frac{\partial}{\partial t} ( \rho_1 h_1 u_1) + \frac{\partial }{\partial x} ( u_1 \rho_1 h_1 u_1 + \frac{1}{2} (\rho_1 - \rho_2) g h_1^2) = \omega_e \rho_2 u_2 - \omega_d \rho_1 u_1
          $$
-         We can ignore $\oemga_e \rho_2 u_2$ as $u_2 = 0$.\\
+         We can ignore $\omega_e \rho_2 u_2$ as $u_2 = 0$.\\
+         Mass conservation:
+$$
+ \frac{\partial}{\partial t} ( \rho_1 h) + \frac{\partial }{\partial x} ( u_1 \rho_1 h_1) = \omega_e \rho_2 - \oemga_d \rho_1
          Volume conservation gives:
          $$
           \frac{\partial h_1}{\partial t} + \frac{\partial}{\partial x} (u_1 h_1) = \omega_e - \omega_d
@@ -1303,7 +1307,7 @@ $$
          $$
           \begin{pmatrix}
                   u_1 & 0 & 0\\
-                  0 & u_1 & h_1 \\ \frac{1}{2} h_1 & g' & u_1 \end{pmatrix} \begin{pmatrix} g'\\ h_1 \\ u_1 \end{pmatrix}_x + \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} g' \\ h_1 \\ u_1 \end{pmatrix}_t = \begin{pmatrix} - g' \frac{\omega_e}{h}\\ \oemga_e - \omega_d \\ - \omega_e \frac{u_1}{h} \end{pmatrix}
+                  0 & u_1 & h_1 \\ \frac{1}{2} h_1 & g' & u_1 \end{pmatrix} \begin{pmatrix} g'\\ h_1 \\ u_1 \end{pmatrix}_x + \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} g' \\ h_1 \\ u_1 \end{pmatrix}_t = \begin{pmatrix} - g' \frac{\omega_e}{h}\\ \omega_e - \omega_d \\ - \omega_e \frac{u_1}{h} \end{pmatrix}
          $$
 If we define a characteristic $s = x - \lambda t$ this reduces to an ode when:
 $$
@@ -1485,11 +1489,11 @@ $$
 $$
 Now expand and make use of the conservation of mass:
 $$
- \frac{\partial \Delta \rho}{\partial t} + \frac{\gamma -1}{h} \Delta \rho frac{\partial}{\partial x} ( \bar u h) + \gamma \bar u  \frac{\partial}{\partial x} \Delta \rho = - \alpha \frac{\Delta \rho}{h} | \bar u|
+ \frac{\partial \Delta \rho}{\partial t} + \frac{\gamma -1}{h} \Delta \rho \frac{\partial}{\partial x} ( \bar u h) + \gamma \bar u  \frac{\partial}{\partial x} \Delta \rho = - \alpha \frac{\Delta \rho}{h} | \bar u|
 $$
 let $g' = \frac{\Delta \rho}{\rho_0} g$ gives:
 $$
- \frac{\partial g'}{\partial t} + \gamma \bar u \frac{\partial g'}{parital x} + \frac{\gamma -1}{h} g' \frac{\partial}{\partial x} ( \bar u h) = - \alpha \frac{g'}{h} | \bar u |
+ \frac{\partial g'}{\partial t} + \gamma \bar u \frac{\partial g'}{\partial x} + \frac{\gamma -1}{h} g' \frac{\partial}{\partial x} ( \bar u h) = - \alpha \frac{g'}{h} | \bar u |
 $$
 In the Boussinesq case the momentum equation becomes:
 $$
@@ -1543,7 +1547,7 @@ $$
 $$
 so we have three distinct eigenvalues and willl have a full set of eigenvectors that are still hyperbolic. So as soon as we go away from the top hat profile we get a hyperbolic system.
 \subsection{Jet}
-A source of momentum - typically with a very confined direction. We are looking for someting that is producing a flow that is quite narrow so we can assume the pressure is uniform across it, very much the same as with the shallow water, though in this case there will be no hydrostatics. They can be considered as boundary layers. We will be looking at the high Reynolds number case and assume we have Batchelor entrainment, noting that $R_i =  0$, so we might expect $\alpha_J > \alpha_{gravity current}$. Indeed it is! The question about how it compares to the entraiment coefficent to a plume (which has a density difference and so has a richardson number), in terms of the entraiment density plays a role but is not stabilising. For a point soruce of momentum $M_0 > 0$ but no volume flux at point $Q_0 = 0$.\\\\
+A source of momentum - typically with a very confined direction. We are looking for someting that is producing a flow that is quite narrow so we can assume the pressure is uniform across it, very much the same as with the shallow `water, though in this case there will be no hydrostatics. They can be considered as boundary layers. We will be looking at the high Reynolds number case and assume we have Batchelor entrainment, noting that $R_i =  0$, so we might expect $\alpha_J > \alpha_{gravity current}$. Indeed it is! The question about how it compares to the entraiment coefficent to a plume (which has a density difference and so has a richardson number), in terms of the entraiment density plays a role but is not stabilising. For a point soruce of momentum $M_0 > 0$ but no volume flux at point $Q_0 = 0$.\\\\
 Point source of momentum has no length scale, so the only length scale in the problem is the distance from the point source. So we might expect either the width of the jet remains $0$ or it is going to grow linearly with space. Lets pick a coordinate system with $z$ in the direction we are pointing and $r$ in the radial plane, and we might anticipate that things will be conical, at least if we look at a time or ensemble average to remove turbulent fluctations.\\\\
 We can think of this as having a self-similar shape with:
 $$
@@ -1860,4 +1864,105 @@ Batchelors entrainment theorem is:
 $$
  u_e = \alpha \sqrt{\frac{\rho}{\rho_0}} |\bar u|
 $$
+\section{Example sheet 3}
+Specific energy is conserved along the flow so:
+$$
+\frac{d E}{dx} = \frac{\partial E}{\partial H} \frac{d H}{dx} + \frac{\partial E}{\partial b} \frac{d b}{dx} + \frac{\partial E}{\partial h} \frac{d h}{dx} = 0
+$$
+Therefore, if only $b$ or only $h$ change. So at narrowest point we hafve $\frac{d H}{dx} = 0$ so have $\frac{\partial E}{\partial h} = 0$ or $\frac{dh}{dx} = 0$. The first of these occurs when $F = \frac{u}{\sqrt{gh}} = 1$ which gives the transition to the supercritical branch. The second is the symmetric solution, if this solution is subcritical it is stable in terms of the hydralics. If we look at the superciritcal symmetric solution (which looks like the RHS of the hydralic jump on both sides) this ends up with lots and lots of waves piling up on top of each other and so ends up being very unstable.  \\
+Can also be applied to cases of dissipation which have $ E + Dx = $const. so have $\frac{d}{dx} ( E + D x) = 0$\\
+When you have a well mixed current that is particle leaden that means the concentration is uniform. Therefore, if we have a settling velocity $u_s$ we can see how the concentration changes by:
+$$
+\frac{d}{dt} ( \phi V ) = - u_s \phi A
+$$\\
+When considering a 2D plume you need to remember entrainment happens in both sides!\\\\
+When doing steady homogeneous plume think about the dimensional analysis and what information we have actually put into the problem. Normally we have only put in $F_0$ and $z$ the distance from the point source, so need to express $Q$ and $M$ in terms of these. In the case of time dependance we also have $t$ in the mix so $F$ can also vary up the channel. In the case of inhomogenous fluid we have an additional length scale the rise height so also have variable $F$.\\\\
+When doing gaussian plume we pretend entrainment happens at a circle of width $b$ with $u$ = W e^{- \frac{r^2}{b^2}}$ and then we find expressions for $V$, $Q$ and $M$ then express $b$ in term s of these to remove it from the final equations.\\\\
+Two dimensional stuff can be though of as the cross section of something really long and thin, think areoplane trails
+\section{Lecture 23}
+\subsection{Filling box}
+Include $\pi$ in $F$, $Q$, $M$ in this section so:
+$$
+ F= \pi ( \rho_0 - \rho) b^2 W g
+$$
+$$
+ Q = \pi \rho_0 b^2 W = \frac{6 \alpha}{5} ( \frac{9 \alpha}{10})^{\frac{1}{3}} \pi^{\frac{2}{3}}F_0^{\frac{1}{3}} \rho_0^{ \frac{2}{3}} z^{\frac{5}{3}} = \tilde Q z^{\frac{5}{3}}
+$$
+$$
+ M = \pi \rho_0 b^2 W^2 = ( \frac{9 \alpha}{10})^{\frac{2}{3}} \pi^{\frac{1}{3}} \rho_0^{\frac{1}{3}} F_0^{\frac{2}{3}} z^{\frac{4}{3}} = \tilde M z^{\frac{4}{3}}
+$$
+Consider point bouyancy source $F_0$ in unventilliated room with $Q_0  = M_0 = 0$. The height till the first front is $h(t)$ and the height of the room is $H$. The volume of hot air is $v_H(t) = (H-h)A$. Let $Q$ be the mass flux at the first front then:
+$$
+ \frac{d V_H}{dt} = \frac{Q}{\rho_0}
+$$
+we know that $- \frac{dh}{dt} = (..) h^{\frac{5}{3}}$ so therefore:
+$$
+h = ( \frac{2 \tilde Q}{3 \rho_0 A_f} t + H^{- \frac{2}{3}})^{-\frac{3}{2}}
+$$
+\section{Lecture 24}
+\subsection{Draining box}
+Box with two layers of $\rho_2$ and $\rho_1$  with $\rho_2 < \rho_0, \rho_2 < \rho_1$ with $\rho_0$ outside. Have cold air entering the room at the bottom and warm air being extracted at the top. There, must be a pressure gradient outside the room, and it will be different to that inside the room which will be shallower at the bottom where it is colder and steeper at the top where it is warmer. There will be a neutral height $z_n$ where the pressure inside the room is the same as outside the room.\\
+Outside we have $\rho= \rho_0$ and $p_0 = p_n + \rho_0( z_n - z)$\\
+Inside we have $\rho= \rho_2$ with $p_2 = p_n + \rho_2( z_n - z)$ for $z > h$, and $\rho= \rho_1$ with $p_1 = p_n + \rho_2( z_n - h) + \rho_1 ( h -z)$ for $z < h$.\\
+Make use of Bernoulli:
+$$
+\frac{1}{2} \rho_{in} u_{in}^2 = p_0(0) - p_1(0)
+$$
+Boussinesq so take:
+$$
+u_{in}^2 = 2( g'_{02} z_n - ( g'_{10} + g'_{02}) h)
+$$
+$g'_{02} = \frac{\rho_0 - \rho_2}{\rho_0} g$ and $g'_{01} = \frac{\rho_0 - \rho_1}{\rho_0} g$, $Q_{in} = A_{in} u_{in}$\\
+In general, 3D aspects to the flow through the openning means $Q_{in} < A_{in} u_{in}$. so we will take $Q_{in} = c A_{in} u_{in}$ with $c = O(1) <1$. The reason for this is the radial component of momentum causes the flow to neck down a bit (think about stuff flowing down a plug).\\
+Similar $Q_{out} = c A_{out} u_{out}$.\\
+For mass balance/ volume flux balance:
+$$
+Q_{in} = Q_{out} \implies Q_{in}^2 = Q_{out}^2
+$$
+$$
+2 A_{in}^2 g'_{02} ( z_n - h) = 2 A_{out} g'_{02} (H - z_n) \implies z_n = \frac{A_{in}^2 h + A_{out}^2 H}{A_{in}^2 + A_{out}^2}
+$$
+If cooling of air coming in then take $\rho_1 = \rho_0$, in the following take $c=1$:
+$$
+Q = u_{in} A_{in} = u_{out} A_{out} = \frac{A_{in} A_{out}}{\sqrt{\frac{1}{2} ( A_{in}^2 + A_{out}^2}} \sqrt{g'_{02} (H-h)} = A^* \sqrt{ g'_{02} (H - h)}
+$$
+$A^*$ (the effective area) is dominated by the more restricted (smaller) openning.\\\\
+If the room volume is $V = A_f H$, then the hot volume is $V_2 = A_f( H-h)$ and cold volume is $V_1= A_f h$. We can assume the floor area is constant so:
+$$
+ \frac{dh}{dt} = \frac{Q}{A_f} = \frac{A^*}{A_f} \sqrt{g'_{02} (H-h)}
+$$
+so
+$$
+ 2(H-h)^{\frac{1}{2}} = - \frac{A^*}{A_f} \sqrt{g'_{02}} ( t - t_H)
+$$
+where $t=t_H$ when $h=H$ using $h=0$ at $t=0$ so draining time is:
+$$
+ t_H = 2 \frac{A_f}{A^*} ( \frac{H}{g'_{02}})^{\frac{1}{2}}
+$$
+$$
+h = \frac{A^*}{A_f}( H g'_{02})^{\frac{1}{2}}t - \frac{1}{4} ( \frac{A^*}{A_f})^2 g'_{02} t^2
+$$
+\subsection{Emptying-filling box}
+If the only way across the interface is via the plume then for a steady state $Q_{in} = Q_{out} = Q_{plume}$ with $Q_{plume}$ the mass max of the plume at the interface.\\\\
+We know that $Q_{plime} = \frac{\tilde Q}{\rho_0} z^{\frac{5}{3}}$ with $\frac{\tilde Q}{\rho_0} = \frac{6 \alpha}{5} ( \frac{9\alpha}{10})^{\frac{1}{3}} \pi^{\frac{2}{3}} \rho_0^{- \frac{1}{3}} F_0^{\frac{1}{3}}$. We have just found that:
+$$
+\frac{\tilde Q}{\rho_0} h^{\frac{5}{2}} = A^* \sqrt{g'_{02} ( H-h)}
+$$
+To complete this we need to know $g'_{02}$. Plume:
+$$
+g' = \frac{F_0}{\rho_0 Q} = \frac{F_0}{\tilde Q}z^{- \frac{5}{3}}
+$$
+$$
+g'_{02} = \frac{F_0}{\tilde Q} h^{- \frac{5}{3}}
+$$
+$$
+ \frac{\tilde Q h^{\frac{5}{3}}}{\rho_0} = A^* ( \frac{F_0}{\tilde Q})^{\frac{1}{2}} h^{- \frac{5}{6}} ( H- h)^{\frac{1}{2}}
+$$
+Define $\zeta = \frac{h}{H}$ then:
+$$
+ \frac{\zeta^5}{1 - \zeta} = \frac{A^{*2}}{ H^4 C^3}, C = \frac{6 \alpha}{5} ( \frac{9 \alpha}{10})^{\frac{1}{3}
+$$
+Here buoyancy flux does not affect the height of the interface ( for a single source), this is because increasing the buoyuancy flux increases Q and increases $g'_{02}$ so the air just circulates faster through the system. If multiple sources of buoyancy, the volume flux through the interface will increase, so the interface will be lower. If you have two different buoyancy flux values you could get more than one layer forming.
+\\\\\\\\\
+\textbf{Ask about cavity flow}
                     \end{document} 

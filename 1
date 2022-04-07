@@ -1061,65 +1061,12 @@ $$
 with $C_{ab}$ a hamiltonian matrix:
 \subsection{Stabilizer formulism}
 Every pair of elements of $\mathcal{P}$ either commute or anticommute\\
-Consider a set $\mathcal{M}$ of size $k$ that consists of Paulis s.t. any two elements from $\mathcal{M}$ commute. We can respresent $\mathcal{M}$ as a block matrix with entries being individual (single qubit) Paulis with $k$ rows. Example:
+Consider a set $\mathcal{M}$ of size $k$ that consists of Paulis s.t. any two elements from $\mathcal{M}$ commute. We can respresent $\mathcal{M}$ as a block matrix with entries being individual (single qubit) Paulis. Example:
 $$
 \begin{pmatrix} I & X & Z\\ Y & Y &Z \\ X & Z & X \end{pmatrix}
 $$
 with each row refered to as $\mathcal{M}^{(i)}$. We say a state $\ket{\psi}$ is stabilized by $\mathcal{M}^{(i)}$ if $\mathcal{M}^{(i)} \ket{\psi} = \ket{\psi}$. If $\mathcal{M}^{(i)}$ and $\mathcal{M}^{(j)}$ are stabilizers of $\ket{\psi}$ then so is $\mathcal{M}^{(i)}\mathcal{M}^{(j)}$.\\\\
-Let's assume that elements $\mathcal{M}^{(i)} \in \mathcal{M}$ are independnat, and consider the set $S$ of all $n$-qubit states that are stabilzed by all elemenets of $\mathcal{M}$. $S$ is a subspace of $\mathbb{C}^{2^n}$. By construction, all elements of $\mathcal{M}$ commute, so the projector $\Pi_s$ onto $S$ is the product of the projectors onto all +1 eigenspaces of $\mathcal{M}_i$s. Define: 
-$$
-\Pi_s = \frac{1]{2^k} \prod_{i=1}^k ( I + \mathcal{M}^{(i)})
-$$
-Let's find the dimension of $S$:
-$$
-Tr \Pi_s = \frac{1}{2^k} Tr \Prod_{i=1}^k ( I - M^{(i)}) = \frac{1}{2^k} \sum_{T=\text{subsets of size k}} \prod{i \in T} \mathcal{M}^{(i)} = 2^{n-k}
-$$
-(check this^)\\
-When $k=n$ there is a unique state stabilized by all elements of $\mathcal{M}$. We call this state a stabilizer state. \\\\For an $n$-qubit stabilizer state $\ket{\psi}$, we can define the stabilizer group as the group of $n$-fold tensor product of Palis that stabilze $\ket{\psi}$.\\\\
-Stabilizer groups are all Abelian (check this).\\
-Clifford circuits (CNOT, H, P) = stabilizer circuits. Now lets look at some examples:\\
-\textbf{Single qubit case}:
-$X$ stabilises $\ket{+}$\\
-$-X$ stabilises $\ket{-}$\\
-$Z$ stabilises $\ket{0}$\\
-$-Z$ stabilises $\ket{1}$\\
-$Y$ stabilises $\ket{i}$\\
-$-Y$ stabilises $\ket{-i}$\\
-\textbf{Stabilizer groups}
-$\ket{0} \rightarrow \{I, Z\}$\\
-$\ket{+} \rightarrow \{I, X\}$\\
-$\ket{0} \otimes \ket{+} \rightarrow \{ I \otimes I, I \otimes X, Z \otimes I, Z \otimes X\}$\\\\
-Consider the stabilizer group of $\frac{1}{\sqrt{2}}( \ket{00} + \ket{11}) = \ket{\phi^+}$, as $XX$ stabilises $\ket{\phi^+}$ and $-YY$ stabilises $\ket{\phi^+}$ and as $XX(-YY) = ZZ$ we have the stabilizer group is:
-$$
- \{ I, XX, ZZ, -YY\}
-$$
-this is a unique way of specifying a state. Similar to how you need 4 amplitudes to describe a 2 qubit state and here we have 4 states, however, we will see later that there are shorter ways of describing a state using the stabiliser formulism.\\\\
-When $\mathcal{M}$ has $k< n$ commuting Pauli matirces, we can regard the subspace $S$ stabilised by elements of $\mathcal{M}$ as encoding $n-k$ qubits. This subspace may have desirable error correcting properties.\\\\
-Consider an element $\ket{\phi} \in S$, let $E$ be a Pauli error. If $E \in \mathcal{M}$ then $E \ket{\phi} = \ket{\phi}$, so the error has no effect on the state. If $E$ anticommutes with some $M \in \mathcal{M}$ then $ME \ket{\phi} = - EM \ket{\phi} = - E \ket{\phi}$ and by measuring $M$ we can detect that an error has occurred.\\
-\textbf{Claim}: Quantum error correction criterion is satisfied if for each pair of error operators $E_a$, $E_b$:\\
-1) $E_a^{\dagger} E_b \in \mathcal{M}$ or 2) there exists $M \in \mathcal{M}$ s.t. $M$ anticommutes with $E_a^{\dagger} E_b$\\\\
-We can define a stabilizer code with distance $d$ if each Pauli matrix $E = E_a^{\dagger} E_b$ has weight (number of non-trivial paulis) $< d$ and satisfies conditions 1) and 2), but there exists $E$ of weight $d$ s.t. it fails to satisfy 1) and 2).\\\\
-A code that corrects errors on up to $t$ qubits must have $d \geq 2 t +1$. For all $E$ of weight $<d$ have $E \leq \mathcal{M}$ or there exists $M \in \mathcal{M}$ that anticommutes with $E$.\\\\
-Consider unitary matrix $U$ s.t. $U$ commutes with all elements in $\mathcal{M}$ but $U \cancel \in \mathcal{M}$. Then $U$ represents an error that we cannot correct. More precisely, such $U$ allows us to perform logical operations on data encoded in stabilizer code by non-trivially acting on the corresponding subspace. \\
-Consider two unitarise $U_1$, $U_2$ that anticommute with $M \in \mathcal{M}$. THis allows us to implement logical $X$ and $Z$ operations. \\
-Think about shors 9 =-qubit stabilizer code:
-$$
-\begin{pmatrix}
-        Z& Z & 1 & 1 & 1 & 1 &1 &1 &1\\
-        Z& 1 & Z & 1 & 1 & 1 &1 &1 &1\\
-        1& 1 & 1 & Z & Z & 1 &1 &1 &1\\
-        1& 1 & 1 & Z & 1 & Z &1 &1 &1\\
-        1& 1 & 1 & 1 & 1 & 1 &Z &Z &1\\
-        1& 1 & 1 & 1 & 1 & 1 &Z &1 &Z\\
-        X& X & X & X & X & X &1 &1 &1\\
-        X& X & X & 1 & 1 & 1 &X &X &X\\
-\end{pmatrix}
-$$
-This code has distance 3, encodes 1 qubit $X^{\otimes n}$ and $Z^{\otimes n}$ commute with everyone in the stabilizer code but are not contained within it.\\\\
-An $n$-qubit state has $2^n$ element stabilizer group $G$, how to efficently speciify $G$:\\
-\textbf{Lemma}: Given nay stabilizer state its stabilizer group $G$ can always be generated by $n$ elements.
-For example $\ket{\phi^+}$ with stabilizer group $G = \{ I , XX, -YY, ZZ\}$ can be described by a generating set $< XX, ZZ>$ or $<XX, -YY>$. \\
-To describe a $n$-qubit stabilzer state on a cliassical computer we need $2n+1$ bits per generator meaning $O(n^2)$ classical bits.
+Let's assume that elements $\mathcal{M}^{(i)} \in \mathcal{M}$ are independnat, and consider the set $S$ of all $n$-qubit states that are stabilzed by all elemenets of $\mathcal{M}$. $S$ is a subspace of $\mathbb{C}^{2^n}$. By construction, all elements of $\mathcal{M}$ commute, so the projector $\Pi_s$ onto $S$ is the product of the projectors onto all +1 eigenspaces of $\mathcal{M}_i$s.
 \section{Example sheet 3}
 $$
  || A || = \max_{\ket{\psi}} |A \ket{\psi}|
@@ -1196,67 +1143,7 @@ $$
  \tilde P = \pm B_1 \otimes... \otimes B_t \in P_t
 $$
 (with the same oeveral sign as $P$).\\
-If $P$ commutes with $Z_1...Z_n \in \mathcal{P}_{n+t}$, then each $A_i$ is either $Z$ or $I$. If for all $i$, each $A_i$ is either $Z$ or $I$, then for any $t$-qubit state $\ket{\psi}$ the measurement of $P$ on $\ket{0}^{\otimes n} \otiems \ket{\psi}$ and the measurement $\tilde P $ on $\ket{\psi}$ give the same output distribution, and corresponding post-measurement states: $\ket{0}^{\otimes n} \ket{\psi'}, $\ket{\psi'}$ respectively, with the same $t$-qubit state $\ket{\psi'}$.\\\\
-\textbf{Proof of theorem:}\\
-Let $C$ be any adaptive circuit with all unitary parts Cliffords and let's have $K$ measurements (all being $Z$ measurements)).
-$$
-\ket{\sigma} = \ket{0}^{\otimes n}
-$$
-(we can replace $\ket{0}^{\otimes n}$ by any stabilizer state by working with the coresponding set of generators)\\\\
-First, consider the output state $\ket{\psi_{out}} = M_k C_k .. M_1 C_1 \ket{0}^{\otimes n} \otimes \ket{\rho}$\\
-a) Starting with the rightmost Clifford gate and working to the left we will commute each gate to the end of the circuit beyond the last measurement. As a result, each $Z$ measurment (denoted as $M_i$) will become conjugated into a Pauli measurement $P_i \in \mathcal{P}_{n+t}$ which can be efficently determined.\\\\
-Unitaries after $P_K$ have no effect on the measurment outomces so we delete them, so now we are left with a sequence of large Pauli measurments on $n+t$ qubits.\\\\
-b) Preface this sequence of measurement in (a) with dummy $Z$ measurments for each of the first $n$ lines. This will have no effect on $\ket{0}^{\otimes n}$ becomes $Z$ measurment gives $+1$ with certainity. We create a list of measurements $Z_1, ... , Z_n, P_1, ..., P_K$\\\\
-c) Define our PBC process. Our $t$ g=qubit register is initially in state $\ket{\rho}$. We are going to look at the list and we will work sucessively through $P_j$ starting from $P_1$ and three things can happen when looking at each $P_i$:\\
-1) If $P_j$ is completely dependant on measurements already performed (this may be efficently determined), then we delete $P_j$ from the list and calculate the measurement outcome from previous recorded measurement results. Move to the next measurement in the list.\\
-2) If $P_j$ commutes with all previous measurements, then we measure $\hat P_j$ instead as in Lemma $B$ and record its value $\lamdba_{P_j}$ and move to the next measurement in the list.\\
-3) If $P_j$ anticommutes with some previous measurement $N$ (which could possibly be a dummy $Z$) with outcome $\lambda_N$. Then classically randomly choose $\lambda_P \in \{ \pm 1\}$ and record it. Then delete $P_j$ from the list and replace it by the unitary Clifford $V(\lambda_N, \lamdba_{P_j})$ using Lemma A. Move to the next element of the list.\\\\
-Once we have processed all the elements in the list, we will have performed $s \leq k$ measurments on the $t$ qubit register which are independant and commuting Pauli measurements, and this process was assisted by some classical randomised efficent computation. \\
-Since measurements are independant on $t$ qubits this implies $s <t$.\\\\
-\textbf{Proof of ii)}: If $C$ is non-adaptive, we may representive it as a untiary circuit followed by a final measurement $Z_{i_1},..., Z_{i_n}$ on qubit lines $i_1$,..., $i_n$ then b) gives us a non-adaptive list $Z_1,...,Z_N, P_1,..., P_K$ where $P_k = U Z_{i_k} U^{\dagger}$ which are communiting and independant.\\\\
-\textbf{Proof of iii)}: Proceed as if there was no postselection except c) iii). Suppose that the measurement $P_j$ in that step is postselected on outcome +1, we aren't going to randomly flip a coint to get $\pm 1$ we are going to set $\lambda_{P_j} = +1$ and replacing $P_j$ with $V(\lamdba_N, 1)$ will produce the same outcome. If a dependant measurment determined outcome is inconsitent with the imposed post-selection outcome (as in c) i)) then postselecction measurment on the original measurment has probability 0.\\\\
-\textbf{Extended Grottesman-Knull theorem}:\\
-Let $C$ be any adaptive Clifford circuit with input $\ket{\sigma} \otimes \ket{\rho}$, where $\ket{\sigma}$ is a stabiliser state of $n$ qubits, $\ket{\rho}$ is an arbitary state on $t$ qubits. Output is given by measurment of any number of specified qubit lines. Then:\\
-u) $C$ can be weakly simulated by an adaptive circuit $C^*$ on $t$ qubits with input $\ket{\rho}$ assisted by poly(n+t)-time classical computation and $C^*$ having at most $t$ intermediate or final measurments. \\
-ii)  If $C$ is non-adaptive then $C^*$ may be taken to be unitary (with $Z$ basis measurments at the end)\\
-iii) If some $Z$ measurments in $C$ are post selected on $+1$ then the same holds for measurments in $C^*$.
-\section{Lecture 23}
-\subsection{Hybrid Quantum-Classical Compuation}
-\subsubsection{The Variational Quantum Eigensolver (VQE)}
-We highlighted two regimes in hybrid compuation. THe first of these is when the input state is carried though the computation (e.g. PBC). The second is that every round (consiting of unitary operation- measurment - classical processing) requires preparation of a fresh input state (VQE).\\
-VQE represents a heuristic approach for solving a range of optimisation problems/quantum simulation of chemistry and material science. For example we can solve constraint satisfaction problems (MaxCut), solving electronic structure Hamiltonians. Any problem that can be cast in the form of finding the ground state energy of Hamiltonian $H$.\\\\
-VQE consists of the following steps. Given: problem $P$ , $\epsilon >0$, parameterized quantum circuit $V(\bm \theta)$, $\bm \theta = ( \theta_1, ..., \theta_n)$ (so callled controls/angles), $n$ qubits.
-\begin{romanlist}
-\item Map the problem $P \rightarrow H_p$ such that solving $P$ would amount to finding the ground state of $H_p = \sum_i h_i$\\
-\item Prepare $\ket{\psi(\bm \theta)} = U(\bm \theta) \ket{0}^{\otimes n}$\\
-\item Compute the cost function (which is just energy in disguise): $C(\bm \theta) = \bra{\psi(\theta)}H_p \ket{\psi(\theta)} = \sum_i \bra{\psi(\bm \theta0} h_i \ket{\psi(\bm \theta)}$\\
-\item Use classical (poly-time) optimisation algorithm $\mathcal{A}$. Take $\mathcal{A}(\bm \theta) = \bm \theta'$ (it can be one of many optimization algorithms\\
-\item Run steps $2 ->4$ with $\bm \theta'$ until:
-        $$
-        |C(\theta') - C(\theta_{opt}) | < \epsilon
-        $$
-        or if $C(\theta_{opt})$ is not known then until 
-        $$
-        |C(\theta_{i+1}) - C(\theta_i)| < \epsilon
-        $$
-        where $\theta_i$ are a sequence of controls obtained in step 4.
-\end{romanlist}
-One potential ansatz is constructed of $k$ layers with each layer like the following (for the $i$th layer) (with consequentive layers having the $CX$s shift one down:
-$$
- \centerline{ 
-             \Qcircuit @C=1em @R=.7em { 
-               & \gate{U_{1,i}(\theta_{1,i})} & \ctrl{1} &  \\
-               & \gate{U_{2,i}(\theta_{2,i})} & \targ &  \\
-               \\
-               & \gate{U_{n-1,i}(\theta_{n-1,i})} & \ctrl{1} &  \\
-               & \gate{U_{n,i}(\theta_{n,i})} & \targ &  \\
-                               }}
-$$
-typically we have $U$ being arbitary rotation gates s.t. as 
-$$
-U_{ij} = e^{- i \frac{\theta_{ij}}{2} \sigma_z}
-$$
-
+If $P$ commutes with $Z_1...Z_n \in \mathcal{P}_{n+t}$, then each $A_i$ is either $Z$ or $I$. If for all $i$, each $A_i$ is either $Z$ or $I$, then for any $t$-qubit state $\ket{\psi}$ the measurement of $P$ on $\ket{0}^{\otimes n} \otiems \ket{\psi}$ and the measurement $\tilde P $ on $\ket{\psi}$ give the same output distribution, and corresponding post-measurement states: $\ket{0}^{\otimes n} \ket{\psi'}, $\ket{\psi'}$ respectively, witht he same $t$-qubit state $\ket{\psi'}$.
 \\\\\\\\\
 Not revising non-abelian HSP, and NP
 \end{document} 

@@ -87,10 +87,10 @@ Your abstract goes here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 "Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy." - \textsl{Dr Richard Feynman} \cite{feynmann}  \\\\
-Ever since Dr Richard Feynman said these famous words at the end of his keynote speech in 1982, one of the main tasks facing quantum computers has been simulating quantum systems. Intuitively a quantum computer should be able to handle this problem better than a classic computer as they operate within the same bizarre world of entanglement and superposition. However, there are many challenges to overcome before quantum advantage can be achieved in this field. We will consider one such challenge in this essay: the optimum mapping scheme from fermions to qubits.\\\\
-One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them a quantum computer can process; in terms of qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of anti-commutation (\textbf{need to explain why this is non-local}), whereas qubits are independent local units. Therefore a non-trival mapping scheme which introduces this non-local behaviour is necessary.\\\\
+Ever since Dr Richard Feynman spoke these famous words at the end of his keynote speech in 1982 one of the main tasks facing quantum computers has been simulating quantum systems. Intuitively a quantum computer should be able to handle this problem better than a classic computer as they operate within the same bizarre world of entanglement and superposition. However, there are many challenges to overcome before quantum advantage can be achieved in this field. We will consider one such challenge in this essay: the optimum mapping scheme from fermions to qubits.\\\\
+One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them a quantum computer can process; in terms of qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of anti-commutation (\textbf{need to explain why this is non-local}), whereas qubits are independent local units (\textbf{they may be independent and local but could they not just be half-spin particles instead}). Therefore a non-trivial mapping scheme which introduces this non-local behaviour is necessary.\\\\
 The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented nearly a century ago \cite{originalJordanWigner}, and we will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev map} and the \textbf{Derby-Klassen map}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. Furthermore, recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in a given mapping (we consider solely the Jordan-Wigner case) offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.\\\\
-It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system. Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
+It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} (below) we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system. Finally,  in Section~\ref{comparision_section} we will compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
 \section{Applications to fermionic systems}\label{applications_section}
 \subsection{Estimating ground state energies}\label{vqe_section}
 Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach, which is unfeasible on a classical computer where it scales exponentially (\textbf{verify this is true}) in the number of fermionic modes.
@@ -99,7 +99,7 @@ A VQE provides an upper bound on the ground state energy of a Hamiltonian by uti
 \begin{equation}
         \frac{\bra{\psi} \hat H \ket{\psi}}{\braket{\psi | \psi}} \geq E_0 \>\>\>\> \forall \> \ket{\psi}\in \mathcal{H}
 \end{equation}
-The algorithm consists of two stages. First a variational ansatz is initialised based on a set of parameters $\bm \theta$. Then, the Hamiltonian is measured a number of times, and the parameters of the ansatz are varied until a minimum is found. This is an example of a variational quantum algorithm, which performs a classical optimisation over a quantum oracle (\textbf{is this a correct description}). By exporting lots of the work to a classical computer, VQEs are one of the quantum algorithms that are achievable in the NISQ (Noisy Intermediate-scale Quantum) era.\\\\ 
+The algorithm consists of two stages. First a variational ansatz $\ket{\psi}$ is initialised based on a set of parameters $\bm \theta$. Then, the Hamiltonian is measured a number of times, and the parameters of the ansatz are varied (using a classical optimiser) until a minimum is found. This is an example of a variational quantum algorithm, which performs a classical optimisation over a quantum oracle (\textbf{is this a correct description}). By exporting lots of the work to a classical computer, VQEs are one of the quantum algorithms that are achievable in the NISQ (Noisy Intermediate-scale Quantum) era.\\\\ 
 The preparation of ansatz can be done without any regard for fermions or what underlying wavefunction it represents. Generally a given circuit structure is picked with some of the gates depending upon the parameters (i.e. an $R_z(\theta)$ gate). However, there are some schemes for preparing ansatz that correlate to known wavefunctions, so the wavefunction corresponding to the minimum energy estimate can be found (\textbf{check this is true, find example and see if mapping is important} - Unitary Coupled Cluser - gaussian).\\\\
 It is in the measurement of the Hamiltonian that the mapping becomes important. The Hamiltonian in question will be a combination of fermionic raising and lowering operators, so needs to be mapped to a combination of Pauli operators that can be measured on a quantum computer. \textbf{consider measurement strategies that minimise repetitions}. After this mapping has been performed we are left with a qubit Hamiltonian that is a sum of Pauli strings (strings of Pauli operators). Therefore, we can measure the effectiveness of different mappings by the resource costs of implementing this qubit Hamiltonian. We will focus on three metrics (\textbf{this bit might be too similar to \cite{vqe} page 31\cite{vqe}}):
 \begin{romanlist}
@@ -121,7 +121,7 @@ QPE can be used to estimate the energy levels of a Hamiltonian to $n$ bits. This
         \vspace*{13pt}
         \fcaption{\label{QPECircuit} Circuit diagram of QPE. In order to calcualte energy levels $U = e^{-2\pi i \hat H}$ is used.}
 \end{figure} \\
-An important feature of the algorithm is that the guiding state $\ket{u}$ must have overlap with the ground state. This can be seen by working through in detail (we have adapted the following treatment from \cite{chemistryReview}):\\
+An important feature of the algorithm is that the guiding state $\ket{u}$ must have overlap with the ground state. This can be seen by working through in detail (the following treatment is adapted from \cite{chemistryReview}):\\
 \begin{itemlist}
 \item We can express $\ket{u}$ in the basis of energy eigenstates: $\ket{u} = \sum_i c_i \ket{E_i}$. Therefore, the total state after the application of the Hadamard gates is: 
         \begin{equation}
@@ -139,14 +139,14 @@ An important feature of the algorithm is that the guiding state $\ket{u}$ must h
                 \frac{1}{\sqrt{2^n}} \sum_i \sum_x e^{-2\pi i E_i x}c_i \ket{x}  \ket{E_i} \xrightarrow{QFT^{-1}} \sum_i c_i \ket{\text{bin}(E_i)} \ket{E_i}
         \end{equation}
 \item As $E_i$ is likely not exact to $n$ bits there will be a potential error introduced by the Quantum Fourier Transform, so to be accurate to $n$ bits a few more ancilla qubits will be needed \cite{nielsenChuang}.
-\item By measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$.  So to find the ground state energy level, the ground state eigenstate needs to be in the original expansion of the guiding state $\ket{u}$. The larger the amplitude of the ground state eigenstate ($c_0$) the fewer repetitions of QPE are required before $E_0$ is measured. Therefore, QPE works better if a guiding state close to the exact ground state is used.
+\item By measuring the ancilla bits in the Z basis we will observe $E_i$ to $n$ bits with probability $|c_i|^2$.  So to find the ground state energy level, the ground state eigenstate needs to be in the original expansion of the guiding state $\ket{u}$. The larger the amplitude of the ground state eigenstate ($c_0$) the fewer repetitions of QPE are required before $E_0$ is measured. Therefore, QPE works better if a guiding state close to the exact ground state is used. \textbf{Why is this section here it does not seem relevant to the topic}
 \end{itemlist}
 The portion of this algorithm for which fermionic mapping is relevant is the construction of the controlled gates $U^{2^k} = e^{-2 \pi i \hat H 2^k}$. Not only do the same metrics for the efficiency of the corresponding qubit Hamiltonian listed in Section~\ref{vqe_section} apply, now we need to consider the impact of exponentiation. As the Hamiltonian is the sum of non-commuting Pauli-strings taking the exponential is non-trivial and requires the Trotter-Suzuki approximation \cite{suzuki}. To first order this gives:
 \begin{equation}
         e^{\frac{-it}{\hbar} \sum^m_k \hat H_k} = \left( \prod^m_k e^{\frac{-i t \hat H_k}{\hbar S}}\right)^S + O(t^2/S)
 \end{equation}
 In order to achieve a desired accuracy of $\epsilon$ a sufficient number of Trotter steps $S= O(t^2/ \epsilon)$ need to be used \cite{chemistryReview}. The ordering of the terms in this Trotter-Suzuki expansion greatly influences the error and therefore how many Trotter steps are required. This is important to consider as the impact the ordering has varies depending on the mapping chosen as we will discuss in Section~\ref{comparision_section}.\\\\
-Finally, it is useful to consider how each Trotter step is represented as a circuit. First, we consider that $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ applies a phase shift of $e^{i\theta}$ if the parity of the $n$ qubits is even and $e^{-i\theta}$ if the parity is odd. Secondly, it is possible to transform $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ into the exponentiation of any Pauli-string by applying $R_X$ or Hadamard gates to change the basis to the X or Y basis, respectively. Therefore, in general the exponential of a $n$-fold tensor product of Pauli matrices will require $2(n-1)$ CNOT gates centred around one phase-shift gate and enough $R_X$ and Hadamard gates to transform into and out of the necessary basis before and after \cite{seeley}. The circuit required for computing the term $e^{i(YXZY)\theta}$ is shown in Fig.~\ref{trotterStepCircuit}. \begin{figure}[htbp]
+Finally, it is useful to consider how each Trotter step is represented as a circuit. First, we consider that $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ applies a phase shift of $e^{i\theta}$ if the parity of the $n$ qubits is even and $e^{-i\theta}$ if the parity is odd \textbf{don't actually state or justify how this expression is represented as a circuit}. Secondly, it is possible to transform $e^{i(Z_1 \otimes Z_2 \otimes ... \otimes Z_n)\theta}$ into the exponentiation of any Pauli-string by applying $R_X$ or Hadamard gates to change the basis to the X or Y basis, respectively. Therefore, in general the exponential of a $n$-fold tensor product of Pauli matrices will require $2(n-1)$ CNOT gates centred around one phase-shift gate and enough $R_X$ and Hadamard gates to transform into and out of the necessary basis before and after \cite{seeley}. As an example the circuit required for computing the term $e^{i(YXZY)\theta}$ is shown in Fig.~\ref{trotterStepCircuit}. As such it is clear that each Trotter step requires gates linear in \textbf{is it the pauli weight or the total pauli weight ?? this whole section needs reconsidering now ive done the course} \begin{figure}[htbp]
 \centerline{ \Qcircuit @C=1em @R=.7em {
         &\gate{R_X} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \gate{R_X^{\dagger}}&\qw \\
         &\gate{H} & \targ & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \targ & \gate{H}& \qw\\
@@ -158,7 +158,8 @@ Finally, it is useful to consider how each Trotter step is represented as a circ
 \end{figure}
 \subsection{Simulating dynamics - see Nielsen Cheung}
 \section{First and second quantization}
-From Quantum Field Theory (\textbf{citation needed}), we know that fermions must be antisymmetric under exchange. This property is commonly represented in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
+\textbf{This section needs rewriting it is too confusing - in particular need to address what role qubits are actually playing here (dirac notation needs some words around it)}
+From Quantum Field Theory (\textbf{citation needed}), we know that fermions must be antisymmetric under exchange. This property is commonly represented by qubits in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
 \begin{equation}\label{antisym}
         \ket{\Phi} = \frac{1}{\sqrt{2}}(\ket{\phi}_1 \ket{\psi}_2 - \ket{\psi}_1 \ket{\phi}_2)
 \end{equation}
@@ -187,7 +188,7 @@ where $f_i$ (the occupation number) $ =1$ when $\phi_p$ is occupied, and 0 other
 Therefore, second quantization can be thought of as encoding the antisymmetry of the fermions in the operators rather than the quantum states. All the mappings we will consider are examples of encoding second quantization (\textbf{should I consider first quantisation techniques}).\\\\
 \textbf{explain advantages of second quantisation vqe chemistry review tranter 2015}
 \section{Jordan-Wigner Transformation}\label{jordan-wigner_section}
-The Jordan-Wigner transformation straight forwardly stores the occupation number of the $i$-th orbital in the $i$-th qubit. Therefore, all the non-local behaviour (the parity information) will have to be encoded in the operators \cite{fermionicEncoding}:
+The Jordan-Wigner transformation straightforwardly stores the occupation number of the $i$-th orbital in the $i$-th qubit. Therefore, all the non-local behaviour (the parity information) has to be encoded in the operators \cite{fermionicEncoding}:
 \begin{equation}
         \begin{align}
         a_i \rightarrow \left( \bigotimes_{k=1}^{i-1} Z_k \right) \sigma_i^-\\
@@ -201,7 +202,7 @@ where
                 \sigma^+_i = \frac{1}{2} (X_i - i Y_i) = \ket{1}_i \bra{0}_i 
         \end{align}
 \end{equation}
-It is clear to see that these operators act in exactly the same way on a qubit spin basis that the fermionic creation and annihilation operators act upon the Fock basis.
+It is clear to see that these operators act in exactly the same way on a qubit spin basis that the fermionic creation and annihilation operators act upon the Fock basis. \textbf{might be worth explaining why the naive approach doesn't work and hence the motivation for the $Z_k$s}
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
 The Jordan-Wigner transformation uses O(1) qubits to represent each fermionic mode, however it requires O(N) gates to simulate one fermionic operation. This is because it stores the occupation number locally and the parity non-locally. An alternative scheme called the parity basis stores the parity locally and the occupation number non-locally, however this still requires O(N) gates to simulate one fermionic operation \cite{seeley}. The Bravyi-Kiteav is a halfway house which partially stores both the occupation number and parity non-locally.\\\\
 The following explanation of the mapping is adapted from \cite{bravyikitaev}. (\textbf{maybe also talk about Fenwick trees \cite{operatorLocality}}). First, we must define a partial order $\preceq$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$, then $\alpha \preceq \beta$. For example:
@@ -274,7 +275,7 @@ $\beta_i$ with $2^x < i < 2^{x+1}$ is just the $i \times i$ segment of $\beta_{2
 \vspace*{12pt}
 \noindent
 Before continuing with this discussion and defining the Bravyi-Kitaev operators we first must state and prove two results from \cite{bravyikitaev}:\\\\
-{\bf Lemma~1 \cite{bravyikitaev}:} Define the set $L(\beta)$ such that $\alpha \in L(\beta)$ if and only if for some $i_0$, $\beta_{i_0} = 1$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = 1$ for $i< i_0$, then:
+{\bf Lemma~1 \cite{bravyikitaev}:} Define the set $L(\beta)$ such that $\alpha \in L(\beta)$ if and only if for some $i_0$: $\beta_{i_0} = 1$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = 1$ for $i< i_0$, then:
 \begin{equation}
         \sum_{j \in L(i)} q_j = \sum_{j < i} f_j
 \end{equation}
@@ -283,32 +284,25 @@ Before continuing with this discussion and defining the Bravyi-Kitaev operators 
 \noindent
 The following proof is of my own invention:
 \begin{equation}
-L(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i\text{ s.t. } \alpha_{i_0} = 1\}
+L(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{i_0} = 1\}
 \end{equation}
 Define $A(\beta)$ as the set of $j$ such that $j \preceq \beta$:
 \begin{equation}
-        A(\beta) = \{ \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_0} \gamma_{j_0 -1} \ldots \gamma_0 : \forall j_0\text{ s.t. } \beta_i = 1\text{ for }i<j_0\text{ and all }\gamma  \}
+        A(\beta) = \{j: j \preceq \beta\} 
 \end{equation}
-Let $j_{max}$ be the maximum $j$ such that $\beta_i = 1$ for all $i<j$.
-\begin{multline}
-        A(\beta) = \{ \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_{max}} \gamma^1_{j_{max} -1} \ldots \gamma^1_{0},\\  \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_{max}-1} \gamma^2_{j_{max} -2} \ldots \gamma^2_{0}, \cdots,\beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{0}: \text{ for all } \bm \gamma \}
-\end{multline}
-As $\bm \gamma$ has no restrictions all the later sets are actually included within the first so:
-\begin{equation}
-        A(\beta) = \{ \beta_{i_n} \beta_{i_{n-1}} \ldots \beta_{j_{max}} \gamma_{j_{max} -1} \ldots \gamma_{0}: \text{ for all }  \gamma \}
-\end{equation}
-For $\beta \in L(\alpha)$, we have $j_{max} = i_0$ as $\beta_i = 1$ for $i<i_0$ and $\beta_{i_0} = 0$, therefore:
-\begin{equation}
-        A(L(\alpha)) = \{\{  \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 \gamma_{i_0 -1} \ldots \gamma_{0} \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \text{ and all } \gamma\}
-\end{equation}
-(\textbf{Could probably have skipped straight to this point})
 \begin{equation}
         \label{AL}
-A(L(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 1 \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \}
+A(L(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n+1}} \ldots \alpha_{i_0-1}0 1 \ldots 1 \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \}
 \end{equation}
-As $A(\beta)$ for $\beta = 11\ldots 1$ contains every integer $j \leq \beta$, Eq.~\ref{AL} is an algorithm for generating the set of all the integers less than $\alpha$. It achieves this by working from right to left reducing every $1$ to $0$ and then iterating over all the possible suffixes whilst keeping the unaltered prefix. It never attains $\alpha$ as the first altered bit in every element is reduced from $1$ to $0$, though it does attain $\alpha -1$ in the case of the rightmost bit being switched to zero and suffixed by $11\ldots 1$. Therefore,  
+As $A(\alpha_{i_n}\ldots\alpha_{i+1}01\ldots11) =  \{j:\alpha_{i_n}\ldots \alpha_{i+1} 0\ldots 00\ \leq j \leq \alpha_{i_n}\ldots \alpha_{i+1} 01\ldots 11\}$, Eq.~\ref{AL} is an algorithm for generating the set of all the integers less than $\alpha$. Moving from left to right at every $\alpha_i = 1$ we generate the set of integers $[\alpha_{i_n}\ldots\alpha_{i+1} 0\ldots000, \alpha_{i_n} \ldots \alpha_{i+1}10 \ldots 000)$. 
+$$\bigcup_{S\in A(L(\alpha))}S = \bigcup_{\alpha_i = 1} \{j:\alpha_{i_n}\ldots \alpha_{i+1} 0\ldots 00\ \leq j < \alpha_{i_n}\ldots \alpha_{i+1} 10\ldots 00\} = \{ j: j < \alpha\}$$
+Therefore, every possible binary integer less than $\alpha$ will be generated. An example is given below:
+$$
+A(L(1010)) = A(\{0111, 1001 \}) = \{\{0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111\}, \{1001, 1000\}\}
+$$
+Recalling $q_j = \sum_{k \preceq j} f_k$ and as $S$ are disjoint, we can rewrite:
 \begin{equation}
-        \sum_{j \in L(i)} q_j = \sum_{k \in L(i)} \sum_{j \preceq k} f_j = \sum_{S \in A(L(i))} \sum_{j \in S} f_j = \sum_{j<i} f_j
+        \sum_{j \in L(i)} q_j = \sum_{j \in L(i)} \sum_{k \preceq j} f_k = \sum_{j \in L(i)} \sum_{k \in A(j)} f_k = \sum_{S \in A(L(i))} \sum_{j \in S} f_j = \sum_{j<i} f_j
 \end{equation}
  $\square$\,.
  
@@ -325,17 +319,13 @@ The following proof is of my own invention:
 \begin{equation}
         K(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
 \end{equation}
-For $\beta \in K(\alpha)$, we have $j_{max} = i_0$ as $\beta_i = 1$ for $i<i_0$ and $\beta_{i_0} = 0$, therefore:
-\begin{equation}
-        A(K(\alpha)) = \{\{  \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 \gamma_{i_0 -1} \ldots \gamma_{0} \} \forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\text{ and all } \gamma\}
-\end{equation}
 \begin{equation}
         \label{AK}
 A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 1 \}\forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
 \end{equation}
 Let $i_{max}$ be the maximum $i$ such that $\alpha_j =1$ for all $j < i$:
 \begin{multline}
-        A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}0 1 \ldots 1 \},\\ \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}00 1 \ldots 1 \}, \cdots, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 10 \} \} \end{multline}
+        A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}0 1 \ldots 1 \}, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}00 1 \ldots 1 \}\\ \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}01 0 \ldots 1 \}, \cdots, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 10 \} \} \end{multline}
         \begin{equation}
                 A(K(\alpha)) = \{ \{ j: j \preceq \alpha^0 \}, \{ j: j \preceq \alpha^1 \}, \cdots, \{ j: j \preceq \alpha^{i_{max}} \} \}
         \end{equation}

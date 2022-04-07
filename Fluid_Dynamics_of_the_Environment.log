@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  15 MAR 2022 13:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  29 MAR 2022 17:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -276,48 +276,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--454
 
  []
 
-
-./Fluid_Dynamics_of_the_Environment.tex:472: Package amsmath Error: \tilde allowed only in math mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.472 If domain bounded with $\tilde \psi
-                                          = 0$ on boundary this is an ill-po...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./Fluid_Dynamics_of_the_Environment.tex:473: Missing $ inserted.
-<inserted text> 
-                $
-l.473 \section
-              {Lecture 6}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (97.05695pt too wide) in paragraph at lines 460--473
-\OT1/cmr/m/n/10 In 2D: $\OML/cmm/m/it/10   \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 x; z\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 :$$(\OML/cmm/m/it/10 N[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ![][][] \OT1/cmr/m/n/10 = 0$$$$^^C[] = []$$\OML/cmm/m/it/10 givethisPoincarewaveequation$$\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@
- []
-
-
-Overfull \hbox (137.78235pt too wide) in paragraph at lines 460--473
-\OT1/cmr/m/n/10 ^^C[][])[] = 0$$\OML/cmm/m/it/10 Ifdomainboundedwith$\OT1/cmr/m/n/10 = 0$\OML/cmm/m/it/10 onboundarythisisanill \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 posedproblemandwewilluseraytracinginstead:$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--477
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--477
-
- []
-
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 485--489
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
 
  []
 
@@ -332,11 +297,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 485--489
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 485--489
+
+ []
+
+[13]
 Overfull \hbox (207.64977pt too wide) detected at line 495
 \OML/cmm/m/it/10 ^^Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; t\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@[]\OT1/cmr/m/n/10 ([](\OML/cmm/m/it/10 k[]x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 !\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 ([]) [](\OML/cmm/m/it/10 k[]x\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 k[]x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 !t\OT1/cmr/m/n/10 )) = \OMS/cmsy/m/n/10 ^^@[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 !\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ [][]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 !t\OT1/cmr/m/n/10 ) + []((\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 !t\OT1/cmr/m/n/10 ))
  []
 
-[13]
+
 Underfull \hbox (badness 10000) in paragraph at lines 495--500
 
  []
@@ -356,7 +326,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 503--505
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
@@ -376,94 +346,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--517
 
  []
 
-[14] [15]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:535: Argument of \bm has an extra }.
-<inserted text> 
-                \par 
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
 
-Runaway argument?
-./Fluid_Dynamics_of_the_Environment.tex:535: Paragraph ended before \bm was complete.
-<to be read again> 
-                   \par 
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
 
-./Fluid_Dynamics_of_the_Environment.tex:535: Missing $ inserted.
-<inserted text> 
-                $
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Fluid_Dynamics_of_the_Environment.tex:535: Missing } inserted.
-<inserted text> 
-                }
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Fluid_Dynamics_of_the_Environment.tex:535: Missing } inserted.
-<inserted text> 
-                }
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Fluid_Dynamics_of_the_Environment.tex:535: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./Fluid_Dynamics_of_the_Environment.tex:535: Too many }'s.
-<recently read> }
-                 
-l.535 ...N \sin \theta}, \tilde E \sim |\tilde \bm
-                                                   u|^2 \sim e^{- k^3 \nu \z...
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-./Fluid_Dynamics_of_the_Environment.tex:535: Missing $ inserted.
-<inserted text> 
-                $
-l.535 ...in \theta}, \tilde E \sim |\tilde \bm u|^
-                                                  2 \sim e^{- k^3 \nu \zeta ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Fluid_Dynamics_of_the_Environment.tex:544: Missing $ inserted.
-<inserted text> 
-                $
-l.544 with $\Gamma
-                   = \frac{\nu k_0^3 L}{(\gamma^3 - 1) N \sin \theta}$.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ []
 
 [16]
 Overfull \hbox (0.28474pt too wide) detected at line 567
@@ -495,7 +386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--599
 
  []
 
-[18]
+[18] [19]
 Underfull \hbox (badness 10000) in paragraph at lines 655--657
 
  []
@@ -510,7 +401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 658--660
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 671--674
 
  []
@@ -530,17 +421,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 682--686
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 682--686
-
- []
-
 [20]
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
+
+ []
+
 ./Fluid_Dynamics_of_the_Environment.tex:687: Undefined control sequence.
 <recently read> \fra 
                      
@@ -572,23 +462,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 708--713
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--736
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--736
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--736
-
- []
-
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 742--747
+Underfull \hbox (badness 10000) in paragraph at lines 731--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--736
 
  []
 
@@ -597,6 +482,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 742--747
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--747
+
+ []
+
+[23]
 ./Fluid_Dynamics_of_the_Environment.tex:755: Undefined control sequence.
 l.755 \subseection
                   {Triadic resoncance transfer term}
@@ -611,7 +502,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 759--762
 
  []
 
-[23]
+
 Underfull \hbox (badness 10000) in paragraph at lines 768--771
 
  []
@@ -631,12 +522,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 819--822
 
  []
 
-
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 824--827
 
  []
 
-[25]
+
 Underfull \hbox (badness 10000) in paragraph at lines 829--832
 
  []
@@ -650,15 +541,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 834--837
 Underfull \hbox (badness 10000) in paragraph at lines 841--843
 
  []
-
-./Fluid_Dynamics_of_the_Environment.tex:859: Undefined control sequence.
-l.859 ...l p}{\partial x} \approx - \rho g \implie
-                                                   p = p_0  - \rho g z
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 [26]
 Underfull \hbox (badness 10000) in paragraph at lines 872--877
@@ -675,22 +557,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 882--885
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 895--899
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 895--899
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 895--899
-
- []
-
 [27]
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 907--910
 
  []
@@ -714,16 +596,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 940--944
 
  []
 
-
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 957--959
 
  []
 
-[29]
+
 Underfull \hbox (badness 10000) in paragraph at lines 977--980
 
  []
 
+[30]
 ./Fluid_Dynamics_of_the_Environment.tex:994: Undefined control sequence.
 <argument> \partail 
                     x
@@ -735,19 +618,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[30]
 ./Fluid_Dynamics_of_the_Environment.tex:1004: Undefined control sequence.
 l.1004   x= x_0 + \zeta, t = t_0 + \lamdba
                                           ^{-1} \zeta
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Fluid_Dynamics_of_the_Environment.tex:1012: Undefined control sequence.
-l.1012   \frac{du}{ds} + (u- \lamdba
-                                    ) \frac{\partial u}{\partial x} + g \fra...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -803,110 +676,6 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Fluid_Dynamics_of_the_Environment.tex:1028: Undefined control sequence.
-l.1028 ...rix} u & h \\ g & u \end{pmatrix} \being
-                                                  {pmatrix} h \\ u\end{pmatr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Misplaced \crcr.
-\endarray ->\crcr 
-                  \egroup \egroup 
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Extra }, or forgotten $.
-\endarray ->\crcr \egroup 
-                          \egroup 
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Extra }, or forgotten $.
-\endarray ->\crcr \egroup \egroup 
-                                  
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Extra \right.
-\endpmatrix -> \endmatrix \right )
-                                  
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-I'm ignoring a \right that had no matching \left.
-
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: LaTeX Error: \begin{document} ended by \end{pmatrix}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Missing $ inserted.
-<inserted text> 
-                $
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.1028 ...rix} \being{pmatrix} h \\ u\end{pmatrix}
-                                                   _x - \lambda \begin{pmatr...
-Things are pretty mixed up, but I think the worst is over.
-
-./Fluid_Dynamics_of_the_Environment.tex:1028: Missing $ inserted.
-<inserted text> 
-                $
-l.1028 ...x} \being{pmatrix} h \\ u\end{pmatrix} _
-                                                  x - \lambda \begin{pmatrix...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Fluid_Dynamics_of_the_Environment.tex:1030: Missing $ inserted.
-<inserted text> 
-                $
-l.1030  We then premultiply by $\bm q
-                                     ^T$ and we want to chose $\bm q$ so it ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 [31]
 ./Fluid_Dynamics_of_the_Environment.tex:1052: Undefined control sequence.
 l.1052   \bm q^T A = \lamdba
@@ -944,6 +713,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[32]
 ./Fluid_Dynamics_of_the_Environment.tex:1089: Undefined control sequence.
 l.1089    (u-c) \frac{d}{ds} ( 2  c- i) & \lamdba
                                                   = u -c\end{cases}
@@ -958,17 +728,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1090--1093
 
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1123
-
- []
-
 [33]
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1123
+
+ []
+
 ./Fluid_Dynamics_of_the_Environment.tex:1136: Undefined control sequence.
 <recently read> \lamdba 
                         
@@ -1021,6 +790,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1145--1147
 
  []
 
+[35]
 ./Fluid_Dynamics_of_the_Environment.tex:1150: Misplaced alignment tab character &.
 <argument> Example sheet 1&
                            2
@@ -1033,7 +803,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[35]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1154--1156
 
  []
@@ -1053,7 +823,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1164--1166
 
  []
 
-
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 1168--1171
 
  []
@@ -1078,73 +848,99 @@ Underfull \hbox (badness 10000) in paragraph at lines 1173--1179
 
  []
 
-[36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1194
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1192--1195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1213--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1205--1208
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1257
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1217
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1261
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1261
+Underfull \hbox (badness 10000) in paragraph at lines 1255--1258
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1262: Undefined control sequence.
-l.1262 ...}{2} (\rho_1 - \rho_2) g h_1^2) = \oemga
-                                                  _e \rho_2 u_2 - \omega_d \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1264: Undefined control sequence.
-<recently read> \oemga 
-                       
-l.1264          We can ignore $\oemga
-                                     _e \rho_2 u_2$ as $u_2 = 0$.\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1262
+
+ []
 
 [40]
-./Fluid_Dynamics_of_the_Environment.tex:1306: Undefined control sequence.
-l.1306 ...matrix} - g' \frac{\omega_e}{h}\\ \oemga
-                                                  _e - \omega_d \\ - \omega_...
+./Fluid_Dynamics_of_the_Environment.tex:1268: Undefined control sequence.
+l.1268 ...1 \rho_1 h_1) = \omega_e \rho_2 - \oemga
+                                                  _d \rho_1
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1310: Undefined control sequence.
-l.1310  | \begin{pmatrix} u_1 - \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1271: Missing $ inserted.
+<inserted text> 
+                $
+l.1271           \frac{\partial h_1}{\partial t}
+                                                 + \frac{\partial}{\partial ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Fluid_Dynamics_of_the_Environment.tex:1271: Missing $ inserted.
+<inserted text> 
+                $
+l.1271           \frac{\partial h_1}{\partial t}
+                                                 + \frac{\partial}{\partial ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Fluid_Dynamics_of_the_Environment.tex:1271: Missing $ inserted.
+<inserted text> 
+                $
+l.1271           \frac{\partial h_1}{\partial t}
+                                                 + \frac{\partial}{\partial ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Fluid_Dynamics_of_the_Environment.tex:1271: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.1271           \frac{\partial h_1}{\partial t}
+                                                 + \frac{\partial}{\partial ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Fluid_Dynamics_of_the_Environment.tex:1274: Missing $ inserted.
+<inserted text> 
+                $
+l.1274          \section
+                        {Lecture 17}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Fluid_Dynamics_of_the_Environment.tex:1314: Undefined control sequence.
+l.1314  | \begin{pmatrix} u_1 - \lamdba
                                         & 0 & 0 \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1153,12 +949,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1319
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1319
+Underfull \hbox (badness 10000) in paragraph at lines 1320--1323
 
  []
 
@@ -1168,8 +959,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1320--1323
  []
 
 [41]
-./Fluid_Dynamics_of_the_Environment.tex:1324: Extra }, or forgotten $.
-l.1324 ...\partial h}{\partial x} + g \sin \theta}
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1327
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:1328: Extra }, or forgotten $.
+l.1328 ...\partial h}{\partial x} + g \sin \theta}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1178,40 +973,39 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1328
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1330--1335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1330--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1329--1332
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1349--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1369--1372
+Underfull \hbox (badness 10000) in paragraph at lines 1353--1356
 
  []
 
 [43]
-./Fluid_Dynamics_of_the_Environment.tex:1385: Undefined control sequence.
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1376
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:1389: Undefined control sequence.
 <argument> \lambda _+ \lamdba 
                               _-
-l.1385   F_r = \frac{\lambda_+ \lamdba_-}{c^2}
+l.1389   F_r = \frac{\lambda_+ \lamdba_-}{c^2}
                                                +1
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1219,22 +1013,22 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1385: Double subscript.
+./Fluid_Dynamics_of_the_Environment.tex:1389: Double subscript.
 <argument> \lambda _+ \lamdba _
                                -
-l.1385   F_r = \frac{\lambda_+ \lamdba_-}{c^2}
+l.1389   F_r = \frac{\lambda_+ \lamdba_-}{c^2}
                                                +1
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1386--1389
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1390--1393
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1391: Undefined control sequence.
+./Fluid_Dynamics_of_the_Environment.tex:1395: Undefined control sequence.
 <recently read> \lmabda 
                         
-l.1391 ...teristic pointing up stream and $\lmabda
+l.1395 ...teristic pointing up stream and $\lmabda
                                                   _+$ points downstream. As ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1242,10 +1036,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1391: Undefined control sequence.
+./Fluid_Dynamics_of_the_Environment.tex:1395: Undefined control sequence.
 <recently read> \lamdba 
                         
-l.1391 ...ppraoch the top of the bump the $\lamdba
+l.1395 ...ppraoch the top of the bump the $\lamdba
                                                   _-$ characteristic shrinks...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1253,10 +1047,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1391: Undefined control sequence.
+./Fluid_Dynamics_of_the_Environment.tex:1395: Undefined control sequence.
 <recently read> \lamdba 
                         
-l.1391 ...o the right of the bump we have $\lamdba
+l.1395 ...o the right of the bump we have $\lamdba
                                                   _-$ and $\lambda_+$ pointi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1264,10 +1058,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1391: Undefined control sequence.
+./Fluid_Dynamics_of_the_Environment.tex:1395: Undefined control sequence.
 <recently read> \lamdba 
                         
-l.1391 ...ave a subcritical region with a $\lamdba
+l.1395 ...ave a subcritical region with a $\lamdba
                                                   _-$ characteristic pointin...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1276,62 +1070,62 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1393
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1393
-
- []
-
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 1399--1406
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1399--1406
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1416
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1410
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1434--1437
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1450--1453
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1462--1465
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1441
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1467--1470
+Underfull \hbox (badness 10000) in paragraph at lines 1454--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1472--1475
+Underfull \hbox (badness 10000) in paragraph at lines 1466--1469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1471--1474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1479
 
  []
 
 [47]
-Overfull \hbox (28.45146pt too wide) detected at line 1505
+Overfull \hbox (28.45146pt too wide) detected at line 1509
 [] [][] \OT1/cmr/m/n/10 + [] [][] = []
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1508: Undefined control sequence.
-l.1508 ...a \bar u - \lambda) ( ( \bar u - \almbda
+./Fluid_Dynamics_of_the_Environment.tex:1512: Undefined control sequence.
+l.1512 ...a \bar u - \lambda) ( ( \bar u - \almbda
                                                   ) ( \chi \bar u - \lamdba)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1339,8 +1133,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1508: Undefined control sequence.
-l.1508 ...bar u - \almbda) ( \chi \bar u - \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1512: Undefined control sequence.
+l.1512 ...bar u - \almbda) ( \chi \bar u - \lamdba
                                                   ) - g' h \cos \theta) - ( ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1348,8 +1142,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1508: Undefined control sequence.
-l.1508 ...ta) - ( \gamma -1) g' ( \bar u - \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1512: Undefined control sequence.
+l.1512 ...ta) - ( \gamma -1) g' ( \bar u - \lamdba
                                                   ) \frac{1}{2} h \cos \thet...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1357,8 +1151,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1512: Undefined control sequence.
-l.1512 ...\bar u - \lambda)( \chi \bar u - \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1516: Undefined control sequence.
+l.1516 ...\bar u - \lambda)( \chi \bar u - \lamdba
                                                   ) - g' h \cos \theta) = 0
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1366,10 +1160,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1514: Undefined control sequence.
+./Fluid_Dynamics_of_the_Environment.tex:1518: Undefined control sequence.
 <recently read> \lamdba 
                         
-l.1514 ... responsible for $\lambda_1$ or $\lamdba
+l.1518 ... responsible for $\lambda_1$ or $\lamdba
                                                   _2$ than $\lambda_3$ (whic...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1377,8 +1171,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1515: Undefined control sequence.
-l.1515 ...h gives $\lambda_1 = \bar u + c, \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1519: Undefined control sequence.
+l.1519 ...h gives $\lambda_1 = \bar u + c, \lamdba
                                                   _2 = \bar u -c, \lambda_3 ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1387,12 +1181,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1516
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1520
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1517: Undefined control sequence.
-l.1517 ...da & h & 0 \\ g' \cos \theta & u-\lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1521: Undefined control sequence.
+l.1521 ...da & h & 0 \\ g' \cos \theta & u-\lamdba
                                                    & \frac{1}{2} h \cos \the...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1400,14 +1194,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1537
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1538--1541
 
  []
 
-[48]
-./Fluid_Dynamics_of_the_Environment.tex:1538: Undefined control sequence.
-l.1538 |A- \lambda B| = (\gamma \bar u - \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1542: Undefined control sequence.
+l.1542 |A- \lambda B| = (\gamma \bar u - \lamdba
                                                 ) ( (\bar u - \lambda) ( \ch...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1415,8 +1208,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1538: Undefined control sequence.
-l.1538 ...bar u - \lambda) ( \chi \bar u - \lamdab
+./Fluid_Dynamics_of_the_Environment.tex:1542: Undefined control sequence.
+l.1542 ...bar u - \lambda) ( \chi \bar u - \lamdab
                                                   )) + ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1424,8 +1217,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1542: Undefined control sequence.
-l.1542 ...\bar u, \lambda_2 = \chi \bar u, \lamdba
+./Fluid_Dynamics_of_the_Environment.tex:1546: Undefined control sequence.
+l.1546 ...\bar u, \lambda_2 = \chi \bar u, \lamdba
                                                   _3 = \gamma \bar u
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1434,47 +1227,47 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1546--1549
+Underfull \hbox (badness 10000) in paragraph at lines 1550--1553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1546--1549
+Underfull \hbox (badness 10000) in paragraph at lines 1550--1553
 
  []
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1589--1592
-
- []
-
-
+[49] [50]
 Underfull \hbox (badness 10000) in paragraph at lines 1593--1596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1596
+Underfull \hbox (badness 10000) in paragraph at lines 1597--1600
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1593--1596
-
- []
-
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1601
+Underfull \hbox (badness 10000) in paragraph at lines 1597--1600
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1612--1615
+Underfull \hbox (badness 10000) in paragraph at lines 1597--1600
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1629: Undefined control sequence.
-l.1629 ...arsion in a jet typically $\alpha \appox
+
+Underfull \hbox (badness 10000) in paragraph at lines 1602--1605
+
+ []
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1619
+
+ []
+
+./Fluid_Dynamics_of_the_Environment.tex:1633: Undefined control sequence.
+l.1633 ...arsion in a jet typically $\alpha \appox
                                                    0.065 - 0.08$. This is su...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1483,13 +1276,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1627--1630
+Underfull \hbox (badness 10000) in paragraph at lines 1631--1634
 
  []
 
-[51]
-./Fluid_Dynamics_of_the_Environment.tex:1641: Undefined control sequence.
-l.1641 ... b^2) + \frac{\partial}{\partial z} ( \p
+[52]
+./Fluid_Dynamics_of_the_Environment.tex:1645: Undefined control sequence.
+l.1645 ... b^2) + \frac{\partial}{\partial z} ( \p
                                                    \rho b^2 W) = 2 \pi \rho_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1497,8 +1290,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1648: Undefined control sequence.
-l.1648 \subsubection
+./Fluid_Dynamics_of_the_Environment.tex:1652: Undefined control sequence.
+l.1652 \subsubection
                     {Plumes in homogeneous environment}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1507,39 +1300,40 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1646--1653
-
- []
-
-[52]
-Underfull \hbox (badness 10000) in paragraph at lines 1685--1690
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1657
 
  []
 
 
-Overfull \hbox (0.69754pt too wide) in paragraph at lines 1685--1690
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1694
+
+ []
+
+
+Overfull \hbox (0.69754pt too wide) in paragraph at lines 1689--1694
 \OT1/cmr/bx/n/10 Plume in a ho-moge-nous en-vi-ronemnt\OT1/cmr/m/n/10 : $[\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 RL[]T[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 ] = \OML/cmm/m/it/10 RL[]T[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 ] =
  []
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 1726--1728
+Underfull \hbox (badness 10000) in paragraph at lines 1730--1732
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1748: Missing { inserted.
+[54]
+./Fluid_Dynamics_of_the_Environment.tex:1752: Missing { inserted.
 <to be read again> 
                    ^
-l.1748 ...that $z_{max} = c ( \frac{F_0}{\rho_0}_^
+l.1752 ...that $z_{max} = c ( \frac{F_0}{\rho_0}_^
                                                   {\frac{1}{4}} N^{- \frac{3...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
-./Fluid_Dynamics_of_the_Environment.tex:1748: Missing } inserted.
+./Fluid_Dynamics_of_the_Environment.tex:1752: Missing } inserted.
 <inserted text> 
                 }
-l.1748 ...rho_0}_^{\frac{1}{4}} N^{- \frac{3}{4}}$
+l.1752 ...rho_0}_^{\frac{1}{4}} N^{- \frac{3}{4}}$
                                                    experiementally we can ve...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1548,24 +1342,25 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1748--1750
+Underfull \hbox (badness 10000) in paragraph at lines 1752--1754
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1748--1750
+Underfull \hbox (badness 10000) in paragraph at lines 1752--1754
 
  []
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 1755--1757
+
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1761
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1764: Undefined control sequence.
+[55]
+./Fluid_Dynamics_of_the_Environment.tex:1768: Undefined control sequence.
 <recently read> \simga 
                        
-l.1764 ...time the amount things grow is : $\simga
+l.1768 ...time the amount things grow is : $\simga
                                                    t_A = \sqrt{ g k} \frac{a...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1573,10 +1368,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Fluid_Dynamics_of_the_Environment.tex:1764: Undefined control sequence.
+./Fluid_Dynamics_of_the_Environment.tex:1768: Undefined control sequence.
 <recently read> \lamdba 
                         
-l.1764 ...r order to the vortex ring when $\lamdba
+l.1768 ...r order to the vortex ring when $\lamdba
                                                    \sim a$ so $k \sim \frac{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1585,22 +1380,23 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1763--1765
-
- []
-
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1781
+Underfull \hbox (badness 10000) in paragraph at lines 1767--1769
 
  []
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 1806--1809
+Underfull \hbox (badness 10000) in paragraph at lines 1782--1785
 
  []
 
-./Fluid_Dynamics_of_the_Environment.tex:1814: Undefined control sequence.
-l.1814 ...^1}{V}) = 2 ( \frac{g'}{1+ C_A} - \lapha
+
+Underfull \hbox (badness 10000) in paragraph at lines 1810--1813
+
+ []
+
+[57]
+./Fluid_Dynamics_of_the_Environment.tex:1818: Undefined control sequence.
+l.1818 ...^1}{V}) = 2 ( \frac{g'}{1+ C_A} - \lapha
                                                    w^2 \frac{s}{vR})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1609,49 +1405,112 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1822--1825
-
- []
-
-[57]
-Underfull \hbox (badness 10000) in paragraph at lines 1828--1831
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1829
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1832--1835
+
+ []
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1851--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
 
  []
 
-[58] [59] (./Fluid_Dynamics_of_the_Environment.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1864
+
+ []
+
+[59]
+./Fluid_Dynamics_of_the_Environment.tex:1880: Missing $ inserted.
+<inserted text> 
+                $
+l.1880 ...at a circle of width $b$ with $u$ = W e^
+                                                  {- \frac{r^2}{b^2}}$ and t...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1877--1883
+
+ []
+
+[60] [61] (./Fluid_Dynamics_of_the_Environment.aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1271 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 1788 strings out of 478599
- 23260 string characters out of 5858101
- 335266 words of memory out of 5000000
- 19674 multiletter control sequences out of 15000+600000
+ 1787 strings out of 478599
+ 23255 string characters out of 5858101
+ 335265 words of memory out of 5000000
+ 19673 multiletter control sequences out of 15000+600000
  416204 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,9n,66p,1659b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Fluid_Dynamics_of_the_Environment.pdf (59 pages, 417202 bytes).
+Output written on Fluid_Dynamics_of_the_Environment.pdf (61 pages, 422422 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 282 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

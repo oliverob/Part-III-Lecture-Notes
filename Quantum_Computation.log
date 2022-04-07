@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  21 MAR 2022 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  22 MAR 2022 15:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1209,7 +1209,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.864 ...d unitary transformation.\begin{itemlist}
-                                                  \item  PE with hamiltonian...
+                                                  \item  PE with Hamiltonian...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1227,7 +1227,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.864 ...y transformation.\begin{itemlist}\item  P
-                                                  E with hamiltonian simulat...
+                                                  E with Hamiltonian simulat...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1404,40 +1404,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./Quantum_Computation.tex:884: LaTeX Error: Command \item invalid in math mode.
+Underfull \hbox (badness 10000) in paragraph at lines 883--884
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.884 \item
-            Finally, we will perform a measuremnt of observable $M$ on $\ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:884: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.884 \item F
-             inally, we will perform a measuremnt of observable $M$ on $\ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:884: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.884 \item F
-             inally, we will perform a measuremnt of observable $M$ on $\ket...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
 
 ./Quantum_Computation.tex:884: LaTeX Error: Lonely \item--perhaps a missing list environment.
@@ -1450,14 +1419,6 @@ l.884 \item F
              inally, we will perform a measuremnt of observable $M$ on $\ket...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-./Quantum_Computation.tex:884: Missing $ inserted.
-<inserted text> 
-                $
-l.884 ...uremnt of observable $M$ on $\ket{\hat x}
-                                                  $ to estimate its mean val...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
 
 ./Quantum_Computation.tex:886: LaTeX Error: \begin{document} ended by \end{itemlist}.
@@ -1473,12 +1434,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (1.6191pt too wide) in paragraph at lines 883--887
-\OML/cmm/m/it/10 Finally; wewillperformameasuremntofobservable$\OT1/cmr/m/n/10 M$\OML/cmm/m/it/10 on$$[]$ \OT1/cmr/m/n/10 to es-ti-mate its mean
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 883--887
+Underfull \hbox (badness 10000) in paragraph at lines 884--887
 
  []
 
@@ -1755,102 +1711,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 990--995
  []
 
 <xymatrix 3x3 310> <xymatrix 5x5 918>
-./Quantum_Computation.tex:1013: Misplaced alignment tab character &.
-l.1013         N &
-                   Syndrome\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1014: Misplaced alignment tab character &.
-l.1014         $I \otimes I \otimes I$ &
-                                         00\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1015: Misplaced alignment tab character &.
-l.1015         $ I \otimes I \otimes X$ &
-                                          01\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1016: Misplaced alignment tab character &.
-l.1016         $ I \otimes X \otimes I$ &
-                                          10\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1017: Misplaced alignment tab character &.
-l.1017         $I \otimes X \otimes X$ &
-                                         11\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1018: Misplaced alignment tab character &.
-l.1018         $ X \otimes I \otimes I$ &
-                                          11\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1019: Misplaced alignment tab character &.
-l.1019         $ X \otimes I \otimes X$ &
-                                          10\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1020: Misplaced alignment tab character &.
-l.1020         $ X \otimes X \otimes I$ &
-                                          01\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Quantum_Computation.tex:1021: Misplaced alignment tab character &.
-l.1021         $ X \otimes X \otimes X$ &
-                                          00\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1022
-
- []
-
-
 Overfull \hbox (11.00366pt too wide) in paragraph at lines 1009--1025
 \OT1/cmr/m/n/10 ing cir-cuit per-forms the map $(\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^L []\OT1/cmr/m/n/10 ) [] [] \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 (\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 +
  []
@@ -1860,346 +1720,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 1009--1025
 
  []
 
-[39] <xymatrix 4x3 607> <xymatrix 6x5
-./Quantum_Computation.tex:1044: Xy-pic error: in entry "3,6": No [2,0] (is "5,6") from here.
-\xyerror@ ...#2}\fi \errmessage {Xy-pic error: #1}
-                                                  }
-l.1044 }
-        
-See the Xy-pic manual for further information.
-
-1215>
-Overfull \hbox (413.83987pt too wide) detected at line 1049
-\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^L [] \OMS/cmsy/m/n/10 ! []\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([] + \OML/cmm/m/it/10 ^^L []\OT1/cmr/m/n/10 )([] + []))([] + []) + \OML/cmm/m/it/10 ^^L\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! []\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([] + [])([] + [])([] + []) + \OML/cmm/m/it/10 ^^L\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )
+[39] <xymatrix 4x3 607> <xymatrix 6x5 1291>
+Overfull \hbox (112.0816pt too wide) detected at line 1051
+\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^L [] \OMS/cmsy/m/n/10 ! []\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([] + [])([] + [])([] + []) + \OML/cmm/m/it/10 ^^L\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1055
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1055
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1055
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1055
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1064
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1064
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1072
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1072
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1072
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1076
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1076
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1082
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1082
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1082
-
- []
-
-
-./Quantum_Computation.tex:1096: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1096 \subsection
-                  {Hybrid Quantum-Classical computation}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Quantum_Computation.tex:1096: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1096 \subsection
-                  {Hybrid Quantum-Classical computation}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 1096.
-
-
-./Quantum_Computation.tex:1096: LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-Please use the math alphabet \mathbf instead of the \bfseries command. 
-
-./Quantum_Computation.tex:1096: Missing $ inserted.
+)
+Runaway argument?
+{1]{2^k} \prod _{i=1}^k ( I + \mathcal {M}^{(i)}) $$ Let's find the d\ETC.
+! File ended while scanning use of \frac .
 <inserted text> 
-                $
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+                \par 
+<*> Quantum_Computation.tex
+                           
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-./Quantum_Computation.tex:1096: Missing } inserted.
-<inserted text> 
-                }
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+! Emergency stop.
+<*> Quantum_Computation.tex
+                           
+*** (job aborted, no legal \end found)
 
-./Quantum_Computation.tex:1096: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Quantum_Computation.tex:1096: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I'm guessing that you meant to end an alignment here.
-
-./Quantum_Computation.tex:1096: Missing $ inserted.
-<inserted text> 
-                $
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Quantum_Computation.tex:1096: Missing } inserted.
-<inserted text> 
-                }
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Quantum_Computation.tex:1096: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Quantum_Computation.tex:1096: Missing $ inserted.
-<inserted text> 
-                $
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Quantum_Computation.tex:1096: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.1096 ...on{Hybrid Quantum-Classical computation}
-                                                  
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
-Overfull \hbox (725.63586pt too wide) detected at line 1096
-[][] [][]
- []
-
-./Quantum_Computation.tex:1108: Missing $ inserted.
-<inserted text> 
-                $
-l.1108 ...g of application of $C_i$ followed by M_
-                                                  i) we make use of $\ket{\p...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Quantum_Computation.tex:1108: Missing $ inserted.
-<inserted text> 
-                $
-l.1108 ...by M_i) we make use of $\ket{\psi_{i-1}}
-                                                   = \ket{0}^{\otimes n}$.\\\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1110
-
- []
-
-
-Overfull \hbox (45.85114pt too wide) in paragraph at lines 1102--1110
-\OT1/cmr/m/n/10 Type 2: Ev-ery round (con-sist-ing of ap-pli-ca-tion of $\OML/cmm/m/it/10 C[]$ \OT1/cmr/m/n/10 fol-lowed by M$[])\OML/cmm/m/it/10 wemakeuseof$$[] \OT1/cmr/m/n/10 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1110
-
- []
-
-[42]
-./Quantum_Computation.tex:1119: Undefined control sequence.
-l.1119 ...state of $P$ with $P\ket{\psi} = \lamdba
-                                                  _p \ket{\psi}$, $\lambda_p...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Quantum_Computation.tex:1120: Undefined control sequence.
-<argument> \lambda _p P + \lamdba 
-                                  _q Q
-l.1120 ...rac{\lambda_p P + \lamdba_q Q}{\sqrt{2}}
-                                                  $ is always a unitary Clif...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Quantum_Computation.tex:1121: Undefined control sequence.
-<recently read> \lamdba 
-                        
-l.1121 ...ection of $\ket{\psi}$ onto the $\lamdba
-                                                  _Q$ eigenspace of $Q$.\\\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Quantum_Computation.tex:1122: Undefined control sequence.
-<recently read> \lamdba 
-                        
-l.1122 ...lly chossing a uniformly random $\lamdba
-                                                   \in \{ \pm 1\}$ and apply...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1123
-
- []
-
-[43]
-./Quantum_Computation.tex:1129: Undefined control sequence.
-l.1129 ...t of $P$ on $\ket{0}^{\otimes n} \otiems
-                                                   \ket{\psi}$ and the measu...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Quantum_Computation.tex:1129: Missing $ inserted.
-<inserted text> 
-                $
-l.1129 ...0}^{\otimes n} \ket{\psi'}, $\ket{\psi'}
-                                                  $ respectively, witht he s...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1132
-
- []
-
-[44] (./Quantum_Computation.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 4435 strings out of 478599
- 54033 string characters out of 5858101
- 435739 words of memory out of 5000000
- 22265 multiletter control sequences out of 15000+600000
+ 4436 strings out of 478599
+ 54000 string characters out of 5858101
+ 441775 words of memory out of 5000000
+ 22268 multiletter control sequences out of 15000+600000
  417765 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,23n,80p,1630b,900s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Quantum_Computation.pdf (44 pages, 407044 bytes).
-PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 72i,24n,80p,1630b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
