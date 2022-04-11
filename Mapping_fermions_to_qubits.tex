@@ -9,6 +9,7 @@
 \usepackage{bm}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{cancel}
 \usepackage{qcircuit}
 \usepackage{mathtools}
 \usepackage{verbatim}
@@ -205,7 +206,7 @@ where
 It is clear to see that these operators act in exactly the same way on a qubit spin basis that the fermionic creation and annihilation operators act upon the Fock basis. \textbf{might be worth explaining why the naive approach doesn't work and hence the motivation for the $Z_k$s}
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
 The Jordan-Wigner transformation uses O(1) qubits to represent each fermionic mode, however it requires O(N) gates to simulate one fermionic operation. This is because it stores the occupation number locally and the parity non-locally. An alternative scheme called the parity basis stores the parity locally and the occupation number non-locally, however this still requires O(N) gates to simulate one fermionic operation \cite{seeley}. The Bravyi-Kiteav is a halfway house which partially stores both the occupation number and parity non-locally.\\\\
-The following explanation of the mapping is adapted from \cite{bravyikitaev}. (\textbf{maybe also talk about Fenwick trees \cite{operatorLocality}}). First, we must define a partial order $\preceq$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$, then $\alpha \preceq \beta$. For example:
+We will describe three different formulations of the mapping: partial ordering, transformation matrices and Fenwick trees. The partial ordering scheme was that first used by Bravyi and Kiteav \cite{bravyikitaev} and provides the clearest illustration of operator locality. Transformation matrices are intuitively easier to understand, but the complexity is less clear. The following explanation of the mapping is adapted from \cite{bravyikitaev}. (\textbf{maybe also talk about Fenwick trees \cite{operatorLocality}}). First, we must define a partial order $\preceq$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$, then $\alpha \preceq \beta$. For example:
 $$
 \begin{rcases}
         \begin{aligned}
@@ -275,7 +276,7 @@ $\beta_i$ with $2^x < i < 2^{x+1}$ is just the $i \times i$ segment of $\beta_{2
 \vspace*{12pt}
 \noindent
 Before continuing with this discussion and defining the Bravyi-Kitaev operators we first must state and prove two results from \cite{bravyikitaev}:\\\\
-{\bf Lemma~1 \cite{bravyikitaev}:} Define the set $L(\beta)$ such that $\alpha \in L(\beta)$ if and only if for some $i_0$: $\beta_{i_0} = 1$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = 1$ for $i< i_0$, then:
+{\bf Lemma~1 \cite{bravyikitaev}:} Define the set $L(\alpha)$ such that $\beta \in L(\alpha)$ if and only if for some $i_0$: $\alpha_{i_0} = 1$, $\beta_{i_0} = 0$, $\beta_i = \alpha_i$ for $i> i_0$ and $\beta_i = 1$ for $i< i_0$, then:
 \begin{equation}
         \sum_{j \in L(i)} q_j = \sum_{j < i} f_j
 \end{equation}
@@ -284,7 +285,7 @@ Before continuing with this discussion and defining the Bravyi-Kitaev operators 
 \noindent
 The following proof is of my own invention:
 \begin{equation}
-L(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{i_0} = 1\}
+L(\alpha) = \{ \alpha_{n-1} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{i_0} = 1\}
 \end{equation}
 Define $A(\beta)$ as the set of $j$ such that $j \preceq \beta$:
 \begin{equation}
@@ -292,13 +293,13 @@ Define $A(\beta)$ as the set of $j$ such that $j \preceq \beta$:
 \end{equation}
 \begin{equation}
         \label{AL}
-A(L(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n+1}} \ldots \alpha_{i_0-1}0 1 \ldots 1 \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \}
+A(L(\alpha)) =  \{\{  j: j \preceq \alpha_{n-1} \ldots \alpha_{i_0+1}0 1 \ldots 1 \} \forall i_0 \text{ s.t. } \alpha_{i_0} = 1 \}
 \end{equation}
-As $A(\alpha_{i_n}\ldots\alpha_{i+1}01\ldots11) =  \{j:\alpha_{i_n}\ldots \alpha_{i+1} 0\ldots 00\ \leq j \leq \alpha_{i_n}\ldots \alpha_{i+1} 01\ldots 11\}$, Eq.~\ref{AL} is an algorithm for generating the set of all the integers less than $\alpha$. Moving from left to right at every $\alpha_i = 1$ we generate the set of integers $[\alpha_{i_n}\ldots\alpha_{i+1} 0\ldots000, \alpha_{i_n} \ldots \alpha_{i+1}10 \ldots 000)$. 
-$$\bigcup_{S\in A(L(\alpha))}S = \bigcup_{\alpha_i = 1} \{j:\alpha_{i_n}\ldots \alpha_{i+1} 0\ldots 00\ \leq j < \alpha_{i_n}\ldots \alpha_{i+1} 10\ldots 00\} = \{ j: j < \alpha\}$$
+As $A(\alpha_{n-1}\ldots\alpha_{i_0+1}01\ldots11) =  \{j:\alpha_{n-1}\ldots \alpha_{i_0+1} 0\ldots 00\ \leq j \leq \alpha_{n-1}\ldots \alpha_{i_0+1} 01\ldots 11\}$, Eq.~\ref{AL} is an algorithm for generating the set of all the integers less than $\alpha$. Moving from left to right at every $\alpha_{i_0}= 1$ we generate the set of integers $[\alpha_{n-1}\ldots\alpha_{i_0+1} 0\ldots0, \alpha_{n-1} \ldots \alpha_{i_0+1}10 \ldots 0)$. 
+$$\bigcup_{S\in A(L(\alpha))}S = \bigcup_{\alpha_{i_0} = 1} \{j:\alpha_{n-1}\ldots \alpha_{i_0+1} 0\ldots 00\ \leq j < \alpha_{n-1}\ldots \alpha_{i_0+1} 10\ldots 00\} = \{ j: j < \alpha\}$$
 Therefore, every possible binary integer less than $\alpha$ will be generated. An example is given below:
 $$
-A(L(1010)) = A(\{0111, 1001 \}) = \{\{0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111\}, \{1001, 1000\}\}
+A(L(1010)) = A(\{0111, 1001 \}) = \{\{0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111\}, \{1000, 1001\}\}
 $$
 Recalling $q_j = \sum_{k \preceq j} f_k$ and as $S$ are disjoint, we can rewrite:
 \begin{equation}
@@ -308,7 +309,7 @@ Recalling $q_j = \sum_{k \preceq j} f_k$ and as $S$ are disjoint, we can rewrite
  
 \vspace*{12pt}
 \noindent
-{\bf Lemma~2 \cite{bravyikitaev}:} Define the set $K(\beta)$ such that $\alpha \in K(\beta)$ if and only if for some $i_0$, $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i\neq i_0$ and $\beta_i = 1$ for $i< i_0$, then:
+{\bf Lemma~2 \cite{bravyikitaev}:} Define the set $K(\alpha)$ such that $\beta \in K(\alpha)$ if and only if for some $i_0$, $\beta_{i_0} = 0$, $\beta_i = \alpha_i$ for $i\neq i_0$ and $\alpha_i = 1$ for $i< i_0$, then:
 \begin{equation}
         q_i - \sum_{j \in K(i)} q_j = \sum_{j \prec i} f_j
 \end{equation}
@@ -317,30 +318,35 @@ Recalling $q_j = \sum_{k \preceq j} f_k$ and as $S$ are disjoint, we can rewrite
 \noindent
 The following proof is of my own invention:
 \begin{equation}
-        K(\alpha) = \{ \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
+        K(\alpha) = \{ \alpha_{n-1} \ldots \alpha_{i_0 +1} 0 11 \ldots 1: \forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
 \end{equation}
 \begin{equation}
         \label{AK}
-A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 1 \}\forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
+A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{n-1} \ldots \alpha_{i_0+1}0 1 \ldots 1 \}\forall \>i_0\text{ s.t. } \alpha_{j} = 1 \> \forall \>j<i_0\}
 \end{equation}
-Let $i_{max}$ be the maximum $i$ such that $\alpha_j =1$ for all $j < i$:
+Every $\alpha$ can be written as $\alpha_{n-1}\ldots \alpha_{i_{max}+1}01\ldots 111$ with $i_{max}$ the maximum $i$ such that $\alpha_j =1 \> \forall \> j<i$ ($i_{max} = 0$ if $\alpha_0 = 0$). Therefore, 
 \begin{multline}
-        A(K(\alpha)) =  \{\{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}0 1 \ldots 1 \}, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}00 1 \ldots 1 \}\\ \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_{max}+1}01 0 \ldots 1 \}, \cdots, \{  j: j \preceq \alpha_{i_n} \alpha_{i_{n-1}} \ldots \alpha_{i_0+1}0 1 \ldots 10 \} \} \end{multline}
-        \begin{equation}
-                A(K(\alpha)) = \{ \{ j: j \preceq \alpha^0 \}, \{ j: j \preceq \alpha^1 \}, \cdots, \{ j: j \preceq \alpha^{i_{max}} \} \}
+        K(\alpha) = \{ \alpha_{n-1} \ldots \alpha_{i_{max}+1}0 1 \ldots 1 , \alpha_{n-1} \ldots \alpha_{i_{max}+1}0 0\ldots 1 ,\\ \alpha_{n-1} \ldots \alpha_{i_{max}+1}0 10 \ldots 1 , \cdots ,\alpha_{n-1} \ldots \alpha_{i_{max}+1}0 1 \ldots 10 \} \end{multline}
+\begin{equation}
+        K(\alpha) = \{ \alpha, \alpha^{i_{max}-1}, \alpha^{i_{max}-2}, \cdots, \alpha^0 \}
+        \label{Kwrittenout}
+\end{equation}
+\begin{equation}
+                A(K(\alpha)) = \{ \{ j: j \preceq \alpha \}, \{ j: j \preceq \alpha^0 \},\{ j: j \preceq \alpha^1 \}, \cdots, \{ j: j \preceq \alpha^{i_{max}-1} \} \}
         \end{equation}
-        As $\alpha^i$ for $i\neq 0$ are all the integers one partial order below $\alpha$:
+        where $\alpha^i$ is $\alpha$ with the $i$th digit replaced by a $0$. As $\alpha^i$ (for $0\leq i< i_{max}$) are all the integers one partial order below $\alpha$:
         \begin{equation}\bigcup_{i>0} \{j: j \preceq \alpha^i\} = \{j: j \prec \alpha\}\end{equation}
         As these sets are disjoint, $A(K(i))$ is equivalent to the following after applying the summation:
-        \begin{equation}
-                A(K(i)) = \{ \{ j: j \preceq i \}, \{j: j \prec i \}\}
+        \begin{equation*}
+                 \{ \{ j: j \preceq i \}, \{j: j \prec i \}\}
         \end{equation}
 So,
 \begin{equation}
         q_i - \sum_{j \in K(i)} q_j = \sum_{j \preceq i} f_j - \sum_{S \in A(K(i))} \sum_{j \in S} f_j = \sum_{j \preceq i }f_j - \left( \sum_{j \preceq i} + \sum_{j \prec i}\right) f_j = \sum_{j \prec i} f_j
         \end{equation}
          $\square$\,.\\\\
-         $K(i)$ is clearly a subset of $L(i)$ as $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i> i_0$ and $\alpha_i = \beta_i = 1$ for $i< i_0$, satisfies the requirements that $\alpha_{i_0} = 0$, $\alpha_i = \beta_i$ for $i > i_0$ and $\alpha_i =1$ for $i < i_0$ regardless of whether $\beta_{i_0} =1$ or not.\subsection{Bravyi-Kitaev operators}
+         From Equation~\ref{Kwrittenout}, it can be seen that $K(\alpha)$ excluding $\alpha$ is a subset of $L(\alpha)$, as $\alpha^i \in L(\alpha)$ if $\alpha_j = 1 \> \forall \>j\leq i$.
+         \subsection{Bravyi-Kitaev operators}
 To define the Bravyi-Kitaev operators we need to consider a more detailed treatment of how annihilating and creating fermionic modes affects the mapping. There are three different sets of qubits impacted by updating the fermionic mode $f_i$:
 \begin{itemlist}
 \item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 this is equivalent to $L(i)$. We need to calculate the parity so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. (\textbf{maybe include the transformation matrix forumlation}). The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than the $O(N)$ gates required in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
@@ -365,7 +371,7 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
 \end{table}
 
 \item \textbf{Update set ($U_i$)}: The set of qubits that store the parity of $f_i$ in their partial sum (excluding $i$), and therefore need to be flipped when this mode is created or annihilated. This can easily be read off as the columns of $\beta_n$, or simply all $j$ such that $i \prec j$. As every strict partial ordering reduces at least one binary digit from $1$ to $0$(\textbf{flip this reasoning}), the maximum number of composed strict partial orderings possible on index $i$ is $\log_2(i)$. So, the maximum number of qubits (excluding the $i$th qubit) that rely upon a given mode is $\log_2(i)$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits (using $O(\log(N))$ local $X$ gates) rather than $O(N)$ as in the parity basis (\textbf{need to elaborate upon the parity basis earlier}). \\ 
-\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). From Lemma~2, it is clear this is equivalent to $K(i)$, however it is also possible to find a formulation in terms of transformation matrices. As $\sum_j \beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. To compute the flip parity we need to apply $O(\log(N))$ $Z$ gates as $K(i)$ has at most $\log(i)$ ($< \log(N)$) elements. As $K(i)$ is a subset of $L(i)$, the Flip set is a subset of the Parity set. \textbf{Maybe explicitly seperate out the two methods and explain that one is easier to understand but the other gives a clearer measure of the complexity}\\\\
+\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). From Lemma~2, it is clear this is equivalent to $K(i)$, however it is also possible to find a formulation in terms of transformation matrices. As $\sum_j \beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. To compute the flip parity we need to apply $O(\log(N))$ $Z$ gates as $K(i)$ has at most $\log(i)$ ($< \log(N)$) elements. As $K(i)$ excluding $i$ is a subset of $L(i)$, the Flip set is a subset of the Parity set\textbf{well this isnt true maybe my defintion of the parity set is different from theirs}. \textbf{Maybe explicitly seperate out the two methods and explain that one is easier to understand but the other gives a clearer measure of the complexity}\\\\
         Now we can define the Bravyi-Kiteav creation and annihilation operators, in a similar fashion to \cite{seeley}. We will use the notation $U_S$ to mean $U$ applied to every qubit in set $S$.\\\\
         Using the flip set we can alter our definition of $\sigma^-_i$ and $\sigma^+_i$ from Jordan-Wigner to reflect the fact that when the flip set has parity one we act with the inverse:
         \begin{equation}
@@ -384,7 +390,7 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
         Therefore, every fermionic operation in the Bravyi-Kiteav mapping only requires $O(\log(N))$ gates.
 \end{itemlist}
 \section{Derby-Klassen Map}\label{derby-klassen_section}
-As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. These schemes only find representations for the few local interactions that exist in the Hamiltonian, rather than between every pair of modes like the Jordan-Wigner or Bravyi-Kitaev mapping. Generally this results in using more qubits but drastically smaller Pauli weights and thus fewer gates.\\\\
+As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a 'local' mapping that has low Pauli-weights for local fermionic operators. These schemes only find representations for a selection of local interactions (usually selected to closely match the terms in the target Hamiltonian) rather than between every pair of modes like the Jordan-Wigner or Bravyi-Kitaev mapping. Generally this results in using more qubits but drastically smaller Pauli weights and thus fewer gates.\\\\
 One strategy used to find 'local' mappings is searching for sets of low weight Pauli-strings for representing the fermionic edge ($E_{jk}$) and vertex ($V_j$) operators. These are defined below in terms of the Majorana operators $\gamma_j$:
 \begin{equation}
 \gamma_j = a_j + a^{\dagger}_j, \> \bar{\gamma_j} = \frac{a_j - a_j^{\dagger}}{i}
@@ -392,14 +398,13 @@ One strategy used to find 'local' mappings is searching for sets of low weight P
 \begin{equation}
         E_{jk} = - i \gamma_j \gamma_k, \> V_j = - i \gamma_j \bar{\gamma_j}
 \end{equation}
-The full set of these operators represent the full even fermionic algebra \cite{superfast} (\textbf{proove this}):
+The full set of these operators represent the full even fermionic algebra \cite{superfast} by (\textbf{proove this}):
 \begin{equation}
         \begin{align}
                 a_j^{\dagger} a_k + a_k^{\dagger} a_j &=& (\gamma_j - i \bar{\gamma_j}) (\gamma_k + i \bar{\gamma_k})  + (\gamma_k - i \bar{\gamma_k}) (\gamma_j + i \bar{\gamma_j}) &=& -\frac{i}{2}& E_{jk} (V_j - V_k)\\
                 a_j^{\dagger} a_j &=& (\gamma_j - i \bar{\gamma_j}) (\gamma_j + i \bar{\gamma_j}) &=&  \frac{1}{2}& (I - V_j)\\
 \end{align}
-\end{equation}
-So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.~\ref{edgecomm}) \cite{derbyklassen} and the loop condition (Eq.~\ref{loopcond}) that define these edges and vertices then we have a mapping from even fermionic operators to qubits operators. 
+\end{equation} They are defined by their anti-commutation relations (Eq.~\ref{edgecomm}) \cite{derbyklassen} and a loop condition (Eq.~\ref{loopcond}): 
 \begin{equation}
         \label{edgecomm}
         \begin{align}
@@ -412,7 +417,7 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
         i^{n} \prod_{i=1}^{n} E_{p_i p_{i+1}} = 1
         \end{equation}
         for a cyclic sequence of sites $p = \{p_1, p_2,\ldots, p_n, p_{n+1}: p_1 = p_{n+1} \}$.\\\\
-        In an intuitive sense these restrictions mean:
+       If we can find a set of Pauli-strings representing edges and vertices which satisfy these condtions then we have a mapping from even fermionic operators to qubits operators. In an intuitive sense these conditions mean:
         \begin{romanlist}
         \item Edge operators must anti-commute with any vertices they include
         \item Edge operators must anti-commute with any edges they share vertices with
@@ -518,13 +523,12 @@ So if we can find Pauli-strings that satisfy the anti-commutation relations (Eq.
 
 \fcaption{\label{squareLattice}}
 \end{figure}
-\pagebreak\\
 The design strategy involves mapping each edge operation to a Pauli string acting with a Y gate acting on the qubit at the head of the arrow and an X gate acting on the qubit at the tail of the arrow, and each vertex operation to a Z gate acting on the vertex. This is illustrated in Fig~\ref{derbyklassenline}:\\
 \begin{figure}[htbp]
 \centerline{
         \begin{tikzpicture}
-                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=left]right:{\small Y}}](L) at (-1,0) {};
-                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=right]left:\small X}](R) at (1,0) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=left]right:{\small X}}](L) at (-1,0) {};
+                \node[circle, fill, minimum size =4, inner sep = 0, label={[name=right]left:\small Y}](R) at (1,0) {};
 \draw[ultra thick, -latex, gray] (left.east) --  (right.west);
 \draw [thick, ->, gray] (L.north)arc(15:345:0.3);
                                     \node[left, black] at (L) {\small Z};
@@ -536,6 +540,7 @@ The design strategy involves mapping each edge operation to a Pauli string actin
 \end{figure}\\
 Straight away this can be seen to satisfy the intuitive conditions i), iii), iv) and v). Also as $X$ and $Y$ anti-commute, it is clear that every pair of edges that meet head-to-tail anti-commute, whereas pairs of edges that meet head-to-head or tail-to-tail commute. We can correct this behaviour by mapping every pair of these edges, those which currently commute but should anti-commute, to act upon a common ancillary qubit with X and Y gates respectively. Though this procedure is performed on a directed graph it still holds for edges in both directions as $E_{ij} = -E_{ji}$, so if $E_{ij}$ anti-commutes with an operator so will $E_{ji}$. Therefore, by adding ancillary qubits we can make the mapping also satisfy restriction ii).
 \\\\ On a square lattice this common ancillary qubit can be the face qubit adjacent to the edges, as every pair of head-to-head or tail-to-tail edges share a common face qubit (see Fig~\ref{squareLattice}). It can be seen that using an ancillary ``face'' qubit to introduce two separate anti-commutation relations does not break the restriction iv), as long as opposite edges of black squares act in commutable ways upon the ``face'' qubit (i.e. with same gate). \\\\
+\textbf{I think this section can be done better it is rather confusing and uses the same notation as the original paper}
 In order to satisfy the loop condition, applying any given loop of edges needs to correspond to an identity in the fermionic Fock space. In other words this mapping is only valid for fermionic state representations that lie in the space stabilised by cycles of edges. This is shown in detail by the following reasoning (found in \cite{derbyklassen2}):
 \begin{romanlist}
 \item Let $M_G$ be the group of directed edges $e_{ij}$ and vertices $v_{i}$ which satisfy Eq.~\ref{edgecomm} for a given graph $G$, and $C_G$ be the directed cycles of graph $G$
@@ -561,7 +566,7 @@ In order to satisfy the loop condition, applying any given loop of edges needs t
                 \end{equation}
                 \item All cyclic paths that include edges ($\tilde E_{ij}$) not in $G$ also satisfy Eq.~\ref{loopcond} as the definition of composition adds a factor of $i$ for every edge that gets added so the total phase is preserved:
                 \begin{multline}
-                        i^{n+2} \prod^n_{i=0}E_{p_i,p_{i+1}} \tilde E_{p_{n-1}, p_n} \tilde E_{p_n p_{n+1}} =\\ i^{n+2} \prod^n_{i=0}E_{p_i,p_{i+1}} i E_{p_{n-1}, p_k} E_{p_k, p_{n+1}} i E_{p_{n+1}, p_l} E_{p_l, p_{n+1}}= i^{n+4} \prod^{n+4}_{i=1}E_{p_i, p_{i+1}} = I
+                        i^{n+2} \prod^n_{i=0}E_{p_i,p_{i+1}} \tilde E_{p_{n-1}, p_n} \tilde E_{p_n p_{n+1}} =\\ i^{n+2} \prod^n_{i=0}E_{p_i,p_{i+1}} i E_{p_{n-1}, p_k} E_{p_k, p_{n}} i E_{p_{n}, p_l} E_{p_l, p_{n+1}}= i^{n+4} \prod^{n+4}_{i=1}E_{p_i, p_{i+1}} = I
                 \end{multline}
         \end{alphlist} $\square$.
 \item The quotient group $M_G/C_G$ has a faithful representation in the Hilbert subspace $U$ as:
@@ -574,7 +579,7 @@ In order to satisfy the loop condition, applying any given loop of edges needs t
                 with $U$ the common +1 eigenspace of $\sigma(C_G)$.
         \end{alphlist}
 \item If $\sigma$ is a representation in the multi-qubit Pauli operators $\{\pm 1, \pm i\} \times^N_i \{I_i, X_i, Y_i, Z_i\}$ then any subgroup $S$ that is abelian and does not contain $-I$ is the stabiliser of a non-trivial vector space \cite{nielsenChuang}.
-\item Since $C_G$ is abelian (\textbf{Proof}), $\sigma(C_G)$ is abelian. So if $-I \in\xnot \sigma(C_G)$, $\sigma(C_G)$ is the stabiliser of the common +1 eigenspace of $\sigma(C_G)$
+\item Since $C_G$ is abelian (\textbf{Proof}), $\sigma(C_G)$ is abelian. So if $-I\>\> \cancel \in \>\>\sigma(C_G)$, $\sigma(C_G)$ is the stabiliser of the common +1 eigenspace of $\sigma(C_G)$
 \item $M_G/C_G$ (and hence $M_E$) has a representation in the code space of $\sigma(C_G)$
 \end{romanlist}
 Therefore, the mapping we have found is valid as long as no cycle is mapped to $-I$. As all cycles on this square lattice can be decomposed into a combination of cycles around single black and white faces (\textbf{proof}), we only need to consider these stabiliser generators individually. \\\\
@@ -606,7 +611,7 @@ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning
 
 
                    \end{tikzpicture}}
-           \fcaption{\label{blackfaceloops} Diagram of looping around black face. This gives $X^2 = Y^2 = I$ at every ``vertex'' qubit, but $(-X)Y(-X)Y = (XY)^2 = (iZ)^2 = -I$ at the ``face'' qubit. The two negative signs introduced by having to flip the orientation of the vertical edges cancel each other out.}
+           \fcaption{\label{blackfaceloops} Diagram of looping around black face. This gives $X^2 = Y^2 = I$ at every ``vertex'' qubit, but $(-X)Y(-X)Y = (XY)^2 = (iZ)^2 = -I$ at the ``face'' qubit, so overall $-I_5I_1I_2I_3I_4 = -I$. The two negative signs introduced by having to flip the orientation of the vertical edges cancel each other out.}
    \end{figure}\\
    It can be seen in Fig~\ref{whitefaceloops}, that looping a white face produces a non-trivial stabilizer, which is not $-I$. Therefore, using the mapping described (with the sign flipped on one edge of every black face) will give a faithful representation of the even fermionic algebra. \\
 \begin{figure}[htbp]
@@ -640,9 +645,8 @@ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning
 
                    \end{tikzpicture}}
                    \fcaption{\label{whitefaceloops} Diagram of looping around white face. }
-   \end{figure}
-
-   Therefore, we can map the edges in the direction of their assigned orientation as:
+   \end{figure}\\
+Therefore, we can map the edges in the direction of their assigned orientation as:
 \begin{equation}
                 E_{ij} = \begin{cases}
                         X_i Y_j X_{f(i,j)} & (i,j) \text{ oriented downwards}\\
@@ -654,50 +658,65 @@ As shown in Fig~\ref{blackfaceloops}, looping a black face produces $-I$ meaning
         \begin{equation}
                 V_j = Z_j
         \end{equation}
+        This gives a map from pauli strings to edges and vertices which in turn form a representation of the even fermionic algebra. For instance, 
+        \begin{equation}
+                a_1 a_2^{\dagger} + a_1^{\dagger} a_2 \longleftrightarrow - \frac{i}{2} E_{12} (V_1 - V_2) \longleftrightarrow -\frac{i}{2}X_1 Y_2 Y_{f(1,2)}( Z_1 -Z_2)
+        \end{equation}
+        ....., mention that it is more efficent than the other local mappings.\\
+        \textbf{NEW IDEA: use (small fenwick trees) segmented bravyi-kitaev encodings combined with fermionic enumeration to improve locality}
                \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
                Mitchell Chiew and Sergii Strelchuk \cite{fermionicEncoding} realised that for some of the mappings we have discussed so far there is the potential for reducing resource costs without changing anything other than the order we encode qubits. This is achieved by improving the locality of the mapping, so local operations have lower Pauli weights. In the following treatment (adapted from \cite{fermionicEncoding}) we will consider the application to the Jordan-Wigner transformation. (\textbf{waiting for new paper on applications to mappings with additional auxillary})\\\\
                In 1-D the enumeration is trivial, however, in 2D it becomes an interesting problem. For instance, consider a fermionic square lattice every mode must be assigned a qubit from a 1-D qubit array. There are many different ways of accomplishing this; most notably the S or Z pattern illustrated in Fig~\ref{SZpattern}. As discussed in Section~\ref{derby-klassen_section}, we are often interested in Hamiltonians with local interactions (e.g. between adjacent modes in the lattice). Therefore, the particular enumeration you use will impact the number of qubits that lie between neighbouring modes in the lattice. This is important as in the Jordan-Wigner transformation the Pauli-weight of a fermionic operation scales with the difference in enumeration. Thus by minimising the difference in enumeration between adjacent modes we minimise the average Pauli-weight of local interactions. This reduces to the problem of simple optimal linear arrangement (or edgesum) \cite{edgesum} from graph theory, and is formulated as:\\\\
                \textbf{Simple Optimal Linear Arrangement}: For a graph G with vertices V and edges E. Find an enumeration scheme $f: V \rightarrow \{1,2,...,n\}$ that minimises the cost function
                \begin{equation}
-                       C(f) = \sum_{\alpha, \beta} |f(\alpha) - f(\beta)|
+                       C(f) = \sum_{\alpha, \beta} |f(\alpha) - f(\beta)| \label{SOLA}
                \end{equation}
                where the average Pauli weight is given by $\frac{C(f)}{|E|} +1$.\\\\
                This problem is NP-complete \cite{edgesum} though a number of solutions are known for a range of graphs. We will consider the case of the square lattice to illustrate the principle, but it could be equally well applied to any of the other graphs with known solutions.\\\\
-               The Mitchison-Durbin pattern (illustrated in Fig~\ref{mitchisondurbin}) provides the fermion enumeration scheme that minimises the average Pauli weight of hopping terms in a square lattice. The following proof of this proposition is adapted from \cite{fermionicEncoding} and \cite{mitchisondurbin}:
+               The Mitchison-Durbin pattern (illustrated in Fig~\ref{mitchisondurbin}) provides the fermion enumeration scheme that minimises the average Pauli weight of hopping terms in a square lattice. Below we present a brief summary of the proof found in \cite{fermionicEncoding} and \cite{mitchisondurbin}:
                \begin{itemlist}
-               \item \textbf{Lemma 7.1}: The minimum  cost will be attained by a horizontally and vertically ordered enumeration
-                       \begin{alphlist}
-                       \item Horizontal ordering means each row increases in numbering from left to right, and vertical ordering means each column increases in numbering from top to bottom
-                       \item It is clear that horizontally ordering a row will always decrease horizontal contributions to $C(f)$ (\textbf{is this clear?})
-                       \item \textbf{Lemma 7.1.1}: Horizontally ordering an enumeration will never increase the vertical contributions to $C(f)$
-                               \begin{romanlist}
-                               \item Horizontal ordering will only ever affect the vertical contributions if it acts upon adjacent rows differently, so modes that were not vertically adjacent now are. This only occurs if one row is in a different horizontal ordering to the other.
-                               \item It suffices to consider only the generative cases of swapping two modes: \\$f(\mu, \nu) < f(\mu, \nu+1)$ and $f(\mu+1, \nu) > f(\mu+1, \nu+1)$ or\\ $f(\mu, \nu) > f(\mu, \nu+1)$ and $f(\mu+1, \nu) < f(\mu+1, \nu+1)$
-                               \item In both instances, before vertical ordering their vertical contributions are $|f(\mu,\nu) -f(\mu+1, \nu)| + |f(\mu, \nu+1) - \f(\mu+1, \nu+1)|$, and after vertical ordering their vertical contributions are $|f(\mu,\nu) -f(\mu+1, \nu+1)| + |f(\mu, \nu+1) - \f(\mu+1, \nu)|$
-                               \item WLOG map the four modes to $\{i_1,i_2,i_3,i_4: i_k > i_j \text{ for } k>j\}$. Before the vertical ordering we have (I) $|i_4-i_2| + |i_1- i_3|$, (II) $|i_4 - i_1| + |i_2 - i_3|$ or (III) $|i_4 - i_1| + |i_3- i_2|$, and after we have $|i_4-i_3| + |i_1-i_2|$, $|i_4-i_2| +  |i_3 - i_1|$ or $|i_4 - i_3| + |i_2 - i_1|$ respectively. As $|i_4-i_2| > |i_4-i_3|$ and $|i_1-i_3|>|i_1-i_2|$, vertical ordering decreases the contribution in case I. As $|i_4-i_1| > |i_4-i_3|$ and $|i_1-i_2|>|i_3-i_2|$, vertical ordering decreases the contribution in case III. Case II simplifies to $i_4 +i_3 - i_1 - i_2$ before and  after so the contribution remains the same. $\square.$
-                               \end{romanlist}
-                       \item In a symmetrical manner to Lemma 7.1.1 vertically ordering an enumeration will never increase the horizontal contributions, and it will clearly only ever decrease the vertical contributions
-                       \item \textbf{Lemma 7.1.2}: Vertical ordering preserves horizontal ordering
-                               \begin{romanlist}
-                               \item  Assume the contrary that there is a horizontally ordered enumeration $h_{ij}$ that has been vertically ordered to enumeration $v_{ij}$, and now is no longer horizontally ordered
-                               \item This means that there is some $i<j$ and $k$ such that $v_{ik} > v_{jk}$. Vertical ordering implies that $v_{jn} \leq v_{jk}$ for all $n \in [1,k]$. Therefore, as vertical ordering just reorders within columns $(v_{jn}=)h_{jm}$ has $k$ values of $m$ for which $h_{jm} \leq v_{jk}$. Therefore, every column of $h$ to the left of $j$ has $k$ values of $m$ for which $h_{jm} < v_{jk}$. As $i<j$, column $i$ has $k$ values of $m$ for which $h_{im} \leq v_{jk} < v_{ik}$, which is a contradiction as $v_{ik}$ only has $k-1$ values less than it in its column $\square.$
-                       \end{romanlist}
-               \item Given an optimal enumeration with minimum cost we can apply horizontal ordering without increasing the cost, and then apply vertical ordering without disrupting the horizontal ordering or increasing the cost. Therefore, the minimum cost will be attained by a horizontally and vertically ordered enumeration $\square.$
-               \end{alphlist}
+               \item \textbf{Lemma 7.1}: The minimum  cost will be attained by a horizontally and vertically ordered enumeration (numbering increases from left to right and from top to bottom)
+                        \begin{alphlist}
+                        \item It can be shown that horizontal ordering never increases the vertical contributions, and clearly always decreases the horizontal ordering
+                        \item Similarly, vertical ordering can be shown to never increase the cost
+                        \item It can be proven that vertical ordering preserves horizontal ordering and vice verse
+                        \item Therefore, given an optimal enumeration we can apply horizontal and vertical ordering together without increasing the cost, so the minimum cost will be attained by a horizontally and vertically ordered enumeration
+                                      \end{alphlist}
        \item \textbf{Lemma 7.2}: Given a horizontally and vertically ordered enumeration scheme for the lattice, the cost function for the minimum-1-sum problem is:
                \begin{equation}
-                       C(f) = \sum_{\alpha\in V_b} f(\alpha) + \sum_{\alpha\in V_r} f(\alpha) - \sum_{\alpha\in V_l} f(\alpha) - \sum_{\alpha\in V_t} f(\alpha) 
+                       C(f) = \sum_{\alpha\in V_b} f(\alpha) + \sum_{\alpha\in V_r} f(\alpha) - \sum_{\alpha\in V_l} f(\alpha) - \sum_{\alpha\in V_t} f(\alpha) \label{hvSOLA}
                \end{equation}
-               where $V_b$, $V_r$, $V_l$ and $V_t$ are the vertices in the bottom row, right column, left column and top row respectively.
-               \begin{alphlist}
-               \item As horizontally and vertically ordered every absolute sign can be evaluated:
+               where $V_b$, $V_r$, $V_l$ and $V_t$ are the vertices in the bottom row, right column, left column and top row respectively.\\\\
+               \textbf{Proof}: As horizontally and vertically ordered every absolute sign in Eq.~\ref{SOLA} can be evaluated:
                        \begin{equation}
                                C(f) = \sum_{(\mu, \nu) \in V} f(\mu+1, \nu) - f(\mu, \nu) + f(\mu, \nu+1) - f(\mu, \nu)
                        \end{equation}
+                       \begin{equation}
+                       C(f) = \sum_{(\mu, \nu) \in V} f(\mu+1, \nu) - f(\mu, \nu) + \sum_{(\mu,\nu) \in V} f(\mu, \nu+1) - f(\mu, \nu)
+                               \end{equation}
+                               \begin{equation}
+                                       C(f) = \sum_{\nu = 1}^N f(N, \nu) - f(1, \nu) + \sum_{\mu =1}^1 f(\mu, N) - f(\mu, 1)
+                               \end{equation}
+                               \begin{equation}
+                       C(f) = \sum_{\alpha\in V_r} f(\alpha) - \sum_{\alpha\in V_l} f(\alpha) + \sum_{\alpha\in V_b} f(\alpha) - \sum_{\alpha\in V_t} f(\alpha) 
+               \end{equation}
+               $\square.$
+       \item The Mitchison-Durbin mapping splits the lattice into three regions $U$, $V$ and $\bar U \cup \bar V$, with $U$ initially the section containing labels up to $(N,1)$ and $V$ initially containing labels from $(1,N)$. These two regions form upper- and lower- skew block-triangular sections in a vertical and horizontally ordered enumeration. The first step taken is to maximise the sum $S(U)$ of labels on the boundary of the lattice in $U$ and minimise the same sum $S(V)$ in $V$, in order to minimise $C(f)$ given by Eq.~\ref{hvSOLA}. The rules for maximising $S(U)$ are:
+               \begin{alphlist}
+               \item Start with the top left vertex, and start numbering by moving along every new row or column as far as horizontal and vertical ordering allows. As if the row or column is not filled maximally, then the next column or row to be filled will start with a lower enumeration, decreasing $S(U)$.
+               \item Then move to the longest remaining column or row starting with the top-leftmost available vertex of the lattice. As given two columns or rows of length $b > a$ and initial enumeration $i$, filling $b$ first gives contribution $i + (i+b)$ to $C(f)$ whereas filling $a$ first gives a contribution $i + (i+a)$.
                \end{alphlist}
-               \end{itemlist}
-               \textbf{Could finish this proof off but I think it might take up too much space and isn't necessary for understanding the intuition of fermionic encoding. Could also include the calculation of the edgesum of the Mitchison-Durbin mapping}
-   \section{Relative performance}\label{comparision_section}
+               By symmetry, the reverse of this process minimises $S(V)$. The final region $\bar U \cup \bar V$ should be filled with columns to maximise the labels of the top row and minimise the labels of the bottom row. This uniquely determines the minimum cost enumeration for given $U$ and $V$.
+       \item It can be shown $U$ and $V$ can be optimally modified to minimise the cost. Given the length of the largest square $x$, $U$ should be restricted to rows of length $x$ till a height of $x$ above the bottom row when the length of the row should be equal to or one less than the height above the bottom row. The inverse modification should be applied to $V$. This provides the optimum edgesum for a given largest square size $x$.
+       \item It can be shown that the edgesum of this enumeration is given by:
+               \begin{equation}
+                       C^1(f_M) = N^3 - xN^2 + 2x^2 N - \frac{2}{3} x^3 + N^2 - x N - 2N + \frac{2}{3} x \label{mdcost}
+               \end{equation}
+               so the Mitchison-Durbin pattern is given by the value of $x$ which minimises Eq.~\ref{mdcost}. Therefore, the Mitchison-Durbin pattern is as described above and illustrated in Fig~\ref{mitchisondurbin} with $x$ the nearest integer to $N - \frac{1}{2} \sqrt{2N^2 - 2N + \frac{4}{3}}$. 
+       \item So, on a square lattice we can find an optimum enumeration pattern which leads to a reduction in the cost of Simple Optimal Linear Arrangement, and therefore minimises the average Pauli weight of hopping terms. As a simple S-pattern $f_S$ has a cost function of $C^1(f_s) = N^3 - N$, it is possible to use a computer to calculate the limiting (as $N \rightarrow \infty$) reduction in average Pauli weight of 13.9\% \cite{fermionicEncoding}.
+\end{itemlist}
+Therefore, using fermionic encoding it is possible to increase the locality of the fermion to qubit mapping without introducing any additional resources, and simply relabelling the qubits in the existing Jordan-Wigner mapping.
+                  \section{Relative performance}\label{comparision_section}
    Each of these encodings offers various advantages and disadvantages when applied to real applications such as VQEs or phase estimation discussed in Section~\ref{applications_section}. As explained in Section~\ref{vqe_section}, the efficency of these techniques is broadly based on three factors: number of qubits required, average Pauli-weight and the number of distinct Pauli-strings in the Hamiltonian. All of the different mappings make different trade-offs between these factors.\\\\
    There are some techniques \cite{reducequbits} which decrease the number of qubits required by increasing the number of distinct Pauli-strings, however we have not covered them here. All the techniques discussed in this essay leave the number of terms in the Hamiltonian unchanged.
    \subsection{'Local' versus 'non-local' mappings}
@@ -716,7 +735,6 @@ There is current research being carried out on how fermionic encoding could impr
 \raggedbottom
 We have discussed a number of different fermion to qubit mappings and their relative advantages. It has been shown that to optimise qubit cost a Bravyi-Kitaev mapping would likely be most effective, but there is the potential for new research into fermionic enumeration to show a Jordan-Wigner mapping should be preferred. In the current era of quantum computing with relatively small qubit counts, it is likely that optimising qubit cost will remain preferable to optimising gate cost for some time. However, if optimising gate cost is the preference we have shown that the Derby-Klassen mapping can produce constant gate costs for fermionic operators on a number of different lattice types. It remains an interesting open question whether fermionic enumeration can offer further improvements to 'local' mappings such as Derby-Klassen.
 \pagebreak
-
 \\
         \pagebreak
         \section{References}\\

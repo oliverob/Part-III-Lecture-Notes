@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1649326215 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1649326214
-  "Mapping_fermions_to_qubits.aux" 1649326076 4511 3e0943e2605c1ad03519e6d215b8ea6c "pdflatex"
-  "Mapping_fermions_to_qubits.tex" 1649326213 79219 364987dc8164c6b17e17af5d22ea7c93 ""
+["pdflatex"] 1649685767 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1649685767
+  "Mapping_fermions_to_qubits.aux" 1649683953 4678 7eef33a085e7e000948ad31816909bda "pdflatex"
+  "Mapping_fermions_to_qubits.tex" 1649685763 81357 d41621eb56efcaf0cf314e039b180264 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630418551 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630413436 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630413436 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -84,6 +84,7 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1630413436 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1630413436 29078 718ea4567ceff944262b0f5b0800e1d9 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1630413436 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1630413437 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1630413437 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1630413437 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1630422462 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -172,6 +173,7 @@
   "c:/texlive/2021/texmf-dist/tex/latex/breqn/cmbase.sym" 1630415041 16822 782a7dd49c020d869145e4a0bedbf436 ""
   "c:/texlive/2021/texmf-dist/tex/latex/breqn/flexisym.sty" 1630415041 17550 ad3d864c4c61538d7e39f3a02a4a9428 ""
   "c:/texlive/2021/texmf-dist/tex/latex/breqn/mathstyle.sty" 1630415041 7823 031739dca10b90862f4433fea44a9673 ""
+  "c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty" 1630415217 7592 dd751af313a16a0308545d5bfd7aaaa2 ""
   "c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1630417728 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1630419170 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1630419170 1224 978390e9c2234eab29404bc21b268d1e ""
