@@ -206,7 +206,7 @@ where
 It is clear to see that these operators act in exactly the same way on a qubit spin basis that the fermionic creation and annihilation operators act upon the Fock basis. \textbf{might be worth explaining why the naive approach doesn't work and hence the motivation for the $Z_k$s}
 \section{Bravyi-Kiteav Map}\label{bravyi-kitaev_section}
 The Jordan-Wigner transformation uses O(1) qubits to represent each fermionic mode, however it requires O(N) gates to simulate one fermionic operation. This is because it stores the occupation number locally and the parity non-locally. An alternative scheme called the parity basis stores the parity locally and the occupation number non-locally, however this still requires O(N) gates to simulate one fermionic operation \cite{seeley}. The Bravyi-Kiteav is a halfway house which partially stores both the occupation number and parity non-locally.\\\\
-We will describe three different formulations of the mapping: partial ordering, transformation matrices and Fenwick trees. The partial ordering scheme was that first used by Bravyi and Kiteav \cite{bravyikitaev} and provides the clearest illustration of operator locality. Transformation matrices are intuitively easier to understand, but the complexity is less clear. The following explanation of the mapping is adapted from \cite{bravyikitaev}. (\textbf{maybe also talk about Fenwick trees \cite{operatorLocality}}). First, we must define a partial order $\preceq$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$, then $\alpha \preceq \beta$. For example:
+Bravyi and Kitaev first proposed this mapping as a way of simulating qubits using local fermionic modes and vice versa. In their original formulation they used a partial ordering scheme based on the representation of the fermionic modes in binary. Later, a scheme using transformation matrices was introduced \cite{seeley}, and it was noted in \cite{operatorLocality} that the partial ordering scheme can be considered in terms of fenwick trees. We will illustrate all three of these approaches to give the broadest understanding of this mapping. The following explanation in terms of partial ordering is adapted from \cite{bravyikitaev}: \\\\First, we must define a partial order $\preceq$ over a set of binary strings. For $\alpha = \alpha_{l-1}\ldots \alpha_0$ and $\beta = \beta_{l-1}\ldots \beta_0$, if $\alpha_i = \beta_i$ for $i\geq i_0$ and $\beta_i = 1$ for $i < i_0$, then $\alpha \preceq \beta$. For example:
 $$
 \begin{rcases}
         \begin{aligned}
@@ -226,55 +226,6 @@ For the $i$-th qubit we store the parity of all modes $f_k$ with $k \preceq i$:
 \begin{equation}
         q_i = \sum_{k \preceq i} f_k 
 \end{equation}
-Alternatively, the transformation matrices $\beta_i$ can be described recursively as in \cite{seeley}. The base case $\beta_1$ is a ($1 \times 1$) matrix with a single entry of 1. Then we construct $\beta_{2^n}$ by taking $I \otimes \beta_{2^n}$ and filling the bottom row of the bottom-left quadrant of this matrix with 1s:
-\begin{equation}
-        \beta_{2^{n+1}} = \left( \begin{array}{@{}c|c@{}} 
-                        \beta_{2^n}  & \begin{matrix}
-                                \mbox{\normalfont \Large \bfseries 0}\\
-                        \end{matrix} \\
-                \hline
-                \begin{matrix} \mbox{\normalfont\large\bfseries 0}\\
-                        \leftarrow 1 \rightarrow 
-                \end{matrix} &  \beta_{2^n}
-        \end{array}
-         \right)
-\end{equation}
-$\beta_i$ with $2^x < i < 2^{x+1}$ is just the $i \times i$ segment of $\beta_{2^{x+1}}$ that includes $b_0$ through $b_{i-1}$. The mapping in the eight qubit case with the transformation matrix $\beta_8$ is shown below (with all sums taken modulo 2) \cite{tranter2018}:
-\begin{equation}        
-        \begin{bmatrix}
-                1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-                1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
-                0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
-                1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
-                0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
-                0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
-                0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
-                1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
-        \end{bmatrix}        
-        \begin{bmatrix}
-                f_0 \\
-                f_1 \\
-                f_2 \\
-                f_3 \\
-                f_4 \\
-                f_5 \\
-                f_6 \\
-                f_7 \\
-        \end{bmatrix}
-        = \begin{bmatrix}
-                q_0 \\
-                q_1 \\
-                q_2 \\
-                q_3 \\
-                q_4 \\
-                q_5 \\
-                q_6 \\
-                q_7 \\
-        \end{bmatrix}
-\end{equation}
-
-\vspace*{12pt}
-\noindent
 Before continuing with this discussion and defining the Bravyi-Kitaev operators we first must state and prove two results from \cite{bravyikitaev}:\\\\
 {\bf Lemma~1 \cite{bravyikitaev}:} Define the set $L(\alpha)$ such that $\beta \in L(\alpha)$ if and only if for some $i_0$: $\alpha_{i_0} = 1$, $\beta_{i_0} = 0$, $\beta_i = \alpha_i$ for $i> i_0$ and $\beta_i = 1$ for $i< i_0$, then:
 \begin{equation}
@@ -349,7 +300,7 @@ So,
          \subsection{Bravyi-Kitaev operators}
 To define the Bravyi-Kitaev operators we need to consider a more detailed treatment of how annihilating and creating fermionic modes affects the mapping. There are three different sets of qubits impacted by updating the fermionic mode $f_i$:
 \begin{itemlist}
-\item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 this is equivalent to $L(i)$. We need to calculate the parity so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. (\textbf{maybe include the transformation matrix forumlation}). The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than the $O(N)$ gates required in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
+\item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 this is equivalent to $L(i)$. We need to calculate the parity so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than the $O(N)$ gates required in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
 \vspace*{4pt}   %only when needed
 \begin{table}[hb]
         \tcaption{\label{parityTable} Example of calculating parity for eight qubit case}
@@ -369,9 +320,8 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
 \hline\\
 \end{tabular}}
 \end{table}
-
 \item \textbf{Update set ($U_i$)}: The set of qubits that store the parity of $f_i$ in their partial sum (excluding $i$), and therefore need to be flipped when this mode is created or annihilated. This can easily be read off as the columns of $\beta_n$, or simply all $j$ such that $i \prec j$. As every strict partial ordering reduces at least one binary digit from $1$ to $0$(\textbf{flip this reasoning}), the maximum number of composed strict partial orderings possible on index $i$ is $\log_2(i)$. So, the maximum number of qubits (excluding the $i$th qubit) that rely upon a given mode is $\log_2(i)$ and is attained by $f_0$ if $N = 2^x$ for some $x \in \mathbb{N}$. Therefore, when we update an occupation number we only need to update $O(\log(N))$ qubits (using $O(\log(N))$ local $X$ gates) rather than $O(N)$ as in the parity basis (\textbf{need to elaborate upon the parity basis earlier}). \\ 
-\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). From Lemma~2, it is clear this is equivalent to $K(i)$, however it is also possible to find a formulation in terms of transformation matrices. As $\sum_j \beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. To compute the flip parity we need to apply $O(\log(N))$ $Z$ gates as $K(i)$ has at most $\log(i)$ ($< \log(N)$) elements. As $K(i)$ excluding $i$ is a subset of $L(i)$, the Flip set is a subset of the Parity set\textbf{well this isnt true maybe my defintion of the parity set is different from theirs}. \textbf{Maybe explicitly seperate out the two methods and explain that one is easier to understand but the other gives a clearer measure of the complexity}\\\\
+\item \textbf{Flip set ($F_i$)}: The set of qubits from which $\sum_{k \prec i} f_k$ can be deduced, which is necessary as we need to know whether the qubit $i$ has the same or flipped parity with respect to $f_i$. This depends on the parity of the other modes in the partial sum. For instance, if the other modes have parity 1 then $\ket{q_i} = \ket{1} \rightarrow f_i = 0$, then acting with a fermionic creation operator corresponds to applying a spin annihilation gate ($\sigma^-_i$) rather than a spin creation gate ($\sigma^+_i$). From Lemma~2, it is clear this is equivalent to $K(i)$, which has at most $\log(i)$ ($< \log(N)$) elements. Therefore, to compute the flip parity we need to apply $O(\log(N))$ $Z$ gates. As $K(i)$ excluding $i$ is a subset of $L(i)$, the Flip set is a subset of the Parity set\textbf{well this isnt true maybe my defintion of the parity set is different from theirs}. \\\\
         Now we can define the Bravyi-Kiteav creation and annihilation operators, in a similar fashion to \cite{seeley}. We will use the notation $U_S$ to mean $U$ applied to every qubit in set $S$.\\\\
         Using the flip set we can alter our definition of $\sigma^-_i$ and $\sigma^+_i$ from Jordan-Wigner to reflect the fact that when the flip set has parity one we act with the inverse:
         \begin{equation}
@@ -387,6 +337,61 @@ $q_7$ & 111 & 011, 101, 110 &  $f_0 +  f_1 + f_2 + f_3$ \,,\, $f_4 + f_5$ \,,\, 
                 a^{\dagger}_i \rightarrow X_{U(i)}  \sigma^+_iZ_{R_i} = \frac{1}{2}\left( \bigotimes_{j \succ i} X_j \otimes X_i \otimes \bigotimes_{j \in L(i)} Z_j - i \bigotimes_{j \succ i} X_j \otimes Y_i\otimes \bigotimes_{j \in R_i} Z_j \right) 
                 \end{align}
         \end{equation}
+Alternatively, the transformation matrices $\beta_i$ can be described recursively as in \cite{seeley}. The base case $\beta_1$ is a ($1 \times 1$) matrix with a single entry of 1. Then we construct $\beta_{2^n}$ by taking $I \otimes \beta_{2^n}$ and filling the bottom row of the bottom-left quadrant of this matrix with 1s:
+\begin{equation}
+        \beta_{2^{n+1}} = \left( \begin{array}{@{}c|c@{}} 
+                        \beta_{2^n}  & \begin{matrix}
+                                \mbox{\normalfont \Large \bfseries 0}\\
+                        \end{matrix} \\
+                \hline
+                \begin{matrix} \mbox{\normalfont\large\bfseries 0}\\
+                        \leftarrow 1 \rightarrow 
+                \end{matrix} &  \beta_{2^n}
+        \end{array}
+         \right)
+\end{equation}
+$\beta_i$ with $2^x < i < 2^{x+1}$ is just the $i \times i$ segment of $\beta_{2^{x+1}}$ that includes $b_0$ through $b_{i-1}$. The mapping in the eight qubit case with the transformation matrix $\beta_8$ is shown below (with all sums taken modulo 2) \cite{tranter2018}:
+\begin{equation}        
+        \begin{bmatrix}
+                1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+                1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+                0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+                0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+                0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+                1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+        \end{bmatrix}        
+        \begin{bmatrix}
+                f_0 \\
+                f_1 \\
+                f_2 \\
+                f_3 \\
+                f_4 \\
+                f_5 \\
+                f_6 \\
+                f_7 \\
+        \end{bmatrix}
+        = \begin{bmatrix}
+                q_0 \\
+                q_1 \\
+                q_2 \\
+                q_3 \\
+                q_4 \\
+                q_5 \\
+                q_6 \\
+                q_7 \\
+        \end{bmatrix}
+\end{equation}
+
+\vspace*{12pt}
+\noindent
+We can also express the parity, update and flip set in terms of these transformation matrices:
+\begin{itemlist}
+\item Parity...\\
+\item \textbf{Update set}: This can easily be read off the columns of $\beta_n$\\
+\item \textbf{Flip set}: As $\sum_j \beta^{-1}_{ij}q_j = f_i$ and $\beta^{-1}$ is lower diagonal with $1$ along the diagonal, we have $\sum_{j<i} \beta^{-1}_{ij}q_j = f_i - q_i = f_i - \sum_{j \preceq i} f_j  = \sum_{j\prec i} f_j$. Therefore, the rows of $\beta^{-1}$ excluding the diagonal gives the Flip set. 
+\end{itemlist}
         Therefore, every fermionic operation in the Bravyi-Kiteav mapping only requires $O(\log(N))$ gates.
 \end{itemlist}
 \section{`Local' Mappings}\label{derby-klassen_section}
@@ -674,7 +679,7 @@ The Derby-Klassen design scheme can be applied broadly to a number of regular la
 The Derby-Klassen mapping is just one example of many 'local' mappings which use ancillia qubits to produce constant Pauli weight interaction terms. It was the most efficient local mapping in the literature as it only requires 1.5 qubits per fermionic mode, compared to the 2 of Verstraete-Cirac, exact bosonization and Bravyi-Kitaev superfast mappings. However, recently published research by Chen and Xu \cite{chenxu} describes a super-compact mapping only requiring 1.25 qubits per fermionic mode. The super-compact mapping has a higher constant average Pauli weight, however, in the NISQ era with limited qubits available this is a negligible consideration compared to the reduction in ancilla qubits needed. Chen and Xu \cite{chenxu} also showed that every existing `local' mapping can be derived from applying generalised local unitary circuits to the exact bosonization map described in \cite{chen2}.
         \textbf{NEW IDEA: use (small fenwick trees) segmented bravyi-kitaev encodings combined with fermionic enumeration to improve locality}
                \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
-               Mitchell Chiew and Sergii Strelchuk \cite{fermionicEncoding} realised that for some of the mappings we have discussed so far there is the potential for reducing resource costs without changing anything other than the order we encode qubits. This is achieved by improving the locality of the mapping, so local operations have lower Pauli weights. In the following treatment (adapted from \cite{fermionicEncoding}) we will consider the application to the Jordan-Wigner transformation. (\textbf{waiting for new paper on applications to mappings with additional auxillary})\\\\
+               Mitchell Chiew and Sergii Strelchuk \cite{fermionicEncoding} realised that for some of the mappings we have discussed so far there is the potential for reducing resource costs without changing anything other than the order we encode qubits. This is achieved by improving the locality of the mapping, so local operations have lower Pauli weights. In the following treatment (adapted from \cite{fermionicEncoding}) we will consider the application to the Jordan-Wigner transformation. \\\\
                In 1-D the enumeration is trivial, however, in 2D it becomes an interesting problem. For instance, consider a fermionic square lattice every mode must be assigned a qubit from a 1-D qubit array. There are many different ways of accomplishing this; most notably the S or Z pattern illustrated in Fig~\ref{SZpattern}. As discussed in Section~\ref{derby-klassen_section}, we are often interested in Hamiltonians with local interactions (e.g. between adjacent modes in the lattice). Therefore, the particular enumeration you use will impact the number of qubits that lie between neighbouring modes in the lattice. This is important as in the Jordan-Wigner transformation the Pauli-weight of a fermionic operation scales with the difference in enumeration. Thus by minimising the difference in enumeration between adjacent modes we minimise the average Pauli-weight of local interactions. This reduces to the problem of simple optimal linear arrangement (or edgesum) \cite{edgesum} from graph theory, and is formulated as:\\\\
                \textbf{Simple Optimal Linear Arrangement}: For a graph G with vertices V and edges E. Find an enumeration scheme $f: V \rightarrow \{1,2,...,n\}$ that minimises the cost function
                \begin{equation}
@@ -724,7 +729,8 @@ The Derby-Klassen mapping is just one example of many 'local' mappings which use
                so the Mitchison-Durbin pattern is given by the value of $x$ which minimises Eq.~\ref{mdcost}. Therefore, the Mitchison-Durbin pattern is as described above and illustrated in Fig~\ref{mitchisondurbin} with $x$ the nearest integer to $N - \frac{1}{2} \sqrt{2N^2 - 2N + \frac{4}{3}} \approx 0.29 N$. 
        \item So, on a square lattice we can find an optimum enumeration pattern which leads to a reduction in the cost of Simple Optimal Linear Arrangement, and therefore minimises the average Pauli weight of hopping terms. As a simple S-pattern $f_S$ has a cost function of $C^1(f_s) = N^3 - N$, it is possible to use a computer to calculate the limiting (as $N \rightarrow \infty$) reduction in average Pauli weight of 13.9\% \cite{fermionicEncoding}.
 \end{itemlist}
-Therefore, using fermionic encoding it is possible to increase the locality of the fermion to qubit mapping without introducing any additional resources, and simply relabelling the qubits in the existing Jordan-Wigner mapping.
+Therefore, using fermionic encoding it is possible to increase the locality of the fermion to qubit mapping without introducing any additional resources, and simply relabelling the qubits in the existing Jordan-Wigner mapping.\\\\
+Recent research \cite{chiew2} has also shown that by combining fermionic enumeration with a constant number of aucilla qubits one can enhance the impact of the Mitchison-Durbin pattern. It was shown that using just 2 additional qubits to store the total parity of two sections of the pattern (which is also altered so $x \approx 0.47N$) gives a mapping with a 40\% limiting reduction in average Pauli weight compared to the S-pattern. 
                   \section{Relative performance}\label{comparision_section}
    Each of these encodings offers various advantages and disadvantages when applied to real applications such as VQEs or phase estimation discussed in Section~\ref{applications_section}. As explained in Section~\ref{vqe_section}, the efficency of these techniques is broadly based on three factors: number of qubits required, average Pauli-weight and the number of distinct Pauli-strings in the Hamiltonian. All of the different mappings make different trade-offs between these factors.\\\\
    There are some techniques \cite{reducequbits} which decrease the number of qubits required by increasing the number of distinct Pauli-strings, however we have not covered them here. All the techniques discussed in this essay leave the number of terms in the Hamiltonian unchanged.
@@ -736,13 +742,13 @@ There is also an important discussion to be had about the relative merits of the
 Tranter et al. \cite{tranter2018} preformed classical simulations of quantum phase estimation on 86 molecular systems using the Bravyi-Kitaev and Jordan-Wigner mappings. They found that with no optimisation and magnitude Trotter-ordering the Bravyi-Kitaev mapping showed a consistent improvement of up to 25\% shorter circuits, but only for molecules with more than roughly 30 spin-orbitals. This reflects the additional overhead required to implement Bravyi-Kitaev, as gates must be applied to at most $4 \log(N)+2$ qubits for every even fermionic operation (if $U(i)$, $U(j)$, $R_i$ and $R_j$ are disjoint), rather than at most $N$ qubits for Jordan-Wigner. This gives Bravyi-Kitaevv a larger prefactor and makes Jordan-Wigner more efficient for small systems. When gate optimisation (e.g. removing duplicate gates)  was introduced the Bravyi-Kitaev mapping pulled even further ahead with roughly 30-40\% shorter circuits. It is worth noting that another significant advantage of the Bravyi-Kitaev mapping is a large reduction in the number of entangling CNOT gates in exchange for a small up-tick in single qubit gates. This could make the mapping easier to implement on near-term experimental devices, as it is harder to implement 2-qubit gates.
 \fnt{a}{A lexicographic ordering is essentially an alphabetic ordering with respect to the Pauli strings that make up each Hamiltonian term. This attempts to maximise cancellation of CNOT gates by changing the least number of qubits between terms. From Fig~\ref{trotterStepCircuit} it can be seen how concatenating a circuit with only the fourth qubit changed would led to two CNOTs, an $R_X^{\dagger}$ and Hadamard gate cancelling out (as $H^2 = CNOT^2 = R_X^{\dagger}R_X = I$).}
 \\\\Additionally, they showed that a large amount of the advantage afforded by Bravyi-Kitaev over Jordan-Wigner is eliminated through the use of a better Trotter-ordering. Using an optimised lexicographic\fnm{a} ordering the mappings appear equivalent for small molecules, and for some larger molecules Jordan-Wigner resulted in marginally shorter circuits and lower CNOT counts. They attributed this to the complexity of the Bravyi-Kitaev mapping reducing the linearity of the CNOT chains and so being less optimisable. It should be emphasised that the lexicographic ordering drastically reduced circuit lengths for all mappings, so the better ordering simply had more of an impact upon the Jordan-Wigner mapping rather than increasing the circuit length of the Bravyi-Kitaev mapping. This behaviour was only shown to hold for lexicographic ordering, so it is unclear how an optimum ordering in Bravyi-Kitaev would perform against an optimum ordering in Jordan-Wigner.\\\\
-Tranter et al. \cite{tranter2018} also investigated the impact of the two different mappings upon Trotter error. The results were limited as determining Trotter error is hard because the exact ground state energy must be known to use a reference point. Therefore, they were only able to consider small systems were they found that when using lexicographic encoding the Trotter error was lower (in some cases half) with Bravyi-Kitaev than with Jordan-Wigner. However, for these systems the error was so small it would make a neglible impact compared to the different in circuit length of each Trotter step discussed above. It was hypothesied that if this reduction in error also holds for larger systems then it may significantly reduce the number of Trotter steps necessary to achieve a desired accuracy. So it is possible that in the case of lexicographic ordering the reduction in Trotter steps due to the lower errors of Bravyi-Kitaev may outweigh the small increase in circuit length making it the preferable choice. Further research is needed to determine the impact of different mappings on the Trotter error for large systems.\\\\
-One final consideration, which was not explored by Tranter et al., is the differing qubit connectivity required by the two schemes as discussed in \cite{codes}. In real world architecture qubits have to be physically laid out and not every qubit is connected to every other. This means often only adjacent pairs of qubits have physical 2-qubit gates between then, therefore to entangle distant qubits requires multiple real 2-qubit gates to produce one virtual 2-qubit gate. Both the mappings transform fermionic Hamiltonians into a series of Pauli strings, and when performing phase estimation the exponentials of these Pauli strings must be simulated. As shown in Fig~\ref{trotterStepCircuit}, exponentiating a Pauli string requires applying CNOT gates between every consecutive qubit involved. Therefore, the more accurately the Pauli strings generated by the mappings match the connectivity of qubit architecture the fewer additional 2-qubit gates will be required. This will depend upon each individual quantum device, but we will only consider the simple case of a square lattice architecture. Here the Jordan-Wigner map can be easily mapped on to a square lattice using for example a S-pattern embedding. Every Pauli string in this embedding would lie along the connectivity graph, therefore requiring no additional 2-qubit gates. On the other hand, the Bravyi-Kitaev is harder to embed as it generates Pauli strings that navigate a fenwick tree structure. In fact once the number of modes exceeds 16 it becomes impossible to embed the tree into a square lattice without mapping neighbouring modes in the tree to non-adjacent qubits \cite{codes}, thus requiring additional 2-qubit gates. This increasingly complex connectivity puts the Bravyi-Kitaev mapping at a distinct disadvantage, as the marginal improvements in circuit size described above will quickly become negligible compared to the extra CNOT gates required to entangle non-adjacent qubits.\\\\
-In conclusion, when given the choice between these two mappings to perform a Quantum Phase Estimation, if the qubit architecture allows all-to-all connectivity then the Bravyi-Kitaev mapping seems the most appropriate choice. For no simulation regardless of optimisation or ordering did it significantly underperform the Jordan-Wigner transformation. The only instance when it was comparable was for optimised lexicographic ordering, and in this case it may substantially reduce the Trotter error (although further research is needed to test this hypothesis). However, on most devices the qubit architecture will be more restricted in which case it is very likely that the Jordan-Wigner transformation will be preferable due to its simpler connectivity.
+Tranter et al. \cite{tranter2018} also investigated the impact of the two different mappings upon the Trotter error. However, the results were limited as determining the Trotter error is a hard problem owing to the difficulty in finding the exact ground state energy for use as a reference point. Therefore, they were only able to consider small systems where they found that with lexicographic encoding the Trotter error was lower (in some cases half) for Bravyi-Kitaev compared with Jordan-Wigner. However, for these systems the error was so small it would make a neglible impact compared to the difference in circuit length of individual Trotter steps discussed above. It was hypothesied that if this reduction in error also holds for larger systems then it may significantly reduce the number of Trotter steps necessary to achieve a desired accuracy. So it is possible that in the case of lexicographic ordering the reduction in Trotter steps due to the lower errors of Bravyi-Kitaev may outweigh the small increase in circuit length making it the preferable choice. However, further research is needed to determine the impact of different mappings on the Trotter error for large systems so we can draw no definite statements.\\\\
+One final consideration, which was not explored by Tranter et al., is the differing qubit connectivity required by the two schemes as discussed in \cite{codes}. In real world architecture, qubits have to be physically laid out and not every qubit is connected to every other. This means often only adjacent pairs of qubits have physical 2-qubit gates between then, therefore to entangle distant qubits requires multiple real 2-qubit gates to produce one virtual 2-qubit gate. Both the mappings transform fermionic Hamiltonians into a series of Pauli strings, and when performing phase estimation the exponentials of these Pauli strings must be simulated. As shown in Fig~\ref{trotterStepCircuit}, exponentiating a Pauli string requires applying CNOT gates between every consecutive qubit involved. Therefore, the more accurately the Pauli strings generated by the mappings match the connectivity of qubit architecture the fewer additional 2-qubit gates will be required. This will depend upon each individual quantum device, but we will only consider the simple case of a square lattice architecture. Here the Jordan-Wigner map can be easily mapped on to a square lattice using for example an S-pattern embedding. Every Pauli string in this embedding would lie along the connectivity graph, therefore requiring no additional 2-qubit gates. On the other hand, the Bravyi-Kitaev is harder to embed as it generates Pauli strings that navigate a fenwick tree structure. In fact once the number of modes exceeds 16 it becomes impossible to embed the tree into a square lattice without mapping neighbouring modes in the tree to non-adjacent qubits \cite{codes}, thus requiring additional 2-qubit gates. This increasingly complex connectivity puts the Bravyi-Kitaev mapping at a distinct disadvantage, as the marginal improvements in circuit size described above will quickly become negligible compared to the extra CNOT gates required to entangle non-adjacent qubits.\\\\
+In conclusion, when given the choice between these two mappings to perform a Quantum Phase Estimation, if the qubit architecture allows all-to-all connectivity then the Bravyi-Kitaev mapping seems the most appropriate choice. For all optimisations or orderings the Bravyi-Kitaev mapping significantly outperformed the Jordan-Wigner transformation, with the exception of optimised lexicographic ordering when it was comparable. Despite optimised lexicographic ordering giving the optimal gate count reduction it may be suboptimal for minimising the Trotter error, so an ordering with a clear advantage for the Bravyi-Kitaev mapping might be used instead. It is important to note that on most devices the qubit architecture will be more restricted, in which case it is very likely that the Jordan-Wigner transformation will be preferable due to its simpler connectivity.
  
 \subsection{Fermionic enumeration}
-Using an optimal fermionic enumeration can reduce circuit length without requiring any additional resources. This provides a very significant speed up to the Jordan-Wigner mapping. For instance, using the Mitchison-Durbin pattern on a square-lattice produces circuits 13.9\% shorter than using an S-pattern \cite{fermionicEncoding}. Currently, fermionic enumeration schemes have only been shown to give an improvement in Jordan-Wigner mappings. Thus they might shift the balance and make Jordan-Wigner mappings (with optimum fermionic enumeration) preferable to Bravyi-Kitaev mappings. However, simulations will need to be carried out to verify this. It is important to note that fermionic encodings are only maximally efficient for interaction graphs that have known minimum edgesum solutions, however, there are other graphs for which a good enumeration scheme can also lead to an order-of-magnitude reduction in gate count.\\\\
-There is current research being carried out on how fermionic encoding could improve 'local' mappings such as Derby-Klaseen. ...
+Using an optimal fermionic enumeration can reduce circuit length without requiring any additional resources. This provides a very significant speed up to the Jordan-Wigner mapping. For instance, using the Mitchison-Durbin pattern on a square-lattice produces circuits 13.9\% shorter than using an S-pattern \cite{fermionicEncoding}. Currently, fermionic enumeration schemes have only been shown to give an improvement in Jordan-Wigner mappings. Thus they might shift the balance and make Jordan-Wigner mappings (with optimum fermionic enumeration) preferable to Bravyi-Kitaev mappings for architecture with all-to-all connectivity. Further research is needed to test this hypothesis. It is important to note that fermionic encodings are only maximally efficient for interaction graphs that have known minimum edgesum solutions, however, there are other graphs for which a good enumeration scheme can also lead to an order-of-magnitude reduction in gate count.\\\\
+The choice fermionic enumeration for the Jordan-Wigner mapping is effective regardless of the connectivity of the qubit architecture...
 \section{Conclusion}
 \raggedbottom
 We have discussed a number of different fermion to qubit mappings and their relative advantages. It has been shown that to optimise qubit cost a Bravyi-Kitaev mapping would likely be most effective, but there is the potential for new research into fermionic enumeration to show a Jordan-Wigner mapping should be preferred. In the current era of quantum computing with relatively small qubit counts, it is likely that optimising qubit cost will remain preferable to optimising gate cost for some time. However, if optimising gate cost is the preference we have shown that the Derby-Klassen mapping can produce constant gate costs for fermionic operators on a number of different lattice types. It remains an interesting open question whether fermionic enumeration can offer further improvements to 'local' mappings such as Derby-Klassen.
@@ -794,6 +800,8 @@ Academic Press (New York).
 \bibitem{chen2} Chen, Yu-An, Anton Kapustin, and Djordje Radicevic. ‘Exact Bosonization in Two Spatial Dimensions and a New Class of Lattice Gauge Theories’. Annals of Physics 393 (June 2018): 234–53. \url{https://doi.org/10.1016/j.aop.2018.03.024}
 
 \bibitem{codes} Steudtner, Mark, and Stephanie Wehner. ‘Quantum Codes for Quantum Simulation of Fermions on a Square Lattice of Qubits’. Physical Review A 99, no. 2 (8 February 2019): 022308. \url{https://doi.org/10.1103/PhysRevA.99.022308}
+\bibitem{chiew2} Chiew, Mitchell, and Sergii Strelchuk. ‘Optimal Fermion-Qubit Mappings’. ArXiv:2110.12792 [Quant-Ph], 2 February 2022. \url{http://arxiv.org/abs/2110.12792}
+
 \end{thebibliography}
 
 \end{document}
