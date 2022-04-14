@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  12 APR 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  14 APR 2022 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -120,7 +120,21 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-)) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (c:/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (c:/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count267
+\float@exts=\toks18
+\float@box=\box51
+\@float@everytoks=\toks19
+\@floatcapt=\box52
+) (c:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks20
+\c@algorithm=\count268
+) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip49
 
@@ -129,7 +143,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01 AMS text
  (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
+\@emptytoks=\toks21
 \ex@=\dimen153
 )) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -139,41 +153,41 @@ LaTeX Info: Redefining \pmb on input line 40.
 ) (c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count267
+\inf@bad=\count269
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count268
-\leftroot@=\count269
+\uproot@=\count270
+\leftroot@=\count271
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count270
-\DOTSCASE@=\count271
+\classnum@=\count272
+\DOTSCASE@=\count273
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
+\Mathstrutbox@=\box53
+\strutbox@=\box54
 \big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count272
-\c@MaxMatrixCols=\count273
+\macc@depth=\count274
+\c@MaxMatrixCols=\count275
 \dotsspace@=\muskip16
-\c@parentequation=\count274
-\dspbrk@lvl=\count275
-\tag@help=\toks19
-\row@=\count276
-\column@=\count277
-\maxfields@=\count278
-\andhelp@=\toks20
+\c@parentequation=\count276
+\dspbrk@lvl=\count277
+\tag@help=\toks22
+\row@=\count278
+\column@=\count279
+\maxfields@=\count280
+\andhelp@=\toks23
 \eqnshift@=\dimen156
 \alignsep@=\dimen157
 \tagshift@=\dimen158
 \tagwidth@=\dimen159
 \totwidth@=\dimen160
 \lineht@=\dimen161
-\@envbody=\toks21
+\@envbody=\toks24
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks22
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 ) (c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
@@ -193,14 +207,14 @@ Loading kernel: messages; fonts; allocations: state,
 \D@c=\dimen165
 \L@c=\dimen166
 \R@c=\dimen167
-\Edge@c=\toks23
+\Edge@c=\toks26
 \X@p=\dimen168
 \Y@p=\dimen169
 \U@p=\dimen170
 \D@p=\dimen171
 \L@p=\dimen172
 \R@p=\dimen173
-\Edge@p=\toks24
+\Edge@p=\toks27
 \X@origin=\dimen174
 \Y@origin=\dimen175
 \X@xbase=\dimen176
@@ -211,26 +225,26 @@ Loading kernel: messages; fonts; allocations: state,
 \Y@min=\dimen181
 \X@max=\dimen182
 \Y@max=\dimen183
-\lastobjectbox@=\box53
-\zerodotbox@=\box54
+\lastobjectbox@=\box55
+\zerodotbox@=\box56
 \almostz@=\dimen184
  direction,
 \d@X=\dimen185
 \d@Y=\dimen186
-\K@=\count279
-\KK@=\count280
-\Direction=\count281
+\K@=\count281
+\KK@=\count282
+\Direction=\count283
 \K@dXdY=\dimen187
 \K@dYdX=\dimen188
 \xyread@=\read3
 \xywrite@=\write3
-\csp@=\count282
+\csp@=\count284
 \quotPTK@=\dimen189
  utility macros; pictures: \xy, positions,
-\swaptoks@@=\toks25
-\connectobjectbox@@=\box55
+\swaptoks@@=\toks28
+\connectobjectbox@@=\box57
  objects,
-\styletoks@=\toks26
+\styletoks@=\toks29
  decorations; kernel objects: directionals, circles, text; options; algorithms: directions, edges, connections;  Xy-pic loaded) (c:/texlive/2021/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
  (c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
@@ -238,17 +252,17 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 Package: xy 2013/10/06 Xy-pic version 3.8.9
  (c:/texlive/2021/texmf-dist/tex/generic/xypic/xypdf.tex  Xy-pic option: PDF driver v.1.7 loaded)) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xymatrix.tex  Xy-pic option: Matrix feature v.3.14
-\Row=\count283
-\Col=\count284
-\queue@=\toks27
-\queue@@=\toks28
-\qcount@=\count285
-\qcount@@=\count286
-\matrixsize@=\count287
+\Row=\count285
+\Col=\count286
+\queue@=\toks30
+\queue@@=\toks31
+\qcount@=\count287
+\qcount@@=\count288
+\matrixsize@=\count289
  loaded) (c:/texlive/2021/texmf-dist/tex/generic/xypic/xyframe.tex  Xy-pic option: Frame and Bracket extension v.3.14 loaded) Xy-pic pdf driver: `frame' extension support (c:/texlive/2021/texmf-dist/tex/generic/xypic/xypdf-fr.tex (c:/texlive/2021/texmf-dist/tex/generic/xypic/xycurve.tex  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count288
-\crvpts@=\toks29
-\splinebox@=\box56
+\crv@cnt@=\count290
+\crvpts@=\toks32
+\splinebox@=\box58
 \splineval@=\dimen190
 \splinedepth@=\dimen191
 \splinetol@=\dimen192
@@ -259,15 +273,15 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
  (c:/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count289
-\calc@Bcount=\count290
+\calc@Acount=\count291
+\calc@Bcount=\count292
 \calc@Adimen=\dimen195
 \calc@Bdimen=\dimen196
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count291
+\calc@Ccount=\count293
 \calc@Cskip=\skip54
 ) (c:/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
@@ -276,7 +290,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count292
+\g_MT_multlinerow_int=\count294
 \l_MT_multwidth_dim=\dimen197
 \origjot=\skip55
 \l_MT_shortvdotswithinadjustabove_dim=\dimen198
@@ -285,19 +299,19 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_intertext_sep=\dimen257
 \l_MT_above_shortintertext_sep=\dimen258
 \l_MT_below_shortintertext_sep=\dimen259
-\xmathstrut@box=\box57
+\xmathstrut@box=\box59
 \xmathstrut@dim=\dimen260
 ) (c:/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks30
-\verbatim@line=\toks31
+\every@verbatim=\toks33
+\verbatim@line=\toks34
 \verbatim@in@stream=\read4
 ) (c:/texlive/2021/texmf-dist/tex/latex/breqn/breqn.sty (c:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-08-27 L3 programming layer (loader) 
  (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count293
-\l__pdf_internal_box=\box58
+\l__color_backend_stack_int=\count295
+\l__pdf_internal_box=\box60
 ))
 Package: breqn 2020/09/24 v0.98k Breaking equations
  (c:/texlive/2021/texmf-dist/tex/latex/breqn/flexisym.sty
@@ -337,8 +351,8 @@ LaTeX Info: Redefining \scriptstyle on input line 99.
 LaTeX Info: Redefining \scriptscriptstyle on input line 101.
 LaTeX Info: Redefining \genfrac on input line 149.
 ))
-\inf@bad=\count294
-\maxint=\count295
+\inf@bad=\count296
+\maxint=\count297
 \listwidth=\dimen261
 \eqnumsep=\dimen262
 \eqmargin=\dimen263
@@ -348,29 +362,29 @@ LaTeX Info: Redefining \genfrac on input line 149.
 \eqbinoffset=\muskip17
 \eqdelimoffset=\muskip18
 \eqindentstep=\dimen265
-\eqstyle=\toks32
-\eqbreakdepth=\count296
-\eqinterlinepenalty=\count297
-\intereqpenalty=\count298
+\eqstyle=\toks35
+\eqbreakdepth=\count298
+\eqinterlinepenalty=\count299
+\intereqpenalty=\count300
 \intereqskip=\skip58
-\prerelpenalty=\count299
-\prebinoppenalty=\count300
+\prerelpenalty=\count301
+\prebinoppenalty=\count302
 \Dmedmuskip=\muskip19
 \Dthickmuskip=\muskip20
 \eqleftskip=\skip59
 \eqrightskip=\skip60
 \eq@vspan=\skip61
 \eq@binoffset=\muskip21
-\EQ@box=\box59
-\EQ@copy=\box60
-\EQ@numbox=\box61
+\EQ@box=\box61
+\EQ@copy=\box62
+\EQ@numbox=\box63
 \eq@wdNum=\dimen266
-\GRP@numbox=\box62
+\GRP@numbox=\box64
 \grp@wdNum=\dimen267
-\eq@lines=\count301
-\eq@curline=\count302
-\eq@badness=\count303
-\EQ@vims=\count304
+\eq@lines=\count303
+\eq@curline=\count304
+\eq@badness=\count305
+\EQ@vims=\count306
 \eq@dp=\dimen268
 \eq@wdL=\dimen269
 \eq@wdT=\dimen270
@@ -387,24 +401,42 @@ LaTeX Info: Redefining \genfrac on input line 149.
 \eq@hshift=\dimen281
 \eq@given@sidespace=\dimen282
 \mathindent=\dimen283
-\eq@final@linecount=\count305
+\eq@final@linecount=\count307
 \eq@wdR=\dimen284
-\EQ@continue=\toks33
-\lr@level=\count306
-\GRP@queue=\toks34
-\GRP@box=\box63
-\GRP@wholebox=\box64
+\EQ@continue=\toks36
+\lr@level=\count308
+\GRP@queue=\toks37
+\GRP@box=\box65
+\GRP@wholebox=\box66
 \darraycolsep=\skip62
-\cur@row=\count307
-\cur@col=\count308
+\cur@row=\count309
+\cur@col=\count310
 \conditionsep=\skip63
-) (c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks35
+) (c:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(c:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count311
+\c@ALG@rem=\count312
+\c@ALG@nested=\count313
+\ALG@tlm=\skip64
+\ALG@thistlm=\skip65
+\c@ALG@Lnr=\count314
+\c@ALG@blocknr=\count315
+\c@ALG@storecount=\count316
+\c@ALG@tmpcounter=\count317
+\ALG@tmplength=\skip66
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks38
 \pgfutil@tempdima=\dimen285
 \pgfutil@tempdimb=\dimen286
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box65
+\pgfutil@abb=\box67
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
@@ -412,10 +444,10 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks36
-\pgfkeys@temptoks=\toks37
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks38
+\pgfkeys@tmptoks=\toks41
 ))
 \pgf@x=\dimen287
 \pgf@y=\dimen288
@@ -429,14 +461,14 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@yd=\dimen296
 \w@pgf@writea=\write4
 \r@pgf@reada=\read5
-\c@pgf@counta=\count309
-\c@pgf@countb=\count310
-\c@pgf@countc=\count311
-\c@pgf@countd=\count312
-\t@pgf@toka=\toks39
-\t@pgf@tokb=\toks40
-\t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count313
+\c@pgf@counta=\count318
+\c@pgf@countb=\count319
+\c@pgf@countc=\count320
+\c@pgf@countd=\count321
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+\pgf@sys@id@count=\count322
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -447,8 +479,8 @@ File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count314
-\pgfsyssoftpath@bigbuffer@items=\count315
+\pgfsyssoftpath@smallbuffer@items=\count323
+\pgfsyssoftpath@bigbuffer@items=\count324
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -470,14 +502,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen297
-\pgfmath@count=\count316
-\pgfmath@box=\box66
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
-) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
-(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count317
+\pgfmath@count=\count325
+\pgfmath@box=\box68
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
+) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count326
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen298
@@ -504,10 +536,10 @@ File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@start@additional=\dimen315
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box67
-\pgf@hbox=\box68
-\pgf@layerbox@main=\box69
-\pgf@picture@serial@count=\count318
+\pgfpic=\box69
+\pgf@hbox=\box70
+\pgf@layerbox@main=\box71
+\pgf@picture@serial@count=\count327
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen316
@@ -528,25 +560,25 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen321
-\pgf@sys@shading@range@num=\count319
-\pgf@shadingcount=\count320
+\pgf@sys@shading@range@num=\count328
+\pgf@shadingcount=\count329
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box70
+\pgfexternal@startupbox=\box72
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box71
+\pgfnodeparttextbox=\box73
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
@@ -560,13 +592,13 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen324
 \pgffor@skip=\dimen325
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count321
+\pgf@plot@mark@count=\count330
 \pgfplotmarksize=\dimen326
 )
 \tikz@lastx=\dimen327
@@ -577,21 +609,21 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@lastmovetoy=\dimen332
 \tikzleveldistance=\dimen333
 \tikzsiblingdistance=\dimen334
-\tikz@figbox=\box72
-\tikz@figbox@bg=\box73
-\tikz@tempbox=\box74
-\tikz@tempbox@bg=\box75
-\tikztreelevel=\count322
-\tikznumberofchildren=\count323
-\tikznumberofcurrentchild=\count324
-\tikz@fig@count=\count325
+\tikz@figbox=\box74
+\tikz@figbox@bg=\box75
+\tikz@tempbox=\box76
+\tikz@tempbox@bg=\box77
+\tikztreelevel=\count331
+\tikznumberofchildren=\count332
+\tikznumberofcurrentchild=\count333
+\tikz@fig@count=\count334
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count326
-\pgfmatrixcurrentcolumn=\count327
-\pgf@matrix@numberofcolumns=\count328
+\pgfmatrixcurrentrow=\count335
+\pgfmatrixcurrentcolumn=\count336
+\pgf@matrix@numberofcolumns=\count337
 )
-\tikz@expandcount=\count329
+\tikz@expandcount=\count338
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
@@ -606,127 +638,99 @@ File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (./Mapping_fermions_to_qubits.aux)
 \openout1 = `Mapping_fermions_to_qubits.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
  (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count330
+\scratchcounter=\count339
 \scratchdimen=\dimen339
-\scratchbox=\box76
-\nofMPsegments=\count331
-\nofMParguments=\count332
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count333
+\scratchbox=\box78
+\nofMPsegments=\count340
+\nofMParguments=\count341
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count342
 \MPscratchDim=\dimen340
-\MPnumerator=\count334
-\makeMPintoPDFobject=\count335
-\everyMPtoPDFconversion=\toks48
+\MPnumerator=\count343
+\makeMPintoPDFobject=\count344
+\everyMPtoPDFconversion=\toks51
 ) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.39998pt on input line 28.
+Package xypdf Info: Line width: 0.39998pt on input line 30.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
+Underfull \hbox (badness 10000) in paragraph at lines 92--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
+Underfull \hbox (badness 10000) in paragraph at lines 92--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
+Underfull \hbox (badness 10000) in paragraph at lines 92--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--97
 
  []
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 102--106
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--106
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
 [2] <xymatrix 13x9 3274>
-Underfull \hbox (badness 10000) in paragraph at lines 112--126
+Underfull \hbox (badness 10000) in paragraph at lines 114--128
 
  []
 
-[3] <xymatrix 11x4 2169>
-Underfull \hbox (badness 10000) in paragraph at lines 148--160
+
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+ [3] <xymatrix 11x4 2169>
+Underfull \hbox (badness 10000) in paragraph at lines 150--162
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
 [5]
-
-./Mapping_fermions_to_qubits.tex:187: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.187 \end{align}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
-
- []
-
-
-./Mapping_fermions_to_qubits.tex:197: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.197 \end{align}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 
 ./Mapping_fermions_to_qubits.tex:204: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -735,157 +739,392 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.204         \end{align}
+l.204 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
+
+ []
+
+
+./Mapping_fermions_to_qubits.tex:221: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.221 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Mapping_fermions_to_qubits.tex:228: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.228         \end{align}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
-
- []
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 234.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
+Underfull \hbox (badness 10000) in paragraph at lines 232--237
 
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
-
- []
-
-
-Overfull \hbox (8.85545pt too wide) in paragraph at lines 248--250
-\OT1/cmr/m/n/10 right at ev-ery $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 = 1$ we gen-er-ate the set of in-te-gers $[\OML/cmm/m/it/10 [] [] []\OT1/cmr/m/n/10 0 [] 0\OML/cmm/m/it/10 ; [] [] []\OT1/cmr/m/n/10 10 [] 0)$. 
- []
-
-
-Overfull \hbox (11.53806pt too wide) detected at line 254
-\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (1010)) = \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0111\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1001\OMS/cmsy/m/n/10 g\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ff\OT1/cmr/m/n/10 0000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0001\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0010\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0011\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0100\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0101\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0110\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0111\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1001\OMS/cmsy/m/n/10 gg
  []
 
 [7]
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
-./Mapping_fermions_to_qubits.tex:293: LaTeX Error: \begin{equation*} on input line 291 ended by \end{equation}.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--260
+
+ []
+
+
+Overfull \hbox (8.85545pt too wide) in paragraph at lines 277--279
+\OT1/cmr/m/n/10 right at ev-ery $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 = 1$ we gen-er-ate the set of in-te-gers $[\OML/cmm/m/it/10 [] [] []\OT1/cmr/m/n/10 0 [] 0\OML/cmm/m/it/10 ; [] [] []\OT1/cmr/m/n/10 10 [] 0)$. 
+ []
+
+[8]
+Overfull \hbox (11.53806pt too wide) detected at line 283
+\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (1010)) = \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0111\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1001\OMS/cmsy/m/n/10 g\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ff\OT1/cmr/m/n/10 0000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0001\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0010\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0011\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0100\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0101\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0110\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0111\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1001\OMS/cmsy/m/n/10 gg
+ []
+
+
+./Mapping_fermions_to_qubits.tex:322: LaTeX Error: \begin{equation*} on input line 320 ended by \end{equation}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.293         \end{equation}
+l.322         \end{equation}
                             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--300
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--327
+Underfull \hbox (badness 10000) in paragraph at lines 326--329
 
  []
 
 [9]
-
-./Mapping_fermions_to_qubits.tex:331: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.331                 \end{align}
-                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Mapping_fermions_to_qubits.tex:338: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.338                 \end{align}
-                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 [10]
-Overfull \hbox (11.98552pt too wide) in paragraph at lines 395--396
-\OT1/cmr/m/n/10 Therefore, ev-ery fermionic op-er-a-tion in the Bravyi-Kiteav map-ping only re-quires $\OML/cmm/m/it/10 O\OT1/cmr/m/n/10 ([](\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ))$
+
+./Mapping_fermions_to_qubits.tex:358: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.358 \end{itemlist}\\\\
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./Mapping_fermions_to_qubits.tex:359: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359         N
+               ow we can define the Bravyi-Kiteav creation and annihilation ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--400
-
- []
-
-
-./Mapping_fermions_to_qubits.tex:411: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:365: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.411 \end{align}
-                 
+l.365                 \end{align}
+                                 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Mapping_fermions_to_qubits.tex:418: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:372: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.418 \end{align}
-                 
+l.372                 \end{align}
+                                 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--426
+./Mapping_fermions_to_qubits.tex:379: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
 
- []
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.379                 \end{align}
+                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 395--398
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--453
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 454--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+
+ []
+
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
+\@makecaption ...bovecaptionskip \setbox \tempbox 
+                                                  \hbox {{\figurecaptionfont...
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:477: Missing number, treated as zero.
+<to be read again> 
+                   \hbox 
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
+\@makecaption ...mpbox \hbox {{\figurecaptionfont 
+                                                  #1\hskip 1em #2}} \ifdim \...
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
+\@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
+                                                  < 28pc \centerline {\box \...
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:477: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
+<argument> \box \tempbox 
+                         
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:477: Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.477 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:496: Undefined control sequence.
+\@makecaption ...bovecaptionskip \setbox \tempbox 
+                                                  \hbox {{\figurecaptionfont...
+l.496 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:496: Missing number, treated as zero.
+<to be read again> 
+                   \hbox 
+l.496 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:496: Undefined control sequence.
+\@makecaption ...mpbox \hbox {{\figurecaptionfont 
+                                                  #1\hskip 1em #2}} \ifdim \...
+l.496 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:496: Undefined control sequence.
+\@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
+                                                  < 28pc \centerline {\box \...
+l.496 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:496: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.496 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:496: Undefined control sequence.
+\@makecaption ...pbox } \else {\figurecaptionfont 
+                                                  #1\hskip 1em #2\par } \fi ...
+l.496 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--500
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 501--503
+
+ []
+
+
+./Mapping_fermions_to_qubits.tex:514: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.514 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[14]
+
+./Mapping_fermions_to_qubits.tex:521: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.521 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--529
+
+ []
+
+
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -893,604 +1132,614 @@ Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:527: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 }
+l.630 }
        
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--549
+Underfull \hbox (badness 10000) in paragraph at lines 539--652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--549
+Underfull \hbox (badness 10000) in paragraph at lines 539--652
 
  []
 
-[12]
+[15]
 
-./Mapping_fermions_to_qubits.tex:559: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:662: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.559                         \end{align}
+l.662                         \end{align}
                                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 589--654
 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 660--662
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 676--681
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 676--681
-
- []
-
-[15]
-
-LaTeX Warning: Reference `SZpattern' on page 16 undefined on input line 683.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 682--685
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 682--685
-
- []
-
-
-LaTeX Warning: Reference `mitchisondurbin' on page 16 undefined on input line 690.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 687--691
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 687--691
-
- []
-
-
-Overfull \hbox (0.4271pt too wide) in paragraph at lines 687--691
-\OT1/cmr/m/n/10 The Mitchison-Durbin pat-tern (il-lus-trated in Fig []) pro-vides the fermion enu-mer-a-tion scheme
- []
-
-
-Underfull \vbox (badness 1292) has occurred while \output is active []
-
- [16]
-Underfull \hbox (badness 10000) in paragraph at lines 702--705
-
- []
-
-[17]
-
-LaTeX Warning: Reference `mitchisondurbin' on page 18 undefined on input line 729.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 732--734
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 735--738
+ [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 692--757
 
  []
 
 [18]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 743.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--748
+Underfull \hbox (badness 10000) in paragraph at lines 763--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--748
+Underfull \hbox (badness 10000) in paragraph at lines 779--785
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--748
+Underfull \hbox (badness 10000) in paragraph at lines 779--785
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--748
+Underfull \hbox (badness 10000) in paragraph at lines 779--785
+
+ []
+
+[19]
+
+LaTeX Warning: Reference `SZpattern' on page 20 undefined on input line 787.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--789
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--748
+Underfull \hbox (badness 10000) in paragraph at lines 786--789
 
  []
 
-[19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 750--752
+
+LaTeX Warning: Reference `mitchisondurbin' on page 20 undefined on input line 794.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 791--795
 
  []
 
-[21] [22] [23]
 
-./Mapping_fermions_to_qubits.tex:759: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 791--795
+
+ []
+
+
+Overfull \hbox (0.4271pt too wide) in paragraph at lines 791--795
+\OT1/cmr/m/n/10 The Mitchison-Durbin pat-tern (il-lus-trated in Fig []) pro-vides the fermion enu-mer-a-tion scheme
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 806--809
+
+ []
+
+[21]
+
+LaTeX Warning: Reference `mitchisondurbin' on page 22 undefined on input line 833.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--838
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--842
+
+ []
+
+[22]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 847.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--853
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--853
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--853
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--853
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--853
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--853
+
+ []
+
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 855--857
+
+ []
+
+[25] [26] [27]
+
+./Mapping_fermions_to_qubits.tex:864: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.759 \begin
+l.864 \begin
             {thebibliography}{000}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Mapping_fermions_to_qubits.tex:759: Package calc Error: `0' invalid at this point.
+./Mapping_fermions_to_qubits.tex:864: Package calc Error: `0' invalid at this point.
 
 See the calc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.759 \begin{thebibliography}{000}
+l.864 \begin{thebibliography}{000}
                                   
 I expected to see one of: + - * / )
 
-./Mapping_fermions_to_qubits.tex:759: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:864: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.759 \begin{thebibliography}{000}
+l.864 \begin{thebibliography}{000}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:759: Illegal unit of measure (pt inserted).
+./Mapping_fermions_to_qubits.tex:864: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.759 \begin{thebibliography}{000}
+l.864 \begin{thebibliography}{000}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1500,20 +1749,20 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
 []\OT1/cmr/m/n/9 Derby, Charles, and Joel Klassen. \OT1/cmr/m/it/9 A Com-pact Fermion to Qubit Map-ping Part
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
 \OT1/cmr/m/it/9 2: Al-ter-na-tive Lat-tice Ge-ome-tries\OT1/cmr/m/n/9 . ArXiv:2101.10735 [Quant-Ph], 26 Jan-uary 2021.
  []
 
-[24]
-./Mapping_fermions_to_qubits.tex:805: Missing } inserted.
+[28]
+./Mapping_fermions_to_qubits.tex:914: Missing } inserted.
 <inserted text> 
                 }
-l.805 \end{thebibliography}
+l.914 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1522,27 +1771,27 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Mapping_fermions_to_qubits.tex:805: LaTeX Error: \begin{list} on input line 759 ended by \end{thebibliography}.
+./Mapping_fermions_to_qubits.tex:914: LaTeX Error: \begin{list} on input line 864 ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.805 \end{thebibliography}
+l.914 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[25]
+[29]
 
-./Mapping_fermions_to_qubits.tex:807: LaTeX Error: \begin{thebibliography} on input line 759 ended by \end{document}.
+./Mapping_fermions_to_qubits.tex:916: LaTeX Error: \begin{thebibliography} on input line 864 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.807 \end{document}
+l.916 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1555,22 +1804,22 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 759 (\begingroup)
+### semi simple group (level 1) entered at line 864 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17982 strings out of 478599
- 326091 string characters out of 5858101
- 743095 words of memory out of 5000000
- 35513 multiletter control sequences out of 15000+600000
+ 18759 strings out of 478599
+ 338555 string characters out of 5858101
+ 752012 words of memory out of 5000000
+ 36272 multiletter control sequences out of 15000+600000
  419474 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,26n,89p,2019b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (25 pages, 506047 bytes).
+ 84i,26n,89p,2012b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Mapping_fermions_to_qubits.pdf (29 pages, 530785 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 271 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
