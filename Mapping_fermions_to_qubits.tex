@@ -894,14 +894,14 @@ In a simulation we carried out for a lattice of size $20\times 20$, this proposa
 First, considering the Pauli weights of the vertical interactions (numbering rows from $0$):
 \begin{itemlist}
 \item The even rows of interactions are reduced from an average of $N + 1$ (where $N$ is the length of the lattice) to $2$\\
-\item The odd rows of interactions are reduced from an average of $N + 1$ to $\frac{N-1}{4} + 6$
+\item The odd rows of interactions are reduced from an average of $N + 1$ to roughly $\frac{N-1}{4} + 6$
 \end{itemlist}
 Then considering the Pauli weights of the horiztonal interactions (numbering columns from $0$):
 \begin{itemlist}
 \item The even columns of interactions are increased from an average of $2$ to $3.5$\\
 \item The odd coumns of interactions are increased from an average of $2$ to $6$
 \end{itemlist}
-Therefore, the overall average Pauli weight is decreased from $\frac{N}{2} + \frac{3}{2}$ to roughly $\frac{N}{8} + \frac{34}{8}$ (averaging over the even and odd rows). In reality, the average Pauli sum slightly deviates from this depending on whether there are more even rows or columns than odd. In the case of the $20 \times 20$ lattice the theory estimates a Pauli weight of approximately $6.75$ compared to the calculated value of $6.42$, where the small discrepancy is due to the lattive having more even rows than odd rows.
+Therefore, the overall average Pauli weight is decreased from $\frac{N}{2} + \frac{3}{2}$ to roughly $\frac{N}{8} + 4 - \frac{13}{8(N-1)}$ (for even length lattices). In the case of the $20 \times 20$ lattice, this estimates an average Pauli weight of approximately $6.41$ closely matching the experimental result.
 \subsection{Proposed expansion of this mapping}
 We have only considered the example of $2\times 2$ cells for ease of illustration and to demonstrate the proof of principle, but generally it may be optimal to use cells of other dimensions. Further research is needed to investigate other cellular structures and determine the optimal structure for a given level of complexitity (as dictated by the architecture of the device). We conjecture that using a $4\times 4$ cell may prove optimal for large lattices, however, such large lattices lie out of the reach of current NISQ devices due to the large qubit count required to simulate them. Even the $20 \times 20$ lattice considered above would require $400$ qubits which is beyond today's computers (even before considering error correction overheads).\\\\
 Additionally, this mapping was orginally concieved as a way of combining the techniques of fermionic enumeration and Bravyi-Kitaev. It may be possible to find a much more efficent overall layout for the cells than a simple S-pattern and further drastically reduce the number of gates. Further research is necessary to determine if a more optimal pattern exists, and if so how much difference it makes.
