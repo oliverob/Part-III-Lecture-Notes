@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  14 APR 2022 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  19 APR 2022 11:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -703,34 +703,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--97
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 104--108
+Underfull \hbox (badness 10000) in paragraph at lines 103--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--108
+Underfull \hbox (badness 10000) in paragraph at lines 103--107
 
  []
 
 [2] <xymatrix 13x9 3274>
-Underfull \hbox (badness 10000) in paragraph at lines 114--128
+Underfull \hbox (badness 10000) in paragraph at lines 113--127
 
  []
 
-
-Underfull \vbox (badness 1484) has occurred while \output is active []
-
- [3] <xymatrix 11x4 2169>
-Underfull \hbox (badness 10000) in paragraph at lines 150--162
+[3] <xymatrix 11x4 2169>
+Underfull \hbox (badness 10000) in paragraph at lines 150--163
 
  []
 
-[4]
+[4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
-[5]
 
 ./Mapping_fermions_to_qubits.tex:204: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -744,12 +740,12 @@ l.204 \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 209--212
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
@@ -780,6 +776,7 @@ l.228         \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[7]
 
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 234.
 
@@ -788,7 +785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--237
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
@@ -798,16 +795,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--260
 
  []
 
-
+[8]
 Overfull \hbox (8.85545pt too wide) in paragraph at lines 277--279
 \OT1/cmr/m/n/10 right at ev-ery $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 = 1$ we gen-er-ate the set of in-te-gers $[\OML/cmm/m/it/10 [] [] []\OT1/cmr/m/n/10 0 [] 0\OML/cmm/m/it/10 ; [] [] []\OT1/cmr/m/n/10 10 [] 0)$. 
  []
 
-[8]
+
 Overfull \hbox (11.53806pt too wide) detected at line 283
 \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (1010)) = \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0111\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1001\OMS/cmsy/m/n/10 g\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ff\OT1/cmr/m/n/10 0000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0001\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0010\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0011\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0100\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0101\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0110\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0111\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1000\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1001\OMS/cmsy/m/n/10 gg
  []
 
+[9]
 
 ./Mapping_fermions_to_qubits.tex:322: LaTeX Error: \begin{equation*} on input line 320 ended by \end{equation}.
 
@@ -826,7 +824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--329
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
@@ -907,7 +905,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--398
 
  []
 
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 446--448
 
  []
@@ -922,7 +920,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 451--453
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 454--456
 
  []
@@ -1080,7 +1078,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 497--500
 
  []
 
-[13]
+[13] [14]
 Underfull \hbox (badness 10000) in paragraph at lines 501--503
 
  []
@@ -1098,7 +1096,6 @@ l.514 \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[14]
 
 ./Mapping_fermions_to_qubits.tex:521: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -1117,6 +1114,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 526--529
 
  []
 
+[15]
 
 ./Mapping_fermions_to_qubits.tex:630: Package pgf Error: No shape named `2pt' is known.
 
@@ -1570,7 +1568,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 539--652
 
  []
 
-[15]
+[16]
 
 ./Mapping_fermions_to_qubits.tex:662: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -1584,20 +1582,17 @@ l.662                         \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16] [17]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 692--757
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 763--765
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 779--785
 
  []
@@ -1613,133 +1608,173 @@ Underfull \hbox (badness 10000) in paragraph at lines 779--785
  []
 
 [19]
-
-LaTeX Warning: Reference `SZpattern' on page 20 undefined on input line 787.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--789
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 786--789
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
 
- []
-
-
-LaTeX Warning: Reference `mitchisondurbin' on page 20 undefined on input line 794.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 791--795
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 791--795
-
- []
-
-
-Overfull \hbox (0.4271pt too wide) in paragraph at lines 791--795
-\OT1/cmr/m/n/10 The Mitchison-Durbin pat-tern (il-lus-trated in Fig []) pro-vides the fermion enu-mer-a-tion scheme
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 806--809
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 795.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--801
 
  []
 
 [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `mitchisondurbin' on page 22 undefined on input line 833.
+ [22]
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 836--838
-
- []
+LaTeX Warning: Reference `SZpattern' on page 23 undefined on input line 803.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--842
-
- []
-
-[22]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 847.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 845--853
+Underfull \hbox (badness 10000) in paragraph at lines 802--805
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--853
+Underfull \hbox (badness 10000) in paragraph at lines 802--805
+
+ []
+
+[23]
+
+LaTeX Warning: Reference `mitchisondurbin' on page 24 undefined on input line 810.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--811
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--853
+Underfull \hbox (badness 10000) in paragraph at lines 807--811
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--853
+Overfull \hbox (0.4271pt too wide) in paragraph at lines 807--811
+\OT1/cmr/m/n/10 The Mitchison-Durbin pat-tern (il-lus-trated in Fig []) pro-vides the fermion enu-mer-a-tion scheme
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 822--825
+
+ []
+
+[24]
+
+LaTeX Warning: Reference `mitchisondurbin' on page 25 undefined on input line 849.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 852--857
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--853
+Underfull \hbox (badness 10000) in paragraph at lines 852--857
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--853
+Underfull \hbox (badness 10000) in paragraph at lines 852--857
 
  []
 
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 855--857
+[25]
+
+LaTeX Warning: Reference `novel4' on page 26 undefined on input line 859.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--863
 
  []
 
-[25] [26] [27]
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 866--867
 
-./Mapping_fermions_to_qubits.tex:864: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.864 \begin
-            {thebibliography}{000}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 
-./Mapping_fermions_to_qubits.tex:864: Package calc Error: `0' invalid at this point.
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--884
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--884
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--884
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--884
+
+ []
+
+[27] [28]
+
+./Mapping_fermions_to_qubits.tex:885: Package calc Error: `0' invalid at this point.
 
 See the calc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.864 \begin{thebibliography}{000}
+l.885 \begin{thebibliography}{000}
                                   
 I expected to see one of: + - * / )
 
-./Mapping_fermions_to_qubits.tex:864: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:885: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.864 \begin{thebibliography}{000}
+l.885 \begin{thebibliography}{000}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:864: Illegal unit of measure (pt inserted).
+./Mapping_fermions_to_qubits.tex:885: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.864 \begin{thebibliography}{000}
+l.885 \begin{thebibliography}{000}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1749,20 +1784,20 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
 []\OT1/cmr/m/n/9 Derby, Charles, and Joel Klassen. \OT1/cmr/m/it/9 A Com-pact Fermion to Qubit Map-ping Part
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
 \OT1/cmr/m/it/9 2: Al-ter-na-tive Lat-tice Ge-ome-tries\OT1/cmr/m/n/9 . ArXiv:2101.10735 [Quant-Ph], 26 Jan-uary 2021.
  []
 
-[28]
-./Mapping_fermions_to_qubits.tex:914: Missing } inserted.
+[29]
+./Mapping_fermions_to_qubits.tex:936: Missing } inserted.
 <inserted text> 
                 }
-l.914 \end{thebibliography}
+l.936 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1771,27 +1806,27 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Mapping_fermions_to_qubits.tex:914: LaTeX Error: \begin{list} on input line 864 ended by \end{thebibliography}.
+./Mapping_fermions_to_qubits.tex:936: LaTeX Error: \begin{list} on input line 885 ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.914 \end{thebibliography}
+l.936 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[29]
+[30]
 
-./Mapping_fermions_to_qubits.tex:916: LaTeX Error: \begin{thebibliography} on input line 864 ended by \end{document}.
+./Mapping_fermions_to_qubits.tex:938: LaTeX Error: \begin{thebibliography} on input line 885 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.916 \end{document}
+l.938 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1804,22 +1839,22 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 864 (\begingroup)
+### semi simple group (level 1) entered at line 885 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18759 strings out of 478599
- 338555 string characters out of 5858101
- 752012 words of memory out of 5000000
- 36272 multiletter control sequences out of 15000+600000
- 419474 words of font info for 87 fonts, out of 8000000 for 9000
+ 18762 strings out of 478599
+ 338580 string characters out of 5858101
+ 752720 words of memory out of 5000000
+ 36276 multiletter control sequences out of 15000+600000
+ 419306 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,26n,89p,2012b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,26n,89p,2094b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (29 pages, 530785 bytes).
+ype1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Mapping_fermions_to_qubits.pdf (30 pages, 523949 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

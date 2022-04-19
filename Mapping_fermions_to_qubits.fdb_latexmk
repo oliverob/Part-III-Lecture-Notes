@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1649957985 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1649957984
-  "Mapping_fermions_to_qubits.aux" 1649957948 6677 72abf45952c41c4622de853ac7801157 "pdflatex"
-  "Mapping_fermions_to_qubits.tex" 1649957984 101469 8308b8c4d16a08ceeee4dc579ef792f9 ""
+["pdflatex"] 1650363321 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1650363321
+  "Mapping_fermions_to_qubits.aux" 1650363248 6774 fcbec40eedbc538ae438120c14bd8853 "pdflatex"
+  "Mapping_fermions_to_qubits.tex" 1650363320 109207 2bbd854b2a5c4353136306295f8e6e10 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630418551 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630413436 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630413436 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -46,7 +46,6 @@
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1630415727 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1630415727 1504 1747189e0441d1c18f3ea56fafc1c480 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti9.tfm" 1630415727 1476 cccc6cc4935c18ec3d5623b77ecb8b74 ""
-  "c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1630415727 768 1321e9409b4137d6fb428ac9dc956269 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm" 1630415727 764 c98a2af25c99b73a368cf7336e255190 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/xypic/xyatip10.tfm" 1630425978 608 50246cc71b0635b0ba0a5c10a0bf4257 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/xypic/xybsql10.tfm" 1630425978 608 4db60f15ea23b4ec2d796c6d568a63fa ""
@@ -81,7 +80,6 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1630413436 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1630413436 35660 fb24af7afbadb71801619f1415838111 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1630413436 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
-  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1630413436 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1630413436 29078 718ea4567ceff944262b0f5b0800e1d9 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1630413436 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1630413436 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
@@ -215,6 +213,6 @@
   "c:/texlive/2021/texmf.cnf" 1630426082 713 e69b156964470283e0530f5060668171 ""
   "qic.sty" 1640013490 13022 9c2cb222906c73694e71994b353e1542 ""
   (generated)
-  "Mapping_fermions_to_qubits.log"
   "Mapping_fermions_to_qubits.pdf"
+  "Mapping_fermions_to_qubits.log"
   "Mapping_fermions_to_qubits.aux"
