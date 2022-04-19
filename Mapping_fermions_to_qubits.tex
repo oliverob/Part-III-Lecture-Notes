@@ -60,26 +60,9 @@ OLIVER O'BRIEN}
 \centerline{\footnotesize\it DAMTP, Centre for Mathematical Sciences, University of Cambridge, Cambridge CB30WA, UK}
 \baselineskip=10pt
 \centerline{\footnotesize\it Christ's College, Cambridge, UK}
-\vspace*{0.225truein}
-\publisher{(received date)}{(revised date)}
-
-\vspace*{0.21truein} 
-
 %% \abstracts{first paragraph}{second paragraph}{third paragraph}
 %% If there is only one paragraph, just keep the second and third empty 
 %% like the following one 
-\abstracts{
-%%%%%%%%%%%%%%%%%%%%
-% put abstract here
-%%%%%%%%%%%%%%%%%%%%
-Your abstract goes here. 
-}{}{}
-
-\vspace*{10pt}
-
-\keywords{The contents of the keywords}
-\vspace*{3pt}
-\communicate{to be filled by the Editorial}
 
 \vspace*{1pt}\textlineskip    %) USE THIS MEASUREMENT WHEN THERE IS
    %) A SECTION HEADING
@@ -91,8 +74,8 @@ Your abstract goes here.
 \section{Introduction}
 "Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy." - \textsl{Dr Richard Feynman} \cite{feynmann}  \\\\
 Ever since Dr Richard Feynman spoke these famous words at the end of his keynote speech in 1982 one of the main tasks facing quantum computers has been simulating quantum systems. Intuitively a quantum computer should be able to handle this problem better than a classic computer as they operate within the same bizarre world of entanglement and superposition. However, there are many challenges to overcome before quantum advantage can be achieved in this field. We will consider one such challenge in this essay: the optimum mapping scheme from fermions to qubits.\\\\
-One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them a quantum computer can process; in terms of qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of anti-commutation, whereas qubits are independent local systems. Therefore a non-trivial mapping scheme which introduces this non-local behaviour is necessary.\\\\
-The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented nearly a century ago \cite{originalJordanWigner}, and we will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev map} and the \textbf{Derby-Klassen map}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. We will use three different formulations to explain the Bravyi-Kitaev mapping: partial ordering, transformation matrices and Fenwick Trees. Section~\ref{partialorderingsec} on partial ordering contains two original proofs of Bravyi-Kitaev's lemmas \cite{bravyikitaev}. Then, in Section~\ref{comparision_section} we compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
+One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In order to simulate these particles we must find a representation for them a quantum computer can process; in terms of qubits and qubit operators. This poses a fundamental issue as fermions exhibit the non-local property of antisymmetry under exchange, whereas qubits are independent local systems. Section~\ref{firstsecquant} further explores the details of how antisymmetry under exchange translates into the language of qubits by considering first and second quantisation. \\\\
+We then go on to consider the second quantisation mappings which introduce the necessary non-local behaviour. The first such mapping, the \textbf{Jordan-Wigner Transformation}, was invented nearly a century ago \cite{originalJordanWigner}, and we will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev map} and the \textbf{Derby-Klassen map}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. We will use three different formulations to explain the Bravyi-Kitaev mapping: partial ordering, transformation matrices and Fenwick Trees. Section~\ref{partialorderingsec} on partial ordering contains two original proofs of Bravyi-Kitaev's lemmas \cite{bravyikitaev}. Then, in Section~\ref{comparision_section} we compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
 \\\\
 Recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in the Jordan-Wigner mapping offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.
 \\\\
@@ -164,7 +147,7 @@ Finally, it is useful to consider how each Trotter step is represented as a circ
         \vspace*{13pt}
         \fcaption{\label{trotterStepCircuit} The circuit required to exponentiate the Pauli-string $YXZY$ by first converting the qubits into the correct basis using $R_X$ and $H$ gates, then computing the parity of the four qubits before applying a single-qubit phase rotation. After this we uncompute the parity and revert to the computational (Z) basis. This is adapted from \cite{seeley}.}
 \end{figure}
-\section{First and second quantization}
+\section{First and second quantization} \label{firstsecquant}
 This section builds up an explanation of second quantization which is the foundation of all the mappings explained later in the essay. A brief description of first quantization is given to illustrate another way of quantising qubits, and to highlight that fermionic creation and annihilation operators are simply a mathematical construction defined by their anti-commutation relations and/or their action on the Fock basis.
 \subsection{First quantization}
 From Quantum Field Theory (\textbf{citation needed}), it is known that fermions must be antisymmetric under exchange. This property is commonly represented by qubits in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
@@ -174,7 +157,7 @@ From Quantum Field Theory (\textbf{citation needed}), it is known that fermions 
 \begin{equation}\label{antisymwave}
         \Phi(\bm x_1, \bm x_2) = \frac{1}{\sqrt{2}}(\phi_1(\bm x_1) \phi_2(\bm x_2) - \phi_2(\bm x_1) \phi_1(\bm x_2))
 \end{equation}
-We can generalise Eq.~\ref{antisymwave} to larger numbers of fermions through a Slater determinant (Eq.~\ref{slater}) \cite{chemistryReview}. This satisfies the antisymmetry condition as swapping any two rows of a determinant produces a sign change:
+We can generalise Eq.~\ref{antisymwave} to larger numbers of fermions through a Slater determinant (Eq.~\ref{slater}) \cite{chemistryReview}:
 \begin{equation}\label{slater}
         \phi(\bm x_0, ..., \bm x_{N-1}) = \frac{1}{\sqrt{N!}} 
         \begin{vmatrix} 
@@ -183,7 +166,7 @@ We can generalise Eq.~\ref{antisymwave} to larger numbers of fermions through a 
                 \phi_0(\bm x_{N-1}) & \cdots & \phi_{M-1}(\bm x_{N-1})
         \end{vmatrix}
 \end{equation}
-where $M$ is the number of fermionic modes (e.g. spin orbitals) possible and $N$ is the number of particles (e.g. electrons). Typically we have more modes than particles, so the Slater determinant will only contain the $N$ occupied modes.\\\\ 
+where $M$ is the number of fermionic modes (e.g. spin orbitals) possible and $N$ is the number of particles (e.g. electrons). This satisfies the antisymmetry condition as swapping any two rows of a determinant produces a sign change. Typically we have more modes than particles, so the Slater determinant will only contain the $N$ occupied modes.\\\\ 
  In the first quantization the Hamiltonian is defined in terms of $\ket{\phi_p}\bra{\phi_q}$ \cite{tilly}, as in the example given by Eq~\ref{firstham}:
 \begin{equation}
         \label{firstham}
@@ -331,11 +314,10 @@ So,
          $\square$\,.\\\\
          Let $K'(i)$ be equal to $K(i)$ excluding $i$, then:
          \begin{equation}
-                 \sum_{j \in K'(i)} q_j = q_i - \sum_{j \in K(i)} = \sum_{j \preceq i} f_j
+                 \sum_{j \in K'(i)} q_j = q_i - \sum_{j \in K(i)} q_j = \sum_{j \prec i} f_j
          \end{equation}
          From Equation~\ref{Kwrittenout}, it can be seen that $K'(\alpha)$ is a subset of $L(\alpha)$, as $\alpha^i \in L(\alpha)$ if $\alpha_j = 1 \> \forall \>j\leq i$.
-         \paragraph{Bravyi-Kitaev operators}\label{operators}
-To define the Bravyi-Kitaev operators we need to consider a more detailed treatment of how annihilating and creating fermionic modes affects the mapping. There are three different sets of qubits impacted by updating the fermionic mode $f_i$:
+         \paragraph{Bravyi-Kitaev operators}\label{operators} To define the Bravyi-Kitaev operators we need to consider a more detailed treatment of how annihilating and creating fermionic modes affects the mapping. There are three different sets of qubits impacted by updating the fermionic mode $f_i$:
 \begin{itemlist}
 \item \textbf{Parity set ($P_i$)}: The set of qubits from which $\sum_{k < i}f_k$ can be deduced, and by Lemma~1 this is equivalent to $L(i)$. We need to calculate the parity so the correct phase change can be applied upon application of the fermionic operator in line with Eq.~\ref{secondQuant}. The set $L(i)$ has at most $\log(i)$ members as there is at most one member per possible value for $i_0$. Therefore, we only need to use $O(\log(N))$ $Z$ gates to compute the parity rather than the $O(N)$ gates required in the Jordan-Wigner basis. Table~\ref{parityTable} gives an example of the parity calculations in the eight qubit case:
 \vspace*{4pt}   %only when needed
@@ -499,7 +481,7 @@ To construct the mapping the $i$-th qubit stores the parity of all the fermionic
 \end{tikzpicture}}
 \caption{\label{fenwickupdateflip} Update set (green) and Flip set (blue) for $i=5$ $(011)$ on Fenwick tree with $N=8$}
 \end{figure} \noindent
-Again, the Bravyi-Kitaev operators are defined in the same way in terms of $P_i$, $U_i$ and $F_i$ as described in Section~\ref{operators}.\\\\These trees provide useful geometric intuition for considering the various sets of qubits involved in operations and for thinking about the connectivity of the mapping as discussed in Section~\ref{bravyikitavecompare}.\\\\
+Again, the Bravyi-Kitaev operators are defined in the same way in terms of $P_i$, $U_i$ and $F_i$ as described earlier.\\\\These trees provide useful geometric intuition for considering the various sets of qubits involved in operations and for thinking about the connectivity of the mapping as discussed in Section~\ref{bravyikitavecompare}.\\\\
 It is even possible to connect the Fenwick tree formulation back to the transformation matrix formulation by considering that the Fenwick trees can be constructed using an equivalent recursive process \cite{tilly}. The tree with $N = 2^n$ is built from two copies of the tree with $N = 2^{n-1}$ where all the nodes in the second tree have $2^{n-1}$ added to them and they are connected by making the root ($2^{n-1} -1$) of the first tree a child of the root ($2^n -1$) of the second tree.
 \subsection{`Local' Mappings}\label{derby-klassen_section}
 As physical systems are normally dominated by local interactions such as lattice hopping or Coulomb interactions, it is preferable to design a `local' mapping that has low Pauli-weights for local fermionic operators. These schemes only find representations for a selection of local interactions (usually selected to closely match the terms in the target Hamiltonian) rather than between every pair of modes like the Jordan-Wigner or Bravyi-Kitaev mapping. Generally this results in using more qubits but drastically smaller Pauli weights and thus fewer gates.\\\\ 
@@ -801,14 +783,20 @@ One consideration which was not explored by Tranter et al., is the differing qub
 Finally, there is some evidence \cite{noiseerror} that the Bravyi-Kitaev mapping is more susceptible to noise-induced errors than the Jordan-Wigner mapping (for UCC ansatz preparation \cite{tilly} when simulating ground state energies of small diatomic molecules). This is surprising as the Bravyi-Kitaev mapping resulted in fewer gates on average (in these trials), so one would expect less noise-induced error. It was hypothesised this result was because a single qubit flip in the Jordan-Wigner mapping only affects one occupation number, whereas in the Bravyi-Kitaev mapping it would affect several. However, further study is needed to test this hypothesis, and to detemine which mapping is more robust to noise for larger problem sizes.\\\\
 In conclusion, when given the choice between these two mappings to perform a Quantum Phase Estimation, if the qubit architecture allows all-to-all connectivity then the Bravyi-Kitaev mapping seems the most appropriate choice. For all optimisations or orderings the Bravyi-Kitaev mapping significantly outperformed the Jordan-Wigner transformation, with the exception of optimised lexicographic ordering when it was comparable. Despite optimised lexicographic ordering giving the optimal gate count reduction it may be suboptimal for minimising the Trotter error, so an ordering with a clear advantage for the Bravyi-Kitaev mapping might be used instead. However, in the NISQ era qubit architecture will often be more restricted. Therefore, the optimal choice on current devices is the Jordan-Wigner transformation as it provides comparable performance (when using lexicographic ordering) with much simpler connectivity.
                \section{Fermionic Enumeration}\label{fermionic-enumeration_section}
-               Mitchell Chiew and Sergii Strelchuk \cite{fermionicEncoding} realised that for the Jordan-Wigner mapping there is the potential for reducing resource costs without changing anything other than the order we encode qubits. This is achieved by improving the locality of the mapping, so local operations have lower Pauli weights. The following treatment is adapted from \cite{fermionicEncoding}: \\\\
+               Mitchell Chiew and Sergii Strelchuk \cite{fermionicEncoding} realised that for the Jordan-Wigner mapping there is the potential for reducing resource costs without changing anything other than the order we encode qubits. This is achieved by improving the locality of the mapping, so local operations have lower Pauli weights. The following treatment is adapted from \cite{fermionicEncoding}. \\\\
                In 1-D the enumeration is trivial, however, in 2D it becomes an interesting problem. For instance, consider a fermionic square lattice every mode must be assigned a qubit from a 1-D qubit array. There are many different ways of accomplishing this; most notably the S or Z pattern illustrated in Fig~\ref{SZpattern}. As discussed in Section~\ref{derby-klassen_section}, we are often interested in Hamiltonians with local interactions (e.g. between adjacent modes in the lattice). Therefore, the particular enumeration you use will impact the number of qubits that lie between neighbouring modes in the lattice. This is important as in the Jordan-Wigner transformation the Pauli-weight of a fermionic operation scales with the difference in enumeration. Thus by minimising the difference in enumeration between adjacent modes we minimise the average Pauli-weight of local interactions. This reduces to the problem of simple optimal linear arrangement (or edgesum) \cite{edgesum} from graph theory, and is formulated as:\\\\
                \textbf{Simple Optimal Linear Arrangement}: For a graph G with vertices V and edges E. Find an enumeration scheme $f: V \rightarrow \{1,2,...,n\}$ that minimises the cost function
                \begin{equation}
                        C(f) = \sum_{\alpha, \beta} |f(\alpha) - f(\beta)| \label{SOLA}
                \end{equation}
                where the average Pauli weight is given by $\frac{C(f)}{|E|} +1$.\\\\
-               This problem is NP-complete \cite{edgesum} though a number of solutions are known for a range of graphs. We will consider the case of the square lattice to illustrate the principle, but it could be equally well applied to any of the other graphs with known solutions.
+               This problem is NP-complete \cite{edgesum} though a number of solutions are known for a range of graphs. We will consider the case of the square lattice to illustrate the principle, but it could be equally well applied to any of the other graphs with known solutions. 
+               \begin{figure}[htbp]
+                       \centerline{
+                       \includegraphics[scale=0.65]{szpattern.png}
+               }
+               \caption{\label{SZpattern} An S-pattern (left) and Z-pattern (right) on a $6\times 6$ lattice (taken from \cite{fermionicEncoding})}
+               \end{figure}
                \begin{figure}[htbp]
                        \centerline{
                        \includegraphics[scale=0.65]{mitchison-durbin.png}
@@ -837,13 +825,13 @@ In conclusion, when given the choice between these two mappings to perform a Qua
                        C(f) = \sum_{(\mu, \nu) \in V} f(\mu+1, \nu) - f(\mu, \nu) + \sum_{(\mu,\nu) \in V} f(\mu, \nu+1) - f(\mu, \nu)
                                \end{equation}
                                \begin{equation}
-                                       C(f) = \sum_{\nu = 1}^N f(N, \nu) - f(1, \nu) + \sum_{\mu =1}^1 f(\mu, N) - f(\mu, 1)
+                                       C(f) = \sum_{\nu = 1}^N f(N, \nu) - f(1, \nu) + \sum_{\mu =1}^N f(\mu, N) - f(\mu, 1)
                                \end{equation}
                                \begin{equation}
                        C(f) = \sum_{\alpha\in V_r} f(\alpha) - \sum_{\alpha\in V_l} f(\alpha) + \sum_{\alpha\in V_b} f(\alpha) - \sum_{\alpha\in V_t} f(\alpha) 
                \end{equation}
                $\square.$
-       \item The Mitchison-Durbin mapping splits the lattice into three regions $U$, $V$ and $\bar U \cup \bar V$, with $U$ initially the section containing labels up to $(N,1)$ and $V$ initially containing labels from $(1,N)$. These two regions form upper- and lower- skew block-triangular sections in a vertical and horizontally ordered enumeration. The first step taken is to maximise the sum $S(U)$ of labels on the boundary of the lattice in $U$ and minimise the same sum $S(V)$ in $V$, in order to minimise $C(f)$ given by Eq.~\ref{hvSOLA}. The rules for maximising $S(U)$ are:
+       \item The Mitchison-Durbin mapping splits the lattice into three regions $U$, $V$ and $\bar U \cup \bar V$, with $U$ initially the section containing labels up to $(N,1)$ and $V$ initially containing labels from $(1,N)$. These two regions initially form upper- and lower- skew block-triangular sections in a vertical and horizontally ordered enumeration. The first step taken is to maximise the sum $S(U)$ of labels on the boundary of the lattice in $U$ and minimise the same sum $S(V)$ in $V$, in order to minimise $C(f)$ given by Eq.~\ref{hvSOLA}. The rules for maximising $S(U)$ are:
                \begin{alphlist}
                \item Start with the top left vertex, and start numbering by moving along every new row or column as far as horizontal and vertical ordering allows. As if the row or column is not filled maximally, then the next column or row to be filled will start with a lower enumeration, decreasing $S(U)$.
                \item Then move to the longest remaining column or row starting with the top-leftmost available vertex of the lattice. As given two columns or rows of length $b > a$ and initial enumeration $i$, filling $b$ first gives contribution $i + (i+b)$ to $C(f)$ whereas filling $a$ first gives a contribution $i + (i+a)$.
@@ -864,9 +852,9 @@ Currently, fermionic enumeration schemes have only been shown to give an improve
 Importantly the choice fermionic enumeration for the Jordan-Wigner mapping is effective regardless of the connectivity of the qubit architecture. This can be easily seen by breaking up the process of fermionic enumeration into two stages. First, mapping from the fermionic lattice of interactions to a 1D array of qubits (e.g. using the Mitchison-Durbin pattern). Secondly, embedding this 1D array of qubits within a qubit architecture, which preserves Pauli weight as long as the architecture has a direct connection between every adjacent qubit in the 1D array. 
 \section{Novel mapping} \label{novel}
 The following proposal is of my own invention and to the best of my knowledge is a novel fermion-to-qubit mapping.\\\\
-As discussed in Section~\ref{bravyikitavecompare}, the Bravyi-Kitaev mapping is severely hampered by its complexity. For example, it cannot be efficently embedded into a square lattice architecture greater than $4\times 4$ qubits. By combining some elements of the Bravyi-Kitaev mapping with the Jordan-Wigner mapping it is possible to significantly improve the Jordan-Wigner mapping on a square lattice with the trade-off of a slightly increased complexity. The idea is to replace each of the modes in the Jordan-Wigner mapping with a Fenwick tree filling a square cell.
-\\\\ The example we have worked with is encoding a square lattice using a series of $2\times2$ mode cells each mapped to a Fenwick tree with $N=4$ and lain out in an S-pattern (illustrated in Fig~\ref{novel4}). The main advantage offered is that to apply an even fermionic operation between two vertically adjacent modes we either require a constant number of gates (if they are in the same tree), or we only need to count the parity of the roots of the trees between them (if they are in different trees) rather than count the parity of all the qubits between them. Therefore, we get an improvement in linear scaling at the cost of an increased constant overhead (explored further in Section~\ref{theorynovel}).\\\\
-This mapping comes at the increased complexity cost of requiring a cellular graph of connectivity with every cell connected in a square lattice and each cell connected to the next by the roots. However, this connectivity graph can be approximated at the cost of doubling the real number of gates required for computing the parity bits by embedding it all within a simple square lattice.\\\\
+As discussed in Section~\ref{bravyikitavecompare}, the Bravyi-Kitaev mapping is severely hampered by its complexity. For example, it cannot be efficently embedded into a square lattice architecture greater than $4\times 4$ qubits. By combining some elements of the Bravyi-Kitaev mapping with the Jordan-Wigner mapping it is possible to significantly improve the Jordan-Wigner mapping on a square lattice with the trade-off of a only slightly increased complexity. The idea is to replace each of the modes in the Jordan-Wigner mapping with a Fenwick tree filling a square cell.
+\\\\ The example we have worked with is encoding a square lattice using a series of $2\times2$ mode cells each mapped to a Fenwick tree with $N=4$ and laid out in an S-pattern (illustrated in Fig~\ref{novel4}). The main advantage offered is that to apply an even fermionic operation between two vertically adjacent modes we either require a constant number of gates (if they are in the same tree), or we only need to count the parity of the roots of the trees between them (if they are in different trees) rather than count the parity of all the qubits between them. Therefore, we get an improvement in linear scaling at the cost of an increased constant overhead (explored further in Section~\ref{theorynovel}).\\\\
+This mapping comes at the increased complexity cost of requiring a cellular graph of connectivity with every cell internally connected along the Fenwick tree and each cell connected to the next by the roots of the trees. However, this connectivity graph can be approximated at the cost of doubling the real number of gates required for computing the parity set by embedding it all within a simple square lattice.\\\\
 In a simulation we carried out for a lattice of size $20\times 20$, this proposal demonstrated promising results. The average Pauli weight for the new mapping was calculated as approximately $6.42$; a huge (44.2\%) improvement on the original Jordan-Wigner (S-pattern) mapping average Pauli weight of $11.5$ \cite{fermionicEncoding}. Even when using a simple square lattice embedding (requring twice the gates to connect between the roots of the trees) it achieved an average Pauli weight of $8.91$ (a 22.5\% improvement).
 \begin{figure}[hbtp] 
         \centerline{
@@ -913,9 +901,9 @@ Then considering the Pauli weights of the horiztonal interactions (numbering col
 \item The even columns of interactions are increased from an average of $2$ to $3.5$\\
 \item The odd coumns of interactions are increased from an average of $2$ to $6$
 \end{itemlist}
-Therefore, the overall average Pauli weight is decreased from $\frac{N}{2} + \frac{3}{2}$ to roughly $\frac{N}{8} + \frac{34}{8}$ (averaging over the even and odd rows). In reality, the average Pauli sum slightly deviates from this depending on whether there are more even rows or columns than odd. As in the case of the $20 \times 20$ lattice I computed which has more even rows than odd rows, the theory estimates a Pauli weight of approximately $6.75$ compared to the calculated value of $6.42$.
+Therefore, the overall average Pauli weight is decreased from $\frac{N}{2} + \frac{3}{2}$ to roughly $\frac{N}{8} + \frac{34}{8}$ (averaging over the even and odd rows). In reality, the average Pauli sum slightly deviates from this depending on whether there are more even rows or columns than odd. In the case of the $20 \times 20$ lattice the theory estimates a Pauli weight of approximately $6.75$ compared to the calculated value of $6.42$, where the small discrepancy is due to the lattive having more even rows than odd rows.
 \subsection{Proposed expansion of this mapping}
-We have only considered the example of $2\times 2$ cells for ease of illustration and to demonstrate the proof of principle, but generally it may be optimal to use cells of other dimensions. Further research is needed to investigate other cellular structures and determine the optimal strucutre for a given level of complexitity (as dictated by the architecture of the device). We conjecture that using a $4\times 4$ cell may prove optimal for large lattices, however, such lattices lie out of the reach of current NISQ devices due to the large qubit count required to simulate them. Even the $20 \times 20$ lattice considered above would require $400$ qubits (neglecting any requirement for error correction) which is beyond today's computers.\\\\
+We have only considered the example of $2\times 2$ cells for ease of illustration and to demonstrate the proof of principle, but generally it may be optimal to use cells of other dimensions. Further research is needed to investigate other cellular structures and determine the optimal structure for a given level of complexitity (as dictated by the architecture of the device). We conjecture that using a $4\times 4$ cell may prove optimal for large lattices, however, such large lattices lie out of the reach of current NISQ devices due to the large qubit count required to simulate them. Even the $20 \times 20$ lattice considered above would require $400$ qubits which is beyond today's computers (even before considering error correction overheads).\\\\
 Additionally, this mapping was orginally concieved as a way of combining the techniques of fermionic enumeration and Bravyi-Kitaev. It may be possible to find a much more efficent overall layout for the cells than a simple S-pattern and further drastically reduce the number of gates. Further research is necessary to determine if a more optimal pattern exists, and if so how much difference it makes.
 \section{Conclusion}
 \raggedbottom

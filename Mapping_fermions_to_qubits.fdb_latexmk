@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1650375692 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1650375691
-  "Mapping_fermions_to_qubits.aux" 1650375687 7527 6b0fcefd703aa5911d793113ba3d5f75 "pdflatex"
-  "Mapping_fermions_to_qubits.tex" 1650375684 114097 352c57b32d944670be4265b6006e5826 ""
+["pdflatex"] 1650384903 "Mapping_fermions_to_qubits.tex" "Mapping_fermions_to_qubits.pdf" "Mapping_fermions_to_qubits" 1650384902
+  "Mapping_fermions_to_qubits.aux" 1650384874 7861 534ba7030e073478a26012991098bcf2 "pdflatex"
+  "Mapping_fermions_to_qubits.tex" 1650384901 114399 6b15b8b22b2607c061f5ca85450be134 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1630418551 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1630413436 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1630413436 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -213,6 +213,7 @@
   "c:/texlive/2021/texmf.cnf" 1630426082 713 e69b156964470283e0530f5060668171 ""
   "mitchison-durbin.png" 1650374750 55070 19013ad20a1bf1ff00e13a9e967d6553 ""
   "qic.sty" 1640013490 13022 9c2cb222906c73694e71994b353e1542 ""
+  "szpattern.png" 1650383852 61436 9324f6897600923d75aa180afbde9760 ""
   (generated)
   "Mapping_fermions_to_qubits.pdf"
   "Mapping_fermions_to_qubits.log"
