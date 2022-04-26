@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  26 APR 2022 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  26 APR 2022 15:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2007,34 +2007,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 825--828
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 855--861
+Underfull \hbox (badness 10000) in paragraph at lines 855--860
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 855--861
+Underfull \hbox (badness 10000) in paragraph at lines 855--860
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 855--861
+Underfull \hbox (badness 10000) in paragraph at lines 855--860
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 867.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 866.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 867.
+Package hyperref Warning: Ignoring empty anchor on input line 866.
 
-./Mapping_fermions_to_qubits.tex:900: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:899: Undefined control sequence.
 \@makecaption ...bovecaptionskip \setbox \tempbox 
                                                   \hbox {{\figurecaptionfont...
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2042,19 +2038,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:900: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:899: Missing number, treated as zero.
 <to be read again> 
                    \hbox 
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:900: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:899: Undefined control sequence.
 \@makecaption ...mpbox \hbox {{\figurecaptionfont 
                                                   #1\hskip 1em #2}} \ifdim \...
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2062,10 +2058,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:900: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:899: Undefined control sequence.
 \@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
                                                   < 28pc \centerline {\box \...
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2073,19 +2069,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:900: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:899: Missing number, treated as zero.
 <to be read again> 
                    <
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:900: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:899: Undefined control sequence.
 <argument> \box \tempbox 
                          
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2093,93 +2089,93 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:900: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:899: Missing number, treated as zero.
 <to be read again> 
                    \hss 
-l.900 ...pping for a lattice of $4\times 4$ modes}
+l.899 ...pping for a lattice of $4\times 4$ modes}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--902
+Underfull \hbox (badness 10000) in paragraph at lines 861--901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--902
+Underfull \hbox (badness 10000) in paragraph at lines 861--901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--902
+Underfull \hbox (badness 10000) in paragraph at lines 861--901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--902
+Underfull \hbox (badness 10000) in paragraph at lines 861--901
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 910--911
+Underfull \hbox (badness 10000) in paragraph at lines 918--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--917
+Underfull \hbox (badness 10000) in paragraph at lines 918--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--928
+Underfull \hbox (badness 10000) in paragraph at lines 918--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--928
+Underfull \hbox (badness 10000) in paragraph at lines 918--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--928
+Underfull \hbox (badness 10000) in paragraph at lines 918--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--928
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 919--928
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 919--928
+Underfull \hbox (badness 10000) in paragraph at lines 918--927
 
  []
 
 [25] [26] [27]
-Underfull \hbox (badness 4391) in paragraph at lines 975--976
+Underfull \hbox (badness 4391) in paragraph at lines 974--975
 []\OT1/cmr/m/n/9 O'Brien, Oliver. Oliverob/Fermion-Mapping. Jupyter Note-book, 2022. []$\OT1/cmtt/m/n/9 https : / / github . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
+Underfull \hbox (badness 10000) in paragraph at lines 974--975
 \OT1/cmtt/m/n/9 oliverob / fermion-[]mapping / blob / 0123643b8d3f3842c778eec66835ee3ba72b5126 / Novel _ Fermion _
  []
 
 [28] (./Mapping_fermions_to_qubits.aux)
 Package rerunfilecheck Info: File `Mapping_fermions_to_qubits.out' has not changed.
-(rerunfilecheck)             Checksum: D4C6F258B4618F83105B4216DF1AA1C3;4589.
+(rerunfilecheck)             Checksum: 3F30252DFE15DC4B064F4B28846DDEDE;4589.
  ) 
 Here is how much of TeX's memory you used:
  26004 strings out of 478599
@@ -2191,7 +2187,7 @@ Here is how much of TeX's memory you used:
  84i,26n,89p,2012b,1248s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (28 pages, 616583 bytes).
+Output written on Mapping_fermions_to_qubits.pdf (28 pages, 616405 bytes).
 PDF statistics:
  804 PDF objects out of 1000 (max. 8388607)
  696 compressed objects within 7 object streams
