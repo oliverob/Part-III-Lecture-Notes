@@ -203,9 +203,10 @@ $^{{\@thefnmark}}$\hfil}#1\hfill}
          \small\rm\baselineskip=11pt
          \begin{list}{\arabic{enumi}.}
         {\usecounter{enumi}\setlength{\parsep}{0pt}     
-          \setlength{\leftmargin 12.7pt}{\rightmargin 0pt}%FOR 1--9 ITEMS
-%         \setlength{\leftmargin 17pt}{\rightmargin 0pt}  %FOR 10--99 ITEMS
-%         \setlength{\leftmargin 22pt}{\rightmargin 0pt}   %FOR 100+ABOVE ITEMS
+%          \setlength{\leftmargin}{12.7pt}%FOR 1--9 ITEMS
+         \setlength{\leftmargin}{17pt}  %FOR 10--99 ITEMS
+%         \setlength{\leftmargin}{22pt}   %FOR 100+ABOVE ITEMS
+                \setlength{\rightmargin}{0pt}
          \setlength{\itemsep}{0pt} \settowidth
           {\labelwidth}{#1.}\sloppy}}{\end{list}}
 

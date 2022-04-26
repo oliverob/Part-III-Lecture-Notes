@@ -18,17 +18,23 @@
 \usepackage{algpseudocode} 
 \usepackage{tikz}
 \usepackage{url}
+\usepackage{hyperref}
 \usetikzlibrary{arrows.meta}
 
-\textwidth=5.6truein
-\textheight=8.0truein
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={150mm,237mm},
+ left=30mm,
+ top=30mm,
+ }
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}  %use symbolic footnote
 
 %%%%%%% starting the text file 
 
 \begin{document}
-\setlength{\textheight}{8.0truein}    %FOR 2ND PAGE ONWARDS
+    %FOR 2ND PAGE ONWARDS
 
 \runninghead{Mapping Fermions to Qubits  $\ldots$}
             {Oliver O'Brien $\ldots$}
@@ -80,7 +86,7 @@ We then go on to consider the second quantisation mappings which introduce the n
 Recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in the Jordan-Wigner mapping offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.
 \\\\
 Finally, we have proposed a \textbf{new mapping} that combines aspects of the Jordan-Wigner and Bravyi-Kitaev mappings which we introduce in Section~\ref{novel}. This mapping is demonstrated to reduce gate count with less increased complexity than the Bravyi-Kitaev mapping.\\\\
-It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} (below) we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system.
+It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system.
 \section{Estimating ground state energies}\label{applications_section}
 Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach, which is unfeasible on a classical computer where it scales exponentially in the number of fermionic modes. This section will consider two common approaches for estimating ground state energies on quantum computers (Variational Quantum Eigensolver and Quantum Phase Estimation) and how they are affected by the choice of fermion-to-qubit mapping.
 \subsection{Variational Quantum Eigensolver (VQE)}\label{vqe_section}
@@ -150,7 +156,7 @@ Finally, it is useful to consider how each Trotter step is represented as a circ
 \section{First and second quantization} \label{firstsecquant}
 This section builds up an explanation of second quantization which is the foundation of all the mappings explained later in the essay. A brief description of first quantization is given to illustrate another way of quantising qubits, and to highlight that fermionic creation and annihilation operators are simply a mathematical construction defined by their anti-commutation relations and/or their action on the Fock basis.
 \subsection{First quantization}
-From Quantum Field Theory (\textbf{citation needed}), it is known that fermions must be antisymmetric under exchange. This property is commonly represented by qubits in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
+From Quantum Field Theory \cite{qft}, it is known that fermions must be antisymmetric under exchange. This property is commonly represented by qubits in two ways known as the first and second quantization. The first quantization is when the antisymmetry is retained in the wavefunction such as with:
 \begin{equation}\label{antisym}
         \ket{\Phi} = \frac{1}{\sqrt{2}}(\ket{\phi_1}_1 \ket{\phi_2}_2 - \ket{\phi_2}_1 \ket{\phi_1}_2)
 \end{equation}
@@ -846,16 +852,18 @@ In conclusion, when given the choice between these two mappings to perform a Qua
        \item So, on a square lattice we can find an optimum enumeration pattern which leads to a reduction in the cost of Simple Optimal Linear Arrangement, and therefore minimises the average Pauli weight of hopping terms. As a simple S-pattern $f_S$ has a cost function of $C^1(f_s) = N^3 - N$, it is possible to use a computer to calculate the limiting (as $N \rightarrow \infty$) reduction in average Pauli weight of 13.9\% \cite{fermionicEncoding}.
 \end{itemlist}
 Therefore, using fermionic encoding it is possible to increase the locality of the fermion to qubit mapping without introducing any additional resources, and simply relabelling the qubits in the existing Jordan-Wigner mapping.\\\\
-Recent research \cite{chiew2} has also shown that by combining fermionic enumeration with a constant number of aucilla qubits one can enhance the impact of the Mitchison-Durbin pattern. It was shown that using just 2 additional qubits to store the total parity of two sections of the pattern (which is also altered so $x \approx 0.47N$) gives a mapping with a 40\% limiting reduction in average Pauli weight compared to the S-pattern. 
+Recent research \cite{fermionicEncoding} has also shown that by combining fermionic enumeration with a constant number of aucilla qubits one can enhance the impact of the Mitchison-Durbin pattern. It was shown that using just 2 additional qubits to store the total parity of two sections of the pattern (which is also altered so $x \approx 0.47N$) gives a mapping with a 40\% limiting reduction in average Pauli weight compared to the S-pattern. 
 \\\\
 Currently, fermionic enumeration schemes have only been shown to give an improvement in Jordan-Wigner mappings. Thus they might shift the balance and make Jordan-Wigner mappings (with optimum fermionic enumeration) preferable to Bravyi-Kitaev mappings for architecture with all-to-all connectivity. Further research is needed to test this hypothesis. It is important to note that fermionic encodings are only maximally efficient for interaction graphs that have known minimum edgesum solutions, however, there are other graphs for which a good enumeration scheme can also lead to an order-of-magnitude reduction in gate count.\\\\
-Importantly the choice fermionic enumeration for the Jordan-Wigner mapping is effective regardless of the connectivity of the qubit architecture. This can be easily seen by breaking up the process of fermionic enumeration into two stages. First, mapping from the fermionic lattice of interactions to a 1D array of qubits (e.g. using the Mitchison-Durbin pattern). Secondly, embedding this 1D array of qubits within a qubit architecture, which preserves Pauli weight as long as the architecture has a direct connection between every adjacent qubit in the 1D array. 
+Importantly the choice fermionic enumeration for the Jordan-Wigner mapping is effective regardless of the connectivity of the qubit architecture. This can be easily seen by breaking up the process of fermionic enumeration into two stages. First, mapping from the fermionic lattice of interactions to a 1D array of qubits (e.g. using the Mitchison-Durbin pattern). Secondly, embedding this 1D array of qubits within a qubit architecture, which preserves Pauli weight as long as the architecture has a direct connection between every adjacent qubit in the 1D array.
+\pagebreak
 \section{Novel mapping} \label{novel}
 The following proposal is of my own invention and to the best of my knowledge is a novel fermion-to-qubit mapping.\\\\
 As discussed in Section~\ref{bravyikitavecompare}, the Bravyi-Kitaev mapping is severely hampered by its complexity. For example, it cannot be efficently embedded into a square lattice architecture greater than $4\times 4$ qubits. By combining some elements of the Bravyi-Kitaev mapping with the Jordan-Wigner mapping it is possible to significantly improve the Jordan-Wigner mapping on a square lattice with the trade-off of a only slightly increased complexity. The idea is to replace each of the modes in the Jordan-Wigner mapping with a Fenwick tree filling a square cell.
-\\\\ The example we have worked with is encoding a square lattice using a series of $2\times2$ mode cells each mapped to a Fenwick tree with $N=4$ and laid out in an S-pattern (illustrated in Fig~\ref{novel4}). The main advantage offered is that to apply an even fermionic operation between two vertically adjacent modes we either require a constant number of gates (if they are in the same tree), or we only need to count the parity of the roots of the trees between them (if they are in different trees) rather than count the parity of all the qubits between them. Therefore, we get an improvement in linear scaling at the cost of an increased constant overhead (explored further in Section~\ref{theorynovel}).\\\\
+\\\\ The example we have worked with is encoding a square lattice using a series of $2\times2$ mode cells each mapped to a Fenwick tree with $N=4$ and laid out in an Z-pattern (illustrated in Fig~\ref{novel4}). The main advantage offered is that to apply an even fermionic operation between two vertically adjacent modes we either require a constant number of gates (if they are in the same tree), or we only need to count the parity of the roots of the trees between them (if they are in different trees) rather than count the parity of all the qubits between them. Therefore, we get an improvement in linear scaling at the cost of an increased constant overhead (explored further in Section~\ref{theorynovel}).\\\\
 This mapping comes at the increased complexity cost of requiring a cellular graph of connectivity with every cell internally connected along the Fenwick tree and each cell connected to the next by the roots of the trees. However, this connectivity graph can be approximated at the cost of doubling the real number of gates required for computing the parity set by embedding it all within a simple square lattice.\\\\
-In a simulation we carried out for a lattice of size $20\times 20$, this proposal demonstrated promising results. The average Pauli weight for the new mapping was calculated as approximately $6.42$; a huge (44.2\%) improvement on the original Jordan-Wigner (S-pattern) mapping average Pauli weight of $11.5$ \cite{fermionicEncoding}. Even when using a simple square lattice embedding (requring twice the gates to connect between the roots of the trees) it achieved an average Pauli weight of $8.91$ (a 22.5\% improvement).
+In a simulation\fnm{c} we carried out for a lattice of size $20\times 20$, this proposal demonstrated promising results. The average Pauli weight for the new mapping was calculated as approximately $6.42$; a huge (44.2\%) improvement on the original Jordan-Wigner (Z-pattern) mapping average Pauli weight of $11.5$ \cite{fermionicEncoding}. Even when using a simple square lattice embedding (requring twice the gates to connect between the roots of the trees) it achieved an average Pauli weight of $8.91$ (a 22.5\% improvement).
+\fnt{c}{The code for this simulation can be found in \cite{github}}
 \begin{figure}[hbtp] 
         \centerline{
 \begin{tikzpicture}[nodes={draw, circle}, ->]
@@ -873,24 +881,24 @@ In a simulation we carried out for a lattice of size $20\times 20$, this proposa
         \draw [->] (7) -- (5);
         \draw [->] (7) -- (6);
         \draw [->] (5) -- (4);
-        \node (11) at (2,-1) {11};
-        \node (9) at (3,-1) {9};
-        \node (8) at (3,-2) {8};
-        \node (10) at (2,-2) {10};
+        \node (11) at (0,-1) {11};
+        \node (9) at (1,-1) {9};
+        \node (8) at (1,-2) {8};
+        \node (10) at (0,-2) {10};
         \draw [->] (11) -- (9);
         \draw [->] (11) -- (10);
         \draw [->] (9) -- (8);
-        \node (15) at (0,-1) {15};
-        \node (13) at (1,-1) {13};
-        \node (12) at (1,-2) {12};
-        \node (14) at (0,-2) {14};
+        \node (15) at (2,-1) {15};
+        \node (13) at (3,-1) {13};
+        \node (12) at (3,-2) {12};
+        \node (14) at (2,-2) {14};
         \draw [->] (15) -- (13);
         \draw [->] (15) -- (14);
         \draw [->] (13) -- (12);
 \end{tikzpicture}}
 \caption{\label{novel4} Illustration of novel mapping for a lattice of $4\times 4$ modes}
 \end{figure}
-\subsection{Theoretical improvement of this mapping} \label{theorynovel}
+\subsection{Theoretical performance of this mapping} \label{theorynovel}
 First, considering the Pauli weights of the vertical interactions (numbering rows from $0$):
 \begin{itemlist}
 \item The even rows of interactions are reduced from an average of $N + 1$ (where $N$ is the length of the lattice) to $2$\\
@@ -902,9 +910,9 @@ Then considering the Pauli weights of the horiztonal interactions (numbering col
 \item The odd coumns of interactions are increased from an average of $2$ to $6$
 \end{itemlist}
 Therefore, the overall average Pauli weight is decreased from $\frac{N}{2} + \frac{3}{2}$ to roughly $\frac{N}{8} + 4 - \frac{13}{8(N-1)}$ (for even length lattices). In the case of the $20 \times 20$ lattice, this estimates an average Pauli weight of approximately $6.41$ closely matching the experimental result.
-\subsection{Proposed expansion of this mapping}
+\subsection{Proposed extensions of this mapping}
 We have only considered the example of $2\times 2$ cells for ease of illustration and to demonstrate the proof of principle, but generally it may be optimal to use cells of other dimensions. Further research is needed to investigate other cellular structures and determine the optimal structure for a given level of complexitity (as dictated by the architecture of the device). We conjecture that using a $4\times 4$ cell may prove optimal for large lattices, however, such large lattices lie out of the reach of current NISQ devices due to the large qubit count required to simulate them. Even the $20 \times 20$ lattice considered above would require $400$ qubits which is beyond today's computers (even before considering error correction overheads).\\\\
-Additionally, this mapping was orginally concieved as a way of combining the techniques of fermionic enumeration and Bravyi-Kitaev. It may be possible to find a much more efficent overall layout for the cells than a simple S-pattern and further drastically reduce the number of gates. Further research is necessary to determine if a more optimal pattern exists, and if so how much difference it makes.
+Additionally, this mapping was orginally concieved as a way of combining the techniques of fermionic enumeration and Bravyi-Kitaev. It may be possible to find a much more efficent overall layout for the cells than a simple Z-pattern and further drastically reduce the number of gates. Further research is necessary to determine if a more optimal pattern exists, and if so how much difference it makes.
 \section{Conclusion}
 \raggedbottom
 Accurate simulation of fermionic systems would prove very useful for a number of applications in Quantum Chemistry including determining the ground state energies of molecules. However, the large number of degrees of freedom contained in such systems make classical simulation unfeasible for large molecules. Therefore, we turn to quantum computation in order to efficently simulate fermions. One of the main challenges of simulating fermions on a quantum computer is due to their unusal non-local property of anti-symmetry under exchange. This essay has described a few different mappings from fermions to qubits that solve this problem.\\\\
@@ -917,16 +925,16 @@ Finally, the new mapping we have proposed allows for a trade-off between the Jor
 In conclusion, if we were tasked with picking an optimium fermion-to-qubit mapping to perform quantum phase estimation on a square lattice, we would pick the Jordan-Wigner mapping with Mitchison-Durbin enumeration. We would prefer this over the more gate efficent Derby-Klassen (or other `local' mappings) as in the NISQ era, with limited numbers of qubits available, we must prioritise qubit count. The decision to rank it above Bravyi-Kitaev is primarily due to reducing the architecture requirements, as NISQ devices often have limited connectivity. These concerns about architecture outstrip the theoretical potential for gate reduction as Section~\ref{bravyikitavecompare} discussed. Lastly, we would select it over the novel mapping which is untested and enforces additional restrictions on the connectivity. However, with more research into this new mapping, such as applying enumeration schemes and optimising the cell size, it could potentially outperform the Jordan-Wigner mapping with Mitchison-Durbin enumeration.  
 \pagebreak
         \section{References}
-\begin{thebibliography}{000}
+\begin{thebibliography}{99}
+
         \bibitem{feynmann} Feynman, R.P.. {\it Simulating physics with computers}. International Journal of Theoretical Physics 1982;21(6-7):467–488. \url{doi:10.1007/bf02650179}.
-        \bibitem{originalJordanWigner} Pascual Jordan and Eugene Wigner. {\it  {\"U}ber das Paulische {\"A}quivalenzverbot}. Zeitschrift fur Physik, 47(9-10):631{651, September 1928.
-                \bibitem{fermionicEncoding} Chiew, M. and Strelchuk, S.. {\it Optimal Fermion-Qubit Mappings}. ArXiv:2110.12792 [Quant-Ph], 25 October 2021. \url{http://arxiv.org/abs/2110.12792}
+        \bibitem{originalJordanWigner} Pascual Jordan and Eugene Wigner. {\it  {\"U}ber das Paulische {\"A}quivalenzverbot}. Zeitschrift fur Physik, 47(9-10):631651, September 1928.
+        \bibitem{fermionicEncoding} Chiew, Mitchell, and Sergii Strelchuk. {\it Optimal Fermion-Qubit Mappings}. ArXiv:2110.12792 [Quant-Ph], 2 February 2022. \url{http://arxiv.org/abs/2110.12792}
                 \bibitem{vqe}
-                Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176} \textbf{look for journal version}
+                Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176} 
                 \bibitem{chemistryReview} McArdle, Sam, Suguru Endo, Alán Aspuru-Guzik, Simon C. Benjamin, and Xiao Yuan. {\it Quantum Computational Chemistry}. Reviews of Modern Physics 92, no. 1 (30 March 2020): 015003. \url{https://doi.org/10.1103/RevModPhys.92.015003}.
                 \bibitem{nielsenChuang} Nielsen, M.A., Chuang, I.L.. {\it Quantum Computation and Quantum Information}. Cambridge: Cambridge University Press; 2009. ISBN
                 \bibitem{seeley} Seeley, Jacob T., Martin J. Richard, and Peter J. Love. {\it The Bravyi-Kitaev Transformation for Quantum Computation of Electronic Structure}. The Journal of Chemical Physics 137, no. 22 (14 December 2012): 224109. \url{https://doi.org/10.1063/1.4768229}.
-
 9780511976667. doi:10.1017/cbo9780511976667. 
 \bibitem{suzuki} Suzuki, Masuo. {\it Generalized Trotter’s Formula and Systematic Approximants of Exponential Operators and Inner Derivations with Applications to Many-Body Problems}. Communications in Mathematical Physics 51, no. 2 (June 1976): 183–90. \url{https://doi.org/10.1007/BF01609348}.
 \bibitem{bravyikitaev} Bravyi, Sergey, and Alexei Kitaev. {\it Fermionic Quantum Computation}. Annals of Physics 298, no. 1 (May 2002): 210–26. \url{https://doi.org/10.1006/aphy.2002.6254}.
@@ -938,7 +946,6 @@ In conclusion, if we were tasked with picking an optimium fermion-to-qubit mappi
 \bibitem{edgesum} Garey, M. R., D. S. Johnson, and L. Stockmeyer. {\it Some Simplified NP-Complete Graph Problems}. Theoretical Computer Science 1, no. 3 (1 February 1976): 237–67. \url{https://doi.org/10.1016/0304-3975(76)90059-1}.
 \bibitem{mitchisondurbin} Mitchison, Graeme, and Richard Durbin. {\it Optimal Numberings of an $N \times N$ Array}. SIAM Journal on Algebraic Discrete Methods 7, no. 4 (1 October 1986): 571–82. \url{https://doi.org/10.1137/0607063}.
 \bibitem{reducequbits} Moll, Nikolaj, Andreas Fuhrer, Peter Staar, and Ivano Tavernelli. {\it Optimizing Qubit Resources for Quantum Chemistry Simulations in Second Quantization on a Quantum Computer}. Journal of Physics A: Mathematical and Theoretical 49, no. 29 (22 July 2016): 295301. \url{https://doi.org/10.1088/1751-8113/49/29/295301}.
-\bibitem{me}
                 \bibitem{first}
 P. Horodecki and R. Horodecki (2001), {\it Distillation and bound entanglement},
 Quantum Inf. Comput., Vol.1, pp. 045-075.
@@ -956,19 +963,20 @@ more disordered globally than locally}, quant-ph/0105090.
 A.W. Marshall and I. Olkin (1979), {\it Inequalities: theory of majorization and its applications},
 Academic Press (New York).
 
-\bibitem{chenxu} Chen, Yu-An, and Yijia Xu. ‘Equivalence between Fermion-to-Qubit Mappings in Two Spatial Dimensions’. ArXiv:2201.05153 [Cond-Mat, Physics:Math-Ph, Physics:Quant-Ph], 13 January 2022. \url{http://arxiv.org/abs/2201.05153}
+\bibitem{chenxu} Chen, Yu-An, and Yijia Xu. {\it Equivalence between Fermion-to-Qubit Mappings in Two Spatial Dimensions}. ArXiv:2201.05153 [Cond-Mat, Physics:Math-Ph, Physics:Quant-Ph], 13 January 2022. \url{http://arxiv.org/abs/2201.05153}
 
-\bibitem{chen2} Chen, Yu-An, Anton Kapustin, and Djordje Radicevic. ‘Exact Bosonization in Two Spatial Dimensions and a New Class of Lattice Gauge Theories’. Annals of Physics 393 (June 2018): 234–53. \url{https://doi.org/10.1016/j.aop.2018.03.024}
+\bibitem{chen2} Chen, Yu-An, Anton Kapustin, and Djordje Radicevic. {\it Exact Bosonization in Two Spatial Dimensions and a New Class of Lattice Gauge Theories}. Annals of Physics 393 (June 2018): 234–53. \url{https://doi.org/10.1016/j.aop.2018.03.024}
 
-\bibitem{codes} Steudtner, Mark, and Stephanie Wehner. ‘Quantum Codes for Quantum Simulation of Fermions on a Square Lattice of Qubits’. Physical Review A 99, no. 2 (8 February 2019): 022308. \url{https://doi.org/10.1103/PhysRevA.99.022308}
-\bibitem{chiew2} Chiew, Mitchell, and Sergii Strelchuk. ‘Optimal Fermion-Qubit Mappings’. ArXiv:2110.12792 [Quant-Ph], 2 February 2022. \url{http://arxiv.org/abs/2110.12792}
-\bibitem{fenwick} Fenwick, Peter M. ‘A New Data Structure for Cumulative Frequency Tables’. Software: Practice and Experience 24, no. 3 (March 1994): 327–36. \url{https://doi.org/10.1002/spe.4380240306}
-\bibitem{noiseerror} Sawaya, Nicolas P. D., Mikhail Smelyanskiy, Jarrod R. McClean, and Alán Aspuru-Guzik. ‘Error Sensitivity to Environmental Noise in Quantum Circuits for Chemical State Preparation’. Journal of Chemical Theory and Computation 12, no. 7 (12 July 2016): 3097–3108. https://doi.org/10.1021/acs.jctc.6b00220.
-\bibitem{tilly} Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. ‘The Variational Quantum Eigensolver: A Review of Methods and Best Practices’. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176}.
-\bibitem{firstech1} Abrams, Daniel S., and Seth Lloyd. ‘Simulation of Many-Body Fermi Systems on a Universal Quantum Computer’. Physical Review Letters 79, no. 13 (29 September 1997): 2586–89. \url{https://doi.org/10.1103/PhysRevLett.79.2586}.
-\bibitem{firstech2} Berry, Dominic W., Mária Kieferová, Artur Scherer, Yuval R. Sanders, Guang Hao Low, Nathan Wiebe, Craig Gidney, and Ryan Babbush. ‘Improved Techniques for Preparing Eigenstates of Fermionic Hamiltonians’. Npj Quantum Information 4, no. 1 (December 2018): 22. \url{https://doi.org/10.1038/s41534-018-0071-5}
-\bibitem{barrenplat} Cerezo, M., Akira Sone, Tyler Volkoff, Lukasz Cincio, and Patrick J. Coles. ‘Cost Function Dependent Barren Plateaus in Shallow Parametrized Quantum Circuits’. Nature Communications 12, no. 1 (December 2021): 1791. \url{https://doi.org/10.1038/s41467-021-21728-w}.
+\bibitem{codes} Steudtner, Mark, and Stephanie Wehner. {\it Quantum Codes for Quantum Simulation of Fermions on a Square Lattice of Qubits}. Physical Review A 99, no. 2 (8 February 2019): 022308. \url{https://doi.org/10.1103/PhysRevA.99.022308}
+
+\bibitem{fenwick} Fenwick, Peter M. {\it A New Data Structure for Cumulative Frequency Tables}. Software: Practice and Experience 24, no. 3 (March 1994): 327–36. \url{https://doi.org/10.1002/spe.4380240306}
+\bibitem{noiseerror} Sawaya, Nicolas P. D., Mikhail Smelyanskiy, Jarrod R. McClean, and Alán Aspuru-Guzik. {\it Error Sensitivity to Environmental Noise in Quantum Circuits for Chemical State Preparation}. Journal of Chemical Theory and Computation 12, no. 7 (12 July 2016): 3097–3108. \url{https://doi.org/10.1021/acs.jctc.6b00220}.
+\bibitem{tilly} Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176}.
+\bibitem{firstech1} Abrams, Daniel S., and Seth Lloyd. {\it Simulation of Many-Body Fermi Systems on a Universal Quantum Computer}. Physical Review Letters 79, no. 13 (29 September 1997): 2586–89. \url{https://doi.org/10.1103/PhysRevLett.79.2586}.
+\bibitem{firstech2} Berry, Dominic W., Mária Kieferová, Artur Scherer, Yuval R. Sanders, Guang Hao Low, Nathan Wiebe, Craig Gidney, and Ryan Babbush. {\it Improved Techniques for Preparing Eigenstates of Fermionic Hamiltonians}. Npj Quantum Information 4, no. 1 (December 2018): 22. \url{https://doi.org/10.1038/s41534-018-0071-5}
+\bibitem{barrenplat} Cerezo, M., Akira Sone, Tyler Volkoff, Lukasz Cincio, and Patrick J. Coles. {\it Cost Function Dependent Barren Plateaus in Shallow Parametrized Quantum Circuits}. Nature Communications 12, no. 1 (December 2021): 1791. \url{https://doi.org/10.1038/s41467-021-21728-w}.
+\bibitem{github} O’Brien, Oliver. Oliverob/Fermion-Mapping. Jupyter Notebook, 2022. \url{https://github.com/oliverob/fermion-mapping/blob/0123643b8d3f3842c778eec66835ee3ba72b5126/Novel_Fermion_to_qubit_mapping.ipynb} 
+\bibitem{qft} Peskin, Michael Edward and Schroeder, Daniel V.. {\it An Introduction to Quantum Field Theory}. : Westview Press, 1995.
 \end{thebibliography}
-
 \end{document}
 
