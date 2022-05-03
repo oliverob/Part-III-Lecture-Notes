@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  3 MAY 2022 11:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.31)  3 MAY 2022 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,305 +853,308 @@ LaTeX Info: Redefining \nameref on input line 36.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./Mapping_fermions_to_qubits.toc)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Mapping_fermions_to_qubits.toc)
 \tf@toc=\write6
 \openout6 = `Mapping_fermions_to_qubits.toc'.
 
 
-Underfull \vbox (badness 3579) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1
+ [2]
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-./Mapping_fermions_to_qubits.tex:82: LaTeX Error: There's no line here to end.
+./Mapping_fermions_to_qubits.tex:62: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.82 ...Feynman \cite{feynmann}}\end{center}  \\\\
+l.62 ...Feynman \cite{feynmann}}\end{center}  \\\\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Mapping_fermions_to_qubits.tex:83: LaTeX Error: There's no line here to end.
+./Mapping_fermions_to_qubits.tex:63: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 E
+l.63 E
       ver since Dr Richard Feynman spoke these famous words at the end of hi...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
+Underfull \hbox (badness 10000) in paragraph at lines 63--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
+Underfull \hbox (badness 10000) in paragraph at lines 63--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
+Underfull \hbox (badness 10000) in paragraph at lines 63--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
+Underfull \hbox (badness 10000) in paragraph at lines 63--70
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[3] <xymatrix 13x9 3274>
-Underfull \hbox (badness 10000) in paragraph at lines 115--129
+[4] <xymatrix 13x9 3274>
+Underfull \hbox (badness 10000) in paragraph at lines 95--109
 
  []
 
-[4] <xymatrix 11x4 2169>
-Underfull \hbox (badness 10000) in paragraph at lines 152--165
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+[5] <xymatrix 11x4 2169>
+Underfull \hbox (badness 10000) in paragraph at lines 132--145
 
  []
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
-./Mapping_fermions_to_qubits.tex:206: Package amsmath Error: Erroneous nesting of equation structures;
+ []
+
+[7]
+
+./Mapping_fermions_to_qubits.tex:186: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 \end{align}
+l.186 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
 
-./Mapping_fermions_to_qubits.tex:223: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:203: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.223 \end{align}
+l.203 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Mapping_fermions_to_qubits.tex:230: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:210: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.230         \end{align}
+l.210         \end{align}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 236.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 216.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 236.
+Package hyperref Warning: Ignoring empty anchor on input line 216.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--239
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 259--262
+Underfull \hbox (badness 10000) in paragraph at lines 214--219
 
  []
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
-./Mapping_fermions_to_qubits.tex:324: LaTeX Error: \begin{equation*} on input line 322 ended by \end{equation}.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
+
+ []
+
+[9]
+
+./Mapping_fermions_to_qubits.tex:304: LaTeX Error: \begin{equation*} on input line 302 ended by \end{equation}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.324         \end{equation}
+l.304         \end{equation}
                             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--331
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 
-./Mapping_fermions_to_qubits.tex:359: LaTeX Error: There's no line here to end.
+./Mapping_fermions_to_qubits.tex:339: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.359 \end{itemlist}\\\\
+l.339 \end{itemlist}\\\\
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./Mapping_fermions_to_qubits.tex:360: LaTeX Error: There's no line here to end.
+./Mapping_fermions_to_qubits.tex:340: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.360         N
+l.340         N
                ow we can define the Bravyi-Kiteav creation and annihilation ...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
 
  []
 
 
-./Mapping_fermions_to_qubits.tex:366: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:346: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.366                 \end{align}
+l.346                 \end{align}
                                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Mapping_fermions_to_qubits.tex:373: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:353: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.373                 \end{align}
+l.353                 \end{align}
                                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-[10]
-
-./Mapping_fermions_to_qubits.tex:380: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.380                 \end{align}
-                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--399
-
- []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
+
+./Mapping_fermions_to_qubits.tex:360: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360                 \end{align}
+                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--379
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 427--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--454
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--457
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
-./Mapping_fermions_to_qubits.tex:478: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:458: Undefined control sequence.
 \@makecaption ...bovecaptionskip \setbox \tempbox 
                                                   \hbox {{\figurecaptionfont...
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1159,19 +1162,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:478: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:458: Missing number, treated as zero.
 <to be read again> 
                    \hbox 
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:478: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:458: Undefined control sequence.
 \@makecaption ...mpbox \hbox {{\figurecaptionfont 
                                                   #1\hskip 1em #2}} \ifdim \...
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1179,10 +1182,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:478: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:458: Undefined control sequence.
 \@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
                                                   < 28pc \centerline {\box \...
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1190,19 +1193,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:478: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:458: Missing number, treated as zero.
 <to be read again> 
                    <
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:478: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:458: Undefined control sequence.
 <argument> \box \tempbox 
                          
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1210,19 +1213,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:478: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:458: Missing number, treated as zero.
 <to be read again> 
                    \hss 
-l.478 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
+l.458 ...$i=6$ $(101)$ on Fenwick tree with $N=8$}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:497: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
 \@makecaption ...bovecaptionskip \setbox \tempbox 
                                                   \hbox {{\figurecaptionfont...
-l.497 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+l.477 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1230,19 +1233,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:497: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:477: Missing number, treated as zero.
 <to be read again> 
                    \hbox 
-l.497 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+l.477 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:497: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
 \@makecaption ...mpbox \hbox {{\figurecaptionfont 
                                                   #1\hskip 1em #2}} \ifdim \...
-l.497 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+l.477 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1250,10 +1253,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:497: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
 \@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
                                                   < 28pc \centerline {\box \...
-l.497 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+l.477 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1261,19 +1264,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:497: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:477: Missing number, treated as zero.
 <to be read again> 
                    <
-l.497 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+l.477 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:497: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:477: Undefined control sequence.
 \@makecaption ...pbox } \else {\figurecaptionfont 
                                                   #1\hskip 1em #2\par } \fi ...
-l.497 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
+l.477 ...$i=5$ $(011)$ on Fenwick tree with $N=8$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1282,60 +1285,60 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--501
+Underfull \hbox (badness 10000) in paragraph at lines 478--481
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--501
+Underfull \hbox (badness 10000) in paragraph at lines 478--481
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
-[12] [13]
+[13] [14]
 
-./Mapping_fermions_to_qubits.tex:515: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:495: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.515 \end{align}
+l.495 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Mapping_fermions_to_qubits.tex:522: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:502: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.522 \end{align}
+l.502 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--530
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -1343,454 +1346,454 @@ Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-./Mapping_fermions_to_qubits.tex:631: Package pgf Error: No shape named `2pt' is known.
+./Mapping_fermions_to_qubits.tex:611: Package pgf Error: No shape named `2pt' is known.
 
 See the pgf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 }
+l.611 }
        
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--653
+Underfull \hbox (badness 10000) in paragraph at lines 520--633
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--653
+Underfull \hbox (badness 10000) in paragraph at lines 520--633
 
  []
 
-[14]
+[15]
 
-./Mapping_fermions_to_qubits.tex:663: Package amsmath Error: Erroneous nesting of equation structures;
+./Mapping_fermions_to_qubits.tex:643: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.663                         \end{align}
+l.643                         \end{align}
                                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1798,105 +1801,105 @@ If that doesn't work, type  X <return>  to quit.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-Overfull \hbox (9.7194pt too wide) in paragraph at lines 689--690
+ [16]
+Overfull \hbox (9.7194pt too wide) in paragraph at lines 669--670
 []\OT1/cmr/m/n/10 Recall, that if $\OML/cmm/m/it/10 ^^[$ \OT1/cmr/m/n/10 is a rep-re-sen-ta-tion in the multi-qubit Pauli op-er-a-tors $\OMS/cmsy/m/n/10 f^^F\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^F\OML/cmm/m/it/10 i\OMS/cmsy/m/n/10 g ^^B[] f\OML/cmm/m/it/10 I[]; X[]; Y[]; Z[]\OMS/cmsy/m/n/10 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 693--758
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 764--766
+Underfull \hbox (badness 10000) in paragraph at lines 673--738
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 780--785
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--785
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--785
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--789
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--789
+Underfull \hbox (badness 10000) in paragraph at lines 744--746
 
  []
 
 [18]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 794.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 794.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 792--800
+Underfull \hbox (badness 10000) in paragraph at lines 760--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--800
+Underfull \hbox (badness 10000) in paragraph at lines 760--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--800
+Underfull \hbox (badness 10000) in paragraph at lines 760--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--800
+Underfull \hbox (badness 10000) in paragraph at lines 766--769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--800
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 792--800
+Underfull \hbox (badness 10000) in paragraph at lines 766--769
 
  []
 
 [19]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 774.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 774.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--780
+
+ []
+
+[20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
-Underfull \hbox (badness 10000) in paragraph at lines 801--804
+ [21]
+Underfull \hbox (badness 10000) in paragraph at lines 781--784
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--804
+Underfull \hbox (badness 10000) in paragraph at lines 781--784
 
  []
 
-<szpattern.png, id=504, 355.3275pt x 194.97844pt>
+<szpattern.png, id=508, 355.3275pt x 194.97844pt>
 File: szpattern.png Graphic file (type png)
 <use szpattern.png>
-Package pdftex.def Info: szpattern.png  used on input line 812.
+Package pdftex.def Info: szpattern.png  used on input line 792.
 (pdftex.def)             Requested size: 230.96013pt x 126.73447pt.
-./Mapping_fermions_to_qubits.tex:813: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:793: Undefined control sequence.
 \@makecaption ...bovecaptionskip \setbox \tempbox 
                                                   \hbox {{\figurecaptionfont...
-l.813 ...ce (taken from \cite{fermionicEncoding})}
+l.793 ...ce (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1904,19 +1907,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:813: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:793: Missing number, treated as zero.
 <to be read again> 
                    \hbox 
-l.813 ...ce (taken from \cite{fermionicEncoding})}
+l.793 ...ce (taken from \cite{fermionicEncoding})}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:813: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:793: Undefined control sequence.
 \@makecaption ...mpbox \hbox {{\figurecaptionfont 
                                                   #1\hskip 1em #2}} \ifdim \...
-l.813 ...ce (taken from \cite{fermionicEncoding})}
+l.793 ...ce (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1924,10 +1927,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:813: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:793: Undefined control sequence.
 \@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
                                                   < 28pc \centerline {\box \...
-l.813 ...ce (taken from \cite{fermionicEncoding})}
+l.793 ...ce (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1935,19 +1938,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:813: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:793: Missing number, treated as zero.
 <to be read again> 
                    <
-l.813 ...ce (taken from \cite{fermionicEncoding})}
+l.793 ...ce (taken from \cite{fermionicEncoding})}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:813: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:793: Undefined control sequence.
 \@makecaption ...pbox } \else {\figurecaptionfont 
                                                   #1\hskip 1em #2\par } \fi ...
-l.813 ...ce (taken from \cite{fermionicEncoding})}
+l.793 ...ce (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1955,15 +1958,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<mitchison-durbin.png, id=508, 246.1697pt x 242.40562pt>
+<mitchison-durbin.png, id=512, 246.1697pt x 242.40562pt>
 File: mitchison-durbin.png Graphic file (type png)
 <use mitchison-durbin.png>
-Package pdftex.def Info: mitchison-durbin.png  used on input line 818.
+Package pdftex.def Info: mitchison-durbin.png  used on input line 798.
 (pdftex.def)             Requested size: 160.00839pt x 157.56177pt.
-./Mapping_fermions_to_qubits.tex:819: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:799: Undefined control sequence.
 \@makecaption ...bovecaptionskip \setbox \tempbox 
                                                   \hbox {{\figurecaptionfont...
-l.819 ...ed (taken from \cite{fermionicEncoding})}
+l.799 ...ed (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1971,19 +1974,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:819: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:799: Missing number, treated as zero.
 <to be read again> 
                    \hbox 
-l.819 ...ed (taken from \cite{fermionicEncoding})}
+l.799 ...ed (taken from \cite{fermionicEncoding})}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:819: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:799: Undefined control sequence.
 \@makecaption ...mpbox \hbox {{\figurecaptionfont 
                                                   #1\hskip 1em #2}} \ifdim \...
-l.819 ...ed (taken from \cite{fermionicEncoding})}
+l.799 ...ed (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1991,10 +1994,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:819: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:799: Undefined control sequence.
 \@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
                                                   < 28pc \centerline {\box \...
-l.819 ...ed (taken from \cite{fermionicEncoding})}
+l.799 ...ed (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2002,19 +2005,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Mapping_fermions_to_qubits.tex:819: Missing number, treated as zero.
+./Mapping_fermions_to_qubits.tex:799: Missing number, treated as zero.
 <to be read again> 
                    <
-l.819 ...ed (taken from \cite{fermionicEncoding})}
+l.799 ...ed (taken from \cite{fermionicEncoding})}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./Mapping_fermions_to_qubits.tex:819: Undefined control sequence.
+./Mapping_fermions_to_qubits.tex:799: Undefined control sequence.
 \@makecaption ...pbox } \else {\figurecaptionfont 
                                                   #1\hskip 1em #2\par } \fi ...
-l.819 ...ed (taken from \cite{fermionicEncoding})}
+l.799 ...ed (taken from \cite{fermionicEncoding})}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2023,226 +2026,226 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--822
+Underfull \hbox (badness 10000) in paragraph at lines 786--802
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--822
+Underfull \hbox (badness 10000) in paragraph at lines 786--802
 
  []
 
-[21 <./szpattern.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 833--836
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 847--849
-
- []
-
-[22 <./mitchison-durbin.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 854--855
+[22 <./szpattern.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 813--816
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 855--856
+Underfull \hbox (badness 10000) in paragraph at lines 827--829
+
+ []
+
+[23 <./mitchison-durbin.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--861
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--868
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--868
+Underfull \hbox (badness 10000) in paragraph at lines 843--848
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--868
-
- []
-
-[23]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 874.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 874.
-
-./Mapping_fermions_to_qubits.tex:907: Undefined control sequence.
-\@makecaption ...bovecaptionskip \setbox \tempbox 
-                                                  \hbox {{\figurecaptionfont...
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Mapping_fermions_to_qubits.tex:907: Missing number, treated as zero.
-<to be read again> 
-                   \hbox 
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Mapping_fermions_to_qubits.tex:907: Undefined control sequence.
-\@makecaption ...mpbox \hbox {{\figurecaptionfont 
-                                                  #1\hskip 1em #2}} \ifdim \...
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Mapping_fermions_to_qubits.tex:907: Undefined control sequence.
-\@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
-                                                  < 28pc \centerline {\box \...
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Mapping_fermions_to_qubits.tex:907: Missing number, treated as zero.
-<to be read again> 
-                   <
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Mapping_fermions_to_qubits.tex:907: Undefined control sequence.
-<argument> \box \tempbox 
-                         
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Mapping_fermions_to_qubits.tex:907: Missing number, treated as zero.
-<to be read again> 
-                   \hss 
-l.907 ...pping for a lattice of $4\times 4$ modes}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 869--909
+Underfull \hbox (badness 10000) in paragraph at lines 843--848
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 869--909
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 869--909
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 869--909
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 912--913
+Underfull \hbox (badness 10000) in paragraph at lines 843--848
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 917--918
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 854.
+
+./Mapping_fermions_to_qubits.tex:887: Undefined control sequence.
+\@makecaption ...bovecaptionskip \setbox \tempbox 
+                                                  \hbox {{\figurecaptionfont...
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:887: Missing number, treated as zero.
+<to be read again> 
+                   \hbox 
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:887: Undefined control sequence.
+\@makecaption ...mpbox \hbox {{\figurecaptionfont 
+                                                  #1\hskip 1em #2}} \ifdim \...
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:887: Undefined control sequence.
+\@makecaption ...kip 1em #2}} \ifdim \wd \tempbox 
+                                                  < 28pc \centerline {\box \...
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:887: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Mapping_fermions_to_qubits.tex:887: Undefined control sequence.
+<argument> \box \tempbox 
+                         
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Mapping_fermions_to_qubits.tex:887: Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.887 ...pping for a lattice of $4\times 4$ modes}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--889
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--924
+Underfull \hbox (badness 10000) in paragraph at lines 849--889
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--935
+Underfull \hbox (badness 10000) in paragraph at lines 849--889
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--935
+Underfull \hbox (badness 10000) in paragraph at lines 849--889
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--935
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--935
+Underfull \hbox (badness 10000) in paragraph at lines 902--904
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--935
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--935
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
 
  []
 
-[25] [26] [27]
-Underfull \hbox (badness 4391) in paragraph at lines 981--982
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--915
+
+ []
+
+[26] [27] [28]
+Underfull \hbox (badness 4391) in paragraph at lines 961--962
 []\OT1/cmr/m/n/9 O'Brien, Oliver. Oliverob/Fermion-Mapping. Jupyter Note-book, 2022. []$\OT1/cmtt/m/n/9 https : / / github . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 981--982
+Underfull \hbox (badness 10000) in paragraph at lines 961--962
 \OT1/cmtt/m/n/9 oliverob / fermion-[]mapping / blob / 0123643b8d3f3842c778eec66835ee3ba72b5126 / Novel _ Fermion _
  []
 
-[28] (./Mapping_fermions_to_qubits.aux)
+[29] (./Mapping_fermions_to_qubits.aux)
 Package rerunfilecheck Info: File `Mapping_fermions_to_qubits.out' has not changed.
 (rerunfilecheck)             Checksum: 1CFF6C83CA1D7F61085052DC8AE8183B;4589.
  ) 
 Here is how much of TeX's memory you used:
- 26010 strings out of 478599
- 445668 string characters out of 5858101
- 874105 words of memory out of 5000000
+ 26011 strings out of 478599
+ 445675 string characters out of 5858101
+ 874115 words of memory out of 5000000
  43197 multiletter control sequences out of 15000+600000
  419306 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,26n,89p,2012b,1248s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Mapping_fermions_to_qubits.pdf (28 pages, 617674 bytes).
+Output written on Mapping_fermions_to_qubits.pdf (29 pages, 612094 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 705 compressed objects within 8 object streams
- 215 named destinations out of 1000 (max. 500000)
+ 818 PDF objects out of 1000 (max. 8388607)
+ 708 compressed objects within 8 object streams
+ 216 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

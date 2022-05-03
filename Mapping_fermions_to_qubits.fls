@@ -1073,13 +1073,13 @@ OUTPUT Mapping_fermions_to_qubits.pdf
 INPUT ./Mapping_fermions_to_qubits.out
 INPUT ./Mapping_fermions_to_qubits.out
 OUTPUT Mapping_fermions_to_qubits.out
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./Mapping_fermions_to_qubits.toc
 INPUT Mapping_fermions_to_qubits.toc
 INPUT Mapping_fermions_to_qubits.toc
 OUTPUT Mapping_fermions_to_qubits.toc
-INPUT c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
