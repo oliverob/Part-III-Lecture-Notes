@@ -1,26 +1,26 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
 \contentsline {section}{\numberline {2}Estimating ground state energies}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Variational Quantum Eigensolver (VQE)}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Quantum Phase estimation (QPE)}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Quantum Phase estimation (QPE)}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Trotter-Suzuki approximation}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}First and second quantization}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}First quantization}{5}{subsection.3.1}%
+\contentsline {section}{\numberline {3}First and second quantization}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}First quantization}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Second quantization}{6}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Mappings}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Jordan-Wigner mapping}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Bravyi-Kiteav mapping}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Bravyi-Kiteav mapping}{8}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Partial ordering formulation}{8}{subsubsection.4.2.1}%
-\contentsline {paragraph}{Bravyi-Kitaev operators}{9}{section*.2}%
+\contentsline {paragraph}{Bravyi-Kitaev operators}{10}{section*.2}%
 \contentsline {subsubsection}{\numberline {4.2.2}Transformation matrices formulation}{11}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Fenwick tree formulation}{12}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}`Local' Mappings}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}`Local' Mappings}{14}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Derby-Klassen mapping on square lattice}{14}{subsubsection.4.3.1}%
 \contentsline {section}{\numberline {5}Relative performance of mappings}{18}{section.5}%
-\contentsline {subsection}{\numberline {5.1}`Local' versus 'non-local' mappings}{18}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Bravyi-Kitaev mapping versus Jordan-Wigner mapping for QPE}{18}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Fermionic Enumeration}{20}{section.6}%
-\contentsline {section}{\numberline {7}Novel mapping}{23}{section.7}%
+\contentsline {subsection}{\numberline {5.1}`Local' versus `non-local' mappings}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Bravyi-Kitaev mapping versus Jordan-Wigner mapping for QPE}{19}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Fermionic Enumeration}{21}{section.6}%
+\contentsline {section}{\numberline {7}Novel mapping}{24}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Theoretical performance}{24}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Proposed extensions}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}Proposed extensions}{25}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Conclusion}{25}{section.8}%
 \contentsline {section}{\numberline {9}References}{27}{section.9}%
