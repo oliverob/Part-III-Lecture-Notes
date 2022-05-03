@@ -81,13 +81,12 @@ OLIVER O'BRIEN}
 \section{Introduction}
 \begin{center} \it ``Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy.'' - {\sl Dr Richard Feynman \cite{feynmann}}\end{center}  \\\\
 Ever since Dr Richard Feynman spoke these famous words at the end of his keynote speech in 1982, one of the main tasks facing quantum computers has been simulating quantum systems. Intuitively a quantum computer should be able to handle this problem better than a classic computer as they operate within the same bizarre world of entanglement and superposition. However, there are many challenges to overcome before quantum advantage can be achieved in this field. We will consider one such challenge in this essay: the optimum mapping scheme from fermions to qubits.\\\\
-One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In this essay we will consider the use case of estimating the ground state energy of a fermionic system. Section~\ref{applications_section} will explore two approaches to this problem. In order to carry out these simulations of fermionic systems, we must find a representation of them a quantum computer can process. Therefore, a representation of fermionic algebra in terms of qubits and qubit operators is needed. This poses a fundamental issue as fermions exhibit the non-local property of antisymmetry under exchange, whereas qubits are independent local systems. Section~\ref{firstsecquant} further explores the details of how antisymmetry under exchange translates into the language of qubits by considering first and second quantization. \\\\
+One of the most common classes of quantum systems we wish to simulate are those composed of fermions. In this essay we will consider the use case of estimating the ground state energy of a fermionic system. Section~\ref{applications_section} will explore two approaches to this problem. In order to carry out these simulations of fermionic systems we must find a representation of them a quantum computer can process. Therefore, a representation of fermionic algebra in terms of qubits and qubit operators is needed. This poses a fundamental issue as fermions exhibit the non-local property of antisymmetry under exchange, whereas qubits are independent local systems. Section~\ref{firstsecquant} further explores the details of how antisymmetry under exchange translates into the language of qubits by considering first and second quantization. \\\\
 We then go on to consider the second quantization mappings which introduce the necessary non-local behaviour. The first such mapping, the \textbf{Jordan-Wigner mapping}, was invented nearly a century ago \cite{originalJordanWigner}. We will introduce it in Section~\ref{jordan-wigner_section}. More recently, a number of new mappings have been developed including the \textbf{Bravyi-Kitaev mapping} and the \textbf{Derby-Klassen mapping}, which will be discussed in Section~\ref{bravyi-kitaev_section} and Section~\ref{derby-klassen_section} respectively. We will use three different formulations to explain the Bravyi-Kitaev mapping: partial ordering, transformation matrices and Fenwick Trees. Section~\ref{partialorderingsec} on partial ordering contains two novel proofs of Bravyi-Kitaev's lemmas \cite{bravyikitaev}. Then, in Section~\ref{comparision_section}, we compare the relative performance of these mappings in real-world applications (using simulated quantum computers).
 \\\\
 Recent research \cite{fermionicEncoding} has shown that the \textbf{fermionic enumeration} scheme used in the Jordan-Wigner mapping offers potential for increased locality with no additional resources. This is elaborated on in Section~\ref{fermionic-enumeration_section}.
 \\\\
-Finally, we have proposed a \textbf{new mapping} that combines aspects of the Jordan-Wigner and Bravyi-Kitaev mappings, which we introduce in Section~\ref{novel}. This mapping is demonstrated to reduce gate count with less increased complexity than the Bravyi-Kitaev mapping.\\\\
-It is important to consider how these mappings impact upon the fermionic simulation techniques used. Therefore, in Section~\ref{applications_section} (below) we will discuss how VQE and phase estimation can both be used to estimate the ground state energy of a system.
+Finally, we have proposed a \textbf{new mapping} that combines aspects of the Jordan-Wigner and Bravyi-Kitaev mappings, which we introduce in Section~\ref{novel}. This mapping is demonstrated to reduce gate count with less increased complexity than the Bravyi-Kitaev mapping.
 \section{Estimating ground state energies}\label{applications_section}
 Computing the ground state energy of a Hamiltonian is generally the first step in computing the energetic properties of molecules and materials \cite{vqe}. Chemists have developed classical computational models for estimating the ground state, however, they all rely on approximations. Quantum computing opens up the potential for an exact (\textit{full configuration interaction}) approach. Such an approach is unfeasible on a classical computer where the computational cost scales exponentially in the number of fermionic modes \cite{compcost}. This section will consider two common approaches for estimating ground state energies on quantum computers (Variational Quantum Eigensolver and Quantum Phase Estimation) and how they are affected by the choice of fermion-to-qubit mapping.
 \subsection{Variational Quantum Eigensolver (VQE)}\label{vqe_section}
@@ -100,7 +99,7 @@ A VQE consists of a `quantum oracle' and a classical optimiser. The quantum orac
 \item A variational ansatz $\ket{\psi}$ is prepared based on a set of parameters $\bm \theta$
 \item The Hamiltonian is measured on this ansatz 
 \end{romanlist}
-The classical optimiser then repeatedly queries this 'quantum oracle', whilst varying the parameters $\bm \theta$, in order to approximate a minimum for the Hamiltonian. This minimum value provides an upper bound on the ground state energy.\\\\
+The classical optimiser then repeatedly queries this 'quantum oracle', whilst varying the parameters $\bm \theta$, to approximate a minimum for the Hamiltonian. This minimum value provides an upper bound on the ground state energy.\\\\
 This is an example of a variational quantum algorithm, which performs a classical optimisation over a `quantum oracle'. By exporting lots of the work to a classical computer, VQEs are one of the quantum algorithms that are feasible in the NISQ (Noisy Intermediate-scale Quantum) era.\\\\
 Only the quantum section of this algorithm depends upon fermion-to-qubit mappings, so we will not consider specific classical optimisers. However, we will consider how each step of the `quantum oracle' is impacted by the mapping chosen:
 \begin{romanlist}
@@ -939,36 +938,35 @@ In conclusion, if we were tasked with picking an optimium fermion-to-qubit mappi
         \bibitem{feynmann} Feynman, R.P.. {\it Simulating physics with computers}. International Journal of Theoretical Physics 1982;21(6-7):467–488. \url{doi:10.1007/bf02650179}.
         \bibitem{originalJordanWigner} Pascual Jordan and Eugene Wigner. {\it  {\"U}ber das Paulische {\"A}quivalenzverbot}. Zeitschrift fur Physik, 47(9-10):631651, September 1928.
         \bibitem{bravyikitaev} Bravyi, Sergey, and Alexei Kitaev. {\it Fermionic Quantum Computation}. Annals of Physics 298, no. 1 (May 2002): 210–26. \url{https://doi.org/10.1006/aphy.2002.6254}.
-        \bibitem{fermionicEncoding} Chiew, Mitchell, and Sergii Strelchuk. {\it Optimal Fermion-Qubit Mappings}. ArXiv:2110.12792 [Quant-Ph], 2 February 2022. \url{http://arxiv.org/abs/2110.12792}
+        \bibitem{fermionicEncoding} Chiew, Mitchell, and Sergii Strelchuk. {\it Optimal Fermion-Qubit Mappings}. ArXiv:2110.12792 [Quant-Ph], 2 February 2022. \url{http://arxiv.org/abs/2110.12792}.
                 \bibitem{vqe}
-                Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176} 
-                \bibitem{compcost}  Sugisaki, Kenji, Chikako Sakai, Kazuo Toyota, Kazunobu Sato, Daisuke Shiomi, and Takeji Takui. {\it Quantum Algorithm for Full Configuration Interaction Calculations without Controlled Time Evolutions}. The Journal of Physical Chemistry Letters 12, no. 45 (18 November 2021): 11085–89. \url{https://doi.org/10.1021/acs.jpclett.1c03214}
-
+                Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176}.
+                \bibitem{compcost}  Sugisaki, Kenji, Chikako Sakai, Kazuo Toyota, Kazunobu Sato, Daisuke Shiomi, and Takeji Takui. {\it Quantum Algorithm for Full Configuration Interaction Calculations without Controlled Time Evolutions}. The Journal of Physical Chemistry Letters 12, no. 45 (18 November 2021): 11085–89. \url{https://doi.org/10.1021/acs.jpclett.1c03214}.
+\bibitem{barrenplat} Cerezo, M., Akira Sone, Tyler Volkoff, Lukasz Cincio, and Patrick J. Coles. {\it Cost Function Dependent Barren Plateaus in Shallow Parametrized Quantum Circuits}. Nature Communications 12, no. 1 (December 2021): 1791. \url{https://doi.org/10.1038/s41467-021-21728-w}.
                 \bibitem{chemistryReview} McArdle, Sam, Suguru Endo, Alán Aspuru-Guzik, Simon C. Benjamin, and Xiao Yuan. {\it Quantum Computational Chemistry}. Reviews of Modern Physics 92, no. 1 (30 March 2020): 015003. \url{https://doi.org/10.1103/RevModPhys.92.015003}.
-                \bibitem{nielsenChuang} Nielsen, M.A., Chuang, I.L.. {\it Quantum Computation and Quantum Information}. Cambridge: Cambridge University Press; 2009. ISBN 
-                \bibitem{barrenplat} Cerezo, M., Akira Sone, Tyler Volkoff, Lukasz Cincio, and Patrick J. Coles. {\it Cost Function Dependent Barren Plateaus in Shallow Parametrized Quantum Circuits}. Nature Communications 12, no. 1 (December 2021): 1791. \url{https://doi.org/10.1038/s41467-021-21728-w}. 
+                \bibitem{nielsenChuang} Nielsen, M.A., Chuang, I.L.. {\it Quantum Computation and Quantum Information}. Cambridge: Cambridge University Press; 2009. ISBN  
 
  \bibitem{suzuki} Suzuki, Masuo. {\it Generalized Trotter’s Formula and Systematic Approximants of Exponential Operators and Inner Derivations with Applications to Many-Body Problems}. Communications in Mathematical Physics 51, no. 2 (June 1976): 183–90. \url{https://doi.org/10.1007/BF01609348}. 
  \bibitem{seeley} Seeley, Jacob T., Martin J. Richard, and Peter J. Love. {\it The Bravyi-Kitaev Transformation for Quantum Computation of Electronic Structure}. The Journal of Chemical Physics 137, no. 22 (14 December 2012): 224109. \url{https://doi.org/10.1063/1.4768229}.
-9780511976667. doi:10.1017/cbo9780511976667. 
 \bibitem{qft} Peskin, Michael Edward and Schroeder, Daniel V.. {\it An Introduction to Quantum Field Theory}. : Westview Press, 1995.
 \bibitem{tilly} Tilly, Jules, Hongxiang Chen, Shuxiang Cao, Dario Picozzi, Kanav Setia, Ying Li, Edward Grant, et al. {\it The Variational Quantum Eigensolver: A Review of Methods and Best Practices}. ArXiv:2111.05176 [Quant-Ph], 9 November 2021. \url{http://arxiv.org/abs/2111.05176}.
  
 \bibitem{firstech1} Abrams, Daniel S., and Seth Lloyd. {\it Simulation of Many-Body Fermi Systems on a Universal Quantum Computer}. Physical Review Letters 79, no. 13 (29 September 1997): 2586–89. \url{https://doi.org/10.1103/PhysRevLett.79.2586}.
-
-\bibitem{firstech2} Berry, Dominic W., Mária Kieferová, Artur Scherer, Yuval R. Sanders, Guang Hao Low, Nathan Wiebe, Craig Gidney, and Ryan Babbush. {\it Improved Techniques for Preparing Eigenstates of Fermionic Hamiltonians}. Npj Quantum Information 4, no. 1 (December 2018): 22. \url{https://doi.org/10.1038/s41534-018-0071-5}
+\bibitem{firstech2} Berry, Dominic W., Mária Kieferová, Artur Scherer, Yuval R. Sanders, Guang Hao Low, Nathan Wiebe, Craig Gidney, and Ryan Babbush. {\it Improved Techniques for Preparing Eigenstates of Fermionic Hamiltonians}. Npj Quantum Information 4, no. 1 (December 2018): 22. \url{https://doi.org/10.1038/s41534-018-0071-5}.
 \bibitem{operatorLocality} Havlíček, Vojtěch, Matthias Troyer, and James D. Whitfield. {\it Operator Locality in Quantum Simulation of Fermionic Models}. Physical Review A 95, no. 3 (29 March 2017): 032332. \url{https://doi.org/10.1103/PhysRevA.95.032332}.
-\bibitem{fenwick} Fenwick, Peter M. {\it A New Data Structure for Cumulative Frequency Tables}. Software: Practice and Experience 24, no. 3 (March 1994): 327–36. \url{https://doi.org/10.1002/spe.4380240306} 
+ 
+\bibitem{tranter2018} Tranter, Andrew, Peter J. Love, Florian Mintert, and Peter V. Coveney. {\it A Comparison of the Bravyi-Kitaev and Jordan-Wigner Transformations for the Quantum Simulation of Quantum Chemistry}. Journal of Chemical Theory and Computation 14, no. 11 (13 November 2018): 5617–30. \url{https://doi.org/10.1021/acs.jctc.8b00450}.
+\bibitem{fenwick} Fenwick, Peter M. {\it A New Data Structure for Cumulative Frequency Tables}. Software: Practice and Experience 24, no. 3 (March 1994): 327–36. \url{https://doi.org/10.1002/spe.4380240306}.
 \bibitem{superfast} Setia, Kanav, Sergey Bravyi, Antonio Mezzacapo, and James D. Whitfield. {\it Superfast Encodings for Fermionic Quantum Simulation}. Physical Review Research 1, no. 3 (18 October 2019): 033033. \url{https://doi.org/10.1103/PhysRevResearch.1.033033}. 
-\bibitem{derbyklassen2} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping Part 2: Alternative Lattice Geometries}. ArXiv:2101.10735 [Quant-Ph], 26 January 2021. http://arxiv.org/abs/2101.10735.
 \bibitem{derbyklassen} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping}. Physical Review B 104, no. 3 (8 July 2021): 035118. \url{https://doi.org/10.1103/PhysRevB.104.035118}.
+\bibitem{derbyklassen2} Derby, Charles, and Joel Klassen. {\it A Compact Fermion to Qubit Mapping Part 2: Alternative Lattice Geometries}. ArXiv:2101.10735 [Quant-Ph], 26 January 2021. \url{http://arxiv.org/abs/2101.10735}.
 
-\bibitem{chenxu} Chen, Yu-An, and Yijia Xu. {\it Equivalence between Fermion-to-Qubit Mappings in Two Spatial Dimensions}. ArXiv:2201.05153 [Cond-Mat, Physics:Math-Ph, Physics:Quant-Ph], 13 January 2022. \url{http://arxiv.org/abs/2201.05153}
+\bibitem{chenxu} Chen, Yu-An, and Yijia Xu. {\it Equivalence between Fermion-to-Qubit Mappings in Two Spatial Dimensions}. ArXiv:2201.05153 [Cond-Mat, Physics:Math-Ph, Physics:Quant-Ph], 13 January 2022. \url{http://arxiv.org/abs/2201.05153}.
 
-\bibitem{chen2} Chen, Yu-An, Anton Kapustin, and Djordje Radicevic. {\it Exact Bosonization in Two Spatial Dimensions and a New Class of Lattice Gauge Theories}. Annals of Physics 393 (June 2018): 234–53. \url{https://doi.org/10.1016/j.aop.2018.03.024}
+\bibitem{chen2} Chen, Yu-An, Anton Kapustin, and Djordje Radicevic. {\it Exact Bosonization in Two Spatial Dimensions and a New Class of Lattice Gauge Theories}. Annals of Physics 393 (June 2018): 234–53. \url{https://doi.org/10.1016/j.aop.2018.03.024}.
 \bibitem{reducequbits} Moll, Nikolaj, Andreas Fuhrer, Peter Staar, and Ivano Tavernelli. {\it Optimizing Qubit Resources for Quantum Chemistry Simulations in Second Quantization on a Quantum Computer}. Journal of Physics A: Mathematical and Theoretical 49, no. 29 (22 July 2016): 295301. \url{https://doi.org/10.1088/1751-8113/49/29/295301}.
 
- \bibitem{tranter2018} Tranter, Andrew, Peter J. Love, Florian Mintert, and Peter V. Coveney. {\it A Comparison of the Bravyi-Kitaev and Jordan-Wigner Transformations for the Quantum Simulation of Quantum Chemistry}. Journal of Chemical Theory and Computation 14, no. 11 (13 November 2018): 5617–30. \url{https://doi.org/10.1021/acs.jctc.8b00450}.
+
 
 
 
@@ -980,7 +978,7 @@ In conclusion, if we were tasked with picking an optimium fermion-to-qubit mappi
 
  
 
-\bibitem{github} O’Brien, Oliver. Oliverob/Fermion-Mapping. Jupyter Notebook, 2022. \url{https://github.com/oliverob/fermion-mapping/blob/0123643b8d3f3842c778eec66835ee3ba72b5126/Novel_Fermion_to_qubit_mapping.ipynb} 
+\bibitem{github} O’Brien, Oliver. Oliverob/Fermion-Mapping. Jupyter Notebook, 2022. \url{https://github.com/oliverob/fermion-mapping/blob/0123643b8d3f3842c778eec66835ee3ba72b5126/Novel_Fermion_to_qubit_mapping.ipynb}. 
 
 \end{thebibliography}
 \end{document}
